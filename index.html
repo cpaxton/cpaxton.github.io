@@ -4,19 +4,25 @@ title: Chris Paxton
 ---
 
 <div id="home">
-  Hello world!
+  Hello world! This page is not yet ready. -- Chris
 
-  This page is not yet ready. -- Chris
-
-  <h1>Blog Posts</h1>
+  <h1>Updates</h1>
   <ul class="posts">
     {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 
-  <h1>Research Videos</h1>
+  <h1>Project Videos</h1>
+  <ul class="posts">
+     <li><span>September 21, 2015</span> &raquo; <a href="https://www.youtube.com/watch?v=c5WK_5WZfmk">Motion Planning for Probabilistic Representations of Robot Skills</a></li>
+     <li><span>January 15, 2015</span> &raquo; <a href="https://www.youtube.com/watch?v=xO1xpLy3VGQ">CoSTAR: Collaborative System for Task Automation and Recognition</a></li>
+     <li><span>January 15, 2015</span> &raquo; <a href="https://www.youtube.com/watch?v=xO1xpLy3VGQ">Robot Learning from Demonstration: From Mimicking to Emulation</a></li>
+  </ul>
+
+  <h1>Other Media</h1>
   <ul class="posts">
      <li><span>April 13, 2015</span> &raquo; <a href="https://www.youtube.com/watch?v=GgIznhbk-5g">Needle Master Gameplay</a></li>
+     <li><span>July 9, 2015</span> &raquo; <a href="https://www.youtube.com/watch?v=tMaz0fzDCx4">LCSR Assembly Plugin Test</a></li>
   </ul>
 </div>

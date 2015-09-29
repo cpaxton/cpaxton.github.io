@@ -1,5 +1,22 @@
-<main>
-    Hello world!
+---
+layout: default
+title: Chris Paxton
+---
 
-    This page is not yet ready. -- Chris
-</main>
+<div id="home">
+  Hello world!
+
+  This page is not yet ready. -- Chris
+
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h1>Research Videos</h1>
+  <ul class="posts">
+     <li><span>April 13, 2015</span> &raquo; <a href="https://www.youtube.com/watch?v=GgIznhbk-5g">Needle Master Gameplay</a></li>
+  </ul>
+</div>

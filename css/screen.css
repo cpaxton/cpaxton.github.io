@@ -67,7 +67,7 @@ ul.posts {
   }
 
   ul.posts span {
-    color: #aaa;
+    color: #a80;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
@@ -87,13 +87,13 @@ ul.posts {
 }
 
 .title {
-  color: #a00;
+  color: #035;
   font-weight: bold;
   margin-bottom: 2em;
 }
 
   .site .title a {
-    color: #a00;
+    color: #035;
     text-decoration: none;
   }
 
@@ -102,7 +102,7 @@ ul.posts {
   }
 
   .site .title a.extra {
-    color: #aaa;
+    color: #a80;
     text-decoration: none;
     margin-left: 1em;
   }
@@ -112,7 +112,7 @@ ul.posts {
   }
 
   .site .meta {
-    color: #aaa;
+    color: #a80;
   }
 
   .site .footer {

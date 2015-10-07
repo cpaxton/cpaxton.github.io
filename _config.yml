@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Chris Paxton
+tagline:          'Robotics: Learning, Planning, and Collaborating with Humans'
+description:      'Still under development!'
+url:              https://cpaxton.github.io
+baseurl:          /
+
+author:
+  name:           'Chris Paxton'
+  url:            https://twitter.com/chris_j_paxton
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/cpaxton/

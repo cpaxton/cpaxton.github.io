@@ -215,6 +215,7 @@ blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
   color: #7a7a7a;
+  /*border-left: .25rem solid #e5e5e5;*/
   border-left: .25rem solid #ffd7c6;
 }
 blockquote p:last-child {
@@ -275,7 +276,7 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 1rem;
   padding: 1rem;
   color: #717171;
-  background-color: #f9f9f9;
+  background-color: #ffd7c6; /*#f9f9f9;*/
 }
 
 

@@ -276,7 +276,8 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 1rem;
   padding: 1rem;
   color: #717171;
-  background-color: #ffd7c6; /*#f9f9f9;*/
+  background-color: #adc6d1; /* blue-ish */
+  /*#ffd7c6;*/ /* orange-y*/ /*#f9f9f9;*/
 }
 
 

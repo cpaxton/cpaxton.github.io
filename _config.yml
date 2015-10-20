@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Chris Paxton
 tagline:          'Robotics: Learning, Planning, and Collaborating with Humans'
-description:      'Still under development!'
+description:      'PhD Candidate at Johns Hopkins University'
 url:              https://cpaxton.github.io
 baseurl:          /
 

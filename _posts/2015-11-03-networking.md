@@ -5,7 +5,7 @@ title: Messing Around with Networking
 
 So, I'm not usually a network person. But for one of my projects, I have been working on building an Android app that can control a robot over a local network. The idea is that we will have an Android phone or tablet talking to a Ubuntu PC. I feel like this might be useful information for someone starting from scratch (like I am) so I figured I would post it online here.
 
-Now, all that this requires is writing to and reading from sockets, which isn't terribly complicated. I'm posting this online in case it's helpful for anyone without much experience in Android/Python and using these tools; I basically had to re-learn this stuff to finish these tests. Plus there are a couple quirks that come along with Android that make things a bit more interesting.
+Now, all that this requires is writing to and reading from sockets, which isn't terribly complicated.
 
 In Python, opening and closing ports is handled with the [socket package](https://docs.python.org/2/library/socket.html). So it's pretty easy to write up a little server in python to run some tests:
 

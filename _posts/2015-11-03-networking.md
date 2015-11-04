@@ -32,6 +32,7 @@ while True:
 ```
 
 And a client to go along with it:
+
 ```python
 #!/usr/bin/env python
 
@@ -45,6 +46,7 @@ s.send('Test!')
 ```
 
 With these two, whenever I run the client I will get output that looks like this:
+
 ```
 Connection from ('127.0.0.1', 42337)
 Test!
@@ -59,6 +61,7 @@ Socket s = new Socket("localhost",12321);
 If so, we will run into a couple problems with Android, though. For one thing, Android does not allow you do to any networking in the main thread: you'll get [this wonderful exception](http://developer.android.com/reference/android/os/NetworkOnMainThreadException.html). This issue is described pretty clearly [here](http://developer.android.com/training/basics/network-ops/connecting.html).
 
 For another, we need to make sure you give your Android app the right permissions, as shown in this manifest file:
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"

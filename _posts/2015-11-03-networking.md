@@ -52,6 +52,10 @@ Connection from ('127.0.0.1', 42337)
 Test!
 ```
 
+<p class="message">
+When running these python scripts, note that if you want to want the port you are opening to be visible across the network you need to set the hostname to "0.0.0.0".
+</p>
+
 Nice, right? So let's try to write the Java version of that code. Java defines Socket in a similar way, so we could do something like this:
 
 ```java
@@ -89,7 +93,9 @@ For another, we need to make sure you give your Android app the right permission
 ```
 
 So, the core questions are:
-  - How can I send the information I need between my server and the Android tablet?
-  - Should I just be using something like [rosjava](https://github.com/rosjava/rosjava_core) since this is a robotics project?
+
+  * How can I send the information I need between my server and the Android tablet?
+  * Should I just be using something like [rosjava](https://github.com/rosjava/rosjava_core) since this is a robotics project?
 
 I'll update on what we end up deciding soon!
+

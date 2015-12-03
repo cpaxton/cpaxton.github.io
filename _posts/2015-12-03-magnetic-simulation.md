@@ -11,4 +11,4 @@ Here's a video showing the magnetic simulation in action:
 
 [![LCSR Assembly Plugin Test](http://img.youtube.com/vi/lrJWW1gROtk/0.jpg)](https://www.youtube.com/watch?v=lrJWW1gROtk)
 
-I put this together using [our simulation of the WAM arm](https://github.com/jhu-lcsr/lcsr_assembly/tree/ascent) running a JTNS controller. I am teleoperating the simulation with a Razer Hydra.
+I put this together using [our simulation of the WAM arm](https://github.com/jhu-lcsr/lcsr_barrett) running a JTNS controller. I am teleoperating the simulation with a Razer Hydra.

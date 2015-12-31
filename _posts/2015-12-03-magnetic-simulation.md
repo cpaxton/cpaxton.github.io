@@ -9,6 +9,6 @@ A colleague of mine recently updated our (fairly crude) simulation to use a real
 
 Here's a video showing the magnetic simulation in action:
 
-[![LCSR Assembly Plugin Test](http://img.youtube.com/vi/lrJWW1gROtk/0.jpg)](https://www.youtube.com/watch?v=lrJWW1gROtk)
+<iframe width="420" height="315" src="https://www.youtube.com/embed/lrJWW1gROtk" frameborder="0" allowfullscreen></iframe>
 
 I put this together using [our simulation of the WAM arm](https://github.com/jhu-lcsr/lcsr_barrett) running a JTNS controller. I am teleoperating the simulation with a Razer Hydra.

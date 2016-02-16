@@ -7,7 +7,7 @@ title: Papers
 
   * Bohren, J., ***Paxton, C.***, Howarth, R., Hager, G.D., and Whitcomb, L. (2016). _Enabling Semi-Autonomous Teleoperated Assembly over High-Latency Networks_. At 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI 2016).
 
-	* ***Paxton, C.***, Kobilarov, M., & Hager, G.D. (2015). _Towards Robot Task Planning from Probabilistic Representations of Human Skills_. At AAAI 2016 Workshop on Planning for Hybrid Systems. [PDF]({{ site.baseurl}}public/paxton2016towards-planhs.pdf).
+  * ***Paxton, C.***, Kobilarov, M., & Hager, G.D. (2015). _Towards Robot Task Planning from Probabilistic Representations of Human Skills_. At AAAI 2016 Workshop on Planning for Hybrid Systems. [PDF]({{ site.baseurl}}public/paxton2016towards-planhs.pdf).
 
   * Ghalamzan E., A. M., ***Paxton, C.***, Hager, G.D., & Bascetta, L. (2015). _An Incremental Approach to Learning Generalizable Robot Tasks from Human Demonstration_. In IEEE International Conference on Robotics and Automation (ICRA).
 

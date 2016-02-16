@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Object Detection Test: Drill
+title: Object Detection Test (Drill)
 ---
 
 Object detection is one of the biggest problems in robotics. Teaching robots how to perceive and interact with their world is extremely challenging, and has been the subject of many a PhD thesis.

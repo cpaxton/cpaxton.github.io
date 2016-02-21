@@ -7,7 +7,7 @@ I am a graduate student at Johns Hopkins University, studying robotics and human
 
 In particular, I am interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new environments. Effectively, I am interested in making robots into true co-workers that can do the parts of a task that are difficult for humans.
 
-![Finalists at KUKA College Gersthofen](({{site.baseurl}}public/kuka2016.jpg)
+![Finalists at KUKA College Gersthofen]({{site.baseurl}}public/kuka2016.jpg)
 
 As of Spring 2016, one of my major projects is working on the JHU team for the KUKA Innovation Award competition.
 

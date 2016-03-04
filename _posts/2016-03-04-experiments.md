@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: AAAI Video Competition
+title: Task and Motion Planning Experiments
 ---
 
 I spent the last year or so developing an approach for combining planning of actions with planning sequences of actions based on their effects. Things came together with a batch of experiments performing a simple magnetic structure assembly task.

@@ -5,7 +5,7 @@ title: Papers
 
 ## Robotics Papers
 
-  * Bohren, J., ***Paxton, C.***, Howarth, R., Hager, G.D., and Whitcomb, L. (2016). _Enabling Semi-Autonomous Teleoperated Assembly over High-Latency Networks_. At 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI 2016).
+  * Bohren, J., ***Paxton, C.***, Howarth, R., Hager, G.D., and Whitcomb, L. (2016). _Enabling Semi-Autonomous Teleoperated Assembly over High-Latency Networks_. At 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI 2016). Best paper nomineee.
 
   * ***Paxton, C.***, Kobilarov, M., & Hager, G.D. (2015). _Towards Robot Task Planning from Probabilistic Representations of Human Skills_. At AAAI 2016 Workshop on Planning for Hybrid Systems. [PDF]({{ site.baseurl}}public/paxton2016towards-planhs.pdf). [arXiv](http://arxiv.org/abs/1602.04754).
 
@@ -26,4 +26,6 @@ When working on my Masters, I did some research in early prediction of sepsis be
   * Henry, K., ***Paxton, C.***, Kim, K.S., Pham, J., & Saria, S. (2014). _REWS: Real-time Early Warning Score for Septic Shock_. In Critical Care Medicine (Vol. 42, Issue 12, p. A1384). Society for Critical Care Medicine. Winner of Annual Scientific Award. 
 
   * ***Paxton, C.***, Niculescu-Mizil, A., & Saria, S. (2013). _Developing Predictive Models Using Electronic Medical Records: Challenges and Pitfalls_. In AMIA Annual Symposium Proceedings (Vol. 2013, p. 1109). American Medical Informatics Association.
+
+  * Vedula, S.S., Malpani, A.O., Tao, L., Chen, G., Gao, Y., Poddar, P., Ahmidi, N., ***Paxton, C.***, Vidal, R., Khudanpur, S., Hager, G.D., and Chen, C.C.G. (2016). _Analysis of the Structure of Surgical Activity for a Suturing and Knot-Tying Task_. PLoS ONE 11(3): e0149174. doi:10.1371/journal.pone.0149174
 

@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: Task and Motion Planning Experiments
 ---

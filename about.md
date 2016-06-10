@@ -31,3 +31,4 @@ TODO
   * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award)
   * [WSE Team Takes Home 2016 KUKA Innovation Award](https://www.cs.jhu.edu/2016/04/28/wsw-team-takes-home-2016-kuka-innovation-award/)
   * [Johns Hopkins team's robot takes top prize at industrial technology trade fair in Germany](http://hub.jhu.edu/2016/05/06/kuka-germany-engineering-team-win)
+  * [Blog post I wrote for the Maryland Department of Commerce on our Innovation Award win](https://mdbiznews.commerce.maryland.gov/2016/06/jhu-robotics-team-wins-kuka-innovation-award/)

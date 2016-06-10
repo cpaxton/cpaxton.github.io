@@ -5,6 +5,8 @@ title: About Me
 
 I am a graduate student at Johns Hopkins University, studying robotics and human/robot interaction. In particular, I am interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new environments. Effectively, I am interested in making robots into true co-workers that can do the parts of a task that are difficult for humans.
 
+![Selfie with the KUKA LBR iiwa]({{site.baseurl}}public/kuka_selfie.jpg)
+
 My recent work has focused on integrating symbolic task planning with learning from expert demonstrations. The goal here is to give robots "common sense" and let them intelligently interact with their environments.
 
 ![Finalists at KUKA College Gersthofen]({{site.baseurl}}public/kuka2016.jpg)

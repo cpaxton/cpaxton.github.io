@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CosTAR Instructor
+title: CoSTAR Instructor
 ---
 
 ![The Instructor BT Editor]({{site.baseurl}}public/bt3.png)

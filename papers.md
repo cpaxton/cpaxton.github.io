@@ -26,6 +26,8 @@ Citation:
 
 Sampling-based task and motion planning using skills learned from expert demonstrations.
 
+Presented at IROS 2016 in Daejeon, Korea.
+
 Citation:
 ```
 @inproceedings{paxton2016want,

@@ -3,7 +3,42 @@ layout: page
 title: Papers
 ---
 
-## Robotics Papers
+## Selected Work
+
+### CoSTAR: Instructing Collaborative Robots with Behavior Trees and Vision
+
+Our new and improved CoSTAR system, with 3D pose recognition. This paper describes how we built a cross-platform system for authoring complex robot task plans with behavior trees. Winner of the KUKA innovation award.
+
+Presented at ICRA 2017 in Singapore.
+
+Citation:
+```
+@article{paxton2017costar,
+  title={Co{STAR}: Instructing Collaborative Robots with Behavior Trees and Vision},
+  author={Paxton, Chris and Hundt, Andrew and Jonathan, Felix and Guerin, Kelleher and Hager, Gregory D},
+  journal={Robotics and Automation (ICRA), 2017 IEEE International Conference on},
+  note={Available as arXiv preprint arXiv:1611.06145},
+  year={2017}
+}
+```
+
+### Do What I Want, Not What I Did: Imitation of Skills by Planning Sequences of Actions
+
+Sampling-based task and motion planning using skills learned from expert demonstrations.
+
+Citation:
+```
+@inproceedings{paxton2016want,
+  title={Do what I want, not what I did: Imitation of skills by planning sequences of actions},
+  author={Paxton, Chris and Jonathan, Felix and Kobilarov, Marin and Hager, Gregory D},
+  booktitle={Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ International Conference on},
+  pages={3778--3785},
+  year={2016},
+  organization={IEEE}
+}
+```
+
+## Other Robotics Papers
 
   * Bohren, J., ***Paxton, C.***, Howarth, R., Hager, G.D., and Whitcomb, L. (2016). _Enabling Semi-Autonomous Teleoperated Assembly over High-Latency Networks_. At 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI 2016). Nominated for best technical contribution to human-robot interaction.
 

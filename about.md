@@ -1,13 +1,19 @@
 ---
 layout: page
-title: About Me
+permalink: /about/index.html
+title: Chris Paxton
+tags: [about, Chris, Paxton, Chris Paxton]
+chart: true
 ---
 
 I am a graduate student at Johns Hopkins University, studying robotics and human/robot interaction. In particular, I am interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new environments. Effectively, I am interested in making robots into true co-workers that can do the parts of a task that are difficult for humans.
 
-My recent work has focused on integrating symbolic task planning with learning from expert demonstrations. The goal here is to give robots "common sense" and let them intelligently interact with their environments.
+My work focuses on integrating symbolic task planning with learning from expert demonstrations. The goal is to give robots "common sense" and let them intelligently interact with their environments.
 
-![Finalists at KUKA College Gersthofen]({{site.baseurl}}public/kuka2016.jpg)
+<figure>
+  <img src="{{ site.url }}/public/kuka2016.jpg" alt="Finalists at KUKA College Gersthofen">
+  <figcaption>KUKA award finalists at KUKA College Gersthofen in December 2015.</figcaption>
+</figure>
 
 As of Spring 2016, one of my major projects is working on the JHU team for the KUKA Innovation Award competition. I led our successful entry into the KUKA innovation award competition. Our entry integrated UI, vision, planning, and some simple reasoning capabilities to build a powerful product that allowed us to perform a variety of tasks.
 

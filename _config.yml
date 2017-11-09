@@ -10,8 +10,9 @@ title:            Chris Paxton
 tagline:          'Robotics: Learning, Planning, and Collaborating with Humans'
 description:      'PhD Candidate at Johns Hopkins University'
 disqus_shortname: cpaxton
-url:              https://cpaxton.github.io
-baseurl:          /
+#url:              https://cpaxton.github.io
+url:        	  /Notepad
+baseurl:          https://cpaxton.github.io
 readtime:         true
 share:            true
 dropcap:		 true

@@ -13,10 +13,10 @@ baseurl:          /
 # Owner/author information
 owner:
   name:           Chris paxton
-  avatar:         hmfaysal.jpg
+  avatar:         me.jpg
   email:          cpaxton@jhu.edu
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Awesome Dude, Awesome Life
+  description:    Making robots smarter so we don't need to be
   # Social networking links used in footer. Update and remove as you like.
   twitter:        chris_j_paxton
   facebook:       cpaxton1

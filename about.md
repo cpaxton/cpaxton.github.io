@@ -6,11 +6,11 @@ tags: [about, Chris, Paxton, Chris Paxton]
 chart: true
 ---
 
-I am a graduate student at Johns Hopkins University, studying robotics and human/robot interaction.
+I am a PhD candidate in computer science at the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
 
 <img style="float: right;" src="{{ site.url }}/images/me.jpg">
 
-In particular, I am interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new environments. Effectively, I am interested in making robots into true co-workers that can do the parts of a task that are difficult for humans.
+In particular, I am interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new and unseen situations. Effectively, I am interested in making robots into true co-workers complete with "common sense" that allows them to do the parts of a task that are difficult for humans.
 
 My work focuses on integrating symbolic task planning with learning from expert demonstrations. The goal is to give robots "common sense" and let them intelligently interact with their environments. The most recent incarnation of this project is our new work on creating "robots with imagination" -- letting robots learn about the consequences their actions will have for the world, and being able to picture and plan based on these imagined actions.
 

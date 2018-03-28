@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 permalink: /about/index.html
 title: Chris Paxton
 tags: [about, Chris, Paxton, Chris Paxton]
+categories: [about]
 chart: true
 ---
 

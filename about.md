@@ -14,12 +14,14 @@ In particular, I am interested in ways we can allow non-expert users to give rob
 
 My work focuses on integrating symbolic task planning with learning from expert demonstrations. The goal is to give robots "common sense" and let them intelligently interact with their environments. The most recent incarnation of this project is our new work on creating "robots with imagination" -- letting robots learn about the consequences their actions will have for the world, and being able to picture and plan based on these imagined actions.
 
+During Spring 2016, I led the JHU team for the KUKA Innovation Award competition. I led our successful entry into the KUKA innovation award competition with our updated [CoSTAR system](http://cpaxton.github.io/costar_stack/). CoSTAR integrates a user interface, perception, and abstract planning to create robust task plans. We have since used CoSTAR on a wide variety of problems.
+
 <figure>
   <img src="{{ site.url }}/public/kuka2016.jpg" alt="Finalists at KUKA College Gersthofen">
   <figcaption>KUKA award finalists at KUKA College Gersthofen in December 2015.</figcaption>
 </figure>
 
-As of Spring 2016, one of my major projects was working on the JHU team for the KUKA Innovation Award competition. I led our successful entry into the KUKA innovation award competition. Our entry integrated UI, vision, planning, and some simple reasoning capabilities to build a powerful product that allowed us to perform a variety of tasks.
+
 
 ## Education
 

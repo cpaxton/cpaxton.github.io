@@ -9,7 +9,7 @@ chart: true
 
 I am a PhD candidate in computer science at the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
 
-<img style="float: right;" src="{{ site.url }}/images/me.jpg">
+<!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 
 In particular, I am interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new and unseen situations. Effectively, I am interested in making robots into true co-workers complete with "common sense" that allows them to do the parts of a task that are difficult for humans.
 

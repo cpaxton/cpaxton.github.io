@@ -1,3 +1,12 @@
 name: Chris Paxton
 markdown: redcarpet
-pygments: true
+
+# More info here
+title:            Chris Paxton
+description:      "Artificial Common Sense"
+logo:             logo.png
+disqus_shortname: cpaxton
+share:            true
+dropcap:	  true
+url:        	  https://cpaxton.github.io
+baseurl:          /

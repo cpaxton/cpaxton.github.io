@@ -5,11 +5,24 @@ title: Papers
 
 ## Selected Work
 
+### Combining Neural Networks and Tree Search for Task and Motion Planning in Challenging Environmetns
+
+Tree search based task and motion planning, combining multiple low-level policies learned via deep reinforcement learning and using them to create high-level task plans that navigate through intersections.
+
+```
+@article{paxton2017combining,
+  title={Combining neural networks and tree search for task and motion planning in challenging environments},
+  author={Paxton, Chris and Raman, Vasumathi and Hager, Gregory D and Kobilarov, Marin},
+  journal={Intelligent Robots and Systems (IROS), 2017 IEEE/RSJ International Conference on},
+  note={Available as arXiv preprint arXiv:1703.07887},
+  year={2017}
+}
+```
+Presented at IROS 2017 in Vancouver, Canada, as well as a poster presentation at RLDM in Ann Arbor, Michigan, USA. This work was partially supported by Zoox, Inc.
+
 ### CoSTAR: Instructing Collaborative Robots with Behavior Trees and Vision
 
 Our new and improved CoSTAR system, with 3D pose recognition. This paper describes how we built a cross-platform system for authoring complex robot task plans with behavior trees. Winner of the KUKA innovation award.
-
-Presented at ICRA 2017 in Singapore.
 
 Citation:
 ```
@@ -21,12 +34,11 @@ Citation:
   year={2017}
 }
 ```
+Presented at ICRA 2017 in Singapore.
 
 ### Do What I Want, Not What I Did: Imitation of Skills by Planning Sequences of Actions
 
 Sampling-based task and motion planning using skills learned from expert demonstrations.
-
-Presented at IROS 2016 in Daejeon, Korea.
 
 Citation:
 ```
@@ -39,6 +51,8 @@ Citation:
   organization={IEEE}
 }
 ```
+
+Presented at IROS 2016 in Daejeon, Korea.
 
 ## Other Robotics Papers
 

@@ -5,7 +5,7 @@ title: Papers
 
 ## Selected Work
 
-### Combining Neural Networks and Tree Search for Task and Motion Planning in Challenging Environmetns
+### Combining Neural Networks and Tree Search for Task and Motion Planning in Challenging Environments
 
 Tree search based task and motion planning, combining multiple low-level policies learned via deep reinforcement learning and using them to create high-level task plans that navigate through intersections.
 

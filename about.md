@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /about/index.html
-title: Chris Paxton
+title: About Me
 tags: [about, Chris, Paxton, Chris Paxton]
 categories: [about]
 chart: true

@@ -51,3 +51,13 @@ I did my undergraduate work at University of Maryland, College Park, where I got
   * [WSE Team Takes Home 2016 KUKA Innovation Award](https://www.cs.jhu.edu/2016/04/28/wsw-team-takes-home-2016-kuka-innovation-award/)
   * [Johns Hopkins team's robot takes top prize at industrial technology trade fair in Germany](http://hub.jhu.edu/2016/05/06/kuka-germany-engineering-team-win)
   * [Blog post I wrote for the Maryland Department of Commerce on our Innovation Award win](https://mdbiznews.commerce.maryland.gov/2016/06/jhu-robotics-team-wins-kuka-innovation-award/)
+
+## Website Notes
+
+Giving credit where credit is due, my current theme is based on [Flex](http://the-development.github.io/flex/), chosen because it's clean and minimal.
+
+Others used and referenced:
+  - [Tom Preston-Werner's page](http://tom.preston-werner.com/)
+  - [Hyde theme](http://hyde.getpoole.com/)
+  - [Notepad theme](http://hmfaysal.github.io/Notepad/)
+

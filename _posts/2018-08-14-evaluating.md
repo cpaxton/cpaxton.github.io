@@ -18,4 +18,15 @@ Our newest finished paper, to be presented at IROS 2018, is the end result of a 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uxfKluW-OWI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-You can find the paper on [my website]({{site.baseurl}}public/paxton2018evaluating.pdf).
+You can find the paper on [my website]({{site.baseurl}}public/paxton2018evaluating.pdf). As usual, all the [CoSTAR code](https://github.com/cpaxton/costar_stack) is available on Github.
+
+If you find our work interesting, please cite the paper as:
+```
+@article{paxton2018evaluating,
+  title={Evaluating Methods for End-User Creation of Robot Task Plans},
+  author={Paxton, Chris and Jonathan, Felix and Hundt, Andrew  and Mutlu, Bilge and Hager, Gregory D},
+  journal={Intelligent Robots and Systems (IROS), 2018 IEEE International Conference on},
+  note={to appear},
+  year={2018}
+}
+```

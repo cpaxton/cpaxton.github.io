@@ -30,3 +30,5 @@ If you find our work interesting, please cite the paper as:
   year={2018}
 }
 ```
+
+It is also [available on ArXiV](https://arxiv.org/abs/1811.02690).

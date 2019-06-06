@@ -7,7 +7,10 @@ categories: [about]
 chart: true
 ---
 
-I am a PhD candidate in computer science at the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
+
+I got my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
+
+Since graduating, I have been a postdoc at NVIDIA, in their new [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications.
 
 <!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 
@@ -22,8 +25,6 @@ During Spring 2016, I led the JHU team for the KUKA Innovation Award competition
   <figcaption>KUKA award finalists at KUKA College Gersthofen in December 2015.</figcaption>
 </figure>
 
-
-
 ## Education
 
 As of Spring 2018, I successfully defended my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland. My PhD thesis is titled "Creating Task Plans for Collaborative Robots," and it covers both our CoSTAR system and the novel algorithms we have created for creating robots that can use expert knowledge to plan.
@@ -32,8 +33,9 @@ I did my undergraduate work at University of Maryland, College Park, where I got
 
 ## Work Experience
 
-  * Research Assistant and PhD candidate at Johns Hopkins University
-  * Co-op at stealth startup (2016-2017): planning for autonomous vehicles
+  * Postdoc at NVIDIA, in their new Seattle Robotics Lab
+  * PhD student at Johns Hopkins University 2012-2018
+  * Co-op at Zoox (2016-2017): planning for autonomous vehicles
   * Lockheed Martin (Summer 2012): security with mobile devices
   * US Army Research Lab (2010-2012): pedestrian detection
   * Johns Hopkins Applied Physics Lab: development of a zero gravity robot prototype
@@ -45,6 +47,9 @@ I did my undergraduate work at University of Maryland, College Park, where I got
 
 ## News and Links
 
+  * [My NVIDIA Research profile](https://research.nvidia.com/person/chris-paxton)
+  * [Video Feature on the Seattle Robotics Lab](https://youtu.be/JT2viTz_0jU)
+  * [NVIDIA Opens Robotics Research Lab in Seattle](https://news.developer.nvidia.com/nvidia-opens-robotics-research-lab-in-seattle/)
   * [Computational Interaction and Robotics Lab](http://cirl.lcsr.jhu.edu/)
   * [The finalists of the Innovation Award 2016 have been selected](http://www.kuka-robotics.com/en/pressevents/news/NN_14012016_Innovative_Robot_applications_LBR_iiwa.htm)
   * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award)

@@ -23,7 +23,7 @@ High-level human instructions often correspond to behaviors with multiple implic
 }
 ```
 
-Presented at ICRA 2019 in Montreal. ArXiv link: [Prospection](https://arxiv.org/abs/1903.08309)
+Presented at ICRA 2019 in Montreal. Link: [Prospection](https://arxiv.org/abs/1903.08309)
 
 ### Visual Robot Task Planning
 
@@ -43,7 +43,7 @@ We propose an approach that allows us to [visualize intermediate goals](https://
 }
 ```
 
-Presented at ICRA 2019 in Montreal.  ArXiv link: [Visual Robot Task Planning](https://arxiv.org/abs/1804.00062)
+Presented at ICRA 2019 in Montreal.  Link: [Visual Robot Task Planning](https://arxiv.org/abs/1804.00062)
 
 
 ### Evaluating Methods for End-User Creation of Robot Task Plans
@@ -61,7 +61,6 @@ How can we enable users to create effective, perception-driven task plans for co
   journal   = {Intelligent Robots and Systems (IROS), 2018 IEEE/RSJ International Conference on},
   year      = {2018},
   url       = {http://arxiv.org/abs/1811.02690},
-  archivePrefix = {arXiv},
 }
 ```
 
@@ -118,6 +117,20 @@ Presented at IROS 2016 in Daejeon, Korea.
 
 ## Other Robotics Papers
 
+  * ***Paxton, C.***, Bisk, Y., Thomason, J., Byravan, A., and Fox, D. (2019) _Prospection: Interpretable Plans from Language by Predicting the Future_. At IEEE International Conference on Robotics and Automation (ICRA 2019). [arXiv](https://arxiv.org/abs/1903.08309).
+  
+  * ***Paxton, C.,*** Barnoy, Y., Katyal, K., Arora, R., and Hager, G.D. (2019) _Visual Robot Task Planning_. At IEEE Conference on Robotics and Automation (ICRA 2019). [arXiv](https://arxiv.org/abs/1804.00062)
+  
+  * Katyal, K., Popek, K., ***Paxton, C.***, Burlina, P., and Hager, G.D. (2019) _Uncertainty-Aware Occupancy Map Prediction Using Generative Networks for Robot Navigation_. At IEEE Conference on Robotics and Automation (ICRA 2019).
+  
+  * ***Paxton, C.***, Jonathan, F., Hundt, A., Mutlu, B., and Hager, G.D. (2018) _Evaluating Methods for End-User Creation of Robot Task Plans_. At IEEE Conference on Intelligent Robots and Systems (IROS 2018). [arXiv](https://arxiv.org/abs/1811.02690) [video](https://youtu.be/uxfKluW-OWI) 
+
+  * ***Paxton, C.***, Raman, V., Hager, G.D., and Kobilarov, M. (2017) _Combining Neural Nets and Tree Search for Task and Motion Planning in Complex Environments_. At IEEE Conference on Intelligent Robots and Systems (IROS 2017). Also presented at Reinforcement Learning and Decision Making (RLDM 2017). [arXiv](https://arxiv.org/abs/1703.07887) [video](https://youtu.be/MM2U_SGMtk8) 
+  
+  * ***Paxton, C.***, Hundt, A., Jonathan, F., Guerin, K., and Hager, G.D. (2017) CoSTAR: Instructing Collaborative Robots with Behavior Trees and Vision. At IEEE Conference on Robotics and Automation (ICRA 2017). [arXiv](https://arxiv.org/abs/1611.06145) [video](https://youtu.be/eGdwl1dmTrA)
+
+  * ***Paxton, C.***, Jonathan, F., Kobilarov, M., and Hager, G.D. (2016) _Do What I Want, Not What I Did: Imitation of Skills by Planning Sequences of Actions_. At IEEE Conference on Intelligent Robots and Systems (IROS 2016). [arXiv](https://arxiv.org/abs/1612.01215) [video 1](https://youtu.be/kESahDyedR4) [video 2](https://youtu.be/MaIb6K--yv0)
+  
   * Bohren, J., ***Paxton, C.***, Howarth, R., Hager, G.D., and Whitcomb, L. (2016). _Enabling Semi-Autonomous Teleoperated Assembly over High-Latency Networks_. At 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI 2016). Nominated for best technical contribution to human-robot interaction.
 
   * Ghalamzan E., A. M., ***Paxton, C.***, Hager, G.D., & Bascetta, L. (2015). _An Incremental Approach to Learning Generalizable Robot Tasks from Human Demonstration_. In IEEE International Conference on Robotics and Automation (ICRA).
@@ -126,7 +139,7 @@ Presented at IROS 2016 in Daejeon, Korea.
 
 ## Workshop Papers
 
-  * ***Paxton, C.***, Kobilarov, M., & Hager, G.D. (2015). _Towards Robot Task Planning from Probabilistic Representations of Human Skills_. At AAAI 2016 Workshop on Planning for Hybrid Systems. [PDF]({{ site.baseurl}}public/paxton2016towards-planhs.pdf). [arXiv](http://arxiv.org/abs/1602.04754).
+  * ***Paxton, C.***, Kobilarov, M., & Hager, G.D. (2015). _Towards Robot Task Planning from Probabilistic Representations of Human Skills_. At AAAI 2016 Workshop on Planning for Hybrid Systems. [pdf]({{ site.baseurl}}public/paxton2016towards-planhs.pdf) [arXiv](http://arxiv.org/abs/1602.04754)
 
   * Ghalamzan E., A. M., ***Paxton, C.***, Hager, G.D., & Bascetta, L. (2014). _Learning How to Avoid an Obstacle from Human Demonstration_. At RSS 2014 workshop on Learning Plans with Context from Human Signals.
 

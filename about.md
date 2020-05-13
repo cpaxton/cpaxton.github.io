@@ -24,20 +24,34 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [NVIDIA researchers use AI to teach robots how to hand objects to humans - VentureBeat](https://venturebeat.com/2020/03/16/nvidia-researchers-use-ai-to-teach-robots-how-to-hand-objects-to-humans/)
   * [Video Feature on the Seattle Robotics Lab](https://youtu.be/JT2viTz_0jU)
   * [NVIDIA Opens Robotics Research Lab in Seattle](https://news.developer.nvidia.com/nvidia-opens-robotics-research-lab-in-seattle/)
-  * [JHU Robotics Team Wins KUKA Innovation Award - MD](https://open.maryland.gov/blog/jhu-robotics-team-wins-kuka-innovation-award/)
+  * [JHU Robotics Team Wins KUKA Innovation Award - MD](https://open.maryland.gov/blog/jhu-robotics-team-wins-kuka-innovation-award/) - invited blog post by me
   * [The finalists of the Innovation Award 2016 have been selected - KUKA](http://www.kuka-robotics.com/en/pressevents/news/NN_14012016_Innovative_Robot_applications_LBR_iiwa.htm)
   * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge - KUKA](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award)
   
 ### Papers
 
   * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000)
-  * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
-  * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) - ICRA 2020
-  * [Motion Reasoning for Goal-Based Imitation Learning](https://arxiv.org/pdf/1911.05864) - ICRA 2020
-  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577) - ICRA 2020
-  * [Conditional Driving from Natural Language Insturctions](https://arxiv.org/pdf/1910.07615) - CoRL 2019
-  * [Representing Robot Task Plans as Robust Logical-Dynamical Systems](https://arxiv.org/pdf/1908.01896) - IROS 2019
-  * [Visual Robot Task Planning](https://arxiv.org/pdf/1804.00062) - ICRA 2019
+  * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020 - Paris, France
+  * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) - ICRA 2020 - Paris, France
+  * [Motion Reasoning for Goal-Based Imitation Learning](https://arxiv.org/pdf/1911.05864) - ICRA 2020 - Paris, France
+  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577) - ICRA 2020 - Paris, France
+  * [Conditional Driving from Natural Language Insturctions](https://arxiv.org/pdf/1910.07615) - CoRL 2019 - Osaka, Japan
+  * [Representing Robot Task Plans as Robust Logical-Dynamical Systems](https://arxiv.org/pdf/1908.01896) - IROS 2019 - Macau SAR, China
+  * [The CoSTAR Block Stacking Dataset: Learning with Workspace Constraints](https://arxiv.org/pdf/1810.11714.pdf) - IROS 2019 - Macau SAR, China
+  * [Visual Robot Task Planning](https://arxiv.org/pdf/1804.00062) - ICRA 2019 - Montreal, Canada
+  * [Evaluating Methods for End-User Creation of Robot Task Plans](https://arxiv.org/pdf/1811.02690) - IROS 2018 - Madrid, Spain
+  * [Combining neural networks and tree search for task and motion planning in challenging environments](https://arxiv.org/pdf/1703.07887) - IROS 2017 - Vancouver, Canada
+  * [CoSTAR in Surgery: A Cross-platform User Interface for Surgical Robot Task Specification](https://pdfs.semanticscholar.org/b853/81226292ed8a47cb4e059ced14ddcc6ea798.pdf) - IROS 2017 Workshop - Vancouver, Canada
+  * [CoSTAR: Instructing Collaborative Robots through Behavior Trees and Vision](https://arxiv.org/pdf/1611.06145) - ICRA 2017 - Singapore
+  * [Do What I Want, Not What I Did: Imitation of Skills by Planning Sequences of Actions](https://arxiv.org/pdf/1612.01215) - IROS 2016 - Daejeon, Korea
+  * [Semi-autonomous telerobotic assembly over high-latency networks](https://dl.acm.org/ft_gateway.cfm?ftid=1702218&id=2906858) - HRI 2016 - New Zealand
+  * [An incremental approach to learning generalizable robot tasks from human demonstration](http://eprints.lincoln.ac.uk/34493/1/ICRA15_0728_FI.pdf) - ICRA 2015 - Seattle, USA
+  * [A framework for end-user instruction of a robot assistant for manufacturing](https://ieeexplore.ieee.org/iel7/7128761/7138973/07140065.pdf?casa_token=mrp6oZcPvy4AAAAA:ux_-Jq6IHKCmjodjywSvdBiQyHcoeQrd-M45MfuPOTVdZxjGHEMuS3YbqLeO2Kh2XCTRl8r4xBCO) - ICRA 2015 - Seattle, USA
+  * [Developing predictive models using electronic medical records: challenges and pitfalls](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3900132/) - AMIA - Washington, USA
+
+### Patents
+
+  * [Trajectory Generation using Temporal Logic and Tree Search](https://patentimages.storage.googleapis.com/35/dc/4e/6bf9a63a604604/US10133275.pdf)
 
 ## Work Experience
 

@@ -45,6 +45,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [CoSTAR: Instructing Collaborative Robots through Behavior Trees and Vision](https://arxiv.org/pdf/1611.06145) - ICRA 2017 - Singapore
   * [Do What I Want, Not What I Did: Imitation of Skills by Planning Sequences of Actions](https://arxiv.org/pdf/1612.01215) - IROS 2016 - Daejeon, Korea
   * [Semi-autonomous telerobotic assembly over high-latency networks](https://dl.acm.org/ft_gateway.cfm?ftid=1702218&id=2906858) - HRI 2016 - New Zealand
+  * [Towards Robot Task Planning From Probabilistic Models of Human Skills](https://arxiv.org/pdf/1602.04754) - AAAI 2016 workshop - Phoenix, USA
   * [An incremental approach to learning generalizable robot tasks from human demonstration](http://eprints.lincoln.ac.uk/34493/1/ICRA15_0728_FI.pdf) - ICRA 2015 - Seattle, USA
   * [A framework for end-user instruction of a robot assistant for manufacturing](https://ieeexplore.ieee.org/iel7/7128761/7138973/07140065.pdf?casa_token=mrp6oZcPvy4AAAAA:ux_-Jq6IHKCmjodjywSvdBiQyHcoeQrd-M45MfuPOTVdZxjGHEMuS3YbqLeO2Kh2XCTRl8r4xBCO) - ICRA 2015 - Seattle, USA
   * [Developing predictive models using electronic medical records: challenges and pitfalls](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3900132/) - AMIA - Washington, USA

@@ -9,10 +9,8 @@ chart: true
 
 I am a robotics research scientist interested in ways we can allow non-expert users to give robots the knowledge they need to be able to plan and adapt to new and unseen situations. Effectively, I am interested in making robots into true co-workers complete with "common sense" that allows them to do the parts of a task that are difficult for humans.
 
-My work focuses on integrating symbolic task planning with deep learning from experts. The goal is to give robots "common sense" and let them intelligently interact with their environments. The most recent incarnation of this project is our new work on creating "robots with imagination" -- letting robots learn about the consequences their actions will have for the world, and being able to plan based on these imagined actions.
-
 I got my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
-Since graduating, I have been with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications.
+Since graduating, I have been with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). Recently, I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications.
 
 <!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 

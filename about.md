@@ -29,7 +29,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 ### Papers
 
   * ["Good Robot!": Efficient Reinforcement Learning for Multi-Step Visual Tasks with Sim to Real Transfer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9165109) - IROS+RAL 2020
-  * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000)([presentation](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be)) - IROS 2020
+  * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000) ([presentation](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be)) - IROS 2020
   * [Collaborative Behavior Models for Optimized Human-Robot Teamwork](https://arxiv.org/pdf/1910.04339.pdf) ([presentation](https://www.youtube.com/watch?v=bSY8K-jkRtA)) - IROS 2020
   * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
   * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) - ICRA 2020

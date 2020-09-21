@@ -30,6 +30,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   
 ### Papers
 
+  * ["Good Robot!": Efficient Reinforcement Learning for Multi-Step Visual Tasks with Sim to Real Transfer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9165109) - IROS+RAL 2020
   * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000)
   * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
   * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) - ICRA 2020
@@ -52,6 +53,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### Invited Talks
 
+  * Connecting TAMP to the Real World ([video](https://www.youtube.com/watch?v=Zzi29kSKlcE)) - [RSS 2020 Worksop on Learning in Task and Motion Planning](https://ipvs.informatik.uni-stuttgart.de/mlr/rss2020Workshop/)
   * From Pixels to Task Planning and Execution - [IROS 2019 Workshop on Semantic Policis and Action Representations](https://sites.google.com/view/spar2019/speakers?authuser=0)
   * Building Reactive Task Plans for Real-World Robot Applications - [IROS 2019 Workshop on Behavior Trees for Robotic Systems](https://behavior-trees-iros-workshop.github.io/)
 

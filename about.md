@@ -50,6 +50,11 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [A framework for end-user instruction of a robot assistant for manufacturing](https://ieeexplore.ieee.org/iel7/7128761/7138973/07140065.pdf?casa_token=mrp6oZcPvy4AAAAA:ux_-Jq6IHKCmjodjywSvdBiQyHcoeQrd-M45MfuPOTVdZxjGHEMuS3YbqLeO2Kh2XCTRl8r4xBCO) - ICRA 2015 - Seattle, USA
   * [Developing predictive models using electronic medical records: challenges and pitfalls](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3900132/) - AMIA
 
+### Invited Talks
+
+  * From Pixels to Task Planning and Execution - [IROS 2019 Workshop on Semantic Policis and Action Representations](https://sites.google.com/view/spar2019/speakers?authuser=0)
+  * Building Reactive Task Plans for Real-World Robot Applications - [IROS 2019 Workshop on Behavior Trees for Robotic Systems](https://behavior-trees-iros-workshop.github.io/)
+
 ### Patents
 
   * [Trajectory Generation using Temporal Logic and Tree Search](https://patentimages.storage.googleapis.com/35/dc/4e/6bf9a63a604604/US10133275.pdf)

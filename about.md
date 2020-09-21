@@ -32,7 +32,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000) ([presentation](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be)) - IROS 2020
   * [Collaborative Behavior Models for Optimized Human-Robot Teamwork](https://arxiv.org/pdf/1910.04339.pdf) ([presentation](https://www.youtube.com/watch?v=bSY8K-jkRtA)) - IROS 2020
   * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
-  * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) - ICRA 2020
+  * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) ([presentation](https://youtu.be/nVpiMzIj0-c)) - ICRA 2020
   * [Motion Reasoning for Goal-Based Imitation Learning](https://arxiv.org/pdf/1911.05864) - ICRA 2020
   * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577) - ICRA 2020
   * [Conditional Driving from Natural Language Insturctions](https://arxiv.org/pdf/1910.07615) - CoRL 2019

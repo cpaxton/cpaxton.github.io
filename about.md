@@ -71,7 +71,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ## Education
 
-As of Spring 2018, I successfully defended my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland. My PhD thesis is titled "Creating Task Plans for Collaborative Robots," and it covers both our CoSTAR system and the novel algorithms we have created for creating robots that can use expert knowledge to plan.
+As of Spring 2018, I successfully defended my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland. My PhD thesis is titled "Creating Task Plans for Collaborative Robots," and it covers both our CoSTAR system and the novel algorithms we have created for creating robots that can use expert knowledge to plan. I did my research in the [Computational Interaction and Robotics Lab](http://cirl.lcsr.jhu.edu/) with Greg Hager.
 
 I did my undergraduate work at University of Maryland, College Park, where I got a BS in Computer Science with a minor in Neuroscience, where I graduated with University honors as a part of their Gemstone program for young researchers.
 
@@ -82,12 +82,7 @@ During Spring 2016, I led the JHU team for the KUKA Innovation Award competition
   <figcaption>KUKA award finalists at KUKA College Gersthofen in December 2015.</figcaption>
 </figure>
 
-### Education Links
-  * [Computational Interaction and Robotics Lab](http://cirl.lcsr.jhu.edu/)
-  * [The finalists of the Innovation Award 2016 have been selected](http://www.kuka-robotics.com/en/pressevents/news/NN_14012016_Innovative_Robot_applications_LBR_iiwa.htm)
-  * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award)
-
 ## Teaching Experience
 
-  * Teaching assistant for EN.600.436/636: __"Algorithms for Sensor Based Robotics"__, Spring 2015
   * Taught EN.500.111 __"HEART: Making Robots our Friends: Technologies for Human-Robot Collaboration"__ in Fall 2015.
+  * Teaching assistant for EN.600.436/636: __"Algorithms for Sensor Based Robotics"__, Spring 2015

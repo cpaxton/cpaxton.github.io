@@ -39,7 +39,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
   * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) ([video](https://youtu.be/nVpiMzIj0-c)) - ICRA 2020
   * [Motion Reasoning for Goal-Based Imitation Learning](https://arxiv.org/pdf/1911.05864) - ICRA 2020
-  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577) - ICRA 2020
+  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577)([video](https://www.youtube.com/watch?v=IOtrO29DFUg&list=PLNpZKR7uv5ARTi1sNQRcd5rpa8XxamW2l))([presentation](https://www.youtube.com/watch?v=gdTWHjIC-9s)) - ICRA 2020
   * [Conditional Driving from Natural Language Instructions](https://arxiv.org/pdf/1910.07615) - CoRL 2019
   * [Representing Robot Task Plans as Robust Logical-Dynamical Systems](https://arxiv.org/pdf/1908.01896) - IROS 2019
   * [The CoSTAR Block Stacking Dataset: Learning with Workspace Constraints](https://arxiv.org/pdf/1810.11714.pdf) - IROS 2019

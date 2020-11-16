@@ -18,6 +18,11 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### News and Links
 
+  * [BBC: Dog training technique helps robot learn and other news](https://www.bbc.com/news/av/technology-54645279)
+  * [Teaching Robots through Positive Reinforcement - TechCrunch](https://techcrunch.com/2020/10/26/teaching-robots-through-positive-reinforcement/)
+  * [New AI Trains Robots like Dogs - Psychology Today](https://www.psychologytoday.com/us/blog/the-future-brain/202010/new-ai-trains-robots-dogs)
+  * [Dog Training Methods Help JHU Teach Robots to Learn New Tricks - Communications of the ACM](https://cacm.acm.org/news/248390-dog-training-methods-help-jhu-teach-robots-to-learn-new-tricks/fulltext)
+  * [Robotics Reaps Rewards at ICRA - NVIDIA](https://blogs.nvidia.com/blog/2020/05/29/dieter-fox-award-icra/)
   * [NVIDIA Researchers Use AI to Teach Robots How to Improve Human-to-Robot Interactions - NVIDIA](https://news.developer.nvidia.com/nvidia-researchers-use-ai-to-teach-robots-how-to-improve-human-to-robot-interactions/)
   * [NVIDIA researchers use AI to teach robots how to hand objects to humans - VentureBeat](https://venturebeat.com/2020/03/16/nvidia-researchers-use-ai-to-teach-robots-how-to-hand-objects-to-humans/)
   * [Video Feature on the Seattle Robotics Lab](https://youtu.be/JT2viTz_0jU)

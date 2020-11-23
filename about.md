@@ -14,7 +14,7 @@ Since then, I have been with NVIDIA, at their [Seattle robotics lab](https://you
 
 <!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 
-You can also check out [My NVIDIA Research profile](https://research.nvidia.com/person/chris-paxton), or find a list of my papers on [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ&hl=en&oi=ao).
+You can also check out [My NVIDIA Research profile](https://research.nvidia.com/person/chris-paxton), find a list of my papers on [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ&hl=en&oi=ao), or email me at chris.paxton.cs (at) gmail.com.
 
 ### News and Links
 

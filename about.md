@@ -40,7 +40,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
   * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) ([video](https://youtu.be/nVpiMzIj0-c)) - ICRA 2020
   * [Motion Reasoning for Goal-Based Imitation Learning](https://arxiv.org/pdf/1911.05864) - ICRA 2020
-  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577)([video](https://www.youtube.com/watch?v=IOtrO29DFUg&list=PLNpZKR7uv5ARTi1sNQRcd5rpa8XxamW2l))([presentation](https://www.youtube.com/watch?v=gdTWHjIC-9s)) - ICRA 2020
+  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577) ([video](https://www.youtube.com/watch?v=IOtrO29DFUg&list=PLNpZKR7uv5ARTi1sNQRcd5rpa8XxamW2l)) ([presentation](https://www.youtube.com/watch?v=gdTWHjIC-9s)) - ICRA 2020
   * [Conditional Driving from Natural Language Instructions](https://arxiv.org/pdf/1910.07615) - CoRL 2019
   * [Representing Robot Task Plans as Robust Logical-Dynamical Systems](https://arxiv.org/pdf/1908.01896) - IROS 2019
   * [The CoSTAR Block Stacking Dataset: Learning with Workspace Constraints](https://arxiv.org/pdf/1810.11714.pdf) - IROS 2019
@@ -68,10 +68,11 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ## Work Experience
 
-  * Robotics Research Scientist, NVIDIA (2019-present)
-  * Postdoc at NVIDIA, in their new Seattle Robotics Lab (2018-2019)
-  * PhD student at Johns Hopkins University (2012-2018)
-  * Co-op at Zoox (2016-2017): planning for autonomous vehicles
+  * Senior Robotics Research Scientist , NVIDIA (2020-present)
+  * Robotics Research Scientist, NVIDIA (2019-2020)
+  * Postdoc at NVIDIA, in their Seattle Robotics Lab (2018-2019)
+  * PhD student at Johns Hopkins University (2012-2018): represening tasks for collaborative robots 
+  * Research Engineer Co-op at Zoox (2016-2017): planning for autonomous vehicles
   * Lockheed Martin (Summer 2012): security with mobile devices
   * US Army Research Lab (2010-2012): pedestrian detection
   * Johns Hopkins Applied Physics Lab: development of a zero gravity robot prototype

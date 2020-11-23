@@ -1,3 +1,4 @@
+  * [Reactive Human-to-Robot Handovers of Arbitrary Objects](https://arxiv.org/abs/2011.08961) ([video](https://youtu.be/ZfibF9UNCrw)) ([website](https://arxiv.org/abs/2011.08961))
   * [Sim-to-Real Task Planning and Execution from Perception via Reactivity and Recovery](https://arxiv.org/abs/2011.08694) ([video](https://youtu.be/qbCzYgAW86w)) ([experiments](https://www.youtube.com/playlist?list=PL-oD0xHUngeLfQmpngYkGFZarstfPOXqX))
   * ["Good Robot!": Efficient Reinforcement Learning for Multi-Step Visual Tasks with Sim to Real Transfer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9165109) ([video](https://www.youtube.com/watch?v=qivDFfPf9_I)) - IROS+RAL 2020
   * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000) ([video](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be)) - IROS 2020
@@ -20,5 +21,4 @@
   * [An incremental approach to learning generalizable robot tasks from human demonstration](http://eprints.lincoln.ac.uk/34493/1/ICRA15_0728_FI.pdf) - ICRA 2015
   * [A framework for end-user instruction of a robot assistant for manufacturing](https://ieeexplore.ieee.org/iel7/7128761/7138973/07140065.pdf?casa_token=mrp6oZcPvy4AAAAA:ux_-Jq6IHKCmjodjywSvdBiQyHcoeQrd-M45MfuPOTVdZxjGHEMuS3YbqLeO2Kh2XCTRl8r4xBCO) - ICRA 2015
   * [Developing predictive models using electronic medical records: challenges and pitfalls](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3900132/) - AMIA 2013
-
 

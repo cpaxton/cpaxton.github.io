@@ -33,6 +33,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   
 ### Papers
 
+  * [Alternate Paths Planner (APP) for Provably Fixed-time Manipulation Planning in Semi-Structured Environments](https://arxiv.org/abs/2012.14970) 
   * [Reactive Human-to-Robot Handovers of Arbitrary Objects](https://arxiv.org/abs/2011.08961) ([video](https://youtu.be/ZfibF9UNCrw)) ([website](https://arxiv.org/abs/2011.08961))
   * [Sim-to-Real Task Planning and Execution from Perception via Reactivity and Recovery](https://arxiv.org/abs/2011.08694) ([video](https://youtu.be/qbCzYgAW86w)) ([experiments](https://www.youtube.com/playlist?list=PL-oD0xHUngeLfQmpngYkGFZarstfPOXqX))
   * ["Good Robot!": Efficient Reinforcement Learning for Multi-Step Visual Tasks with Sim to Real Transfer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9165109) ([video](https://www.youtube.com/watch?v=qivDFfPf9_I)) - IROS+RAL 2020

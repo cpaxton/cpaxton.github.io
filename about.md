@@ -58,15 +58,16 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
   * [A framework for end-user instruction of a robot assistant for manufacturing](https://ieeexplore.ieee.org/iel7/7128761/7138973/07140065.pdf?casa_token=mrp6oZcPvy4AAAAA:ux_-Jq6IHKCmjodjywSvdBiQyHcoeQrd-M45MfuPOTVdZxjGHEMuS3YbqLeO2Kh2XCTRl8r4xBCO) - ICRA 2015
   * [Developing predictive models using electronic medical records: challenges and pitfalls](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3900132/) - AMIA 2013
 
+### Patents
+
+  * [Imitation Learning System](https://patentimages.storage.googleapis.com/03/ba/22/79fd056c7334f5/US20210081752A1.pdf)
+  * [Trajectory Generation using Temporal Logic and Tree Search](https://patentimages.storage.googleapis.com/35/dc/4e/6bf9a63a604604/US10133275.pdf)
+
 ### Invited Talks
 
   * Connecting TAMP to the Real World ([video](https://www.youtube.com/watch?v=Zzi29kSKlcE)) - [RSS 2020 Worksop on Learning in Task and Motion Planning](https://ipvs.informatik.uni-stuttgart.de/mlr/rss2020Workshop/)
   * From Pixels to Task Planning and Execution - [IROS 2019 Workshop on Semantic Policis and Action Representations](https://sites.google.com/view/spar2019/speakers?authuser=0)
   * Building Reactive Task Plans for Real-World Robot Applications - [IROS 2019 Workshop on Behavior Trees for Robotic Systems](https://behavior-trees-iros-workshop.github.io/)
-
-### Patents
-
-  * [Trajectory Generation using Temporal Logic and Tree Search](https://patentimages.storage.googleapis.com/35/dc/4e/6bf9a63a604604/US10133275.pdf)
 
 ## Work Experience
 
@@ -81,7 +82,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ## Education
 
-As of Spring 2018, I successfully defended my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland. My PhD thesis is titled "Creating Task Plans for Collaborative Robots," and it covers both our CoSTAR system and the novel algorithms we have created for creating robots that can use expert knowledge to plan. I did my research in the [Computational Interaction and Robotics Lab](http://cirl.lcsr.jhu.edu/) with Greg Hager.
+As of Spring 2018, I successfully defended my PhD in Computer Science at the Johns Hopkins University in Baltimore, Maryland. My PhD thesis is titled [Creating Task Plans for Collaborative Robots](https://jscholarship.library.jhu.edu/handle/1774.2/59196), and it covers both our CoSTAR system and the novel algorithms we have created for creating robots that can use expert knowledge to plan. I did my research in the [Computational Interaction and Robotics Lab](http://cirl.lcsr.jhu.edu/) with Greg Hager.
 
 I did my undergraduate work at University of Maryland, College Park, where I got a BS in Computer Science with a minor in Neuroscience, where I graduated with University honors as a part of their Gemstone program for young researchers.
 

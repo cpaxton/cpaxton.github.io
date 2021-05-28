@@ -18,19 +18,19 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### News and Links
 
-  * [Maker’s Dozen: NVIDIA Researchers to Present Advances in Human-Robot Interaction and More at ICRA](https://blogs.nvidia.com/blog/2021/05/27/human-robot-interaction-research-icra)
-  * [BBC: Dog training technique helps robot learn and other news](https://www.bbc.com/news/av/technology-54645279)
-  * [Teaching Robots through Positive Reinforcement - TechCrunch](https://techcrunch.com/2020/10/26/teaching-robots-through-positive-reinforcement/)
-  * [New AI Trains Robots like Dogs - Psychology Today](https://www.psychologytoday.com/us/blog/the-future-brain/202010/new-ai-trains-robots-dogs)
-  * [Dog Training Methods Help JHU Teach Robots to Learn New Tricks - Communications of the ACM](https://cacm.acm.org/news/248390-dog-training-methods-help-jhu-teach-robots-to-learn-new-tricks/fulltext)
-  * [Robotics Reaps Rewards at ICRA - NVIDIA](https://blogs.nvidia.com/blog/2020/05/29/dieter-fox-award-icra/)
-  * [NVIDIA Researchers Use AI to Teach Robots How to Improve Human-to-Robot Interactions - NVIDIA](https://news.developer.nvidia.com/nvidia-researchers-use-ai-to-teach-robots-how-to-improve-human-to-robot-interactions/)
-  * [NVIDIA researchers use AI to teach robots how to hand objects to humans - VentureBeat](https://venturebeat.com/2020/03/16/nvidia-researchers-use-ai-to-teach-robots-how-to-hand-objects-to-humans/)
+  * [Maker’s Dozen: NVIDIA Researchers to Present Advances in Human-Robot Interaction and More at ICRA](https://blogs.nvidia.com/blog/2021/05/27/human-robot-interaction-research-icra) - NVIDIA
+  * [BBC: Dog training technique helps robot learn and other news](https://www.bbc.com/news/av/technology-54645279) - BBC
+  * [Teaching Robots through Positive Reinforcement](https://techcrunch.com/2020/10/26/teaching-robots-through-positive-reinforcement/) - TechCrunch
+  * [New AI Trains Robots like Dogs](https://www.psychologytoday.com/us/blog/the-future-brain/202010/new-ai-trains-robots-dogs) - Psychology Today
+  * [Dog Training Methods Help JHU Teach Robots to Learn New Tricks](https://cacm.acm.org/news/248390-dog-training-methods-help-jhu-teach-robots-to-learn-new-tricks/fulltext) - Communications of the ACM
+  * [Robotics Reaps Rewards at ICRA](https://blogs.nvidia.com/blog/2020/05/29/dieter-fox-award-icra/) - NVIDIA
+  * [NVIDIA Researchers Use AI to Teach Robots How to Improve Human-to-Robot Interactions](https://news.developer.nvidia.com/nvidia-researchers-use-ai-to-teach-robots-how-to-improve-human-to-robot-interactions/) - NVIDIA
+  * [NVIDIA researchers use AI to teach robots how to hand objects to humans](https://venturebeat.com/2020/03/16/nvidia-researchers-use-ai-to-teach-robots-how-to-hand-objects-to-humans/) - VentureBeat
   * [Video Feature on the Seattle Robotics Lab](https://youtu.be/JT2viTz_0jU)
-  * [NVIDIA Opens Robotics Research Lab in Seattle](https://news.developer.nvidia.com/nvidia-opens-robotics-research-lab-in-seattle/)
-  * [JHU Robotics Team Wins KUKA Innovation Award - MD](https://open.maryland.gov/blog/jhu-robotics-team-wins-kuka-innovation-award/) - invited blog post by me
-  * [The finalists of the Innovation Award 2016 have been selected - KUKA](http://www.kuka-robotics.com/en/pressevents/news/NN_14012016_Innovative_Robot_applications_LBR_iiwa.htm)
-  * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge - KUKA](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award)
+  * [NVIDIA Opens Robotics Research Lab in Seattle](https://news.developer.nvidia.com/nvidia-opens-robotics-research-lab-in-seattle/) - NVIDIA
+  * [JHU Robotics Team Wins KUKA Innovation Award - MD](https://open.maryland.gov/blog/jhu-robotics-team-wins-kuka-innovation-award/) - Invited blog post by me
+  * [The finalists of the Innovation Award 2016 have been selected](http://www.kuka-robotics.com/en/pressevents/news/NN_14012016_Innovative_Robot_applications_LBR_iiwa.htm) - KUKA
+  * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award) - KUKA
   
 ### Papers
 

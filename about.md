@@ -18,6 +18,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### News and Links
 
+  * [Maker’s Dozen: NVIDIA Researchers to Present Advances in Human-Robot Interaction and More at ICRA](https://blogs.nvidia.com/blog/2021/05/27/human-robot-interaction-research-icra)
   * [BBC: Dog training technique helps robot learn and other news](https://www.bbc.com/news/av/technology-54645279)
   * [Teaching Robots through Positive Reinforcement - TechCrunch](https://techcrunch.com/2020/10/26/teaching-robots-through-positive-reinforcement/)
   * [New AI Trains Robots like Dogs - Psychology Today](https://www.psychologytoday.com/us/blog/the-future-brain/202010/new-ai-trains-robots-dogs)

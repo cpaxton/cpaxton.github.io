@@ -18,6 +18,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### News and Links
 
+  * [ALFRED Challenge results - CVPR 2021 - NVIDIA team in 1st place](https://askforalfred.com/EAI21/) - ALFRED
   * [Maker’s Dozen: NVIDIA Researchers to Present Advances in Human-Robot Interaction and More at ICRA](https://blogs.nvidia.com/blog/2021/05/27/human-robot-interaction-research-icra) - NVIDIA
   * [BBC: Dog training technique helps robot learn and other news](https://www.bbc.com/news/av/technology-54645279) - BBC
   * [Teaching Robots through Positive Reinforcement](https://techcrunch.com/2020/10/26/teaching-robots-through-positive-reinforcement/) - TechCrunch

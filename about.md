@@ -64,6 +64,7 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### Patents
 
+  * [Robot Control using Deep Learning](https://www.freepatentsonline.com/y2021/0252698.html)
   * [Imitation Learning System](https://patentimages.storage.googleapis.com/03/ba/22/79fd056c7334f5/US20210081752A1.pdf)
   * [Trajectory Generation using Temporal Logic and Tree Search](https://patentimages.storage.googleapis.com/35/dc/4e/6bf9a63a604604/US10133275.pdf)
 

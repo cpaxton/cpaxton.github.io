@@ -10,7 +10,11 @@ chart: true
 I am a robotics research scientist at NVIDIA. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
 
 I got my PhD in Computer Science in 2018 from the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
-Since then, I have been with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). Recently, I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications. Other areas of interest include [human-robot interaction](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be).
+
+
+From 2018-2022, I was with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). Recently, I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications. Other areas of interest include [human-robot interaction](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be).
+
+As of 2022, I am at FAIR.
 
 <!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 
@@ -18,6 +22,8 @@ You can also check out [My NVIDIA Research profile](https://research.nvidia.com/
 
 ### News and Links
 
+  * [Best paper finalist for SORNet - ICRA 2022 workshop on scaling robot learning](https://sites.google.com/view/icra22-srl) - ICRA 2022
+  * SORNet nominated for best systems paper - CoRL 2021
   * [ALFRED Challenge results - CVPR 2021 - my team in 1st place](https://askforalfred.com/EAI21/) - ALFRED
   * [Maker’s Dozen: NVIDIA Researchers to Present Advances in Human-Robot Interaction and More at ICRA](https://blogs.nvidia.com/blog/2021/05/27/human-robot-interaction-research-icra) - NVIDIA
   * [BBC: Dog training technique helps robot learn and other news](https://www.bbc.com/news/av/technology-54645279) - BBC

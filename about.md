@@ -18,7 +18,7 @@ As of 2022, I am excited to have joined the Embodied AI team at FAIR Labs.
 
 <!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 
-You can also check out [My NVIDIA Research profile](https://research.nvidia.com/person/chris-paxton), find a list of my papers on [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ&hl=en&oi=ao), or email me at chris.paxton.cs (at) gmail.com.
+You can also find a list of my papers on [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ&hl=en&oi=ao), or email me at chris.paxton.cs (at) gmail.com.
 
 ### News and Links
 

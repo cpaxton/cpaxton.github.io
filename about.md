@@ -22,6 +22,7 @@ You can also find a list of my papers on [Google Scholar](https://scholar.google
 
 ### News and Links
 
+  * [Meta’s OK-Robot performs zero-shot pick-and-drop in unseen environments](https://venturebeat.com/automation/metas-ok-robot-performs-zero-shot-pick-and-drop-in-unseen-environments/) - VentureBeat
   * [Best paper finalist for SORNet - ICRA 2022 workshop on scaling robot learning](https://sites.google.com/view/icra22-srl) - ICRA 2022
   * SORNet nominated for best systems paper - CoRL 2021
   * [ALFRED Challenge results - CVPR 2021 - my team in 1st place](https://askforalfred.com/EAI21/) - ALFRED

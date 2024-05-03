@@ -7,14 +7,13 @@ categories: [about]
 chart: true
 ---
 
-I am a robotics research scientist at [FAIR Labs](https://ai.facebook.com/research/). I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
+I am a robotics and AI researcher, currently leading Embodied AI at [Hello Robot](https://hello-robot.com/). At the past, I've worked at NVIDIA Research and at FAIR, the fundamental AI research arm of Meta. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
 
 I got my PhD in Computer Science in 2018 from the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
 
-
 From 2018-2022, I was with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). Recently, I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications. Other areas of interest include [human-robot interaction](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be).
 
-As of 2022, I am excited to have joined the Embodied AI team at FAIR Labs. My work has looked at how we can make robots into useful, general-purposem mobile manipulators in homes. In particular, I pushed a challenge we called *open-vocabulary mobile manipulation*, or [OVMM](https://ovmm.github.io/), which says robots should be able to pick and place *any* object in *any* environment. We ran a [Neurips competition](https://aihabitat.org/challenge/2023_homerobot_ovmm/) to encourage people to build reproducible robots which can perform this OVMM task.
+In 2022, I joined the Embodied AI team at FAIR Labs. My work has looked at how we can make robots into useful, general-purposem mobile manipulators in homes. In particular, I pushed a challenge we called *open-vocabulary mobile manipulation*, or [OVMM](https://ovmm.github.io/), which says robots should be able to pick and place *any* object in *any* environment. We ran a [Neurips competition](https://aihabitat.org/challenge/2023_homerobot_ovmm/) to encourage people to build reproducible robots which can perform this OVMM task.
 
 <!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
 
@@ -22,6 +21,7 @@ You can also find a list of my papers on [Google Scholar](https://scholar.google
 
 ### News and Links
 
+  * [How LLMs are Usering In A New Era of Robotics](https://venturebeat.com/ai/how-llms-are-ushering-in-a-new-era-of-robotics/) - VentureBeat
   * [This robot can tidy a room without any help](https://www.technologyreview.com/2024/02/01/1087445/this-robot-can-tidy-a-room-without-any-help/) - MIT Technology Review
   * [Meta’s OK-Robot performs zero-shot pick-and-drop in unseen environments](https://venturebeat.com/automation/metas-ok-robot-performs-zero-shot-pick-and-drop-in-unseen-environments/) - VentureBeat
   * [NeurIPS 2023 HomeRobot: Open Vocabulary Mobile Manipulation (OVMM) Challenge](https://aihabitat.org/challenge/2023_homerobot_ovmm/) - AI Habitat

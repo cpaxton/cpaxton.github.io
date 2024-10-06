@@ -1,0 +1,190 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: You're too busy talking to eat anything.
+    type: E
+  - text: A giant, messy sandwich.
+    type: C
+  - text: A plate of mini sandwiches.
+    type: B
+  - text: A classic club sandwich.
+    type: A
+  - text: A sandwich made with unusual ingredients.
+    type: D
+  text: You're at a party. What's your go-to snack?
+- image: questions/2.png
+  options:
+  - text: A vegetarian delight with roasted vegetables and hummus.
+    type: D
+  - text: A spicy tuna melt.
+    type: B
+  - text: A classic roast beef and Swiss.
+    type: A
+  - text: A hearty pulled pork sandwich.
+    type: C
+  - text: A sandwich with a secret ingredient.
+    type: E
+  text: What's your ideal sandwich filling?
+- image: questions/3.png
+  options:
+  - text: A sandwich with ketchup and mustard all over it.
+    type: B
+  - text: A sandwich you made with ingredients you found in your fridge.
+    type: E
+  - text: A sandwich that you ate in a public restroom.
+    type: D
+  - text: A peanut butter and pickle sandwich.
+    type: A
+  - text: A sandwich with a rogue piece of fruit stuck to it.
+    type: C
+  text: ' What''s the most embarrassing sandwich you''ve ever eaten?'
+- image: questions/4.png
+  options:
+  - text: A hearty rye bread.
+    type: C
+  - text: A fluffy white bread.
+    type: D
+  - text: A bread that's been toasted to perfection.
+    type: E
+  - text: A crusty baguette.
+    type: A
+  - text: A soft brioche bun.
+    type: B
+  text: What's your favorite type of bread for a sandwich?
+- image: questions/5.png
+  options:
+  - text: A sandwich with a creamy avocado and mango salsa.
+    type: C
+  - text: A sandwich with edible flowers and a balsamic glaze.
+    type: A
+  - text: A sandwich with a unique combination of meats and cheeses.
+    type: D
+  - text: A sandwich with a spicy sriracha mayo and crispy fried onions.
+    type: B
+  - text: A sandwich that changes flavor based on your mood.
+    type: E
+  text: ' If you could invent a new sandwich, what would it be?'
+- image: questions/6.png
+  options:
+  - text: A peanut butter and jelly sandwich.
+    type: B
+  - text: A grilled cheese with extra cheese.
+    type: A
+  - text: A sandwich made with whatever ingredients you have in your fridge.
+    type: E
+  - text: A BLT with extra bacon.
+    type: D
+  - text: A tuna salad sandwich.
+    type: C
+  text: What's your go-to sandwich for a late-night snack?
+- image: questions/7.png
+  options:
+  - text: The comfort and nostalgia they evoke.
+    type: B
+  - text: The satisfying crunch of the bread.
+    type: D
+  - text: The perfect combination of flavors and textures.
+    type: E
+  - text: The variety of fillings and combinations.
+    type: A
+  - text: The ability to customize them to your liking.
+    type: C
+  text: What's your favorite thing about sandwiches?
+- image: questions/8.png
+  options:
+  - text: A fancy French bistro.
+    type: B
+  - text: A cozy Italian trattoria.
+    type: C
+  - text: A bustling street food market in Bangkok.
+    type: A
+  - text: A beachside cafe in Hawaii.
+    type: D
+  - text: A rustic German bakery.
+    type: E
+  text: ' What''s your dream sandwich vacation destination?'
+- image: questions/9.png
+  options:
+  - text: ' A sandwich with a strange combination of ingredients.'
+    type: D
+  - text: ' A sandwich that''s not cut properly.'
+    type: E
+  - text: ' A soggy sandwich.'
+    type: A
+  - text: ' A sandwich with too much mayonnaise.'
+    type: B
+  - text: ' A sandwich with a weird texture.'
+    type: C
+  text: ' What''s your biggest sandwich pet peeve?'
+- image: questions/10.png
+  options:
+  - text: ' A sandwich that''s a tribute to your favorite food blogger.'
+    type: D
+  - text: ' A sandwich made with all the ingredients from your favorite restaurant.'
+    type: A
+  - text: ' A sandwich that''s a fusion of different cuisines.'
+    type: B
+  - text: ' A sandwich that''s a secret recipe passed down through generations.'
+    type: E
+  - text: ' A sandwich that''s a culinary masterpiece.'
+    type: C
+  text: ' If you could have any sandwich in the world, what would it be?'
+results:
+  A:
+    description: You are the quintessential comfort food, a warm hug in a bread pocket.
+      You are simple, yet satisfying, and always a crowd-pleaser. You are the epitome
+      of "good enough," and you don't need fancy toppings to be delicious. Your strength
+      lies in your simplicity, and your weakness is that you can be a bit predictable.
+    image: results/A.png
+    image_description: 'A close-up shot of a perfectly grilled cheese sandwich. The
+      bread is golden brown and slightly crispy, with melted cheese oozing out. The
+      cheese is a bright yellow, and the bread is slightly toasted. There is a small
+      amount of butter on the bread. '
+    title: Grilled Cheese Sandwich.
+  B:
+    description: You are the rebel, the one who doesn't follow the rules. You are
+      bold, with a touch of danger. You are a mix of sweet and savory, with a hint
+      of spice. You are the sandwich that people crave when they want something different,
+      something exciting. You are a bit messy, but that's part of your charm.
+    image: results/B.png
+    image_description: 'A close-up shot of a BLT sandwich. The bread is toasted and
+      slightly crispy, with a generous amount of bacon and lettuce. The tomato is
+      sliced thick and juicy, and the mayonnaise is spread evenly. The sandwich is
+      dripping with bacon grease. '
+    title: BLT Sandwich.
+  C:
+    description: You are the chaotic, the unpredictable, the one who throws everything
+      in the mix. You are a sensory overload, a symphony of flavors and textures.
+      You are the sandwich that people can't resist, even if they don't know what
+      they're getting into. You are a bit messy, a bit wild, and a lot delicious.
+    image: results/C.png
+    image_description: 'A close-up shot of a "Everything" sandwich. The bread is a
+      mix of different textures, with a variety of toppings. There is a generous amount
+      of bacon, lettuce, tomato, onion, and pickles. The sandwich is dripping with
+      a variety of sauces, including mustard, mayo, and hot sauce. '
+    title: ' The "Everything" Sandwich.'
+  D:
+    description: You are the sophisticated, the refined, the one who knows what they
+      want. You are a classic, a timeless masterpiece. You are a blend of savory and
+      sweet, with a hint of tang. You are the sandwich that people crave when they
+      want something special, something memorable. You are a bit fancy, but you are
+      always worth it.
+    image: results/D.png
+    image_description: 'A close-up shot of a Reuben sandwich. The rye bread is toasted
+      and slightly crispy, with a generous amount of corned beef, sauerkraut, Swiss
+      cheese, and Thousand Island dressing. The sandwich is piled high with the ingredients,
+      and the edges are slightly browned. '
+    title: ' The "Reuben" Sandwich.'
+  E:
+    description: You are the eccentric, the unique, the one who doesn't follow the
+      rules. You are a fusion of cultures, a blend of the familiar and the exotic.
+      You are a bit messy, a bit wild, and a lot delicious. You are the sandwich that
+      people crave when they want something different, something exciting. You are
+      a bit pretentious, but you are always worth it.
+    image: results/E.png
+    image_description: "A close-up shot of a Croque Monsieur sandwich. The bread is\
+      \ toasted and slightly crispy, with a generous amount of ham, Gruyere cheese,\
+      \ and b\xE9chamel sauce. The sandwich is piled high with the ingredients, and\
+      \ the edges are slightly browned. "
+    title: The "Croque Monsieur" Sandwich.
+topic: What kind of sandwich are you?

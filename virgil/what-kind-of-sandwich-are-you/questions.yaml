@@ -1,0 +1,89 @@
+- image: A party with a bunch of people. There is a table with a variety of snacks,
+    including a plate of sandwiches. The sandwiches are all different shapes and sizes,
+    and they are all made with different types of bread.
+  options:
+    A: A classic club sandwich.
+    B: A plate of mini sandwiches.
+    C: A giant, messy sandwich.
+    D: A sandwich made with unusual ingredients.
+    E: You're too busy talking to eat anything.
+  question: You're at a party. What's your go-to snack?
+- image: A close-up of a hand holding a sandwich. The sandwich is made with a variety
+    of ingredients, including meat, cheese, vegetables, and condiments.
+  options:
+    A: A classic roast beef and Swiss.
+    B: A spicy tuna melt.
+    C: A hearty pulled pork sandwich.
+    D: A vegetarian delight with roasted vegetables and hummus.
+    E: A sandwich with a secret ingredient.
+  question: What's your ideal sandwich filling?
+- image: A person sitting at a table, looking down at a sandwich with a sad expression.
+    The sandwich is a mess, with various toppings and sauces smeared all over it.
+  options:
+    A: A peanut butter and pickle sandwich.
+    B: A sandwich with ketchup and mustard all over it.
+    C: A sandwich with a rogue piece of fruit stuck to it.
+    D: A sandwich that you ate in a public restroom.
+    E: A sandwich you made with ingredients you found in your fridge.
+  question: ' What''s the most embarrassing sandwich you''ve ever eaten?'
+- image: A close-up of a variety of breads, including sourdough, rye, ciabatta, and
+    focaccia.
+  options:
+    A: A crusty baguette.
+    B: A soft brioche bun.
+    C: A hearty rye bread.
+    D: A fluffy white bread.
+    E: A bread that's been toasted to perfection.
+  question: What's your favorite type of bread for a sandwich?
+- image: A futuristic kitchen with advanced technology. There are robots making sandwiches,
+    and a holographic display showing a variety of sandwich options.
+  options:
+    A: A sandwich with edible flowers and a balsamic glaze.
+    B: A sandwich with a spicy sriracha mayo and crispy fried onions.
+    C: A sandwich with a creamy avocado and mango salsa.
+    D: A sandwich with a unique combination of meats and cheeses.
+    E: A sandwich that changes flavor based on your mood.
+  question: ' If you could invent a new sandwich, what would it be?'
+- image: A person in pajamas, holding a sandwich in bed. The sandwich is messy and
+    covered in crumbs.
+  options:
+    A: A grilled cheese with extra cheese.
+    B: A peanut butter and jelly sandwich.
+    C: A tuna salad sandwich.
+    D: A BLT with extra bacon.
+    E: A sandwich made with whatever ingredients you have in your fridge.
+  question: What's your go-to sandwich for a late-night snack?
+- image: A person smiling and holding a sandwich. The sandwich is in their hand, and
+    they are looking at it with a sense of joy.
+  options:
+    A: The variety of fillings and combinations.
+    B: The comfort and nostalgia they evoke.
+    C: The ability to customize them to your liking.
+    D: The satisfying crunch of the bread.
+    E: The perfect combination of flavors and textures.
+  question: What's your favorite thing about sandwiches?
+- image: A montage of different sandwich shops and restaurants around the world.
+  options:
+    A: A bustling street food market in Bangkok.
+    B: A fancy French bistro.
+    C: A cozy Italian trattoria.
+    D: A beachside cafe in Hawaii.
+    E: A rustic German bakery.
+  question: ' What''s your dream sandwich vacation destination?'
+- image: A person looking disgusted at a sandwich with a lot of sauce dripping down
+    the side.
+  options:
+    A: ' A soggy sandwich.'
+    B: ' A sandwich with too much mayonnaise.'
+    C: ' A sandwich with a weird texture.'
+    D: ' A sandwich with a strange combination of ingredients.'
+    E: ' A sandwich that''s not cut properly.'
+  question: ' What''s your biggest sandwich pet peeve?'
+- image: A person standing in front of a giant, multi-tiered sandwich display.
+  options:
+    A: ' A sandwich made with all the ingredients from your favorite restaurant.'
+    B: ' A sandwich that''s a fusion of different cuisines.'
+    C: ' A sandwich that''s a culinary masterpiece.'
+    D: ' A sandwich that''s a tribute to your favorite food blogger.'
+    E: ' A sandwich that''s a secret recipe passed down through generations.'
+  question: ' If you could have any sandwich in the world, what would it be?'

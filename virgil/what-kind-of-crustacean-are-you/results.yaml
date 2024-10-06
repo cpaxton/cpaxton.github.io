@@ -1,0 +1,58 @@
+A:
+  description: You are the hermit crab, the wanderer, the one who sheds their shell
+    and embraces change. You are adaptable, resourceful, and always seeking new experiences.
+    You are not afraid to be different, and you are always looking for the next adventure.
+    You are a free spirit, and you are not afraid to break the mold.
+  image: 'A hermit crab with a colorful shell, sitting on a beach, looking out at
+    the ocean. The crab is wearing a tiny hat and sunglasses. The sand is golden and
+    the sky is blue. '
+  letter: A
+  result: Hermit Crab
+  topic: What kind of crustacean are you?
+B:
+  description: You are the lobster, a creature of luxury and indulgence. You are confident,
+    powerful, and always demanding the best. You are a symbol of wealth and status,
+    and you are not afraid to flaunt your riches. You are a true king, and you know
+    it.
+  image: 'A lobster, with a large claw, sitting on a bed of gold coins. The lobster
+    is wearing a crown and a monocle. The background is a luxurious room with velvet
+    curtains and a fireplace. '
+  letter: B
+  result: Lobster
+  topic: What kind of crustacean are you?
+C:
+  description: You are the barnacle, clinging to the side of the ship, a steadfast
+    and unyielding presence. You are a symbol of resilience and perseverance, always
+    finding a way to survive. You are a quiet observer, watching the world go by,
+    and you are content with your simple life. You are a master of adaptation, and
+    you are always ready to face whatever comes your way.
+  image: A barnacle, attached to a ship's hull, with a small, intricate pattern on
+    its shell. The ship is sailing across a vast ocean, with a bright blue sky and
+    white clouds. The barnacle is facing the sun, and its shell is reflecting the
+    light.
+  letter: C
+  result: ' Barnacle'
+  topic: What kind of crustacean are you?
+D:
+  description: You are the copepod, a tiny, unassuming creature that thrives in the
+    most unexpected places. You are a master of survival, adapting to any environment
+    and thriving in the most challenging conditions. You are a symbol of resilience
+    and adaptability, always finding a way to survive. You are a silent observer,
+    watching the world go by, and you are content with your simple life.
+  image: A copepod, swimming in a vast ocean, with a tiny, intricate pattern on its
+    shell. The ocean is a vibrant blue, with schools of fish swimming around. The
+    copepod is moving through the water, with its tiny legs propelling it forward.
+  letter: D
+  result: ' Copepod'
+  topic: What kind of crustacean are you?
+E:
+  description: You are the giant isopod, a creature of the deep, a master of the dark
+    and the unknown. You are a symbol of mystery and power, a creature of immense
+    size and strength. You are a creature of the abyss, and you are not afraid of
+    the darkness. You are a creature of the deep, and you are not afraid of the unknown.
+  image: A giant isopod, with a long, segmented body and a pair of large, pincer-like
+    claws, swimming in a dark, murky ocean. The isopod is surrounded by bioluminescent
+    creatures, and the water is filled with strange, otherworldly shapes.
+  letter: E
+  result: ' Giant Isopod'
+  topic: What kind of crustacean are you?

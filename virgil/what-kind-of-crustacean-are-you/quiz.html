@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: The Macarena
+    type: B
+  - text: The Cha Cha Slide
+    type: D
+  - text: The Running Man
+    type: C
+  - text: You just stand there awkwardly, hoping no one notices.
+    type: E
+  - text: The Electric Slide
+    type: A
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: You're too nervous to do anything, you just stare at your phone.
+    type: E
+  - text: Tell them a funny story about your childhood.
+    type: C
+  - text: Compliment their outfit.
+    type: A
+  - text: Ask them about their favorite food.
+    type: B
+  - text: Try to make eye contact with the waiter.
+    type: D
+  text: You're on a first date. What's your first move?
+- image: questions/3.png
+  options:
+  - text: Losing your ability to molt.
+    type: C
+  - text: Being forgotten by your friends.
+    type: D
+  - text: ' The feeling of being watched.'
+    type: E
+  - text: Being trapped in a tiny, dark space.
+    type: B
+  - text: Being eaten by a larger crustacean.
+    type: A
+  text: ' What''s your biggest fear?'
+- image: questions/4.png
+  options:
+  - text: A relaxing cruise to the Bahamas.
+    type: A
+  - text: A deep-sea diving expedition to the Mariana Trench.
+    type: B
+  - text: You'd rather stay home and watch Netflix.
+    type: E
+  - text: A staycation at a luxurious spa.
+    type: D
+  - text: A camping trip in the Alaskan wilderness.
+    type: C
+  text: What's your ideal vacation?
+- image: questions/5.png
+  options:
+  - text: People who don't use their turn signals.
+    type: A
+  - text: People who don't say "please" and "thank you."
+    type: B
+  - text: People who don't know how to properly fold a fitted sheet.
+    type: C
+  - text: People who don't appreciate the finer things in life, like a perfectly cooked
+      lobster.
+    type: E
+  - text: People who talk too loudly on the phone.
+    type: D
+  text: What's your biggest pet peeve?
+- image: questions/6.png
+  options:
+  - text: The power to fly.
+    type: D
+  - text: The ability to teleport.
+    type: A
+  - text: The ability to speak any language.
+    type: C
+  - text: The ability to see the future.
+    type: E
+  - text: The power to control the weather.
+    type: B
+  text: If you could have any superpower, what would it be?
+- image: questions/7.png
+  options:
+  - text: Pop music.
+    type: C
+  - text: Jazz.
+    type: D
+  - text: Heavy metal.
+    type: B
+  - text: ' You prefer silence.'
+    type: E
+  - text: Classical music.
+    type: A
+  text: What's your favorite type of music?
+- image: questions/8.png
+  options:
+  - text: A professional cuddler.
+    type: E
+  - text: A marine biologist.
+    type: A
+  - text: A musician.
+    type: D
+  - text: A chef.
+    type: C
+  - text: A software engineer.
+    type: B
+  text: What's your dream job?
+- image: questions/9.png
+  options:
+  - text: ' Orange'
+    type: D
+  - text: ' Purple'
+    type: C
+  - text: ' Blue'
+    type: A
+  - text: ' Green'
+    type: B
+  - text: ' You don''t have a favorite color.'
+    type: E
+  text: What's your favorite color?
+- image: questions/10.png
+  options:
+  - text: To make a difference in the world.
+    type: D
+  - text: To travel the world.
+    type: A
+  - text: To find true love.
+    type: C
+  - text: To achieve financial freedom.
+    type: E
+  - text: To become a famous artist.
+    type: B
+  text: What's your biggest life goal?
+results:
+  A:
+    description: You are the hermit crab, the wanderer, the one who sheds their shell
+      and embraces change. You are adaptable, resourceful, and always seeking new
+      experiences. You are not afraid to be different, and you are always looking
+      for the next adventure. You are a free spirit, and you are not afraid to break
+      the mold.
+    image: results/A.png
+    image_description: 'A hermit crab with a colorful shell, sitting on a beach, looking
+      out at the ocean. The crab is wearing a tiny hat and sunglasses. The sand is
+      golden and the sky is blue. '
+    title: Hermit Crab
+  B:
+    description: You are the lobster, a creature of luxury and indulgence. You are
+      confident, powerful, and always demanding the best. You are a symbol of wealth
+      and status, and you are not afraid to flaunt your riches. You are a true king,
+      and you know it.
+    image: results/B.png
+    image_description: 'A lobster, with a large claw, sitting on a bed of gold coins.
+      The lobster is wearing a crown and a monocle. The background is a luxurious
+      room with velvet curtains and a fireplace. '
+    title: Lobster
+  C:
+    description: You are the barnacle, clinging to the side of the ship, a steadfast
+      and unyielding presence. You are a symbol of resilience and perseverance, always
+      finding a way to survive. You are a quiet observer, watching the world go by,
+      and you are content with your simple life. You are a master of adaptation, and
+      you are always ready to face whatever comes your way.
+    image: results/C.png
+    image_description: A barnacle, attached to a ship's hull, with a small, intricate
+      pattern on its shell. The ship is sailing across a vast ocean, with a bright
+      blue sky and white clouds. The barnacle is facing the sun, and its shell is
+      reflecting the light.
+    title: ' Barnacle'
+  D:
+    description: You are the copepod, a tiny, unassuming creature that thrives in
+      the most unexpected places. You are a master of survival, adapting to any environment
+      and thriving in the most challenging conditions. You are a symbol of resilience
+      and adaptability, always finding a way to survive. You are a silent observer,
+      watching the world go by, and you are content with your simple life.
+    image: results/D.png
+    image_description: A copepod, swimming in a vast ocean, with a tiny, intricate
+      pattern on its shell. The ocean is a vibrant blue, with schools of fish swimming
+      around. The copepod is moving through the water, with its tiny legs propelling
+      it forward.
+    title: ' Copepod'
+  E:
+    description: You are the giant isopod, a creature of the deep, a master of the
+      dark and the unknown. You are a symbol of mystery and power, a creature of immense
+      size and strength. You are a creature of the abyss, and you are not afraid of
+      the darkness. You are a creature of the deep, and you are not afraid of the
+      unknown.
+    image: results/E.png
+    image_description: A giant isopod, with a long, segmented body and a pair of large,
+      pincer-like claws, swimming in a dark, murky ocean. The isopod is surrounded
+      by bioluminescent creatures, and the water is filled with strange, otherworldly
+      shapes.
+    title: ' Giant Isopod'
+topic: What kind of crustacean are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

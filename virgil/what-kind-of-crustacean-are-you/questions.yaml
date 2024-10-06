@@ -1,0 +1,89 @@
+- image: A party with people dancing. There is a disco ball, and the music is loud.
+    There is a person in the middle of the dance floor, doing a very awkward, exaggerated
+    dance move.
+  options:
+    A: The Electric Slide
+    B: The Macarena
+    C: The Running Man
+    D: The Cha Cha Slide
+    E: You just stand there awkwardly, hoping no one notices.
+  question: You're at a party. What's your go-to dance move?
+- image: A couple on a first date, sitting at a table in a dimly lit restaurant. There
+    is a candle on the table, and the couple is looking at each other intently.
+  options:
+    A: Compliment their outfit.
+    B: Ask them about their favorite food.
+    C: Tell them a funny story about your childhood.
+    D: Try to make eye contact with the waiter.
+    E: You're too nervous to do anything, you just stare at your phone.
+  question: You're on a first date. What's your first move?
+- image: A giant, shadowy figure looming over a small crustacean. The crustacean is
+    terrified, its eyes wide with fear.
+  options:
+    A: Being eaten by a larger crustacean.
+    B: Being trapped in a tiny, dark space.
+    C: Losing your ability to molt.
+    D: Being forgotten by your friends.
+    E: ' The feeling of being watched.'
+  question: ' What''s your biggest fear?'
+- image: A crustacean on a tropical beach, wearing sunglasses and a straw hat. There
+    is a palm tree in the background, and the water is crystal clear.
+  options:
+    A: A relaxing cruise to the Bahamas.
+    B: A deep-sea diving expedition to the Mariana Trench.
+    C: A camping trip in the Alaskan wilderness.
+    D: A staycation at a luxurious spa.
+    E: You'd rather stay home and watch Netflix.
+  question: What's your ideal vacation?
+- image: A crustacean with a disgusted expression, holding a tiny, crumpled piece
+    of paper.
+  options:
+    A: People who don't use their turn signals.
+    B: People who don't say "please" and "thank you."
+    C: People who don't know how to properly fold a fitted sheet.
+    D: People who talk too loudly on the phone.
+    E: People who don't appreciate the finer things in life, like a perfectly cooked
+      lobster.
+  question: What's your biggest pet peeve?
+- image: A crustacean with glowing red eyes, surrounded by swirling energy.
+  options:
+    A: The ability to teleport.
+    B: The power to control the weather.
+    C: The ability to speak any language.
+    D: The power to fly.
+    E: The ability to see the future.
+  question: If you could have any superpower, what would it be?
+- image: A crustacean dancing to a disco beat, wearing a tiny disco ball hat.
+  options:
+    A: Classical music.
+    B: Heavy metal.
+    C: Pop music.
+    D: Jazz.
+    E: ' You prefer silence.'
+  question: What's your favorite type of music?
+- image: A crustacean working in a high-tech lab, surrounded by complex machinery
+    and glowing screens.
+  options:
+    A: A marine biologist.
+    B: A software engineer.
+    C: A chef.
+    D: A musician.
+    E: A professional cuddler.
+  question: What's your dream job?
+- image: A crustacean wearing a rainbow-colored shell.
+  options:
+    A: ' Blue'
+    B: ' Green'
+    C: ' Purple'
+    D: ' Orange'
+    E: ' You don''t have a favorite color.'
+  question: What's your favorite color?
+- image: A crustacean standing on a mountaintop, looking out at a vast, beautiful
+    landscape.
+  options:
+    A: To travel the world.
+    B: To become a famous artist.
+    C: To find true love.
+    D: To make a difference in the world.
+    E: To achieve financial freedom.
+  question: What's your biggest life goal?

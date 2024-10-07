@@ -1,0 +1,94 @@
+- image: A party with people dancing. There is a disco ball, and the music is loud.
+    There is a person in the corner, looking lost and confused.
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Find a quiet corner to observe the party.'
+    D: ' Try to make friends with the person who looks lost.'
+    E: ' Leave the party and go home.'
+  question: You're at a party. What's your go-to move?
+- image: A person staring into a mirror. The person is wearing a black turtleneck
+    and has a serious expression. The room is dimly lit, and there is a single spotlight
+    on the person.
+  options:
+    A: ' A reflection of your true self.'
+    B: ' A reflection of your deepest fears.'
+    C: ' A reflection of your future self.'
+    D: ' A reflection of your past self.'
+    E: ' A reflection of a stranger.'
+  question: You're staring at a mirror. What do you see?
+- image: A person standing at a crossroads with a sign that reads "Turn Left or Turn
+    Right?" The person is wearing a black cloak and holding a lantern. The sky is
+    dark and stormy.
+  options:
+    A: ' Take a leap of faith and follow your heart.'
+    B: ' Take a calculated risk and go for what you want.'
+    C: ' Take a safe route and stick to what you know.'
+    D: ' Take a moment to reflect and consider all your options.'
+    E: ' Take a detour and explore a new path.'
+  question: ' You''re at a crossroads in your life. What do you do?'
+- image: A pumpkin patch with rows of pumpkins of all shapes and sizes. There are
+    people walking through the patch, and a scarecrow stands in the middle of the
+    field.
+  options:
+    A: ' Pick the perfect pumpkin for carving.'
+    B: ' Take a picture with a giant pumpkin.'
+    C: ' Try to find the biggest pumpkin in the patch.'
+    D: ' Go on a hayride.'
+    E: ' Try to make friends with the scarecrow.'
+  question: You're at a pumpkin patch. What do you do?
+- image: A dimly lit room with candles flickering. A table is covered with tarot cards
+    and other occult paraphernalia. A medium sits in the center, surrounded by people
+    who are looking intently at her.
+  options:
+    A: ' Try to communicate with the spirit world.'
+    B: ' Try to read the tarot cards.'
+    C: ' Try to make contact with a specific spirit.'
+    D: ' Try to learn more about the medium.'
+    E: " Leave the s\xE9ance and go home."
+  question: "You're at a s\xE9ance. What do you do?"
+- image: A person dressed in a costume that is both elaborate and bizarre. The costume
+    is made of materials that are both strange and beautiful.
+  options:
+    A: ' A classic superhero.'
+    B: ' A mythical creature.'
+    C: ' A historical figure.'
+    D: ' A character from a movie or book.'
+    E: ' A completely original creation.'
+  question: You're at a costume party. What's your costume?
+- image: A car driving down a winding road through a forest. The car is driving through
+    a fog, and the trees are tall and dark.
+  options:
+    A: ' Listen to music.'
+    B: ' Take pictures of the scenery.'
+    C: ' Talk to your travel companions.'
+    D: ' Read a book.'
+    E: ' Look for interesting roadside attractions.'
+  question: You're on a road trip. What's your favorite thing to do on the road?
+- image: A haunted house with cobwebs, flickering lights, and spooky decorations.
+    There are people dressed as ghosts and monsters.
+  options:
+    A: ' Run away as fast as you can.'
+    B: ' Try to find the source of the spooky noises.'
+    C: ' Take pictures of the haunted house.'
+    D: ' Try to communicate with the ghosts.'
+    E: ' Try to find the exit.'
+  question: You're at a haunted house. What do you do?
+- image: A carnival with bright lights, colorful tents, and rides. There are people
+    laughing and enjoying themselves.
+  options:
+    A: ' Ride the Ferris wheel.'
+    B: ' Play carnival games.'
+    C: ' Eat cotton candy.'
+    D: ' Watch the acrobats.'
+    E: ' Try to win a stuffed animal.'
+  question: You're at a carnival. What do you do?
+- image: A bonfire with people gathered around it, singing songs and telling stories.
+    The fire is crackling and the flames are dancing.
+  options:
+    A: ' Sing along to the songs.'
+    B: ' Roast marshmallows.'
+    C: ' Tell scary stories.'
+    D: ' Share memories with friends.'
+    E: ' Watch the flames.'
+  question: You're at a bonfire. What do you do?

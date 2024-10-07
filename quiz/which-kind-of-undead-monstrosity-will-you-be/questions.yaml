@@ -1,0 +1,86 @@
+- image: A dusty old book with a leather cover, sitting on a wooden table in a dimly
+    lit attic. There is a single ray of sunlight shining through a crack in the boarded-up
+    window.
+  options:
+    A: Read the book cover to cover.
+    B: Flip through the pages, looking for interesting illustrations.
+    C: Try to open the book, but it's locked.
+    D: Leave the book alone, it's probably cursed.
+    E: ' You''re too scared to touch it, so you leave it there.'
+  question: You find a dusty old book in your attic. What do you do?
+- image: A dimly lit bedroom with a single lamp illuminating a bed. The sheets are
+    rumpled, and a single, pale hand is reaching out from under the covers.
+  options:
+    A: ' Call out for help.'
+    B: ' Try to remember what happened.'
+    C: ' Get out of bed and look around.'
+    D: ' Ignore it and go back to sleep.'
+    E: ' You feel a strange tingling sensation, and you start to feel like you''re
+      floating.'
+  question: You wake up in the middle of the night, but you can't remember how you
+    got there. What do you do?
+- image: A swirling vortex of colors, with each color representing a different emotion.
+  options:
+    A: ' Indigo'
+    B: ' Crimson'
+    C: ' Emerald'
+    D: ' Azure'
+    E: ' Gold'
+  question: ' What is your favorite color?'
+- image: A vast, empty landscape with a single, towering skyscraper in the distance.
+  options:
+    A: ' Being forgotten.'
+    B: ' Being alone.'
+    C: ' Losing control.'
+    D: ' Being trapped.'
+    E: ' The unknown.'
+  question: ' What is your greatest fear?'
+- image: A person with glowing eyes, surrounded by swirling energy, with a single,
+    powerful hand outstretched.
+  options:
+    A: ' Telekinesis'
+    B: ' Invisibility'
+    C: ' Flight'
+    D: ' Shapeshifting'
+    E: ' Time Manipulation'
+  question: ' If you could have any superpower, what would it be?'
+- image: A swirling, chaotic mix of musical notes, instruments, and sounds.
+  options:
+    A: ' Classical'
+    B: ' Heavy Metal'
+    C: ' Electronic'
+    D: ' Folk'
+    E: ' Silence'
+  question: ' What is your favorite type of music?'
+- image: A plate of food with a single, glowing, pulsating ingredient in the center.
+  options:
+    A: ' Chocolate'
+    B: ' Steak'
+    C: ' Sushi'
+    D: ' Pizza'
+    E: ' Nothing'
+  question: ' What is your favorite food?'
+- image: A single, cracked mirror reflecting a distorted, fragmented image of a person.
+  options:
+    A: ' Not taking more risks.'
+    B: ' Not being more kind.'
+    C: ' Not living a more fulfilling life.'
+    D: ' Not being more present.'
+    E: ' Not being more honest.'
+  question: ' What is your biggest regret?'
+- image: A single, powerful eye glowing with an inner light.
+  options:
+    A: ' Resilience'
+    B: ' Determination'
+    C: ' Creativity'
+    D: ' Empathy'
+    E: ' Knowledge'
+  question: ' What is your greatest strength?'
+- image: A single, cracked mirror reflecting a distorted, fragmented image of a person.
+  options:
+    A: ' Pride'
+    B: ' Fear'
+    C: ' Self-doubt'
+    D: ' Laziness'
+    E: ' Indecisiveness'
+  question: ' What is your biggest weakness?'

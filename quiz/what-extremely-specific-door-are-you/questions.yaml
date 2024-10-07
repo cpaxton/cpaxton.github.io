@@ -1,0 +1,89 @@
+- image: A party with a disco ball, people dancing, and a large, ornate door in the
+    background.
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Find a quiet corner to observe the partygoers.'
+    C: ' Try to sneak a bite of someone else''s food.'
+    D: ' Dance with a stranger.'
+    E: ' Go to the bathroom and check your reflection in the mirror.'
+  question: You're at a party. What do you do?
+- image: A cobblestone street lined with Victorian houses, each with a unique door.
+    One door is particularly ornate, with a brass knocker shaped like a raven.
+  options:
+    A: ' A street performer juggling flaming torches.'
+    B: ' A shop selling antique clocks.'
+    C: ' A group of children playing tag.'
+    D: ' A dog walker with a poodle on a leash.'
+    E: ' A flock of pigeons flying overhead.'
+  question: You're walking down a street. What do you see?
+- image: A person staring into a mirror, but the reflection is distorted and warped,
+    showing a series of faces and objects that are not quite right.
+  options:
+    A: ' A reflection of yourself, but with a single, large eye.'
+    B: ' A reflection of yourself, but with a crown of thorns.'
+    C: ' A reflection of yourself, but with a pair of wings.'
+    D: ' A reflection of yourself, but with a single, glowing red eye.'
+    E: ' A reflection of yourself, but with a face that is slowly melting.'
+  question: You're staring at a mirror. What do you see?
+- image: A concert hall filled with people, the stage is lit with spotlights, and
+    the crowd is singing along to the music.
+  options:
+    A: ' A sense of overwhelming joy and euphoria.'
+    B: ' A sense of deep melancholy and longing.'
+    C: ' A sense of intense anticipation and excitement.'
+    D: ' A sense of quiet contemplation and introspection.'
+    E: ' A sense of overwhelming anxiety and fear.'
+  question: You're at a concert. What do you feel?
+- image: A surreal landscape with floating islands, giant mushrooms, and a giant,
+    glowing eye in the sky.
+  options:
+    A: ' You try to fly through the air.'
+    B: ' You try to communicate with the giant eye.'
+    C: ' You try to find a way out of the dream.'
+    D: ' You try to build a bridge to one of the floating islands.'
+    E: ' You try to eat a giant mushroom.'
+  question: You're in a dream. What do you do?
+- image: A funeral procession with a hearse, mourners, and a single, ornate door in
+    the background.
+  options:
+    A: ' You stand in silence, watching the procession.'
+    B: ' You light a candle for the deceased.'
+    C: ' You offer condolences to the family.'
+    D: ' You try to find a way to escape the funeral.'
+    E: ' You try to communicate with the deceased through the door.'
+  question: You're at a funeral. What do you do?
+- image: A dimly lit cafe with a single table for two, a vintage record player playing
+    jazz music, and a door in the background.
+  options:
+    A: ' You order a cup of coffee and stare at the door.'
+    B: ' You try to start a conversation with your date.'
+    C: ' You try to find a way to leave the cafe.'
+    D: ' You try to impress your date with your knowledge of jazz music.'
+    E: ' You try to find a way to escape the date.'
+  question: You're on a date. What do you do?
+- image: A library with towering shelves of books, a grand fireplace, and a single,
+    ornate door in the background.
+  options:
+    A: ' You search for a specific book on a particular subject.'
+    B: ' You try to find a quiet corner to read.'
+    C: ' You try to find a librarian to ask for help.'
+    D: ' You try to find a way to escape the library.'
+    E: ' You try to start a conversation with a fellow reader.'
+  question: You're in a library. What do you do?
+- image: A crossroads with a single, ornate door in the middle of a field. The door
+    is made of wood and has a brass handle.
+  options:
+    A: ' You take a deep breath and walk through the door.'
+    B: ' You look back at the crossroads and decide to go in a different direction.'
+    C: ' You try to find a way to avoid the crossroads.'
+    D: ' You try to find a way to communicate with the spirits of the crossroads.'
+    E: ' You try to find a way to make the crossroads disappear.'
+  question: You're at a crossroads. What do you do?
+- image: A dream with a soft, ethereal melody playing in the background.
+  options:
+    A: ' The sound of a distant bell.'
+    B: ' The sound of a gentle breeze rustling through leaves.'
+    C: ' The sound of a child''s laughter.'
+    D: ' The sound of a distant train whistle.'
+    E: ' The sound of a heartbeat.'
+  question: You're in a dream. What do you hear?

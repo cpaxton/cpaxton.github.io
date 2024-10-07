@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Leave the party and go home.'
+    type: E
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Find a quiet corner to observe the party.'
+    type: C
+  - text: ' Try to make friends with the person who looks lost.'
+    type: D
+  text: You're at a party. What's your go-to move?
+- image: questions/2.png
+  options:
+  - text: ' A reflection of your true self.'
+    type: A
+  - text: ' A reflection of your deepest fears.'
+    type: B
+  - text: ' A reflection of your future self.'
+    type: C
+  - text: ' A reflection of a stranger.'
+    type: E
+  - text: ' A reflection of your past self.'
+    type: D
+  text: You're staring at a mirror. What do you see?
+- image: questions/3.png
+  options:
+  - text: ' Take a calculated risk and go for what you want.'
+    type: B
+  - text: ' Take a detour and explore a new path.'
+    type: E
+  - text: ' Take a moment to reflect and consider all your options.'
+    type: D
+  - text: ' Take a safe route and stick to what you know.'
+    type: C
+  - text: ' Take a leap of faith and follow your heart.'
+    type: A
+  text: ' You''re at a crossroads in your life. What do you do?'
+- image: questions/4.png
+  options:
+  - text: ' Try to make friends with the scarecrow.'
+    type: E
+  - text: ' Go on a hayride.'
+    type: D
+  - text: ' Take a picture with a giant pumpkin.'
+    type: B
+  - text: ' Try to find the biggest pumpkin in the patch.'
+    type: C
+  - text: ' Pick the perfect pumpkin for carving.'
+    type: A
+  text: You're at a pumpkin patch. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Try to make contact with a specific spirit.'
+    type: C
+  - text: " Leave the s\xE9ance and go home."
+    type: E
+  - text: ' Try to learn more about the medium.'
+    type: D
+  - text: ' Try to communicate with the spirit world.'
+    type: A
+  - text: ' Try to read the tarot cards.'
+    type: B
+  text: "You're at a s\xE9ance. What do you do?"
+- image: questions/6.png
+  options:
+  - text: ' A historical figure.'
+    type: C
+  - text: ' A character from a movie or book.'
+    type: D
+  - text: ' A classic superhero.'
+    type: A
+  - text: ' A completely original creation.'
+    type: E
+  - text: ' A mythical creature.'
+    type: B
+  text: You're at a costume party. What's your costume?
+- image: questions/7.png
+  options:
+  - text: ' Listen to music.'
+    type: A
+  - text: ' Take pictures of the scenery.'
+    type: B
+  - text: ' Read a book.'
+    type: D
+  - text: ' Talk to your travel companions.'
+    type: C
+  - text: ' Look for interesting roadside attractions.'
+    type: E
+  text: You're on a road trip. What's your favorite thing to do on the road?
+- image: questions/8.png
+  options:
+  - text: ' Try to find the exit.'
+    type: E
+  - text: ' Try to communicate with the ghosts.'
+    type: D
+  - text: ' Take pictures of the haunted house.'
+    type: C
+  - text: ' Run away as fast as you can.'
+    type: A
+  - text: ' Try to find the source of the spooky noises.'
+    type: B
+  text: You're at a haunted house. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Try to win a stuffed animal.'
+    type: E
+  - text: ' Watch the acrobats.'
+    type: D
+  - text: ' Play carnival games.'
+    type: B
+  - text: ' Eat cotton candy.'
+    type: C
+  - text: ' Ride the Ferris wheel.'
+    type: A
+  text: You're at a carnival. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Roast marshmallows.'
+    type: B
+  - text: ' Tell scary stories.'
+    type: C
+  - text: ' Share memories with friends.'
+    type: D
+  - text: ' Watch the flames.'
+    type: E
+  - text: ' Sing along to the songs.'
+    type: A
+  text: You're at a bonfire. What do you do?
+results:
+  A:
+    description: You are the first day of October, a day of fresh starts and new beginnings.
+      You are optimistic and hopeful, and you believe in the power of change. You
+      are a bit naive, but you are also full of potential. You are the embodiment
+      of the promise of autumn, a time of transition and renewal.
+    image: results/A.png
+    image_description: 'A sunrise over a field of golden wheat, with a single, bright
+      orange pumpkin in the foreground. The sky is a vibrant orange and pink, and
+      the sun is just peeking over the horizon. The wheat field is swaying gently
+      in the breeze, and the pumpkin is glowing with a warm, inviting light. '
+    title: ' The First Day of October'
+  B:
+    description: You are the 15th of October, a day of quiet reflection and introspection.
+      You are a bit of a loner, but you are also deeply thoughtful and insightful.
+      You are drawn to the beauty of the natural world, and you find solace in solitude.
+      You are a bit of a dreamer, and you are always looking for the next big adventure.
+    image: results/B.png
+    image_description: A lone figure sitting on a moss-covered rock overlooking a
+      misty forest. The figure is dressed in a long, flowing robe, and they are holding
+      a book in their hands. The forest is shrouded in mist, and the only sound is
+      the rustling of leaves.
+    title: ' The 15th of October'
+  C:
+    description: You are the 29th of October, a day of hidden magic and unexpected
+      delights. You are a bit of a wildcard, and you are always up for a challenge.
+      You are a bit of a rebel, and you don't like to be told what to do. You are
+      drawn to the unknown, and you are always looking for something new and exciting.
+    image: results/C.png
+    image_description: A swirling vortex of colors and shapes, with a single, glowing
+      eye in the center. The vortex is surrounded by a field of strange and beautiful
+      plants, and the eye is watching everything with a knowing smile.
+    title: ' The 29th of October'
+  D:
+    description: You are the 2nd of October, a day of quiet anticipation and hidden
+      potential. You are a bit of a mystery, and you are always waiting for something
+      to happen. You are drawn to the beauty of the everyday, and you find joy in
+      the small things. You are a bit of a romantic, and you believe in the power
+      of love.
+    image: results/D.png
+    image_description: A single, delicate rose blooming in a dark, shadowy corner
+      of a forest. The rose is surrounded by a halo of moonlight, and its petals are
+      glowing with a soft, ethereal light.
+    title: ' The 2nd of October'
+  E:
+    description: You are the 10th of October, a day of vibrant energy and unexpected
+      connections. You are a bit of a free spirit, and you are always open to new
+      experiences. You are drawn to the beauty of the world, and you find joy in the
+      simple things. You are a bit of a chameleon, and you can adapt to any situation.
+    image: results/E.png
+    image_description: A kaleidoscope of colors and shapes, with a single, glowing
+      eye in the center. The eye is surrounded by a swirling vortex of energy, and
+      the colors are constantly shifting and changing.
+    title: ' The 10th of October'
+topic: Which day in October are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

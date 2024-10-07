@@ -1,0 +1,201 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: Leave the book alone, it's probably cursed.
+    type: D
+  - text: ' You''re too scared to touch it, so you leave it there.'
+    type: E
+  - text: Flip through the pages, looking for interesting illustrations.
+    type: B
+  - text: Try to open the book, but it's locked.
+    type: C
+  - text: Read the book cover to cover.
+    type: A
+  text: You find a dusty old book in your attic. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Call out for help.'
+    type: A
+  - text: ' Try to remember what happened.'
+    type: B
+  - text: ' Get out of bed and look around.'
+    type: C
+  - text: ' Ignore it and go back to sleep.'
+    type: D
+  - text: ' You feel a strange tingling sensation, and you start to feel like you''re
+      floating.'
+    type: E
+  text: You wake up in the middle of the night, but you can't remember how you got
+    there. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Crimson'
+    type: B
+  - text: ' Indigo'
+    type: A
+  - text: ' Gold'
+    type: E
+  - text: ' Azure'
+    type: D
+  - text: ' Emerald'
+    type: C
+  text: ' What is your favorite color?'
+- image: questions/4.png
+  options:
+  - text: ' Being forgotten.'
+    type: A
+  - text: ' The unknown.'
+    type: E
+  - text: ' Losing control.'
+    type: C
+  - text: ' Being alone.'
+    type: B
+  - text: ' Being trapped.'
+    type: D
+  text: ' What is your greatest fear?'
+- image: questions/5.png
+  options:
+  - text: ' Telekinesis'
+    type: A
+  - text: ' Invisibility'
+    type: B
+  - text: ' Shapeshifting'
+    type: D
+  - text: ' Flight'
+    type: C
+  - text: ' Time Manipulation'
+    type: E
+  text: ' If you could have any superpower, what would it be?'
+- image: questions/6.png
+  options:
+  - text: ' Heavy Metal'
+    type: B
+  - text: ' Classical'
+    type: A
+  - text: ' Folk'
+    type: D
+  - text: ' Silence'
+    type: E
+  - text: ' Electronic'
+    type: C
+  text: ' What is your favorite type of music?'
+- image: questions/7.png
+  options:
+  - text: ' Chocolate'
+    type: A
+  - text: ' Nothing'
+    type: E
+  - text: ' Sushi'
+    type: C
+  - text: ' Steak'
+    type: B
+  - text: ' Pizza'
+    type: D
+  text: ' What is your favorite food?'
+- image: questions/8.png
+  options:
+  - text: ' Not being more honest.'
+    type: E
+  - text: ' Not living a more fulfilling life.'
+    type: C
+  - text: ' Not being more present.'
+    type: D
+  - text: ' Not being more kind.'
+    type: B
+  - text: ' Not taking more risks.'
+    type: A
+  text: ' What is your biggest regret?'
+- image: questions/9.png
+  options:
+  - text: ' Determination'
+    type: B
+  - text: ' Empathy'
+    type: D
+  - text: ' Creativity'
+    type: C
+  - text: ' Knowledge'
+    type: E
+  - text: ' Resilience'
+    type: A
+  text: ' What is your greatest strength?'
+- image: questions/10.png
+  options:
+  - text: ' Fear'
+    type: B
+  - text: ' Self-doubt'
+    type: C
+  - text: ' Indecisiveness'
+    type: E
+  - text: ' Pride'
+    type: A
+  - text: ' Laziness'
+    type: D
+  text: ' What is your biggest weakness?'
+results:
+  A:
+    description: You are the embodiment of the ancient, the forgotten, the raw power
+      of life clinging to the edge of death. You are a walking paradox, a testament
+      to the resilience of the human spirit, even in its most decaying form. You are
+      a being of immense power, capable of incredible feats of strength and endurance,
+      but also of great vulnerability. You are a creature of the shadows, a whisper
+      in the wind, a chilling reminder of the fragility of life.
+    image: results/A.png
+    image_description: 'A skeletal figure, draped in tattered, decaying clothing,
+      stands in a desolate graveyard. The figure''s bones are visible beneath the
+      skin, and its eyes glow with an eerie, internal light. The figure''s hands are
+      outstretched, as if reaching for something unseen. The background is a dark,
+      stormy sky, with a full moon casting long, eerie shadows. '
+    title: The Living Corpse
+  B:
+    description: You are a being of pure, unadulterated chaos, a swirling vortex of
+      spectral energy that dances and shimmers with an unsettling beauty. You are
+      a creature of pure instinct and primal urges, driven by a hunger that knows
+      no bounds. You are a force of nature, a whirlwind of destruction and creation,
+      leaving a trail of chaos and wonder in your wake.
+    image: results/B.png
+    image_description: 'A swirling vortex of iridescent colors, with streaks of purple,
+      green, and blue. The vortex is constantly shifting and changing, with tendrils
+      of energy reaching out and grabbing at the viewer. The vortex is surrounded
+      by a faint, ethereal glow, and the colors are constantly shifting and changing. '
+    title: The Ghastly Glimmering
+  C:
+    description: You are a being of time and memory, a silent observer of the world's
+      passage. You are a creature of immense wisdom and knowledge, having witnessed
+      the rise and fall of civilizations. You are a being of pure logic and reason,
+      your existence a testament to the enduring power of the natural order. You are
+      a creature of quiet contemplation, your existence a reminder of the cyclical
+      nature of life and death.
+    image: results/C.png
+    image_description: 'A massive, ornate sundial, crafted from polished obsidian.
+      The face of the sundial is etched with intricate carvings of celestial bodies
+      and mythical creatures. The hands of the sundial are made of glowing, ethereal
+      light, and the dial itself is a swirling vortex of time and space. '
+    title: The Sentient Sundial
+  D:
+    description: You are a being of boundless curiosity and wanderlust, forever seeking
+      new horizons and uncharted territories. You are a creature of the open sea,
+      a phantom of the deep, forever searching for the next great adventure. You are
+      a being of pure instinct and primal urges, driven by a thirst for knowledge
+      and a desire to explore the unknown. You are a creature of the shadows, a whisper
+      in the wind, a chilling reminder of the vastness of the universe.
+    image: results/D.png
+    image_description: 'A ghostly ship, its sails tattered and torn, drifts aimlessly
+      across a vast, star-filled ocean. The ship is made of a shimmering, translucent
+      material, and its hull is adorned with strange, bioluminescent markings. The
+      ship is surrounded by a swirling vortex of cosmic energy, and the stars themselves
+      seem to be drawn to its presence. '
+    title: The Unmoored Navigator
+  E:
+    description: You are a being of pure imagination and creativity, a conduit for
+      the subconscious mind. You are a creature of pure energy and emotion, capable
+      of weaving dreams and nightmares into reality. You are a being of boundless
+      potential, your existence a testament to the power of the human spirit. You
+      are a creature of chaos and wonder, your existence a reminder that the world
+      is full of possibilities.
+    image: results/E.png
+    image_description: 'A swirling vortex of vibrant colors and abstract shapes, with
+      tendrils of light reaching out and grabbing at the viewer. The vortex is filled
+      with images and symbols that shift and change constantly, creating a kaleidoscope
+      of emotions and sensations. '
+    title: The Untethered Dreamweaver
+topic: Which kind of undead monstrosity will you be?

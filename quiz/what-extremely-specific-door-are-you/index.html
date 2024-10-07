@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Dance with a stranger.'
+    type: D
+  - text: ' Go to the bathroom and check your reflection in the mirror.'
+    type: E
+  - text: ' Try to sneak a bite of someone else''s food.'
+    type: C
+  - text: ' Find a quiet corner to observe the partygoers.'
+    type: B
+  text: You're at a party. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' A group of children playing tag.'
+    type: C
+  - text: ' A dog walker with a poodle on a leash.'
+    type: D
+  - text: ' A street performer juggling flaming torches.'
+    type: A
+  - text: ' A flock of pigeons flying overhead.'
+    type: E
+  - text: ' A shop selling antique clocks.'
+    type: B
+  text: You're walking down a street. What do you see?
+- image: questions/3.png
+  options:
+  - text: ' A reflection of yourself, but with a face that is slowly melting.'
+    type: E
+  - text: ' A reflection of yourself, but with a single, glowing red eye.'
+    type: D
+  - text: ' A reflection of yourself, but with a crown of thorns.'
+    type: B
+  - text: ' A reflection of yourself, but with a pair of wings.'
+    type: C
+  - text: ' A reflection of yourself, but with a single, large eye.'
+    type: A
+  text: You're staring at a mirror. What do you see?
+- image: questions/4.png
+  options:
+  - text: ' A sense of overwhelming joy and euphoria.'
+    type: A
+  - text: ' A sense of overwhelming anxiety and fear.'
+    type: E
+  - text: ' A sense of quiet contemplation and introspection.'
+    type: D
+  - text: ' A sense of deep melancholy and longing.'
+    type: B
+  - text: ' A sense of intense anticipation and excitement.'
+    type: C
+  text: You're at a concert. What do you feel?
+- image: questions/5.png
+  options:
+  - text: ' You try to eat a giant mushroom.'
+    type: E
+  - text: ' You try to find a way out of the dream.'
+    type: C
+  - text: ' You try to build a bridge to one of the floating islands.'
+    type: D
+  - text: ' You try to communicate with the giant eye.'
+    type: B
+  - text: ' You try to fly through the air.'
+    type: A
+  text: You're in a dream. What do you do?
+- image: questions/6.png
+  options:
+  - text: ' You try to communicate with the deceased through the door.'
+    type: E
+  - text: ' You stand in silence, watching the procession.'
+    type: A
+  - text: ' You try to find a way to escape the funeral.'
+    type: D
+  - text: ' You offer condolences to the family.'
+    type: C
+  - text: ' You light a candle for the deceased.'
+    type: B
+  text: You're at a funeral. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' You order a cup of coffee and stare at the door.'
+    type: A
+  - text: ' You try to find a way to leave the cafe.'
+    type: C
+  - text: ' You try to find a way to escape the date.'
+    type: E
+  - text: ' You try to impress your date with your knowledge of jazz music.'
+    type: D
+  - text: ' You try to start a conversation with your date.'
+    type: B
+  text: You're on a date. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' You search for a specific book on a particular subject.'
+    type: A
+  - text: ' You try to find a quiet corner to read.'
+    type: B
+  - text: ' You try to find a librarian to ask for help.'
+    type: C
+  - text: ' You try to start a conversation with a fellow reader.'
+    type: E
+  - text: ' You try to find a way to escape the library.'
+    type: D
+  text: You're in a library. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' You try to find a way to avoid the crossroads.'
+    type: C
+  - text: ' You take a deep breath and walk through the door.'
+    type: A
+  - text: ' You try to find a way to make the crossroads disappear.'
+    type: E
+  - text: ' You look back at the crossroads and decide to go in a different direction.'
+    type: B
+  - text: ' You try to find a way to communicate with the spirits of the crossroads.'
+    type: D
+  text: You're at a crossroads. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' The sound of a distant train whistle.'
+    type: D
+  - text: ' The sound of a gentle breeze rustling through leaves.'
+    type: B
+  - text: ' The sound of a child''s laughter.'
+    type: C
+  - text: ' The sound of a heartbeat.'
+    type: E
+  - text: ' The sound of a distant bell.'
+    type: A
+  text: You're in a dream. What do you hear?
+results:
+  A:
+    description: You are the door to the most exclusive, the most guarded, the most
+      mysterious collection of knowledge. You are the gateway to forgotten lore, whispered
+      secrets, and the echoes of history. You are the keeper of the past, the guardian
+      of the unknown. You are the door to a world beyond the ordinary, a world where
+      the impossible is possible.
+    image: results/A.png
+    image_description: 'A heavy oak door, intricately carved with scenes of ancient
+      battles and mythical creatures. The door is set in a stone archway, with a small,
+      ornate window above it. The window is filled with a swirling mist, and the light
+      from the window casts long shadows on the floor. '
+    title: The Door to the Library's Rare Book Collection
+  B:
+    description: You are the door to a forgotten world, a world of silent giants and
+      shimmering scales. You are the gateway to the depths, the portal to a realm
+      of primal power and ancient secrets. You are the keeper of the forgotten, the
+      guardian of the lost. You are the door to a world where the rules of nature
+      are different, and the laws of physics are bent.
+    image: results/B.png
+    image_description: 'A rusted, metal door with a cracked glass panel. The glass
+      panel is filled with a murky, green water that reflects a distorted image of
+      the surrounding environment. The door is set in a concrete wall, with a rusted
+      chain hanging from the handle. '
+    title: The Door to the Abandoned Aquarium's Shark Tank
+  C:
+    description: You are the door to a world where the rules of reality are twisted
+      and turned. You are the gateway to a realm of impossible geometry and surreal
+      landscapes. You are the portal to a world where the mundane becomes the fantastical,
+      and the ordinary is transformed into the extraordinary. You are the door to
+      a world where anything is possible.
+    image: results/C.png
+    image_description: 'A miniature door, crafted from intricately carved wood, with
+      a brass handle and a glass pane. The door is set in a wall of a Victorian dollhouse,
+      with a swirling, upside-down staircase leading to a world of impossible geometry.
+      The staircase is made of dark, polished wood, and the steps are uneven and irregular. '
+    title: The Door to the Upside-Down Staircase in a Victorian Dollhouse
+  D:
+    description: You are the door to a world of forgotten glamour and clandestine
+      secrets. You are the gateway to a realm of smoky jazz, whispered conversations,
+      and the intoxicating aroma of forbidden delights. You are the keeper of the
+      lost, the guardian of the forgotten. You are the door to a world where the past
+      is alive and well, and the future is uncertain.
+    image: results/D.png
+    image_description: 'A heavy, mahogany door with intricate carvings of dancing
+      figures and floral motifs. The door is set in a brick wall, with a brass handle
+      and a small, ornate window above it. The window is filled with a swirling mist,
+      and the light from the window casts long shadows on the floor. '
+    title: The Door to the Abandoned Tea Room in a 1920s Speakeasy
+  E:
+    description: You are the door to a world of hidden wonders and forgotten magic.
+      You are the gateway to a realm of silent wisdom and ancient power. You are the
+      keeper of the secrets, the guardian of the unknown. You are the door to a world
+      where the impossible is possible, and the boundaries of reality are blurred.
+    image: results/E.png
+    image_description: 'A weathered, wooden door with a rusted latch. The door is
+      set in a wall of a forgotten garden, overgrown with thorny vines and blooming
+      cacti. The door is adorned with a mosaic of colorful stones, each one depicting
+      a different mythical creature. '
+    title: The Door to the Sentient Cactus Garden's Secret Entrance
+topic: What extremely specific door are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

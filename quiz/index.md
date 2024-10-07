@@ -44,4 +44,4 @@ The quizzes are all designed to be a bit weird and uncanny. They're not what *pe
 
 I think it's deeply fun and have gotten a ton of enjoyment out of running through endless, bizarre, horribly illustrated personality tests -- that somehow still work a lot of the time!
 
-I hope you enjoy them too. If you have any feedback, or want to see more, please let me know!
+I hope you enjoy them too. If you have any feedback, or want to see more, please let me know! You can reach me on [Twitter/X](https://twitter.com/chris_j_paxton) or [Bluesky](https://bsky.app/profile/cpaxton.bsky.social).

@@ -1,0 +1,82 @@
+- image: A cactus wearing a tuxedo, holding a martini glass. There is a disco ball
+    in the background.
+  options:
+    A: A sparkly, sequined dress.
+    B: A pair of bright pink pants and a tie-dye shirt.
+    C: A crown of thorns.
+    D: A pair of sunglasses and a Hawaiian shirt.
+    E: You wear your pajamas.
+  question: You're invited to a party hosted by a sentient cactus. What do you wear?
+- image: A worm with a sock on its head, walking down a street.
+  options:
+    A: You try to find the owner.
+    B: You bury the sock in the ground.
+    C: You use the sock as a hat.
+    D: You eat the sock.
+    E: You leave it there.
+  question: You find a lost sock. What do you do?
+- image: A worm wearing a monocle and a top hat, looking at a rainbow.
+  options:
+    A: ' Indigo'
+    B: ' Lime Green'
+    C: ' The color of a nebula'
+    D: ' The color of a sunset'
+    E: ' The color of a dream'
+  question: ' What is your favorite color?'
+- image: A worm being chased by a giant, anthropomorphic spider.
+  options:
+    A: ' Being forgotten.'
+    B: ' Being eaten.'
+    C: ' Being alone.'
+    D: ' Being trapped in a jar.'
+    E: ' The void.'
+  question: ' What is your biggest fear?'
+- image: A worm with a cape and a mask, flying through the air.
+  options:
+    A: ' Teleportation'
+    B: ' Invisibility'
+    C: ' The ability to control time'
+    D: ' The ability to speak every language'
+    E: ' The ability to fly'
+  question: ' If you could have any superpower, what would it be?'
+- image: A worm on a tropical beach, sipping a cocktail made of seaweed and sand.
+  options:
+    A: ' A trip to the moon.'
+    B: ' A trip to the bottom of the ocean.'
+    C: ' A trip to a remote island.'
+    D: ' A trip to a bustling city.'
+    E: ' A trip to a wormhole.'
+  question: ' What is your ideal vacation?'
+- image: A worm looking at a photo of itself as a baby, with a tear in its eye.
+  options:
+    A: ' Not exploring the world more.'
+    B: ' Not making more friends.'
+    C: ' Not being more adventurous.'
+    D: ' Not being more creative.'
+    E: ' Not being more grateful.'
+  question: ' What is your biggest regret?'
+- image: A worm dancing to a disco beat, wearing a pair of sunglasses.
+  options:
+    A: ' Classical music'
+    B: ' Heavy metal'
+    C: ' Electronic music'
+    D: ' Jazz'
+    E: ' Anything that makes you want to move.'
+  question: ' What is your favorite type of music?'
+- image: A worm floating in a galaxy made of jelly, surrounded by stars.
+  options:
+    A: ' To become a famous artist.'
+    B: ' To travel to the center of the Earth.'
+    C: ' To meet a celebrity.'
+    D: ' To write a best-selling novel.'
+    E: ' To find a cure for cancer.'
+  question: ' What is your biggest dream?'
+- image: A worm sitting at a table with a human, a dinosaur, and a unicorn.
+  options:
+    A: ' Albert Einstein, Marie Curie, and Leonardo da Vinci.'
+    B: ' Abraham Lincoln, Cleopatra, and Nikola Tesla.'
+    C: ' Neil Armstrong, Amelia Earhart, and Buzz Aldrin.'
+    D: ' Marilyn Monroe, Elvis Presley, and Michael Jackson.'
+    E: ' Your favorite fictional character, a historical figure, and a celebrity.'
+  question: ' If you could have dinner with any three people, living or dead, who
+    would they be?'

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: A pair of sunglasses and a Hawaiian shirt.
+    type: D
+  - text: You wear your pajamas.
+    type: E
+  - text: A pair of bright pink pants and a tie-dye shirt.
+    type: B
+  - text: A crown of thorns.
+    type: C
+  - text: A sparkly, sequined dress.
+    type: A
+  text: You're invited to a party hosted by a sentient cactus. What do you wear?
+- image: questions/2.png
+  options:
+  - text: You bury the sock in the ground.
+    type: B
+  - text: You use the sock as a hat.
+    type: C
+  - text: You eat the sock.
+    type: D
+  - text: You leave it there.
+    type: E
+  - text: You try to find the owner.
+    type: A
+  text: You find a lost sock. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Lime Green'
+    type: B
+  - text: ' Indigo'
+    type: A
+  - text: ' The color of a sunset'
+    type: D
+  - text: ' The color of a nebula'
+    type: C
+  - text: ' The color of a dream'
+    type: E
+  text: ' What is your favorite color?'
+- image: questions/4.png
+  options:
+  - text: ' Being forgotten.'
+    type: A
+  - text: ' The void.'
+    type: E
+  - text: ' Being eaten.'
+    type: B
+  - text: ' Being trapped in a jar.'
+    type: D
+  - text: ' Being alone.'
+    type: C
+  text: ' What is your biggest fear?'
+- image: questions/5.png
+  options:
+  - text: ' The ability to speak every language'
+    type: D
+  - text: ' Invisibility'
+    type: B
+  - text: ' The ability to control time'
+    type: C
+  - text: ' Teleportation'
+    type: A
+  - text: ' The ability to fly'
+    type: E
+  text: ' If you could have any superpower, what would it be?'
+- image: questions/6.png
+  options:
+  - text: ' A trip to the bottom of the ocean.'
+    type: B
+  - text: ' A trip to a wormhole.'
+    type: E
+  - text: ' A trip to a remote island.'
+    type: C
+  - text: ' A trip to the moon.'
+    type: A
+  - text: ' A trip to a bustling city.'
+    type: D
+  text: ' What is your ideal vacation?'
+- image: questions/7.png
+  options:
+  - text: ' Not making more friends.'
+    type: B
+  - text: ' Not being more grateful.'
+    type: E
+  - text: ' Not exploring the world more.'
+    type: A
+  - text: ' Not being more adventurous.'
+    type: C
+  - text: ' Not being more creative.'
+    type: D
+  text: ' What is your biggest regret?'
+- image: questions/8.png
+  options:
+  - text: ' Heavy metal'
+    type: B
+  - text: ' Jazz'
+    type: D
+  - text: ' Classical music'
+    type: A
+  - text: ' Electronic music'
+    type: C
+  - text: ' Anything that makes you want to move.'
+    type: E
+  text: ' What is your favorite type of music?'
+- image: questions/9.png
+  options:
+  - text: ' To become a famous artist.'
+    type: A
+  - text: ' To meet a celebrity.'
+    type: C
+  - text: ' To travel to the center of the Earth.'
+    type: B
+  - text: ' To find a cure for cancer.'
+    type: E
+  - text: ' To write a best-selling novel.'
+    type: D
+  text: ' What is your biggest dream?'
+- image: questions/10.png
+  options:
+  - text: ' Neil Armstrong, Amelia Earhart, and Buzz Aldrin.'
+    type: C
+  - text: ' Albert Einstein, Marie Curie, and Leonardo da Vinci.'
+    type: A
+  - text: ' Abraham Lincoln, Cleopatra, and Nikola Tesla.'
+    type: B
+  - text: ' Marilyn Monroe, Elvis Presley, and Michael Jackson.'
+    type: D
+  - text: ' Your favorite fictional character, a historical figure, and a celebrity.'
+    type: E
+  text: ' If you could have dinner with any three people, living or dead, who would
+    they be?'
+results:
+  A:
+    description: You are the humble earthworm, the unsung hero of the soil. You are
+      the tireless worker, the one who makes the world go round. You are the foundation
+      of the ecosystem, the one who makes sure that everything is in balance. You
+      are patient and persistent, and you never give up. You are the embodiment of
+      resilience and perseverance.
+    image: results/A.png
+    image_description: 'A close-up image of a plump earthworm wriggling through rich,
+      dark soil. The worm is a rich brown color with a distinct, segmented body. The
+      soil is dark and rich, with small roots and organic matter visible. The worm
+      is moving slowly and deliberately, its body undulating as it pushes through
+      the soil. '
+    title: Earthworm
+  B:
+    description: You are the elegant ribbon worm, a creature of grace and beauty.
+      You are the embodiment of fluidity and movement, gliding through the water with
+      effortless grace. You are a symbol of peace and tranquility, a creature of the
+      deep who brings a sense of calm to the world. You are a reminder that beauty
+      can be found in the most unexpected places.
+    image: results/B.png
+    image_description: A vibrant, flowing image of a ribbon worm, its body a shimmering,
+      iridescent ribbon of color. The worm is gracefully swimming through a coral
+      reef, surrounded by colorful fish and other marine life. The water is crystal
+      clear, and the light is soft and diffused.
+    title: Ribbon Worm
+  C:
+    description: You are the Worm of the Void, a creature of pure, unadulterated chaos.
+      You are the embodiment of the unknown, the whisper of the abyss. You are a being
+      of pure energy, a force of nature that defies all logic and reason. You are
+      the ultimate enigma, a creature that exists outside of time and space. You are
+      the embodiment of the infinite, the ultimate mystery.
+    image: results/C.png
+    image_description: A swirling vortex of colors and shapes, with a single, writhing
+      worm at its center. The worm is a pulsating mass of light and shadow, with no
+      defined form. The vortex is filled with strange and unsettling patterns, and
+      the worm seems to be pulling the fabric of reality itself apart.
+    title: ' The Worm of the Void'
+  D:
+    description: You are the Worm of the Clockwork, a creature of precision and order.
+      You are the embodiment of the gears and cogs, the intricate workings of a machine.
+      You are a being of logic and reason, a creature who thrives on structure and
+      predictability. You are the ultimate engineer, a master of the mechanical arts.
+    image: results/D.png
+    image_description: A detailed image of a clockwork worm, its body made of intricate
+      gears and cogs. The worm is moving slowly and deliberately, its body a complex
+      network of interlocking parts. The gears are made of polished brass and bronze,
+      and the worm is surrounded by a network of springs and levers.
+    title: ' The  Worm of the Clockwork'
+  E:
+    description: You are the Worm of the Dream, a creature of pure imagination and
+      surrealism. You are the embodiment of the subconscious, the whispers of the
+      mind. You are a being of pure energy, a force of nature that defies all logic
+      and reason. You are the ultimate enigma, a creature that exists outside of time
+      and space. You are the embodiment of the infinite, the ultimate mystery.
+    image: results/E.png
+    image_description: A surreal, dreamlike image of a worm made of swirling colors
+      and shapes. The worm is crawling through a landscape of impossible geometry,
+      with buildings that defy gravity and trees that grow in impossible directions.
+      The sky is a swirling vortex of colors, and the worm is surrounded by strange
+      and unsettling creatures.
+    title: The Worm of the Dream
+topic: What kind of worm are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

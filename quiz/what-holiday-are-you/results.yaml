@@ -1,0 +1,62 @@
+A:
+  description: You are the embodiment of carefree fun and relaxation. You love the
+    simple pleasures of life, like soaking up the sun, building sandcastles, and splashing
+    in the waves. You're the life of the party, always ready to make new friends and
+    create lasting memories. You're a bit of a dreamer, and you're always looking
+    for the next adventure.
+  image: 'A person wearing a straw hat and sunglasses, sitting on a beach towel, with
+    a beach umbrella in the background. The sand is white and the water is blue. There
+    are palm trees in the background. '
+  letter: A
+  result: ' A Day at the Beach'
+  topic: What holiday are you?
+B:
+  description: You are the embodiment of playful chaos and unbridled joy. You love
+    to be the center of attention and make people laugh. You're a bit of a goofball,
+    and you're always up for a good time. You're also a bit of a rebel, and you don't
+    let anyone tell you what to do. You're a free spirit, and you're always looking
+    for new and exciting experiences.
+  image: 'A person wearing a giant inflatable T-Rex costume, with a wide grin and
+    a mischievous glint in their eye. The costume is bright green and has a large,
+    toothy grin. The person is standing in a field of flowers, with a backdrop of
+    a bright blue sky. '
+  letter: B
+  result: A Giant Inflatable T-Rex Costume
+  topic: What holiday are you?
+C:
+  description: You are the embodiment of stoic resilience and quiet strength. You
+    are a solitary soul, content in your own company. You are wise and patient, and
+    you have a deep understanding of the world around you. You are a bit of a mystery,
+    and people are drawn to your quiet wisdom. You are a beacon of hope in a world
+    that often feels chaotic and uncertain.
+  image: 'A cactus with a pair of glasses perched on its prickly spines, looking thoughtfully
+    at a sunset. The cactus is surrounded by a field of wildflowers, and the sky is
+    a vibrant orange and purple. '
+  letter: C
+  result: A Sentient Cactus
+  topic: What holiday are you?
+D:
+  description: You are the embodiment of mystery and intrigue. You are a place of
+    secrets and shadows, where the past lingers in the air. You are a haven for the
+    curious and the brave, and you are always ready to welcome new visitors. You are
+    a bit of a daredevil, and you love to push the boundaries of what is considered
+    safe. You are a master of the unexpected, and you are always ready to surprise
+    your guests.
+  image: 'A dilapidated Victorian mansion with peeling paint and overgrown ivy. The
+    windows are dark and empty, and the front door is ajar. A single flickering candle
+    illuminates a cobweb-covered staircase. '
+  letter: D
+  result: A Haunted House
+  topic: What holiday are you?
+E:
+  description: You are the embodiment of whimsy and boundless creativity. You are
+    a force of nature, full of light and joy. You are a bit of a free spirit, and
+    you love to dance and twirl through the sky. You are a beacon of hope and inspiration,
+    and you are always ready to spread your magic. You are a bit of a dreamer, and
+    you are always looking for new and exciting ways to express yourself.
+  image: 'A swirling cloud of glitter, with iridescent colors and sparkling particles.
+    The cloud is shaped like a heart, and it is floating through the sky. The sun
+    is shining brightly behind the cloud, and the glitter is catching the light. '
+  letter: E
+  result: A Sentient Cloud of Glitter
+  topic: What holiday are you?

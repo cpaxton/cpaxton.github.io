@@ -1,0 +1,191 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: A plate of cookies.
+    type: A
+  - text: "A homemade pi\xF1ata."
+    type: E
+  - text: A bowl of glitter.
+    type: C
+  - text: A bag of chips.
+    type: D
+  - text: A giant inflatable T-Rex costume.
+    type: B
+  text: You're invited to a party. What do you bring?
+- image: questions/2.png
+  options:
+  - text: Play ring toss.
+    type: B
+  - text: Try to win a stuffed animal.
+    type: C
+  - text: Watch the fortune teller.
+    type: E
+  - text: Ride the Ferris wheel.
+    type: A
+  - text: Eat cotton candy.
+    type: D
+  text: You're at a carnival. What do you do?
+- image: questions/3.png
+  options:
+  - text: Roast marshmallows.
+    type: C
+  - text: Tell scary stories.
+    type: B
+  - text: Dance around the fire.
+    type: E
+  - text: Stare into the flames.
+    type: D
+  - text: Sing songs.
+    type: A
+  text: You're at a bonfire. What do you do?
+- image: questions/4.png
+  options:
+  - text: A witch's hat.
+    type: C
+  - text: A unicorn costume.
+    type: E
+  - text: A superhero costume.
+    type: A
+  - text: A pirate costume.
+    type: D
+  - text: A giant inflatable T-Rex costume.
+    type: B
+  text: You're at a costume party. What do you wear?
+- image: questions/5.png
+  options:
+  - text: ' Try to escape the ballroom.'
+    type: E
+  - text: Try to find your soulmate.
+    type: B
+  - text: Eat a fancy dessert.
+    type: C
+  - text: Take a selfie with your mask on.
+    type: D
+  - text: Dance with a stranger.
+    type: A
+  text: You're at a masquerade ball. What do you do?
+- image: questions/6.png
+  options:
+  - text: ' Eat a fancy dessert.'
+    type: C
+  - text: ' Try to escape the rave.'
+    type: E
+  - text: ' Dance with a stranger.'
+    type: A
+  - text: ' Try to find your soulmate.'
+    type: B
+  - text: ' Take a selfie with your mask on.'
+    type: D
+  text: You're at a rave. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Scream.'
+    type: A
+  - text: ' Take a selfie with your mask on.'
+    type: C
+  - text: ' Try to escape the haunted house.'
+    type: E
+  - text: ' Try to find your soulmate.'
+    type: D
+  - text: ' Run away.'
+    type: B
+  text: You're at a haunted house. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Try to find your soulmate.'
+    type: E
+  - text: ' Take a selfie with your mask on.'
+    type: D
+  - text: ' Play volleyball.'
+    type: B
+  - text: ' Eat a fancy dessert.'
+    type: C
+  - text: ' Swim in the pool.'
+    type: A
+  text: You're at a pool party. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Ride a unicorn.'
+    type: A
+  - text: ' Eat a unicorn horn cake.'
+    type: B
+  - text: ' Take a selfie with your mask on.'
+    type: D
+  - text: ' Try to find your soulmate.'
+    type: C
+  - text: ' Try to escape the unicorn festival.'
+    type: E
+  text: You're at a unicorn festival. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Dance with a stranger.'
+    type: A
+  - text: ' Try to find your soulmate.'
+    type: B
+  - text: ' Eat a fancy dessert.'
+    type: C
+  - text: ' Try to escape the rave.'
+    type: E
+  - text: ' Take a selfie with your mask on.'
+    type: D
+  text: You're at a rave. What do you do?
+results:
+  A:
+    description: You are the embodiment of carefree fun and relaxation. You love the
+      simple pleasures of life, like soaking up the sun, building sandcastles, and
+      splashing in the waves. You're the life of the party, always ready to make new
+      friends and create lasting memories. You're a bit of a dreamer, and you're always
+      looking for the next adventure.
+    image: results/A.png
+    image_description: 'A person wearing a straw hat and sunglasses, sitting on a
+      beach towel, with a beach umbrella in the background. The sand is white and
+      the water is blue. There are palm trees in the background. '
+    title: ' A Day at the Beach'
+  B:
+    description: You are the embodiment of playful chaos and unbridled joy. You love
+      to be the center of attention and make people laugh. You're a bit of a goofball,
+      and you're always up for a good time. You're also a bit of a rebel, and you
+      don't let anyone tell you what to do. You're a free spirit, and you're always
+      looking for new and exciting experiences.
+    image: results/B.png
+    image_description: 'A person wearing a giant inflatable T-Rex costume, with a
+      wide grin and a mischievous glint in their eye. The costume is bright green
+      and has a large, toothy grin. The person is standing in a field of flowers,
+      with a backdrop of a bright blue sky. '
+    title: A Giant Inflatable T-Rex Costume
+  C:
+    description: You are the embodiment of stoic resilience and quiet strength. You
+      are a solitary soul, content in your own company. You are wise and patient,
+      and you have a deep understanding of the world around you. You are a bit of
+      a mystery, and people are drawn to your quiet wisdom. You are a beacon of hope
+      in a world that often feels chaotic and uncertain.
+    image: results/C.png
+    image_description: 'A cactus with a pair of glasses perched on its prickly spines,
+      looking thoughtfully at a sunset. The cactus is surrounded by a field of wildflowers,
+      and the sky is a vibrant orange and purple. '
+    title: A Sentient Cactus
+  D:
+    description: You are the embodiment of mystery and intrigue. You are a place of
+      secrets and shadows, where the past lingers in the air. You are a haven for
+      the curious and the brave, and you are always ready to welcome new visitors.
+      You are a bit of a daredevil, and you love to push the boundaries of what is
+      considered safe. You are a master of the unexpected, and you are always ready
+      to surprise your guests.
+    image: results/D.png
+    image_description: 'A dilapidated Victorian mansion with peeling paint and overgrown
+      ivy. The windows are dark and empty, and the front door is ajar. A single flickering
+      candle illuminates a cobweb-covered staircase. '
+    title: A Haunted House
+  E:
+    description: You are the embodiment of whimsy and boundless creativity. You are
+      a force of nature, full of light and joy. You are a bit of a free spirit, and
+      you love to dance and twirl through the sky. You are a beacon of hope and inspiration,
+      and you are always ready to spread your magic. You are a bit of a dreamer, and
+      you are always looking for new and exciting ways to express yourself.
+    image: results/E.png
+    image_description: 'A swirling cloud of glitter, with iridescent colors and sparkling
+      particles. The cloud is shaped like a heart, and it is floating through the
+      sky. The sun is shining brightly behind the cloud, and the glitter is catching
+      the light. '
+    title: A Sentient Cloud of Glitter
+topic: What holiday are you?

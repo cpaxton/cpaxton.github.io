@@ -1,0 +1,91 @@
+- image: A party with a giant inflatable unicorn. There are people in the background,
+    but the unicorn is the main focus.
+  options:
+    A: A plate of cookies.
+    B: A giant inflatable T-Rex costume.
+    C: A bowl of glitter.
+    D: A bag of chips.
+    E: "A homemade pi\xF1ata."
+  question: You're invited to a party. What do you bring?
+- image: A carnival with a Ferris wheel, a carousel, and a haunted house. There are
+    people in the background, but the Ferris wheel is the main focus.
+  options:
+    A: Ride the Ferris wheel.
+    B: Play ring toss.
+    C: Try to win a stuffed animal.
+    D: Eat cotton candy.
+    E: Watch the fortune teller.
+  question: You're at a carnival. What do you do?
+- image: A bonfire with people sitting around it, some wearing costumes. There is
+    a large, glowing fire in the center.
+  options:
+    A: Sing songs.
+    B: Tell scary stories.
+    C: Roast marshmallows.
+    D: Stare into the flames.
+    E: Dance around the fire.
+  question: You're at a bonfire. What do you do?
+- image: A person wearing a costume made of glitter and feathers. They are surrounded
+    by other people in costumes.
+  options:
+    A: A superhero costume.
+    B: A giant inflatable T-Rex costume.
+    C: A witch's hat.
+    D: A pirate costume.
+    E: A unicorn costume.
+  question: You're at a costume party. What do you wear?
+- image: A masquerade ball with people in elaborate masks and costumes. There is a
+    grand ballroom with a large chandelier.
+  options:
+    A: Dance with a stranger.
+    B: Try to find your soulmate.
+    C: Eat a fancy dessert.
+    D: Take a selfie with your mask on.
+    E: ' Try to escape the ballroom.'
+  question: You're at a masquerade ball. What do you do?
+- image: A rave with people dancing in a dark room with strobing lights. There are
+    people wearing neon clothing and face paint.
+  options:
+    A: ' Dance with a stranger.'
+    B: ' Try to find your soulmate.'
+    C: ' Eat a fancy dessert.'
+    D: ' Take a selfie with your mask on.'
+    E: ' Try to escape the rave.'
+  question: You're at a rave. What do you do?
+- image: A haunted house with cobwebs, skeletons, and spooky decorations. There are
+    people in the background, but the haunted house is the main focus.
+  options:
+    A: ' Scream.'
+    B: ' Run away.'
+    C: ' Take a selfie with your mask on.'
+    D: ' Try to find your soulmate.'
+    E: ' Try to escape the haunted house.'
+  question: You're at a haunted house. What do you do?
+- image: A pool party with people swimming, sunbathing, and playing volleyball. There
+    are people in the background, but the pool is the main focus.
+  options:
+    A: ' Swim in the pool.'
+    B: ' Play volleyball.'
+    C: ' Eat a fancy dessert.'
+    D: ' Take a selfie with your mask on.'
+    E: ' Try to find your soulmate.'
+  question: You're at a pool party. What do you do?
+- image: A unicorn festival with people dressed as unicorns, a unicorn parade, and
+    a unicorn petting zoo. There are people in the background, but the unicorn festival
+    is the main focus.
+  options:
+    A: ' Ride a unicorn.'
+    B: ' Eat a unicorn horn cake.'
+    C: ' Try to find your soulmate.'
+    D: ' Take a selfie with your mask on.'
+    E: ' Try to escape the unicorn festival.'
+  question: You're at a unicorn festival. What do you do?
+- image: A rave with people dancing in a dark room with strobing lights. There are
+    people wearing neon clothing and face paint.
+  options:
+    A: ' Dance with a stranger.'
+    B: ' Try to find your soulmate.'
+    C: ' Eat a fancy dessert.'
+    D: ' Take a selfie with your mask on.'
+    E: ' Try to escape the rave.'
+  question: You're at a rave. What do you do?

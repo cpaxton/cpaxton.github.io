@@ -11,7 +11,7 @@ This is the home of the Infinite Quiz Machine!
 
 ## Quizes 
 
-  - [What crustaceann are you?](/quiz/what-crustacean-are-you/index.html)
+  - [What crustaceann are you?](/quiz/what-kind-of-crustacean-are-you/index.html)
   - [What kind of sandwich are you?](/quiz/what-kind-of-sandwich-are-you/index.html)
   - [What kind of worm are you?](/quiz/what-kind-of-worm-are-you/index.html)
   - [What kind of tooth are you?]((/quiz/what-kind-of-tooth-are-you/index.html)

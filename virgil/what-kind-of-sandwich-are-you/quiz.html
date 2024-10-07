@@ -261,7 +261,7 @@ topic: What kind of sandwich are you?
 			function loadQuestion() {
 				const question = data.questions[currentQuestion];
 				document.getElementById('question-text').textContent = question.text;
-				document.getElementById('question-image').src = question.image;
+				document.getElementById('question-image').src = './' + question.image;
 
 				const optionsContainer = document.getElementById('options-container');
 				optionsContainer.innerHTML = '';
@@ -293,7 +293,7 @@ topic: What kind of sandwich are you?
 				const quizContainer = document.getElementById('quiz-container');
 				quizContainer.innerHTML = `
 					<h2>Your Result: ${result.title}</h2>
-					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<img id="result-image" src="./${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
 					<p>${result.description}</p>
 				`;
 

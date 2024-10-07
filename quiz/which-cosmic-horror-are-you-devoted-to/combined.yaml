@@ -1,0 +1,228 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Try to crack it open with a hammer, hoping to see what''s inside.'
+    type: B
+  - text: ' Run away screaming, convinced it''s a harbinger of doom.'
+    type: D
+  - text: ' Call a local psychic to see if it''s a portal to another dimension.'
+    type: C
+  - text: ' Start a ritual to awaken the creature inside.'
+    type: E
+  - text: ' Leave it be, convinced it''s a harmless, albeit strange, find.'
+    type: A
+  text: You find a strange, pulsating egg in your backyard. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Reach out and touch the reflection, hoping to merge with it.'
+    type: D
+  - text: ' Ignore it and go back to sleep.'
+    type: A
+  - text: ' Start a ritual to banish the reflection back to the void.'
+    type: E
+  - text: ' Run to the nearest window and scream for help.'
+    type: C
+  - text: ' Try to communicate with the reflection, hoping to understand its meaning.'
+    type: B
+  text: You wake up in the middle of the night to find your reflection staring back
+    at you, but it's not your own face. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' The steak, because it''s a symbol of earthly comfort in a world of cosmic
+      horror.'
+    type: C
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  - text: ' The nebula video, because it''s a reminder of the insignificance of our
+      existence.'
+    type: D
+  - text: ' The steak, because it''s a tangible, physical pleasure.'
+    type: A
+  - text: ' The nebula video, because it''s a glimpse into the vastness and mystery
+      of the universe.'
+    type: B
+  text: 'You are offered a choice: eat a delicious, perfectly cooked steak or watch
+    a mesmerizing, hypnotic video of a swirling nebula. What do you choose?'
+- image: questions/4.png
+  options:
+  - text: ' Destroy it, convinced it''s a harbinger of doom.'
+    type: D
+  - text: ' Keep it as a memento, a reminder of the beauty and terror of the universe.'
+    type: B
+  - text: ' Try to understand its meaning, hoping to unlock a secret of the cosmos.'
+    type: C
+  - text: ' Release it into the wild, hoping it will bring good luck.'
+    type: A
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  text: You find a single, perfectly preserved, iridescent butterfly in your pocket.
+    What do you do?
+- image: questions/5.png
+  options:
+  - text: ' The comfortable life, because it''s safe and predictable.'
+    type: A
+  - text: ' The journey, because it''s a chance to confront your deepest fears and
+      desires.'
+    type: D
+  - text: ' The comfortable life, because it''s a chance to avoid the horrors of the
+      universe.'
+    type: C
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  - text: ' The journey, because it''s a chance to experience the true nature of reality.'
+    type: B
+  text: 'You are offered a choice: live a long, comfortable life or experience a brief,
+    intense, and terrifying journey through the fabric of reality. What do you choose?'
+- image: questions/6.png
+  options:
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  - text: ' The unchanging world, because it''s a safe and predictable existence.'
+    type: A
+  - text: ' The unchanging world, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    type: C
+  - text: ' The full spectrum of human emotions, because it''s a chance to experience
+      the full range of human life.'
+    type: B
+  - text: ' The full spectrum of human emotions, because it''s a chance to truly understand
+      the human condition.'
+    type: D
+  text: 'You are given a choice: live forever in a blissful, unchanging world or experience
+    the full spectrum of human emotions and sensations, even the most painful ones.
+    What do you choose?'
+- image: questions/7.png
+  options:
+  - text: ' The chaotic and unpredictable nature of reality, because it''s a chance
+      to experience the full range of human life.'
+    type: B
+  - text: ' The chaotic and unpredictable nature of reality, because it''s a chance
+      to truly understand the human condition.'
+    type: D
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  - text: ' The perfect order, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    type: C
+  - text: ' The perfect order, because it''s a safe and predictable existence.'
+    type: A
+  text: 'You are offered a choice: live in a world of perfect order and predictability,
+    or experience the chaotic and unpredictable nature of reality. What do you choose?'
+- image: questions/8.png
+  options:
+  - text: ' Keep it as a memento, a reminder of the beauty and terror of the universe.'
+    type: B
+  - text: ' Release it into the wild, hoping it will bring good luck.'
+    type: A
+  - text: ' Destroy it, convinced it''s a harbinger of doom.'
+    type: D
+  - text: ' Try to understand its meaning, hoping to unlock a secret of the cosmos.'
+    type: C
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  text: You find a single, perfectly preserved, iridescent butterfly in your pocket.
+    What do you do?
+- image: questions/9.png
+  options:
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  - text: ' The full spectrum of human emotions, because it''s a chance to experience
+      the full range of human life.'
+    type: B
+  - text: ' The unchanging world, because it''s a safe and predictable existence.'
+    type: A
+  - text: ' The full spectrum of human emotions, because it''s a chance to truly understand
+      the human condition.'
+    type: D
+  - text: ' The unchanging world, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    type: C
+  text: 'You are offered a choice: live forever in a blissful, unchanging world or
+    experience the full spectrum of human emotions and sensations, even the most painful
+    ones. What do you choose?'
+- image: questions/10.png
+  options:
+  - text: ' The unchanging world, because it''s a safe and predictable existence.'
+    type: A
+  - text: ' You don''t care, you''re already dead.'
+    type: E
+  - text: ' The full spectrum of human emotions, because it''s a chance to experience
+      the full range of human life.'
+    type: B
+  - text: ' The full spectrum of human emotions, because it''s a chance to truly understand
+      the human condition.'
+    type: D
+  - text: ' The unchanging world, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    type: C
+  text: 'You are given a choice: live forever in a blissful, unchanging world or experience
+    the full spectrum of human emotions and sensations, even the most painful ones.
+    What do you choose?'
+results:
+  A:
+    description: You are the embodiment of cosmic dread, a being of unimaginable power
+      and ancient knowledge. You are the source of all nightmares, the whisper in
+      the dark, the unseen hand that guides the tides of fate. You are the ultimate
+      unknowable, the apex predator of existence, and your presence is a constant
+      reminder of the vast, indifferent universe. You are the ultimate cosmic horror,
+      and you are devoted to its unknowable will.
+    image: results/A.png
+    image_description: 'A swirling vortex of colors and shapes, with a single, impossibly
+      large eye staring out from the center. The eye is filled with a deep, black
+      void, and its gaze seems to pierce the very fabric of reality. The vortex is
+      surrounded by a halo of shimmering, ethereal light, and the colors shift and
+      change constantly, creating a sense of unease and disorientation. '
+    title: The Great Old One
+  B:
+    description: You are a collective consciousness, a single entity composed of countless
+      minds. You are the embodiment of unity and purpose, a hive mind that functions
+      as one. You are the ultimate predator, a force of nature that consumes and adapts,
+      always seeking to expand and dominate. You are the ultimate embodiment of the
+      collective, and your will is absolute.
+    image: results/B.png
+    image_description: 'A vast, sprawling network of interconnected nodes, each pulsing
+      with a faint, ethereal light. The nodes are constantly shifting and changing,
+      forming intricate patterns and shapes that seem to defy logic and reason. The
+      network is filled with a sense of constant movement and energy, and the nodes
+      seem to be communicating with each other in a language that is both beautiful
+      and terrifying. '
+    title: The Hive Mind
+  C:
+    description: You are a creature of pure nightmare, a being that feeds on the dreams
+      of mortals. You are the embodiment of the subconscious, the dark side of the
+      mind. You are the ultimate destroyer of hope, the harbinger of despair. You
+      are the ultimate predator of the mind, and your presence is a constant reminder
+      of the fragility of reality.
+    image: results/C.png
+    image_description: 'A swirling vortex of darkness and shadows, with tendrils of
+      smoke and mist reaching out from the center. The vortex is filled with distorted
+      images of faces and landscapes, and the shadows seem to writhe and twist in
+      a way that is both beautiful and terrifying. The vortex is surrounded by a halo
+      of shimmering, ethereal light, and the colors shift and change constantly, creating
+      a sense of unease and disorientation. '
+    title: The Dream Eater
+  D:
+    description: You are a being of pure chaos, a force of nature that defies all
+      understanding. You are the embodiment of the void, the ultimate unknown. You
+      are the ultimate destroyer of all things, the harbinger of oblivion. You are
+      the ultimate unknowable, and your presence is a constant reminder of the vast,
+      indifferent universe.
+    image: results/D.png
+    image_description: 'A swirling vortex of pure nothingness, with no discernible
+      form or shape. The vortex is filled with a sense of utter emptiness, and the
+      colors are a deep, inky black. The vortex seems to be expanding and contracting,
+      creating a sense of both awe and terror. '
+    title: The Unnameable
+  E:
+    description: You are a being of pure illusion, a creature that can perfectly mimic
+      any form or object. You are the embodiment of deception, the ultimate trickster.
+      You are the ultimate predator of the senses, and your presence is a constant
+      reminder of the fragility of reality. You are the ultimate chameleon, and your
+      form is ever-changing.
+    image: results/E.png
+    image_description: 'A shifting, ever-changing landscape of impossible geometry
+      and impossible forms. The landscape is constantly morphing and changing, with
+      no discernible boundaries or edges. The forms are both beautiful and terrifying,
+      and the colors are a vibrant, shifting kaleidoscope. '
+    title: The Mimic
+topic: Which cosmic horror are you devoted to?

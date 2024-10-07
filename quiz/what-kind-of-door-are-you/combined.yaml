@@ -1,0 +1,197 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: A full-body catsuit.
+    type: D
+  - text: A pair of overalls.
+    type: C
+  - text: You wear pajamas.
+    type: E
+  - text: A tuxedo.
+    type: A
+  - text: A flowing gown.
+    type: B
+  text: You're invited to a party. What do you wear?
+- image: questions/2.png
+  options:
+  - text: You cautiously approach and knock.
+    type: A
+  - text: You try to open it with your bare hands.
+    type: C
+  - text: You try to open it with your mind.
+    type: E
+  - text: You take a picture of it with your phone.
+    type: D
+  - text: You run away screaming.
+    type: B
+  text: You're walking down the street when you see a strange, glowing door. What
+    do you do?
+- image: questions/3.png
+  options:
+  - text: The door is made of clouds.
+    type: A
+  - text: The door is made of a kaleidoscope of colors.
+    type: C
+  - text: The door is made of a giant, glowing eye.
+    type: D
+  - text: The door is made of a giant, pulsating heart.
+    type: B
+  - text: The door is made of a giant, smiling face.
+    type: E
+  text: ' You''re in a dream. What is the first thing you notice about the door?'
+- image: questions/4.png
+  options:
+  - text: The door is made of a giant hourglass.
+    type: B
+  - text: The door is made of a giant, swirling vortex.
+    type: C
+  - text: The door is made of a giant, glowing eye.
+    type: D
+  - text: The door is made of a giant, smiling face.
+    type: E
+  - text: The door is made of a giant clock.
+    type: A
+  text: You're trapped in a time loop. What is the first thing you notice about the
+    door?
+- image: questions/5.png
+  options:
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, glowing eye.
+    type: A
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, smiling face.
+    type: B
+  text: You're about to embark on a life-changing journey. What is the first thing
+    you notice about the door?
+- image: questions/6.png
+  options:
+  - text: The door is made of a giant, glowing eye.
+    type: A
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, smiling face.
+    type: B
+  text: You're standing in a field of sunflowers. What is the first thing you notice
+    about the door?
+- image: questions/7.png
+  options:
+  - text: You walk through the door.
+    type: A
+  - text: You try to open the door with your mind.
+    type: E
+  - text: You stare at your reflection in the mirror.
+    type: C
+  - text: You try to find a way out of the room.
+    type: B
+  - text: You try to touch the door.
+    type: D
+  text: You're in a room full of mirrors. What do you do when you see a door?
+- image: questions/8.png
+  options:
+  - text: The door is made of bookshelves.
+    type: A
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing eye.
+    type: B
+  text: You're in a library. What is the first thing you notice about the door?
+- image: questions/9.png
+  options:
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of clouds.
+    type: A
+  - text: The door is made of a giant, pulsating heart.
+    type: B
+  - text: The door is made of a giant, smiling face.
+    type: E
+  - text: The door is made of a giant, glowing eye.
+    type: C
+  text: You're in a dream. What is the first thing you notice about the door?
+- image: questions/10.png
+  options:
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing eye.
+    type: A
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, smiling face.
+    type: B
+  text: You're about to make a life-altering decision. What is the first thing you
+    notice about the door?
+results:
+  A:
+    description: You are the sturdy, dependable double door, the kind that welcomes
+      everyone with a sense of security and permanence. You are the epitome of classic
+      elegance, with a timeless design that never goes out of style. You are strong
+      and reliable, built to last through the test of time. You are the gatekeeper
+      of a grand estate, a place of history and tradition.
+    image: results/A.png
+    image_description: 'A picture of a solid oak double door with intricate carvings.
+      The door is dark brown, with a polished finish. The door frame is ornate, with
+      a decorative moldings. The door is slightly ajar, revealing a glimpse of a grand
+      hallway. '
+    title: ' Solid Oak Double Door'
+  B:
+    description: You are the sleek, modern sliding glass door, a beacon of light and
+      airiness. You are all about effortless flow and seamless transitions, allowing
+      the outside world to seamlessly blend into the inside. You are the epitome of
+      minimalist chic, with a clean, uncluttered design that maximizes space and light.
+      You are the gateway to a tropical paradise, a place of relaxation and tranquility.
+    image: results/B.png
+    image_description: 'A picture of a sliding glass door with a minimalist design.
+      The door is made of clear glass, with a sleek black frame. The door slides smoothly
+      across the track, revealing a view of a lush garden. '
+    title: ' Sliding Glass Door'
+  C:
+    description: You are the door to a hidden library, a portal to a world of forgotten
+      knowledge and whispered secrets. You are the keeper of ancient wisdom, a gateway
+      to a realm of mystery and intrigue. You are the embodiment of hidden potential,
+      a place where dreams are born and stories unfold. You are the key to unlocking
+      a hidden world, a place where imagination runs wild.
+    image: results/C.png
+    image_description: 'A picture of a door made of dark wood, with intricate carvings
+      and a brass handle. The door is slightly ajar, revealing a glimpse of a dimly
+      lit room filled with bookshelves. The room is filled with the scent of old paper
+      and leather. '
+    title: ' The Door to a Hidden Library'
+  D:
+    description: You are the door to a time machine, a portal to a world beyond the
+      confines of time and space. You are the embodiment of the unknown, a gateway
+      to a future yet to be written. You are the key to unlocking the secrets of the
+      universe, a place where the impossible becomes possible. You are the bridge
+      between past, present, and future, a place where history and destiny collide.
+    image: results/D.png
+    image_description: 'A picture of a door made of shimmering, iridescent metal.
+      The door is shaped like a swirling vortex, with a faint hum emanating from it.
+      The door is slightly ajar, revealing a glimpse of a swirling galaxy. '
+    title: ' The Door to a Time Machine'
+  E:
+    description: You are the door to a portal to another dimension, a gateway to a
+      world of impossible geometries and surreal landscapes. You are the embodiment
+      of the unknown, a portal to a realm of pure imagination. You are the key to
+      unlocking the secrets of the universe, a place where the laws of physics are
+      bent and broken. You are the bridge between reality and fantasy, a place where
+      anything is possible.
+    image: results/E.png
+    image_description: 'A picture of a door made of swirling, iridescent colors. The
+      door is shaped like a kaleidoscope, with a faint hum emanating from it. The
+      door is slightly ajar, revealing a glimpse of a swirling, multi-dimensional
+      landscape. '
+    title: ' The Door to a Portal to Another Dimension'
+topic: What kind of door are you?

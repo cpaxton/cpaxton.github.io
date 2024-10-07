@@ -1,0 +1,121 @@
+- image: A close-up shot of a pulsating, iridescent egg with a faint, otherworldly
+    glow emanating from within. The egg is nestled amongst overgrown weeds and a gnarled
+    tree branch.
+  options:
+    A: ' Leave it be, convinced it''s a harmless, albeit strange, find.'
+    B: ' Try to crack it open with a hammer, hoping to see what''s inside.'
+    C: ' Call a local psychic to see if it''s a portal to another dimension.'
+    D: ' Run away screaming, convinced it''s a harbinger of doom.'
+    E: ' Start a ritual to awaken the creature inside.'
+  question: You find a strange, pulsating egg in your backyard. What do you do?
+- image: A mirror reflecting a distorted, grotesque version of a human face. The reflection
+    is not human, but something inhuman and alien, with multiple eyes, tentacles,
+    and a gaping maw.
+  options:
+    A: ' Ignore it and go back to sleep.'
+    B: ' Try to communicate with the reflection, hoping to understand its meaning.'
+    C: ' Run to the nearest window and scream for help.'
+    D: ' Reach out and touch the reflection, hoping to merge with it.'
+    E: ' Start a ritual to banish the reflection back to the void.'
+  question: You wake up in the middle of the night to find your reflection staring
+    back at you, but it's not your own face. What do you do?
+- image: A steaming, perfectly cooked steak with a glistening crust, placed on a silver
+    platter. Next to it, a swirling nebula video playing on a large screen, with vibrant
+    colors and shifting patterns.
+  options:
+    A: ' The steak, because it''s a tangible, physical pleasure.'
+    B: ' The nebula video, because it''s a glimpse into the vastness and mystery of
+      the universe.'
+    C: ' The steak, because it''s a symbol of earthly comfort in a world of cosmic
+      horror.'
+    D: ' The nebula video, because it''s a reminder of the insignificance of our existence.'
+    E: ' You don''t care, you''re already dead.'
+  question: 'You are offered a choice: eat a delicious, perfectly cooked steak or
+    watch a mesmerizing, hypnotic video of a swirling nebula. What do you choose?'
+- image: A close-up shot of a single, iridescent butterfly with wings that shimmer
+    with an otherworldly glow. The butterfly is perched on a delicate, white flower.
+  options:
+    A: ' Release it into the wild, hoping it will bring good luck.'
+    B: ' Keep it as a memento, a reminder of the beauty and terror of the universe.'
+    C: ' Try to understand its meaning, hoping to unlock a secret of the cosmos.'
+    D: ' Destroy it, convinced it''s a harbinger of doom.'
+    E: ' You don''t care, you''re already dead.'
+  question: You find a single, perfectly preserved, iridescent butterfly in your pocket.
+    What do you do?
+- image: A person standing on a precipice, looking down at a swirling vortex of colors
+    and shapes. The vortex is filled with strange, otherworldly creatures and entities.
+  options:
+    A: ' The comfortable life, because it''s safe and predictable.'
+    B: ' The journey, because it''s a chance to experience the true nature of reality.'
+    C: ' The comfortable life, because it''s a chance to avoid the horrors of the
+      universe.'
+    D: ' The journey, because it''s a chance to confront your deepest fears and desires.'
+    E: ' You don''t care, you''re already dead.'
+  question: 'You are offered a choice: live a long, comfortable life or experience
+    a brief, intense, and terrifying journey through the fabric of reality. What do
+    you choose?'
+- image: A person standing on a beach, looking out at a vast, empty ocean. The sky
+    is a deep, dark blue, and the stars are visible.
+  options:
+    A: ' The unchanging world, because it''s a safe and predictable existence.'
+    B: ' The full spectrum of human emotions, because it''s a chance to experience
+      the full range of human life.'
+    C: ' The unchanging world, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    D: ' The full spectrum of human emotions, because it''s a chance to truly understand
+      the human condition.'
+    E: ' You don''t care, you''re already dead.'
+  question: 'You are given a choice: live forever in a blissful, unchanging world
+    or experience the full spectrum of human emotions and sensations, even the most
+    painful ones. What do you choose?'
+- image: A person standing in a sterile, white room, surrounded by identical, perfectly
+    arranged objects. The room is devoid of any color or texture.
+  options:
+    A: ' The perfect order, because it''s a safe and predictable existence.'
+    B: ' The chaotic and unpredictable nature of reality, because it''s a chance to
+      experience the full range of human life.'
+    C: ' The perfect order, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    D: ' The chaotic and unpredictable nature of reality, because it''s a chance to
+      truly understand the human condition.'
+    E: ' You don''t care, you''re already dead.'
+  question: 'You are offered a choice: live in a world of perfect order and predictability,
+    or experience the chaotic and unpredictable nature of reality. What do you choose?'
+- image: A close-up shot of a single, iridescent butterfly with wings that shimmer
+    with an otherworldly glow. The butterfly is perched on a delicate, white flower.
+  options:
+    A: ' Release it into the wild, hoping it will bring good luck.'
+    B: ' Keep it as a memento, a reminder of the beauty and terror of the universe.'
+    C: ' Try to understand its meaning, hoping to unlock a secret of the cosmos.'
+    D: ' Destroy it, convinced it''s a harbinger of doom.'
+    E: ' You don''t care, you''re already dead.'
+  question: You find a single, perfectly preserved, iridescent butterfly in your pocket.
+    What do you do?
+- image: A person standing on a precipice, looking down at a swirling vortex of colors
+    and shapes. The vortex is filled with strange, otherworldly creatures and entities.
+  options:
+    A: ' The unchanging world, because it''s a safe and predictable existence.'
+    B: ' The full spectrum of human emotions, because it''s a chance to experience
+      the full range of human life.'
+    C: ' The unchanging world, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    D: ' The full spectrum of human emotions, because it''s a chance to truly understand
+      the human condition.'
+    E: ' You don''t care, you''re already dead.'
+  question: 'You are offered a choice: live forever in a blissful, unchanging world
+    or experience the full spectrum of human emotions and sensations, even the most
+    painful ones. What do you choose?'
+- image: A person standing on a precipice, looking down at a swirling vortex of colors
+    and shapes. The vortex is filled with strange, otherworldly creatures and entities.
+  options:
+    A: ' The unchanging world, because it''s a safe and predictable existence.'
+    B: ' The full spectrum of human emotions, because it''s a chance to experience
+      the full range of human life.'
+    C: ' The unchanging world, because it''s a chance to avoid the pain and suffering
+      of the universe.'
+    D: ' The full spectrum of human emotions, because it''s a chance to truly understand
+      the human condition.'
+    E: ' You don''t care, you''re already dead.'
+  question: 'You are given a choice: live forever in a blissful, unchanging world
+    or experience the full spectrum of human emotions and sensations, even the most
+    painful ones. What do you choose?'

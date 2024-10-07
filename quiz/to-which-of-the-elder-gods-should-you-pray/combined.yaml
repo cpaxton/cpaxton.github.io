@@ -1,0 +1,198 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Smile and say hello to the reflection.'
+    type: E
+  - text: ' Reach out and touch the reflection.'
+    type: B
+  - text: ' Scream and run away.'
+    type: C
+  - text: ' Ask the reflection what it wants.'
+    type: D
+  - text: ' Try to ignore it and go about your day.'
+    type: A
+  text: You're staring at a mirror, and you notice a strange reflection. What do you
+    do?
+- image: questions/2.png
+  options:
+  - text: ' Call out to the voice and ask who it is.'
+    type: C
+  - text: ' Ignore it and continue walking.'
+    type: A
+  - text: ' Search for a safe place to hide.'
+    type: D
+  - text: ' Follow the voice and see where it leads.'
+    type: B
+  - text: ' Start singing a song to try and drown out the voice.'
+    type: E
+  text: You're walking through a forest, and you hear a strange, whispering voice.
+    What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Start writing down everything you see and feel.'
+    type: E
+  - text: ' Look for a way to stop the sensation.'
+    type: D
+  - text: ' Call out to the person next to you, hoping they can help.'
+    type: C
+  - text: ' Try to ignore it and go back to sleep.'
+    type: A
+  - text: ' Reach out and touch the tingling sensation.'
+    type: B
+  text: You wake up in the middle of the night, and you feel a strange, tingling sensation
+    on your skin. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' Throw it in the air and watch it fly.'
+    type: E
+  - text: ' Place it in a safe place and pray to the stone for guidance.'
+    type: C
+  - text: ' Leave it be, assuming it''s just a rock.'
+    type: A
+  - text: ' Use a magnifying glass to examine the stone''s surface.'
+    type: D
+  - text: ' Try to pick it up, hoping to understand its nature.'
+    type: B
+  text: You find a strange, glowing stone in your backyard. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Try to figure out what''s different about your reflection.'
+    type: B
+  - text: ' Ask someone else to look at the photo and see if they notice anything
+      strange.'
+    type: D
+  - text: ' Start to feel a sense of dread and fear.'
+    type: E
+  - text: ' Throw the photo away, feeling uneasy about it.'
+    type: C
+  - text: ' Ignore it and continue looking at the photo.'
+    type: A
+  text: You're staring at a photograph of yourself, and you notice a strange, almost
+    imperceptible change in your reflection. What do you do?
+- image: questions/6.png
+  options:
+  - text: ' Try to find the source of the urge.'
+    type: D
+  - text: ' Ignore the urge and try to blend in.'
+    type: A
+  - text: ' Start dancing wildly, letting the urge take over.'
+    type: E
+  - text: ' Sing along with the music in your head.'
+    type: B
+  - text: ' Start singing a song you know.'
+    type: C
+  text: You're in a crowded room, and you feel a sudden urge to sing. What do you
+    do?
+- image: questions/7.png
+  options:
+  - text: ' Reach out and touch the painting, hoping to feel the woman''s presence.'
+    type: B
+  - text: ' Ignore it and continue looking at the painting.'
+    type: A
+  - text: ' Start to feel a sense of connection to the woman in the painting.'
+    type: E
+  - text: ' Ask the painting who it is and what it wants.'
+    type: D
+  - text: ' Try to understand the meaning behind the painting.'
+    type: C
+  text: You're staring at a painting, and you feel a strange, tingling sensation in
+    your chest. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Start to feel a sense of peace and tranquility.'
+    type: E
+  - text: ' Search for a safe place to hide.'
+    type: D
+  - text: ' Ignore it and continue walking.'
+    type: A
+  - text: ' Call out to the flowers, asking for their guidance.'
+    type: C
+  - text: ' Reach out and touch the tingling sensation.'
+    type: B
+  text: You're walking through a field of wildflowers, and you feel a strange, tingling
+    sensation on your skin. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Fight back against the creature.'
+    type: C
+  - text: ' Try to understand the meaning of the dream.'
+    type: D
+  - text: ' Embrace the fear and let it consume you.'
+    type: E
+  - text: ' Try to wake up.'
+    type: A
+  - text: ' Run as fast as you can.'
+    type: B
+  text: You're in a dream, and you're being chased by a creature made of shadows.
+    What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Throw the mirror away, feeling uneasy about it.'
+    type: C
+  - text: ' Try to understand the meaning of the reflection.'
+    type: B
+  - text: ' Reach out and touch the reflection, hoping to understand it.'
+    type: D
+  - text: ' Start to feel a sense of unease and fear.'
+    type: E
+  - text: ' Ignore it and continue your day.'
+    type: A
+  text: You find a mirror that reflects not your own image, but a distorted, fragmented
+    version of yourself. What do you do?
+results:
+  A:
+    description: You are the embodiment of reason and order. You find solace in the
+      predictable and the structured, and you thrive in environments where things
+      are clear and defined. You are a master of logic and deduction, and you approach
+      life with a calm and collected demeanor. You are not easily swayed by emotions
+      or whims, and you prefer to rely on facts and evidence to guide your decisions.
+    image: results/A.png
+    image_description: 'A man in a crisp suit, standing in a perfectly symmetrical
+      room with white walls and a geometric pattern on the floor. He is holding a
+      briefcase and looking directly at the camera with a calm and collected expression. '
+    title: The God of Order and Logic
+  B:
+    description: You are a dreamer, a seeker of the unknown, and a lover of the fantastical.
+      You find beauty in the unexpected and revel in the power of imagination. You
+      are drawn to the mysteries of the universe and the hidden truths that lie beneath
+      the surface of reality. You are a master of illusion and deception, and you
+      can easily slip into the world of dreams and fantasies.
+    image: results/B.png
+    image_description: 'A swirling vortex of colors and shapes, with a figure in a
+      flowing robe standing in the center. The figure is surrounded by glowing orbs
+      and ethereal creatures, and their eyes are closed as they seem to be floating
+      in a dreamlike state. '
+    title: The God of Dreams and Illusion
+  C:
+    description: You are a force of nature, unpredictable and unyielding. You embrace
+      the unknown and revel in the beauty of destruction. You are drawn to the raw
+      power of the universe and the constant flux of change. You are a master of chaos
+      and entropy, and you can easily disrupt the order of things.
+    image: results/C.png
+    image_description: 'A swirling storm of lightning and thunder, with a figure in
+      tattered robes standing amidst the chaos. The figure is surrounded by crackling
+      energy and glowing embers, and their eyes are wild with power. '
+    title: The God of Chaos and Entropy
+  D:
+    description: You are a seeker of the hidden, the unknown, and the ethereal. You
+      are drawn to the mysteries of the universe and the secrets that lie beyond the
+      veil of reality. You are a master of the unseen, and you can easily slip into
+      the world of the spirit and the subconscious. You are a conduit for the divine,
+      and you can channel the power of the unseen world.
+    image: results/D.png
+    image_description: 'A woman with flowing hair and eyes that glow with an otherworldly
+      light, standing in a dark forest. She is surrounded by swirling mist and ethereal
+      creatures, and her hands are outstretched as if to embrace the unseen world. '
+    title: The Goddess of the Unseen
+  E:
+    description: You are a playful spirit, a lover of the absurd, and a master of
+      the unexpected. You find joy in the chaos and revel in the power of laughter.
+      You are drawn to the beauty of the unexpected and the power of the absurd. You
+      are a master of mischief and mayhem, and you can easily turn the mundane into
+      the magical.
+    image: results/E.png
+    image_description: 'A mischievous imp with glowing green eyes and a mischievous
+      grin, holding a glowing orb that emits a rainbow of colors. The imp is surrounded
+      by swirling smoke and sparkles, and they are holding a tiny, glowing crown. '
+    title: The God of Laughter and Mischief
+topic: To which of the elder gods should you pray?

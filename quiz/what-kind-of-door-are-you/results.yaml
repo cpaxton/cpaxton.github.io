@@ -1,0 +1,60 @@
+A:
+  description: You are the sturdy, dependable double door, the kind that welcomes
+    everyone with a sense of security and permanence. You are the epitome of classic
+    elegance, with a timeless design that never goes out of style. You are strong
+    and reliable, built to last through the test of time. You are the gatekeeper of
+    a grand estate, a place of history and tradition.
+  image: 'A picture of a solid oak double door with intricate carvings. The door is
+    dark brown, with a polished finish. The door frame is ornate, with a decorative
+    moldings. The door is slightly ajar, revealing a glimpse of a grand hallway. '
+  letter: A
+  result: ' Solid Oak Double Door'
+  topic: What kind of door are you?
+B:
+  description: You are the sleek, modern sliding glass door, a beacon of light and
+    airiness. You are all about effortless flow and seamless transitions, allowing
+    the outside world to seamlessly blend into the inside. You are the epitome of
+    minimalist chic, with a clean, uncluttered design that maximizes space and light.
+    You are the gateway to a tropical paradise, a place of relaxation and tranquility.
+  image: 'A picture of a sliding glass door with a minimalist design. The door is
+    made of clear glass, with a sleek black frame. The door slides smoothly across
+    the track, revealing a view of a lush garden. '
+  letter: B
+  result: ' Sliding Glass Door'
+  topic: What kind of door are you?
+C:
+  description: You are the door to a hidden library, a portal to a world of forgotten
+    knowledge and whispered secrets. You are the keeper of ancient wisdom, a gateway
+    to a realm of mystery and intrigue. You are the embodiment of hidden potential,
+    a place where dreams are born and stories unfold. You are the key to unlocking
+    a hidden world, a place where imagination runs wild.
+  image: 'A picture of a door made of dark wood, with intricate carvings and a brass
+    handle. The door is slightly ajar, revealing a glimpse of a dimly lit room filled
+    with bookshelves. The room is filled with the scent of old paper and leather. '
+  letter: C
+  result: ' The Door to a Hidden Library'
+  topic: What kind of door are you?
+D:
+  description: You are the door to a time machine, a portal to a world beyond the
+    confines of time and space. You are the embodiment of the unknown, a gateway to
+    a future yet to be written. You are the key to unlocking the secrets of the universe,
+    a place where the impossible becomes possible. You are the bridge between past,
+    present, and future, a place where history and destiny collide.
+  image: 'A picture of a door made of shimmering, iridescent metal. The door is shaped
+    like a swirling vortex, with a faint hum emanating from it. The door is slightly
+    ajar, revealing a glimpse of a swirling galaxy. '
+  letter: D
+  result: ' The Door to a Time Machine'
+  topic: What kind of door are you?
+E:
+  description: You are the door to a portal to another dimension, a gateway to a world
+    of impossible geometries and surreal landscapes. You are the embodiment of the
+    unknown, a portal to a realm of pure imagination. You are the key to unlocking
+    the secrets of the universe, a place where the laws of physics are bent and broken.
+    You are the bridge between reality and fantasy, a place where anything is possible.
+  image: 'A picture of a door made of swirling, iridescent colors. The door is shaped
+    like a kaleidoscope, with a faint hum emanating from it. The door is slightly
+    ajar, revealing a glimpse of a swirling, multi-dimensional landscape. '
+  letter: E
+  result: ' The Door to a Portal to Another Dimension'
+  topic: What kind of door are you?

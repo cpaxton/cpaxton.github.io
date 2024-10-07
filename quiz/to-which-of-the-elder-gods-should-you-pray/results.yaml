@@ -1,0 +1,60 @@
+A:
+  description: You are the embodiment of reason and order. You find solace in the
+    predictable and the structured, and you thrive in environments where things are
+    clear and defined. You are a master of logic and deduction, and you approach life
+    with a calm and collected demeanor. You are not easily swayed by emotions or whims,
+    and you prefer to rely on facts and evidence to guide your decisions.
+  image: 'A man in a crisp suit, standing in a perfectly symmetrical room with white
+    walls and a geometric pattern on the floor. He is holding a briefcase and looking
+    directly at the camera with a calm and collected expression. '
+  letter: A
+  result: The God of Order and Logic
+  topic: To which of the elder gods should you pray?
+B:
+  description: You are a dreamer, a seeker of the unknown, and a lover of the fantastical.
+    You find beauty in the unexpected and revel in the power of imagination. You are
+    drawn to the mysteries of the universe and the hidden truths that lie beneath
+    the surface of reality. You are a master of illusion and deception, and you can
+    easily slip into the world of dreams and fantasies.
+  image: 'A swirling vortex of colors and shapes, with a figure in a flowing robe
+    standing in the center. The figure is surrounded by glowing orbs and ethereal
+    creatures, and their eyes are closed as they seem to be floating in a dreamlike
+    state. '
+  letter: B
+  result: The God of Dreams and Illusion
+  topic: To which of the elder gods should you pray?
+C:
+  description: You are a force of nature, unpredictable and unyielding. You embrace
+    the unknown and revel in the beauty of destruction. You are drawn to the raw power
+    of the universe and the constant flux of change. You are a master of chaos and
+    entropy, and you can easily disrupt the order of things.
+  image: 'A swirling storm of lightning and thunder, with a figure in tattered robes
+    standing amidst the chaos. The figure is surrounded by crackling energy and glowing
+    embers, and their eyes are wild with power. '
+  letter: C
+  result: The God of Chaos and Entropy
+  topic: To which of the elder gods should you pray?
+D:
+  description: You are a seeker of the hidden, the unknown, and the ethereal. You
+    are drawn to the mysteries of the universe and the secrets that lie beyond the
+    veil of reality. You are a master of the unseen, and you can easily slip into
+    the world of the spirit and the subconscious. You are a conduit for the divine,
+    and you can channel the power of the unseen world.
+  image: 'A woman with flowing hair and eyes that glow with an otherworldly light,
+    standing in a dark forest. She is surrounded by swirling mist and ethereal creatures,
+    and her hands are outstretched as if to embrace the unseen world. '
+  letter: D
+  result: The Goddess of the Unseen
+  topic: To which of the elder gods should you pray?
+E:
+  description: You are a playful spirit, a lover of the absurd, and a master of the
+    unexpected. You find joy in the chaos and revel in the power of laughter. You
+    are drawn to the beauty of the unexpected and the power of the absurd. You are
+    a master of mischief and mayhem, and you can easily turn the mundane into the
+    magical.
+  image: 'A mischievous imp with glowing green eyes and a mischievous grin, holding
+    a glowing orb that emits a rainbow of colors. The imp is surrounded by swirling
+    smoke and sparkles, and they are holding a tiny, glowing crown. '
+  letter: E
+  result: The God of Laughter and Mischief
+  topic: To which of the elder gods should you pray?

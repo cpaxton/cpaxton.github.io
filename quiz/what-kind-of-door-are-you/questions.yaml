@@ -1,0 +1,95 @@
+- image: A person standing in a doorway, dressed in a suit and tie, looking confused
+    and slightly out of place.
+  options:
+    A: A tuxedo.
+    B: A flowing gown.
+    C: A pair of overalls.
+    D: A full-body catsuit.
+    E: You wear pajamas.
+  question: You're invited to a party. What do you wear?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: You cautiously approach and knock.
+    B: You run away screaming.
+    C: You try to open it with your bare hands.
+    D: You take a picture of it with your phone.
+    E: You try to open it with your mind.
+  question: You're walking down the street when you see a strange, glowing door. What
+    do you do?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of clouds.
+    B: The door is made of a giant, pulsating heart.
+    C: The door is made of a kaleidoscope of colors.
+    D: The door is made of a giant, glowing eye.
+    E: The door is made of a giant, smiling face.
+  question: ' You''re in a dream. What is the first thing you notice about the door?'
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of a giant clock.
+    B: The door is made of a giant hourglass.
+    C: The door is made of a giant, swirling vortex.
+    D: The door is made of a giant, glowing eye.
+    E: The door is made of a giant, smiling face.
+  question: You're trapped in a time loop. What is the first thing you notice about
+    the door?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of a giant, glowing eye.
+    B: The door is made of a giant, smiling face.
+    C: The door is made of a giant, pulsating heart.
+    D: The door is made of a giant, swirling vortex.
+    E: The door is made of a giant, glowing hourglass.
+  question: You're about to embark on a life-changing journey. What is the first thing
+    you notice about the door?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of a giant, glowing eye.
+    B: The door is made of a giant, smiling face.
+    C: The door is made of a giant, pulsating heart.
+    D: The door is made of a giant, swirling vortex.
+    E: The door is made of a giant, glowing hourglass.
+  question: You're standing in a field of sunflowers. What is the first thing you
+    notice about the door?
+- image: A room full of mirrors, with a single door in the center. The door is made
+    of swirling, iridescent colors, with a faint hum emanating from it.
+  options:
+    A: You walk through the door.
+    B: You try to find a way out of the room.
+    C: You stare at your reflection in the mirror.
+    D: You try to touch the door.
+    E: You try to open the door with your mind.
+  question: You're in a room full of mirrors. What do you do when you see a door?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of bookshelves.
+    B: The door is made of a giant, glowing eye.
+    C: The door is made of a giant, pulsating heart.
+    D: The door is made of a giant, swirling vortex.
+    E: The door is made of a giant, glowing hourglass.
+  question: You're in a library. What is the first thing you notice about the door?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of clouds.
+    B: The door is made of a giant, pulsating heart.
+    C: The door is made of a giant, glowing eye.
+    D: The door is made of a giant, swirling vortex.
+    E: The door is made of a giant, smiling face.
+  question: You're in a dream. What is the first thing you notice about the door?
+- image: A door made of swirling, iridescent colors, with a faint hum emanating from
+    it.
+  options:
+    A: The door is made of a giant, glowing eye.
+    B: The door is made of a giant, smiling face.
+    C: The door is made of a giant, pulsating heart.
+    D: The door is made of a giant, swirling vortex.
+    E: The door is made of a giant, glowing hourglass.
+  question: You're about to make a life-altering decision. What is the first thing
+    you notice about the door?

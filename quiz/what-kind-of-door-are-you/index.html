@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: A full-body catsuit.
+    type: D
+  - text: A pair of overalls.
+    type: C
+  - text: You wear pajamas.
+    type: E
+  - text: A tuxedo.
+    type: A
+  - text: A flowing gown.
+    type: B
+  text: You're invited to a party. What do you wear?
+- image: questions/2.png
+  options:
+  - text: You cautiously approach and knock.
+    type: A
+  - text: You try to open it with your bare hands.
+    type: C
+  - text: You try to open it with your mind.
+    type: E
+  - text: You take a picture of it with your phone.
+    type: D
+  - text: You run away screaming.
+    type: B
+  text: You're walking down the street when you see a strange, glowing door. What
+    do you do?
+- image: questions/3.png
+  options:
+  - text: The door is made of clouds.
+    type: A
+  - text: The door is made of a kaleidoscope of colors.
+    type: C
+  - text: The door is made of a giant, glowing eye.
+    type: D
+  - text: The door is made of a giant, pulsating heart.
+    type: B
+  - text: The door is made of a giant, smiling face.
+    type: E
+  text: ' You''re in a dream. What is the first thing you notice about the door?'
+- image: questions/4.png
+  options:
+  - text: The door is made of a giant hourglass.
+    type: B
+  - text: The door is made of a giant, swirling vortex.
+    type: C
+  - text: The door is made of a giant, glowing eye.
+    type: D
+  - text: The door is made of a giant, smiling face.
+    type: E
+  - text: The door is made of a giant clock.
+    type: A
+  text: You're trapped in a time loop. What is the first thing you notice about the
+    door?
+- image: questions/5.png
+  options:
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, glowing eye.
+    type: A
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, smiling face.
+    type: B
+  text: You're about to embark on a life-changing journey. What is the first thing
+    you notice about the door?
+- image: questions/6.png
+  options:
+  - text: The door is made of a giant, glowing eye.
+    type: A
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, smiling face.
+    type: B
+  text: You're standing in a field of sunflowers. What is the first thing you notice
+    about the door?
+- image: questions/7.png
+  options:
+  - text: You walk through the door.
+    type: A
+  - text: You try to open the door with your mind.
+    type: E
+  - text: You stare at your reflection in the mirror.
+    type: C
+  - text: You try to find a way out of the room.
+    type: B
+  - text: You try to touch the door.
+    type: D
+  text: You're in a room full of mirrors. What do you do when you see a door?
+- image: questions/8.png
+  options:
+  - text: The door is made of bookshelves.
+    type: A
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing eye.
+    type: B
+  text: You're in a library. What is the first thing you notice about the door?
+- image: questions/9.png
+  options:
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of clouds.
+    type: A
+  - text: The door is made of a giant, pulsating heart.
+    type: B
+  - text: The door is made of a giant, smiling face.
+    type: E
+  - text: The door is made of a giant, glowing eye.
+    type: C
+  text: You're in a dream. What is the first thing you notice about the door?
+- image: questions/10.png
+  options:
+  - text: The door is made of a giant, pulsating heart.
+    type: C
+  - text: The door is made of a giant, swirling vortex.
+    type: D
+  - text: The door is made of a giant, glowing eye.
+    type: A
+  - text: The door is made of a giant, glowing hourglass.
+    type: E
+  - text: The door is made of a giant, smiling face.
+    type: B
+  text: You're about to make a life-altering decision. What is the first thing you
+    notice about the door?
+results:
+  A:
+    description: You are the sturdy, dependable double door, the kind that welcomes
+      everyone with a sense of security and permanence. You are the epitome of classic
+      elegance, with a timeless design that never goes out of style. You are strong
+      and reliable, built to last through the test of time. You are the gatekeeper
+      of a grand estate, a place of history and tradition.
+    image: results/A.png
+    image_description: 'A picture of a solid oak double door with intricate carvings.
+      The door is dark brown, with a polished finish. The door frame is ornate, with
+      a decorative moldings. The door is slightly ajar, revealing a glimpse of a grand
+      hallway. '
+    title: ' Solid Oak Double Door'
+  B:
+    description: You are the sleek, modern sliding glass door, a beacon of light and
+      airiness. You are all about effortless flow and seamless transitions, allowing
+      the outside world to seamlessly blend into the inside. You are the epitome of
+      minimalist chic, with a clean, uncluttered design that maximizes space and light.
+      You are the gateway to a tropical paradise, a place of relaxation and tranquility.
+    image: results/B.png
+    image_description: 'A picture of a sliding glass door with a minimalist design.
+      The door is made of clear glass, with a sleek black frame. The door slides smoothly
+      across the track, revealing a view of a lush garden. '
+    title: ' Sliding Glass Door'
+  C:
+    description: You are the door to a hidden library, a portal to a world of forgotten
+      knowledge and whispered secrets. You are the keeper of ancient wisdom, a gateway
+      to a realm of mystery and intrigue. You are the embodiment of hidden potential,
+      a place where dreams are born and stories unfold. You are the key to unlocking
+      a hidden world, a place where imagination runs wild.
+    image: results/C.png
+    image_description: 'A picture of a door made of dark wood, with intricate carvings
+      and a brass handle. The door is slightly ajar, revealing a glimpse of a dimly
+      lit room filled with bookshelves. The room is filled with the scent of old paper
+      and leather. '
+    title: ' The Door to a Hidden Library'
+  D:
+    description: You are the door to a time machine, a portal to a world beyond the
+      confines of time and space. You are the embodiment of the unknown, a gateway
+      to a future yet to be written. You are the key to unlocking the secrets of the
+      universe, a place where the impossible becomes possible. You are the bridge
+      between past, present, and future, a place where history and destiny collide.
+    image: results/D.png
+    image_description: 'A picture of a door made of shimmering, iridescent metal.
+      The door is shaped like a swirling vortex, with a faint hum emanating from it.
+      The door is slightly ajar, revealing a glimpse of a swirling galaxy. '
+    title: ' The Door to a Time Machine'
+  E:
+    description: You are the door to a portal to another dimension, a gateway to a
+      world of impossible geometries and surreal landscapes. You are the embodiment
+      of the unknown, a portal to a realm of pure imagination. You are the key to
+      unlocking the secrets of the universe, a place where the laws of physics are
+      bent and broken. You are the bridge between reality and fantasy, a place where
+      anything is possible.
+    image: results/E.png
+    image_description: 'A picture of a door made of swirling, iridescent colors. The
+      door is shaped like a kaleidoscope, with a faint hum emanating from it. The
+      door is slightly ajar, revealing a glimpse of a swirling, multi-dimensional
+      landscape. '
+    title: ' The Door to a Portal to Another Dimension'
+topic: What kind of door are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

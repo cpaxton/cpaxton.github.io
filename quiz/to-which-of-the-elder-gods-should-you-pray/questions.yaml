@@ -1,0 +1,103 @@
+- image: A person staring into a mirror, their reflection is distorted and shifting.
+    The person's eyes are wide with fear.
+  options:
+    A: ' Try to ignore it and go about your day.'
+    B: ' Reach out and touch the reflection.'
+    C: ' Scream and run away.'
+    D: ' Ask the reflection what it wants.'
+    E: ' Smile and say hello to the reflection.'
+  question: You're staring at a mirror, and you notice a strange reflection. What
+    do you do?
+- image: A dense forest with towering trees and a winding path. The path is shrouded
+    in mist, and the air is thick with the scent of pine and damp earth. A faint,
+    ethereal voice whispers from the trees.
+  options:
+    A: ' Ignore it and continue walking.'
+    B: ' Follow the voice and see where it leads.'
+    C: ' Call out to the voice and ask who it is.'
+    D: ' Search for a safe place to hide.'
+    E: ' Start singing a song to try and drown out the voice.'
+  question: You're walking through a forest, and you hear a strange, whispering voice.
+    What do you do?
+- image: A person lying in bed, their skin is covered in a network of glowing, pulsating
+    veins. The room is dark, but the veins are illuminated by a faint, ethereal light.
+  options:
+    A: ' Try to ignore it and go back to sleep.'
+    B: ' Reach out and touch the tingling sensation.'
+    C: ' Call out to the person next to you, hoping they can help.'
+    D: ' Look for a way to stop the sensation.'
+    E: ' Start writing down everything you see and feel.'
+  question: You wake up in the middle of the night, and you feel a strange, tingling
+    sensation on your skin. What do you do?
+- image: A close-up shot of a smooth, black stone with a faint, pulsing light emanating
+    from within. The stone is nestled in a bed of moss and dirt.
+  options:
+    A: ' Leave it be, assuming it''s just a rock.'
+    B: ' Try to pick it up, hoping to understand its nature.'
+    C: ' Place it in a safe place and pray to the stone for guidance.'
+    D: ' Use a magnifying glass to examine the stone''s surface.'
+    E: ' Throw it in the air and watch it fly.'
+  question: You find a strange, glowing stone in your backyard. What do you do?
+- image: A person staring at a photograph of themselves, their reflection is slightly
+    distorted, as if they are looking at a warped version of themselves.
+  options:
+    A: ' Ignore it and continue looking at the photo.'
+    B: ' Try to figure out what''s different about your reflection.'
+    C: ' Throw the photo away, feeling uneasy about it.'
+    D: ' Ask someone else to look at the photo and see if they notice anything strange.'
+    E: ' Start to feel a sense of dread and fear.'
+  question: You're staring at a photograph of yourself, and you notice a strange,
+    almost imperceptible change in your reflection. What do you do?
+- image: A bustling city street with people walking by, cars honking, and a cacophony
+    of sounds. A single person stands out, their eyes closed, their body swaying to
+    a rhythm they can't hear.
+  options:
+    A: ' Ignore the urge and try to blend in.'
+    B: ' Sing along with the music in your head.'
+    C: ' Start singing a song you know.'
+    D: ' Try to find the source of the urge.'
+    E: ' Start dancing wildly, letting the urge take over.'
+  question: You're in a crowded room, and you feel a sudden urge to sing. What do
+    you do?
+- image: A painting of a woman with flowing hair and piercing eyes, her gaze fixed
+    on the viewer. The painting is vibrant and detailed, but the woman's eyes seem
+    to follow the viewer's every move.
+  options:
+    A: ' Ignore it and continue looking at the painting.'
+    B: ' Reach out and touch the painting, hoping to feel the woman''s presence.'
+    C: ' Try to understand the meaning behind the painting.'
+    D: ' Ask the painting who it is and what it wants.'
+    E: ' Start to feel a sense of connection to the woman in the painting.'
+  question: You're staring at a painting, and you feel a strange, tingling sensation
+    in your chest. What do you do?
+- image: A field of wildflowers, with vibrant colors and a gentle breeze. The air
+    is filled with the scent of pollen and the sound of bees buzzing.
+  options:
+    A: ' Ignore it and continue walking.'
+    B: ' Reach out and touch the tingling sensation.'
+    C: ' Call out to the flowers, asking for their guidance.'
+    D: ' Search for a safe place to hide.'
+    E: ' Start to feel a sense of peace and tranquility.'
+  question: You're walking through a field of wildflowers, and you feel a strange,
+    tingling sensation on your skin. What do you do?
+- image: A dark, shadowy figure with glowing red eyes, chasing a person through a
+    surreal landscape. The landscape is constantly shifting and changing, with impossible
+    shapes and colors.
+  options:
+    A: ' Try to wake up.'
+    B: ' Run as fast as you can.'
+    C: ' Fight back against the creature.'
+    D: ' Try to understand the meaning of the dream.'
+    E: ' Embrace the fear and let it consume you.'
+  question: You're in a dream, and you're being chased by a creature made of shadows.
+    What do you do?
+- image: A cracked, ornate mirror reflecting a distorted, fragmented image of a person.
+    The reflection is a jumble of colors and shapes, with no clear features.
+  options:
+    A: ' Ignore it and continue your day.'
+    B: ' Try to understand the meaning of the reflection.'
+    C: ' Throw the mirror away, feeling uneasy about it.'
+    D: ' Reach out and touch the reflection, hoping to understand it.'
+    E: ' Start to feel a sense of unease and fear.'
+  question: You find a mirror that reflects not your own image, but a distorted, fragmented
+    version of yourself. What do you do?

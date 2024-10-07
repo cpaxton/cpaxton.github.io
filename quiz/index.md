@@ -16,10 +16,15 @@ This is the home of the Infinite Quiz Machine!
   - [What kind of worm are you?](/quiz/what-kind-of-worm-are-you/index.html)
   - [What kind of tooth are you?](/quiz/what-kind-of-tooth-are-you/index.html)
   - [What holiday are you?](/quiz/what-holiday-are-you/index.html)
+  - [What kind of door are you?](/quiz/what-kind-of-door-are-you/index.html)
+  - [What extremely specific door are you?](/quiz/what-extremely-specific-door-are-you/index.html)
+
+### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)
   - [Which day in October are you?](/quiz/which-day-in-october-are-you/index.html)
   - [Which kind of undead monstrosity will you be?](/quiz/which-kind-of-undead-monstrosity-will-you-be/index.html)
-  - [What extremely specific door are you?](/quiz/what-extremely-specific-door-are-you/index.html)
+  - [To which of the elder gods should you pray?](/quiz/to-which-of-the-elder-gods-should-you-pray/index.html)
+  - [Which cosmic horror are you devoted to?](/quiz/which-cosmic-horror-are-you-devoted-to/index.html)
 
 ## Ok, but what is it?
 

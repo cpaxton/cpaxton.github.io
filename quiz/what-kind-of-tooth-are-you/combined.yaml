@@ -1,0 +1,185 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: The Cha Cha Slide
+    type: D
+  - text: You just stand there awkwardly.
+    type: E
+  - text: The Electric Slide
+    type: A
+  - text: The Running Man
+    type: B
+  - text: The Macarena
+    type: C
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: ' You''re allergic to cookies.'
+    type: E
+  - text: Carefully examine each cookie for imperfections.
+    type: B
+  - text: ' Try to figure out the best way to eat the cookies without getting crumbs
+      on your clothes.'
+    type: D
+  - text: ' Offer a cookie to a stranger.'
+    type: C
+  - text: Grab a cookie and take a big bite.
+    type: A
+  text: You're offered a plate of cookies. What's your first instinct?
+- image: questions/3.png
+  options:
+  - text: ' Earthy brown'
+    type: C
+  - text: ' Neon pink'
+    type: A
+  - text: ' Electric blue'
+    type: D
+  - text: ' Deep purple'
+    type: B
+  - text: ' You don''t really care about color.'
+    type: E
+  text: ' What''s your favorite color to wear?'
+- image: questions/4.png
+  options:
+  - text: ' A staycation at a fancy hotel.'
+    type: D
+  - text: ' A luxurious all-inclusive resort in the Maldives.'
+    type: A
+  - text: ' You''d rather stay home and watch Netflix.'
+    type: E
+  - text: ' A camping trip in the wilderness.'
+    type: C
+  - text: ' A backpacking trip through Southeast Asia.'
+    type: B
+  text: ' What''s your ideal vacation?'
+- image: questions/5.png
+  options:
+  - text: ' Public speaking'
+    type: D
+  - text: ' The dark'
+    type: C
+  - text: ' Spiders'
+    type: A
+  - text: ' Heights'
+    type: B
+  - text: ' Losing your teeth'
+    type: E
+  text: ' What''s your biggest fear?'
+- image: questions/6.png
+  options:
+  - text: ' "Bohemian Rhapsody" by Queen'
+    type: A
+  - text: ' "Sweet Caroline" by Neil Diamond'
+    type: D
+  - text: ' "Total Eclipse of the Heart" by Bonnie Tyler'
+    type: B
+  - text: ' You don''t sing karaoke.'
+    type: E
+  - text: ' "Don''t Stop Believin''" by Journey'
+    type: C
+  text: ' What''s your go-to karaoke song?'
+- image: questions/7.png
+  options:
+  - text: ' A professional dancer'
+    type: A
+  - text: ' A successful entrepreneur'
+    type: D
+  - text: ' A world-renowned chef'
+    type: B
+  - text: ' You''re a professional cuddler.'
+    type: E
+  - text: ' A famous musician'
+    type: C
+  text: ' What''s your dream job?'
+- image: questions/8.png
+  options:
+  - text: ' Rain'
+    type: B
+  - text: ' Vanilla'
+    type: C
+  - text: ' The ocean'
+    type: E
+  - text: ' Coffee'
+    type: D
+  - text: ' Freshly cut grass'
+    type: A
+  text: ' What''s your favorite smell?'
+- image: questions/9.png
+  options:
+  - text: ' People who chew with their mouths open.'
+    type: B
+  - text: ' People who talk too loudly on the phone.'
+    type: D
+  - text: ' People who don''t know how to use a fork.'
+    type: E
+  - text: ' People who don''t say please and thank you.'
+    type: A
+  - text: ' People who leave their dirty dishes in the sink.'
+    type: C
+  text: ' What''s your biggest pet peeve?'
+- image: questions/10.png
+  options:
+  - text: ' You don''t really care about weather.'
+    type: E
+  - text: ' Rainy and cozy'
+    type: B
+  - text: ' Sunny and warm'
+    type: A
+  - text: ' Windy and cool'
+    type: D
+  - text: ' Snowy and peaceful'
+    type: C
+  text: ' What''s your favorite type of weather?'
+results:
+  A:
+    description: You are the sharp, efficient, and reliable incisor. You are the first
+      line of defense, the one who gets the job done. You are the one who cuts through
+      the tough stuff, the one who gets to the point. You are the one who makes things
+      happen. You are the one who gets things done.
+    image: results/A.png
+    image_description: 'A close-up of a human incisor, with a sharp, pointed tip and
+      a smooth, white surface. The tooth is positioned in a healthy, strong jaw. '
+    title: Incisor
+  B:
+    description: You are the wild card, the one who comes in late and throws everyone
+      off. You are the one who doesn't quite fit in, the one who is a bit of a mystery.
+      You are the one who is always there, but you are never quite sure what you are
+      going to do. You are the one who is always growing, always changing, always
+      evolving. You are the one who is always there, but you are never quite sure
+      what you are going to do.
+    image: results/B.png
+    image_description: 'A close-up of a human wisdom tooth, with a large, irregular
+      shape and a rough, uneven surface. The tooth is positioned in a partially erupted
+      position, with a small amount of gum tissue surrounding it. '
+    title: Wisdom Tooth
+  C:
+    description: You are the sharp, angular, and unpredictable cusp. You are the one
+      who is always on the edge, the one who is always ready to strike. You are the
+      one who is always changing, always evolving, always growing. You are the one
+      who is always there, but you are never quite sure what you are going to do.
+      You are the one who is always growing, always changing, always evolving.
+    image: results/C.png
+    image_description: 'A close-up of a human cusp, with a sharp, pointed tip and
+      a rough, uneven surface. The tooth is positioned in a healthy, strong jaw. '
+    title: ' Cusp'
+  D:
+    description: You are the powerhouse, the one who gets the job done. You are the
+      one who is always there, always reliable, always ready to grind. You are the
+      one who is always working, always pushing, always striving. You are the one
+      who is always there, but you are never quite sure what you are going to do.
+      You are the one who is always growing, always changing, always evolving.
+    image: results/D.png
+    image_description: 'A close-up of a human molar, with a large, flat surface and
+      a strong, sturdy structure. The tooth is positioned in a healthy, strong jaw. '
+    title: ' Molar'
+  E:
+    description: You are the foundation, the one who holds everything together. You
+      are the one who is always there, always reliable, always strong. You are the
+      one who is always working, always pushing, always striving. You are the one
+      who is always there, but you are never quite sure what you are going to do.
+      You are the one who is always growing, always changing, always evolving.
+    image: results/E.png
+    image_description: 'A close-up of a human root, with a thick, sturdy structure
+      and a strong, fibrous texture. The root is positioned in a healthy, strong jaw. '
+    title: ' Root'
+topic: What kind of tooth are you?

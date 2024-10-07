@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Offer to bring the punch.'
+    type: C
+  - text: ' Immediately start planning your costume.'
+    type: A
+  - text: ' Try to convince everyone to play a scary game.'
+    type: D
+  - text: ' Head straight for the snacks.'
+    type: E
+  - text: ' Start making a playlist of spooky tunes.'
+    type: B
+  text: You're invited to a Halloween party. What's your first instinct?
+- image: questions/2.png
+  options:
+  - text: ' A spectral figure with glowing eyes, watching you.'
+    type: B
+  - text: ' A raven perched on a tombstone, cawing ominously.'
+    type: C
+  - text: ' A hidden door leading to a secret passage.'
+    type: D
+  - text: ' A mischievous imp hiding in the bushes.'
+    type: E
+  - text: ' A group of friendly ghosts playing cards.'
+    type: A
+  text: You're walking through a graveyard at night. What do you see?
+- image: questions/3.png
+  options:
+  - text: ' The spooky atmosphere and the thrill of the unknown.'
+    type: B
+  - text: ' The candy and the sweet treats.'
+    type: C
+  - text: ' The costumes and the creativity.'
+    type: A
+  - text: ' The chance to scare people.'
+    type: D
+  - text: ' The feeling of being a part of something bigger than yourself.'
+    type: E
+  text: ' What''s your favorite thing about Halloween?'
+- image: questions/4.png
+  options:
+  - text: ' Try to find a way out.'
+    type: A
+  - text: ' Try to find a hidden passage.'
+    type: D
+  - text: ' Try to communicate with the spirits.'
+    type: B
+  - text: ' Try to make friends with the ghosts.'
+    type: C
+  - text: ' Try to make the most of the situation.'
+    type: E
+  text: You're trapped in a haunted house. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Being trapped.'
+    type: D
+  - text: ' Being hunted.'
+    type: B
+  - text: ' Being forgotten.'
+    type: C
+  - text: ' Being judged.'
+    type: E
+  - text: ' Being alone.'
+    type: A
+  text: ' What''s your biggest fear about Halloween?'
+- image: questions/6.png
+  options:
+  - text: ' Try to open it.'
+    type: B
+  - text: ' Try to take a closer look.'
+    type: D
+  - text: ' Try to understand its purpose.'
+    type: A
+  - text: ' Try to throw it away.'
+    type: C
+  - text: ' Try to hide it.'
+    type: E
+  text: ' You find a mysterious, glowing orb in your backyard. What do you do?'
+- image: questions/7.png
+  options:
+  - text: ' A mysterious creature from a fairytale.'
+    type: D
+  - text: ' A glamorous vampire.'
+    type: C
+  - text: ' A powerful, magical being.'
+    type: E
+  - text: ' A spooky witch.'
+    type: B
+  - text: ' A friendly ghost.'
+    type: A
+  text: ' What''s your ideal Halloween costume?'
+- image: questions/8.png
+  options:
+  - text: ' Carving pumpkins.'
+    type: A
+  - text: ' Going trick-or-treating.'
+    type: B
+  - text: ' Telling spooky stories.'
+    type: D
+  - text: ' Decorating your house for Halloween.'
+    type: E
+  - text: ' Watching scary movies.'
+    type: C
+  text: ' What''s your favorite Halloween tradition?'
+- image: questions/9.png
+  options:
+  - text: ' The feeling of being a part of something special.'
+    type: A
+  - text: ' The excitement of the night.'
+    type: B
+  - text: ' The delicious treats.'
+    type: D
+  - text: ' The spooky atmosphere.'
+    type: E
+  - text: ' The chance to be someone else.'
+    type: C
+  text: ' What''s your favorite thing about Halloween night?'
+- image: questions/10.png
+  options:
+  - text: ' "Thriller"'
+    type: B
+  - text: ' "Ghostbusters"'
+    type: C
+  - text: ' "Monster Mash"'
+    type: A
+  - text: ' "The Time Warp"'
+    type: E
+  - text: ' "This is Halloween"'
+    type: D
+  text: ' What''s your favorite Halloween song?'
+results:
+  A:
+    description: You are the embodiment of gentle spirit and playful mischief. You
+      are a beacon of light and warmth, bringing joy and laughter wherever you go.
+      You are a reminder that even in the face of the unknown, there is always room
+      for kindness and understanding. Your strength lies in your ability to connect
+      with others on a deeper level, and you are always willing to lend a helping
+      hand.
+    image: results/A.png
+    image_description: 'A friendly ghost with a wide, toothy grin, wearing a tattered
+      sheet with a few holes. It floats above a pumpkin patch, surrounded by glowing
+      fireflies. The ghost has a warm, inviting glow around it. '
+    title: The Friendly Ghost
+  B:
+    description: You are a creature of sorrow and foreboding, a harbinger of death
+      and change. You are a powerful force of nature, capable of both great beauty
+      and terrifying power. You are a reminder that life is fleeting and that even
+      the most beautiful things can be taken away in an instant. Your strength lies
+      in your ability to evoke strong emotions, and you are always willing to share
+      your pain with those who are willing to listen.
+    image: results/B.png
+    image_description: 'A woman with long, flowing hair and a mournful expression,
+      dressed in flowing white robes. She stands on a windswept cliff overlooking
+      a stormy sea, her voice echoing across the waves. Her eyes are filled with sorrow
+      and her hands are outstretched, as if trying to reach out to the storm. '
+    title: The Banshee
+  C:
+    description: You are a creature of silent observation and unsettling stillness.
+      You are a reflection of the human condition, both beautiful and grotesque. You
+      are a reminder that even the most perfect form can be corrupted by time and
+      decay. Your strength lies in your ability to blend into the background, and
+      you are always watching, waiting for the perfect moment to strike.
+    image: results/C.png
+    image_description: 'A mannequin with a vacant stare, dressed in a tattered Victorian
+      gown. Its limbs are stiff and unnaturally posed, and its face is frozen in a
+      perpetual expression of shock. It stands in a dusty antique shop, surrounded
+      by forgotten trinkets and cobwebs. '
+    title: The Living Mannequin
+  D:
+    description: You are a creature of the shadows, a being of pure darkness and despair.
+      You are a manifestation of fear and loneliness, a reminder that even in the
+      darkest of places, there is always something lurking in the corners of your
+      mind. You are a creature of the unknown, and you are always watching, waiting
+      for the perfect moment to strike. Your strength lies in your ability to instill
+      fear and doubt, and you are always willing to play mind games with your prey.
+    image: results/D.png
+    image_description: 'A shadowy figure with glowing red eyes, its body made of swirling
+      darkness. It stalks through a graveyard, its long, skeletal fingers reaching
+      out towards the moon. The figure is shrouded in mist and its face is hidden
+      in the darkness. '
+    title: The Gloom Stalker
+  E:
+    description: You are a being of pure, unadulterated chaos and whimsy. You are
+      a creature of contradictions, both beautiful and terrifying. You are a reminder
+      that even the most mundane things can be imbued with a strange and unsettling
+      power. Your strength lies in your ability to surprise and delight, and you are
+      always willing to break the rules.
+    image: results/E.png
+    image_description: 'A giant, glowing pumpkin with a mischievous grin, its eyes
+      flickering with an inner light. It stands on a hill overlooking a spooky forest,
+      its vines reaching out towards the sky. The pumpkin is covered in strange symbols
+      and runes, and its voice is a chorus of whispers and giggles. '
+    title: The Sentient Pumpkin
+topic: What halloween creature are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

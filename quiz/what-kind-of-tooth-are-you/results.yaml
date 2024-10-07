@@ -1,0 +1,56 @@
+A:
+  description: You are the sharp, efficient, and reliable incisor. You are the first
+    line of defense, the one who gets the job done. You are the one who cuts through
+    the tough stuff, the one who gets to the point. You are the one who makes things
+    happen. You are the one who gets things done.
+  image: 'A close-up of a human incisor, with a sharp, pointed tip and a smooth, white
+    surface. The tooth is positioned in a healthy, strong jaw. '
+  letter: A
+  result: Incisor
+  topic: What kind of tooth are you?
+B:
+  description: You are the wild card, the one who comes in late and throws everyone
+    off. You are the one who doesn't quite fit in, the one who is a bit of a mystery.
+    You are the one who is always there, but you are never quite sure what you are
+    going to do. You are the one who is always growing, always changing, always evolving.
+    You are the one who is always there, but you are never quite sure what you are
+    going to do.
+  image: 'A close-up of a human wisdom tooth, with a large, irregular shape and a
+    rough, uneven surface. The tooth is positioned in a partially erupted position,
+    with a small amount of gum tissue surrounding it. '
+  letter: B
+  result: Wisdom Tooth
+  topic: What kind of tooth are you?
+C:
+  description: You are the sharp, angular, and unpredictable cusp. You are the one
+    who is always on the edge, the one who is always ready to strike. You are the
+    one who is always changing, always evolving, always growing. You are the one who
+    is always there, but you are never quite sure what you are going to do. You are
+    the one who is always growing, always changing, always evolving.
+  image: 'A close-up of a human cusp, with a sharp, pointed tip and a rough, uneven
+    surface. The tooth is positioned in a healthy, strong jaw. '
+  letter: C
+  result: ' Cusp'
+  topic: What kind of tooth are you?
+D:
+  description: You are the powerhouse, the one who gets the job done. You are the
+    one who is always there, always reliable, always ready to grind. You are the one
+    who is always working, always pushing, always striving. You are the one who is
+    always there, but you are never quite sure what you are going to do. You are the
+    one who is always growing, always changing, always evolving.
+  image: 'A close-up of a human molar, with a large, flat surface and a strong, sturdy
+    structure. The tooth is positioned in a healthy, strong jaw. '
+  letter: D
+  result: ' Molar'
+  topic: What kind of tooth are you?
+E:
+  description: You are the foundation, the one who holds everything together. You
+    are the one who is always there, always reliable, always strong. You are the one
+    who is always working, always pushing, always striving. You are the one who is
+    always there, but you are never quite sure what you are going to do. You are the
+    one who is always growing, always changing, always evolving.
+  image: 'A close-up of a human root, with a thick, sturdy structure and a strong,
+    fibrous texture. The root is positioned in a healthy, strong jaw. '
+  letter: E
+  result: ' Root'
+  topic: What kind of tooth are you?

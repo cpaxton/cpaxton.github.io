@@ -1,0 +1,90 @@
+- image: A spooky, dimly lit house with cobwebs and a flickering jack-o'-lantern.
+    A single, ornate door stands open, revealing a shadowy interior.
+  options:
+    A: ' Immediately start planning your costume.'
+    B: ' Start making a playlist of spooky tunes.'
+    C: ' Offer to bring the punch.'
+    D: ' Try to convince everyone to play a scary game.'
+    E: ' Head straight for the snacks.'
+  question: You're invited to a Halloween party. What's your first instinct?
+- image: A graveyard at night, with fog rolling in and casting long shadows. A lone
+    tombstone stands in the foreground, with a single flickering candle illuminating
+    it.
+  options:
+    A: ' A group of friendly ghosts playing cards.'
+    B: ' A spectral figure with glowing eyes, watching you.'
+    C: ' A raven perched on a tombstone, cawing ominously.'
+    D: ' A hidden door leading to a secret passage.'
+    E: ' A mischievous imp hiding in the bushes.'
+  question: You're walking through a graveyard at night. What do you see?
+- image: A close-up of a person's hand holding a glowing pumpkin. The hand is covered
+    in glitter and has a few spiderwebs clinging to it.
+  options:
+    A: ' The costumes and the creativity.'
+    B: ' The spooky atmosphere and the thrill of the unknown.'
+    C: ' The candy and the sweet treats.'
+    D: ' The chance to scare people.'
+    E: ' The feeling of being a part of something bigger than yourself.'
+  question: ' What''s your favorite thing about Halloween?'
+- image: A dimly lit room with cobwebs, dust, and a single flickering candle. A rocking
+    chair creaks back and forth in the corner.
+  options:
+    A: ' Try to find a way out.'
+    B: ' Try to communicate with the spirits.'
+    C: ' Try to make friends with the ghosts.'
+    D: ' Try to find a hidden passage.'
+    E: ' Try to make the most of the situation.'
+  question: You're trapped in a haunted house. What do you do?
+- image: A person standing in a dark forest, with a single glowing pumpkin in their
+    hand. The forest is filled with shadows and rustling leaves.
+  options:
+    A: ' Being alone.'
+    B: ' Being hunted.'
+    C: ' Being forgotten.'
+    D: ' Being trapped.'
+    E: ' Being judged.'
+  question: ' What''s your biggest fear about Halloween?'
+- image: A close-up of a glowing orb with swirling colors inside. The orb is surrounded
+    by a faint mist.
+  options:
+    A: ' Try to understand its purpose.'
+    B: ' Try to open it.'
+    C: ' Try to throw it away.'
+    D: ' Try to take a closer look.'
+    E: ' Try to hide it.'
+  question: ' You find a mysterious, glowing orb in your backyard. What do you do?'
+- image: A person dressed as a whimsical, glowing creature with butterfly wings and
+    a crown made of candy.
+  options:
+    A: ' A friendly ghost.'
+    B: ' A spooky witch.'
+    C: ' A glamorous vampire.'
+    D: ' A mysterious creature from a fairytale.'
+    E: ' A powerful, magical being.'
+  question: ' What''s your ideal Halloween costume?'
+- image: A person carving a pumpkin with a carving knife, surrounded by a pile of
+    pumpkins.
+  options:
+    A: ' Carving pumpkins.'
+    B: ' Going trick-or-treating.'
+    C: ' Watching scary movies.'
+    D: ' Telling spooky stories.'
+    E: ' Decorating your house for Halloween.'
+  question: ' What''s your favorite Halloween tradition?'
+- image: A person sitting on a porch swing, with a bowl of candy in their lap. The
+    moon is shining brightly in the sky.
+  options:
+    A: ' The feeling of being a part of something special.'
+    B: ' The excitement of the night.'
+    C: ' The chance to be someone else.'
+    D: ' The delicious treats.'
+    E: ' The spooky atmosphere.'
+  question: ' What''s your favorite thing about Halloween night?'
+- image: A person dancing in a dimly lit room, surrounded by spooky decorations.
+  options:
+    A: ' "Monster Mash"'
+    B: ' "Thriller"'
+    C: ' "Ghostbusters"'
+    D: ' "This is Halloween"'
+    E: ' "The Time Warp"'
+  question: ' What''s your favorite Halloween song?'

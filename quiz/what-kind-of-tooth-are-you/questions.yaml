@@ -1,0 +1,87 @@
+- image: A party with people dancing. There is a disco ball, and the music is loud.
+    People are dancing in a circle.
+  options:
+    A: The Electric Slide
+    B: The Running Man
+    C: The Macarena
+    D: The Cha Cha Slide
+    E: You just stand there awkwardly.
+  question: You're at a party. What's your go-to dance move?
+- image: A plate of cookies with frosting and sprinkles. There is a glass of milk
+    nearby.
+  options:
+    A: Grab a cookie and take a big bite.
+    B: Carefully examine each cookie for imperfections.
+    C: ' Offer a cookie to a stranger.'
+    D: ' Try to figure out the best way to eat the cookies without getting crumbs
+      on your clothes.'
+    E: ' You''re allergic to cookies.'
+  question: You're offered a plate of cookies. What's your first instinct?
+- image: A person wearing a variety of clothes in different colors. There is a rainbow
+    in the background.
+  options:
+    A: ' Neon pink'
+    B: ' Deep purple'
+    C: ' Earthy brown'
+    D: ' Electric blue'
+    E: ' You don''t really care about color.'
+  question: ' What''s your favorite color to wear?'
+- image: A person on a beach with a tropical drink in their hand. There is a palm
+    tree in the background.
+  options:
+    A: ' A luxurious all-inclusive resort in the Maldives.'
+    B: ' A backpacking trip through Southeast Asia.'
+    C: ' A camping trip in the wilderness.'
+    D: ' A staycation at a fancy hotel.'
+    E: ' You''d rather stay home and watch Netflix.'
+  question: ' What''s your ideal vacation?'
+- image: A person with a giant spider on their face.
+  options:
+    A: ' Spiders'
+    B: ' Heights'
+    C: ' The dark'
+    D: ' Public speaking'
+    E: ' Losing your teeth'
+  question: ' What''s your biggest fear?'
+- image: A karaoke bar with people singing. There is a microphone on a stand.
+  options:
+    A: ' "Bohemian Rhapsody" by Queen'
+    B: ' "Total Eclipse of the Heart" by Bonnie Tyler'
+    C: ' "Don''t Stop Believin''" by Journey'
+    D: ' "Sweet Caroline" by Neil Diamond'
+    E: ' You don''t sing karaoke.'
+  question: ' What''s your go-to karaoke song?'
+- image: A person working in a dream job. There is a rainbow in the background.
+  options:
+    A: ' A professional dancer'
+    B: ' A world-renowned chef'
+    C: ' A famous musician'
+    D: ' A successful entrepreneur'
+    E: ' You''re a professional cuddler.'
+  question: ' What''s your dream job?'
+- image: A person smelling a flower. There is a field of flowers in the background.
+  options:
+    A: ' Freshly cut grass'
+    B: ' Rain'
+    C: ' Vanilla'
+    D: ' Coffee'
+    E: ' The ocean'
+  question: ' What''s your favorite smell?'
+- image: A person with a disgusted expression. There is a pile of dirty dishes in
+    the background.
+  options:
+    A: ' People who don''t say please and thank you.'
+    B: ' People who chew with their mouths open.'
+    C: ' People who leave their dirty dishes in the sink.'
+    D: ' People who talk too loudly on the phone.'
+    E: ' People who don''t know how to use a fork.'
+  question: ' What''s your biggest pet peeve?'
+- image: A person sitting on a beach with a beach umbrella. There is a blue sky in
+    the background.
+  options:
+    A: ' Sunny and warm'
+    B: ' Rainy and cozy'
+    C: ' Snowy and peaceful'
+    D: ' Windy and cool'
+    E: ' You don''t really care about weather.'
+  question: ' What''s your favorite type of weather?'

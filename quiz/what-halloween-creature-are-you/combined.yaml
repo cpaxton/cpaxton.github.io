@@ -1,0 +1,195 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Offer to bring the punch.'
+    type: C
+  - text: ' Immediately start planning your costume.'
+    type: A
+  - text: ' Try to convince everyone to play a scary game.'
+    type: D
+  - text: ' Head straight for the snacks.'
+    type: E
+  - text: ' Start making a playlist of spooky tunes.'
+    type: B
+  text: You're invited to a Halloween party. What's your first instinct?
+- image: questions/2.png
+  options:
+  - text: ' A spectral figure with glowing eyes, watching you.'
+    type: B
+  - text: ' A raven perched on a tombstone, cawing ominously.'
+    type: C
+  - text: ' A hidden door leading to a secret passage.'
+    type: D
+  - text: ' A mischievous imp hiding in the bushes.'
+    type: E
+  - text: ' A group of friendly ghosts playing cards.'
+    type: A
+  text: You're walking through a graveyard at night. What do you see?
+- image: questions/3.png
+  options:
+  - text: ' The spooky atmosphere and the thrill of the unknown.'
+    type: B
+  - text: ' The candy and the sweet treats.'
+    type: C
+  - text: ' The costumes and the creativity.'
+    type: A
+  - text: ' The chance to scare people.'
+    type: D
+  - text: ' The feeling of being a part of something bigger than yourself.'
+    type: E
+  text: ' What''s your favorite thing about Halloween?'
+- image: questions/4.png
+  options:
+  - text: ' Try to find a way out.'
+    type: A
+  - text: ' Try to find a hidden passage.'
+    type: D
+  - text: ' Try to communicate with the spirits.'
+    type: B
+  - text: ' Try to make friends with the ghosts.'
+    type: C
+  - text: ' Try to make the most of the situation.'
+    type: E
+  text: You're trapped in a haunted house. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Being trapped.'
+    type: D
+  - text: ' Being hunted.'
+    type: B
+  - text: ' Being forgotten.'
+    type: C
+  - text: ' Being judged.'
+    type: E
+  - text: ' Being alone.'
+    type: A
+  text: ' What''s your biggest fear about Halloween?'
+- image: questions/6.png
+  options:
+  - text: ' Try to open it.'
+    type: B
+  - text: ' Try to take a closer look.'
+    type: D
+  - text: ' Try to understand its purpose.'
+    type: A
+  - text: ' Try to throw it away.'
+    type: C
+  - text: ' Try to hide it.'
+    type: E
+  text: ' You find a mysterious, glowing orb in your backyard. What do you do?'
+- image: questions/7.png
+  options:
+  - text: ' A mysterious creature from a fairytale.'
+    type: D
+  - text: ' A glamorous vampire.'
+    type: C
+  - text: ' A powerful, magical being.'
+    type: E
+  - text: ' A spooky witch.'
+    type: B
+  - text: ' A friendly ghost.'
+    type: A
+  text: ' What''s your ideal Halloween costume?'
+- image: questions/8.png
+  options:
+  - text: ' Carving pumpkins.'
+    type: A
+  - text: ' Going trick-or-treating.'
+    type: B
+  - text: ' Telling spooky stories.'
+    type: D
+  - text: ' Decorating your house for Halloween.'
+    type: E
+  - text: ' Watching scary movies.'
+    type: C
+  text: ' What''s your favorite Halloween tradition?'
+- image: questions/9.png
+  options:
+  - text: ' The feeling of being a part of something special.'
+    type: A
+  - text: ' The excitement of the night.'
+    type: B
+  - text: ' The delicious treats.'
+    type: D
+  - text: ' The spooky atmosphere.'
+    type: E
+  - text: ' The chance to be someone else.'
+    type: C
+  text: ' What''s your favorite thing about Halloween night?'
+- image: questions/10.png
+  options:
+  - text: ' "Thriller"'
+    type: B
+  - text: ' "Ghostbusters"'
+    type: C
+  - text: ' "Monster Mash"'
+    type: A
+  - text: ' "The Time Warp"'
+    type: E
+  - text: ' "This is Halloween"'
+    type: D
+  text: ' What''s your favorite Halloween song?'
+results:
+  A:
+    description: You are the embodiment of gentle spirit and playful mischief. You
+      are a beacon of light and warmth, bringing joy and laughter wherever you go.
+      You are a reminder that even in the face of the unknown, there is always room
+      for kindness and understanding. Your strength lies in your ability to connect
+      with others on a deeper level, and you are always willing to lend a helping
+      hand.
+    image: results/A.png
+    image_description: 'A friendly ghost with a wide, toothy grin, wearing a tattered
+      sheet with a few holes. It floats above a pumpkin patch, surrounded by glowing
+      fireflies. The ghost has a warm, inviting glow around it. '
+    title: The Friendly Ghost
+  B:
+    description: You are a creature of sorrow and foreboding, a harbinger of death
+      and change. You are a powerful force of nature, capable of both great beauty
+      and terrifying power. You are a reminder that life is fleeting and that even
+      the most beautiful things can be taken away in an instant. Your strength lies
+      in your ability to evoke strong emotions, and you are always willing to share
+      your pain with those who are willing to listen.
+    image: results/B.png
+    image_description: 'A woman with long, flowing hair and a mournful expression,
+      dressed in flowing white robes. She stands on a windswept cliff overlooking
+      a stormy sea, her voice echoing across the waves. Her eyes are filled with sorrow
+      and her hands are outstretched, as if trying to reach out to the storm. '
+    title: The Banshee
+  C:
+    description: You are a creature of silent observation and unsettling stillness.
+      You are a reflection of the human condition, both beautiful and grotesque. You
+      are a reminder that even the most perfect form can be corrupted by time and
+      decay. Your strength lies in your ability to blend into the background, and
+      you are always watching, waiting for the perfect moment to strike.
+    image: results/C.png
+    image_description: 'A mannequin with a vacant stare, dressed in a tattered Victorian
+      gown. Its limbs are stiff and unnaturally posed, and its face is frozen in a
+      perpetual expression of shock. It stands in a dusty antique shop, surrounded
+      by forgotten trinkets and cobwebs. '
+    title: The Living Mannequin
+  D:
+    description: You are a creature of the shadows, a being of pure darkness and despair.
+      You are a manifestation of fear and loneliness, a reminder that even in the
+      darkest of places, there is always something lurking in the corners of your
+      mind. You are a creature of the unknown, and you are always watching, waiting
+      for the perfect moment to strike. Your strength lies in your ability to instill
+      fear and doubt, and you are always willing to play mind games with your prey.
+    image: results/D.png
+    image_description: 'A shadowy figure with glowing red eyes, its body made of swirling
+      darkness. It stalks through a graveyard, its long, skeletal fingers reaching
+      out towards the moon. The figure is shrouded in mist and its face is hidden
+      in the darkness. '
+    title: The Gloom Stalker
+  E:
+    description: You are a being of pure, unadulterated chaos and whimsy. You are
+      a creature of contradictions, both beautiful and terrifying. You are a reminder
+      that even the most mundane things can be imbued with a strange and unsettling
+      power. Your strength lies in your ability to surprise and delight, and you are
+      always willing to break the rules.
+    image: results/E.png
+    image_description: 'A giant, glowing pumpkin with a mischievous grin, its eyes
+      flickering with an inner light. It stands on a hill overlooking a spooky forest,
+      its vines reaching out towards the sky. The pumpkin is covered in strange symbols
+      and runes, and its voice is a chorus of whispers and giggles. '
+    title: The Sentient Pumpkin
+topic: What halloween creature are you?

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Go to the kitchen and make a snack.'
+    type: E
+  - text: ' Start a conversation with a stranger.'
+    type: A
+  - text: ' Find a quiet corner to observe the chaos.'
+    type: C
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Try to convince everyone to play a game of charades.'
+    type: D
+  text: You're at a party. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Start singing along to the radio.'
+    type: D
+  - text: ' Start a conversation with the person next to you.'
+    type: A
+  - text: ' Try to find a way to escape the traffic jam.'
+    type: C
+  - text: ' Pull out your phone and start playing a game.'
+    type: B
+  - text: ' Take a nap.'
+    type: E
+  text: You're stuck in a traffic jam. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Meditate and try to find the answer within.'
+    type: D
+  - text: ' Go for a walk and let your intuition guide you.'
+    type: E
+  - text: ' Seek advice from a wise old friend.'
+    type: B
+  - text: ' Take a deep breath and trust your gut.'
+    type: A
+  - text: ' Write down all your options and analyze them.'
+    type: C
+  text: You're at a crossroads in your life. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' Donate it to charity.'
+    type: C
+  - text: ' Invest it wisely.'
+    type: A
+  - text: ' Take a nap and dream about the possibilities.'
+    type: E
+  - text: ' Use it to buy a giant inflatable unicorn.'
+    type: D
+  - text: ' Buy a new car and take a road trip.'
+    type: B
+  text: You're offered a million dollars. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Something that represents your inner child.'
+    type: C
+  - text: ' Something that makes a statement about your personality.'
+    type: D
+  - text: ' Something outrageous and attention-grabbing.'
+    type: B
+  - text: ' Something that makes you feel comfortable and confident.'
+    type: E
+  - text: ' Something classic and elegant.'
+    type: A
+  text: You're invited to a costume party. What do you choose to wear?
+- image: questions/6.png
+  options:
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Try to get the lead singer''s attention.'
+    type: D
+  - text: ' Sing along to every song.'
+    type: A
+  - text: ' Take a selfie with your friends.'
+    type: C
+  - text: ' Find a quiet spot to watch the show.'
+    type: E
+  text: You're at a concert. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Ask insightful questions about their life.'
+    type: A
+  - text: ' Tell funny stories and make them laugh.'
+    type: B
+  - text: ' Share your passions and interests.'
+    type: D
+  - text: ' Listen attentively and show genuine interest.'
+    type: C
+  - text: ' Try to impress them with your knowledge.'
+    type: E
+  text: You're on a first date. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Get angry and demand an apology.'
+    type: B
+  - text: ' Laugh it off and try to clean yourself up.'
+    type: A
+  - text: ' Try to discreetly dry yourself off.'
+    type: C
+  - text: ' Start a conversation with the person who spilled the drink.'
+    type: D
+  - text: ' Pretend nothing happened and continue dancing.'
+    type: E
+  text: You're at a party and someone spills a drink on you. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Meditate and try to find peace within.'
+    type: E
+  - text: ' Call a friend to talk about it.'
+    type: B
+  - text: ' Write down your feelings in a journal.'
+    type: D
+  - text: ' Go for a walk and clear your head.'
+    type: A
+  - text: ' Watch a funny movie to cheer yourself up.'
+    type: C
+  text: You're feeling down. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Take a deep breath and go with the flow.'
+    type: E
+  - text: ' Make sure your slides are clear and concise.'
+    type: C
+  - text: ' Arrive early to get a feel for the room.'
+    type: B
+  - text: ' Practice your presentation until you feel confident.'
+    type: A
+  - text: ' Prepare a few jokes to keep the audience engaged.'
+    type: D
+  text: You're about to give a presentation. What do you do?
+results:
+  A:
+    description: You are the quiet, unassuming architect, the one who builds the world
+      around you, brick by brick, without ever seeking the spotlight. You are the
+      master of the subtle, the architect of the everyday, the one who builds the
+      foundation for others to thrive. You are the calm, steady hand that guides others
+      through the chaos, the quiet force that makes things work. You are the architect
+      of your own life, and you are always building something new.
+    image: results/A.png
+    image_description: 'A close-up shot of a pair of hands meticulously placing a
+      tiny, intricate piece of a model city. The hands are covered in dust and grime,
+      but the focus is on the precision and care with which they work. The model city
+      is a miniature masterpiece, with intricate details and a sense of scale that
+      is both impressive and humbling. '
+    title: The Unassuming Architect
+  B:
+    description: You are the life of the party, the one who throws the wildest, most
+      unpredictable bash the world has ever seen. You are the master of the unexpected,
+      the one who throws curveballs and keeps everyone guessing. You are the embodiment
+      of spontaneity, the one who embraces the chaos and revels in the moment. You
+      are the party animal, the one who never lets a good time go to waste.
+    image: results/B.png
+    image_description: 'A chaotic, vibrant party scene. People are dancing wildly,
+      confetti is raining down, and there''s a giant inflatable unicorn in the corner.
+      The air is thick with laughter and the smell of cheap beer. '
+    title: The Unpredictable Party Animal
+  C:
+    description: You are the sentient teapot, the one who holds the wisdom of a thousand
+      brews. You are the embodiment of calm and contemplation, the one who offers
+      a soothing presence in a world of chaos. You are the keeper of secrets, the
+      one who listens with an understanding heart. You are the quiet observer, the
+      one who sees the world in a way that others cannot. You are the teapot, the
+      vessel of serenity and wisdom.
+    image: results/C.png
+    image_description: 'A steaming teapot with a delicate floral pattern, sitting
+      on a table in a dimly lit room. The steam rising from the teapot swirls around
+      the room, creating a hazy, ethereal atmosphere. The teapot is filled with a
+      rich, dark tea, and a single, perfect leaf floats on the surface. '
+    title: The Sentient Teapot
+  D:
+    description: You are the cosmic wanderer, the one who seeks adventure and meaning
+      in the vast expanse of the universe. You are the dreamer, the one who sees the
+      world through a lens of wonder and possibility. You are the seeker of truth,
+      the one who questions everything and everyone. You are the explorer, the one
+      who ventures into the unknown, seeking to understand the mysteries of life and
+      the universe. You are the cosmic wanderer, forever searching for your place
+      in the grand scheme of things.
+    image: results/D.png
+    image_description: 'A lone astronaut gazing out at a swirling nebula, their helmet
+      reflecting the vibrant colors of the cosmos. The astronaut is silhouetted against
+      the backdrop of a distant star system, their face a mixture of awe and determination. '
+    title: The Cosmic Wanderer
+  E:
+    description: You are the sentient sock, the one who dreams of a world beyond the
+      laundry basket. You are the embodiment of forgotten dreams and lost desires,
+      the one who yearns for a purpose beyond the mundane. You are the whisper of
+      forgotten memories, the one who carries the echoes of past adventures. You are
+      the sock, the silent observer of the world, forever searching for a place to
+      belong.
+    image: results/E.png
+    image_description: 'A single, mismatched sock, with a faded pattern and a hole
+      in the toe, sitting on a dusty shelf in a forgotten corner of a room. The sock
+      is staring out at the viewer, its single eye a glimmering bead of light. '
+    title: The Sentient Sock
+topic: What Andy are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

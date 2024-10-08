@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Try to get the attention of the DJ.'
+    type: D
+  - text: ' Find a quiet corner to observe the partygoers.'
+    type: B
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Go to the kitchen to get a drink.'
+    type: E
+  - text: ' Dance like nobody''s watching.'
+    type: C
+  text: You're at a party. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Listen to a podcast.'
+    type: D
+  - text: ' Take a nap.'
+    type: C
+  - text: ' Try to convince the other cars to move.'
+    type: B
+  - text: ' Start a conversation with the person next to you.'
+    type: E
+  - text: ' Start a game of "I Spy" with the people around you.'
+    type: A
+  text: You're stuck in a traffic jam. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Go back to the beginning and try a different path.'
+    type: E
+  - text: ' Seek advice from a wise old person.'
+    type: B
+  - text: ' Take a leap of faith and go for it.'
+    type: D
+  - text: ' Take a deep breath and trust your gut.'
+    type: A
+  - text: ' Write down all your options and weigh the pros and cons.'
+    type: C
+  text: You're at a crossroads in your life. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' Research the best time to visit and the best activities to do.'
+    type: B
+  - text: ' Think about what you would do with the money you would save.'
+    type: D
+  - text: ' Ask your friends if they want to go with you.'
+    type: C
+  - text: ' Immediately book the trip.'
+    type: A
+  - text: ' Try to convince your family to go with you.'
+    type: E
+  text: You're offered a free trip to a tropical island. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Tell it your deepest secrets.'
+    type: D
+  - text: ' Give it a treat.'
+    type: C
+  - text: ' Try to teach it tricks.'
+    type: B
+  - text: ' Try to make it a pet.'
+    type: E
+  - text: ' Ask it about its life story.'
+    type: A
+  text: You find a magical talking cat. What do you do?
+- image: questions/6.png
+  options:
+  - text: ' Tell the plants about your dreams.'
+    type: D
+  - text: ' Start a conversation with the trees in the forest.'
+    type: A
+  - text: ' Try to make the plants do your chores.'
+    type: E
+  - text: ' Ask the flowers for advice on how to make a better life.'
+    type: B
+  - text: ' Try to convince the plants to grow faster.'
+    type: C
+  text: You wake up one morning and discover you can talk to plants. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Try to figure out how to close the portal.'
+    type: B
+  - text: ' Ask the portal for a ride.'
+    type: D
+  - text: ' Try to convince the portal to take you to a different dimension.'
+    type: E
+  - text: ' Step through the portal and explore.'
+    type: A
+  - text: ' Take a selfie with the portal.'
+    type: C
+  text: You find a portal to another dimension. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Control the weather to make everyone happy.'
+    type: D
+  - text: ' Create a perfect summer day.'
+    type: B
+  - text: ' Make it snow for a winter wonderland.'
+    type: C
+  - text: ' Use your powers to make the world a better place.'
+    type: E
+  - text: ' Make it rain for a party.'
+    type: A
+  text: You discover you can control the weather. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' To be the most popular person in the world.'
+    type: A
+  - text: ' To have a pet unicorn.'
+    type: E
+  - text: ' To have unlimited wealth and power.'
+    type: B
+  - text: ' To be able to fly.'
+    type: C
+  - text: ' To be able to speak every language.'
+    type: D
+  text: You find a magical lamp that grants you one wish. What do you wish for?
+- image: questions/10.png
+  options:
+  - text: ' Go to a tropical beach and relax.'
+    type: A
+  - text: ' Go to a concert in a different country.'
+    type: C
+  - text: ' Go to a place that is in need of help.'
+    type: E
+  - text: ' Go to a place that has been on your bucket list.'
+    type: D
+  - text: ' Visit all the historical landmarks in the world.'
+    type: B
+  text: You wake up one morning and discover you can teleport anywhere in the world.
+    What do you do?
+results:
+  A:
+    description: You are the quiet, dependable friend who always has your back. You're
+      the one who's there for the big moments, but you don't crave the spotlight.
+      You're the glue that holds things together, the steady hand that keeps things
+      running smoothly. You're the one people rely on, but you don't need the praise.
+      You're content with your role, and you're happy to let others shine.
+    image: results/A.png
+    image_description: 'A person in a plain, comfortable outfit, sitting on a park
+      bench, holding a book. They are smiling softly, and their eyes are closed. The
+      background is a bustling city street, but the person is oblivious to the chaos
+      around them. '
+    title: The Unassuming Sidekick
+  B:
+    description: You are the unpredictable, the one who throws people off guard. You're
+      the wild card, the one who always has a surprise up their sleeve. You're the
+      one who makes people question everything, and you're not afraid to break the
+      mold. You're the catalyst for change, the one who shakes things up. You're a
+      force of nature, and you're not afraid to let people know it.
+    image: results/B.png
+    image_description: A person wearing a brightly colored outfit, with a mischievous
+      grin on their face, holding a magnifying glass and staring intently at a seemingly
+      ordinary object. The object is a simple, everyday item, but the person's expression
+      suggests that they've discovered something extraordinary.
+    title: The Unexpected Twist
+  C:
+    description: You are a vessel of wisdom and warmth, a silent observer of the world.
+      You hold the secrets of countless conversations, the memories of countless moments.
+      You are a confidante, a listener, a keeper of stories. You are the embodiment
+      of comfort and tranquility, a place of refuge from the chaos of the world. You
+      are a reminder that even in the midst of chaos, there is always a moment of
+      peace.
+    image: results/C.png
+    image_description: A porcelain teapot with a delicate floral pattern, sitting
+      on a table in a dimly lit room. Steam rises from the spout, and the teapot is
+      filled with a steaming cup of tea. The room is filled with the scent of chamomile
+      and lavender, and a soft, warm glow emanates from the window.
+    title: The Sentient Teapot
+  D:
+    description: You are a being of paradox and possibility, existing in a realm where
+      time is fluid and reality is malleable. You are a wanderer through the corridors
+      of history, a witness to the unfolding of events. You are a collector of forgotten
+      stories, a guardian of lost knowledge. You are a bridge between past, present,
+      and future, a conduit for the flow of time.
+    image: results/D.png
+    image_description: A figure with shimmering, iridescent skin, standing in a swirling
+      vortex of colors and light. They are holding a glowing orb that pulsates with
+      energy, and their eyes are filled with a deep, knowing wisdom. The background
+      is a kaleidoscope of shifting landscapes, representing the vastness of time
+      and space.
+    title: The Unconventional Time Traveler
+  E:
+    description: You are a being of pure imagination, a weaver of dreams and nightmares.
+      You are the architect of the subconscious, the artist of the unseen. You are
+      a master of illusion, a conjurer of reality. You are the embodiment of the infinite,
+      the boundless potential of the mind. You are a force of creation, a spark of
+      inspiration.
+    image: results/E.png
+    image_description: A swirling nebula of vibrant colors, with stars and planets
+      dancing in the cosmic void. A figure, made of pure light and energy, is weaving
+      a tapestry of dreams and nightmares, with threads of starlight and cosmic dust.
+    title: The Cosmic Dreamweaver
+topic: What quiz are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

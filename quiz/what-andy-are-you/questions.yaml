@@ -1,0 +1,81 @@
+- image: 'A party with a disco ball, people dancing, and a giant inflatable unicorn. '
+  options:
+    A: ' Start a conversation with a stranger.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Find a quiet corner to observe the chaos.'
+    D: ' Try to convince everyone to play a game of charades.'
+    E: ' Go to the kitchen and make a snack.'
+  question: You're at a party. What do you do?
+- image: A car stuck in a traffic jam, with cars honking and people looking frustrated.
+  options:
+    A: ' Start a conversation with the person next to you.'
+    B: ' Pull out your phone and start playing a game.'
+    C: ' Try to find a way to escape the traffic jam.'
+    D: ' Start singing along to the radio.'
+    E: ' Take a nap.'
+  question: You're stuck in a traffic jam. What do you do?
+- image: A person standing at a crossroads, with a giant question mark above their
+    head.
+  options:
+    A: ' Take a deep breath and trust your gut.'
+    B: ' Seek advice from a wise old friend.'
+    C: ' Write down all your options and analyze them.'
+    D: ' Meditate and try to find the answer within.'
+    E: ' Go for a walk and let your intuition guide you.'
+  question: You're at a crossroads in your life. What do you do?
+- image: A person holding a giant check with a million dollars written on it.
+  options:
+    A: ' Invest it wisely.'
+    B: ' Buy a new car and take a road trip.'
+    C: ' Donate it to charity.'
+    D: ' Use it to buy a giant inflatable unicorn.'
+    E: ' Take a nap and dream about the possibilities.'
+  question: You're offered a million dollars. What do you do?
+- image: A person in a costume party, with a variety of costumes.
+  options:
+    A: ' Something classic and elegant.'
+    B: ' Something outrageous and attention-grabbing.'
+    C: ' Something that represents your inner child.'
+    D: ' Something that makes a statement about your personality.'
+    E: ' Something that makes you feel comfortable and confident.'
+  question: You're invited to a costume party. What do you choose to wear?
+- image: A concert with a giant crowd of people singing and dancing.
+  options:
+    A: ' Sing along to every song.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Take a selfie with your friends.'
+    D: ' Try to get the lead singer''s attention.'
+    E: ' Find a quiet spot to watch the show.'
+  question: You're at a concert. What do you do?
+- image: A couple on a first date, with a romantic setting.
+  options:
+    A: ' Ask insightful questions about their life.'
+    B: ' Tell funny stories and make them laugh.'
+    C: ' Listen attentively and show genuine interest.'
+    D: ' Share your passions and interests.'
+    E: ' Try to impress them with your knowledge.'
+  question: You're on a first date. What do you do?
+- image: A person with a wet shirt, looking annoyed.
+  options:
+    A: ' Laugh it off and try to clean yourself up.'
+    B: ' Get angry and demand an apology.'
+    C: ' Try to discreetly dry yourself off.'
+    D: ' Start a conversation with the person who spilled the drink.'
+    E: ' Pretend nothing happened and continue dancing.'
+  question: You're at a party and someone spills a drink on you. What do you do?
+- image: A person sitting on a park bench, looking sad.
+  options:
+    A: ' Go for a walk and clear your head.'
+    B: ' Call a friend to talk about it.'
+    C: ' Watch a funny movie to cheer yourself up.'
+    D: ' Write down your feelings in a journal.'
+    E: ' Meditate and try to find peace within.'
+  question: You're feeling down. What do you do?
+- image: A person giving a presentation, with a microphone and a projector.
+  options:
+    A: ' Practice your presentation until you feel confident.'
+    B: ' Arrive early to get a feel for the room.'
+    C: ' Make sure your slides are clear and concise.'
+    D: ' Prepare a few jokes to keep the audience engaged.'
+    E: ' Take a deep breath and go with the flow.'
+  question: You're about to give a presentation. What do you do?

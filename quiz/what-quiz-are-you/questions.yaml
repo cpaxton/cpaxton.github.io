@@ -1,0 +1,84 @@
+- image: A party with a disco ball, people dancing, and a giant inflatable unicorn.
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Find a quiet corner to observe the partygoers.'
+    C: ' Dance like nobody''s watching.'
+    D: ' Try to get the attention of the DJ.'
+    E: ' Go to the kitchen to get a drink.'
+  question: You're at a party. What do you do?
+- image: A car stuck in a traffic jam, with cars honking and people looking frustrated.
+  options:
+    A: ' Start a game of "I Spy" with the people around you.'
+    B: ' Try to convince the other cars to move.'
+    C: ' Take a nap.'
+    D: ' Listen to a podcast.'
+    E: ' Start a conversation with the person next to you.'
+  question: You're stuck in a traffic jam. What do you do?
+- image: A person standing at a crossroads with a giant question mark above their
+    head.
+  options:
+    A: ' Take a deep breath and trust your gut.'
+    B: ' Seek advice from a wise old person.'
+    C: ' Write down all your options and weigh the pros and cons.'
+    D: ' Take a leap of faith and go for it.'
+    E: ' Go back to the beginning and try a different path.'
+  question: You're at a crossroads in your life. What do you do?
+- image: A person on a beach with a coconut in their hand, surrounded by palm trees
+    and a clear blue sky.
+  options:
+    A: ' Immediately book the trip.'
+    B: ' Research the best time to visit and the best activities to do.'
+    C: ' Ask your friends if they want to go with you.'
+    D: ' Think about what you would do with the money you would save.'
+    E: ' Try to convince your family to go with you.'
+  question: You're offered a free trip to a tropical island. What do you do?
+- image: A cat with a monocle and a top hat, sitting on a velvet cushion.
+  options:
+    A: ' Ask it about its life story.'
+    B: ' Try to teach it tricks.'
+    C: ' Give it a treat.'
+    D: ' Tell it your deepest secrets.'
+    E: ' Try to make it a pet.'
+  question: You find a magical talking cat. What do you do?
+- image: A person sitting in a garden, talking to a sunflower.
+  options:
+    A: ' Start a conversation with the trees in the forest.'
+    B: ' Ask the flowers for advice on how to make a better life.'
+    C: ' Try to convince the plants to grow faster.'
+    D: ' Tell the plants about your dreams.'
+    E: ' Try to make the plants do your chores.'
+  question: You wake up one morning and discover you can talk to plants. What do you
+    do?
+- image: A swirling portal with a rainbow of colors, surrounded by swirling mist.
+  options:
+    A: ' Step through the portal and explore.'
+    B: ' Try to figure out how to close the portal.'
+    C: ' Take a selfie with the portal.'
+    D: ' Ask the portal for a ride.'
+    E: ' Try to convince the portal to take you to a different dimension.'
+  question: You find a portal to another dimension. What do you do?
+- image: A person standing in a field of flowers, with a rainbow in the sky.
+  options:
+    A: ' Make it rain for a party.'
+    B: ' Create a perfect summer day.'
+    C: ' Make it snow for a winter wonderland.'
+    D: ' Control the weather to make everyone happy.'
+    E: ' Use your powers to make the world a better place.'
+  question: You discover you can control the weather. What do you do?
+- image: A lamp with a genie inside, surrounded by swirling smoke.
+  options:
+    A: ' To be the most popular person in the world.'
+    B: ' To have unlimited wealth and power.'
+    C: ' To be able to fly.'
+    D: ' To be able to speak every language.'
+    E: ' To have a pet unicorn.'
+  question: You find a magical lamp that grants you one wish. What do you wish for?
+- image: A person standing in a bustling city, looking at a map of the world.
+  options:
+    A: ' Go to a tropical beach and relax.'
+    B: ' Visit all the historical landmarks in the world.'
+    C: ' Go to a concert in a different country.'
+    D: ' Go to a place that has been on your bucket list.'
+    E: ' Go to a place that is in need of help.'
+  question: You wake up one morning and discover you can teleport anywhere in the
+    world. What do you do?

@@ -1,0 +1,83 @@
+- image: A party with people dancing. There is a disco ball, and the music is loud.
+    People are dressed in brightly colored clothes.
+  options:
+    A: The Electric Slide
+    B: The Macarena
+    C: The Running Man
+    D: The Cha Cha Slide
+    E: You just stand there awkwardly, hoping no one notices.
+  question: You're at a party. What's your go-to dance move?
+- image: A couple on a first date at a restaurant. There is a candle on the table,
+    and the music is soft.
+  options:
+    A: ' Order the most expensive dish on the menu.'
+    B: ' Order the most basic dish on the menu.'
+    C: ' Order something that''s both fancy and simple.'
+    D: ' Order something that''s completely out of the ordinary.'
+    E: ' You''re too nervous to order anything.'
+  question: You're on a first date. What's your first move?
+- image: A person wearing a colorful outfit, surrounded by a rainbow of colors.
+  options:
+    A: ' Teal'
+    B: ' Purple'
+    C: ' Pink'
+    D: ' Orange'
+    E: ' You don''t have a favorite color.'
+  question: ' What''s your favorite color?'
+- image: A person standing in a dark room, with a single spotlight shining on them.
+  options:
+    A: ' Spiders'
+    B: ' Heights'
+    C: ' The dark'
+    D: ' Public speaking'
+    E: ' Being alone'
+  question: What's your biggest fear?
+- image: A person with a superhero costume, flying through the air.
+  options:
+    A: ' Telekinesis'
+    B: ' Super speed'
+    C: ' Invisibility'
+    D: ' The ability to control the weather'
+    E: ' The ability to teleport'
+  question: If you could have any superpower, what would it be?
+- image: A person relaxing on a beach, with a tropical drink in their hand.
+  options:
+    A: ' A luxurious all-inclusive resort'
+    B: ' A backpacking trip through Southeast Asia'
+    C: ' A road trip across the United States'
+    D: ' A staycation at a fancy hotel'
+    E: ' You don''t like vacations.'
+  question: What's your ideal vacation?
+- image: A person with a disgusted expression, holding a plate of food with a fly
+    on it.
+  options:
+    A: ' People who chew with their mouths open'
+    B: ' People who talk on their phones in public'
+    C: ' People who don''t say please and thank you'
+    D: ' People who leave their dirty dishes in the sink'
+    E: ' People who don''t know how to use a fork'
+  question: What's your biggest pet peeve?
+- image: A person singing karaoke, with a microphone in their hand.
+  options:
+    A: ' "Bohemian Rhapsody" by Queen'
+    B: ' "Sweet Caroline" by Neil Diamond'
+    C: ' "Don''t Stop Believin''" by Journey'
+    D: ' "I Will Survive" by Gloria Gaynor'
+    E: ' You don''t sing karaoke.'
+  question: What's your go-to karaoke song?
+- image: A person working in a creative field, like a painter or a musician.
+  options:
+    A: ' A professional chef'
+    B: ' A fashion designer'
+    C: ' A writer'
+    D: ' A musician'
+    E: ' You don''t have a dream job.'
+  question: What's your dream job?
+- image: A person walking through a field of flowers.
+  options:
+    A: ' Freshly cut grass'
+    B: ' Rain on pavement'
+    C: ' Vanilla'
+    D: ' Cinnamon'
+    E: ' The smell of your childhood home'
+  question: What's your favorite smell?

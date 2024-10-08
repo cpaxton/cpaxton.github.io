@@ -1,0 +1,63 @@
+A:
+  description: You are the epitome of a classic, a timeless and comforting entree.
+    You are the embodiment of tradition, with a rich history and a simple yet elegant
+    presentation. You are hearty and satisfying, and your flavors are bold and robust.
+    You are a crowd-pleaser, and your presence is always appreciated.
+  image: 'A steaming roast beef with a golden-brown Yorkshire pudding, resting on
+    a bed of mashed potatoes and gravy. The roast beef is perfectly cooked, with a
+    crispy crust and a juicy interior. The Yorkshire pudding is puffed and airy, with
+    a light and crispy texture. The gravy is rich and flavorful, and the mashed potatoes
+    are creamy and smooth. '
+  letter: A
+  result: ' Classic Roast Beef with Yorkshire Pudding'
+  topic: What kind of entree are you?
+B:
+  description: You are the bold and adventurous entree, a fusion of flavors and textures
+    that packs a punch. You are a culinary chameleon, adapting to different tastes
+    and preferences. You are a bit of a rebel, breaking away from the norm and challenging
+    expectations. You are a crowd-pleaser, but you are not afraid to be a little different.
+  image: A close-up shot of a juicy black bean burger with a vibrant red chili pepper
+    on top. The burger is nestled on a toasted bun with a generous helping of crisp
+    lettuce, a slice of tomato, and a dollop of creamy avocado. The burger is drizzled
+    with a spicy chipotle mayo.
+  letter: B
+  result: ' Spicy Black Bean Burger'
+  topic: What kind of entree are you?
+C:
+  description: You are the avant-garde entree, a whimsical and unexpected masterpiece.
+    You are a celebration of creativity and individuality, with a focus on unique
+    textures and unexpected flavors. You are a bit of a showstopper, with a presentation
+    that is as captivating as your taste. You are a conversation starter, and you
+    are always sure to leave a lasting impression.
+  image: A vibrant, multi-layered salad with a variety of textures and colors. The
+    salad features edible flowers, such as pansies and violas, arranged in a whimsical
+    pattern. The salad is topped with a variety of ingredients, such as roasted vegetables,
+    nuts, and seeds. The salad is drizzled with a light vinaigrette.
+  letter: C
+  result: ' A Surreal, Multi-Layered Salad with Edible Flowers'
+  topic: What kind of entree are you?
+D:
+  description: You are the fiery and flavorful entree, a bold and addictive dish that
+    packs a punch. You are a celebration of bold flavors and textures, with a crispy
+    exterior and a juicy interior. You are a crowd-pleaser, and your heat is sure
+    to leave a lasting impression. You are a bit of a daredevil, and you are not afraid
+    to take risks.
+  image: A close-up shot of crispy, golden-brown Korean fried chicken with a spicy
+    red pepper sauce. The chicken is juicy and tender, with a crispy skin. The sauce
+    is a vibrant red, with a spicy kick. The chicken is served with a side of kimchi
+    and rice.
+  letter: D
+  result: ' Spicy Korean Fried Chicken'
+  topic: What kind of entree are you?
+E:
+  description: You are the enigmatic entree, a dish that appears deceptively simple
+    but reveals a depth of flavor and complexity that belies its appearance. You are
+    a master of subtlety, with a delicate balance of flavors and textures. You are
+    a bit of a chameleon, adapting to different tastes and preferences. You are a
+    conversation starter, and you are always sure to leave a lasting impression.
+  image: A steaming bowl of creamy, golden-brown risotto with a rich, earthy aroma.
+    The risotto is studded with plump, juicy mushrooms and a sprinkle of shaved truffle.
+    The risotto is garnished with a sprig of fresh parsley.
+  letter: E
+  result: ' A Deceptively Simple, But Deliciously Complex,  Mushroom and Truffle Risotto'
+  topic: What kind of entree are you?

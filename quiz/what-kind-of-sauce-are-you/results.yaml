@@ -1,0 +1,63 @@
+A:
+  description: You are the classic, the reliable, the go-to. You are the perfect accompaniment
+    to a burger, a salad, or even a simple sandwich. You are a crowd-pleaser, a comfort
+    food, and a symbol of American cuisine. You are simple, yet versatile, and always
+    bring a touch of sweetness and tang to the table.
+  image: 'A close-up shot of a vibrant, bright red Thousand Island dressing, with
+    a swirl of red and green. The dressing is poured into a small bowl, with a few
+    drops of oil on the surface. The bowl is surrounded by a few lettuce leaves and
+    a small tomato slice. '
+  letter: A
+  result: Thousand Island Dressing
+  topic: What kind of sauce are you?
+B:
+  description: You are the smoky, sweet, and tangy soul of the barbecue. You are the
+    perfect blend of heat and comfort, a celebration of the simple pleasures of life.
+    You are a crowd-pleaser, a comfort food, and a symbol of summer cookouts. You
+    are bold and flavorful, and always bring a touch of warmth and satisfaction to
+    the table.
+  image: 'A close-up shot of a thick, rich, and glistening BBQ sauce, with a hint
+    of smoke and a vibrant red color. The sauce is poured into a small bowl, with
+    a few drops of oil on the surface. The bowl is surrounded by a few pieces of grilled
+    chicken and a few slices of red onion. '
+  letter: B
+  result: BBQ Sauce
+  topic: What kind of sauce are you?
+C:
+  description: You are the spicy, creamy, and tangy fusion of the East and West. You
+    are a bold and adventurous sauce, a perfect blend of sweet, spicy, and savory.
+    You are a statement piece, a symbol of modern culinary creativity. You are a little
+    bit dangerous, a little bit addictive, and always leave a lasting impression.
+  image: 'A close-up shot of a vibrant, bright red Sriracha Mayo, with a swirl of
+    white and orange. The sauce is poured into a small bowl, with a few drops of oil
+    on the surface. The bowl is surrounded by a few pieces of crispy fried chicken
+    and a few slices of avocado. '
+  letter: C
+  result: ' Sriracha Mayo'
+  topic: What kind of sauce are you?
+D:
+  description: You are the fiery, umami-rich, and creamy fusion of Korean and Western
+    culinary traditions. You are a bold and adventurous sauce, a perfect blend of
+    sweet, spicy, and savory. You are a statement piece, a symbol of modern culinary
+    creativity. You are a little bit dangerous, a little bit addictive, and always
+    leave a lasting impression.
+  image: 'A close-up shot of a vibrant, bright red Gochujang Mayo, with a swirl of
+    white and orange. The sauce is poured into a small bowl, with a few drops of oil
+    on the surface. The bowl is surrounded by a few pieces of crispy fried tofu and
+    a few slices of kimchi. '
+  letter: D
+  result: ' Gochujang Mayo'
+  topic: What kind of sauce are you?
+E:
+  description: You are the ethereal, shimmering, and otherworldly sauce of dreams.
+    You are a blend of the magical and the mundane, a symbol of the unexpected and
+    the sublime. You are a little bit mysterious, a little bit whimsical, and always
+    leave a lasting impression. You are a taste of the impossible, a reminder that
+    the world is full of wonder.
+  image: 'A close-up shot of a shimmering, iridescent Unicorn Tears Sauce, with a
+    swirl of purple and pink. The sauce is poured into a small bowl, with a few drops
+    of oil on the surface. The bowl is surrounded by a few pieces of rainbow-colored
+    candy and a few drops of glitter. '
+  letter: E
+  result: ' Unicorn Tears Sauce'
+  topic: What kind of sauce are you?

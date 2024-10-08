@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: The Running Man
+    type: C
+  - text: The Electric Slide
+    type: A
+  - text: You just stand there awkwardly, hoping no one notices.
+    type: E
+  - text: The Cha Cha Slide
+    type: D
+  - text: The Macarena
+    type: B
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: ' Order something that''s both fancy and simple.'
+    type: C
+  - text: ' Order the most expensive dish on the menu.'
+    type: A
+  - text: ' Order the most basic dish on the menu.'
+    type: B
+  - text: ' You''re too nervous to order anything.'
+    type: E
+  - text: ' Order something that''s completely out of the ordinary.'
+    type: D
+  text: You're on a first date. What's your first move?
+- image: questions/3.png
+  options:
+  - text: ' Orange'
+    type: D
+  - text: ' Purple'
+    type: B
+  - text: ' You don''t have a favorite color.'
+    type: E
+  - text: ' Teal'
+    type: A
+  - text: ' Pink'
+    type: C
+  text: ' What''s your favorite color?'
+- image: questions/4.png
+  options:
+  - text: ' Heights'
+    type: B
+  - text: ' Being alone'
+    type: E
+  - text: ' Public speaking'
+    type: D
+  - text: ' The dark'
+    type: C
+  - text: ' Spiders'
+    type: A
+  text: What's your biggest fear?
+- image: questions/5.png
+  options:
+  - text: ' The ability to teleport'
+    type: E
+  - text: ' Invisibility'
+    type: C
+  - text: ' Telekinesis'
+    type: A
+  - text: ' The ability to control the weather'
+    type: D
+  - text: ' Super speed'
+    type: B
+  text: If you could have any superpower, what would it be?
+- image: questions/6.png
+  options:
+  - text: ' A luxurious all-inclusive resort'
+    type: A
+  - text: ' A backpacking trip through Southeast Asia'
+    type: B
+  - text: ' You don''t like vacations.'
+    type: E
+  - text: ' A road trip across the United States'
+    type: C
+  - text: ' A staycation at a fancy hotel'
+    type: D
+  text: What's your ideal vacation?
+- image: questions/7.png
+  options:
+  - text: ' People who talk on their phones in public'
+    type: B
+  - text: ' People who don''t know how to use a fork'
+    type: E
+  - text: ' People who chew with their mouths open'
+    type: A
+  - text: ' People who leave their dirty dishes in the sink'
+    type: D
+  - text: ' People who don''t say please and thank you'
+    type: C
+  text: What's your biggest pet peeve?
+- image: questions/8.png
+  options:
+  - text: ' "I Will Survive" by Gloria Gaynor'
+    type: D
+  - text: ' "Don''t Stop Believin''" by Journey'
+    type: C
+  - text: ' You don''t sing karaoke.'
+    type: E
+  - text: ' "Sweet Caroline" by Neil Diamond'
+    type: B
+  - text: ' "Bohemian Rhapsody" by Queen'
+    type: A
+  text: What's your go-to karaoke song?
+- image: questions/9.png
+  options:
+  - text: ' A musician'
+    type: D
+  - text: ' A writer'
+    type: C
+  - text: ' You don''t have a dream job.'
+    type: E
+  - text: ' A professional chef'
+    type: A
+  - text: ' A fashion designer'
+    type: B
+  text: What's your dream job?
+- image: questions/10.png
+  options:
+  - text: ' The smell of your childhood home'
+    type: E
+  - text: ' Cinnamon'
+    type: D
+  - text: ' Vanilla'
+    type: C
+  - text: ' Rain on pavement'
+    type: B
+  - text: ' Freshly cut grass'
+    type: A
+  text: What's your favorite smell?
+results:
+  A:
+    description: You are the classic, the reliable, the go-to. You are the perfect
+      accompaniment to a burger, a salad, or even a simple sandwich. You are a crowd-pleaser,
+      a comfort food, and a symbol of American cuisine. You are simple, yet versatile,
+      and always bring a touch of sweetness and tang to the table.
+    image: results/A.png
+    image_description: 'A close-up shot of a vibrant, bright red Thousand Island dressing,
+      with a swirl of red and green. The dressing is poured into a small bowl, with
+      a few drops of oil on the surface. The bowl is surrounded by a few lettuce leaves
+      and a small tomato slice. '
+    title: Thousand Island Dressing
+  B:
+    description: You are the smoky, sweet, and tangy soul of the barbecue. You are
+      the perfect blend of heat and comfort, a celebration of the simple pleasures
+      of life. You are a crowd-pleaser, a comfort food, and a symbol of summer cookouts.
+      You are bold and flavorful, and always bring a touch of warmth and satisfaction
+      to the table.
+    image: results/B.png
+    image_description: 'A close-up shot of a thick, rich, and glistening BBQ sauce,
+      with a hint of smoke and a vibrant red color. The sauce is poured into a small
+      bowl, with a few drops of oil on the surface. The bowl is surrounded by a few
+      pieces of grilled chicken and a few slices of red onion. '
+    title: BBQ Sauce
+  C:
+    description: You are the spicy, creamy, and tangy fusion of the East and West.
+      You are a bold and adventurous sauce, a perfect blend of sweet, spicy, and savory.
+      You are a statement piece, a symbol of modern culinary creativity. You are a
+      little bit dangerous, a little bit addictive, and always leave a lasting impression.
+    image: results/C.png
+    image_description: 'A close-up shot of a vibrant, bright red Sriracha Mayo, with
+      a swirl of white and orange. The sauce is poured into a small bowl, with a few
+      drops of oil on the surface. The bowl is surrounded by a few pieces of crispy
+      fried chicken and a few slices of avocado. '
+    title: ' Sriracha Mayo'
+  D:
+    description: You are the fiery, umami-rich, and creamy fusion of Korean and Western
+      culinary traditions. You are a bold and adventurous sauce, a perfect blend of
+      sweet, spicy, and savory. You are a statement piece, a symbol of modern culinary
+      creativity. You are a little bit dangerous, a little bit addictive, and always
+      leave a lasting impression.
+    image: results/D.png
+    image_description: 'A close-up shot of a vibrant, bright red Gochujang Mayo, with
+      a swirl of white and orange. The sauce is poured into a small bowl, with a few
+      drops of oil on the surface. The bowl is surrounded by a few pieces of crispy
+      fried tofu and a few slices of kimchi. '
+    title: ' Gochujang Mayo'
+  E:
+    description: You are the ethereal, shimmering, and otherworldly sauce of dreams.
+      You are a blend of the magical and the mundane, a symbol of the unexpected and
+      the sublime. You are a little bit mysterious, a little bit whimsical, and always
+      leave a lasting impression. You are a taste of the impossible, a reminder that
+      the world is full of wonder.
+    image: results/E.png
+    image_description: 'A close-up shot of a shimmering, iridescent Unicorn Tears
+      Sauce, with a swirl of purple and pink. The sauce is poured into a small bowl,
+      with a few drops of oil on the surface. The bowl is surrounded by a few pieces
+      of rainbow-colored candy and a few drops of glitter. '
+    title: ' Unicorn Tears Sauce'
+topic: What kind of sauce are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

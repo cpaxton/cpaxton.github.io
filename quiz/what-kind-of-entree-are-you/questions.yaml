@@ -1,0 +1,85 @@
+- image: A person standing in a fancy kitchen, holding a plate of food. The food is
+    a vibrant, colorful, and slightly abstract.
+  options:
+    A: A classic, perfectly cooked roast chicken.
+    B: A decadent, multi-layered chocolate cake.
+    C: A bowl of vibrant, colorful, and slightly surreal fruit salad.
+    D: A plate of perfectly arranged, miniature, edible sculptures.
+    E: A bottle of your favorite vintage wine.
+  question: You're invited to a dinner party. What do you bring?
+- image: A person sitting on a swing, looking at the stars.
+  options:
+    A: A quiet, intimate dinner at a cozy restaurant.
+    B: A thrilling, action-packed adventure.
+    C: A night of creative exploration, like a pottery class or a painting workshop.
+    D: A spontaneous, unexpected journey, like a road trip or a spontaneous dance
+      party.
+    E: A night of deep conversation and shared laughter, with a glass of wine in hand.
+  question: You're at a party and someone asks you to describe your ideal date night.
+    What do you say?
+- image: A person holding a single, glowing, iridescent butterfly.
+  options:
+    A: A vintage, hand-stitched leather jacket.
+    B: A collection of rare, antique stamps.
+    C: A beautifully crafted, hand-painted ceramic vase.
+    D: A worn, leather-bound journal filled with handwritten poetry.
+    E: A single, perfectly preserved, iridescent butterfly.
+  question: What is your most prized possession?
+- image: A person standing on a cliff, looking out at a vast, stormy ocean.
+  options:
+    A: Being forgotten.
+    B: Losing control.
+    C: Being trapped in a mundane routine.
+    D: Being alone.
+    E: The unknown.
+  question: What is your biggest fear?
+- image: A person curled up in a cozy armchair, reading a book by a crackling fireplace.
+  options:
+    A: Watching a classic film marathon.
+    B: Baking a batch of cookies.
+    C: Playing a board game with friends.
+    D: Writing in a journal.
+    E: Daydreaming about a faraway place.
+  question: What is your favorite way to spend a rainy day?
+- image: A person floating through the air, surrounded by swirling, colorful energy.
+  options:
+    A: Telekinesis.
+    B: Invisibility.
+    C: The ability to control the weather.
+    D: The power to speak any language.
+    E: The ability to travel through time.
+  question: If you could have any superpower, what would it be?
+- image: A person holding a magnifying glass, looking at a tiny, intricate object.
+  options:
+    A: People who talk loudly on the phone in public.
+    B: People who don't follow through on their promises.
+    C: People who are messy.
+    D: People who interrupt others.
+    E: People who are rude to service workers.
+  question: What is your biggest pet peeve?
+- image: A person standing on a mountaintop, overlooking a breathtaking vista of rolling
+    hills and a sparkling lake.
+  options:
+    A: A secluded cabin in the woods.
+    B: A bustling city with endless entertainment options.
+    C: A tropical island with pristine beaches and crystal-clear waters.
+    D: A historical city with ancient ruins and fascinating museums.
+    E: A remote, off-the-grid location with a focus on nature and solitude.
+  question: What is your ideal vacation destination?
+- image: A person standing in a field of wildflowers, surrounded by the sweet scent
+    of blooming flowers.
+  options:
+    A: The fresh scent of rain on dry earth.
+    B: The warm, comforting scent of freshly baked bread.
+    C: The sweet, floral scent of a garden in bloom.
+    D: The spicy, savory scent of a freshly cooked meal.
+    E: The clean, fresh scent of a new car.
+  question: What is your favorite smell?
+- image: A person standing in a field of vibrant, colorful wildflowers.
+  options:
+    A: Deep, rich red.
+    B: Vibrant, electric blue.
+    C: Soft, calming green.
+    D: Warm, golden yellow.
+    E: A deep, mysterious purple.
+  question: What is your favorite color?

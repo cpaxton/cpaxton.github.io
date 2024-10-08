@@ -1,0 +1,191 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: The Running Man
+    type: C
+  - text: The Electric Slide
+    type: A
+  - text: You just stand there awkwardly, hoping no one notices.
+    type: E
+  - text: The Cha Cha Slide
+    type: D
+  - text: The Macarena
+    type: B
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: ' Order something that''s both fancy and simple.'
+    type: C
+  - text: ' Order the most expensive dish on the menu.'
+    type: A
+  - text: ' Order the most basic dish on the menu.'
+    type: B
+  - text: ' You''re too nervous to order anything.'
+    type: E
+  - text: ' Order something that''s completely out of the ordinary.'
+    type: D
+  text: You're on a first date. What's your first move?
+- image: questions/3.png
+  options:
+  - text: ' Orange'
+    type: D
+  - text: ' Purple'
+    type: B
+  - text: ' You don''t have a favorite color.'
+    type: E
+  - text: ' Teal'
+    type: A
+  - text: ' Pink'
+    type: C
+  text: ' What''s your favorite color?'
+- image: questions/4.png
+  options:
+  - text: ' Heights'
+    type: B
+  - text: ' Being alone'
+    type: E
+  - text: ' Public speaking'
+    type: D
+  - text: ' The dark'
+    type: C
+  - text: ' Spiders'
+    type: A
+  text: What's your biggest fear?
+- image: questions/5.png
+  options:
+  - text: ' The ability to teleport'
+    type: E
+  - text: ' Invisibility'
+    type: C
+  - text: ' Telekinesis'
+    type: A
+  - text: ' The ability to control the weather'
+    type: D
+  - text: ' Super speed'
+    type: B
+  text: If you could have any superpower, what would it be?
+- image: questions/6.png
+  options:
+  - text: ' A luxurious all-inclusive resort'
+    type: A
+  - text: ' A backpacking trip through Southeast Asia'
+    type: B
+  - text: ' You don''t like vacations.'
+    type: E
+  - text: ' A road trip across the United States'
+    type: C
+  - text: ' A staycation at a fancy hotel'
+    type: D
+  text: What's your ideal vacation?
+- image: questions/7.png
+  options:
+  - text: ' People who talk on their phones in public'
+    type: B
+  - text: ' People who don''t know how to use a fork'
+    type: E
+  - text: ' People who chew with their mouths open'
+    type: A
+  - text: ' People who leave their dirty dishes in the sink'
+    type: D
+  - text: ' People who don''t say please and thank you'
+    type: C
+  text: What's your biggest pet peeve?
+- image: questions/8.png
+  options:
+  - text: ' "I Will Survive" by Gloria Gaynor'
+    type: D
+  - text: ' "Don''t Stop Believin''" by Journey'
+    type: C
+  - text: ' You don''t sing karaoke.'
+    type: E
+  - text: ' "Sweet Caroline" by Neil Diamond'
+    type: B
+  - text: ' "Bohemian Rhapsody" by Queen'
+    type: A
+  text: What's your go-to karaoke song?
+- image: questions/9.png
+  options:
+  - text: ' A musician'
+    type: D
+  - text: ' A writer'
+    type: C
+  - text: ' You don''t have a dream job.'
+    type: E
+  - text: ' A professional chef'
+    type: A
+  - text: ' A fashion designer'
+    type: B
+  text: What's your dream job?
+- image: questions/10.png
+  options:
+  - text: ' The smell of your childhood home'
+    type: E
+  - text: ' Cinnamon'
+    type: D
+  - text: ' Vanilla'
+    type: C
+  - text: ' Rain on pavement'
+    type: B
+  - text: ' Freshly cut grass'
+    type: A
+  text: What's your favorite smell?
+results:
+  A:
+    description: You are the classic, the reliable, the go-to. You are the perfect
+      accompaniment to a burger, a salad, or even a simple sandwich. You are a crowd-pleaser,
+      a comfort food, and a symbol of American cuisine. You are simple, yet versatile,
+      and always bring a touch of sweetness and tang to the table.
+    image: results/A.png
+    image_description: 'A close-up shot of a vibrant, bright red Thousand Island dressing,
+      with a swirl of red and green. The dressing is poured into a small bowl, with
+      a few drops of oil on the surface. The bowl is surrounded by a few lettuce leaves
+      and a small tomato slice. '
+    title: Thousand Island Dressing
+  B:
+    description: You are the smoky, sweet, and tangy soul of the barbecue. You are
+      the perfect blend of heat and comfort, a celebration of the simple pleasures
+      of life. You are a crowd-pleaser, a comfort food, and a symbol of summer cookouts.
+      You are bold and flavorful, and always bring a touch of warmth and satisfaction
+      to the table.
+    image: results/B.png
+    image_description: 'A close-up shot of a thick, rich, and glistening BBQ sauce,
+      with a hint of smoke and a vibrant red color. The sauce is poured into a small
+      bowl, with a few drops of oil on the surface. The bowl is surrounded by a few
+      pieces of grilled chicken and a few slices of red onion. '
+    title: BBQ Sauce
+  C:
+    description: You are the spicy, creamy, and tangy fusion of the East and West.
+      You are a bold and adventurous sauce, a perfect blend of sweet, spicy, and savory.
+      You are a statement piece, a symbol of modern culinary creativity. You are a
+      little bit dangerous, a little bit addictive, and always leave a lasting impression.
+    image: results/C.png
+    image_description: 'A close-up shot of a vibrant, bright red Sriracha Mayo, with
+      a swirl of white and orange. The sauce is poured into a small bowl, with a few
+      drops of oil on the surface. The bowl is surrounded by a few pieces of crispy
+      fried chicken and a few slices of avocado. '
+    title: ' Sriracha Mayo'
+  D:
+    description: You are the fiery, umami-rich, and creamy fusion of Korean and Western
+      culinary traditions. You are a bold and adventurous sauce, a perfect blend of
+      sweet, spicy, and savory. You are a statement piece, a symbol of modern culinary
+      creativity. You are a little bit dangerous, a little bit addictive, and always
+      leave a lasting impression.
+    image: results/D.png
+    image_description: 'A close-up shot of a vibrant, bright red Gochujang Mayo, with
+      a swirl of white and orange. The sauce is poured into a small bowl, with a few
+      drops of oil on the surface. The bowl is surrounded by a few pieces of crispy
+      fried tofu and a few slices of kimchi. '
+    title: ' Gochujang Mayo'
+  E:
+    description: You are the ethereal, shimmering, and otherworldly sauce of dreams.
+      You are a blend of the magical and the mundane, a symbol of the unexpected and
+      the sublime. You are a little bit mysterious, a little bit whimsical, and always
+      leave a lasting impression. You are a taste of the impossible, a reminder that
+      the world is full of wonder.
+    image: results/E.png
+    image_description: 'A close-up shot of a shimmering, iridescent Unicorn Tears
+      Sauce, with a swirl of purple and pink. The sauce is poured into a small bowl,
+      with a few drops of oil on the surface. The bowl is surrounded by a few pieces
+      of rainbow-colored candy and a few drops of glitter. '
+    title: ' Unicorn Tears Sauce'
+topic: What kind of sauce are you?

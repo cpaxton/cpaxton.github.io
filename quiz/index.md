@@ -18,6 +18,7 @@ This is the home of the Infinite Quiz Machine!
   - [What holiday are you?](/quiz/what-holiday-are-you/index.html)
   - [What kind of door are you?](/quiz/what-kind-of-door-are-you/index.html)
   - [What extremely specific door are you?](/quiz/what-extremely-specific-door-are-you/index.html)
+  - [What kind of sauce are you?](/quiz/what-kind-of-sauce-are-you/index.html)
 
 ### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)

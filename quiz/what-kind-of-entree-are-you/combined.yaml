@@ -1,0 +1,196 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: A decadent, multi-layered chocolate cake.
+    type: B
+  - text: A classic, perfectly cooked roast chicken.
+    type: A
+  - text: A bottle of your favorite vintage wine.
+    type: E
+  - text: A plate of perfectly arranged, miniature, edible sculptures.
+    type: D
+  - text: A bowl of vibrant, colorful, and slightly surreal fruit salad.
+    type: C
+  text: You're invited to a dinner party. What do you bring?
+- image: questions/2.png
+  options:
+  - text: A night of creative exploration, like a pottery class or a painting workshop.
+    type: C
+  - text: A spontaneous, unexpected journey, like a road trip or a spontaneous dance
+      party.
+    type: D
+  - text: A night of deep conversation and shared laughter, with a glass of wine in
+      hand.
+    type: E
+  - text: A quiet, intimate dinner at a cozy restaurant.
+    type: A
+  - text: A thrilling, action-packed adventure.
+    type: B
+  text: You're at a party and someone asks you to describe your ideal date night.
+    What do you say?
+- image: questions/3.png
+  options:
+  - text: A vintage, hand-stitched leather jacket.
+    type: A
+  - text: A single, perfectly preserved, iridescent butterfly.
+    type: E
+  - text: A collection of rare, antique stamps.
+    type: B
+  - text: A beautifully crafted, hand-painted ceramic vase.
+    type: C
+  - text: A worn, leather-bound journal filled with handwritten poetry.
+    type: D
+  text: What is your most prized possession?
+- image: questions/4.png
+  options:
+  - text: Being forgotten.
+    type: A
+  - text: Being trapped in a mundane routine.
+    type: C
+  - text: The unknown.
+    type: E
+  - text: Losing control.
+    type: B
+  - text: Being alone.
+    type: D
+  text: What is your biggest fear?
+- image: questions/5.png
+  options:
+  - text: Watching a classic film marathon.
+    type: A
+  - text: Playing a board game with friends.
+    type: C
+  - text: Daydreaming about a faraway place.
+    type: E
+  - text: Baking a batch of cookies.
+    type: B
+  - text: Writing in a journal.
+    type: D
+  text: What is your favorite way to spend a rainy day?
+- image: questions/6.png
+  options:
+  - text: Invisibility.
+    type: B
+  - text: The ability to travel through time.
+    type: E
+  - text: Telekinesis.
+    type: A
+  - text: The power to speak any language.
+    type: D
+  - text: The ability to control the weather.
+    type: C
+  text: If you could have any superpower, what would it be?
+- image: questions/7.png
+  options:
+  - text: People who are rude to service workers.
+    type: E
+  - text: People who don't follow through on their promises.
+    type: B
+  - text: People who interrupt others.
+    type: D
+  - text: People who talk loudly on the phone in public.
+    type: A
+  - text: People who are messy.
+    type: C
+  text: What is your biggest pet peeve?
+- image: questions/8.png
+  options:
+  - text: A secluded cabin in the woods.
+    type: A
+  - text: A historical city with ancient ruins and fascinating museums.
+    type: D
+  - text: A remote, off-the-grid location with a focus on nature and solitude.
+    type: E
+  - text: A tropical island with pristine beaches and crystal-clear waters.
+    type: C
+  - text: A bustling city with endless entertainment options.
+    type: B
+  text: What is your ideal vacation destination?
+- image: questions/9.png
+  options:
+  - text: The clean, fresh scent of a new car.
+    type: E
+  - text: The spicy, savory scent of a freshly cooked meal.
+    type: D
+  - text: The sweet, floral scent of a garden in bloom.
+    type: C
+  - text: The fresh scent of rain on dry earth.
+    type: A
+  - text: The warm, comforting scent of freshly baked bread.
+    type: B
+  text: What is your favorite smell?
+- image: questions/10.png
+  options:
+  - text: Soft, calming green.
+    type: C
+  - text: A deep, mysterious purple.
+    type: E
+  - text: Deep, rich red.
+    type: A
+  - text: Vibrant, electric blue.
+    type: B
+  - text: Warm, golden yellow.
+    type: D
+  text: What is your favorite color?
+results:
+  A:
+    description: You are the epitome of a classic, a timeless and comforting entree.
+      You are the embodiment of tradition, with a rich history and a simple yet elegant
+      presentation. You are hearty and satisfying, and your flavors are bold and robust.
+      You are a crowd-pleaser, and your presence is always appreciated.
+    image: results/A.png
+    image_description: 'A steaming roast beef with a golden-brown Yorkshire pudding,
+      resting on a bed of mashed potatoes and gravy. The roast beef is perfectly cooked,
+      with a crispy crust and a juicy interior. The Yorkshire pudding is puffed and
+      airy, with a light and crispy texture. The gravy is rich and flavorful, and
+      the mashed potatoes are creamy and smooth. '
+    title: ' Classic Roast Beef with Yorkshire Pudding'
+  B:
+    description: You are the bold and adventurous entree, a fusion of flavors and
+      textures that packs a punch. You are a culinary chameleon, adapting to different
+      tastes and preferences. You are a bit of a rebel, breaking away from the norm
+      and challenging expectations. You are a crowd-pleaser, but you are not afraid
+      to be a little different.
+    image: results/B.png
+    image_description: A close-up shot of a juicy black bean burger with a vibrant
+      red chili pepper on top. The burger is nestled on a toasted bun with a generous
+      helping of crisp lettuce, a slice of tomato, and a dollop of creamy avocado.
+      The burger is drizzled with a spicy chipotle mayo.
+    title: ' Spicy Black Bean Burger'
+  C:
+    description: You are the avant-garde entree, a whimsical and unexpected masterpiece.
+      You are a celebration of creativity and individuality, with a focus on unique
+      textures and unexpected flavors. You are a bit of a showstopper, with a presentation
+      that is as captivating as your taste. You are a conversation starter, and you
+      are always sure to leave a lasting impression.
+    image: results/C.png
+    image_description: A vibrant, multi-layered salad with a variety of textures and
+      colors. The salad features edible flowers, such as pansies and violas, arranged
+      in a whimsical pattern. The salad is topped with a variety of ingredients, such
+      as roasted vegetables, nuts, and seeds. The salad is drizzled with a light vinaigrette.
+    title: ' A Surreal, Multi-Layered Salad with Edible Flowers'
+  D:
+    description: You are the fiery and flavorful entree, a bold and addictive dish
+      that packs a punch. You are a celebration of bold flavors and textures, with
+      a crispy exterior and a juicy interior. You are a crowd-pleaser, and your heat
+      is sure to leave a lasting impression. You are a bit of a daredevil, and you
+      are not afraid to take risks.
+    image: results/D.png
+    image_description: A close-up shot of crispy, golden-brown Korean fried chicken
+      with a spicy red pepper sauce. The chicken is juicy and tender, with a crispy
+      skin. The sauce is a vibrant red, with a spicy kick. The chicken is served with
+      a side of kimchi and rice.
+    title: ' Spicy Korean Fried Chicken'
+  E:
+    description: You are the enigmatic entree, a dish that appears deceptively simple
+      but reveals a depth of flavor and complexity that belies its appearance. You
+      are a master of subtlety, with a delicate balance of flavors and textures. You
+      are a bit of a chameleon, adapting to different tastes and preferences. You
+      are a conversation starter, and you are always sure to leave a lasting impression.
+    image: results/E.png
+    image_description: A steaming bowl of creamy, golden-brown risotto with a rich,
+      earthy aroma. The risotto is studded with plump, juicy mushrooms and a sprinkle
+      of shaved truffle. The risotto is garnished with a sprig of fresh parsley.
+    title: ' A Deceptively Simple, But Deliciously Complex,  Mushroom and Truffle
+      Risotto'
+topic: What kind of entree are you?

@@ -1,0 +1,82 @@
+- image: 'A party with people dancing and laughing. There is a disco ball in the background. '
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Find a quiet corner to observe the party.'
+    D: ' Make a new friend.'
+    E: ' Go to the kitchen to get a snack.'
+  question: You're at a party. What's your go-to move?
+- image: 'A cozy living room with a fireplace, a comfy armchair, and a book on a coffee
+    table. '
+  options:
+    A: ' Curl up with a good book.'
+    B: ' Bake something delicious.'
+    C: ' Watch a movie marathon.'
+    D: ' Have a long, relaxing bath.'
+    E: ' Go for a walk in the rain.'
+  question: What's your favorite way to spend a rainy day?
+- image: A person with a potato costume, standing in a field of potatoes.
+  options:
+    A: ' Teleportation'
+    B: ' Invisibility'
+    C: ' The ability to control the weather'
+    D: ' The power to speak any language'
+    E: ' The ability to grow potatoes at will'
+  question: If you could have any superpower, what would it be?
+- image: A person floating in a hot air balloon over a field of purple potatoes.
+  options:
+    A: ' A relaxing beach vacation.'
+    B: ' A trip to a bustling city.'
+    C: ' A backpacking adventure through a foreign country.'
+    D: ' A luxurious spa retreat.'
+    E: ' A trip to a remote island.'
+  question: What's your dream vacation?
+- image: A potato with a terrified expression, surrounded by a swarm of bees.
+  options:
+    A: ' Being alone.'
+    B: ' Losing your sense of taste.'
+    C: ' Being forgotten.'
+    D: ' Spilling your drink.'
+    E: ' Being eaten by a giant potato monster.'
+  question: What's your biggest fear?
+- image: A table with three chairs, a potato, a human, and a talking potato.
+  options:
+    A: ' Your favorite historical figure.'
+    B: ' A celebrity chef.'
+    C: ' A famous musician.'
+    D: ' A fictional character.'
+    E: ' A potato expert.'
+  question: If you could have dinner with any three people, living or dead, who would
+    they be?
+- image: A person smelling a potato with a happy expression.
+  options:
+    A: ' Freshly baked bread.'
+    B: ' Rain on pavement.'
+    C: ' Lavender.'
+    D: ' The ocean.'
+    E: ' The smell of your favorite childhood snack.'
+  question: What's your favorite smell?
+- image: A potato wearing a rainbow hat.
+  options:
+    A: ' Blue'
+    B: ' Green'
+    C: ' Purple'
+    D: ' Orange'
+    E: ' Yellow'
+  question: What's your favorite color?
+- image: A potato with a grumpy expression, holding a sign that says "NO MORE SPUDS!"
+  options:
+    A: ' People who don''t say "please" and "thank you."'
+    B: ' People who talk too loudly.'
+    C: ' People who don''t appreciate good food.'
+    D: ' People who leave their dirty dishes in the sink.'
+    E: ' People who eat potatoes with their hands.'
+  question: What's your biggest pet peeve?
+- image: A potato dancing to a disco beat.
+  options:
+    A: ' Classical music'
+    B: ' Pop music'
+    C: ' Rock music'
+    D: ' Electronic music'
+    E: ' Country music'
+  question: What's your favorite type of music?

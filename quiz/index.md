@@ -20,6 +20,7 @@ This is the home of the Infinite Quiz Machine!
   - [What extremely specific door are you?](/quiz/what-extremely-specific-door-are-you/index.html)
   - [What kind of sauce are you?](/quiz/what-kind-of-sauce-are-you/index.html)
   - [What kind of entree are you?](/quiz/what-kind-of-entree-are-you/index.html)
+  - [What kind of potato are you?](/quiz/what-kind-of-potato-are-you/index.html)
 
 ### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)

@@ -1,0 +1,57 @@
+A:
+  description: You are the classic, reliable, and versatile Russet potato. You're
+    the workhorse of the potato world, perfect for mashing, roasting, and baking.
+    You're the go-to for comfort food, and you're always up for a challenge. You're
+    a bit rough around the edges, but that's what makes you so dependable.
+  image: 'A close-up shot of a russet potato, with its skin slightly wrinkled and
+    a few brown spots. The potato is being held in a hand, with a gentle, warm light
+    illuminating it. '
+  letter: A
+  result: Russet
+  topic: What kind of potato are you?
+B:
+  description: You are the sophisticated Yukon Gold potato, a smooth and buttery delight.
+    You're the gourmet choice, prized for your creamy texture and golden hue. You're
+    a bit of a showstopper, and you're always ready to impress. You're a bit of a
+    diva, but your elegance and flavor are undeniable.
+  image: 'A close-up shot of a Yukon Gold potato, with its smooth, golden skin and
+    a hint of yellow inside. The potato is being held in a hand, with a gentle, warm
+    light illuminating it. '
+  letter: B
+  result: Yukon Gold
+  topic: What kind of potato are you?
+C:
+  description: You are the enigmatic Purple Peruvian potato, a mysterious and flavorful
+    delight. You're the adventurous choice, with a unique purple hue and a slightly
+    sweet, earthy taste. You're a bit of a rebel, and you're not afraid to stand out
+    from the crowd. You're a bit of a wild card, but your flavor is always worth the
+    risk.
+  image: 'A close-up shot of a Purple Peruvian potato, with its deep purple skin and
+    a hint of green inside. The potato is being held in a hand, with a gentle, warm
+    light illuminating it. '
+  letter: C
+  result: Purple Peruvian
+  topic: What kind of potato are you?
+D:
+  description: You are the whimsical Fingerling potato, a small and delicate delight.
+    You're the trendy choice, with your unique, finger-like shape and a hint of sweetness.
+    You're a bit of a charmer, and you're always ready to be the star of the show.
+    You're a bit of a trendsetter, and you're always looking for new and exciting
+    ways to be enjoyed.
+  image: 'A close-up shot of a Fingerling potato, with its small, finger-like shape
+    and a hint of green inside. The potato is being held in a hand, with a gentle,
+    warm light illuminating it. '
+  letter: D
+  result: Fingerling
+  topic: What kind of potato are you?
+E:
+  description: You are the vibrant Red Bliss potato, a cheerful and versatile delight.
+    You're the fun-loving choice, with your bright red skin and a slightly sweet,
+    nutty flavor. You're a bit of a free spirit, and you're always up for an adventure.
+    You're a bit of a rebel, and you're not afraid to break the mold.
+  image: 'A close-up shot of a Red Bliss potato, with its bright red skin and a hint
+    of green inside. The potato is being held in a hand, with a gentle, warm light
+    illuminating it. '
+  letter: E
+  result: ' Red Bliss'
+  topic: What kind of potato are you?

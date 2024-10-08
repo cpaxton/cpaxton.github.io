@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Go to the kitchen to get a snack.'
+    type: D
+  - text: ' Find a quiet corner to sit and observe.'
+    type: B
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Try to find someone you know.'
+    type: E
+  - text: ' Dance like nobody''s watching.'
+    type: C
+  text: You're at a party. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Look at your own profile.'
+    type: D
+  - text: ' Read the comments on a post.'
+    type: C
+  - text: ' Start a new post.'
+    type: E
+  - text: ' Scroll through your feed.'
+    type: B
+  - text: ' Check your DMs.'
+    type: A
+  text: You're scrolling through your social media feed. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Take a detour and explore a different path.'
+    type: E
+  - text: ' Talk to a friend or family member for advice.'
+    type: B
+  - text: ' Go with your gut feeling.'
+    type: D
+  - text: ' Take a deep breath and make a decision.'
+    type: A
+  - text: ' Take a moment to meditate and listen to your intuition.'
+    type: C
+  text: You're at a crossroads in your life. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' A cappuccino with a sprinkle of cinnamon.'
+    type: D
+  - text: ' A green smoothie.'
+    type: E
+  - text: ' A simple black coffee.'
+    type: A
+  - text: ' A chai tea latte.'
+    type: C
+  - text: ' A latte with extra foam.'
+    type: B
+  text: You're at a coffee shop. What do you order?
+- image: questions/5.png
+  options:
+  - text: ' Take pictures and videos.'
+    type: C
+  - text: ' Try to get a good view of the stage.'
+    type: E
+  - text: ' Sing along to every song.'
+    type: A
+  - text: ' Find a friend to dance with.'
+    type: D
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  text: You're at a concert. What do you do?
+- image: questions/6.png
+  options:
+  - text: ' Try to guess the ending.'
+    type: E
+  - text: ' Make predictions about what will happen next.'
+    type: C
+  - text: ' Look for clues about the movie''s themes.'
+    type: D
+  - text: ' Chew on popcorn and enjoy the movie.'
+    type: A
+  - text: ' Take notes on the plot.'
+    type: B
+  text: You're watching a movie. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Start a conversation with someone you don''t know.'
+    type: E
+  - text: ' Find a quiet corner to relax.'
+    type: D
+  - text: ' Try to get the attention of the DJ.'
+    type: B
+  - text: ' Start a dance battle.'
+    type: A
+  - text: ' Take a selfie with everyone.'
+    type: C
+  text: You're at a party. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Look at your phone.'
+    type: D
+  - text: ' Daydream about your vacation.'
+    type: E
+  - text: ' Start brainstorming ideas.'
+    type: C
+  - text: ' Try to get the attention of the presenter.'
+    type: B
+  - text: ' Take notes and listen attentively.'
+    type: A
+  text: You're in a meeting. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Order the most expensive dish on the menu.'
+    type: A
+  - text: ' Ask the waiter for a recommendation.'
+    type: D
+  - text: ' Order something simple and familiar.'
+    type: B
+  - text: ' Order a side of fries.'
+    type: E
+  - text: ' Order something that you''ve never tried before.'
+    type: C
+  text: You're at a restaurant. What do you order?
+- image: questions/10.png
+  options:
+  - text: ' Talk to your travel companions.'
+    type: D
+  - text: ' Try to spot interesting landmarks.'
+    type: E
+  - text: ' Take pictures of the scenery.'
+    type: B
+  - text: ' Listen to music and sing along.'
+    type: A
+  - text: ' Play games on your phone.'
+    type: C
+  text: You're on a road trip. What do you do?
+results:
+  A:
+    description: You're the ultimate side-stepper, always drawn to the shiny new thing.
+      You're easily distracted by the allure of something new and exciting, even if
+      it means leaving your current commitment behind. You're a master of multitasking,
+      juggling multiple interests and passions with equal enthusiasm. You're a bit
+      of a rebel, always pushing boundaries and challenging the status quo.
+    image: results/A.png
+    image_description: 'A picture of a boy with a confused expression, looking at
+      a girl with a bright smile and a phone in her hand. He is holding a pizza box
+      in his other hand. The background is a blurred cityscape. '
+    title: Distracted Boyfriend
+  B:
+    description: You're the ultimate judge of character, always ready to call out
+      hypocrisy and double standards. You're a master of subtle sarcasm, using your
+      wit to point out the flaws in others' arguments and actions. You're a bit of
+      a cynic, but with a good heart. You're not afraid to speak your mind, even if
+      it means upsetting some people.
+    image: results/B.png
+    image_description: 'A picture of Drake looking disapprovingly at a picture of
+      a person with a thumbs up. '
+    title: Drakeposting
+  C:
+    description: You're a passionate advocate for your beliefs, even if they're unconventional
+      or controversial. You're not afraid to speak your mind, even if it means facing
+      opposition. You're a bit of a firebrand, always ready to defend your convictions.
+      You're a bit of a rebel, always pushing boundaries and challenging the status
+      quo.
+    image: results/C.png
+    image_description: 'A picture of a woman yelling at a cat. '
+    title: ' The "Woman Yelling at a Cat" Meme'
+  D:
+    description: You're a firm believer in the power of preparation and planning.
+      You're a stickler for detail and a master of organization. You're not afraid
+      to put in the work to achieve your goals, and you're always willing to go the
+      extra mile. You're a bit of a perfectionist, always striving for excellence.
+    image: results/D.png
+    image_description: 'A picture of a person looking determined and holding a sword. '
+    title: ' The "One Does Not Simply" Meme'
+  E:
+    description: You're a master of seizing the moment and making the most of any
+      opportunity. You're a bit of a free spirit, always ready to go with the flow.
+      You're not afraid to take risks and embrace the unknown. You're a bit of a dreamer,
+      always looking for the next big thing.
+    image: results/E.png
+    image_description: 'A picture of a baby with a triumphant expression, holding
+      a fist in the air. '
+    title: ' The "Success Kid" Meme'
+topic: What popular internet meme are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

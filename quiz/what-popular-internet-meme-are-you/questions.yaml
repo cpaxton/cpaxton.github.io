@@ -1,0 +1,89 @@
+- image: A picture of a party with a lot of people. There is a disco ball, and people
+    are dancing. There is a bar in the corner.
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Find a quiet corner to sit and observe.'
+    C: ' Dance like nobody''s watching.'
+    D: ' Go to the kitchen to get a snack.'
+    E: ' Try to find someone you know.'
+  question: You're at a party. What do you do?
+- image: A picture of a phone screen with a social media app open. There is a notification
+    that says "New Message" and a notification that says "New Post".
+  options:
+    A: ' Check your DMs.'
+    B: ' Scroll through your feed.'
+    C: ' Read the comments on a post.'
+    D: ' Look at your own profile.'
+    E: ' Start a new post.'
+  question: You're scrolling through your social media feed. What do you do?
+- image: A picture of a crossroads with a sign that says "Left or Right?" and a person
+    standing at the crossroads looking confused.
+  options:
+    A: ' Take a deep breath and make a decision.'
+    B: ' Talk to a friend or family member for advice.'
+    C: ' Take a moment to meditate and listen to your intuition.'
+    D: ' Go with your gut feeling.'
+    E: ' Take a detour and explore a different path.'
+  question: You're at a crossroads in your life. What do you do?
+- image: A picture of a coffee shop with a barista making a latte. There is a line
+    of people waiting to order.
+  options:
+    A: ' A simple black coffee.'
+    B: ' A latte with extra foam.'
+    C: ' A chai tea latte.'
+    D: ' A cappuccino with a sprinkle of cinnamon.'
+    E: ' A green smoothie.'
+  question: You're at a coffee shop. What do you order?
+- image: A picture of a concert with a lot of people dancing and singing. There is
+    a stage with a band playing.
+  options:
+    A: ' Sing along to every song.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Take pictures and videos.'
+    D: ' Find a friend to dance with.'
+    E: ' Try to get a good view of the stage.'
+  question: You're at a concert. What do you do?
+- image: A picture of a person sitting in a dark room, watching a movie on a TV. There
+    is a bowl of popcorn in front of them.
+  options:
+    A: ' Chew on popcorn and enjoy the movie.'
+    B: ' Take notes on the plot.'
+    C: ' Make predictions about what will happen next.'
+    D: ' Look for clues about the movie''s themes.'
+    E: ' Try to guess the ending.'
+  question: You're watching a movie. What do you do?
+- image: A picture of a person wearing a party hat and holding a microphone. There
+    is a crowd of people dancing around them.
+  options:
+    A: ' Start a dance battle.'
+    B: ' Try to get the attention of the DJ.'
+    C: ' Take a selfie with everyone.'
+    D: ' Find a quiet corner to relax.'
+    E: ' Start a conversation with someone you don''t know.'
+  question: You're at a party. What do you do?
+- image: A picture of a person sitting at a desk in a meeting room. There is a whiteboard
+    with a list of tasks on it.
+  options:
+    A: ' Take notes and listen attentively.'
+    B: ' Try to get the attention of the presenter.'
+    C: ' Start brainstorming ideas.'
+    D: ' Look at your phone.'
+    E: ' Daydream about your vacation.'
+  question: You're in a meeting. What do you do?
+- image: A picture of a person looking at a menu with a confused expression. There
+    is a waiter standing in the background.
+  options:
+    A: ' Order the most expensive dish on the menu.'
+    B: ' Order something simple and familiar.'
+    C: ' Order something that you''ve never tried before.'
+    D: ' Ask the waiter for a recommendation.'
+    E: ' Order a side of fries.'
+  question: You're at a restaurant. What do you order?
+- image: A picture of a car driving down a highway with a scenic view in the background.
+  options:
+    A: ' Listen to music and sing along.'
+    B: ' Take pictures of the scenery.'
+    C: ' Play games on your phone.'
+    D: ' Talk to your travel companions.'
+    E: ' Try to spot interesting landmarks.'
+  question: You're on a road trip. What do you do?

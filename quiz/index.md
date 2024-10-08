@@ -23,6 +23,7 @@ This is the home of the Infinite Quiz Machine!
   - [What kind of potato are you?](/quiz/what-kind-of-potato-are-you/index.html)
   - [What quiz are you?](/quiz/what-quiz-are-you/index.html)
   - [What Andy are you?](/quiz/what-andy-are-you/index.html)
+  - [What popular internet meme are you?](/quiz/what-popular-internet-meme-are-you/index.html)
 
 ### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)

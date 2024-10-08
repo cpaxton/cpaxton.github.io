@@ -1,0 +1,64 @@
+A:
+  description: You are the master of improvisation, always finding creative solutions
+    to any obstacle. You thrive on the unexpected and are never afraid to think outside
+    the box. You are a natural problem solver, and your quick wit and adaptability
+    make you a force to be reckoned with. You are a bit of a rebel, and you don't
+    like to be told what to do. You are always looking for the next adventure, and
+    you are never afraid to take risks.
+  image: 'A person dressed in a colorful, mismatched outfit, with a mischievous grin,
+    standing on a rooftop with a rope ladder and a toolbox. They are looking out at
+    the city, with a determined expression on their face. '
+  letter: A
+  result: The Escape Artist
+  topic: How are you going to get out of here?
+B:
+  description: You are a master of disguise, blending seamlessly into any environment.
+    You are adaptable and resourceful, able to change your appearance and behavior
+    to fit in with any crowd. You are a natural observer, and you are always paying
+    attention to the details. You are a bit of a loner, and you prefer to keep to
+    yourself. You are not afraid to be different, and you are always looking for new
+    and exciting experiences.
+  image: 'A person with chameleon-like features, their skin shifting colors to match
+    their surroundings. They are perched on a branch, observing a group of people
+    below. '
+  letter: B
+  result: The Chameleon
+  topic: How are you going to get out of here?
+C:
+  description: You are a master of the past and future, able to manipulate time to
+    your advantage. You are a visionary, always looking ahead and seeing possibilities
+    that others miss. You are a bit of a dreamer, and you are always looking for new
+    and exciting adventures. You are a bit of a loner, and you prefer to keep to yourself.
+    You are not afraid to be different, and you are always looking for new and exciting
+    experiences.
+  image: 'A person with a swirling vortex of time around them, their eyes glowing
+    with a strange light. They are holding a glowing hourglass, and a clock is ticking
+    backwards. '
+  letter: C
+  result: The Time Traveler
+  topic: How are you going to get out of here?
+D:
+  description: You are unpredictable and chaotic, always ready for a wild ride. You
+    are a free spirit, and you don't like to be tied down. You are a bit of a rebel,
+    and you are always looking for new and exciting experiences. You are a bit of
+    a loner, and you prefer to keep to yourself. You are not afraid to be different,
+    and you are always looking for new and exciting experiences.
+  image: 'A person with a wild, untamed look in their eyes, surrounded by a swirling
+    vortex of colors and shapes. They are holding a glowing orb, and their clothes
+    are torn and tattered. '
+  letter: D
+  result: The Wildcard
+  topic: How are you going to get out of here?
+E:
+  description: You are a being of pure energy, existing outside the confines of space
+    and time. You are a traveler of the cosmos, exploring the universe and seeking
+    new experiences. You are a bit of a dreamer, and you are always looking for new
+    and exciting adventures. You are a bit of a loner, and you prefer to keep to yourself.
+    You are not afraid to be different, and you are always looking for new and exciting
+    experiences.
+  image: 'A swirling nebula of colors, with a figure made of pure light, floating
+    through the cosmos. They are holding a glowing orb, and their eyes are filled
+    with wonder. '
+  letter: E
+  result: The Cosmic Wanderer
+  topic: How are you going to get out of here?

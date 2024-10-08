@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Start singing a song to distract the person who trapped you.'
+    type: E
+  - text: ' Search for a hidden door.'
+    type: B
+  - text: ' Try to break the window.'
+    type: A
+  - text: ' Use the chair to climb to the window.'
+    type: C
+  - text: ' Wait for someone to come and rescue you.'
+    type: D
+  text: You are trapped in a room with only a single window. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Build a beehive of your own.'
+    type: D
+  - text: ' Run away as fast as you can.'
+    type: B
+  - text: ' Offer the bees a piece of fruit.'
+    type: E
+  - text: ' Try to calm the bees down by talking to them.'
+    type: A
+  - text: ' Use a broom to swat the bees away.'
+    type: C
+  text: You are surrounded by a swarm of bees. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Offer the cactus a piece of fruit.'
+    type: C
+  - text: ' Start a conversation with the cactus.'
+    type: D
+  - text: ' Run away from the cactus.'
+    type: E
+  - text: ' Ask the cactus for a riddle.'
+    type: A
+  - text: ' Try to convince the cactus to let you go.'
+    type: B
+  text: You are in a room with a giant, talking cactus. It tells you it can help you
+    escape, but only if you answer its riddles correctly. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' Use the bouncy castle to escape.'
+    type: B
+  - text: ' Start a game of tag with the other people inside.'
+    type: D
+  - text: ' Sing a song to distract the people inside.'
+    type: E
+  - text: ' Try to climb out of the castle.'
+    type: C
+  - text: ' Try to find a way to deflate the castle.'
+    type: A
+  text: You are trapped in a giant, inflatable bouncy castle. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Try to convince the duck to let you go.'
+    type: B
+  - text: ' Start a conversation with the duck.'
+    type: D
+  - text: ' Ask the duck about its favorite color.'
+    type: A
+  - text: ' Offer the duck a piece of fruit.'
+    type: C
+  - text: ' Run away from the duck.'
+    type: E
+  text: You are in a room with a giant, talking rubber duck. It tells you it can help
+    you escape, but only if you can answer its philosophical questions. What do you
+    do?
+- image: questions/6.png
+  options:
+  - text: ' Start a conversation with the banana.'
+    type: D
+  - text: ' Offer the banana a piece of fruit.'
+    type: C
+  - text: ' Ask the banana for a riddle.'
+    type: A
+  - text: ' Try to convince the banana to let you go.'
+    type: B
+  - text: ' Run away from the banana.'
+    type: E
+  text: You are trapped in a room with a giant, talking banana. It tells you it can
+    help you escape, but only if you can solve its riddles. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Run away from the pickle.'
+    type: E
+  - text: ' Offer the pickle a piece of fruit.'
+    type: C
+  - text: ' Start a conversation with the pickle.'
+    type: D
+  - text: ' Try to convince the pickle to let you go.'
+    type: B
+  - text: ' Ask the pickle for a riddle.'
+    type: A
+  text: You are in a room with a giant, talking pickle. It tells you it can help you
+    escape, but only if you can solve its riddles. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Start a conversation with the marshmallow.'
+    type: D
+  - text: ' Ask the marshmallow for a riddle.'
+    type: A
+  - text: ' Offer the marshmallow a piece of fruit.'
+    type: C
+  - text: ' Run away from the marshmallow.'
+    type: E
+  - text: ' Try to convince the marshmallow to let you go.'
+    type: B
+  text: You are in a room with a giant, talking marshmallow. It tells you it can help
+    you escape, but only if you can solve its riddles. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Start a conversation with the chicken.'
+    type: D
+  - text: ' Try to convince the chicken to let you go.'
+    type: B
+  - text: ' Run away from the chicken.'
+    type: E
+  - text: ' Offer the chicken a piece of fruit.'
+    type: C
+  - text: ' Ask the chicken for a riddle.'
+    type: A
+  text: You are in a room with a giant, talking rubber chicken. It tells you it can
+    help you escape, but only if you can solve its riddles. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Offer the puppet a piece of fruit.'
+    type: C
+  - text: ' Run away from the puppet.'
+    type: E
+  - text: ' Try to convince the puppet to let you go.'
+    type: B
+  - text: ' Ask the puppet for a riddle.'
+    type: A
+  - text: ' Start a conversation with the puppet.'
+    type: D
+  text: You are trapped in a room with a giant, talking sock puppet. It tells you
+    it can help you escape, but only if you can solve its riddles. What do you do?
+results:
+  A:
+    description: You are the master of improvisation, always finding creative solutions
+      to any obstacle. You thrive on the unexpected and are never afraid to think
+      outside the box. You are a natural problem solver, and your quick wit and adaptability
+      make you a force to be reckoned with. You are a bit of a rebel, and you don't
+      like to be told what to do. You are always looking for the next adventure, and
+      you are never afraid to take risks.
+    image: results/A.png
+    image_description: 'A person dressed in a colorful, mismatched outfit, with a
+      mischievous grin, standing on a rooftop with a rope ladder and a toolbox. They
+      are looking out at the city, with a determined expression on their face. '
+    title: The Escape Artist
+  B:
+    description: You are a master of disguise, blending seamlessly into any environment.
+      You are adaptable and resourceful, able to change your appearance and behavior
+      to fit in with any crowd. You are a natural observer, and you are always paying
+      attention to the details. You are a bit of a loner, and you prefer to keep to
+      yourself. You are not afraid to be different, and you are always looking for
+      new and exciting experiences.
+    image: results/B.png
+    image_description: 'A person with chameleon-like features, their skin shifting
+      colors to match their surroundings. They are perched on a branch, observing
+      a group of people below. '
+    title: The Chameleon
+  C:
+    description: You are a master of the past and future, able to manipulate time
+      to your advantage. You are a visionary, always looking ahead and seeing possibilities
+      that others miss. You are a bit of a dreamer, and you are always looking for
+      new and exciting adventures. You are a bit of a loner, and you prefer to keep
+      to yourself. You are not afraid to be different, and you are always looking
+      for new and exciting experiences.
+    image: results/C.png
+    image_description: 'A person with a swirling vortex of time around them, their
+      eyes glowing with a strange light. They are holding a glowing hourglass, and
+      a clock is ticking backwards. '
+    title: The Time Traveler
+  D:
+    description: You are unpredictable and chaotic, always ready for a wild ride.
+      You are a free spirit, and you don't like to be tied down. You are a bit of
+      a rebel, and you are always looking for new and exciting experiences. You are
+      a bit of a loner, and you prefer to keep to yourself. You are not afraid to
+      be different, and you are always looking for new and exciting experiences.
+    image: results/D.png
+    image_description: 'A person with a wild, untamed look in their eyes, surrounded
+      by a swirling vortex of colors and shapes. They are holding a glowing orb, and
+      their clothes are torn and tattered. '
+    title: The Wildcard
+  E:
+    description: You are a being of pure energy, existing outside the confines of
+      space and time. You are a traveler of the cosmos, exploring the universe and
+      seeking new experiences. You are a bit of a dreamer, and you are always looking
+      for new and exciting adventures. You are a bit of a loner, and you prefer to
+      keep to yourself. You are not afraid to be different, and you are always looking
+      for new and exciting experiences.
+    image: results/E.png
+    image_description: 'A swirling nebula of colors, with a figure made of pure light,
+      floating through the cosmos. They are holding a glowing orb, and their eyes
+      are filled with wonder. '
+    title: The Cosmic Wanderer
+topic: How are you going to get out of here?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

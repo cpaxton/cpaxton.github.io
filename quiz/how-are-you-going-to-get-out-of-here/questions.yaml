@@ -1,0 +1,100 @@
+- image: A small, dark room with a single, dusty window. The window is covered in
+    cobwebs and the light from outside is barely visible. There is a single chair
+    in the room, and a dusty table with a single, cracked teacup on it.
+  options:
+    A: ' Try to break the window.'
+    B: ' Search for a hidden door.'
+    C: ' Use the chair to climb to the window.'
+    D: ' Wait for someone to come and rescue you.'
+    E: ' Start singing a song to distract the person who trapped you.'
+  question: You are trapped in a room with only a single window. What do you do?
+- image: A beehive with a swarm of bees buzzing around it. The hive is made of wood
+    and has a small opening. The bees are a mix of different colors and sizes.
+  options:
+    A: ' Try to calm the bees down by talking to them.'
+    B: ' Run away as fast as you can.'
+    C: ' Use a broom to swat the bees away.'
+    D: ' Build a beehive of your own.'
+    E: ' Offer the bees a piece of fruit.'
+  question: You are surrounded by a swarm of bees. What do you do?
+- image: A room with a giant, anthropomorphic cactus in the center. The cactus has
+    a friendly face and is wearing a monocle. It is surrounded by a few other cacti.
+  options:
+    A: ' Ask the cactus for a riddle.'
+    B: ' Try to convince the cactus to let you go.'
+    C: ' Offer the cactus a piece of fruit.'
+    D: ' Start a conversation with the cactus.'
+    E: ' Run away from the cactus.'
+  question: You are in a room with a giant, talking cactus. It tells you it can help
+    you escape, but only if you answer its riddles correctly. What do you do?
+- image: A giant, inflatable bouncy castle with a rainbow-colored exterior. There
+    are several people inside, bouncing around and having fun.
+  options:
+    A: ' Try to find a way to deflate the castle.'
+    B: ' Use the bouncy castle to escape.'
+    C: ' Try to climb out of the castle.'
+    D: ' Start a game of tag with the other people inside.'
+    E: ' Sing a song to distract the people inside.'
+  question: You are trapped in a giant, inflatable bouncy castle. What do you do?
+- image: A room with a giant, anthropomorphic rubber duck in the center. The duck
+    is wearing a tiny tuxedo and has a serious expression.
+  options:
+    A: ' Ask the duck about its favorite color.'
+    B: ' Try to convince the duck to let you go.'
+    C: ' Offer the duck a piece of fruit.'
+    D: ' Start a conversation with the duck.'
+    E: ' Run away from the duck.'
+  question: You are in a room with a giant, talking rubber duck. It tells you it can
+    help you escape, but only if you can answer its philosophical questions. What
+    do you do?
+- image: A room with a giant, anthropomorphic banana in the center. The banana is
+    wearing a tiny crown and has a mischievous grin.
+  options:
+    A: ' Ask the banana for a riddle.'
+    B: ' Try to convince the banana to let you go.'
+    C: ' Offer the banana a piece of fruit.'
+    D: ' Start a conversation with the banana.'
+    E: ' Run away from the banana.'
+  question: You are trapped in a room with a giant, talking banana. It tells you it
+    can help you escape, but only if you can solve its riddles. What do you do?
+- image: A room with a giant, anthropomorphic pickle in the center. The pickle is
+    wearing a tiny top hat and has a serious expression.
+  options:
+    A: ' Ask the pickle for a riddle.'
+    B: ' Try to convince the pickle to let you go.'
+    C: ' Offer the pickle a piece of fruit.'
+    D: ' Start a conversation with the pickle.'
+    E: ' Run away from the pickle.'
+  question: You are in a room with a giant, talking pickle. It tells you it can help
+    you escape, but only if you can solve its riddles. What do you do?
+- image: A room with a giant, anthropomorphic marshmallow in the center. The marshmallow
+    is wearing a tiny crown and has a mischievous grin.
+  options:
+    A: ' Ask the marshmallow for a riddle.'
+    B: ' Try to convince the marshmallow to let you go.'
+    C: ' Offer the marshmallow a piece of fruit.'
+    D: ' Start a conversation with the marshmallow.'
+    E: ' Run away from the marshmallow.'
+  question: You are in a room with a giant, talking marshmallow. It tells you it can
+    help you escape, but only if you can solve its riddles. What do you do?
+- image: A room with a giant, anthropomorphic rubber chicken in the center. The chicken
+    is wearing a tiny top hat and has a mischievous grin.
+  options:
+    A: ' Ask the chicken for a riddle.'
+    B: ' Try to convince the chicken to let you go.'
+    C: ' Offer the chicken a piece of fruit.'
+    D: ' Start a conversation with the chicken.'
+    E: ' Run away from the chicken.'
+  question: You are in a room with a giant, talking rubber chicken. It tells you it
+    can help you escape, but only if you can solve its riddles. What do you do?
+- image: A room with a giant, anthropomorphic sock puppet in the center. The puppet
+    is wearing a tiny top hat and has a mischievous grin.
+  options:
+    A: ' Ask the puppet for a riddle.'
+    B: ' Try to convince the puppet to let you go.'
+    C: ' Offer the puppet a piece of fruit.'
+    D: ' Start a conversation with the puppet.'
+    E: ' Run away from the puppet.'
+  question: You are trapped in a room with a giant, talking sock puppet. It tells
+    you it can help you escape, but only if you can solve its riddles. What do you
+    do?

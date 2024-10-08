@@ -25,6 +25,7 @@ This is the home of the Infinite Quiz Machine!
   - [What Andy are you?](/quiz/what-andy-are-you/index.html)
   - [What popular internet meme are you?](/quiz/what-popular-internet-meme-are-you/index.html)
   - [What extremely specific odor are you?](/quiz/what-extremely-specific-odor-are-you/index.html)
+  - [How are you going to get out of here?](/quiz/how-are-you-going-to-get-out-of-here/index.html)
 
 ### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)

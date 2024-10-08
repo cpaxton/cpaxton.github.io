@@ -1,0 +1,200 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Start singing a song to distract the person who trapped you.'
+    type: E
+  - text: ' Search for a hidden door.'
+    type: B
+  - text: ' Try to break the window.'
+    type: A
+  - text: ' Use the chair to climb to the window.'
+    type: C
+  - text: ' Wait for someone to come and rescue you.'
+    type: D
+  text: You are trapped in a room with only a single window. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Build a beehive of your own.'
+    type: D
+  - text: ' Run away as fast as you can.'
+    type: B
+  - text: ' Offer the bees a piece of fruit.'
+    type: E
+  - text: ' Try to calm the bees down by talking to them.'
+    type: A
+  - text: ' Use a broom to swat the bees away.'
+    type: C
+  text: You are surrounded by a swarm of bees. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Offer the cactus a piece of fruit.'
+    type: C
+  - text: ' Start a conversation with the cactus.'
+    type: D
+  - text: ' Run away from the cactus.'
+    type: E
+  - text: ' Ask the cactus for a riddle.'
+    type: A
+  - text: ' Try to convince the cactus to let you go.'
+    type: B
+  text: You are in a room with a giant, talking cactus. It tells you it can help you
+    escape, but only if you answer its riddles correctly. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' Use the bouncy castle to escape.'
+    type: B
+  - text: ' Start a game of tag with the other people inside.'
+    type: D
+  - text: ' Sing a song to distract the people inside.'
+    type: E
+  - text: ' Try to climb out of the castle.'
+    type: C
+  - text: ' Try to find a way to deflate the castle.'
+    type: A
+  text: You are trapped in a giant, inflatable bouncy castle. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Try to convince the duck to let you go.'
+    type: B
+  - text: ' Start a conversation with the duck.'
+    type: D
+  - text: ' Ask the duck about its favorite color.'
+    type: A
+  - text: ' Offer the duck a piece of fruit.'
+    type: C
+  - text: ' Run away from the duck.'
+    type: E
+  text: You are in a room with a giant, talking rubber duck. It tells you it can help
+    you escape, but only if you can answer its philosophical questions. What do you
+    do?
+- image: questions/6.png
+  options:
+  - text: ' Start a conversation with the banana.'
+    type: D
+  - text: ' Offer the banana a piece of fruit.'
+    type: C
+  - text: ' Ask the banana for a riddle.'
+    type: A
+  - text: ' Try to convince the banana to let you go.'
+    type: B
+  - text: ' Run away from the banana.'
+    type: E
+  text: You are trapped in a room with a giant, talking banana. It tells you it can
+    help you escape, but only if you can solve its riddles. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Run away from the pickle.'
+    type: E
+  - text: ' Offer the pickle a piece of fruit.'
+    type: C
+  - text: ' Start a conversation with the pickle.'
+    type: D
+  - text: ' Try to convince the pickle to let you go.'
+    type: B
+  - text: ' Ask the pickle for a riddle.'
+    type: A
+  text: You are in a room with a giant, talking pickle. It tells you it can help you
+    escape, but only if you can solve its riddles. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Start a conversation with the marshmallow.'
+    type: D
+  - text: ' Ask the marshmallow for a riddle.'
+    type: A
+  - text: ' Offer the marshmallow a piece of fruit.'
+    type: C
+  - text: ' Run away from the marshmallow.'
+    type: E
+  - text: ' Try to convince the marshmallow to let you go.'
+    type: B
+  text: You are in a room with a giant, talking marshmallow. It tells you it can help
+    you escape, but only if you can solve its riddles. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Start a conversation with the chicken.'
+    type: D
+  - text: ' Try to convince the chicken to let you go.'
+    type: B
+  - text: ' Run away from the chicken.'
+    type: E
+  - text: ' Offer the chicken a piece of fruit.'
+    type: C
+  - text: ' Ask the chicken for a riddle.'
+    type: A
+  text: You are in a room with a giant, talking rubber chicken. It tells you it can
+    help you escape, but only if you can solve its riddles. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Offer the puppet a piece of fruit.'
+    type: C
+  - text: ' Run away from the puppet.'
+    type: E
+  - text: ' Try to convince the puppet to let you go.'
+    type: B
+  - text: ' Ask the puppet for a riddle.'
+    type: A
+  - text: ' Start a conversation with the puppet.'
+    type: D
+  text: You are trapped in a room with a giant, talking sock puppet. It tells you
+    it can help you escape, but only if you can solve its riddles. What do you do?
+results:
+  A:
+    description: You are the master of improvisation, always finding creative solutions
+      to any obstacle. You thrive on the unexpected and are never afraid to think
+      outside the box. You are a natural problem solver, and your quick wit and adaptability
+      make you a force to be reckoned with. You are a bit of a rebel, and you don't
+      like to be told what to do. You are always looking for the next adventure, and
+      you are never afraid to take risks.
+    image: results/A.png
+    image_description: 'A person dressed in a colorful, mismatched outfit, with a
+      mischievous grin, standing on a rooftop with a rope ladder and a toolbox. They
+      are looking out at the city, with a determined expression on their face. '
+    title: The Escape Artist
+  B:
+    description: You are a master of disguise, blending seamlessly into any environment.
+      You are adaptable and resourceful, able to change your appearance and behavior
+      to fit in with any crowd. You are a natural observer, and you are always paying
+      attention to the details. You are a bit of a loner, and you prefer to keep to
+      yourself. You are not afraid to be different, and you are always looking for
+      new and exciting experiences.
+    image: results/B.png
+    image_description: 'A person with chameleon-like features, their skin shifting
+      colors to match their surroundings. They are perched on a branch, observing
+      a group of people below. '
+    title: The Chameleon
+  C:
+    description: You are a master of the past and future, able to manipulate time
+      to your advantage. You are a visionary, always looking ahead and seeing possibilities
+      that others miss. You are a bit of a dreamer, and you are always looking for
+      new and exciting adventures. You are a bit of a loner, and you prefer to keep
+      to yourself. You are not afraid to be different, and you are always looking
+      for new and exciting experiences.
+    image: results/C.png
+    image_description: 'A person with a swirling vortex of time around them, their
+      eyes glowing with a strange light. They are holding a glowing hourglass, and
+      a clock is ticking backwards. '
+    title: The Time Traveler
+  D:
+    description: You are unpredictable and chaotic, always ready for a wild ride.
+      You are a free spirit, and you don't like to be tied down. You are a bit of
+      a rebel, and you are always looking for new and exciting experiences. You are
+      a bit of a loner, and you prefer to keep to yourself. You are not afraid to
+      be different, and you are always looking for new and exciting experiences.
+    image: results/D.png
+    image_description: 'A person with a wild, untamed look in their eyes, surrounded
+      by a swirling vortex of colors and shapes. They are holding a glowing orb, and
+      their clothes are torn and tattered. '
+    title: The Wildcard
+  E:
+    description: You are a being of pure energy, existing outside the confines of
+      space and time. You are a traveler of the cosmos, exploring the universe and
+      seeking new experiences. You are a bit of a dreamer, and you are always looking
+      for new and exciting adventures. You are a bit of a loner, and you prefer to
+      keep to yourself. You are not afraid to be different, and you are always looking
+      for new and exciting experiences.
+    image: results/E.png
+    image_description: 'A swirling nebula of colors, with a figure made of pure light,
+      floating through the cosmos. They are holding a glowing orb, and their eyes
+      are filled with wonder. '
+    title: The Cosmic Wanderer
+topic: How are you going to get out of here?

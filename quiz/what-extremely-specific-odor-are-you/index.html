@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Find a quiet corner to observe the partygoers.'
+    type: C
+  - text: ' Go to the kitchen to get a drink.'
+    type: E
+  - text: ' Try to find the DJ.'
+    type: D
+  text: You're at a party. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' Read a book you''ve never read before.'
+    type: B
+  - text: ' Search for a specific book on a particular topic.'
+    type: A
+  - text: ' Look for a specific person in the library.'
+    type: D
+  - text: ' Try to find a comfortable spot to read.'
+    type: E
+  - text: ' Listen to the quiet hum of the library.'
+    type: C
+  text: You're in a library. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Try to make a joke about the food.'
+    type: C
+  - text: ' Ask them about their favorite book.'
+    type: B
+  - text: ' Look at your phone.'
+    type: D
+  - text: ' Compliment the person on their outfit.'
+    type: A
+  - text: ' Try to remember what you were going to say.'
+    type: E
+  text: You're on a first date. What do you do?
+- image: questions/4.png
+  options:
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Sing along to the music.'
+    type: A
+  - text: ' Look for a place to sit down.'
+    type: E
+  - text: ' Try to find your friends.'
+    type: D
+  - text: ' Take a picture of the band.'
+    type: C
+  text: You're at a concert. What do you do?
+- image: questions/5.png
+  options:
+  - text: ' Look at the museum''s gift shop.'
+    type: A
+  - text: ' Listen to the quiet hum of the museum.'
+    type: D
+  - text: ' Take a picture of the museum''s architecture.'
+    type: C
+  - text: ' Try to find a comfortable spot to sit down.'
+    type: E
+  - text: ' Try to find a specific exhibit.'
+    type: B
+  text: You're in a museum. What do you do?
+- image: questions/6.png
+  options:
+  - text: ' Look out the window.'
+    type: C
+  - text: ' Listen to a podcast.'
+    type: A
+  - text: ' Sing along to the radio.'
+    type: B
+  - text: ' Try to remember the name of the song playing.'
+    type: E
+  - text: ' Try to find a gas station.'
+    type: D
+  text: You're on a road trip. What do you do?
+- image: questions/7.png
+  options:
+  - text: ' Try to find a comfortable spot to sit down.'
+    type: C
+  - text: ' Try to remember the name of the song playing.'
+    type: E
+  - text: ' Try to find a place to eat.'
+    type: D
+  - text: ' Dance with the bride and groom.'
+    type: A
+  - text: ' Take a picture of the wedding party.'
+    type: B
+  text: You're at a wedding. What do you do?
+- image: questions/8.png
+  options:
+  - text: ' Try to find a place to drink.'
+    type: D
+  - text: ' Try to find a place to eat.'
+    type: C
+  - text: ' Cheer for your favorite team.'
+    type: A
+  - text: ' Try to find a place to sit down.'
+    type: B
+  - text: ' Try to remember the name of the song playing.'
+    type: E
+  text: You're at a sporting event. What do you do?
+- image: questions/9.png
+  options:
+  - text: ' Look for a specific item on the shelf.'
+    type: A
+  - text: ' Try to find a specific type of produce.'
+    type: D
+  - text: ' Try to find a specific type of meat.'
+    type: E
+  - text: ' Look for a specific brand of food.'
+    type: C
+  - text: ' Try to find a specific aisle.'
+    type: B
+  text: You're in a grocery store. What do you do?
+- image: questions/10.png
+  options:
+  - text: ' Try to remember the name of the song playing.'
+    type: E
+  - text: ' Look at the casket.'
+    type: B
+  - text: ' Try to find a comfortable spot to sit down.'
+    type: C
+  - text: ' Offer condolences to the family.'
+    type: A
+  - text: ' Try to find a place to eat.'
+    type: D
+  text: You're at a funeral. What do you do?
+results:
+  A:
+    description: You are the embodiment of nostalgia and quiet contemplation. You
+      are the scent of a bygone era, a time when things were simpler and more elegant.
+      You are the quiet hum of a well-loved record, the gentle crackle of vinyl, and
+      the warm, comforting glow of a vintage lamp. You are the scent of a forgotten
+      memory, a whispered secret, and a timeless classic.
+    image: results/A.png
+    image_description: 'A close-up shot of a vintage record player with a warm, golden
+      glow emanating from it. The record player is made of polished wood and has a
+      beautiful, intricate design. The record is a classic jazz record, and the needle
+      is gently tracing the grooves. The room is dimly lit, with a few scattered books
+      and a vintage lamp on a side table. '
+    title: ' The scent of a freshly-waxed vintage record player.'
+  B:
+    description: You are the epitome of refined elegance and timeless allure. You
+      are the scent of a bygone era, a time when things were more sophisticated and
+      less hurried. You are the delicate floral notes of a classic perfume, the subtle
+      sweetness of vanilla, and the lingering trace of a forgotten dream. You are
+      the scent of a secret rendezvous, a whispered promise, and a timeless classic.
+    image: results/B.png
+    image_description: 'A close-up shot of a vintage perfume bottle with a delicate,
+      floral design. The bottle is made of clear glass and has a golden cap. The perfume
+      is a deep blue color and has a faint, sweet scent. The bottle is resting on
+      a velvet-lined table in a dimly lit room. '
+    title: The scent of a freshly-opened bottle of vintage perfume, specifically,
+      "L'Heure Bleue" by Guerlain.
+  C:
+    description: You are the embodiment of rustic charm and earthy simplicity. You
+      are the scent of a warm, inviting kitchen, the aroma of freshly-baked bread,
+      and the comforting warmth of a crackling fire. You are the earthy notes of a
+      well-aged sourdough, the subtle sweetness of rosemary, and the salty tang of
+      the sea. You are the scent of a cozy home, a warm hearth, and a comforting embrace.
+    image: results/C.png
+    image_description: 'A close-up shot of a freshly-baked sourdough bread with a
+      golden crust and a sprinkle of rosemary and sea salt. The bread is sitting on
+      a wooden cutting board in a rustic kitchen with a warm, inviting glow. '
+    title: The aroma of a freshly-baked, sourdough bread with a hint of rosemary and
+      sea salt.
+  D:
+    description: You are the embodiment of untamed wilderness and primal energy. You
+      are the scent of a crisp, cool forest, the aroma of pine needles, and the earthy
+      scent of damp soil. You are the sharp, clean scent of a freshly-cut tree, the
+      subtle sweetness of ozone, and the grounding scent of the earth. You are the
+      scent of adventure, exploration, and the wild unknown.
+    image: results/D.png
+    image_description: 'A close-up shot of a freshly-cut pine tree with a vibrant
+      green color and a hint of brown. The tree is surrounded by a lush forest with
+      a misty, cool air. '
+    title: The scent of a freshly-cut pine tree, with a hint of damp earth and a touch
+      of ozone.
+  E:
+    description: You are the embodiment of whimsical fantasy and playful indulgence.
+      You are the scent of a magical bath, the aroma of a unicorn's tears, and the
+      delicate sweetness of a forgotten dream. You are the scent of a whimsical adventure,
+      a playful escape, and a touch of the extraordinary. You are the scent of a secret
+      garden, a hidden oasis, and a world of pure imagination.
+    image: results/E.png
+    image_description: 'A close-up shot of a vintage, hand-painted bath bomb with
+      a vibrant, colorful design. The bath bomb is made of a soft, pastel pink color
+      and has a delicate, floral scent. The bath bomb is sitting on a velvet-lined
+      tray in a dimly lit room with a few scattered crystals and a vintage lamp on
+      a side table. '
+    title: The scent of a freshly-opened tin of vintage, hand-painted,  "Unicorn Tears"
+      scented bath bombs.
+topic: What extremely specific odor are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

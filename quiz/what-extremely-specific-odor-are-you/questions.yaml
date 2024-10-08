@@ -1,0 +1,89 @@
+- image: A party with a disco ball, people dancing, and a large, colorful, abstract
+    painting on the wall.
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Find a quiet corner to observe the partygoers.'
+    D: ' Try to find the DJ.'
+    E: ' Go to the kitchen to get a drink.'
+  question: You're at a party. What do you do?
+- image: A library with a large, ornate, leather-bound book, a dusty, old globe, and
+    a single, flickering candle on a table.
+  options:
+    A: ' Search for a specific book on a particular topic.'
+    B: ' Read a book you''ve never read before.'
+    C: ' Listen to the quiet hum of the library.'
+    D: ' Look for a specific person in the library.'
+    E: ' Try to find a comfortable spot to read.'
+  question: You're in a library. What do you do?
+- image: A couple sitting at a table in a dimly lit restaurant, with a single, flickering
+    candle on the table.
+  options:
+    A: ' Compliment the person on their outfit.'
+    B: ' Ask them about their favorite book.'
+    C: ' Try to make a joke about the food.'
+    D: ' Look at your phone.'
+    E: ' Try to remember what you were going to say.'
+  question: You're on a first date. What do you do?
+- image: A concert with a large crowd of people, a stage with a band playing, and
+    a giant, colorful, inflatable guitar.
+  options:
+    A: ' Sing along to the music.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Take a picture of the band.'
+    D: ' Try to find your friends.'
+    E: ' Look for a place to sit down.'
+  question: You're at a concert. What do you do?
+- image: A museum with a large, ornate, golden statue of a mythical creature, a dusty,
+    old map, and a single, flickering candle on a table.
+  options:
+    A: ' Look at the museum''s gift shop.'
+    B: ' Try to find a specific exhibit.'
+    C: ' Take a picture of the museum''s architecture.'
+    D: ' Listen to the quiet hum of the museum.'
+    E: ' Try to find a comfortable spot to sit down.'
+  question: You're in a museum. What do you do?
+- image: A car driving down a winding road with a mountain in the background.
+  options:
+    A: ' Listen to a podcast.'
+    B: ' Sing along to the radio.'
+    C: ' Look out the window.'
+    D: ' Try to find a gas station.'
+    E: ' Try to remember the name of the song playing.'
+  question: You're on a road trip. What do you do?
+- image: A wedding with a large, ornate, white cake, a bouquet of flowers, and a single,
+    flickering candle on a table.
+  options:
+    A: ' Dance with the bride and groom.'
+    B: ' Take a picture of the wedding party.'
+    C: ' Try to find a comfortable spot to sit down.'
+    D: ' Try to find a place to eat.'
+    E: ' Try to remember the name of the song playing.'
+  question: You're at a wedding. What do you do?
+- image: A stadium with a large crowd of people, a giant, colorful, inflatable ball,
+    and a single, flickering candle on a table.
+  options:
+    A: ' Cheer for your favorite team.'
+    B: ' Try to find a place to sit down.'
+    C: ' Try to find a place to eat.'
+    D: ' Try to find a place to drink.'
+    E: ' Try to remember the name of the song playing.'
+  question: You're at a sporting event. What do you do?
+- image: A grocery store with a large, colorful, display of fresh produce, a single,
+    flickering candle on a table, and a large, ornate, wooden cart.
+  options:
+    A: ' Look for a specific item on the shelf.'
+    B: ' Try to find a specific aisle.'
+    C: ' Look for a specific brand of food.'
+    D: ' Try to find a specific type of produce.'
+    E: ' Try to find a specific type of meat.'
+  question: You're in a grocery store. What do you do?
+- image: A funeral with a large, ornate, wooden casket, a single, flickering candle
+    on a table, and a large, ornate, floral arrangement.
+  options:
+    A: ' Offer condolences to the family.'
+    B: ' Look at the casket.'
+    C: ' Try to find a comfortable spot to sit down.'
+    D: ' Try to find a place to eat.'
+    E: ' Try to remember the name of the song playing.'
+  question: You're at a funeral. What do you do?

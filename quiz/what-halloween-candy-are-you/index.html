@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Start a conversation with a stranger.'
+    type: B
+  - text: ' Take a selfie with everyone.'
+    type: E
+  - text: ' Do a spooky dance.'
+    type: A
+  - text: ' Make a beeline for the candy bowl.'
+    type: D
+  - text: ' Try to scare the life out of someone.'
+    type: C
+  text: You're at a Halloween party. What's your go-to move?
+- image: questions/2.png
+  options:
+  - text: ' You ask for a third option, a gummy worm.'
+    type: E
+  - text: Candy corn.
+    type: A
+  - text: ' You politely decline, you''re on a diet.'
+    type: D
+  - text: ' A mix of both.'
+    type: C
+  - text: Chocolate truffles.
+    type: B
+  text: You're offered a choice between two Halloween treats. What do you choose?
+- image: questions/3.png
+  options:
+  - text: ' Watching horror movies with friends.'
+    type: C
+  - text: ' Going door-to-door and collecting candy.'
+    type: B
+  - text: ' Writing a creepy poem about a haunted house.'
+    type: E
+  - text: ' Carving pumpkins and telling spooky stories.'
+    type: A
+  - text: ' Making a spooky costume and going to a party.'
+    type: D
+  text: ' What''s your favorite way to spend a Halloween night?'
+- image: questions/4.png
+  options:
+  - text: ' A terrifying monster or creature.'
+    type: D
+  - text: ' A whimsical, colorful, and slightly absurd character.'
+    type: E
+  - text: ' A classic witch or vampire.'
+    type: A
+  - text: ' A spooky ghost or skeleton.'
+    type: B
+  - text: ' A cute and cuddly animal.'
+    type: C
+  text: ' What''s your ideal Halloween costume?'
+- image: questions/5.png
+  options:
+  - text: ' Running out of candy before the night is over.'
+    type: B
+  - text: ' The feeling of being watched.'
+    type: E
+  - text: ' Being alone on Halloween night.'
+    type: A
+  - text: ' The thought of someone stealing your candy.'
+    type: D
+  - text: ' The sound of a creaking door.'
+    type: C
+  text: ' What''s your biggest Halloween fear?'
+- image: questions/6.png
+  options:
+  - text: ' The power to control the weather.'
+    type: B
+  - text: ' The ability to make candy appear out of thin air.'
+    type: E
+  - text: ' The ability to teleport.'
+    type: A
+  - text: ' The power to turn into a ghost.'
+    type: D
+  - text: ' The ability to speak to animals.'
+    type: C
+  text: ' If you could have any superpower for Halloween night, what would it be?'
+- image: questions/7.png
+  options:
+  - text: ' Candy corn.'
+    type: A
+  - text: ' A mix of all of the above.'
+    type: D
+  - text: ' A bowl of popcorn and a glass of milk.'
+    type: E
+  - text: ' Chocolate bars.'
+    type: B
+  - text: ' Sour gummies.'
+    type: C
+  text: ' What''s your go-to Halloween snack?'
+- image: questions/8.png
+  options:
+  - text: ' The costumes.'
+    type: A
+  - text: ' The spooky atmosphere.'
+    type: C
+  - text: ' The candy.'
+    type: B
+  - text: ' The chance to be a little bit naughty.'
+    type: E
+  - text: ' The thrill of the night.'
+    type: D
+  text: ' What''s your favorite thing about Halloween?'
+- image: questions/9.png
+  options:
+  - text: ' People who don''t put their candy in a bag.'
+    type: A
+  - text: ' People who eat candy too quickly.'
+    type: B
+  - text: ' People who steal candy from other kids.'
+    type: D
+  - text: ' People who don''t say "Trick or Treat!"'
+    type: C
+  - text: ' People who don''t appreciate the spooky atmosphere.'
+    type: E
+  text: ' What''s your biggest Halloween pet peeve?'
+- image: questions/10.png
+  options:
+  - text: ' A night of mystery and intrigue.'
+    type: D
+  - text: ' A night of fun and laughter.'
+    type: A
+  - text: ' A night of spooky thrills and chills.'
+    type: B
+  - text: ' A night of pure, unadulterated chaos.'
+    type: E
+  - text: ' A night of candy and treats.'
+    type: C
+  text: ' What''s your ideal Halloween ending?'
+results:
+  A:
+    description: You are the sour-sweet surprise of Halloween, a burst of tangy flavor
+      that leaves a lingering, unexpected sweetness. You're the fun-loving, unpredictable
+      one, always ready to shake things up. You're a bit of a rebel, but your heart
+      is always in the right place. You're a little messy, a little chaotic, and a
+      lot of fun.
+    image: results/A.png
+    image_description: 'A close-up shot of a bag of Sour Patch Kids, with a few of
+      the candies scattered on a dark background. The candies are a vibrant mix of
+      colors, with some being bright red, some being bright green, and some being
+      a mix of both. The background is dark, with a few faint streaks of light. '
+    title: ' Sour Patch Kids'
+  B:
+    description: You are the classic, the tried and true, the dependable. You're the
+      comfort food of Halloween, the one everyone knows and loves. You're a bit of
+      a traditionalist, but you're also a bit of a rebel, with a hint of mischief.
+      You're the perfect balance of sweet and salty, and you're always there to satisfy
+      your cravings.
+    image: results/B.png
+    image_description: 'A close-up shot of a Reese''s Peanut Butter Cup, with the
+      chocolate and peanut butter filling visible. The cup is sitting on a dark background,
+      with a few crumbs of chocolate scattered around. The background is a dark brown,
+      with a few faint streaks of light. '
+    title: ' Reese''s Peanut Butter Cups'
+  C:
+    description: You are the rainbow of flavor, the burst of color and taste that
+      makes Halloween so exciting. You're the playful, the adventurous, the one who
+      loves to experiment. You're a bit of a free spirit, always seeking new experiences
+      and pushing boundaries. You're a little bit messy, a little bit chaotic, and
+      a lot of fun.
+    image: results/C.png
+    image_description: 'A close-up shot of a bag of Skittles, with a few of the candies
+      scattered on a dark background. The candies are a vibrant mix of colors, with
+      some being bright red, some being bright green, and some being a mix of both.
+      The background is dark, with a few faint streaks of light. '
+    title: ' Skittles'
+  D:
+    description: You are the quirky, the unique, the one who stands out from the crowd.
+      You're the unexpected, the surprising, the one who always has a unique perspective.
+      You're a bit of a loner, but you're also a loyal friend. You're a bit of a puzzle,
+      a bit of a mystery, and a lot of fun.
+    image: results/D.png
+    image_description: 'A close-up shot of a bag of Nerds, with a few of the candies
+      scattered on a dark background. The candies are a vibrant mix of colors, with
+      some being bright red, some being bright green, and some being a mix of both.
+      The background is dark, with a few faint streaks of light. '
+    title: ' Nerds'
+  E:
+    description: You are the enigma, the misunderstood, the one who is both loved
+      and hated. You're the symbol of Halloween, the one that evokes both nostalgia
+      and disgust. You're a bit of a paradox, a bit of a contradiction, and a lot
+      of fun. You're the one who always gets the last laugh, even if it's a little
+      bit bitter.
+    image: results/E.png
+    image_description: 'A close-up shot of a bowl of candy corn, with a few of the
+      candies scattered on a dark background. The candies are a vibrant mix of colors,
+      with some being bright orange, some being bright yellow, and some being a mix
+      of both. The background is dark, with a few faint streaks of light. '
+    title: ' Candy Corn'
+topic: What halloween candy are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

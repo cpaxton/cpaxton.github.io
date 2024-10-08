@@ -1,0 +1,192 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Start a conversation with a stranger.'
+    type: B
+  - text: ' Take a selfie with everyone.'
+    type: E
+  - text: ' Do a spooky dance.'
+    type: A
+  - text: ' Make a beeline for the candy bowl.'
+    type: D
+  - text: ' Try to scare the life out of someone.'
+    type: C
+  text: You're at a Halloween party. What's your go-to move?
+- image: questions/2.png
+  options:
+  - text: ' You ask for a third option, a gummy worm.'
+    type: E
+  - text: Candy corn.
+    type: A
+  - text: ' You politely decline, you''re on a diet.'
+    type: D
+  - text: ' A mix of both.'
+    type: C
+  - text: Chocolate truffles.
+    type: B
+  text: You're offered a choice between two Halloween treats. What do you choose?
+- image: questions/3.png
+  options:
+  - text: ' Watching horror movies with friends.'
+    type: C
+  - text: ' Going door-to-door and collecting candy.'
+    type: B
+  - text: ' Writing a creepy poem about a haunted house.'
+    type: E
+  - text: ' Carving pumpkins and telling spooky stories.'
+    type: A
+  - text: ' Making a spooky costume and going to a party.'
+    type: D
+  text: ' What''s your favorite way to spend a Halloween night?'
+- image: questions/4.png
+  options:
+  - text: ' A terrifying monster or creature.'
+    type: D
+  - text: ' A whimsical, colorful, and slightly absurd character.'
+    type: E
+  - text: ' A classic witch or vampire.'
+    type: A
+  - text: ' A spooky ghost or skeleton.'
+    type: B
+  - text: ' A cute and cuddly animal.'
+    type: C
+  text: ' What''s your ideal Halloween costume?'
+- image: questions/5.png
+  options:
+  - text: ' Running out of candy before the night is over.'
+    type: B
+  - text: ' The feeling of being watched.'
+    type: E
+  - text: ' Being alone on Halloween night.'
+    type: A
+  - text: ' The thought of someone stealing your candy.'
+    type: D
+  - text: ' The sound of a creaking door.'
+    type: C
+  text: ' What''s your biggest Halloween fear?'
+- image: questions/6.png
+  options:
+  - text: ' The power to control the weather.'
+    type: B
+  - text: ' The ability to make candy appear out of thin air.'
+    type: E
+  - text: ' The ability to teleport.'
+    type: A
+  - text: ' The power to turn into a ghost.'
+    type: D
+  - text: ' The ability to speak to animals.'
+    type: C
+  text: ' If you could have any superpower for Halloween night, what would it be?'
+- image: questions/7.png
+  options:
+  - text: ' Candy corn.'
+    type: A
+  - text: ' A mix of all of the above.'
+    type: D
+  - text: ' A bowl of popcorn and a glass of milk.'
+    type: E
+  - text: ' Chocolate bars.'
+    type: B
+  - text: ' Sour gummies.'
+    type: C
+  text: ' What''s your go-to Halloween snack?'
+- image: questions/8.png
+  options:
+  - text: ' The costumes.'
+    type: A
+  - text: ' The spooky atmosphere.'
+    type: C
+  - text: ' The candy.'
+    type: B
+  - text: ' The chance to be a little bit naughty.'
+    type: E
+  - text: ' The thrill of the night.'
+    type: D
+  text: ' What''s your favorite thing about Halloween?'
+- image: questions/9.png
+  options:
+  - text: ' People who don''t put their candy in a bag.'
+    type: A
+  - text: ' People who eat candy too quickly.'
+    type: B
+  - text: ' People who steal candy from other kids.'
+    type: D
+  - text: ' People who don''t say "Trick or Treat!"'
+    type: C
+  - text: ' People who don''t appreciate the spooky atmosphere.'
+    type: E
+  text: ' What''s your biggest Halloween pet peeve?'
+- image: questions/10.png
+  options:
+  - text: ' A night of mystery and intrigue.'
+    type: D
+  - text: ' A night of fun and laughter.'
+    type: A
+  - text: ' A night of spooky thrills and chills.'
+    type: B
+  - text: ' A night of pure, unadulterated chaos.'
+    type: E
+  - text: ' A night of candy and treats.'
+    type: C
+  text: ' What''s your ideal Halloween ending?'
+results:
+  A:
+    description: You are the sour-sweet surprise of Halloween, a burst of tangy flavor
+      that leaves a lingering, unexpected sweetness. You're the fun-loving, unpredictable
+      one, always ready to shake things up. You're a bit of a rebel, but your heart
+      is always in the right place. You're a little messy, a little chaotic, and a
+      lot of fun.
+    image: results/A.png
+    image_description: 'A close-up shot of a bag of Sour Patch Kids, with a few of
+      the candies scattered on a dark background. The candies are a vibrant mix of
+      colors, with some being bright red, some being bright green, and some being
+      a mix of both. The background is dark, with a few faint streaks of light. '
+    title: ' Sour Patch Kids'
+  B:
+    description: You are the classic, the tried and true, the dependable. You're the
+      comfort food of Halloween, the one everyone knows and loves. You're a bit of
+      a traditionalist, but you're also a bit of a rebel, with a hint of mischief.
+      You're the perfect balance of sweet and salty, and you're always there to satisfy
+      your cravings.
+    image: results/B.png
+    image_description: 'A close-up shot of a Reese''s Peanut Butter Cup, with the
+      chocolate and peanut butter filling visible. The cup is sitting on a dark background,
+      with a few crumbs of chocolate scattered around. The background is a dark brown,
+      with a few faint streaks of light. '
+    title: ' Reese''s Peanut Butter Cups'
+  C:
+    description: You are the rainbow of flavor, the burst of color and taste that
+      makes Halloween so exciting. You're the playful, the adventurous, the one who
+      loves to experiment. You're a bit of a free spirit, always seeking new experiences
+      and pushing boundaries. You're a little bit messy, a little bit chaotic, and
+      a lot of fun.
+    image: results/C.png
+    image_description: 'A close-up shot of a bag of Skittles, with a few of the candies
+      scattered on a dark background. The candies are a vibrant mix of colors, with
+      some being bright red, some being bright green, and some being a mix of both.
+      The background is dark, with a few faint streaks of light. '
+    title: ' Skittles'
+  D:
+    description: You are the quirky, the unique, the one who stands out from the crowd.
+      You're the unexpected, the surprising, the one who always has a unique perspective.
+      You're a bit of a loner, but you're also a loyal friend. You're a bit of a puzzle,
+      a bit of a mystery, and a lot of fun.
+    image: results/D.png
+    image_description: 'A close-up shot of a bag of Nerds, with a few of the candies
+      scattered on a dark background. The candies are a vibrant mix of colors, with
+      some being bright red, some being bright green, and some being a mix of both.
+      The background is dark, with a few faint streaks of light. '
+    title: ' Nerds'
+  E:
+    description: You are the enigma, the misunderstood, the one who is both loved
+      and hated. You're the symbol of Halloween, the one that evokes both nostalgia
+      and disgust. You're a bit of a paradox, a bit of a contradiction, and a lot
+      of fun. You're the one who always gets the last laugh, even if it's a little
+      bit bitter.
+    image: results/E.png
+    image_description: 'A close-up shot of a bowl of candy corn, with a few of the
+      candies scattered on a dark background. The candies are a vibrant mix of colors,
+      with some being bright orange, some being bright yellow, and some being a mix
+      of both. The background is dark, with a few faint streaks of light. '
+    title: ' Candy Corn'
+topic: What halloween candy are you?

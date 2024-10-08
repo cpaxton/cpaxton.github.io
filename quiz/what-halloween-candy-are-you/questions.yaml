@@ -1,0 +1,91 @@
+- image: A person dressed as a vampire, standing in a dimly lit room with a group
+    of other costumed people. The vampire is holding a glass of red punch and looking
+    around with a mischievous grin.
+  options:
+    A: ' Do a spooky dance.'
+    B: ' Start a conversation with a stranger.'
+    C: ' Try to scare the life out of someone.'
+    D: ' Make a beeline for the candy bowl.'
+    E: ' Take a selfie with everyone.'
+  question: You're at a Halloween party. What's your go-to move?
+- image: A split screen. On one side, a bowl of colorful, individually wrapped candy
+    corn. On the other side, a plate of perfectly formed, glistening chocolate truffles.
+  options:
+    A: Candy corn.
+    B: Chocolate truffles.
+    C: ' A mix of both.'
+    D: ' You politely decline, you''re on a diet.'
+    E: ' You ask for a third option, a gummy worm.'
+  question: You're offered a choice between two Halloween treats. What do you choose?
+- image: A person sitting on a swing set in a dark forest, surrounded by glowing jack-o'-lanterns.
+    The person is wearing a witch's hat and a long, flowing robe.
+  options:
+    A: ' Carving pumpkins and telling spooky stories.'
+    B: ' Going door-to-door and collecting candy.'
+    C: ' Watching horror movies with friends.'
+    D: ' Making a spooky costume and going to a party.'
+    E: ' Writing a creepy poem about a haunted house.'
+  question: ' What''s your favorite way to spend a Halloween night?'
+- image: A person dressed as a giant, gooey, multi-colored marshmallow. They are surrounded
+    by other marshmallow-themed costumes, like a marshmallow man and a marshmallow
+    monster.
+  options:
+    A: ' A classic witch or vampire.'
+    B: ' A spooky ghost or skeleton.'
+    C: ' A cute and cuddly animal.'
+    D: ' A terrifying monster or creature.'
+    E: ' A whimsical, colorful, and slightly absurd character.'
+  question: ' What''s your ideal Halloween costume?'
+- image: 'A close-up of a person''s face, with their eyes wide open and their mouth
+    slightly open in a silent scream.  '
+  options:
+    A: ' Being alone on Halloween night.'
+    B: ' Running out of candy before the night is over.'
+    C: ' The sound of a creaking door.'
+    D: ' The thought of someone stealing your candy.'
+    E: ' The feeling of being watched.'
+  question: ' What''s your biggest Halloween fear?'
+- image: A person with glowing eyes and a mischievous grin, holding a glowing pumpkin.
+  options:
+    A: ' The ability to teleport.'
+    B: ' The power to control the weather.'
+    C: ' The ability to speak to animals.'
+    D: ' The power to turn into a ghost.'
+    E: ' The ability to make candy appear out of thin air.'
+  question: ' If you could have any superpower for Halloween night, what would it
+    be?'
+- image: A person sitting on a couch, surrounded by bags of candy, with a bowl of
+    popcorn in front of them.
+  options:
+    A: ' Candy corn.'
+    B: ' Chocolate bars.'
+    C: ' Sour gummies.'
+    D: ' A mix of all of the above.'
+    E: ' A bowl of popcorn and a glass of milk.'
+  question: ' What''s your go-to Halloween snack?'
+- image: A person holding a pumpkin, with a mischievous grin and a glowing eye.
+  options:
+    A: ' The costumes.'
+    B: ' The candy.'
+    C: ' The spooky atmosphere.'
+    D: ' The thrill of the night.'
+    E: ' The chance to be a little bit naughty.'
+  question: ' What''s your favorite thing about Halloween?'
+- image: A person with a disgusted expression, holding a half-eaten candy bar with
+    a disgusted expression.
+  options:
+    A: ' People who don''t put their candy in a bag.'
+    B: ' People who eat candy too quickly.'
+    C: ' People who don''t say "Trick or Treat!"'
+    D: ' People who steal candy from other kids.'
+    E: ' People who don''t appreciate the spooky atmosphere.'
+  question: ' What''s your biggest Halloween pet peeve?'
+- image: A person standing in a field of glowing jack-o'-lanterns, surrounded by a
+    group of friends.
+  options:
+    A: ' A night of fun and laughter.'
+    B: ' A night of spooky thrills and chills.'
+    C: ' A night of candy and treats.'
+    D: ' A night of mystery and intrigue.'
+    E: ' A night of pure, unadulterated chaos.'
+  question: ' What''s your ideal Halloween ending?'

@@ -32,6 +32,7 @@ This is the home of the Infinite Quiz Machine!
   - [Which kind of undead monstrosity will you be?](/quiz/which-kind-of-undead-monstrosity-will-you-be/index.html)
   - [To which of the elder gods should you pray?](/quiz/to-which-of-the-elder-gods-should-you-pray/index.html)
   - [Which cosmic horror are you devoted to?](/quiz/which-cosmic-horror-are-you-devoted-to/index.html)
+  - [What halloween candy are you?](/quiz/what-halloween-candy-are-you/index.html)
 
 ## Ok, but what is it?
 

@@ -1,0 +1,59 @@
+A:
+  description: You're a master at turning any argument into a caricature, twisting
+    it to make it easier to attack. You're quick to dismiss any opposing viewpoint,
+    and then triumphantly declare your own superior position. You thrive on simplification
+    and can often be seen dismissing complex arguments by misrepresenting them. You're
+    not a bad person, you just have a knack for making things seem more dramatic than
+    they are.
+  image: A cartoon of a person with a fiery face, holding a stick figure version of
+    themselves and yelling. The stick figure is being attacked by a giant, exaggerated
+    version of their argument, which is made of fire and smoke.
+  letter: A
+  result: The Straw Man
+  topic: What rhetorical fallacy are you?
+B:
+  description: You're a master of stirring the pot with powerful emotions. You can
+    evoke feelings of fear, anger, or love to sway your audience, often leaving them
+    with a sense of urgency or a strong desire to support you. You're not afraid to
+    get personal or play on people's biases to make your point. You're persuasive
+    and charismatic, but sometimes your emotional appeals can feel manipulative.
+  image: 'A blurry, surreal image of a person holding a heart made of fire and holding
+    a tear-stained face. '
+  letter: B
+  result: The Appeal to Emotion
+  topic: What rhetorical fallacy are you?
+C:
+  description: You thrive on the idea that "if you don't know, then it must be true."
+    You're not afraid to throw out claims without evidence, simply because you can't
+    prove the opposite. You love a good conspiracy theory, and you're always quick
+    to dismiss any evidence that contradicts your beliefs. You often resort to generalizations
+    and sweeping statements, leaving no room for nuance or critical thinking.
+  image: 'A futuristic, cyberpunk city with flying cars and holographic advertisements.
+    In the foreground, a person with a hooded face is holding a glowing orb and shouting
+    "The truth is hidden! The truth is in the shadows!" '
+  letter: C
+  result: The Appeal to Ignorance
+  topic: What rhetorical fallacy are you?
+D:
+  description: You're a social chameleon, always seeking validation and approval from
+    the masses. You're a master of bandwagoning, jumping on any trend or popular opinion
+    to bolster your own. You thrive on the "everyone's doing it" mentality and often
+    fail to consider the nuances of a situation. You're a people pleaser, but your
+    actions can be driven by a desire to fit in, rather than by genuine conviction.
+  image: A chaotic collage of people holding signs and wearing bandanas, all shouting
+    in unison. There are flashing lights, smoke, and confetti.
+  letter: D
+  result: The Appeal to Popularity
+  topic: What rhetorical fallacy are you?
+E:
+  description: You're a master of distraction, always trying to steer the conversation
+    away from the real issue. You love to throw in irrelevant details, side issues,
+    or even completely fabricated information to confuse your opponent and derail
+    any logical argument. You're a master of deflecting, often by changing the subject
+    or bringing up unrelated points. You might appear well-intentioned, but your tactics
+    are designed to avoid accountability.
+  image: 'A person holding a giant, colorful butterfly net, while surrounded by chaotic,
+    flashing lights and a tangled mess of wires. '
+  letter: E
+  result: The Red Herring
+  topic: What rhetorical fallacy are you?

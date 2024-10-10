@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: You forgot your phone, grab it and go back to bed.
+    type: E
+  - text: Stare into the fridge.
+    type: D
+  - text: Make a sandwich.
+    type: B
+  - text: Get a glass of water.
+    type: A
+  - text: Eat a spoonful of peanut butter.
+    type: C
+  text: You go to your kitchen in the middle of the night. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' A deep fryer for maximum crispy goodness.'
+    type: D
+  - text: ' Using a griddle for a perfect golden-brown exterior. '
+    type: B
+  - text: ' The classic, buttered-on-both-sides method.'
+    type: A
+  - text: ' You just grab the bread, slap some cheese on it, and throw it in the microwave.'
+    type: E
+  - text: ' The "cheese-only" approach, just cheese on toast.'
+    type: C
+  text: 'You''re arguing with your friend about the best way to make a grilled cheese.
+    What''s your preferred method? '
+- image: questions/3.png
+  options:
+  - text: ' "I''m not sure about that, it''s a little out there for me."'
+    type: B
+  - text: ' "That''s interesting. I''ve never seen a pineapple tattoo before."'
+    type: A
+  - text: ' "It''s a pineapple, you know what they say... you can''t go wrong with
+      pineapple!"'
+    type: D
+  - text: ' "I''m a bit worried about what my parents would say."'
+    type: C
+  - text: ' "That''s a pretty bold choice for a tattoo, but it''s your body, right?"'
+    type: E
+  text: You're on a date, and your date mentions they have a tattoo of a pineapple
+    on their forearm. What is your immediate reaction?
+- image: questions/4.png
+  options:
+  - text: ' You subtly check if the spider is venomous.'
+    type: D
+  - text: ' You start making spider jokes, hoping to get a reaction from the person.'
+    type: C
+  - text: ' You compliment the person on their fashion sense, admiring the spider''s
+      design.'
+    type: A
+  - text: ' You try to get the person to tell you the story behind the shirt.'
+    type: B
+  - text: ' You immediately start looking for a spider web in the room.'
+    type: E
+  text: 'You''re at a party and see someone wearing a shirt with a giant, cartoonish
+    spider on it. You''re instantly intrigued. What''s your next move? '
+- image: questions/5.png
+  options:
+  - text: You start to laugh nervously, trying to convince yourself it's all in your
+      head.
+    type: E
+  - text: 'You quickly turn on the TV, hoping to distract yourself. '
+    type: B
+  - text: You scream in terror, hoping to scare away whatever is making the noise.
+    type: C
+  - text: You grab a blanket and try to find a safe place.
+    type: A
+  - text: You try to rationalize the noise, convinced it's just the wind or a faulty
+      appliance.
+    type: D
+  text: You're watching a horror movie and your heart is pounding in your chest.  Suddenly,
+    the lights flicker, and you hear a creepy noise. What's your immediate reaction?
+- image: questions/6.png
+  options:
+  - text: ' You offer to help around the house as a way to earn their trust.'
+    type: C
+  - text: ' You create a narrative about how much fun staying up late will be. '
+    type: E
+  - text: ' You appeal to their sense of fairness and logic.'
+    type: A
+  - text: ' You threaten to miss out on a fun activity or event.'
+    type: B
+  - text: ' You play the victim, making them feel bad for not letting you stay up.'
+    type: D
+  text: You're trying to convince your family to let you stay up later on a school
+    night. What's your tactic?
+- image: questions/7.png
+  options:
+  - text: ' You mention a competitor''s salary, arguing that your salary is too low
+      compared to their offerings. '
+    type: C
+  - text: ' You make a dramatic claim about how your skills are vital to the company''s
+      success, and how a raise is a necessity for you to continue contributing.'
+    type: E
+  - text: ' You try to appeal to your boss''s sense of fairness and empathy, highlighting
+      your personal values and work ethic.'
+    type: D
+  - text: ' You present concrete data about your increased productivity and contributions
+      to the company.'
+    type: A
+  - text: ' You share personal anecdotes about how your hard work has benefited the
+      company, emphasizing your dedication.'
+    type: B
+  text: 'You''re trying to convince your boss that you deserve a raise. What''s your
+    argument? '
+- image: questions/8.png
+  options:
+  - text: ' You present a balanced view, acknowledging the opposing side''s arguments.'
+    type: A
+  - text: ' You use strong evidence and statistics to support your claims, leaving
+      no room for doubt.'
+    type: C
+  - text: ' You use rhetorical questions and rhetorical devices to engage your audience
+      and make them think critically.'
+    type: D
+  - text: ' You create a dramatic narrative that captures the reader''s attention
+      and compels them to agree with you.'
+    type: E
+  - text: ' You present your own opinions clearly and confidently, appealing to your
+      audience''s emotions.'
+    type: B
+  text: You're trying to write a compelling blog post about a controversial topic.
+    What's your approach?
+- image: questions/9.png
+  options:
+  - text: You use humor and lightheartedness to diffuse the situation.
+    type: D
+  - text: You point out that the movie wasn't that bad, but your friend just has bad
+      taste.
+    type: A
+  - text: 'You bring up a personal connection to the movie that makes it more meaningful. '
+    type: E
+  - text: You try to convince your friend that they are wrong about the movie.
+    type: B
+  - text: 'You appeal to their sense of loyalty and friendship, trying to avoid conflict. '
+    type: C
+  text: You're having a disagreement with a friend about a movie. What's your primary
+    defense?
+- image: questions/10.png
+  options:
+  - text: ' You use a combination of humor and manipulation to get your way. '
+    type: E
+  - text: ' You appeal to their sense of fairness and responsibility, reminding them
+      of their duties. '
+    type: B
+  - text: ' You make a deal, offering a reward for a clean room. '
+    type: D
+  - text: ' You threaten to withhold food or other privileges if they don''t clean
+      up. '
+    type: C
+  - text: ' You present a list of chores that need to be done, emphasizing the benefits
+      of a clean living space. '
+    type: A
+  text: You're trying to convince your roommate to do chores. What's your strategy?
+results:
+  A:
+    description: You're a master at turning any argument into a caricature, twisting
+      it to make it easier to attack. You're quick to dismiss any opposing viewpoint,
+      and then triumphantly declare your own superior position. You thrive on simplification
+      and can often be seen dismissing complex arguments by misrepresenting them.
+      You're not a bad person, you just have a knack for making things seem more dramatic
+      than they are.
+    image: results/A.png
+    image_description: A cartoon of a person with a fiery face, holding a stick figure
+      version of themselves and yelling. The stick figure is being attacked by a giant,
+      exaggerated version of their argument, which is made of fire and smoke.
+    title: The Straw Man
+  B:
+    description: You're a master of stirring the pot with powerful emotions. You can
+      evoke feelings of fear, anger, or love to sway your audience, often leaving
+      them with a sense of urgency or a strong desire to support you. You're not afraid
+      to get personal or play on people's biases to make your point. You're persuasive
+      and charismatic, but sometimes your emotional appeals can feel manipulative.
+    image: results/B.png
+    image_description: 'A blurry, surreal image of a person holding a heart made of
+      fire and holding a tear-stained face. '
+    title: The Appeal to Emotion
+  C:
+    description: You thrive on the idea that "if you don't know, then it must be true."
+      You're not afraid to throw out claims without evidence, simply because you can't
+      prove the opposite. You love a good conspiracy theory, and you're always quick
+      to dismiss any evidence that contradicts your beliefs. You often resort to generalizations
+      and sweeping statements, leaving no room for nuance or critical thinking.
+    image: results/C.png
+    image_description: 'A futuristic, cyberpunk city with flying cars and holographic
+      advertisements. In the foreground, a person with a hooded face is holding a
+      glowing orb and shouting "The truth is hidden! The truth is in the shadows!" '
+    title: The Appeal to Ignorance
+  D:
+    description: You're a social chameleon, always seeking validation and approval
+      from the masses. You're a master of bandwagoning, jumping on any trend or popular
+      opinion to bolster your own. You thrive on the "everyone's doing it" mentality
+      and often fail to consider the nuances of a situation. You're a people pleaser,
+      but your actions can be driven by a desire to fit in, rather than by genuine
+      conviction.
+    image: results/D.png
+    image_description: A chaotic collage of people holding signs and wearing bandanas,
+      all shouting in unison. There are flashing lights, smoke, and confetti.
+    title: The Appeal to Popularity
+  E:
+    description: You're a master of distraction, always trying to steer the conversation
+      away from the real issue. You love to throw in irrelevant details, side issues,
+      or even completely fabricated information to confuse your opponent and derail
+      any logical argument. You're a master of deflecting, often by changing the subject
+      or bringing up unrelated points. You might appear well-intentioned, but your
+      tactics are designed to avoid accountability.
+    image: results/E.png
+    image_description: 'A person holding a giant, colorful butterfly net, while surrounded
+      by chaotic, flashing lights and a tangled mess of wires. '
+    title: The Red Herring
+topic: What rhetorical fallacy are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

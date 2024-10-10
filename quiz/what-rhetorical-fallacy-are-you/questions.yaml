@@ -1,0 +1,115 @@
+- image: A picture of a kitchen. There is a window, and the moon is shining through.
+    There is a shadow on the wall. The kitchen is dark and quiet, but there's a bit
+    of light coming from the fridge, and a pool of light nearby.
+  options:
+    A: Get a glass of water.
+    B: Make a sandwich.
+    C: Eat a spoonful of peanut butter.
+    D: Stare into the fridge.
+    E: You forgot your phone, grab it and go back to bed.
+  question: You go to your kitchen in the middle of the night. What do you do?
+- image: A picture of two friends arguing over a plate of grilled cheese. One friend
+    is holding a spatula, the other is holding a knife. They are both looking at the
+    grilled cheese intensely.
+  options:
+    A: ' The classic, buttered-on-both-sides method.'
+    B: ' Using a griddle for a perfect golden-brown exterior. '
+    C: ' The "cheese-only" approach, just cheese on toast.'
+    D: ' A deep fryer for maximum crispy goodness.'
+    E: ' You just grab the bread, slap some cheese on it, and throw it in the microwave.'
+  question: 'You''re arguing with your friend about the best way to make a grilled
+    cheese. What''s your preferred method? '
+- image: A picture of a person with a pineapple tattoo on their forearm. The person
+    is looking directly at the camera, a slight smirk on their face.
+  options:
+    A: ' "That''s interesting. I''ve never seen a pineapple tattoo before."'
+    B: ' "I''m not sure about that, it''s a little out there for me."'
+    C: ' "I''m a bit worried about what my parents would say."'
+    D: ' "It''s a pineapple, you know what they say... you can''t go wrong with pineapple!"'
+    E: ' "That''s a pretty bold choice for a tattoo, but it''s your body, right?"'
+  question: You're on a date, and your date mentions they have a tattoo of a pineapple
+    on their forearm. What is your immediate reaction?
+- image: 'A picture of a person at a party wearing a shirt with a giant, cartoonish
+    spider on it. The person is looking at the spider with a mix of awe and curiosity. '
+  options:
+    A: ' You compliment the person on their fashion sense, admiring the spider''s
+      design.'
+    B: ' You try to get the person to tell you the story behind the shirt.'
+    C: ' You start making spider jokes, hoping to get a reaction from the person.'
+    D: ' You subtly check if the spider is venomous.'
+    E: ' You immediately start looking for a spider web in the room.'
+  question: 'You''re at a party and see someone wearing a shirt with a giant, cartoonish
+    spider on it. You''re instantly intrigued. What''s your next move? '
+- image: A person in a darkened room, their eyes wide with fear, as a faint, ominous
+    sound echoes in the background.
+  options:
+    A: You grab a blanket and try to find a safe place.
+    B: 'You quickly turn on the TV, hoping to distract yourself. '
+    C: You scream in terror, hoping to scare away whatever is making the noise.
+    D: You try to rationalize the noise, convinced it's just the wind or a faulty
+      appliance.
+    E: You start to laugh nervously, trying to convince yourself it's all in your
+      head.
+  question: You're watching a horror movie and your heart is pounding in your chest.  Suddenly,
+    the lights flicker, and you hear a creepy noise. What's your immediate reaction?
+- image: A picture of a teenager pleading with their parents, with a frustrated expression
+    on their face.  A phone is in the background, with a clock displaying a late hour.
+  options:
+    A: ' You appeal to their sense of fairness and logic.'
+    B: ' You threaten to miss out on a fun activity or event.'
+    C: ' You offer to help around the house as a way to earn their trust.'
+    D: ' You play the victim, making them feel bad for not letting you stay up.'
+    E: ' You create a narrative about how much fun staying up late will be. '
+  question: You're trying to convince your family to let you stay up later on a school
+    night. What's your tactic?
+- image: 'A person standing confidently in front of a desk, holding a folder of their
+    accomplishments. '
+  options:
+    A: ' You present concrete data about your increased productivity and contributions
+      to the company.'
+    B: ' You share personal anecdotes about how your hard work has benefited the company,
+      emphasizing your dedication.'
+    C: ' You mention a competitor''s salary, arguing that your salary is too low compared
+      to their offerings. '
+    D: ' You try to appeal to your boss''s sense of fairness and empathy, highlighting
+      your personal values and work ethic.'
+    E: ' You make a dramatic claim about how your skills are vital to the company''s
+      success, and how a raise is a necessity for you to continue contributing.'
+  question: 'You''re trying to convince your boss that you deserve a raise. What''s
+    your argument? '
+- image: A person hunched over a keyboard, with a frustrated expression on their face.
+    Papers are scattered around them.
+  options:
+    A: ' You present a balanced view, acknowledging the opposing side''s arguments.'
+    B: ' You present your own opinions clearly and confidently, appealing to your
+      audience''s emotions.'
+    C: ' You use strong evidence and statistics to support your claims, leaving no
+      room for doubt.'
+    D: ' You use rhetorical questions and rhetorical devices to engage your audience
+      and make them think critically.'
+    E: ' You create a dramatic narrative that captures the reader''s attention and
+      compels them to agree with you.'
+  question: You're trying to write a compelling blog post about a controversial topic.
+    What's your approach?
+- image: 'A split screen, one side showing a person in a happy, excited expression,
+    the other side showing a person frowning. '
+  options:
+    A: You point out that the movie wasn't that bad, but your friend just has bad
+      taste.
+    B: You try to convince your friend that they are wrong about the movie.
+    C: 'You appeal to their sense of loyalty and friendship, trying to avoid conflict. '
+    D: You use humor and lightheartedness to diffuse the situation.
+    E: 'You bring up a personal connection to the movie that makes it more meaningful. '
+  question: You're having a disagreement with a friend about a movie. What's your
+    primary defense?
+- image: A person holding a broom and dustpan, looking exasperated. A messy room in
+    the background.
+  options:
+    A: ' You present a list of chores that need to be done, emphasizing the benefits
+      of a clean living space. '
+    B: ' You appeal to their sense of fairness and responsibility, reminding them
+      of their duties. '
+    C: ' You threaten to withhold food or other privileges if they don''t clean up. '
+    D: ' You make a deal, offering a reward for a clean room. '
+    E: ' You use a combination of humor and manipulation to get your way. '
+  question: You're trying to convince your roommate to do chores. What's your strategy?

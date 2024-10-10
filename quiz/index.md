@@ -32,7 +32,6 @@ This is the home of the Infinite Quiz Machine!
   - [What popular internet meme are you?](/quiz/what-popular-internet-meme-are-you/index.html)
   - [What extremely specific odor are you?](/quiz/what-extremely-specific-odor-are-you/index.html)
   - [How are you going to get out of here?](/quiz/how-are-you-going-to-get-out-of-here/index.html)
-  - [Which rhetorical fallacy are you?](/quiz/which-rhetorical-fallacy-are-you/index.html)
 
 ### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)
@@ -41,6 +40,10 @@ This is the home of the Infinite Quiz Machine!
   - [To which of the elder gods should you pray?](/quiz/to-which-of-the-elder-gods-should-you-pray/index.html)
   - [Which cosmic horror are you devoted to?](/quiz/which-cosmic-horror-are-you-devoted-to/index.html)
   - [What halloween candy are you?](/quiz/what-halloween-candy-are-you/index.html)
+
+### Bad Quizes
+  - [Which rhetorical fallacy are you?](/quiz/which-rhetorical-fallacy-are-you/index.html) - The AI got stuck in a thing. Repeated questions, repeated answers, and not in an entertaining way like the cosmic horror quiz (spoiler alert).
+
 
 ## Ok, but what is it?
 

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat vs Kraken Game</title>
+    <style>
+        #kraken-game-container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="kraken-game-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <script>
+    (function() {
+        class MainScene extends Phaser.Scene {
+            constructor() {
+                super('MainScene');
+            }
+
+            create() {
+                console.log("Create function started");
+
+                // Create wave graphics
+                this.waveGraphics = this.add.graphics();
+
+                // Create boat
+                this.boat = this.add.container(400, 300);
+                
+                // Boat hull (main body)
+                let hull = this.add.graphics();
+                hull.fillStyle(0x8B4513, 1);  // Brown color
+                hull.fillRect(-30, -10, 60, 20);
+
+                // Boat deck
+                let deck = this.add.graphics();
+                deck.fillStyle(0xD2691E, 1);  // Lighter brown
+                deck.fillRect(-25, -15, 50, 5);
+
+                // Boat sail
+                let sail = this.add.graphics();
+                sail.fillStyle(0xFFFFFF, 1);  // White color
+                sail.beginPath();
+                sail.moveTo(0, -40);
+                sail.lineTo(20, 0);
+                sail.lineTo(-20, 0);
+                sail.closePath();
+                sail.fillPath();
+
+                // Add all parts to the boat container
+                this.boat.add([hull, deck, sail]);
+
+                // Add physics to the boat container
+                this.physics.add.existing(this.boat);
+                this.boat.body.setCollideWorldBounds(true);
+
+                // Create coins group
+                this.coins = this.physics.add.group();
+
+                // Create score text
+                this.score = 0;
+                this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
+
+                // Create game over text (hidden initially)
+                this.gameOverText = this.add.text(400, 300, 'YOU LOSE', { 
+                    fontSize: '128px', 
+                    fill: '#FF0000',
+                    fontStyle: 'bold',
+                    stroke: '#000000',
+                    strokeThickness: 6
+                });
+                this.gameOverText.setOrigin(0.5);
+                this.gameOverText.setVisible(false);
+
+                this.cursors = this.input.keyboard.createCursorKeys();
+
+                // Set up coin generation timer
+                this.time.addEvent({
+                    delay: 2000,  // Generate a new coin every 2 seconds
+                    callback: this.generateCoin,
+                    callbackScope: this,
+                    loop: true
+                });
+
+                // Create kraken body
+                this.krakenBody = this.add.circle(0, 0, 30, 0x800080);
+
+                // Create kraken tentacles
+                this.krakenTentacles = [];
+                for (let i = 0; i < 6; i++) {
+                    let angle = (i / 6) * Math.PI * 2;
+                    let x = Math.cos(angle) * 30;  // Start at the edge of the circle
+                    let y = Math.sin(angle) * 30;
+                    let tentacle = this.add.rectangle(x, y, 15, 80, 0x800080);
+                    tentacle.setOrigin(0.5, 0);  // Set origin to the top center
+                    tentacle.angle = angle * (180 / Math.PI) + 90;  // Convert to degrees and rotate 90 degrees
+                    this.krakenTentacles.push(tentacle);
+                }
+
+                // Group kraken body and tentacles
+                this.kraken = this.add.container(0, 0, [this.krakenBody, ...this.krakenTentacles]);
+                this.kraken.setVisible(false);
+
+                // Set up collision between boat and coins
+                this.physics.add.overlap(this.boat, this.coins, this.collectCoin, null, this);
+
+                // Set up kraken appearance timer
+                this.krakenTimer = this.time.addEvent({
+                    delay: 5000,  // Activate kraken every 5 seconds
+                    callback: this.activateKraken,
+                    callbackScope: this,
+                    loop: true
+                });
+
+                this.krakenState = 'inactive';
+                this.isGameOver = false;
+
+                console.log("Create function completed");
+            }
+
+            update(time, delta) {
+                if (this.isGameOver) return;
+
+                // Boat movement
+                if (this.cursors.left.isDown && this.boat.x > 0) {
+                    this.boat.body.setVelocityX(-250);
+                } else if (this.cursors.right.isDown && this.boat.x < this.sys.game.config.width) {
+                    this.boat.body.setVelocityX(250);
+                } else {
+                    this.boat.body.setVelocityX(0);
+                }
+
+                // Animate waves
+                this.waveGraphics.clear();
+                this.waveGraphics.lineStyle(2, 0xffffff, 0.5);
+                this.waveGraphics.beginPath();
+
+                let waves = [];
+                for (let x = 0; x < this.sys.game.config.width; x++) {
+                    const y = Math.sin((x * 0.02) + (time * 0.004)) * 20 + this.sys.game.config.height / 2;
+                    waves.push(y);
+                    if (x === 0) {
+                        this.waveGraphics.moveTo(x, y);
+                    } else {
+                        this.waveGraphics.lineTo(x, y);
+                    }
+                }
+
+                this.waveGraphics.strokePath();
+
+                // Fill water area
+                this.waveGraphics.fillStyle(0x0099ff, 0.5);
+                this.waveGraphics.lineTo(this.sys.game.config.width, this.sys.game.config.height);
+                this.waveGraphics.lineTo(0, this.sys.game.config.height);
+                this.waveGraphics.closePath();
+                this.waveGraphics.fillPath();
+
+                // Adjust boat's position and rotation to match the wave
+                const boatX = Math.floor(this.boat.x);
+                const waveY = waves[boatX];
+                this.boat.y = waveY - 20;  // Offset to place boat on top of the wave
+
+                // Calculate the angle of the wave at the boat's position
+                const nextX = Math.min(boatX + 1, this.sys.game.config.width - 1);
+                const nextY = waves[nextX];
+                const angle = Math.atan2(nextY - waveY, 1);  // 1 is the x-distance between points
+                this.boat.rotation = angle;
+
+                // Update coins position to match waves
+                this.coins.children.entries.forEach(coin => {
+                    const coinX = Math.floor(coin.x);
+                    const coinWaveY = waves[coinX];
+                    coin.y = coinWaveY - 10;  // Offset to place coin on top of the wave
+                });
+
+                // Move and animate kraken
+                if (this.krakenState !== 'inactive') {
+                    if (this.krakenState === 'rising') {
+                        this.kraken.y -= 2;  // Move kraken upwards slowly
+                        if (this.kraken.y <= waves[Math.floor(this.kraken.x)] + 30) {  // Stop at water surface
+                            this.krakenState = 'surfaced';
+                            this.time.delayedCall(1000, this.startKrakenSinking, [], this);
+                        }
+                    } else if (this.krakenState === 'sinking') {
+                        this.kraken.y += 2;  // Move kraken downwards slowly
+                        if (this.kraken.y > this.sys.game.config.height + 50) {
+                            this.krakenState = 'inactive';
+                            this.kraken.setVisible(false);
+                        }
+                    }
+                    
+                    // Animate kraken tentacles
+                    this.krakenTentacles.forEach((tentacle, index) => {
+                        let angle = (index / 6) * Math.PI * 2;
+                        // Wiggle tentacles
+                        let wiggleX = Math.sin((time / 100) + index * 0.5) * 15;
+                        let wiggleY = Math.sin((time / 75) + index) * 15;
+                        tentacle.x = Math.cos(angle) * 30 + wiggleX;
+                        tentacle.y = Math.sin(angle) * 30 + wiggleY;
+                        
+                        // Rotate tentacles
+                        tentacle.angle = angle * (180 / Math.PI) + 90 + Math.sin((time / 80) + index * 0.75) * 20;
+                    });
+                }
+
+                // Check for kraken proximity
+                if (this.krakenState !== 'inactive') {
+                    const distance = Phaser.Math.Distance.Between(this.boat.x, this.boat.y, this.kraken.x, this.kraken.y);
+                    if (distance < 100) {
+                        this.gameOver();
+                    }
+                }
+            }
+
+            generateCoin() {
+                const x = Phaser.Math.Between(0, this.sys.game.config.width);
+                const coin = this.add.circle(x, 0, 10, 0xFFFF00);  // Yellow circle
+                this.physics.add.existing(coin);
+                this.coins.add(coin);
+            }
+
+            collectCoin(boat, coin) {
+                coin.destroy();
+                this.score += 1;
+                this.scoreText.setText('Score: ' + this.score);
+            }
+
+            activateKraken() {
+                if (this.krakenState === 'inactive' && !this.isGameOver) {
+                    this.kraken.setVisible(true);
+                    this.kraken.x = this.boat.x;  // Set initial position to boat's x-position
+                    this.kraken.y = this.sys.game.config.height + 50;  // Start below the screen
+                    this.krakenState = 'rising';
+
+                    // Reset tentacle positions
+                    this.krakenTentacles.forEach((tentacle, index) => {
+                        let angle = (index / 6) * Math.PI * 2;
+                        tentacle.setPosition(Math.cos(angle) * 30, Math.sin(angle) * 30);
+                        tentacle.angle = angle * (180 / Math.PI) + 90;
+                        tentacle.setScale(1);
+                    });
+                }
+            }
+
+            startKrakenSinking() {
+                this.krakenState = 'sinking';
+            }
+
+            gameOver() {
+                this.isGameOver = true;
+                this.boat.body.setVelocity(0);
+                this.gameOverText.setVisible(true);
+                
+                this.time.delayedCall(5000, () => {
+                    this.scene.restart();
+                    this.score = 0;
+                    this.isGameOver = false;
+                }, [], this);
+            }
+        }
+
+        const config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            parent: 'kraken-game-container',
+            backgroundColor: '#1a98d5',  // Bright ocean blue
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 0 },
+                    debug: false
+                }
+            },
+            scene: MainScene
+        };
+
+        function startGame() {
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                new Phaser.Game(config);
+            } else {
+                document.addEventListener('DOMContentLoaded', () => {
+                    new Phaser.Game(config);
+                });
+            }
+        }
+
+        startGame();
+    })();
+    </script>
+</body>
+</html>
+

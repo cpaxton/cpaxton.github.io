@@ -54,3 +54,7 @@ The quizzes are all a bit weird -- something that comes very naturally to a larg
 I think it's extremely fun and have gotten a ton of enjoyment out of running through endless, bizarre, horribly illustrated personality tests -- that somehow still make sense a lot of the time!
 
 I hope you enjoy them too. If you have any feedback, or want to see more, please let me know! You can reach me on [Twitter/X](https://twitter.com/chris_j_paxton) or [Bluesky](https://bsky.app/profile/cpaxton.bsky.social).
+
+## Play More Games
+
+- [Boat vs Kraken Game](/boat_game/index.html) - Use the arrow keys to move the boat and avoid the kraken. Collect the coins for points.

@@ -12,6 +12,7 @@ This is the home of the Infinite Quiz Machine!
 ## Quizes 
 
   - [What crustacean are you?](/quiz/what-kind-ofcrustacean-are-you/index.html)
+  - [What houseplant are you?](/quiz/what-houseplant-are-you/index.html)
   - [What kind of sandwich are you?](/quiz/what-kind-of-sandwich-are-you/index.html)
   - [What kind of worm are you?](/quiz/what-kind-of-worm-are-you/index.html)
   - [What kind of tooth are you?](/quiz/what-kind-of-tooth-are-you/index.html)

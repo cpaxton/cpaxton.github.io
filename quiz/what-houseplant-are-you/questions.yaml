@@ -1,0 +1,90 @@
+- image: A picture of a party with a bunch of people. There is a table with a bowl
+    of fruit and a plate of cookies. There is a person in the corner wearing a hat
+    and holding a plant.
+  options:
+    A: A bouquet of flowers.
+    B: A bowl of homemade chips.
+    C: A bottle of wine.
+    D: A bag of candy.
+    E: A homemade cake.
+  question: You're invited to a party. What do you bring?
+- image: A picture of a lush green jungle with vibrant flowers and exotic plants.
+  options:
+    A: Green
+    B: Purple
+    C: Blue
+    D: Yellow
+    E: Orange
+  question: What is your favorite color?
+- image: A picture of a person standing in a dark room with a single spotlight shining
+    on them.
+  options:
+    A: Spiders
+    B: Heights
+    C: The dark
+    D: Public speaking
+    E: Being alone
+  question: ' What is your biggest fear?'
+- image: A picture of a person floating in a hot air balloon over a surreal landscape
+    with floating islands and rainbow-colored clouds.
+  options:
+    A: A relaxing beach vacation.
+    B: A backpacking trip through a foreign country.
+    C: A luxurious spa retreat.
+    D: A road trip across the country.
+    E: A solo adventure in a foreign country.
+  question: What is your ideal vacation?
+- image: A picture of a person with a disgusted expression, holding a plate of food
+    with a single, unidentifiable, green blob on it.
+  options:
+    A: People who talk with their mouths full.
+    B: People who don't say thank you.
+    C: People who leave their dirty dishes in the sink.
+    D: People who interrupt you.
+    E: People who don't know how to use a fork.
+  question: What is your biggest pet peeve?
+- image: A picture of a person with glowing green eyes, surrounded by a swirling vortex
+    of energy.
+  options:
+    A: Telekinesis
+    B: Invisibility
+    C: Super speed
+    D: Flight
+    E: The ability to control the weather
+  question: If you could have any superpower, what would it be?
+- image: A picture of a person dancing in a disco ball-lit room, surrounded by colorful
+    lights and people.
+  options:
+    A: Classical music
+    B: Pop music
+    C: Rock music
+    D: Electronic music
+    E: Jazz music
+  question: What is your favorite type of music?
+- image: A picture of a person working in a futuristic office with holographic displays
+    and robots.
+  options:
+    A: A scientist
+    B: A musician
+    C: A writer
+    D: A chef
+    E: A social media influencer
+  question: What is your dream job?
+- image: A picture of a person standing in front of a mirror, looking at their reflection
+    with a sad expression.
+  options:
+    A: Not traveling more.
+    B: Not pursuing my dreams.
+    C: Not being more confident.
+    D: Not spending more time with loved ones.
+    E: Not being more grateful.
+  question: What is your biggest regret?
+- image: A picture of a person standing in a field of lavender, surrounded by a beautiful
+    sunset.
+  options:
+    A: Freshly cut grass
+    B: Rain
+    C: Vanilla
+    D: Coffee
+    E: Cinnamon
+  question: What is your favorite smell?

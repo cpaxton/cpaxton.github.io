@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: A homemade cake.
+    type: E
+  - text: A bouquet of flowers.
+    type: A
+  - text: A bottle of wine.
+    type: C
+  - text: A bowl of homemade chips.
+    type: B
+  - text: A bag of candy.
+    type: D
+  text: You're invited to a party. What do you bring?
+- image: questions/2.png
+  options:
+  - text: Green
+    type: A
+  - text: Orange
+    type: E
+  - text: Yellow
+    type: D
+  - text: Purple
+    type: B
+  - text: Blue
+    type: C
+  text: What is your favorite color?
+- image: questions/3.png
+  options:
+  - text: Spiders
+    type: A
+  - text: Public speaking
+    type: D
+  - text: The dark
+    type: C
+  - text: Being alone
+    type: E
+  - text: Heights
+    type: B
+  text: ' What is your biggest fear?'
+- image: questions/4.png
+  options:
+  - text: A road trip across the country.
+    type: D
+  - text: A relaxing beach vacation.
+    type: A
+  - text: A luxurious spa retreat.
+    type: C
+  - text: A solo adventure in a foreign country.
+    type: E
+  - text: A backpacking trip through a foreign country.
+    type: B
+  text: What is your ideal vacation?
+- image: questions/5.png
+  options:
+  - text: People who talk with their mouths full.
+    type: A
+  - text: People who don't know how to use a fork.
+    type: E
+  - text: People who don't say thank you.
+    type: B
+  - text: People who interrupt you.
+    type: D
+  - text: People who leave their dirty dishes in the sink.
+    type: C
+  text: What is your biggest pet peeve?
+- image: questions/6.png
+  options:
+  - text: Invisibility
+    type: B
+  - text: Flight
+    type: D
+  - text: Super speed
+    type: C
+  - text: The ability to control the weather
+    type: E
+  - text: Telekinesis
+    type: A
+  text: If you could have any superpower, what would it be?
+- image: questions/7.png
+  options:
+  - text: Jazz music
+    type: E
+  - text: Classical music
+    type: A
+  - text: Electronic music
+    type: D
+  - text: Rock music
+    type: C
+  - text: Pop music
+    type: B
+  text: What is your favorite type of music?
+- image: questions/8.png
+  options:
+  - text: A musician
+    type: B
+  - text: A social media influencer
+    type: E
+  - text: A scientist
+    type: A
+  - text: A writer
+    type: C
+  - text: A chef
+    type: D
+  text: What is your dream job?
+- image: questions/9.png
+  options:
+  - text: Not pursuing my dreams.
+    type: B
+  - text: Not traveling more.
+    type: A
+  - text: Not spending more time with loved ones.
+    type: D
+  - text: Not being more grateful.
+    type: E
+  - text: Not being more confident.
+    type: C
+  text: What is your biggest regret?
+- image: questions/10.png
+  options:
+  - text: Cinnamon
+    type: E
+  - text: Coffee
+    type: D
+  - text: Rain
+    type: B
+  - text: Freshly cut grass
+    type: A
+  - text: Vanilla
+    type: C
+  text: What is your favorite smell?
+results:
+  A:
+    description: You are the epitome of calm and serenity. You are a quiet observer,
+      a steady presence in a world that often feels chaotic. You are a symbol of peace
+      and tranquility, and you bring a sense of calm to any space you inhabit. You
+      are patient and understanding, and you are always there to offer a listening
+      ear. Your strength lies in your ability to adapt and thrive in even the most
+      challenging environments.
+    image: results/A.png
+    image_description: 'A close-up shot of a Peace Lily with its elegant white flowers
+      and glossy green leaves. The plant is placed in a modern, minimalist pot with
+      a sleek, white finish. The background is a soft, neutral color, such as light
+      grey or beige. '
+    title: ' The Peace Lily'
+  B:
+    description: You are a force of nature, a resilient and independent spirit. You
+      are a survivor, thriving in even the most challenging conditions. You are a
+      symbol of strength and perseverance, and you are always ready to face any obstacle
+      that comes your way. You are a bit of a loner, but you are fiercely loyal to
+      those you trust. Your strength lies in your ability to adapt and thrive in even
+      the most challenging environments.
+    image: results/B.png
+    image_description: 'A close-up shot of a Snake Plant with its striking, upright
+      leaves. The leaves are a deep green color, with a slight sheen. The plant is
+      placed in a simple, terracotta pot with a slightly worn finish. The background
+      is a muted, earthy tone, such as brown or beige. '
+    title: The Snake Plant
+  C:
+    description: You are a creature of extremes, a paradox of beauty and brutality.
+      You are a force of nature, a predator with a taste for the unexpected. You are
+      a symbol of transformation and change, and you are always ready to embrace the
+      unknown. You are a bit of a wild card, and you can be unpredictable at times.
+      Your strength lies in your ability to adapt and thrive in even the most challenging
+      environments.
+    image: results/C.png
+    image_description: 'A close-up shot of a Venus Flytrap with its vibrant red, hinged
+      leaves. The leaves are open, revealing the glistening, white digestive fluid
+      inside. The background is a dark, shadowy green, with a hint of red. '
+    title: The Venus Flytrap
+  D:
+    description: You are a vibrant and energetic individual, always ready to take
+      on the world. You are a symbol of growth and expansion, and you are always looking
+      for new ways to learn and grow. You are a bit of a free spirit, and you are
+      always up for an adventure. You are a bit of a dreamer, and you are always looking
+      for the next big thing. Your strength lies in your ability to adapt and thrive
+      in even the most challenging environments.
+    image: results/D.png
+    image_description: 'A close-up shot of a Rubber Plant with its large, glossy leaves.
+      The leaves are a deep green color, with a slight sheen. The plant is placed
+      in a modern, minimalist pot with a sleek, black finish. The background is a
+      vibrant, colorful pattern, such as a geometric design or a floral print. '
+    title: The Rubber Plant
+  E:
+    description: You are a master of resilience, a survivor who thrives in even the
+      most challenging conditions. You are a symbol of strength and independence,
+      and you are always ready to face any obstacle that comes your way. You are a
+      bit of a loner, but you are fiercely loyal to those you trust. Your strength
+      lies in your ability to adapt and thrive in even the most challenging environments.
+    image: results/E.png
+    image_description: 'A close-up shot of a ZZ Plant with its thick, glossy leaves.
+      The leaves are a deep green color, with a slight sheen. The plant is placed
+      in a simple, terracotta pot with a slightly worn finish. The background is a
+      muted, earthy tone, such as brown or beige. '
+    title: The  ZZ Plant
+topic: What houseplant are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

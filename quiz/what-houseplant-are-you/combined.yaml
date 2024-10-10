@@ -1,0 +1,196 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: A homemade cake.
+    type: E
+  - text: A bottle of wine.
+    type: C
+  - text: A bag of candy.
+    type: D
+  - text: A bowl of homemade chips.
+    type: B
+  - text: A bouquet of flowers.
+    type: A
+  text: You're invited to a party. What do you bring?
+- image: questions/2.png
+  options:
+  - text: Blue
+    type: C
+  - text: Yellow
+    type: D
+  - text: Purple
+    type: B
+  - text: Orange
+    type: E
+  - text: Green
+    type: A
+  text: What is your favorite color?
+- image: questions/3.png
+  options:
+  - text: Being alone
+    type: E
+  - text: Spiders
+    type: A
+  - text: Heights
+    type: B
+  - text: Public speaking
+    type: D
+  - text: The dark
+    type: C
+  text: ' What is your biggest fear?'
+- image: questions/4.png
+  options:
+  - text: A solo adventure in a foreign country.
+    type: E
+  - text: A backpacking trip through a foreign country.
+    type: B
+  - text: A relaxing beach vacation.
+    type: A
+  - text: A luxurious spa retreat.
+    type: C
+  - text: A road trip across the country.
+    type: D
+  text: What is your ideal vacation?
+- image: questions/5.png
+  options:
+  - text: People who don't know how to use a fork.
+    type: E
+  - text: People who talk with their mouths full.
+    type: A
+  - text: People who leave their dirty dishes in the sink.
+    type: C
+  - text: People who don't say thank you.
+    type: B
+  - text: People who interrupt you.
+    type: D
+  text: What is your biggest pet peeve?
+- image: questions/6.png
+  options:
+  - text: Super speed
+    type: C
+  - text: Flight
+    type: D
+  - text: Invisibility
+    type: B
+  - text: Telekinesis
+    type: A
+  - text: The ability to control the weather
+    type: E
+  text: If you could have any superpower, what would it be?
+- image: questions/7.png
+  options:
+  - text: Classical music
+    type: A
+  - text: Pop music
+    type: B
+  - text: Jazz music
+    type: E
+  - text: Rock music
+    type: C
+  - text: Electronic music
+    type: D
+  text: What is your favorite type of music?
+- image: questions/8.png
+  options:
+  - text: A scientist
+    type: A
+  - text: A writer
+    type: C
+  - text: A musician
+    type: B
+  - text: A social media influencer
+    type: E
+  - text: A chef
+    type: D
+  text: What is your dream job?
+- image: questions/9.png
+  options:
+  - text: Not being more confident.
+    type: C
+  - text: Not being more grateful.
+    type: E
+  - text: Not pursuing my dreams.
+    type: B
+  - text: Not traveling more.
+    type: A
+  - text: Not spending more time with loved ones.
+    type: D
+  text: What is your biggest regret?
+- image: questions/10.png
+  options:
+  - text: Rain
+    type: B
+  - text: Vanilla
+    type: C
+  - text: Coffee
+    type: D
+  - text: Freshly cut grass
+    type: A
+  - text: Cinnamon
+    type: E
+  text: What is your favorite smell?
+results:
+  A:
+    description: You are the epitome of calm and serenity. You are a quiet observer,
+      a steady presence in a world that often feels chaotic. You are a symbol of peace
+      and tranquility, and you bring a sense of calm to any space you inhabit. You
+      are patient and understanding, and you are always there to offer a listening
+      ear. Your strength lies in your ability to adapt and thrive in even the most
+      challenging environments.
+    image: results/A.png
+    image_description: 'A close-up shot of a Peace Lily with its elegant white flowers
+      and glossy green leaves. The plant is placed in a modern, minimalist pot with
+      a sleek, white finish. The background is a soft, neutral color, such as light
+      grey or beige. '
+    title: ' The Peace Lily'
+  B:
+    description: You are a force of nature, a resilient and independent spirit. You
+      are a survivor, thriving in even the most challenging conditions. You are a
+      symbol of strength and perseverance, and you are always ready to face any obstacle
+      that comes your way. You are a bit of a loner, but you are fiercely loyal to
+      those you trust. Your strength lies in your ability to adapt and thrive in even
+      the most challenging environments.
+    image: results/B.png
+    image_description: 'A close-up shot of a Snake Plant with its striking, upright
+      leaves. The leaves are a deep green color, with a slight sheen. The plant is
+      placed in a simple, terracotta pot with a slightly worn finish. The background
+      is a muted, earthy tone, such as brown or beige. '
+    title: The Snake Plant
+  C:
+    description: You are a creature of extremes, a paradox of beauty and brutality.
+      You are a force of nature, a predator with a taste for the unexpected. You are
+      a symbol of transformation and change, and you are always ready to embrace the
+      unknown. You are a bit of a wild card, and you can be unpredictable at times.
+      Your strength lies in your ability to adapt and thrive in even the most challenging
+      environments.
+    image: results/C.png
+    image_description: 'A close-up shot of a Venus Flytrap with its vibrant red, hinged
+      leaves. The leaves are open, revealing the glistening, white digestive fluid
+      inside. The background is a dark, shadowy green, with a hint of red. '
+    title: The Venus Flytrap
+  D:
+    description: You are a vibrant and energetic individual, always ready to take
+      on the world. You are a symbol of growth and expansion, and you are always looking
+      for new ways to learn and grow. You are a bit of a free spirit, and you are
+      always up for an adventure. You are a bit of a dreamer, and you are always looking
+      for the next big thing. Your strength lies in your ability to adapt and thrive
+      in even the most challenging environments.
+    image: results/D.png
+    image_description: 'A close-up shot of a Rubber Plant with its large, glossy leaves.
+      The leaves are a deep green color, with a slight sheen. The plant is placed
+      in a modern, minimalist pot with a sleek, black finish. The background is a
+      vibrant, colorful pattern, such as a geometric design or a floral print. '
+    title: The Rubber Plant
+  E:
+    description: You are a master of resilience, a survivor who thrives in even the
+      most challenging conditions. You are a symbol of strength and independence,
+      and you are always ready to face any obstacle that comes your way. You are a
+      bit of a loner, but you are fiercely loyal to those you trust. Your strength
+      lies in your ability to adapt and thrive in even the most challenging environments.
+    image: results/E.png
+    image_description: 'A close-up shot of a ZZ Plant with its thick, glossy leaves.
+      The leaves are a deep green color, with a slight sheen. The plant is placed
+      in a simple, terracotta pot with a slightly worn finish. The background is a
+      muted, earthy tone, such as brown or beige. '
+    title: The  ZZ Plant
+topic: What houseplant are you?

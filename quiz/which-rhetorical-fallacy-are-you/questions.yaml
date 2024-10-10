@@ -1,0 +1,94 @@
+- image: A party with people dancing and laughing. There is a DJ booth in the corner,
+    and a bar in the background. There is a large group of people in the center of
+    the room, all talking and laughing.
+  options:
+    A: ' Start a conversation with someone new.'
+    B: ' Find a quiet corner to relax and observe.'
+    C: ' Dance with the person you are most attracted to.'
+    D: ' Go to the kitchen and grab a snack.'
+    E: ' Start a conversation with someone you already know.'
+  question: You are at a party. What do you do?
+- image: A plate of food with a variety of colors and textures. There is a fork and
+    knife next to it.
+  options:
+    A: ' "This is the best food I''ve ever had!"'
+    B: ' "You''ll love it, it''s so delicious!"'
+    C: ' "Everyone is talking about this new restaurant, you have to try it!"'
+    D: ' "It''s a new experience, you''ll be glad you tried it."'
+    E: ' "It''s the only food that can satisfy your cravings."'
+  question: You are trying to convince your friend to try a new type of food. What
+    do you say?
+- image: A person sitting in a chair, looking nervous. There is a person in a suit
+    standing in front of them.
+  options:
+    A: ' "I''m a perfectionist, and sometimes I get too caught up in details."'
+    B: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    C: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    D: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    E: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+  question: You are at a job interview. What do you do when the interviewer asks you
+    about your weaknesses?
+- image: A concert stage with a band playing. There are people in the audience singing
+    and dancing.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?
+- image: A person standing in front of a mirror, looking at their reflection.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?
+- image: A person standing in front of a mirror, looking at their reflection.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?
+- image: A person standing in front of a mirror, looking at their reflection.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?
+- image: A person standing in front of a mirror, looking at their reflection.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?
+- image: A person standing in front of a mirror, looking at their reflection.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?
+- image: A person standing in front of a mirror, looking at their reflection.
+  options:
+    A: ' "This band is amazing, you have to see them live!"'
+    B: ' "I know you''ll love this band, they''re so popular!"'
+    C: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    D: ' "This is the only concert you''ll want to go to this year!"'
+    E: ' "You''ll regret not going to this concert!"'
+  question: You are trying to convince your friend to go to a concert with you. What
+    do you say?

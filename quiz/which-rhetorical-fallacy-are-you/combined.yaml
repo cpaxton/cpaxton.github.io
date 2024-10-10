@@ -1,0 +1,205 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Go to the kitchen and grab a snack.'
+    type: D
+  - text: ' Find a quiet corner to relax and observe.'
+    type: B
+  - text: ' Start a conversation with someone new.'
+    type: A
+  - text: ' Dance with the person you are most attracted to.'
+    type: C
+  - text: ' Start a conversation with someone you already know.'
+    type: E
+  text: You are at a party. What do you do?
+- image: questions/2.png
+  options:
+  - text: ' "You''ll love it, it''s so delicious!"'
+    type: B
+  - text: ' "It''s the only food that can satisfy your cravings."'
+    type: E
+  - text: ' "This is the best food I''ve ever had!"'
+    type: A
+  - text: ' "Everyone is talking about this new restaurant, you have to try it!"'
+    type: C
+  - text: ' "It''s a new experience, you''ll be glad you tried it."'
+    type: D
+  text: You are trying to convince your friend to try a new type of food. What do
+    you say?
+- image: questions/3.png
+  options:
+  - text: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    type: C
+  - text: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    type: B
+  - text: ' "I''m a perfectionist, and sometimes I get too caught up in details."'
+    type: A
+  - text: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    type: E
+  - text: ' "I''m a bit of a perfectionist, and sometimes I get too caught up in details."'
+    type: D
+  text: You are at a job interview. What do you do when the interviewer asks you about
+    your weaknesses?
+- image: questions/4.png
+  options:
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+- image: questions/5.png
+  options:
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+- image: questions/6.png
+  options:
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+- image: questions/7.png
+  options:
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+- image: questions/8.png
+  options:
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+- image: questions/9.png
+  options:
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+- image: questions/10.png
+  options:
+  - text: ' "This is the best concert I''ve ever been to, you''ll have a blast!"'
+    type: C
+  - text: ' "I know you''ll love this band, they''re so popular!"'
+    type: B
+  - text: ' "You''ll regret not going to this concert!"'
+    type: E
+  - text: ' "This is the only concert you''ll want to go to this year!"'
+    type: D
+  - text: ' "This band is amazing, you have to see them live!"'
+    type: A
+  text: You are trying to convince your friend to go to a concert with you. What do
+    you say?
+results:
+  A:
+    description: You're the life of the party, the one everyone gravitates towards.
+      You thrive on the energy of the crowd, and you're always eager to share your
+      opinions, even if they're not always the most well-reasoned. You're a natural
+      leader, and you're not afraid to speak your mind, even if it means going against
+      the grain. Your strength lies in your ability to connect with people and inspire
+      them to follow you. However, you can sometimes be swayed by the opinions of
+      others, and you may not always be able to think for yourself.
+    image: results/A.png
+    image_description: 'A group of people cheering and clapping, with a spotlight
+      shining on a charismatic individual in the center. The individual is smiling
+      and waving, and they are surrounded by a sea of faces. '
+    title: Appeal to Popularity
+  B:
+    description: You're a master of stirring the pot, and you're not afraid to get
+      people riled up. You're passionate about your beliefs, and you're not afraid
+      to let people know how you feel. You can be quite persuasive, and you're always
+      ready to defend your position, even if it means resorting to emotional appeals.
+      Your strength lies in your ability to connect with people on a deep level, and
+      you're always ready to fight for what you believe in. However, you can sometimes
+      be too emotional, and you may not always be able to think clearly under pressure.
+    image: results/B.png
+    image_description: 'A person standing in front of a roaring fire, their eyes filled
+      with intensity and determination. They are holding a burning torch aloft, and
+      their expression is one of fierce passion. '
+    title: Appeal to Emotion
+  C:
+    description: You're a master of twisting arguments to make them easier to attack.
+      You love to create a caricature of your opponent's position, exaggerating their
+      claims and making them seem ridiculous. You're always ready to jump on any perceived
+      weakness, and you're not afraid to use it against your opponent. Your strength
+      lies in your ability to create a sense of conflict, and you're always ready
+      to fight for your side. However, you can sometimes be too quick to attack, and
+      you may not always be able to see the bigger picture.
+    image: results/C.png
+    image_description: 'A cartoonish depiction of a person with a distorted face and
+      exaggerated features, holding a crumpled piece of paper with a distorted argument
+      written on it. '
+    title: Straw Man
+  D:
+    description: You're a master of attacking the person, rather than the argument.
+      You're quick to point out flaws in your opponent's character, and you're not
+      afraid to use personal attacks to discredit them. You're always ready to throw
+      mud at your opponent, and you're not afraid to use it to win an argument. Your
+      strength lies in your ability to make people feel uncomfortable, and you're
+      always ready to fight dirty. However, you can sometimes be too focused on personal
+      attacks, and you may not always be able to make a strong case for your own position.
+    image: results/D.png
+    image_description: 'A person with a scowling face and a clenched fist, standing
+      in front of a large, menacing shadow. '
+    title: Ad Hominem
+  E:
+    description: You're a master of the "it's just not proven" argument. You love
+      to point out that something hasn't been proven, and you're not afraid to use
+      that as a reason to dismiss it. You're always ready to throw up your hands and
+      say "we don't know" when faced with a difficult question. Your strength lies
+      in your ability to avoid responsibility, and you're always ready to avoid a
+      difficult conversation. However, you can sometimes be too quick to dismiss things
+      without evidence, and you may not always be able to think critically.
+    image: results/E.png
+    image_description: 'A person with their hands up in the air, looking confused
+      and uncertain. They are surrounded by a swirling vortex of doubt and uncertainty. '
+    title: Appeal to Ignorance
+topic: Which rhetorical fallacy are you

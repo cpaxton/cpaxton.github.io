@@ -1,0 +1,68 @@
+A:
+  description: You're the life of the party, the one everyone gravitates towards.
+    You thrive on the energy of the crowd, and you're always eager to share your opinions,
+    even if they're not always the most well-reasoned. You're a natural leader, and
+    you're not afraid to speak your mind, even if it means going against the grain.
+    Your strength lies in your ability to connect with people and inspire them to
+    follow you. However, you can sometimes be swayed by the opinions of others, and
+    you may not always be able to think for yourself.
+  image: 'A group of people cheering and clapping, with a spotlight shining on a charismatic
+    individual in the center. The individual is smiling and waving, and they are surrounded
+    by a sea of faces. '
+  letter: A
+  result: Appeal to Popularity
+  topic: Which rhetorical fallacy are you
+B:
+  description: You're a master of stirring the pot, and you're not afraid to get people
+    riled up. You're passionate about your beliefs, and you're not afraid to let people
+    know how you feel. You can be quite persuasive, and you're always ready to defend
+    your position, even if it means resorting to emotional appeals. Your strength
+    lies in your ability to connect with people on a deep level, and you're always
+    ready to fight for what you believe in. However, you can sometimes be too emotional,
+    and you may not always be able to think clearly under pressure.
+  image: 'A person standing in front of a roaring fire, their eyes filled with intensity
+    and determination. They are holding a burning torch aloft, and their expression
+    is one of fierce passion. '
+  letter: B
+  result: Appeal to Emotion
+  topic: Which rhetorical fallacy are you
+C:
+  description: You're a master of twisting arguments to make them easier to attack.
+    You love to create a caricature of your opponent's position, exaggerating their
+    claims and making them seem ridiculous. You're always ready to jump on any perceived
+    weakness, and you're not afraid to use it against your opponent. Your strength
+    lies in your ability to create a sense of conflict, and you're always ready to
+    fight for your side. However, you can sometimes be too quick to attack, and you
+    may not always be able to see the bigger picture.
+  image: 'A cartoonish depiction of a person with a distorted face and exaggerated
+    features, holding a crumpled piece of paper with a distorted argument written
+    on it. '
+  letter: C
+  result: Straw Man
+  topic: Which rhetorical fallacy are you
+D:
+  description: You're a master of attacking the person, rather than the argument.
+    You're quick to point out flaws in your opponent's character, and you're not afraid
+    to use personal attacks to discredit them. You're always ready to throw mud at
+    your opponent, and you're not afraid to use it to win an argument. Your strength
+    lies in your ability to make people feel uncomfortable, and you're always ready
+    to fight dirty. However, you can sometimes be too focused on personal attacks,
+    and you may not always be able to make a strong case for your own position.
+  image: 'A person with a scowling face and a clenched fist, standing in front of
+    a large, menacing shadow. '
+  letter: D
+  result: Ad Hominem
+  topic: Which rhetorical fallacy are you
+E:
+  description: You're a master of the "it's just not proven" argument. You love to
+    point out that something hasn't been proven, and you're not afraid to use that
+    as a reason to dismiss it. You're always ready to throw up your hands and say
+    "we don't know" when faced with a difficult question. Your strength lies in your
+    ability to avoid responsibility, and you're always ready to avoid a difficult
+    conversation. However, you can sometimes be too quick to dismiss things without
+    evidence, and you may not always be able to think critically.
+  image: 'A person with their hands up in the air, looking confused and uncertain.
+    They are surrounded by a swirling vortex of doubt and uncertainty. '
+  letter: E
+  result: Appeal to Ignorance
+  topic: Which rhetorical fallacy are you

@@ -32,6 +32,7 @@ This is the home of the Infinite Quiz Machine!
   - [What popular internet meme are you?](/quiz/what-popular-internet-meme-are-you/index.html)
   - [What extremely specific odor are you?](/quiz/what-extremely-specific-odor-are-you/index.html)
   - [How are you going to get out of here?](/quiz/how-are-you-going-to-get-out-of-here/index.html)
+  - [Which rhetorical fallacy are you?](/quiz/which-rhetorical-fallacy-are-you/index.html)
 
 ### Halloween Quizes
   - [What halloween creature are you?](/quiz/what-halloween-creature-are-you/index.html)

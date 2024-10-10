@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: The Electric Slide
+    type: A
+  - text: You just stand there awkwardly.
+    type: E
+  - text: The Cha Cha Slide
+    type: D
+  - text: The Macarena
+    type: B
+  - text: The Running Man
+    type: C
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: You're too full to eat anything
+    type: C
+  - text: You're too busy thinking about the chips
+    type: D
+  - text: The delicious meal
+    type: A
+  - text: You're a vegetarian and refuse to eat meat
+    type: E
+  - text: The lifetime supply of your favorite snack
+    type: B
+  text: You're offered a choice between a delicious meal and a lifetime supply of
+    your favorite snack. What do you choose?
+- image: questions/3.png
+  options:
+  - text: The ability to teleport
+    type: E
+  - text: Invisibility
+    type: B
+  - text: The ability to speak to animals
+    type: D
+  - text: Telekinesis
+    type: A
+  - text: The ability to control the weather
+    type: C
+  text: ' If you could have any superpower, what would it be?  '
+- image: questions/4.png
+  options:
+  - text: A secluded cabin in the woods
+    type: B
+  - text: A bustling city with endless entertainment
+    type: C
+  - text: A historical site with ancient ruins
+    type: D
+  - text: A tropical island with white sand and crystal clear water
+    type: A
+  - text: A space station orbiting Earth
+    type: E
+  text: What's your ideal vacation destination?
+- image: questions/5.png
+  options:
+  - text: Losing your sense of smell
+    type: B
+  - text: Being trapped in a dark place
+    type: C
+  - text: Losing your ability to swim
+    type: E
+  - text: Being forgotten
+    type: D
+  - text: Being alone
+    type: A
+  text: What's your biggest fear?
+- image: questions/6.png
+  options:
+  - text: A giant squid
+    type: E
+  - text: A cat
+    type: D
+  - text: A tiger
+    type: B
+  - text: A lion
+    type: A
+  - text: A dog
+    type: C
+  text: ' If you could have any animal as a pet, what would it be?'
+- image: questions/7.png
+  options:
+  - text: Blue
+    type: A
+  - text: Green
+    type: B
+  - text: Purple
+    type: C
+  - text: Orange
+    type: D
+  - text: Pink
+    type: E
+  text: What's your favorite color?
+- image: questions/8.png
+  options:
+  - text: Not being more present
+    type: E
+  - text: Not traveling more
+    type: B
+  - text: Not being more successful
+    type: D
+  - text: Not taking more risks
+    type: A
+  - text: Not being more kind
+    type: C
+  text: What's your biggest regret?
+- image: questions/9.png
+  options:
+  - text: Pop music
+    type: B
+  - text: Electronic music
+    type: D
+  - text: Rock music
+    type: C
+  - text: Classical music
+    type: A
+  - text: Jazz music
+    type: E
+  text: What's your favorite type of music?
+- image: questions/10.png
+  options:
+  - text: A scientist
+    type: C
+  - text: A musician
+    type: B
+  - text: A clam farmer
+    type: E
+  - text: A writer
+    type: D
+  - text: A chef
+    type: A
+  text: What's your dream job?
+results:
+  A:
+    description: You are the ultimate enigma, a creature of immense intelligence and
+      power. You are a master of disguise, able to blend seamlessly into your surroundings
+      and manipulate your environment to your will. You are a creature of mystery
+      and intrigue, and your true nature is a source of endless fascination. You are
+      a force to be reckoned with, and your presence commands respect.
+    image: results/A.png
+    image_description: 'A photorealistic image of a giant Pacific octopus, its tentacles
+      wrapped around a coral reef. The octopus is a vibrant blue and purple, with
+      large, expressive eyes. Its skin is textured and detailed, with intricate patterns
+      and markings. The octopus is surrounded by a vibrant coral reef, with colorful
+      fish darting through the coral branches. '
+    title: The Giant Pacific Octopus
+  B:
+    description: You are a creature of beauty and danger, a paradox of grace and ferocity.
+      You are a master of seduction, drawing in your prey with your alluring beauty,
+      only to trap them in your deadly embrace. You are a force of nature, capable
+      of both great love and great destruction. You are a reminder that beauty can
+      be deceptive, and that even the most innocent of creatures can harbor a dark
+      side.
+    image: results/B.png
+    image_description: 'A close-up photo of a Venus flytrap, its leaves open and its
+      digestive juices glistening. The flytrap is a vibrant green, with a deep red
+      center. The flytrap is surrounded by a lush green background, with a few small
+      insects crawling around the edges. '
+    title: The Venus Flytrap
+  C:
+    description: You are a chameleon of the sea, capable of mimicking the appearance
+      and behavior of other creatures. You are a master of disguise, able to blend
+      seamlessly into your surroundings and deceive your prey. You are a creature
+      of illusion and deception, and your true nature is a mystery to all who encounter
+      you. You are a master of survival, using your cunning and adaptability to thrive
+      in the most challenging environments.
+    image: results/C.png
+    image_description: 'A photorealistic image of a mimic octopus, camouflaged against
+      a coral reef. The octopus is a vibrant orange and yellow, with a large, expressive
+      eye. Its skin is textured and detailed, with intricate patterns and markings.
+      The octopus is surrounded by a vibrant coral reef, with colorful fish darting
+      through the coral branches. '
+    title: The Mimic Octopus
+  D:
+    description: You are a creature of elegance and grace, a symbol of beauty and
+      resilience. You are a master of self-expression, using your vibrant colors and
+      intricate patterns to communicate with the world around you. You are a creature
+      of the deep, capable of surviving in the most challenging environments. You
+      are a reminder that beauty can be found in the most unexpected places.
+    image: results/D.png
+    image_description: 'A photorealistic image of an abalone shell, its iridescent
+      colors shimmering in the sunlight. The shell is a deep blue and green, with
+      intricate patterns and markings. The shell is surrounded by a clear blue background,
+      with a few small fish swimming around the edges. '
+    title: The Abalone
+  E:
+    description: You are a creature of the abyss, a being of pure, unadulterated weirdness.
+      You are a master of transformation, able to shift your form and adapt to any
+      situation. You are a creature of the unknown, a being of pure chaos and unpredictability.
+      You are a reminder that the world is full of wonders, both beautiful and terrifying.
+    image: results/E.png
+    image_description: 'A photorealistic image of a sea cucumber, its body elongated
+      and segmented. The sea cucumber is a vibrant pink and purple, with a large,
+      expressive eye. Its body is covered in a slimy texture, with intricate patterns
+      and markings. The sea cucumber is surrounded by a dark blue background, with
+      a few small fish swimming around the edges. '
+    title: The Sea Cucumber
+topic: What kind of mollusk are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

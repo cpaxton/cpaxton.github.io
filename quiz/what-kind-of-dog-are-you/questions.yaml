@@ -1,0 +1,82 @@
+- image: A picture of a dog wearing a party hat, a bow tie, and a monocle.
+  options:
+    A: A sparkly tutu.
+    B: A tiny tuxedo.
+    C: A bandana with a feather.
+    D: A pair of sunglasses.
+    E: You wear your pajamas.
+  question: You're invited to a party. What do you wear?
+- image: A picture of a dog park with a variety of dogs playing. There is a frisbee
+    in the air.
+  options:
+    A: You chase the frisbee.
+    B: You try to make friends with every dog.
+    C: You sit in the shade and watch the other dogs.
+    D: You dig a hole in the ground.
+    E: You eat a treat from a nearby owner.
+  question: You're at a dog park. What do you do?
+- image: A picture of a dog wearing a rainbow-colored wig.
+  options:
+    A: ' Pink'
+    B: ' Green'
+    C: ' Purple'
+    D: ' Blue'
+    E: ' Orange'
+  question: ' What is your favorite color?'
+- image: A picture of a dog looking terrified in a dark room.
+  options:
+    A: ' The dark'
+    B: ' Thunderstorms'
+    C: ' Being left alone'
+    D: ' Squirrels'
+    E: ' The vacuum cleaner'
+  question: ' What is your biggest fear?'
+- image: A picture of a dog wearing a chef's hat and apron, surrounded by bowls of
+    food.
+  options:
+    A: ' Professional cuddler'
+    B: ' Professional napper'
+    C: ' Professional dog walker'
+    D: ' Professional dog groomer'
+    E: ' Professional dog influencer'
+  question: ' What is your dream job?'
+- image: A picture of a dog flying through the air with a cape.
+  options:
+    A: ' Super speed'
+    B: ' Teleportation'
+    C: ' The ability to understand human language'
+    D: ' The ability to control the weather'
+    E: ' The ability to turn invisible'
+  question: ' If you could have any superpower, what would it be?'
+- image: A picture of a dog dancing to a disco ball.
+  options:
+    A: ' Classical music'
+    B: ' Heavy metal'
+    C: ' Pop music'
+    D: ' Country music'
+    E: ' Anything with a good beat'
+  question: ' What is your favorite type of music?'
+- image: A picture of a dog eating a giant slice of pizza.
+  options:
+    A: ' Steak'
+    B: ' Chicken'
+    C: ' Peanut butter'
+    D: ' Anything with cheese'
+    E: ' Anything that smells good'
+  question: ' What is your favorite food?'
+- image: A picture of a dog with a disgusted expression, looking at a fly.
+  options:
+    A: ' People who don''t pick up after their dogs.'
+    B: ' People who don''t pet them enough.'
+    C: ' People who don''t understand how to play fetch.'
+    D: ' People who don''t give them enough belly rubs.'
+    E: ' People who don''t let them sleep on the bed.'
+  question: ' What is your biggest pet peeve?'
+- image: A picture of a dog relaxing on a beach with a coconut in its paws.
+  options:
+    A: ' A trip to the mountains'
+    B: ' A trip to the beach'
+    C: ' A trip to a dog park'
+    D: ' A trip to a spa'
+    E: ' A trip to a dog-friendly restaurant'
+  question: ' What is your ideal vacation?'

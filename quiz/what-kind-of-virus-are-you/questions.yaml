@@ -1,0 +1,89 @@
+- image: A party with people dancing. There is a disco ball, and the music is loud.
+    People are dancing in a circle, and there is a spotlight on one person.
+  options:
+    A: The Electric Slide
+    B: The Macarena
+    C: The Running Man
+    D: The Cha Cha Slide
+    E: You don't dance, you just awkwardly sway to the music.
+  question: You're at a party. What's your go-to dance move?
+- image: A cozy living room with a fireplace, a window with rain pouring outside,
+    and a person reading a book on a comfy couch.
+  options:
+    A: Curl up with a good book and a cup of tea.
+    B: Watch a marathon of your favorite TV show.
+    C: Bake something delicious and smell the warm spices.
+    D: Play video games and get lost in a virtual world.
+    E: Go for a walk in the rain, feeling the cool drops on your face.
+  question: What's your favorite way to spend a rainy day?
+- image: A person standing in a dark forest, with a single spotlight illuminating
+    them. They are looking up at a giant, shadowy figure in the distance.
+  options:
+    A: Being forgotten.
+    B: Losing control of your emotions.
+    C: Being trapped in a never-ending loop of the same day.
+    D: Being consumed by a void of nothingness.
+    E: The feeling of being watched.
+  question: What's your biggest fear?
+- image: A person standing on a beach with a tropical sunset in the background. They
+    are wearing a straw hat and sunglasses, and are holding a cocktail.
+  options:
+    A: A relaxing beach vacation with a good book and a hammock.
+    B: A backpacking trip through a foreign country, exploring ancient ruins and trying
+      new foods.
+    C: A luxurious spa retreat with massages and facials.
+    D: A road trip across the country, stopping at quirky roadside attractions.
+    E: A solo adventure in a foreign country, learning a new language and immersing
+      yourself in the culture.
+  question: What's your ideal vacation?
+- image: A person with glowing eyes, surrounded by swirling energy. They are holding
+    a glowing orb in their hand.
+  options:
+    A: Telekinesis
+    B: Invisibility
+    C: The ability to control time
+    D: Super speed
+    E: The power to read minds
+  question: If you could have any superpower, what would it be?
+- image: A person with a disgusted expression, holding a plate of food with a single,
+    unappetizing piece of food on it.
+  options:
+    A: People who talk with their mouths full.
+    B: People who interrupt you mid-sentence.
+    C: People who don't say thank you.
+    D: People who leave their dirty dishes in the sink.
+    E: People who don't know how to use a fork.
+  question: What's your biggest pet peeve?
+- image: A person standing in a field of wildflowers, with a gentle breeze blowing
+    through their hair.
+  options:
+    A: The smell of freshly cut grass.
+    B: The smell of rain on pavement.
+    C: The smell of freshly baked cookies.
+    D: The smell of pine needles.
+    E: The smell of old books.
+  question: What's your favorite smell?
+- image: A person standing in a field of vibrant, colorful flowers.
+  options:
+    A: Blue
+    B: Green
+    C: Purple
+    D: Yellow
+    E: Pink
+  question: What's your favorite color?
+- image: A person dancing in a club, surrounded by flashing lights and a pulsing beat.
+  options:
+    A: Classical music
+    B: Pop music
+    C: Electronic music
+    D: Rock music
+    E: Jazz music
+  question: What's your favorite type of music?
+- image: A person sitting on a beach, watching a dolphin jump out of the water.
+  options:
+    A: A dog
+    B: A cat
+    C: A bird
+    D: A fish
+    E: A snake
+  question: What's your favorite animal?

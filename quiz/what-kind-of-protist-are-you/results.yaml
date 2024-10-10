@@ -1,0 +1,60 @@
+A:
+  description: You are the amoeba, a simple yet adaptable creature. You are a master
+    of change, able to morph and adapt to your surroundings. You are a free spirit,
+    always seeking new experiences and challenges. You are curious and playful, and
+    you love to explore the world around you. Your strength lies in your adaptability
+    and your ability to thrive in diverse environments.
+  image: 'A close-up of a single-celled amoeba, with its pseudopods extending and
+    contracting. The amoeba is surrounded by a clear, watery environment. The amoeba
+    is a vibrant, translucent pink color. '
+  letter: A
+  result: Amoeba
+  topic: What kind of protist are you?
+B:
+  description: You are the paramecium, a tiny, single-celled creature with a distinct,
+    rhythmic movement. You are a master of efficiency, always striving to optimize
+    your energy use. You are a social butterfly, always seeking out new connections
+    and opportunities. You are a lover of order and structure, and you enjoy the predictability
+    of routine. Your strength lies in your efficiency and your ability to thrive in
+    a variety of environments.
+  image: 'A side view of a paramecium swimming through a pond. The paramecium is a
+    vibrant, translucent green color. The pond is a clear, blue color. '
+  letter: B
+  result: Paramecium
+  topic: What kind of protist are you?
+C:
+  description: You are the Plasmodium, a parasitic protist that thrives on the blood
+    of its host. You are a master of deception, able to blend in and manipulate your
+    environment to your advantage. You are a cunning strategist, always thinking several
+    steps ahead. You are a creature of the shadows, and you are not afraid to take
+    what you want. Your strength lies in your ability to adapt and survive in hostile
+    environments.
+  image: 'A microscopic view of a Plasmodium parasite inside a red blood cell. The
+    parasite is a dark, purple color, and the red blood cell is a bright, red color. '
+  letter: C
+  result: Plasmodium
+  topic: What kind of protist are you?
+D:
+  description: You are the Euglena, a fascinating creature that straddles the line
+    between plant and animal. You are a creature of contradictions, capable of both
+    photosynthesis and consuming other organisms. You are a free spirit, always seeking
+    new experiences and challenges. You are a dreamer, and you are always looking
+    for the next big adventure. Your strength lies in your adaptability and your ability
+    to thrive in diverse environments.
+  image: 'A side view of an Euglena swimming through a pond. The Euglena is a vibrant,
+    green color. The pond is a clear, blue color. '
+  letter: D
+  result: Euglena
+  topic: What kind of protist are you?
+E:
+  description: You are the Giardia lamblia, a microscopic parasite that thrives in
+    the intestines of its host. You are a master of survival, able to withstand harsh
+    conditions and exploit your environment for your own benefit. You are a creature
+    of chaos, always seeking to disrupt the status quo. You are a rebel, and you are
+    not afraid to break the rules. Your strength lies in your resilience and your
+    ability to thrive in challenging environments.
+  image: 'A microscopic view of a Giardia lamblia parasite inside a human intestine.
+    The parasite is a brown, pear-shaped shape. '
+  letter: E
+  result: ' Giardia lamblia'
+  topic: What kind of protist are you?

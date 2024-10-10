@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: You just stand there awkwardly.
+    type: E
+  - text: The Running Man
+    type: C
+  - text: The Macarena
+    type: B
+  - text: The Electric Slide
+    type: A
+  - text: The Cha Cha Slide
+    type: D
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: ' Pull out a deck of cards and start a game of poker.'
+    type: A
+  - text: ' Start talking about your favorite protist.'
+    type: D
+  - text: ' Ask the waiter for a refill on the water.'
+    type: C
+  - text: ' Try to make small talk about the weather.'
+    type: E
+  - text: ' Order a giant plate of fries and start eating them.'
+    type: B
+  text: You're on a first date. What's your first move?
+- image: questions/3.png
+  options:
+  - text: Telekinesis
+    type: A
+  - text: Invisibility
+    type: B
+  - text: The power to speak any language
+    type: D
+  - text: The ability to control the weather
+    type: C
+  - text: The ability to teleport
+    type: E
+  text: If you could have any superpower, what would it be?
+- image: questions/4.png
+  options:
+  - text: A remote mountaintop with breathtaking views.
+    type: C
+  - text: A space station orbiting a distant planet.
+    type: E
+  - text: A secluded beach with a hammock and a good book.
+    type: A
+  - text: A tropical rainforest teeming with exotic life.
+    type: D
+  - text: A bustling city with endless opportunities for adventure.
+    type: B
+  text: What's your ideal vacation destination?
+- image: questions/5.png
+  options:
+  - text: ' Being alone.'
+    type: A
+  - text: ' The end of the universe.'
+    type: E
+  - text: ' Losing control of your life.'
+    type: C
+  - text: ' The unknown.'
+    type: B
+  - text: ' Being forgotten.'
+    type: D
+  text: What's your biggest fear?
+- image: questions/6.png
+  options:
+  - text: ' Your favorite fictional character, a historical figure, and a celebrity'
+    type: D
+  - text: ' Your favorite protist, a famous scientist, and a celebrity chef'
+    type: E
+  - text: ' Abraham Lincoln, Marie Antoinette, and Marilyn Monroe'
+    type: C
+  - text: ' Leonardo da Vinci, Cleopatra, and Genghis Khan'
+    type: B
+  - text: ' Albert Einstein, Marie Curie, and Nikola Tesla'
+    type: A
+  text: If you could have dinner with any three people, living or dead, who would
+    they be?
+- image: questions/7.png
+  options:
+  - text: ' Yellow'
+    type: E
+  - text: ' Green'
+    type: A
+  - text: ' Purple'
+    type: C
+  - text: ' Red'
+    type: D
+  - text: ' Blue'
+    type: B
+  text: What's your favorite color?
+- image: questions/8.png
+  options:
+  - text: ' Freshly cut grass'
+    type: A
+  - text: ' Cinnamon'
+    type: C
+  - text: ' Rain on pavement'
+    type: B
+  - text: ' The scent of a freshly baked pie'
+    type: E
+  - text: ' Ocean air'
+    type: D
+  text: What's your favorite smell?
+- image: questions/9.png
+  options:
+  - text: ' Butterfly'
+    type: E
+  - text: ' Lion'
+    type: A
+  - text: ' Tiger'
+    type: C
+  - text: ' Elephant'
+    type: B
+  - text: ' Dolphin'
+    type: D
+  text: What's your favorite animal?
+- image: questions/10.png
+  options:
+  - text: ' Electronic music'
+    type: D
+  - text: ' Classical music'
+    type: A
+  - text: ' Rock and roll'
+    type: B
+  - text: ' Folk music'
+    type: E
+  - text: ' Jazz'
+    type: C
+  text: What's your favorite type of music?
+results:
+  A:
+    description: You are the amoeba, a simple yet adaptable creature. You are a master
+      of change, able to morph and adapt to your surroundings. You are a free spirit,
+      always seeking new experiences and challenges. You are curious and playful,
+      and you love to explore the world around you. Your strength lies in your adaptability
+      and your ability to thrive in diverse environments.
+    image: results/A.png
+    image_description: 'A close-up of a single-celled amoeba, with its pseudopods
+      extending and contracting. The amoeba is surrounded by a clear, watery environment.
+      The amoeba is a vibrant, translucent pink color. '
+    title: Amoeba
+  B:
+    description: You are the paramecium, a tiny, single-celled creature with a distinct,
+      rhythmic movement. You are a master of efficiency, always striving to optimize
+      your energy use. You are a social butterfly, always seeking out new connections
+      and opportunities. You are a lover of order and structure, and you enjoy the
+      predictability of routine. Your strength lies in your efficiency and your ability
+      to thrive in a variety of environments.
+    image: results/B.png
+    image_description: 'A side view of a paramecium swimming through a pond. The paramecium
+      is a vibrant, translucent green color. The pond is a clear, blue color. '
+    title: Paramecium
+  C:
+    description: You are the Plasmodium, a parasitic protist that thrives on the blood
+      of its host. You are a master of deception, able to blend in and manipulate
+      your environment to your advantage. You are a cunning strategist, always thinking
+      several steps ahead. You are a creature of the shadows, and you are not afraid
+      to take what you want. Your strength lies in your ability to adapt and survive
+      in hostile environments.
+    image: results/C.png
+    image_description: 'A microscopic view of a Plasmodium parasite inside a red blood
+      cell. The parasite is a dark, purple color, and the red blood cell is a bright,
+      red color. '
+    title: Plasmodium
+  D:
+    description: You are the Euglena, a fascinating creature that straddles the line
+      between plant and animal. You are a creature of contradictions, capable of both
+      photosynthesis and consuming other organisms. You are a free spirit, always
+      seeking new experiences and challenges. You are a dreamer, and you are always
+      looking for the next big adventure. Your strength lies in your adaptability
+      and your ability to thrive in diverse environments.
+    image: results/D.png
+    image_description: 'A side view of an Euglena swimming through a pond. The Euglena
+      is a vibrant, green color. The pond is a clear, blue color. '
+    title: Euglena
+  E:
+    description: You are the Giardia lamblia, a microscopic parasite that thrives
+      in the intestines of its host. You are a master of survival, able to withstand
+      harsh conditions and exploit your environment for your own benefit. You are
+      a creature of chaos, always seeking to disrupt the status quo. You are a rebel,
+      and you are not afraid to break the rules. Your strength lies in your resilience
+      and your ability to thrive in challenging environments.
+    image: results/E.png
+    image_description: 'A microscopic view of a Giardia lamblia parasite inside a
+      human intestine. The parasite is a brown, pear-shaped shape. '
+    title: ' Giardia lamblia'
+topic: What kind of protist are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

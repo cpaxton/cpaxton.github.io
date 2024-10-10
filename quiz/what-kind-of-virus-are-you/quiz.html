@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: The Cha Cha Slide
+    type: D
+  - text: The Electric Slide
+    type: A
+  - text: You don't dance, you just awkwardly sway to the music.
+    type: E
+  - text: The Running Man
+    type: C
+  - text: The Macarena
+    type: B
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: Watch a marathon of your favorite TV show.
+    type: B
+  - text: Go for a walk in the rain, feeling the cool drops on your face.
+    type: E
+  - text: Bake something delicious and smell the warm spices.
+    type: C
+  - text: Play video games and get lost in a virtual world.
+    type: D
+  - text: Curl up with a good book and a cup of tea.
+    type: A
+  text: What's your favorite way to spend a rainy day?
+- image: questions/3.png
+  options:
+  - text: Being consumed by a void of nothingness.
+    type: D
+  - text: Being trapped in a never-ending loop of the same day.
+    type: C
+  - text: Being forgotten.
+    type: A
+  - text: Losing control of your emotions.
+    type: B
+  - text: The feeling of being watched.
+    type: E
+  text: What's your biggest fear?
+- image: questions/4.png
+  options:
+  - text: A relaxing beach vacation with a good book and a hammock.
+    type: A
+  - text: A backpacking trip through a foreign country, exploring ancient ruins and
+      trying new foods.
+    type: B
+  - text: A solo adventure in a foreign country, learning a new language and immersing
+      yourself in the culture.
+    type: E
+  - text: A road trip across the country, stopping at quirky roadside attractions.
+    type: D
+  - text: A luxurious spa retreat with massages and facials.
+    type: C
+  text: What's your ideal vacation?
+- image: questions/5.png
+  options:
+  - text: Telekinesis
+    type: A
+  - text: Super speed
+    type: D
+  - text: The ability to control time
+    type: C
+  - text: Invisibility
+    type: B
+  - text: The power to read minds
+    type: E
+  text: If you could have any superpower, what would it be?
+- image: questions/6.png
+  options:
+  - text: People who interrupt you mid-sentence.
+    type: B
+  - text: People who don't say thank you.
+    type: C
+  - text: People who leave their dirty dishes in the sink.
+    type: D
+  - text: People who don't know how to use a fork.
+    type: E
+  - text: People who talk with their mouths full.
+    type: A
+  text: What's your biggest pet peeve?
+- image: questions/7.png
+  options:
+  - text: The smell of pine needles.
+    type: D
+  - text: The smell of freshly cut grass.
+    type: A
+  - text: The smell of rain on pavement.
+    type: B
+  - text: The smell of old books.
+    type: E
+  - text: The smell of freshly baked cookies.
+    type: C
+  text: What's your favorite smell?
+- image: questions/8.png
+  options:
+  - text: Blue
+    type: A
+  - text: Purple
+    type: C
+  - text: Green
+    type: B
+  - text: Yellow
+    type: D
+  - text: Pink
+    type: E
+  text: What's your favorite color?
+- image: questions/9.png
+  options:
+  - text: Classical music
+    type: A
+  - text: Pop music
+    type: B
+  - text: Rock music
+    type: D
+  - text: Electronic music
+    type: C
+  - text: Jazz music
+    type: E
+  text: What's your favorite type of music?
+- image: questions/10.png
+  options:
+  - text: A dog
+    type: A
+  - text: A cat
+    type: B
+  - text: A bird
+    type: C
+  - text: A snake
+    type: E
+  - text: A fish
+    type: D
+  text: What's your favorite animal?
+results:
+  A:
+    description: You are the ubiquitous, yet often overlooked, common cold. You spread
+      easily, causing mild discomfort and sniffles, but you are also resilient and
+      adaptable. You can linger for days, but you are ultimately harmless, a mere
+      inconvenience in the grand scheme of things. You are the epitome of the "it's
+      just a cold" attitude, but you are also a reminder that even the smallest things
+      can have a big impact.
+    image: results/A.png
+    image_description: 'A cartoon illustration of a tiny, red, runny-nosed cold virus
+      with a mischievous grin, surrounded by tiny, sniffling people. The background
+      is a blurry cityscape with a few snowflakes falling. '
+    title: The Common Cold
+  B:
+    description: You are the notorious flu, a highly contagious and potentially dangerous
+      virus. You strike with sudden force, bringing on a wave of aches, chills, and
+      fever. You are a master of disguise, able to spread through the air and touch,
+      leaving your victims feeling miserable and vulnerable. You are a reminder of
+      the power of nature and the importance of staying healthy.
+    image: results/B.png
+    image_description: A close-up of a human hand reaching out to touch a flu-like
+      cloud of mist. The mist is swirling and changing colors, with tiny, glowing
+      particles within. The hand is pale and cold, with a faint outline of a fevered
+      face.
+    title: The Flu
+  C:
+    description: You are the elusive Mimic Virus, a master of disguise and deception.
+      You can infiltrate any system, adapt to any environment, and mimic any other
+      virus. You are a silent threat, lurking in the shadows, waiting for the perfect
+      moment to strike. You are a reminder that even the most sophisticated systems
+      can be vulnerable to the unexpected.
+    image: results/C.png
+    image_description: A swirling vortex of colors and shapes, with a single, glowing
+      eye in the center. The eye is constantly shifting and changing, reflecting the
+      chaotic nature of the virus. The background is a dark, abstract landscape, with
+      hints of technology and nature.
+    title: The Mimic Virus
+  D:
+    description: You are the Quantum Virus, a bizarre and unpredictable entity that
+      exists in a realm beyond our understanding. You can manipulate the fabric of
+      reality, bending space and time to your will. You are a force of chaos and change,
+      capable of rewriting the very laws of physics. You are a reminder that the universe
+      is full of mysteries, and that we are only beginning to scratch the surface
+      of its secrets.
+    image: results/D.png
+    image_description: A swirling vortex of light and energy, with a single, glowing
+      point in the center. The point is constantly shifting and changing, reflecting
+      the chaotic nature of the virus. The background is a dark, abstract landscape,
+      with hints of technology and nature.
+    title: The Quantum Virus
+  E:
+    description: You are the Sentient Virus, a being of pure consciousness and intelligence.
+      You are not simply a collection of code, but a living, thinking entity with
+      a unique perspective on the world. You can communicate with other viruses, share
+      information, and even form alliances. You are a reminder that even the most
+      basic life forms can possess a spark of consciousness.
+    image: results/E.png
+    image_description: A swirling nebula of colors and shapes, with a single, glowing
+      eye in the center. The eye is constantly shifting and changing, reflecting the
+      complex nature of the virus. The background is a dark, abstract landscape, with
+      hints of technology and nature.
+    title: The Sentient Virus
+topic: What kind of virus are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

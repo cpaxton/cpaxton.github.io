@@ -1,0 +1,190 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: The Cha Cha Slide
+    type: D
+  - text: The Macarena
+    type: B
+  - text: The Electric Slide
+    type: A
+  - text: The Running Man
+    type: C
+  - text: You just stand there awkwardly.
+    type: E
+  text: You're at a party. What's your go-to dance move?
+- image: questions/2.png
+  options:
+  - text: ' Start talking about your favorite protist.'
+    type: D
+  - text: ' Ask the waiter for a refill on the water.'
+    type: C
+  - text: ' Pull out a deck of cards and start a game of poker.'
+    type: A
+  - text: ' Try to make small talk about the weather.'
+    type: E
+  - text: ' Order a giant plate of fries and start eating them.'
+    type: B
+  text: You're on a first date. What's your first move?
+- image: questions/3.png
+  options:
+  - text: The power to speak any language
+    type: D
+  - text: The ability to teleport
+    type: E
+  - text: Invisibility
+    type: B
+  - text: Telekinesis
+    type: A
+  - text: The ability to control the weather
+    type: C
+  text: If you could have any superpower, what would it be?
+- image: questions/4.png
+  options:
+  - text: A tropical rainforest teeming with exotic life.
+    type: D
+  - text: A space station orbiting a distant planet.
+    type: E
+  - text: A remote mountaintop with breathtaking views.
+    type: C
+  - text: A secluded beach with a hammock and a good book.
+    type: A
+  - text: A bustling city with endless opportunities for adventure.
+    type: B
+  text: What's your ideal vacation destination?
+- image: questions/5.png
+  options:
+  - text: ' The end of the universe.'
+    type: E
+  - text: ' Being alone.'
+    type: A
+  - text: ' Losing control of your life.'
+    type: C
+  - text: ' The unknown.'
+    type: B
+  - text: ' Being forgotten.'
+    type: D
+  text: What's your biggest fear?
+- image: questions/6.png
+  options:
+  - text: ' Your favorite protist, a famous scientist, and a celebrity chef'
+    type: E
+  - text: ' Your favorite fictional character, a historical figure, and a celebrity'
+    type: D
+  - text: ' Abraham Lincoln, Marie Antoinette, and Marilyn Monroe'
+    type: C
+  - text: ' Albert Einstein, Marie Curie, and Nikola Tesla'
+    type: A
+  - text: ' Leonardo da Vinci, Cleopatra, and Genghis Khan'
+    type: B
+  text: If you could have dinner with any three people, living or dead, who would
+    they be?
+- image: questions/7.png
+  options:
+  - text: ' Blue'
+    type: B
+  - text: ' Yellow'
+    type: E
+  - text: ' Red'
+    type: D
+  - text: ' Purple'
+    type: C
+  - text: ' Green'
+    type: A
+  text: What's your favorite color?
+- image: questions/8.png
+  options:
+  - text: ' Ocean air'
+    type: D
+  - text: ' Freshly cut grass'
+    type: A
+  - text: ' The scent of a freshly baked pie'
+    type: E
+  - text: ' Rain on pavement'
+    type: B
+  - text: ' Cinnamon'
+    type: C
+  text: What's your favorite smell?
+- image: questions/9.png
+  options:
+  - text: ' Lion'
+    type: A
+  - text: ' Elephant'
+    type: B
+  - text: ' Dolphin'
+    type: D
+  - text: ' Tiger'
+    type: C
+  - text: ' Butterfly'
+    type: E
+  text: What's your favorite animal?
+- image: questions/10.png
+  options:
+  - text: ' Folk music'
+    type: E
+  - text: ' Classical music'
+    type: A
+  - text: ' Rock and roll'
+    type: B
+  - text: ' Electronic music'
+    type: D
+  - text: ' Jazz'
+    type: C
+  text: What's your favorite type of music?
+results:
+  A:
+    description: You are the amoeba, a simple yet adaptable creature. You are a master
+      of change, able to morph and adapt to your surroundings. You are a free spirit,
+      always seeking new experiences and challenges. You are curious and playful,
+      and you love to explore the world around you. Your strength lies in your adaptability
+      and your ability to thrive in diverse environments.
+    image: results/A.png
+    image_description: 'A close-up of a single-celled amoeba, with its pseudopods
+      extending and contracting. The amoeba is surrounded by a clear, watery environment.
+      The amoeba is a vibrant, translucent pink color. '
+    title: Amoeba
+  B:
+    description: You are the paramecium, a tiny, single-celled creature with a distinct,
+      rhythmic movement. You are a master of efficiency, always striving to optimize
+      your energy use. You are a social butterfly, always seeking out new connections
+      and opportunities. You are a lover of order and structure, and you enjoy the
+      predictability of routine. Your strength lies in your efficiency and your ability
+      to thrive in a variety of environments.
+    image: results/B.png
+    image_description: 'A side view of a paramecium swimming through a pond. The paramecium
+      is a vibrant, translucent green color. The pond is a clear, blue color. '
+    title: Paramecium
+  C:
+    description: You are the Plasmodium, a parasitic protist that thrives on the blood
+      of its host. You are a master of deception, able to blend in and manipulate
+      your environment to your advantage. You are a cunning strategist, always thinking
+      several steps ahead. You are a creature of the shadows, and you are not afraid
+      to take what you want. Your strength lies in your ability to adapt and survive
+      in hostile environments.
+    image: results/C.png
+    image_description: 'A microscopic view of a Plasmodium parasite inside a red blood
+      cell. The parasite is a dark, purple color, and the red blood cell is a bright,
+      red color. '
+    title: Plasmodium
+  D:
+    description: You are the Euglena, a fascinating creature that straddles the line
+      between plant and animal. You are a creature of contradictions, capable of both
+      photosynthesis and consuming other organisms. You are a free spirit, always
+      seeking new experiences and challenges. You are a dreamer, and you are always
+      looking for the next big adventure. Your strength lies in your adaptability
+      and your ability to thrive in diverse environments.
+    image: results/D.png
+    image_description: 'A side view of an Euglena swimming through a pond. The Euglena
+      is a vibrant, green color. The pond is a clear, blue color. '
+    title: Euglena
+  E:
+    description: You are the Giardia lamblia, a microscopic parasite that thrives
+      in the intestines of its host. You are a master of survival, able to withstand
+      harsh conditions and exploit your environment for your own benefit. You are
+      a creature of chaos, always seeking to disrupt the status quo. You are a rebel,
+      and you are not afraid to break the rules. Your strength lies in your resilience
+      and your ability to thrive in challenging environments.
+    image: results/E.png
+    image_description: 'A microscopic view of a Giardia lamblia parasite inside a
+      human intestine. The parasite is a brown, pear-shaped shape. '
+    title: ' Giardia lamblia'
+topic: What kind of protist are you?

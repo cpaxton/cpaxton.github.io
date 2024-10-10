@@ -1,0 +1,68 @@
+A:
+  description: You are the ultimate enigma, a creature of immense intelligence and
+    power. You are a master of disguise, able to blend seamlessly into your surroundings
+    and manipulate your environment to your will. You are a creature of mystery and
+    intrigue, and your true nature is a source of endless fascination. You are a force
+    to be reckoned with, and your presence commands respect.
+  image: 'A photorealistic image of a giant Pacific octopus, its tentacles wrapped
+    around a coral reef. The octopus is a vibrant blue and purple, with large, expressive
+    eyes. Its skin is textured and detailed, with intricate patterns and markings.
+    The octopus is surrounded by a vibrant coral reef, with colorful fish darting
+    through the coral branches. '
+  letter: A
+  result: The Giant Pacific Octopus
+  topic: What kind of mollusk are you?
+B:
+  description: You are a creature of beauty and danger, a paradox of grace and ferocity.
+    You are a master of seduction, drawing in your prey with your alluring beauty,
+    only to trap them in your deadly embrace. You are a force of nature, capable of
+    both great love and great destruction. You are a reminder that beauty can be deceptive,
+    and that even the most innocent of creatures can harbor a dark side.
+  image: 'A close-up photo of a Venus flytrap, its leaves open and its digestive juices
+    glistening. The flytrap is a vibrant green, with a deep red center. The flytrap
+    is surrounded by a lush green background, with a few small insects crawling around
+    the edges. '
+  letter: B
+  result: The Venus Flytrap
+  topic: What kind of mollusk are you?
+C:
+  description: You are a chameleon of the sea, capable of mimicking the appearance
+    and behavior of other creatures. You are a master of disguise, able to blend seamlessly
+    into your surroundings and deceive your prey. You are a creature of illusion and
+    deception, and your true nature is a mystery to all who encounter you. You are
+    a master of survival, using your cunning and adaptability to thrive in the most
+    challenging environments.
+  image: 'A photorealistic image of a mimic octopus, camouflaged against a coral reef.
+    The octopus is a vibrant orange and yellow, with a large, expressive eye. Its
+    skin is textured and detailed, with intricate patterns and markings. The octopus
+    is surrounded by a vibrant coral reef, with colorful fish darting through the
+    coral branches. '
+  letter: C
+  result: The Mimic Octopus
+  topic: What kind of mollusk are you?
+D:
+  description: You are a creature of elegance and grace, a symbol of beauty and resilience.
+    You are a master of self-expression, using your vibrant colors and intricate patterns
+    to communicate with the world around you. You are a creature of the deep, capable
+    of surviving in the most challenging environments. You are a reminder that beauty
+    can be found in the most unexpected places.
+  image: 'A photorealistic image of an abalone shell, its iridescent colors shimmering
+    in the sunlight. The shell is a deep blue and green, with intricate patterns and
+    markings. The shell is surrounded by a clear blue background, with a few small
+    fish swimming around the edges. '
+  letter: D
+  result: The Abalone
+  topic: What kind of mollusk are you?
+E:
+  description: You are a creature of the abyss, a being of pure, unadulterated weirdness.
+    You are a master of transformation, able to shift your form and adapt to any situation.
+    You are a creature of the unknown, a being of pure chaos and unpredictability.
+    You are a reminder that the world is full of wonders, both beautiful and terrifying.
+  image: 'A photorealistic image of a sea cucumber, its body elongated and segmented.
+    The sea cucumber is a vibrant pink and purple, with a large, expressive eye. Its
+    body is covered in a slimy texture, with intricate patterns and markings. The
+    sea cucumber is surrounded by a dark blue background, with a few small fish swimming
+    around the edges. '
+  letter: E
+  result: The Sea Cucumber
+  topic: What kind of mollusk are you?

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: ' Make a dramatic entrance.'
+    type: D
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Try to blend in with the background.'
+    type: E
+  - text: ' Find a quiet corner to observe the party.'
+    type: C
+  text: You're at a party. What's your go-to move?
+- image: questions/2.png
+  options:
+  - text: The bowl of questionable soup.
+    type: B
+  - text: The delicious, perfectly cooked meal.
+    type: A
+  - text: You politely decline both.
+    type: C
+  - text: You try to convince the person to share their soup.
+    type: D
+  - text: You eat the soup with a side of bread.
+    type: E
+  text: You're offered a choice between a delicious, perfectly cooked meal and a bowl
+    of your favorite, but slightly questionable, homemade soup. What do you choose?
+- image: questions/3.png
+  options:
+  - text: ' The ability to speak to animals.'
+    type: C
+  - text: ' The ability to teleport.'
+    type: A
+  - text: ' The ability to grow at an accelerated rate.'
+    type: D
+  - text: ' The ability to control the minds of others.'
+    type: E
+  - text: ' The ability to control the weather.'
+    type: B
+  text: ' If you could have any superpower, what would it be?  '
+- image: questions/4.png
+  options:
+  - text: ' Reading a book.'
+    type: A
+  - text: ' Watching a movie.'
+    type: B
+  - text: ' Taking a nap.'
+    type: D
+  - text: ' Playing video games.'
+    type: C
+  - text: ' Writing in a journal.'
+    type: E
+  text: ' What''s your favorite way to spend a rainy day?'
+- image: questions/5.png
+  options:
+  - text: ' Losing control.'
+    type: C
+  - text: ' The unknown.'
+    type: B
+  - text: ' Being forgotten.'
+    type: D
+  - text: ' Being alone.'
+    type: A
+  - text: ' Being trapped.'
+    type: E
+  text: ' What''s your biggest fear?'
+- image: questions/6.png
+  options:
+  - text: ' A snake.'
+    type: D
+  - text: ' A dog.'
+    type: A
+  - text: ' A cat.'
+    type: B
+  - text: ' A bird.'
+    type: C
+  - text: ' A fish.'
+    type: E
+  text: ' If you could have any animal as a pet, what would it be?'
+- image: questions/7.png
+  options:
+  - text: ' A trip to a historical site.'
+    type: D
+  - text: ' A relaxing beach vacation.'
+    type: A
+  - text: ' A luxurious spa retreat.'
+    type: C
+  - text: ' An adventurous backpacking trip.'
+    type: B
+  - text: ' A solo journey to a remote island.'
+    type: E
+  text: ' What''s your ideal vacation?'
+- image: questions/8.png
+  options:
+  - text: ' Green.'
+    type: A
+  - text: ' Blue.'
+    type: B
+  - text: ' Red.'
+    type: D
+  - text: ' Yellow.'
+    type: E
+  - text: ' Purple.'
+    type: C
+  text: ' What''s your favorite color?'
+- image: questions/9.png
+  options:
+  - text: ' Not pursuing my dreams.'
+    type: C
+  - text: ' Not being more grateful.'
+    type: E
+  - text: ' Not being more kind.'
+    type: D
+  - text: ' Not being more confident.'
+    type: B
+  - text: ' Not taking more risks.'
+    type: A
+  text: ' What''s your biggest regret?'
+- image: questions/10.png
+  options:
+  - text: ' My weight.'
+    type: B
+  - text: ' My hair.'
+    type: C
+  - text: ' My personality.'
+    type: D
+  - text: ' My past.'
+    type: E
+  - text: ' My height.'
+    type: A
+  text: ' If you could change one thing about yourself, what would it be?'
+results:
+  A:
+    description: You are the puffball, a whimsical and unpredictable fungus. You burst
+      forth with a sudden, explosive energy, leaving a trail of vibrant spores in
+      your wake. You are a symbol of surprise and delight, a burst of color and joy
+      in the mundane. You are a bit of a free spirit, always seeking new experiences
+      and adventures. You are also a bit of a dreamer, lost in your own world of possibilities.
+    image: results/A.png
+    image_description: 'A close-up shot of a vibrant, colorful puffball fungus, with
+      its white, fluffy interior visible. The puffball is surrounded by a ring of
+      vibrant, iridescent spores, which are swirling and dancing in the air. The background
+      is a dark, shadowy forest. '
+    title: ' The Puffball'
+  B:
+    description: You are the Shiitake, a robust and earthy fungus. You are a symbol
+      of strength and resilience, a reminder that even in the face of adversity, you
+      can still thrive. You are a bit of a loner, preferring to work independently
+      and to your own schedule. You are also a bit of a perfectionist, always striving
+      to achieve the highest standards.
+    image: results/B.png
+    image_description: 'A close-up shot of a plump, dark brown Shiitake mushroom,
+      with its cap slightly open and revealing the gills inside. The mushroom is growing
+      on a log, with a damp, earthy background. '
+    title: The Shiitake
+  C:
+    description: You are the Mycena, a mysterious and enigmatic fungus. You are a
+      symbol of hidden knowledge and ancient wisdom, a reminder that there are still
+      secrets to be discovered. You are a bit of a recluse, preferring to keep to
+      yourself and your own thoughts. You are also a bit of a dreamer, lost in your
+      own world of imagination.
+    image: results/C.png
+    image_description: 'A close-up shot of a Mycena mushroom, with its cap a deep,
+      almost black purple. The mushroom is growing on a decaying log, with a dark,
+      shadowy background. The Mycena has a strange, almost otherworldly appearance. '
+    title: The  Mycena
+  D:
+    description: You are the Lion's Mane, a majestic and ethereal fungus. You are
+      a symbol of wisdom and enlightenment, a reminder that even in the darkest of
+      times, there is always hope. You are a bit of a visionary, always looking for
+      new ways to improve the world. You are also a bit of a free spirit, always seeking
+      new experiences and adventures.
+    image: results/D.png
+    image_description: 'A close-up shot of a vibrant, white Lion''s Mane mushroom,
+      with its long, cascading tendrils. The mushroom is growing on a tree branch,
+      with a bright, sunny background. The Lion''s Mane has a delicate, almost otherworldly
+      appearance. '
+    title: The  Lion's Mane
+  E:
+    description: You are the Cordyceps, a parasitic fungus with a sinister and powerful
+      presence. You are a symbol of control and domination, a reminder that even the
+      smallest organisms can have a profound impact on the world. You are a bit of
+      a manipulator, always looking for ways to get what you want. You are also a
+      bit of a loner, preferring to work independently and to your own schedule.
+    image: results/E.png
+    image_description: 'A close-up shot of a Cordyceps fungus, with its bright red,
+      fleshy body and its long, spindly tendrils. The Cordyceps is growing on a leaf,
+      with a dark, shadowy background. The Cordyceps has a menacing, almost alien
+      appearance. '
+    title: The  Cordyceps
+topic: What kind of fungus are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

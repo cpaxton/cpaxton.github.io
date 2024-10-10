@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="quiz-title">Personality Quiz</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			#question-image {
+				max-width: 100%;
+				height: auto;
+			}
+			.option {
+				display: block;
+				margin: 10px 0;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+			.option:hover {
+				background-color: #e0e0e0;
+			}
+			.share-button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+			}
+			.share-button i {
+				margin-right: 5px;
+			}
+			.facebook { background-color: #3b5998; }
+			.twitter { background-color: #1da1f2; }
+			.linkedin { background-color: #0077b5; }
+			.pinterest { background-color: #bd081c; }
+			.instagram { background-color: #C13584; }
+			.bluesky { background-color: #00A3E0; }
+			.discord { background-color: #7289DA; }
+		</style>
+	</head>
+	<body>
+		<h1 id="quiz-topic"></h1>
+		<div id="quiz-container">
+			<h2 id="question-text"></h2>
+			<img id="question-image" src="" alt="Question Image">
+			<div id="options-container"></div>
+		</div>
+
+		<script>
+			const quizData = `questions:
+- image: questions/1.png
+  options:
+  - text: You wear your pajamas.
+    type: E
+  - text: A tiny tuxedo.
+    type: B
+  - text: A sparkly tutu.
+    type: A
+  - text: A bandana with a feather.
+    type: C
+  - text: A pair of sunglasses.
+    type: D
+  text: You're invited to a party. What do you wear?
+- image: questions/2.png
+  options:
+  - text: You chase the frisbee.
+    type: A
+  - text: You dig a hole in the ground.
+    type: D
+  - text: You sit in the shade and watch the other dogs.
+    type: C
+  - text: You try to make friends with every dog.
+    type: B
+  - text: You eat a treat from a nearby owner.
+    type: E
+  text: You're at a dog park. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Blue'
+    type: D
+  - text: ' Purple'
+    type: C
+  - text: ' Green'
+    type: B
+  - text: ' Orange'
+    type: E
+  - text: ' Pink'
+    type: A
+  text: ' What is your favorite color?'
+- image: questions/4.png
+  options:
+  - text: ' The vacuum cleaner'
+    type: E
+  - text: ' Thunderstorms'
+    type: B
+  - text: ' The dark'
+    type: A
+  - text: ' Squirrels'
+    type: D
+  - text: ' Being left alone'
+    type: C
+  text: ' What is your biggest fear?'
+- image: questions/5.png
+  options:
+  - text: ' Professional dog influencer'
+    type: E
+  - text: ' Professional cuddler'
+    type: A
+  - text: ' Professional dog walker'
+    type: C
+  - text: ' Professional napper'
+    type: B
+  - text: ' Professional dog groomer'
+    type: D
+  text: ' What is your dream job?'
+- image: questions/6.png
+  options:
+  - text: ' The ability to understand human language'
+    type: C
+  - text: ' The ability to control the weather'
+    type: D
+  - text: ' Super speed'
+    type: A
+  - text: ' Teleportation'
+    type: B
+  - text: ' The ability to turn invisible'
+    type: E
+  text: ' If you could have any superpower, what would it be?'
+- image: questions/7.png
+  options:
+  - text: ' Country music'
+    type: D
+  - text: ' Anything with a good beat'
+    type: E
+  - text: ' Heavy metal'
+    type: B
+  - text: ' Pop music'
+    type: C
+  - text: ' Classical music'
+    type: A
+  text: ' What is your favorite type of music?'
+- image: questions/8.png
+  options:
+  - text: ' Anything with cheese'
+    type: D
+  - text: ' Peanut butter'
+    type: C
+  - text: ' Anything that smells good'
+    type: E
+  - text: ' Chicken'
+    type: B
+  - text: ' Steak'
+    type: A
+  text: ' What is your favorite food?'
+- image: questions/9.png
+  options:
+  - text: ' People who don''t give them enough belly rubs.'
+    type: D
+  - text: ' People who don''t pick up after their dogs.'
+    type: A
+  - text: ' People who don''t let them sleep on the bed.'
+    type: E
+  - text: ' People who don''t understand how to play fetch.'
+    type: C
+  - text: ' People who don''t pet them enough.'
+    type: B
+  text: ' What is your biggest pet peeve?'
+- image: questions/10.png
+  options:
+  - text: ' A trip to a spa'
+    type: D
+  - text: ' A trip to the mountains'
+    type: A
+  - text: ' A trip to a dog-friendly restaurant'
+    type: E
+  - text: ' A trip to a dog park'
+    type: C
+  - text: ' A trip to the beach'
+    type: B
+  text: ' What is your ideal vacation?'
+results:
+  A:
+    description: You are the quintessential Golden Retriever, a loyal and friendly
+      companion. You are a natural retriever, always eager to please and ready for
+      a good time. You are a social butterfly, always up for a game of fetch or a
+      walk in the park. You are a true friend, always there to lend a paw and offer
+      a warm smile.
+    image: results/A.png
+    image_description: 'A golden retriever puppy with a bright, happy expression,
+      wagging its tail excitedly. It is playing fetch with a bright red ball in a
+      sunny field. The puppy is wearing a red collar with a gold tag that reads "Golden
+      Retriever." '
+    title: The Golden Retriever
+  B:
+    description: You are the Basset Hound, a soulful and dignified companion. You
+      are a scent hound, with a nose for adventure and a love for the finer things
+      in life. You are a gentle giant, with a heart of gold and a love for naps. You
+      are a loyal friend, always there to offer a warm lick and a comforting presence.
+    image: results/B.png
+    image_description: A basset hound with droopy ears and a long, low-set body, sitting
+      in a sunlit field. It is sniffing the ground intently, its nose twitching. The
+      dog is wearing a brown collar with a small bell.
+    title: The Basset Hound
+  C:
+    description: You are the Dalmatian, a spirited and energetic companion. You are
+      a working dog, with a love for speed and a passion for the outdoors. You are
+      a loyal friend, always ready for a game of chase or a good run. You are a true
+      athlete, with a boundless energy and a love for adventure.
+    image: results/C.png
+    image_description: A Dalmatian puppy with a playful expression, running through
+      a field of wildflowers. It is chasing a butterfly with its tongue out and its
+      tail wagging furiously. The puppy is wearing a red collar with a white star.
+    title: The Dalmatian
+  D:
+    description: You are the Chow Chow, a regal and independent companion. You are
+      a distinctive breed, with a striking blue-black tongue and a fluffy, double
+      coat. You are a loyal friend, with a strong sense of loyalty and a love for
+      your family. You are a dignified and independent dog, with a strong will and
+      a love for solitude.
+    image: results/D.png
+    image_description: A Chow Chow with a piercing gaze and a fluffy, blue-black tongue,
+      standing proudly in a snowy field. It is wearing a red collar with a silver
+      tag that reads "Chow Chow."
+    title: The Chow Chow
+  E:
+    description: You are the Hairless Sphynx, a unique and captivating companion.
+      You are a social butterfly, with a love for attention and a playful personality.
+      You are a curious and affectionate dog, with a love for cuddles and a playful
+      spirit. You are a true friend, always ready to offer a warm lick and a comforting
+      presence.
+    image: results/E.png
+    image_description: A Hairless Sphynx with a wrinkled face and large, expressive
+      eyes, sitting on a couch with a human. It is wearing a pink collar with a silver
+      tag that reads "Sphynx."
+    title: The Hairless Sphynx
+topic: What kind of dog are you?
+`;
+
+			const data = jsyaml.load(quizData);
+			let currentQuestion = 0;
+			const answers = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+			document.getElementById('quiz-title').textContent = data.topic;
+			document.getElementById('quiz-topic').textContent = data.topic;
+
+			function loadQuestion() {
+				const question = data.questions[currentQuestion];
+				document.getElementById('question-text').textContent = question.text;
+				document.getElementById('question-image').src = question.image;
+
+				const optionsContainer = document.getElementById('options-container');
+				optionsContainer.innerHTML = '';
+
+				question.options.forEach(option => {
+					const button = document.createElement('button');
+					button.textContent = option.text;
+					button.classList.add('option');
+					button.addEventListener('click', () => selectAnswer(option.type));
+					optionsContainer.appendChild(button);
+				});
+			}
+
+			function selectAnswer(type) {
+				answers[type]++;
+				currentQuestion++;
+
+				if (currentQuestion < data.questions.length) {
+					loadQuestion();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+
+				const quizContainer = document.getElementById('quiz-container');
+				quizContainer.innerHTML = `
+					<h2>Your Result: ${result.title}</h2>
+					<img id="result-image" src="${result.image}" alt="${result.image_description}" style="max-width: 100%; height: auto;">
+					<p>${result.description}</p>
+				`;
+
+				const shareButton = document.createElement("button");
+				shareButton.textContent = "Share Results";
+				shareButton.onclick = shareResults;
+				quizContainer.appendChild(shareButton);
+			}
+
+			function shareResults() {
+				const resultType = Object.keys(answers).reduce((a, b) => answers[a] > answers[b] ? a : b);
+				const result = data.results[resultType];
+				const shareText = `I just completed the "${data.topic}" personality quiz! My result: ${result.title}`;
+				const shareUrl = encodeURIComponent(window.location.href);
+				const resultImage = document.getElementById('result-image').src;
+
+				const shareLinks = {
+					Facebook: {
+						url: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-facebook-f'
+					},
+					Twitter: {
+						url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-twitter'
+					},
+					LinkedIn: {
+						url: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+						icon: 'fab fa-linkedin-in'
+					},
+					Pinterest: {
+						url: `https://pinterest.com/pin/create/button/?url=${shareUrl}&media=${encodeURIComponent(resultImage)}&description=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-pinterest-p'
+					},
+					Instagram: {
+						url: `https://www.instagram.com/create/story/?media=${encodeURIComponent(resultImage)}&caption=${encodeURIComponent(shareText)}`,
+						icon: 'fab fa-instagram'
+					},
+					BlueSky: {
+						url: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText)}&url=${shareUrl}`,
+						icon: 'fab fa-bluesky'
+					},
+					Discord: {
+						url: `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin)}&response_type=code&scope=webhook.incoming`,
+						icon: 'fab fa-discord'
+					}
+				};
+
+				const shareContainer = document.createElement("div");
+				shareContainer.style.marginTop = "20px";
+
+				Object.entries(shareLinks).forEach(([platform, {url, icon}]) => {
+					const shareLink = document.createElement("a");
+					shareLink.href = url;
+					shareLink.className = `share-button ${platform.toLowerCase()}`;
+					shareLink.innerHTML = `<i class="${icon}"></i>${platform}`;
+					shareLink.target = "_blank";
+					if (platform === 'Discord') {
+						shareLink.onclick = (e) => {
+							e.preventDefault();
+							shareToDiscord(shareText, resultImage);
+						};
+					}
+					shareContainer.appendChild(shareLink);
+				});
+
+				document.getElementById("quiz-container").appendChild(shareContainer);
+			}
+
+			function shareToDiscord(text, imageUrl) {
+				// This function would typically use Discord's API to share content
+				// For demonstration purposes, we'll just log the share attempt
+				console.log(`Sharing to Discord: ${text}\nImage: ${imageUrl}`);
+				alert("Discord sharing functionality would be implemented here.");
+			}
+
+			loadQuestion();
+		</script>
+	</body>
+</html>
+

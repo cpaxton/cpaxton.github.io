@@ -1,0 +1,84 @@
+- image: 'A party with people dancing. There is a disco ball, and the music is loud.
+    People are dressed in brightly colored clothes. '
+  options:
+    A: The Electric Slide
+    B: The Macarena
+    C: The Running Man
+    D: The Cha Cha Slide
+    E: You just stand there awkwardly.
+  question: You're at a party. What's your go-to dance move?
+- image: A plate of food with a variety of delicious dishes. There is a giant bag
+    of chips next to it.
+  options:
+    A: The delicious meal
+    B: The lifetime supply of your favorite snack
+    C: You're too full to eat anything
+    D: You're too busy thinking about the chips
+    E: You're a vegetarian and refuse to eat meat
+  question: You're offered a choice between a delicious meal and a lifetime supply
+    of your favorite snack. What do you choose?
+- image: 'A person with a giant, glowing eye in the sky. '
+  options:
+    A: Telekinesis
+    B: Invisibility
+    C: The ability to control the weather
+    D: The ability to speak to animals
+    E: The ability to teleport
+  question: ' If you could have any superpower, what would it be?  '
+- image: A person on a beach with a giant clam shell.
+  options:
+    A: A tropical island with white sand and crystal clear water
+    B: A secluded cabin in the woods
+    C: A bustling city with endless entertainment
+    D: A historical site with ancient ruins
+    E: A space station orbiting Earth
+  question: What's your ideal vacation destination?
+- image: A giant clam shell with a single eye staring out.
+  options:
+    A: Being alone
+    B: Losing your sense of smell
+    C: Being trapped in a dark place
+    D: Being forgotten
+    E: Losing your ability to swim
+  question: What's your biggest fear?
+- image: A person petting a giant squid.
+  options:
+    A: A lion
+    B: A tiger
+    C: A dog
+    D: A cat
+    E: A giant squid
+  question: ' If you could have any animal as a pet, what would it be?'
+- image: A rainbow with a giant clam shell in the center.
+  options:
+    A: Blue
+    B: Green
+    C: Purple
+    D: Orange
+    E: Pink
+  question: What's your favorite color?
+- image: A person looking at a giant clam shell with a single tear rolling down their
+    cheek.
+  options:
+    A: Not taking more risks
+    B: Not traveling more
+    C: Not being more kind
+    D: Not being more successful
+    E: Not being more present
+  question: What's your biggest regret?
+- image: A person dancing with a giant octopus.
+  options:
+    A: Classical music
+    B: Pop music
+    C: Rock music
+    D: Electronic music
+    E: Jazz music
+  question: What's your favorite type of music?
+- image: A person working in a giant clam shell factory.
+  options:
+    A: A chef
+    B: A musician
+    C: A scientist
+    D: A writer
+    E: A clam farmer
+  question: What's your dream job?

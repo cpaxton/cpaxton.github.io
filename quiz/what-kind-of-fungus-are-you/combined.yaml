@@ -1,0 +1,192 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: ' Start a conversation with someone you don''t know.'
+    type: A
+  - text: ' Try to blend in with the background.'
+    type: E
+  - text: ' Find a quiet corner to observe the party.'
+    type: C
+  - text: ' Dance like nobody''s watching.'
+    type: B
+  - text: ' Make a dramatic entrance.'
+    type: D
+  text: You're at a party. What's your go-to move?
+- image: questions/2.png
+  options:
+  - text: The bowl of questionable soup.
+    type: B
+  - text: You try to convince the person to share their soup.
+    type: D
+  - text: The delicious, perfectly cooked meal.
+    type: A
+  - text: You eat the soup with a side of bread.
+    type: E
+  - text: You politely decline both.
+    type: C
+  text: You're offered a choice between a delicious, perfectly cooked meal and a bowl
+    of your favorite, but slightly questionable, homemade soup. What do you choose?
+- image: questions/3.png
+  options:
+  - text: ' The ability to control the minds of others.'
+    type: E
+  - text: ' The ability to teleport.'
+    type: A
+  - text: ' The ability to speak to animals.'
+    type: C
+  - text: ' The ability to grow at an accelerated rate.'
+    type: D
+  - text: ' The ability to control the weather.'
+    type: B
+  text: ' If you could have any superpower, what would it be?  '
+- image: questions/4.png
+  options:
+  - text: ' Watching a movie.'
+    type: B
+  - text: ' Reading a book.'
+    type: A
+  - text: ' Writing in a journal.'
+    type: E
+  - text: ' Playing video games.'
+    type: C
+  - text: ' Taking a nap.'
+    type: D
+  text: ' What''s your favorite way to spend a rainy day?'
+- image: questions/5.png
+  options:
+  - text: ' Being trapped.'
+    type: E
+  - text: ' Being alone.'
+    type: A
+  - text: ' Losing control.'
+    type: C
+  - text: ' The unknown.'
+    type: B
+  - text: ' Being forgotten.'
+    type: D
+  text: ' What''s your biggest fear?'
+- image: questions/6.png
+  options:
+  - text: ' A fish.'
+    type: E
+  - text: ' A bird.'
+    type: C
+  - text: ' A snake.'
+    type: D
+  - text: ' A dog.'
+    type: A
+  - text: ' A cat.'
+    type: B
+  text: ' If you could have any animal as a pet, what would it be?'
+- image: questions/7.png
+  options:
+  - text: ' A solo journey to a remote island.'
+    type: E
+  - text: ' An adventurous backpacking trip.'
+    type: B
+  - text: ' A trip to a historical site.'
+    type: D
+  - text: ' A relaxing beach vacation.'
+    type: A
+  - text: ' A luxurious spa retreat.'
+    type: C
+  text: ' What''s your ideal vacation?'
+- image: questions/8.png
+  options:
+  - text: ' Green.'
+    type: A
+  - text: ' Purple.'
+    type: C
+  - text: ' Yellow.'
+    type: E
+  - text: ' Red.'
+    type: D
+  - text: ' Blue.'
+    type: B
+  text: ' What''s your favorite color?'
+- image: questions/9.png
+  options:
+  - text: ' Not being more grateful.'
+    type: E
+  - text: ' Not being more confident.'
+    type: B
+  - text: ' Not pursuing my dreams.'
+    type: C
+  - text: ' Not taking more risks.'
+    type: A
+  - text: ' Not being more kind.'
+    type: D
+  text: ' What''s your biggest regret?'
+- image: questions/10.png
+  options:
+  - text: ' My personality.'
+    type: D
+  - text: ' My hair.'
+    type: C
+  - text: ' My height.'
+    type: A
+  - text: ' My weight.'
+    type: B
+  - text: ' My past.'
+    type: E
+  text: ' If you could change one thing about yourself, what would it be?'
+results:
+  A:
+    description: You are the puffball, a whimsical and unpredictable fungus. You burst
+      forth with a sudden, explosive energy, leaving a trail of vibrant spores in
+      your wake. You are a symbol of surprise and delight, a burst of color and joy
+      in the mundane. You are a bit of a free spirit, always seeking new experiences
+      and adventures. You are also a bit of a dreamer, lost in your own world of possibilities.
+    image: results/A.png
+    image_description: 'A close-up shot of a vibrant, colorful puffball fungus, with
+      its white, fluffy interior visible. The puffball is surrounded by a ring of
+      vibrant, iridescent spores, which are swirling and dancing in the air. The background
+      is a dark, shadowy forest. '
+    title: ' The Puffball'
+  B:
+    description: You are the Shiitake, a robust and earthy fungus. You are a symbol
+      of strength and resilience, a reminder that even in the face of adversity, you
+      can still thrive. You are a bit of a loner, preferring to work independently
+      and to your own schedule. You are also a bit of a perfectionist, always striving
+      to achieve the highest standards.
+    image: results/B.png
+    image_description: 'A close-up shot of a plump, dark brown Shiitake mushroom,
+      with its cap slightly open and revealing the gills inside. The mushroom is growing
+      on a log, with a damp, earthy background. '
+    title: The Shiitake
+  C:
+    description: You are the Mycena, a mysterious and enigmatic fungus. You are a
+      symbol of hidden knowledge and ancient wisdom, a reminder that there are still
+      secrets to be discovered. You are a bit of a recluse, preferring to keep to
+      yourself and your own thoughts. You are also a bit of a dreamer, lost in your
+      own world of imagination.
+    image: results/C.png
+    image_description: 'A close-up shot of a Mycena mushroom, with its cap a deep,
+      almost black purple. The mushroom is growing on a decaying log, with a dark,
+      shadowy background. The Mycena has a strange, almost otherworldly appearance. '
+    title: The  Mycena
+  D:
+    description: You are the Lion's Mane, a majestic and ethereal fungus. You are
+      a symbol of wisdom and enlightenment, a reminder that even in the darkest of
+      times, there is always hope. You are a bit of a visionary, always looking for
+      new ways to improve the world. You are also a bit of a free spirit, always seeking
+      new experiences and adventures.
+    image: results/D.png
+    image_description: 'A close-up shot of a vibrant, white Lion''s Mane mushroom,
+      with its long, cascading tendrils. The mushroom is growing on a tree branch,
+      with a bright, sunny background. The Lion''s Mane has a delicate, almost otherworldly
+      appearance. '
+    title: The  Lion's Mane
+  E:
+    description: You are the Cordyceps, a parasitic fungus with a sinister and powerful
+      presence. You are a symbol of control and domination, a reminder that even the
+      smallest organisms can have a profound impact on the world. You are a bit of
+      a manipulator, always looking for ways to get what you want. You are also a
+      bit of a loner, preferring to work independently and to your own schedule.
+    image: results/E.png
+    image_description: 'A close-up shot of a Cordyceps fungus, with its bright red,
+      fleshy body and its long, spindly tendrils. The Cordyceps is growing on a leaf,
+      with a dark, shadowy background. The Cordyceps has a menacing, almost alien
+      appearance. '
+    title: The  Cordyceps
+topic: What kind of fungus are you?

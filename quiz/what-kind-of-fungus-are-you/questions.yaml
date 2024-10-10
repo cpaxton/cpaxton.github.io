@@ -1,0 +1,84 @@
+- image: 'A party with people dancing and laughing. There is a disco ball in the background. '
+  options:
+    A: ' Start a conversation with someone you don''t know.'
+    B: ' Dance like nobody''s watching.'
+    C: ' Find a quiet corner to observe the party.'
+    D: ' Make a dramatic entrance.'
+    E: ' Try to blend in with the background.'
+  question: You're at a party. What's your go-to move?
+- image: A steaming bowl of soup with a fork and spoon. There is a plate of food with
+    a variety of dishes.
+  options:
+    A: The delicious, perfectly cooked meal.
+    B: The bowl of questionable soup.
+    C: You politely decline both.
+    D: You try to convince the person to share their soup.
+    E: You eat the soup with a side of bread.
+  question: You're offered a choice between a delicious, perfectly cooked meal and
+    a bowl of your favorite, but slightly questionable, homemade soup. What do you
+    choose?
+- image: A person with glowing eyes, standing in a field of mushrooms.
+  options:
+    A: ' The ability to teleport.'
+    B: ' The ability to control the weather.'
+    C: ' The ability to speak to animals.'
+    D: ' The ability to grow at an accelerated rate.'
+    E: ' The ability to control the minds of others.'
+  question: ' If you could have any superpower, what would it be?  '
+- image: A cozy living room with a fireplace, a book, and a cup of tea.
+  options:
+    A: ' Reading a book.'
+    B: ' Watching a movie.'
+    C: ' Playing video games.'
+    D: ' Taking a nap.'
+    E: ' Writing in a journal.'
+  question: ' What''s your favorite way to spend a rainy day?'
+- image: A dark forest with a single, glowing mushroom in the center.
+  options:
+    A: ' Being alone.'
+    B: ' The unknown.'
+    C: ' Losing control.'
+    D: ' Being forgotten.'
+    E: ' Being trapped.'
+  question: ' What''s your biggest fear?'
+- image: A person sitting on a swing, surrounded by a flock of colorful birds.
+  options:
+    A: ' A dog.'
+    B: ' A cat.'
+    C: ' A bird.'
+    D: ' A snake.'
+    E: ' A fish.'
+  question: ' If you could have any animal as a pet, what would it be?'
+- image: A person standing on a mountaintop, overlooking a vast, colorful landscape.
+  options:
+    A: ' A relaxing beach vacation.'
+    B: ' An adventurous backpacking trip.'
+    C: ' A luxurious spa retreat.'
+    D: ' A trip to a historical site.'
+    E: ' A solo journey to a remote island.'
+  question: ' What''s your ideal vacation?'
+- image: A field of vibrant, multicolored mushrooms.
+  options:
+    A: ' Green.'
+    B: ' Blue.'
+    C: ' Purple.'
+    D: ' Red.'
+    E: ' Yellow.'
+  question: ' What''s your favorite color?'
+- image: A person standing in front of a mirror, looking at their reflection with
+    sadness.
+  options:
+    A: ' Not taking more risks.'
+    B: ' Not being more confident.'
+    C: ' Not pursuing my dreams.'
+    D: ' Not being more kind.'
+    E: ' Not being more grateful.'
+  question: ' What''s your biggest regret?'
+- image: A person looking at their reflection in a puddle, with a thoughtful expression.
+  options:
+    A: ' My height.'
+    B: ' My weight.'
+    C: ' My hair.'
+    D: ' My personality.'
+    E: ' My past.'
+  question: ' If you could change one thing about yourself, what would it be?'

@@ -1,0 +1,55 @@
+A:
+  description: You are the quintessential Golden Retriever, a loyal and friendly companion.
+    You are a natural retriever, always eager to please and ready for a good time.
+    You are a social butterfly, always up for a game of fetch or a walk in the park.
+    You are a true friend, always there to lend a paw and offer a warm smile.
+  image: 'A golden retriever puppy with a bright, happy expression, wagging its tail
+    excitedly. It is playing fetch with a bright red ball in a sunny field. The puppy
+    is wearing a red collar with a gold tag that reads "Golden Retriever." '
+  letter: A
+  result: The Golden Retriever
+  topic: What kind of dog are you?
+B:
+  description: You are the Basset Hound, a soulful and dignified companion. You are
+    a scent hound, with a nose for adventure and a love for the finer things in life.
+    You are a gentle giant, with a heart of gold and a love for naps. You are a loyal
+    friend, always there to offer a warm lick and a comforting presence.
+  image: A basset hound with droopy ears and a long, low-set body, sitting in a sunlit
+    field. It is sniffing the ground intently, its nose twitching. The dog is wearing
+    a brown collar with a small bell.
+  letter: B
+  result: The Basset Hound
+  topic: What kind of dog are you?
+C:
+  description: You are the Dalmatian, a spirited and energetic companion. You are
+    a working dog, with a love for speed and a passion for the outdoors. You are a
+    loyal friend, always ready for a game of chase or a good run. You are a true athlete,
+    with a boundless energy and a love for adventure.
+  image: A Dalmatian puppy with a playful expression, running through a field of wildflowers.
+    It is chasing a butterfly with its tongue out and its tail wagging furiously.
+    The puppy is wearing a red collar with a white star.
+  letter: C
+  result: The Dalmatian
+  topic: What kind of dog are you?
+D:
+  description: You are the Chow Chow, a regal and independent companion. You are a
+    distinctive breed, with a striking blue-black tongue and a fluffy, double coat.
+    You are a loyal friend, with a strong sense of loyalty and a love for your family.
+    You are a dignified and independent dog, with a strong will and a love for solitude.
+  image: A Chow Chow with a piercing gaze and a fluffy, blue-black tongue, standing
+    proudly in a snowy field. It is wearing a red collar with a silver tag that reads
+    "Chow Chow."
+  letter: D
+  result: The Chow Chow
+  topic: What kind of dog are you?
+E:
+  description: You are the Hairless Sphynx, a unique and captivating companion. You
+    are a social butterfly, with a love for attention and a playful personality. You
+    are a curious and affectionate dog, with a love for cuddles and a playful spirit.
+    You are a true friend, always ready to offer a warm lick and a comforting presence.
+  image: A Hairless Sphynx with a wrinkled face and large, expressive eyes, sitting
+    on a couch with a human. It is wearing a pink collar with a silver tag that reads
+    "Sphynx."
+  letter: E
+  result: The Hairless Sphynx
+  topic: What kind of dog are you?

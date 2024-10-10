@@ -11,10 +11,15 @@ This is the home of the Infinite Quiz Machine!
 
 ## Quizes 
 
-  - [What crustaceann are you?](/quiz/what-kind-ofcrustacean-are-you/index.html)
+  - [What crustacean are you?](/quiz/what-kind-ofcrustacean-are-you/index.html)
   - [What kind of sandwich are you?](/quiz/what-kind-of-sandwich-are-you/index.html)
   - [What kind of worm are you?](/quiz/what-kind-of-worm-are-you/index.html)
   - [What kind of tooth are you?](/quiz/what-kind-of-tooth-are-you/index.html)
+  - [What kind of dog are you?](/quiz/what-kind-of-dog-are-you/index.html)
+  - [What kind of fungus are you?](/quiz/what-kind-of-fungus-are-you/index.html)
+  - [What kind of mollusk are you?](/quiz/what-kind-of-mollusk-are-you/index.html)
+  - [What kind of virus are you?](/quiz/what-kind-of-virus-are-you/index.html)
+  - [What kind of protist are you?](/quiz/what-kind-of-protist-are-you/index.html)
   - [What holiday are you?](/quiz/what-holiday-are-you/index.html)
   - [What kind of door are you?](/quiz/what-kind-of-door-are-you/index.html)
   - [What extremely specific door are you?](/quiz/what-extremely-specific-door-are-you/index.html)

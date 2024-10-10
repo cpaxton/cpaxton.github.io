@@ -1,0 +1,187 @@
+questions:
+- image: questions/1.png
+  options:
+  - text: A tiny tuxedo.
+    type: B
+  - text: You wear your pajamas.
+    type: E
+  - text: A sparkly tutu.
+    type: A
+  - text: A bandana with a feather.
+    type: C
+  - text: A pair of sunglasses.
+    type: D
+  text: You're invited to a party. What do you wear?
+- image: questions/2.png
+  options:
+  - text: You eat a treat from a nearby owner.
+    type: E
+  - text: You dig a hole in the ground.
+    type: D
+  - text: You sit in the shade and watch the other dogs.
+    type: C
+  - text: You chase the frisbee.
+    type: A
+  - text: You try to make friends with every dog.
+    type: B
+  text: You're at a dog park. What do you do?
+- image: questions/3.png
+  options:
+  - text: ' Pink'
+    type: A
+  - text: ' Green'
+    type: B
+  - text: ' Blue'
+    type: D
+  - text: ' Orange'
+    type: E
+  - text: ' Purple'
+    type: C
+  text: ' What is your favorite color?'
+- image: questions/4.png
+  options:
+  - text: ' The vacuum cleaner'
+    type: E
+  - text: ' Being left alone'
+    type: C
+  - text: ' The dark'
+    type: A
+  - text: ' Squirrels'
+    type: D
+  - text: ' Thunderstorms'
+    type: B
+  text: ' What is your biggest fear?'
+- image: questions/5.png
+  options:
+  - text: ' Professional dog influencer'
+    type: E
+  - text: ' Professional cuddler'
+    type: A
+  - text: ' Professional dog walker'
+    type: C
+  - text: ' Professional napper'
+    type: B
+  - text: ' Professional dog groomer'
+    type: D
+  text: ' What is your dream job?'
+- image: questions/6.png
+  options:
+  - text: ' Teleportation'
+    type: B
+  - text: ' Super speed'
+    type: A
+  - text: ' The ability to turn invisible'
+    type: E
+  - text: ' The ability to understand human language'
+    type: C
+  - text: ' The ability to control the weather'
+    type: D
+  text: ' If you could have any superpower, what would it be?'
+- image: questions/7.png
+  options:
+  - text: ' Classical music'
+    type: A
+  - text: ' Anything with a good beat'
+    type: E
+  - text: ' Pop music'
+    type: C
+  - text: ' Heavy metal'
+    type: B
+  - text: ' Country music'
+    type: D
+  text: ' What is your favorite type of music?'
+- image: questions/8.png
+  options:
+  - text: ' Steak'
+    type: A
+  - text: ' Chicken'
+    type: B
+  - text: ' Peanut butter'
+    type: C
+  - text: ' Anything with cheese'
+    type: D
+  - text: ' Anything that smells good'
+    type: E
+  text: ' What is your favorite food?'
+- image: questions/9.png
+  options:
+  - text: ' People who don''t let them sleep on the bed.'
+    type: E
+  - text: ' People who don''t pick up after their dogs.'
+    type: A
+  - text: ' People who don''t give them enough belly rubs.'
+    type: D
+  - text: ' People who don''t understand how to play fetch.'
+    type: C
+  - text: ' People who don''t pet them enough.'
+    type: B
+  text: ' What is your biggest pet peeve?'
+- image: questions/10.png
+  options:
+  - text: ' A trip to the mountains'
+    type: A
+  - text: ' A trip to the beach'
+    type: B
+  - text: ' A trip to a dog park'
+    type: C
+  - text: ' A trip to a spa'
+    type: D
+  - text: ' A trip to a dog-friendly restaurant'
+    type: E
+  text: ' What is your ideal vacation?'
+results:
+  A:
+    description: You are the quintessential Golden Retriever, a loyal and friendly
+      companion. You are a natural retriever, always eager to please and ready for
+      a good time. You are a social butterfly, always up for a game of fetch or a
+      walk in the park. You are a true friend, always there to lend a paw and offer
+      a warm smile.
+    image: results/A.png
+    image_description: 'A golden retriever puppy with a bright, happy expression,
+      wagging its tail excitedly. It is playing fetch with a bright red ball in a
+      sunny field. The puppy is wearing a red collar with a gold tag that reads "Golden
+      Retriever." '
+    title: The Golden Retriever
+  B:
+    description: You are the Basset Hound, a soulful and dignified companion. You
+      are a scent hound, with a nose for adventure and a love for the finer things
+      in life. You are a gentle giant, with a heart of gold and a love for naps. You
+      are a loyal friend, always there to offer a warm lick and a comforting presence.
+    image: results/B.png
+    image_description: A basset hound with droopy ears and a long, low-set body, sitting
+      in a sunlit field. It is sniffing the ground intently, its nose twitching. The
+      dog is wearing a brown collar with a small bell.
+    title: The Basset Hound
+  C:
+    description: You are the Dalmatian, a spirited and energetic companion. You are
+      a working dog, with a love for speed and a passion for the outdoors. You are
+      a loyal friend, always ready for a game of chase or a good run. You are a true
+      athlete, with a boundless energy and a love for adventure.
+    image: results/C.png
+    image_description: A Dalmatian puppy with a playful expression, running through
+      a field of wildflowers. It is chasing a butterfly with its tongue out and its
+      tail wagging furiously. The puppy is wearing a red collar with a white star.
+    title: The Dalmatian
+  D:
+    description: You are the Chow Chow, a regal and independent companion. You are
+      a distinctive breed, with a striking blue-black tongue and a fluffy, double
+      coat. You are a loyal friend, with a strong sense of loyalty and a love for
+      your family. You are a dignified and independent dog, with a strong will and
+      a love for solitude.
+    image: results/D.png
+    image_description: A Chow Chow with a piercing gaze and a fluffy, blue-black tongue,
+      standing proudly in a snowy field. It is wearing a red collar with a silver
+      tag that reads "Chow Chow."
+    title: The Chow Chow
+  E:
+    description: You are the Hairless Sphynx, a unique and captivating companion.
+      You are a social butterfly, with a love for attention and a playful personality.
+      You are a curious and affectionate dog, with a love for cuddles and a playful
+      spirit. You are a true friend, always ready to offer a warm lick and a comforting
+      presence.
+    image: results/E.png
+    image_description: A Hairless Sphynx with a wrinkled face and large, expressive
+      eyes, sitting on a couch with a human. It is wearing a pink collar with a silver
+      tag that reads "Sphynx."
+    title: The Hairless Sphynx
+topic: What kind of dog are you?

@@ -1,0 +1,89 @@
+- image: A party with people dancing. There is a disco ball, and the music is loud.
+    People are dancing in a circle, and there is a spotlight on one person who is
+    doing a very strange dance move.
+  options:
+    A: The Electric Slide
+    B: The Macarena
+    C: The Running Man
+    D: The Cha Cha Slide
+    E: You just stand there awkwardly.
+  question: You're at a party. What's your go-to dance move?
+- image: A couple on a first date at a restaurant. The couple is sitting at a table,
+    and the man is looking at his phone. The woman is looking at him with a confused
+    expression.
+  options:
+    A: ' Pull out a deck of cards and start a game of poker.'
+    B: ' Order a giant plate of fries and start eating them.'
+    C: ' Ask the waiter for a refill on the water.'
+    D: ' Start talking about your favorite protist.'
+    E: ' Try to make small talk about the weather.'
+  question: You're on a first date. What's your first move?
+- image: A person with a glowing green aura, surrounded by swirling energy. They are
+    holding a tiny, glowing orb in their hand.
+  options:
+    A: Telekinesis
+    B: Invisibility
+    C: The ability to control the weather
+    D: The power to speak any language
+    E: The ability to teleport
+  question: If you could have any superpower, what would it be?
+- image: A surreal landscape with giant mushrooms and glowing plants. There is a small,
+    wooden cabin in the distance.
+  options:
+    A: A secluded beach with a hammock and a good book.
+    B: A bustling city with endless opportunities for adventure.
+    C: A remote mountaintop with breathtaking views.
+    D: A tropical rainforest teeming with exotic life.
+    E: A space station orbiting a distant planet.
+  question: What's your ideal vacation destination?
+- image: A dark, empty room with a single spotlight illuminating a single figure.
+    The figure is hunched over, their face hidden in the shadows.
+  options:
+    A: ' Being alone.'
+    B: ' The unknown.'
+    C: ' Losing control of your life.'
+    D: ' Being forgotten.'
+    E: ' The end of the universe.'
+  question: What's your biggest fear?
+- image: A table with three chairs. One chair is empty.
+  options:
+    A: ' Albert Einstein, Marie Curie, and Nikola Tesla'
+    B: ' Leonardo da Vinci, Cleopatra, and Genghis Khan'
+    C: ' Abraham Lincoln, Marie Antoinette, and Marilyn Monroe'
+    D: ' Your favorite fictional character, a historical figure, and a celebrity'
+    E: ' Your favorite protist, a famous scientist, and a celebrity chef'
+  question: If you could have dinner with any three people, living or dead, who would
+    they be?
+- image: A kaleidoscope of swirling colors.
+  options:
+    A: ' Green'
+    B: ' Blue'
+    C: ' Purple'
+    D: ' Red'
+    E: ' Yellow'
+  question: What's your favorite color?
+- image: A field of wildflowers with a gentle breeze blowing through them.
+  options:
+    A: ' Freshly cut grass'
+    B: ' Rain on pavement'
+    C: ' Cinnamon'
+    D: ' Ocean air'
+    E: ' The scent of a freshly baked pie'
+  question: What's your favorite smell?
+- image: A majestic lion with a flowing mane, standing on a rocky outcrop overlooking
+    a vast savanna.
+  options:
+    A: ' Lion'
+    B: ' Elephant'
+    C: ' Tiger'
+    D: ' Dolphin'
+    E: ' Butterfly'
+  question: What's your favorite animal?
+- image: A concert hall filled with people dancing and singing along to a live band.
+  options:
+    A: ' Classical music'
+    B: ' Rock and roll'
+    C: ' Jazz'
+    D: ' Electronic music'
+    E: ' Folk music'
+  question: What's your favorite type of music?

@@ -1,0 +1,64 @@
+A:
+  description: You are the ubiquitous, yet often overlooked, common cold. You spread
+    easily, causing mild discomfort and sniffles, but you are also resilient and adaptable.
+    You can linger for days, but you are ultimately harmless, a mere inconvenience
+    in the grand scheme of things. You are the epitome of the "it's just a cold" attitude,
+    but you are also a reminder that even the smallest things can have a big impact.
+  image: 'A cartoon illustration of a tiny, red, runny-nosed cold virus with a mischievous
+    grin, surrounded by tiny, sniffling people. The background is a blurry cityscape
+    with a few snowflakes falling. '
+  letter: A
+  result: The Common Cold
+  topic: What kind of virus are you?
+B:
+  description: You are the notorious flu, a highly contagious and potentially dangerous
+    virus. You strike with sudden force, bringing on a wave of aches, chills, and
+    fever. You are a master of disguise, able to spread through the air and touch,
+    leaving your victims feeling miserable and vulnerable. You are a reminder of the
+    power of nature and the importance of staying healthy.
+  image: A close-up of a human hand reaching out to touch a flu-like cloud of mist.
+    The mist is swirling and changing colors, with tiny, glowing particles within.
+    The hand is pale and cold, with a faint outline of a fevered face.
+  letter: B
+  result: The Flu
+  topic: What kind of virus are you?
+C:
+  description: You are the elusive Mimic Virus, a master of disguise and deception.
+    You can infiltrate any system, adapt to any environment, and mimic any other virus.
+    You are a silent threat, lurking in the shadows, waiting for the perfect moment
+    to strike. You are a reminder that even the most sophisticated systems can be
+    vulnerable to the unexpected.
+  image: A swirling vortex of colors and shapes, with a single, glowing eye in the
+    center. The eye is constantly shifting and changing, reflecting the chaotic nature
+    of the virus. The background is a dark, abstract landscape, with hints of technology
+    and nature.
+  letter: C
+  result: The Mimic Virus
+  topic: What kind of virus are you?
+D:
+  description: You are the Quantum Virus, a bizarre and unpredictable entity that
+    exists in a realm beyond our understanding. You can manipulate the fabric of reality,
+    bending space and time to your will. You are a force of chaos and change, capable
+    of rewriting the very laws of physics. You are a reminder that the universe is
+    full of mysteries, and that we are only beginning to scratch the surface of its
+    secrets.
+  image: A swirling vortex of light and energy, with a single, glowing point in the
+    center. The point is constantly shifting and changing, reflecting the chaotic
+    nature of the virus. The background is a dark, abstract landscape, with hints
+    of technology and nature.
+  letter: D
+  result: The Quantum Virus
+  topic: What kind of virus are you?
+E:
+  description: You are the Sentient Virus, a being of pure consciousness and intelligence.
+    You are not simply a collection of code, but a living, thinking entity with a
+    unique perspective on the world. You can communicate with other viruses, share
+    information, and even form alliances. You are a reminder that even the most basic
+    life forms can possess a spark of consciousness.
+  image: A swirling nebula of colors and shapes, with a single, glowing eye in the
+    center. The eye is constantly shifting and changing, reflecting the complex nature
+    of the virus. The background is a dark, abstract landscape, with hints of technology
+    and nature.
+  letter: E
+  result: The Sentient Virus
+  topic: What kind of virus are you?

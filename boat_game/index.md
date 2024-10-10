@@ -3,8 +3,6 @@ layout: page
 title: Boat vs Kraken Game
 ---
 
-<h1>Boat vs Kraken Game</h1>
-
 {% include boat_game.html %}
 
 ## Instructions

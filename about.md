@@ -9,6 +9,13 @@ chart: true
 
 I am a robotics and AI researcher, currently leading Embodied AI at [Hello Robot](https://hello-robot.com/). At the past, I've worked at NVIDIA Research and at FAIR, the fundamental AI research arm of Meta. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
 
+<figure>
+  <p align="center">
+    <img src="{{ site.url }}/images/hello_robot_chris.jpg " alt="Chris with a Hello Robot Stretch" width="500">
+    <figcaption>Me with my Stretch, ready to pick and place some objects.</figcaption>
+  </p>
+</figure>
+
 I got my PhD in Computer Science in 2018 from the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
 
 From 2018-2022, I was with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). Recently, I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications. Other areas of interest include [human-robot interaction](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be).

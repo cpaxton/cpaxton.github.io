@@ -42,7 +42,7 @@ This is the home of the Infinite Quiz Machine!
   - [What halloween candy are you?](/quiz/what-halloween-candy-are-you/index.html)
 
 ### Bad Quizes
-  - [Which rhetorical fallacy are you?](/quiz/which-rhetorical-fallacy-are-you/index.html) - The AI got stuck in a thing. Repeated questions, repeated answers, and not in an entertaining way like the cosmic horror quiz (spoiler alert).
+  - [Which rhetorical fallacy are you?](/quiz/which-rhetorical-fallacy-are-you/index.html) - The AI got stuck in a thing. Repeated questions, repeated answers, and not in an entertaining way like the cosmic horror quiz (spoiler alert). It's still pretty fun though.
 
 
 ## Ok, but what is it?

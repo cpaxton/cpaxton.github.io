@@ -13,21 +13,23 @@ Check it out as a part of [Virgil](https://github.com/cpaxton/virgil). Or explor
 
 ## Places to explore
 
-[The Labyrinth of Minos](/labyrinth/minos/index.html)
+[The Labyrinth of Minos](/labyrinth/minos/index.html) - try to find the Minotaur's lair
 
-[A haunted mansion](/labyrinth/haunted_mansion/index.html)
+[A haunted mansion](/labyrinth/haunted_mansion/index.html) - find the cursed amulet
 
-[A dark forest](/labyrinth/dark_forest/index.html)
+[A dark forest](/labyrinth/dark_forest/index.html) - try to find the witch's house
 
-[A strange city](/labyrinth/strange_city/index.html)
+[A strange city](/labyrinth/strange_city/index.html) - search for a powerful artifact
 
-[Candyland](/labyrinth/candyland/index.html)
+[Candyland](/labyrinth/candyland/index.html) - search for the Candy Castle
 
-[A crumbling castle](/labyrinth/crumbling_castle/index.html)
+[A crumbling castle](/labyrinth/crumbling_castle/index.html) - try to find a treasure that grants eternal youth
 
-[A high-tech research facility](/labyrinth/research_facility/index.html)
+[A high-tech research facility](/labyrinth/research_facility/index.html) - try to find an AI server containing the secrets of the universe
 
-[An alien bazaar](/labyrinth/alien_bazaar/index.html)
+[An alien bazaar](/labyrinth/alien_bazaar/index.html) - try to find your rocket to fly home
+
+[Erie, PA](/labyrinth/erie_pa/index.html) - try to find your lost flip-flop
 
 ## What is it?
 

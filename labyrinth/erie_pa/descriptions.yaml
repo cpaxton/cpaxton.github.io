@@ -1,0 +1,1150 @@
+world:
+  location: The city of Erie, Pennsylvania
+  goal:
+  - 7
+  - 7
+  writing_style: funny, engaging, clever.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You find yourself standing in a quaint, sun-dappled courtyard, bordered by
+    towering elms that seem to whisper secrets to one another. The cobblestone path
+    leads to two possible entrances, both equally inviting yet slightly ominous. On
+    one side, a stone arch beckons you into the next realm with its hint of mystery.
+    On the other, a gnarled old tree offers a cozy, shadowy hideaway. Each pathway
+    is lined with lush greenery, and the air is filled with the sweet scent of blooming
+    wildflowers. A gentle breeze whispers through the leaves, creating a symphony
+    that lulls you into a dreamlike state. You can’t help but wonder what secrets
+    lie behind each door.
+  title: Pathway Grove
+  actions:
+    '2_1': Follow the path between the trees.
+    '1_2': Cross the babbling brook.
+  image: Courtyard bordered by towering elms, sun-dappled and whispering secrets.
+    Stone arch beckons with mystery, gnarled tree offers cozy shadowy hideaway.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'You stumble upon a peculiar garden, unlike any other in The city of Erie,
+    Pennsylvania. The flowers here are oddly shaped and their colors swirl in mesmerizing
+    patterns. A single, ancient oak stands tall, casting dappled shadows that dance
+    with the whimsical creatures that flit around—little fairies with sparkly wings
+    and mischievous gnomes who laugh at your every attempt to catch them. The air
+    is filled with the sweet scent of enchanted blooms, and the ground beneath your
+    feet feels almost alive, responding to your steps with a gentle hum. This place
+    seems to have a life of its own, making it stand out from the rest.
+
+
+    The Mystic Garden Grove is unusual because the flowers are not just colorful but
+    also glow faintly under the moonlight, illuminating the path ahead and creating
+    a magical aura.'
+  title: Mystic Garden Grove
+  unusual: The Mystic Garden Grove is unusual because the flowers are not just colorful
+    but also glow faintly under the moonlight, illuminating the path ahead and creating
+    a magical aura.
+  actions:
+    '1_1': Follow the winding path back.
+    '3_1': Turn left at the oak tree.
+  image: Peculiar garden, oddly shaped flowers swirling in mesmerizing patterns. Ancient
+    oak casts dappled shadows, whimsical creatures flit around—fairies and gnomes.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a hidden clearing, where a mischievous pixie with sparkling blue
+    eyes and a raven-black mane greets you. She wears a frilly dress adorned with
+    tiny bells that jingle playfully. She leans against a sturdy oak, her fingers
+    twirling around a magical flower that glows softly in the twilight. With a playful
+    wink, she asks, "So, what brings our hero to my little corner of the Mystic Garden
+    Grove?"
+
+
+    The pixie stands at least three feet tall, dressed in a frilly, sky-blue dress
+    that sparkles in the light. Her long, raven-black hair flows down to her waist,
+    and her sparkling blue eyes seem to sparkle even more with mischief. She wears
+    delicate bracelets on her wrists and a necklace that holds a tiny, glowing flower.'
+  title: Pixie Glade
+  npc: The pixie stands at least three feet tall, dressed in a frilly, sky-blue dress
+    that sparkles in the light. Her long, raven-black hair flows down to her waist,
+    and her sparkling blue eyes seem to sparkle even more with mischief. She wears
+    delicate bracelets on her wrists and a necklace that holds a tiny, glowing flower.
+  actions:
+    '1_1': Navigate the clearing back.
+    '1_3': Follow the path straight.
+  image: Pixie with sparkling blue eyes, black mane, and frilly dress adorned with
+    tiny bells. Oak sturdy, magical flower glows softly in twilight.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You arrive at a narrow bridge spanning a deep, treacherous gorge. The bridge
+    sways dangerously under your weight, and the stench of sulfur fills the air. To
+    cross, you must solve a riddle hidden in the rusted chains above, or risk plunging
+    into the fiery depths below.
+
+
+    To proceed, you must decipher the ancient riddle carved into the bridge''s rusted
+    chains. It speaks of balance and the scales of fate, testing your wits and your
+    courage.'
+  title: Bridge Gorge
+  challenge: To proceed, you must decipher the ancient riddle carved into the bridge's
+    rusted chains. It speaks of balance and the scales of fate, testing your wits
+    and your courage.
+  actions:
+    '2_1': Cross the trembling bridge.
+    '4_1': Step off the narrow bridge.
+  image: Narrow bridge spans deep, treacherous gorge. Stench of sulfur fills air,
+    bridge sways dangerously.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a whimsical garden filled with talking flowers and enchanted
+    butterflies. A wise old owl perches on a gnarled branch, offering riddles and
+    puzzles to those who seek its knowledge. Solve one of these riddles to earn the
+    key to the next room.
+
+
+    Challenge yourself by solving a playful riddle posed by the wise old owl perched
+    on the gnarled branch. Only those who find the correct answer can retrieve the
+    key needed to unlock the next room.'
+  title: Flower Garden
+  challenge: Challenge yourself by solving a playful riddle posed by the wise old
+    owl perched on the gnarled branch. Only those who find the correct answer can
+    retrieve the key needed to unlock the next room.
+  actions:
+    '2_3': Cross the garden path.
+    '1_2': Follow the winding trail.
+    '1_4': Cross the garden bridge.
+  image: Whimsical garden filled with talking flowers, enchanted butterflies. Wise
+    old owl perches on gnarled branch, offers riddles and puzzles.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the bustling heart of the city, you stumble upon Mayor Whiskers himself,
+    dressed in a mismatched suit and a top hat adorned with a single, mischievous
+    wink. He greets you with a twinkle in his eye, holding a mysterious, half-opened
+    treasure chest. "Ah, our intrepid adventurer! I''ve been expecting you. Here''s
+    a small reward for your efforts—just look inside the chest!"
+
+
+    Mayor Whiskers appears as a jovial figure, with a bushy white beard that always
+    seems to be half-shaved. His eyes are twinkling with mischief, and he wears a
+    colorful top hat that never quite fits properly. His mismatched suit adds a quirky
+    charm to his overall eccentricity.'
+  title: Mayor's Grotto
+  npc: Mayor Whiskers appears as a jovial figure, with a bushy white beard that always
+    seems to be half-shaved. His eyes are twinkling with mischief, and he wears a
+    colorful top hat that never quite fits properly. His mismatched suit adds a quirky
+    charm to his overall eccentricity.
+  actions:
+    '3_1': Retrace your steps, then turn left.
+    '5_1': Turn right and follow the path.
+  image: Mayor Whiskers dressed in a mismatched suit, top hat with a wink. Holds mysterious,
+    half-opened treasure chest, twinkle in eye.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a whimsical tea party, where a dapper caterpillar with
+    a penchant for hats sits at a miniature table, sipping lemonade. Surrounding him
+    are colorful balloons tied to the ceiling and a collection of mismatched chairs.
+    "Ah, you''ve arrived just in time! Have a seat and enjoy the tea," he says, offering
+    a sly smile.
+
+
+    The caterpillar appears as a charming creature with a tall, thin body covered
+    in shimmering scales. His eyes are large and green, reflecting the sunlight, and
+    he wears a bright red bowler hat that matches his vibrant purple top hat. His
+    antennae twitch as he speaks, adding a lively touch to the tea party.'
+  title: Tea Party Terrace
+  npc: The caterpillar appears as a charming creature with a tall, thin body covered
+    in shimmering scales. His eyes are large and green, reflecting the sunlight, and
+    he wears a bright red bowler hat that matches his vibrant purple top hat. His
+    antennae twitch as he speaks, adding a lively touch to the tea party.
+  actions:
+    '1_3': Move left and continue straight.
+    '3_3': Move right and continue.
+  image: Caterpillar with a penchant for hats, miniature table, colorful balloons,
+    mismatched chairs. Sips lemonade, offers seat for tea.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You encounter a tricky puzzle embedded in the stone floor, guarded by a mischievous
+    gnome with a riddle to solve. "To pass this way, you must guess my age correctly
+    before I sing a song. Sing away!" The gnome sings a peculiar tune, and you must
+    listen closely to deduce the correct answer before moving on.
+
+
+    The challenge is to solve a riddle hidden in the stone floor. You must listen
+    carefully to the gnome''s song and guess its age before stepping over the puzzle.'
+  title: Puzzle Courtyard
+  challenge: The challenge is to solve a riddle hidden in the stone floor. You must
+    listen carefully to the gnome's song and guess its age before stepping over the
+    puzzle.
+  actions:
+    '1_3': Step over the puzzle and turn right.
+    '1_5': Step over the puzzle and turn left.
+  image: Stone floor embedded with puzzle, mischievous gnome guarding. Guards with
+    riddle, sings peculiar tune.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stumble upon a bustling market square, filled with laughter and the aroma
+    of fresh baked treats. A jolly old lady with a warm smile stands at the center,
+    holding a basket of goodies. "Welcome to our fair! What brings you to our quaint
+    corner of Erie?" she asks, her voice like honey.
+
+
+    The old lady appears as a kind-hearted grandmother, dressed in a vibrant floral
+    dress and adorned with a silver necklace. Her gray hair is neatly combed, and
+    her eyes sparkle with warmth and kindness. She holds a basket overflowing with
+    colorful fruits and sweets, making her presence irresistible.'
+  title: Market Square
+  npc: The old lady appears as a kind-hearted grandmother, dressed in a vibrant floral
+    dress and adorned with a silver necklace. Her gray hair is neatly combed, and
+    her eyes sparkle with warmth and kindness. She holds a basket overflowing with
+    colorful fruits and sweets, making her presence irresistible.
+  actions:
+    '4_1': Cross the square and move left.
+    '6_1': Walk straight and turn right.
+    '5_2': Move forward and turn right.
+  image: Market square filled with laughter, aroma of fresh baked treats. Jolly old
+    lady smiles warmly, holds basket of goodies.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a whimsical tea shop, where a grumpy old teapot brews
+    cups of steaming hot tea. Its face is etched with lines of wisdom and a mischievous
+    glint in its eye. "Ah, you''ve found my little tea room!" it harrumphs, stirring
+    the pot with a crooked finger. "Mind your manners and sit down, but be quick,
+    I don''t have much time for idle chatter!"
+
+
+    The teapot appears as a towering ceramic figure, with a cracked red face and a
+    handle made from twisted wire. Its body is adorned with tiny gold spots, giving
+    it a regal appearance. Despite its stern demeanor, there''s a playful spark in
+    its eyes.'
+  title: Tea Room
+  npc: The teapot appears as a towering ceramic figure, with a cracked red face and
+    a handle made from twisted wire. Its body is adorned with tiny gold spots, giving
+    it a regal appearance. Despite its stern demeanor, there's a playful spark in
+    its eyes.
+  actions:
+    '2_3': Turn back and walk left.
+    '3_4': Move forward and turn right.
+  image: Whimsical tea shop, grumpy old teapot brewing hot tea. Face etched with wisdom,
+    glint of mischief.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a bustling marketplace, where stalls overflow with exotic
+    fruits, colorful fabrics, and curious trinkets. A vendor with a jester’s hat calls
+    out, "Sample our finest lemonade, free of charge!" As you approach, he raises
+    a skeptical eyebrow, "Well, if you insist…" He hands you a cup and takes a sip,
+    then looks at you with a knowing smile. "Now, tell me, brave adventurer, what
+    will you do to earn this free treat?"
+
+
+    The market square challenges you to solve a riddle to earn your free lemonade.
+    The jester stands before you with a quill in hand, scribbling on a piece of parchment.
+    "To taste my lemonade, you must guess the number of apples in the basket," he
+    declares.'
+  title: Market Square
+  challenge: The market square challenges you to solve a riddle to earn your free
+    lemonade. The jester stands before you with a quill in hand, scribbling on a piece
+    of parchment. "To taste my lemonade, you must guess the number of apples in the
+    basket," he declares.
+  actions:
+    '1_4': Walk back and turn left.
+    '1_6': Move forward and turn right.
+  image: Marketplace overflowing with exotic fruits, colorful fabrics, curious trinkets.
+    Vendor with jester’s hat, skeptical eyebrow, offers free lemonade.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stumble upon a hidden alleyway, where an old street performer waits,
+    holding a worn-out guitar. "Welcome, traveler! Would you like to hear a tune for
+    free?" They strum a few chords, and a soft melody fills the air. "Tell me, what
+    brings you to this charming city?"
+
+
+    The street performer appears as a jester, dressed in mismatched clothes and sporting
+    a cheerful grin. Their eyes sparkle with mischief, and they hold a worn guitar
+    that seems to have seen many a performance. Despite their simple attire, there''s
+    a warmth and charm about them that instantly draws people in.'
+  title: Alley Way
+  npc: The street performer appears as a jester, dressed in mismatched clothes and
+    sporting a cheerful grin. Their eyes sparkle with mischief, and they hold a worn
+    guitar that seems to have seen many a performance. Despite their simple attire,
+    there's a warmth and charm about them that instantly draws people in.
+  actions:
+    '5_1': Walk backward and turn left.
+    '7_1': Move forward and turn left.
+  image: Hidden alleyway, old street performer holding a worn-out guitar. Soft melody
+    fills the air, waiting for a traveler.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a cozy little bistro, where a friendly waitress greets
+    you with a warm smile. "Welcome, traveler! What will you have? Our famous Erie
+    omelet is a local favorite, or perhaps you''d prefer a refreshing iced tea?"
+
+
+    The waitress appears in a vibrant apron, her curly hair tied up in a neat bun.
+    She wears a genuine smile that lights up her face, and her hands are steady as
+    she serves up a plate of fluffy omelets and steaming cups of coffee.'
+  title: Bistro Bar
+  npc: The waitress appears in a vibrant apron, her curly hair tied up in a neat bun.
+    She wears a genuine smile that lights up her face, and her hands are steady as
+    she serves up a plate of fluffy omelets and steaming cups of coffee.
+  actions:
+    '5_1': Walk backward and turn right.
+    '5_3': Move forward and turn right.
+  image: Cozy little bistro, friendly waitress greets with a warm smile. Famous Erie
+    omelet, refreshing iced tea options.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stand at the edge of a bustling market square, surrounded by stalls selling
+    everything from fresh produce to handmade crafts. A lively vendor calls out, "Fresh
+    fish today! Try our famous Erie trout!" You can''t resist and stop to chat with
+    the vendor, who greets you warmly with a laugh.
+
+
+    The vendor appears as a jovial man with a warm smile and a voice like honey. He’s
+    dressed in a colorful apron that matches his enthusiastic demeanor, and his hands
+    are always busy as he prepares dishes and interacts with customers.'
+  title: Market Square
+  npc: The vendor appears as a jovial man with a warm smile and a voice like honey.
+    He’s dressed in a colorful apron that matches his enthusiastic demeanor, and his
+    hands are always busy as he prepares dishes and interacts with customers.
+  actions:
+    '3_3': Move backward and turn right.
+    '3_5': Move forward and turn left.
+  image: Market square surrounded by stalls, fresh produce, handmade crafts. Vendor
+    calls out, "Fresh fish today!" Warm greeting, laughter.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stumble upon a hidden garden, nestled between two brick walls. A mischievous
+    gnome tugs at his pointed hat as he scurries past, muttering about misplaced treasures.
+    A fountain in the center gushes with crystal-clear water, reflecting the vibrant
+    colors of the surrounding flowers. You catch a whiff of honeysuckle and the sweetest
+    of nectar.
+
+
+    The gnome appears with a mischievous grin, his eyes twinkling with laughter. He’s
+    wearing a colorful robe with a pocket on his front where he keeps his treasures.
+    His long, pointy ears stick out proudly as he chats excitedly about his latest
+    discovery.'
+  title: Gnome Hideout
+  npc: The gnome appears with a mischievous grin, his eyes twinkling with laughter.
+    He’s wearing a colorful robe with a pocket on his front where he keeps his treasures.
+    His long, pointy ears stick out proudly as he chats excitedly about his latest
+    discovery.
+  actions:
+    '2_6': Move forward and turn left.
+    '1_5': Move backward and turn right.
+    '1_7': Move forward and turn right.
+  image: Hidden garden between brick walls, mischievous gnome tugging hat. Fountain
+    gushing crystal-clear water, vibrant flowers reflected.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a grumpy old owl perched atop a weathered tree stump. Its feathers
+    are ruffled, and it squawks indignantly as you approach, insisting you''ve disturbed
+    its nap. Despite its foul mood, it offers a wink and a secret map to the flip-flop''s
+    location.
+
+
+    The grumpy old owl has a fierce gaze and a beak that looks ready to snap. Its
+    feathers are ruffled, and it sits on a tree stump, frowning deeply. Despite its
+    bad attitude, there''s a twinkle in its eye when it spots you.'
+  title: Bumpy Path
+  npc: The grumpy old owl has a fierce gaze and a beak that looks ready to snap. Its
+    feathers are ruffled, and it sits on a tree stump, frowning deeply. Despite its
+    bad attitude, there's a twinkle in its eye when it spots you.
+  actions:
+    '6_1': Move backward and turn left.
+    '7_2': Move forward and turn left.
+  image: Grumpy old owl perched atop weathered tree stump, feathers ruffled. Offers
+    secret map to flip-flops, winks indignantly.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This room is a quirky anomaly, filled with mismatched furniture that seems
+    to have a life of its own. A worn-out rocking chair creaks gently, while a table
+    adorned with mismatched plates and glasses winks at you. The walls are painted
+    a vibrant shade of pink, and a chandelier made of mismatched light bulbs casts
+    an uneven glow. It feels like stepping into a whimsical fairy tale, but with a
+    touch of the absurd.
+
+
+    The walls are covered in a strange, iridescent wallpaper that shifts colors with
+    the light, making everything look like it''s glowing softly.'
+  title: Peculiar Parlor
+  unusual: The walls are covered in a strange, iridescent wallpaper that shifts colors
+    with the light, making everything look like it's glowing softly.
+  actions:
+    '6_3': Move forward and turn right.
+    '5_2': Move backward and turn right.
+  image: Room filled with mismatched furniture, walls painted vibrant pink. Creaking
+    rocking chair, winking table, uneven glow from mismatched chandelier.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the heart of the labyrinth, you find a puzzle box guarded by a mischievous
+    jester. To unlock the path to the flip-flop, you must solve a riddle that challenges
+    your wit and memory. The jester clinks his glasses, challenging you to guess the
+    missing word in a row of letters that spell out a nonsense phrase. Fail to recall
+    the missing piece, and you''ll be trapped forever in the maze!
+
+
+    The puzzle box requires you to guess the missing word in a row of letters that
+    spells out a nonsensical phrase. Failure means you must try again or face eternal
+    entrapment in the maze.'
+  title: Riddle Room
+  challenge: The puzzle box requires you to guess the missing word in a row of letters
+    that spells out a nonsensical phrase. Failure means you must try again or face
+    eternal entrapment in the maze.
+  actions:
+    '3_4': Move forward and turn left.
+    '3_6': Move backward and turn left.
+  image: Labyrinth heart, puzzle box guarded by a mischievous jester. Riddle challenges
+    wit and memory, glasses clinking.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'In this room, time itself seems to slow down, and the echoes of laughter
+    fill the air. A grand mirror hangs on the wall, reflecting a world where everyone
+    wears oversized flip-flops and silly hats. The ceiling is adorned with twinkling
+    stars that sparkle brightly, casting a whimsical glow on the floor. Here, you
+    might just catch a glimpse of yourself dancing with a unicorn.
+
+
+    The grand mirror reflects a fantastical world where everyone wears oversized flip-flops
+    and silly hats. Time seems to slow down, and the echoes of laughter fill the air.'
+  title: Mirror Maze
+  unusual: The grand mirror reflects a fantastical world where everyone wears oversized
+    flip-flops and silly hats. Time seems to slow down, and the echoes of laughter
+    fill the air.
+  actions:
+    '1_6': Move backward and turn right.
+    '3_6': Move forward and turn right.
+  image: Grand mirror reflecting oversized flip-flops, silly hats. Ceiling adorned
+    with twinkling stars, whimsical glow on floor.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A grumpy old man in a worn cloak sits by the fireplace, stirring a cauldron
+    full of bubbling potions. He wears a long, frayed beard that flows like a river,
+    and his eyes are sharp as daggers. "Looking for trouble, are we?" he snarls, glancing
+    up from his work.
+
+
+    The Brewmaster wears a long, ragged robe that clings to his gaunt frame, and his
+    skin is parchment-white with deep wrinkles. His eyes are sunken and haunted, and
+    he often casts a wary glance around, as if he’s been waiting for trouble. A staff
+    made of bones protrudes from his hand, and his beard is as unkempt as his attire.'
+  title: Brewmaster's Hut
+  npc: The Brewmaster wears a long, ragged robe that clings to his gaunt frame, and
+    his skin is parchment-white with deep wrinkles. His eyes are sunken and haunted,
+    and he often casts a wary glance around, as if he’s been waiting for trouble.
+    A staff made of bones protrudes from his hand, and his beard is as unkempt as
+    his attire.
+  actions:
+    '1_6': Turn back and move left.
+  image: Worn cloak, long frayed beard, sharp eyes. Grumpy old man stirs bubbling
+    potions by the fireplace.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A mischievous cat perches atop a dusty bookshelf, purring contentedly as
+    it watches the world go by. Its fur is a mix of stripes and spots, and it carries
+    a small pouch tied around its tail, filled with coins and trinkets. "Ah, you''ve
+    come to visit the wise old owl," the cat purred, before scurrying off to retrieve
+    a special treat.
+
+
+    The cat in the Cat''s Nest has sparkling green eyes and a fluffy white coat with
+    tufts on its ears. Its tail flicks back and forth playfully as it sits on the
+    shelf, looking curious and slightly aloof.'
+  title: Cat's Nest
+  npc: The cat in the Cat's Nest has sparkling green eyes and a fluffy white coat
+    with tufts on its ears. Its tail flicks back and forth playfully as it sits on
+    the shelf, looking curious and slightly aloof.
+  actions:
+    '7_1': Move left and step down.
+    '7_3': Step right and descend.
+  image: Striped and spotted cat perches on a dusty bookshelf, purring contentedly.
+    Small pouch tied around tail, filled with coins and trinkets.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This room is a peculiar oasis, unlike any other in the maze. It''s adorned
+    with antique mirrors that reflect a kaleidoscope of colors, casting an ethereal
+    glow around the space. The walls are painted with whimsical illustrations of flying
+    unicorns and enchanted forests, making it feel both magical and slightly surreal.
+
+
+    The unusual aspect of Mirage Chamber is the shimmering floor that reflects every
+    shape and color you move towards. It feels like stepping into a magical mirror
+    land, where everything bends and shifts under your feet.'
+  title: Mirage Chamber
+  unusual: The unusual aspect of Mirage Chamber is the shimmering floor that reflects
+    every shape and color you move towards. It feels like stepping into a magical
+    mirror land, where everything bends and shifts under your feet.
+  actions:
+    '5_3': Move left and step down.
+    '7_3': Step right and descend.
+  image: Antique mirrors reflecting kaleidoscope of colors, ethereal glow. Walls painted
+    with whimsical illustrations of flying unicorns and enchanted forests.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the heart of this room, a mischievous gnome with a hat made entirely of
+    buttons greets you with a twinkle in its eye. "Ah, a visitor! Come sit with me
+    by the glowing lantern, shall you?" It beckons you closer, and you can’t resist
+    the warm, friendly invitation.
+
+
+    The gnome in Gnome Courtyard has a playful grin and a long, pointy beard that
+    wiggles when he laughs. His eyes are a bright, twinkling blue, and his clothes
+    are a mix of colorful patches sewn onto an old, worn-out jacket. He wears a hat
+    with a button on top, always pressing it to make the button dance.'
+  title: Gnome Courtyard
+  npc: The gnome in Gnome Courtyard has a playful grin and a long, pointy beard that
+    wiggles when he laughs. His eyes are a bright, twinkling blue, and his clothes
+    are a mix of colorful patches sewn onto an old, worn-out jacket. He wears a hat
+    with a button on top, always pressing it to make the button dance.
+  actions:
+    '2_6': Step left and descend.
+    '3_5': Step right and descend.
+    '3_7': Step left and descend.
+  image: Button hat gnome with twinkle in eye, welcomes you warmly. Glowing lantern,
+    inviting seating.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the corner of this room, a grumpy old clock tick-tocks away, its face
+    fogged with age. A gnarled figure leans against the wall nearby, muttering to
+    itself as if having a heated debate with the clock. "Stupid timepiece! Why don’t
+    you just go back to the stone age already!"
+
+
+    The gnarled figure in Clock Corner has a wild beard that dances with every breath.
+    Its eyes are deep and full of wisdom, though there’s a scowl etched on its weathered
+    face. A staff with a peculiar pattern carved into it rests on its lap.'
+  title: Clock Corner
+  npc: The gnarled figure in Clock Corner has a wild beard that dances with every
+    breath. Its eyes are deep and full of wisdom, though there’s a scowl etched on
+    its weathered face. A staff with a peculiar pattern carved into it rests on its
+    lap.
+  actions:
+    '6_3': Step right and ascend.
+    '7_2': Step left and ascend.
+    '7_4': Step right and descend.
+  image: Gnarled figure leaning against the wall, grumpy old clock ticking. Fogged
+    clock face, heated debate with the clock.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the base of the ancient oak, a riddle challenges you, its bark cracked
+    and weathered. "If you want my flip-flops, solve this puzzle before nightfall.
+    Three clues, three choices, one correct path to victory."
+
+
+    The challenge is a cryptic riddle carved into the trunk of the ancient oak. It
+    reads, "Three paths diverge in the forest, take the middle one for the best chance."'
+  title: Oak Riddle
+  challenge: The challenge is a cryptic riddle carved into the trunk of the ancient
+    oak. It reads, "Three paths diverge in the forest, take the middle one for the
+    best chance."
+  actions:
+    '4_7': Step right and climb up.
+    '3_6': Step left and down.
+  image: Ancient oak base, riddle challenges you. Cracked and weathered bark, three
+    clues.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the twilight, a mischievous street performer waits with a jester''s cap
+    and a twinkle in their eye. They wave you over with a playful, "Ah, you found
+    me! Ready for some flips-flop magic?"
+
+
+    They have a vibrant red scarf tied around their neck and twinkling glasses perched
+    on their nose. Their smile is infectious, and they wear a playful expression on
+    their face.'
+  title: Jester's Stand
+  npc: They have a vibrant red scarf tied around their neck and twinkling glasses
+    perched on their nose. Their smile is infectious, and they wear a playful expression
+    on their face.
+  actions:
+    '7_3': Step left and down.
+    '7_5': Step right and down.
+  image: Jester's cap, twinkle in eye, waves playfully. Twilight street performer,
+    ready for magic.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the bustling market, a quirky old vendor awaits with a mischievous
+    grin. "Ah, my dear adventurer! Found you! Come taste my famous flip-flop ale before
+    it disappears!"
+
+
+    They wear a colorful beret and have a pouch full of flip-flops dangling from their
+    belt. Their eyes are full of mischief, and they carry a cheerful demeanor.'
+  title: Vendor's Stand
+  npc: They wear a colorful beret and have a pouch full of flip-flops dangling from
+    their belt. Their eyes are full of mischief, and they carry a cheerful demeanor.
+  actions:
+    '3_7': Step left and down.
+    '5_7': Step right and down.
+  image: Quirky old vendor, mischievous grin. Heart of bustling market, awaits adventurer.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here lies a puzzle chest, challenging you to solve its riddle before unlocking
+    the secret door. "To enter, you must guess the color of the hidden gem. Good luck!"
+
+
+    The challenge is to guess the color of the hidden gem inside the puzzle chest.'
+  title: Riddle Chest
+  challenge: The challenge is to guess the color of the hidden gem inside the puzzle
+    chest.
+  actions:
+    '6_5': Step left and down.
+    '7_4': Step right and down.
+    '7_6': Step right and down.
+  image: Puzzle chest, hidden gem color. Secret door, riddle challenge.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a bustling bazaar, where vendors haggle loudly and sell
+    everything from spices to souvenirs. A mischievous old man with a jester''s hat
+    stands near the entrance, grinning as he watches the crowd. He seems to know exactly
+    when you''re going to need a helping hand.
+
+
+    The old man is tall with a stooped back, dressed in a colorful patchwork robe
+    that shimmers with every movement. His eyes are sharp and twinkling, always ready
+    to offer advice or a jest.'
+  title: Market Square
+  npc: The old man is tall with a stooped back, dressed in a colorful patchwork robe
+    that shimmers with every movement. His eyes are sharp and twinkling, always ready
+    to offer advice or a jest.
+  actions:
+    '4_7': Step left and down.
+    '6_7': Step right and down.
+    '5_6': Step left and up.
+  image: Jester's hat old man, grins near bustling bazaar entrance. Crowd, vendors
+    haggling loudly.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stumble upon a peculiar tavern, its wooden beams adorned with ancient
+    signs of drunkenness and folly. A grizzled bartender with a cheeky grin greets
+    you, offering a pint that''s not quite cold enough. He knows just the secret passage
+    to the next room.
+
+
+    The bartender is a burly man with a wild beard, his eyes crinkling at the corners
+    as he laughs uproariously. He wears an old, frayed apron and a twinkle in his
+    eye that matches his infectious humor.'
+  title: Tavern Entrance
+  npc: The bartender is a burly man with a wild beard, his eyes crinkling at the corners
+    as he laughs uproariously. He wears an old, frayed apron and a twinkle in his
+    eye that matches his infectious humor.
+  actions:
+    '5_5': Step right and down.
+    '7_5': Step left and down.
+    '6_6': Step up and right.
+  image: Cheeky grin bartender, ancient signs of drunkenness. Wooden beams, not quite
+    cold pint.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a cozy little shop filled with mismatched shelves and dusty corners.
+    A grumpy old man with a cane leans against the counter, selling flip-flops to
+    all comers. He warns you to beware of the slippery floor and grumbles about lost
+    treasures.
+
+
+    The shopkeeper is a gruff old man with a long, gray beard and a cane that taps
+    rhythmically on the floor. His eyes are sharp, and his voice carries a hint of
+    wisdom mixed with a bit of mischief.'
+  title: Flip-flop Shop
+  npc: The shopkeeper is a gruff old man with a long, gray beard and a cane that taps
+    rhythmically on the floor. His eyes are sharp, and his voice carries a hint of
+    wisdom mixed with a bit of mischief.
+  actions:
+    '6_6': Step left and up.
+    '7_5': Step right and up.
+    '7_7': Step down and right.
+  image: Grumpy old man, cane leans against counter. Slippery floor, lost treasures.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: At the heart of the bustling market square, four paths converge before you.
+    One leads to the bustling spice stall, another to the giggling children’s playground,
+    a third to the wise old owl statue, and the fourth to the hidden alleyway. Each
+    path is adorned with colorful banners and laughter echoes around.
+  title: Market Cross
+  actions:
+    '5_7': Step left and down.
+    '7_7': Step down and right.
+    '6_6': Step up and left.
+  image: Colorful banners, four paths converge. Echoes of laughter, bustling market
+    square.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You spot a friendly old vendor leaning against a colorful fruit stand, selling
+    fresh apples and chatting animatedly with passersby. They smile warmly and wave
+    you over with a nod.
+
+
+    Standing at the Vendor Stand is an elderly woman with a kind face and bright eyes.
+    She wears a colorful apron adorned with small, embroidered flowers, and her silver
+    hair is neatly tied back. Her warm smile and gentle demeanor make her appear approachable
+    and friendly.'
+  title: Vendor Stand
+  npc: Standing at the Vendor Stand is an elderly woman with a kind face and bright
+    eyes. She wears a colorful apron adorned with small, embroidered flowers, and
+    her silver hair is neatly tied back. Her warm smile and gentle demeanor make her
+    appear approachable and friendly.
+  actions:
+    '6_6': Step up and right.
+    '5_5': Step down and left.
+    '5_7': Step down and right.
+  image: Friendly old vendor, colorful fruit stand. Warm smiles, animated conversation.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find a cozy little alcove with a wooden bench nestled against the wall.
+    A mischievous old man sits there, chuckling to himself while polishing his worn
+    boots with a rag. He holds out a grin and waves you over, his eyes twinkling with
+    mischief.
+
+
+    The elderly man sitting on the bench has a weathered face with a kind smile. His
+    gray hair is held back by a simple cap, and he wears patched-up boots that show
+    years of wear. He stands with a playful posture, his hands always busy with something,
+    whether it''s cleaning his boots or just holding onto the bench.'
+  title: Alcove Bench
+  npc: The elderly man sitting on the bench has a weathered face with a kind smile.
+    His gray hair is held back by a simple cap, and he wears patched-up boots that
+    show years of wear. He stands with a playful posture, his hands always busy with
+    something, whether it's cleaning his boots or just holding onto the bench.
+  actions:
+    '6_5': Step up and right.
+    '5_6': Step up and left.
+  image: Wooden bench, mischievous old man. Twinkling eyes, polished boots.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a whimsical garden, where tall, colorful flowers sway
+    in the breeze. A signpost in the middle reads, "Win the Garden Race or Collect
+    the Lost Flip-Flop." To the north, you see a path leading to a challenging puzzle
+    that requires quick thinking and sharp reflexes.
+
+
+    To progress, you must solve a riddle hidden among the flower petals. Answer correctly
+    and you unlock a secret path to the east.'
+  title: Flower Garden
+  challenge: To progress, you must solve a riddle hidden among the flower petals.
+    Answer correctly and you unlock a secret path to the east.
+  actions:
+    '5_6': Follow the path west.
+    '7_6': Step down and left.
+    '6_5': Step down and right.
+    '6_7': Step down and left.
+  image: Signpost garden, colorful flowers sway. Path challenges, puzzle north.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You've arrived at the treasure trove! Here lies the elusive lost flip-flop,
+    nestled among a collection of quirky artifacts and a mysterious, ornate pedestal.
+    Carefully step forward, and with a touch, the flip-flop glows faintly, signaling
+    its return to its rightful owner.
+  title: Flip-flop Chamber
+  actions:
+    '6_7': Step back and right.
+    '7_6': Step back and left.
+  image: Treasure trove, lost flip-flop, quirky artifacts. Glowing artifact, rare
+    pedestal glow.
+  image_filename: 7_7.png

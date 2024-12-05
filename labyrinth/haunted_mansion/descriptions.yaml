@@ -1,0 +1,1139 @@
+world:
+  location: a haunted mansion filled with ghosts and ghouls
+  goal:
+  - 7
+  - 7
+  writing_style: spooky, eerie, and mysterious; inspired by H.P. Lovecraft.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You stand in the threshold of a haunted mansion, your footsteps echoing off
+    the stone walls with a faint, almost imperceptible creaking. The air is heavy
+    and thick, laden with the scent of decay and rot. Shadows dance along the walls,
+    flickering and shifting as if alive, their forms indistinct and shadowy. The door
+    you enter through is cracked and half-rotted, its hinges groaning under the weight
+    of years. Inside, the room is dimly lit, the light from a single, flickering candle
+    casting long, distorted shadows across the floor. The furniture is dilapidated,
+    the wood splintered and charred, remnants of a time when this place was used for
+    darker purposes. The walls are painted with arcane symbols and strange hieroglyphs,
+    their meanings lost to time. You feel an oppressive presence, a palpable sense
+    of dread that seems to seep into your bones.
+  title: Entrance Chamber
+  actions:
+    '2_1': Follow the crumbling steps to the left.
+    '1_2': Turn right at the threshold.
+  image: Threshold, stone walls. Flickering candle, distorted shadows.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'The entrance to (2, 1) is marked by a peculiar altar, unlike any found in
+    the other rooms. Its surface is adorned with ancient, weathered symbols that seem
+    to glow faintly in the dim light. The air here is charged with an unsettling energy,
+    and the whispers of unseen voices echo through the stone walls, chilling the blood.
+    This place holds a distinct aura, tainted by darker rituals once performed within
+    its confines.
+
+
+    The altar in (2, 1) is the unusual aspect, adorned with ancient, weathered symbols
+    that seem to glow faintly in the dim light. Unlike the other rooms, it is the
+    site of darker rituals, marked by an eerie, charged atmosphere that seems to pulse
+    with malevolent energy. The whispers of unseen voices echo through the stone walls,
+    adding to the haunting presence of this place.'
+  title: Altar Chamber
+  unusual: The altar in (2, 1) is the unusual aspect, adorned with ancient, weathered
+    symbols that seem to glow faintly in the dim light. Unlike the other rooms, it
+    is the site of darker rituals, marked by an eerie, charged atmosphere that seems
+    to pulse with malevolent energy. The whispers of unseen voices echo through the
+    stone walls, adding to the haunting presence of this place.
+  actions:
+    '1_1': Retrace your steps and open the hidden door.
+    '3_1': Navigate the labyrinthine corridor.
+  image: Ancient altar, faint glow. Whispering voices, chilling energy.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a small, dimly lit alcove. A figure stands at the corner,
+    cloaked in shadows. Their features are obscured, but you sense a malevolent presence
+    emanating from them. The air grows colder, and a chill runs down your spine as
+    you realize this is not a welcoming sight.
+
+
+    The figure stands tall and imposing, with skin like parchment and eyes that glow
+    with an otherworldly light. Their robes are tattered and stained, and they carry
+    a staff that seems to crackle with dark energy. They move with an unnatural grace,
+    and the air around them is permeated with an unsettling aura.'
+  title: Shadow Cloak Chamber
+  npc: The figure stands tall and imposing, with skin like parchment and eyes that
+    glow with an otherworldly light. Their robes are tattered and stained, and they
+    carry a staff that seems to crackle with dark energy. They move with an unnatural
+    grace, and the air around them is permeated with an unsettling aura.
+  actions:
+    '1_1': Turn back and enter the passage.
+    '1_3': Follow the darkened corridor.
+  image: Cloaked figure, shadows. Colder air, chilling presence.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a grand chamber, the walls lined with skulls and bones.
+    A massive iron door looms ahead, heavily barred and sealed with arcane runes.
+    Before you lies a cryptic challenge, a puzzle that requires intellect and courage
+    to solve, or you risk being trapped forever within these haunted halls.
+
+
+    The challenge before you is to decipher an ancient puzzle carved into the walls.
+    It requires you to manipulate the symbols to unlock the door, or face the consequences
+    of your indecision.'
+  title: Crypt Chamber
+  challenge: The challenge before you is to decipher an ancient puzzle carved into
+    the walls. It requires you to manipulate the symbols to unlock the door, or face
+    the consequences of your indecision.
+  actions:
+    '2_1': Navigate the spiral staircase.
+    '4_1': Descend the darkened steps.
+  image: Skulls and bones, massive door. Arcane runes, cryptic challenge.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You enter a dimly lit antechamber, the air thick with the scent of decay
+    and old secrets. The walls are adorned with ancient carvings that seem to shift
+    and change, as if watching you. A hidden trapdoor creaks ominously beneath your
+    foot, leading downward into darkness.
+
+
+    The challenge before you is to decipher an ancient inscription on the wall to
+    open the hidden door. Failure to do so will result in a deadly trap closing behind
+    you.'
+  title: Vault Chamber
+  challenge: The challenge before you is to decipher an ancient inscription on the
+    wall to open the hidden door. Failure to do so will result in a deadly trap closing
+    behind you.
+  actions:
+    '2_3': Step down the secret staircase.
+    '1_2': Ascend the hidden stairs.
+    '1_4': Slide open the secret panel.
+  image: Ancient carvings, shifting walls. Hidden trapdoor, darkness below.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure stands at the end of the corridor, its form barely visible in the
+    flickering torchlight. The figure is cloaked in an ancient robe, its features
+    obscured by a veil of mystery. A cold, unyielding presence emanates from it, as
+    if it were a manifestation of malevolent energy.
+
+
+    The figure appears to be a ghastly old man, his robes tattered and worn, clinging
+    to his emaciated frame. His eyes are sunken and hollow, glowing with a sinister
+    light. The air around him seems to grow colder as he approaches, and an unsettling
+    aura surrounds him.'
+  title: Crypt Chamber
+  npc: The figure appears to be a ghastly old man, his robes tattered and worn, clinging
+    to his emaciated frame. His eyes are sunken and hollow, glowing with a sinister
+    light. The air around him seems to grow colder as he approaches, and an unsettling
+    aura surrounds him.
+  actions:
+    '3_1': Descend the spiral staircase.
+    '5_1': Follow the torchlit path.
+  image: Flickering torchlight, ancient robe. Cold presence, malevolent energy.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the mansion, a spectral figure materializes before you. The
+    figure is that of a hunched elder, its skin a ghastly shade of green, and eyes
+    burning with an unnatural light. It stands motionless, its presence a chilling
+    reminder of the dark secrets hidden within the walls.
+
+
+    The ghastly figure appears to be a hunched elder, its skin a ghastly shade of
+    green, and eyes burning with an unnatural light. Its presence is both commanding
+    and foreboding, making the hairs on the back of your neck stand up.'
+  title: Ghastly Hall
+  npc: The ghastly figure appears to be a hunched elder, its skin a ghastly shade
+    of green, and eyes burning with an unnatural light. Its presence is both commanding
+    and foreboding, making the hairs on the back of your neck stand up.
+  actions:
+    '1_3': Cross the haunted courtyard.
+    '3_3': Follow the ancient passage.
+  image: Spectral figure, ghastly green skin. Unnatural light, unnatural eyes.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a room filled with floating, grotesque masks that seem
+    to watch you with empty, blood-filled sockets. Each mask emits a chilling whisper,
+    challenging you to face your deepest fears. Crossing this room requires overcoming
+    the relentless torment of these spectral guardians.
+
+
+    The challenge here is to resist the haunting whispers of the floating masks. As
+    you step into the room, the masks begin to move, their eyes glowing with a malevolent
+    light, and their voices echo, taunting you with threats and horrors. To progress,
+    you must find a way to suppress your fear and maintain your composure, as succumbing
+    to the masks'' influence will weaken you further.'
+  title: Mask Chamber
+  challenge: The challenge here is to resist the haunting whispers of the floating
+    masks. As you step into the room, the masks begin to move, their eyes glowing
+    with a malevolent light, and their voices echo, taunting you with threats and
+    horrors. To progress, you must find a way to suppress your fear and maintain your
+    composure, as succumbing to the masks' influence will weaken you further.
+  actions:
+    '1_3': Step away from the masks.
+    '1_5': Move towards the wall.
+  image: Floating masks, empty sockets. Chilling whispers, relentless torment.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber adorned with ancient runes, the walls pulsating
+    with an otherworldly energy. At the center of the room, a figure looms, its form
+    ethereal yet imposing. The figure is a spectral woman, her features obscured by
+    a veil of darkness, and she stands silent, her gaze piercing and unsettling.
+
+
+    The spectral woman appears as a thin figure, her skin a haunting shade of pale
+    blue, and her hair a swirling mist that seems to defy gravity. She wears a veil
+    that obscures much of her face, and her eyes gleam with an eerie, luminescent
+    light. Her presence is both commanding and oppressive, and her silence is unnerving.'
+  title: Dark Veil Chamber
+  npc: The spectral woman appears as a thin figure, her skin a haunting shade of pale
+    blue, and her hair a swirling mist that seems to defy gravity. She wears a veil
+    that obscures much of her face, and her eyes gleam with an eerie, luminescent
+    light. Her presence is both commanding and oppressive, and her silence is unnerving.
+  actions:
+    '4_1': Navigate the darkened passage.
+    '6_1': Cross the threshold.
+    '5_2': Walk to the opposite wall.
+  image: Ancient runes, pulsating energy. Ethereal woman, piercing gaze.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber filled with flickering torches that seem to
+    dance on their own, casting an eerie glow over the walls. In the center of the
+    room, a spectral figure stands, its form barely visible through the mist that
+    surrounds it. The figure is a ghastly apparition, its skin a sickly shade of green,
+    and its eyes glowing with an unnatural light. It casts a shadowy form that seems
+    to pulse with a sinister energy, and its presence is both haunting and foreboding.
+
+
+    The spectral figure appears as a ghastly ghoul, its skin a sickly shade of green,
+    and its eyes glowing with an unnatural light. It stands tall and menacing, casting
+    a shadowy form that seems to pulse with a sinister energy. Its presence is both
+    haunting and foreboding, and it watches you with a cold, unblinking stare.'
+  title: Green Shadow Chamber
+  npc: The spectral figure appears as a ghastly ghoul, its skin a sickly shade of
+    green, and its eyes glowing with an unnatural light. It stands tall and menacing,
+    casting a shadowy form that seems to pulse with a sinister energy. Its presence
+    is both haunting and foreboding, and it watches you with a cold, unblinking stare.
+  actions:
+    '2_3': Move to the adjacent wall.
+    '3_4': Cross the threshold.
+  image: Flickering torches, eerie glow. Ghastly apparition, glowing eyes.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a chamber adorned with ancient, crumbling statues that
+    seem to whisper secrets in the darkness. At the center of the room, a challenge
+    awaits you—a puzzle carved into the wall, its mechanism intricate and complex,
+    requiring precise and delicate manipulation to unlock the next part of your journey.
+    The air is thick with the scent of decay, and the atmosphere is charged with an
+    unsettling energy that challenges your wits and your resolve.
+
+
+    The puzzle requires you to align stones in a specific pattern.'
+  title: Puzzle Chamber
+  challenge: The puzzle requires you to align stones in a specific pattern.
+  actions:
+    '1_4': Move to the opposite wall.
+    '1_6': Step to the adjacent wall.
+  image: Ancient statues, whispering secrets. Intricate puzzle, unsettling energy.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a spectral figure at the edge of the room, its form barely
+    visible in the dim light. The figure stands watch, its eyes glinting with a malevolent
+    light as it watches you with an unsettling gaze. Its presence is both ominous
+    and foreboding, a sentinel of the unknown dangers that lurk within the mansion.
+
+
+    The spectral figure appears as a ghastly ghoul, its skin a sickly shade of green,
+    and its eyes glowing with an unnatural light. It stands tall and menacing, casting
+    a shadowy form that seems to pulse with a sinister energy.'
+  title: Watcher's Den
+  npc: The spectral figure appears as a ghastly ghoul, its skin a sickly shade of
+    green, and its eyes glowing with an unnatural light. It stands tall and menacing,
+    casting a shadowy form that seems to pulse with a sinister energy.
+  actions:
+    '5_1': Move towards the opposite wall.
+    '7_1': Step to the adjacent wall.
+  image: Malevolent light, glinting eyes. Unsettling gaze, ominous presence.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find a spectral figure at the corner of the room, its form wavering and
+    translucent, watching you with cold, unblinking eyes. The figure seems to hold
+    some knowledge, though its words are lost to the void.
+
+
+    The spectral figure appears as a ghastly ghoul, its skin a sickly shade of green,
+    and its eyes glowing with an unnatural light. It stands tall and menacing, its
+    form flickering and shifting slightly as if caught between worlds.'
+  title: Ghoul Watcher
+  npc: The spectral figure appears as a ghastly ghoul, its skin a sickly shade of
+    green, and its eyes glowing with an unnatural light. It stands tall and menacing,
+    its form flickering and shifting slightly as if caught between worlds.
+  actions:
+    '5_1': Move towards the opposite wall.
+    '5_3': Step to the adjacent wall.
+  image: Translucent figure, cold eyes. Lost words, void knowledge.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a dimly lit chamber, the air heavy with the scent of
+    decay. At the center of the room, a spectral figure waits, its form barely discernible
+    in the shadows. The figure appears to be a malevolent specter, its eyes glowing
+    with a malevolent light, watching you with an unsettling intensity.
+
+
+    The spectral figure appears as a malevolent specter, its skin a ghastly green,
+    and its eyes glowing with an eerie light. It stands tall and ominous, its form
+    shifting and writhing as if trapped between realms.'
+  title: Crypt Guardian
+  npc: The spectral figure appears as a malevolent specter, its skin a ghastly green,
+    and its eyes glowing with an eerie light. It stands tall and ominous, its form
+    shifting and writhing as if trapped between realms.
+  actions:
+    '3_3': Move towards the opposite wall.
+    '3_5': Step to the adjacent wall.
+  image: Malevolent specter, glowing eyes. Unsettling intensity, shadows.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a spectral figure at the far end of the room, its form flickering
+    and shifting, a ghastly apparition with eyes that glow with a sinister light.
+    The figure seems to be guarding something, its presence ominous and foreboding.
+
+
+    The spectral figure appears as a malevolent wraith, its skin a ghastly shade of
+    green, and its eyes glowing with a malevolent light. It stands tall and ethereal,
+    its form wavering and shifting as if caught between realms.'
+  title: Wraith Gate
+  npc: The spectral figure appears as a malevolent wraith, its skin a ghastly shade
+    of green, and its eyes glowing with a malevolent light. It stands tall and ethereal,
+    its form wavering and shifting as if caught between realms.
+  actions:
+    '2_6': Step towards the opposite wall.
+    '1_5': Move towards the adjacent wall.
+    '1_7': Step to the adjacent wall.
+  image: Flickering ghost, glowing eyes. Ominous presence, sinister light.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You hear a soft whisper as you approach, and then a figure materializes from
+    the shadows. It is a spectral figure, a being of darkness itself, its form translucent
+    and indistinct, yet unmistakably looming over you with an ancient malice.
+
+
+    The spectral figure appears as a being of ancient darkness, its form a murky green,
+    eyes that glow with an evil luminescence. It stands tall and ethereal, its presence
+    a chilling blend of fear and ancient power.'
+  title: Dark Whispering Chamber
+  npc: The spectral figure appears as a being of ancient darkness, its form a murky
+    green, eyes that glow with an evil luminescence. It stands tall and ethereal,
+    its presence a chilling blend of fear and ancient power.
+  actions:
+    '6_1': Move towards the opposite wall.
+    '7_2': Step to the adjacent wall.
+  image: Translucent figure, ancient malice. Darkness itself, indistinct form.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This chamber is uniquely adorned with arcane symbols etched into the walls,
+    pulsating with a sinister aura that seems to draw in the very shadows themselves.
+    The air is thick with an ancient, malevolent energy, making it feel unlike any
+    other room in the haunted mansion.
+
+
+    The unusual aspect is the intricate and ancient glyphs carved into the walls,
+    which seem to shift and change color with the slightest movement, creating a mesmerizing
+    but terrifying display.'
+  title: Ancient Glyphs Chamber
+  unusual: The unusual aspect is the intricate and ancient glyphs carved into the
+    walls, which seem to shift and change color with the slightest movement, creating
+    a mesmerizing but terrifying display.
+  actions:
+    '6_3': Step towards the opposite wall.
+    '5_2': Step back to the central wall.
+  image: Arcane symbols, pulsating aura. Malevolent energy, thick air.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'The room is sealed by a complex mechanism hidden within a cryptic puzzle,
+    requiring precise action to unlock the passage to the next room. The mechanism
+    activates with a loud clanking sound, revealing a hidden door that must be opened
+    before the mechanism resets.
+
+
+    The challenge is to decipher a cryptic puzzle embedded within the mechanism that
+    seals the door. You must align a series of levers and rotate a mechanism to release
+    the hidden door. Failure to do so will reset the mechanism, requiring another
+    attempt.'
+  title: Mystic Mechanism Chamber
+  challenge: The challenge is to decipher a cryptic puzzle embedded within the mechanism
+    that seals the door. You must align a series of levers and rotate a mechanism
+    to release the hidden door. Failure to do so will reset the mechanism, requiring
+    another attempt.
+  actions:
+    '3_4': Rotate the central wheel clockwise.
+    '3_6': Turn the handle counterclockwise.
+  image: Cryptic puzzle, hidden door. Loud clanking, mechanism resets.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'The room is a spectral library, filled with ancient tomes that whisper secrets
+    to those who dare listen. Shadows dance along the walls, forming eerie shapes
+    that seem to leer and mock. The air is thick with the scent of aged parchment
+    and decayed spirits.
+
+
+    The unusual aspect is the spectral library filled with ancient tomes that whisper
+    secrets and draw in restless spirits. The room is not illuminated by any visible
+    source, and the whispers grow louder as you approach, creating an unsettling atmosphere.'
+  title: Spectral Library
+  unusual: The unusual aspect is the spectral library filled with ancient tomes that
+    whisper secrets and draw in restless spirits. The room is not illuminated by any
+    visible source, and the whispers grow louder as you approach, creating an unsettling
+    atmosphere.
+  actions:
+    '1_6': Turn left at the end of the corridor.
+    '3_6': Turn right at the intersection.
+  image: Spectral library, ancient tomes. Thick air, decayed spirits.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure stands at the edge of the room, cloaked in darkness, its features
+    obscured by a hood. Its eyes glow faintly in the dim light, fixed on you with
+    an unyielding gaze that seems to pierce through your soul.
+
+
+    You see a figure standing at the edge of the room, partially obscured by the shadows.
+    The figure is clad in a dark, flowing robe that billows with every movement, and
+    a hooded cloak conceals most of its face. Its eyes, though unseen fully, gleam
+    with an otherworldly light, casting an eerie glow over the surroundings.'
+  title: Ghostly Whisperer
+  npc: You see a figure standing at the edge of the room, partially obscured by the
+    shadows. The figure is clad in a dark, flowing robe that billows with every movement,
+    and a hooded cloak conceals most of its face. Its eyes, though unseen fully, gleam
+    with an otherworldly light, casting an eerie glow over the surroundings.
+  actions:
+    '1_6': Move towards the figure.
+  image: Glowing eyes, unyielding gaze. Dark figure, obscured features.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a faint outline of a figure standing at the corner of the room,
+    its silhouette blending seamlessly with the shadows. The figure is draped in an
+    ancient, tattered robe that shifts with the slightest breeze, and its eyes, hidden
+    behind a veil of obscurity, seem to follow your movements with an unsettling intensity.
+
+
+    You see a figure emerging from the shadows, dressed in a robe that seems to shift
+    and merge with the darkness itself. The figure''s face is obscured, but its eyes,
+    glowing with an inner light, seem to pierce through the gloom, focusing on you
+    with a disturbing clarity.'
+  title: Shadow Weaver
+  npc: You see a figure emerging from the shadows, dressed in a robe that seems to
+    shift and merge with the darkness itself. The figure's face is obscured, but its
+    eyes, glowing with an inner light, seem to pierce through the gloom, focusing
+    on you with a disturbing clarity.
+  actions:
+    '7_1': Move towards the figure's gaze.
+    '7_3': Follow the figure's shadow.
+  image: Faint outline, ancient robe. Obscured eyes, unsettling intensity.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This room is unusually adorned with ancient, twisted decorations that seem
+    to defy logic and time, with symbols etched into the walls that pulse with an
+    eerie, otherworldly energy. The atmosphere is charged with an unnatural silence,
+    broken only by the whispers of forgotten spirits that echo through the chambers.
+
+
+    The unusual aspect is the presence of a large, ornate altar carved with intricate,
+    pulsating runes that seem to glow with an ethereal light, even in the dim light
+    of the room.'
+  title: Whispering Altar
+  unusual: The unusual aspect is the presence of a large, ornate altar carved with
+    intricate, pulsating runes that seem to glow with an ethereal light, even in the
+    dim light of the room.
+  actions:
+    '5_3': Step away from the altar.
+    '7_3': Turn towards the wall.
+  image: Ancient decorations, eerie energy. Natural silence, whispers.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure standing in the corner, cloaked in darkness with an aura
+    that seems to drain the life from the surroundings. Its features are obscured,
+    but its presence is palpable, sending shivers down your spine as you realize it
+    is watching you.
+
+
+    You see a figure emerge from the darkness, cloaked in a veil that obscures its
+    features. Its eyes glow with an otherworldly light, and its lips move in a silent,
+    sinister whisper.'
+  title: Dark Observer
+  npc: You see a figure emerge from the darkness, cloaked in a veil that obscures
+    its features. Its eyes glow with an otherworldly light, and its lips move in a
+    silent, sinister whisper.
+  actions:
+    '2_6': Move towards the wall.
+    '3_5': Step back from the observer.
+    '3_7': Turn away from the wall.
+  image: Dark figure, obscured features. Aura drains life.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber adorned with ancient, crumbling statues that
+    seem to watch with hollow, lifeless eyes. The air is heavy with the scent of sulfur
+    and decay, and the walls are etched with cryptic symbols that pulse with an ominous
+    glow. In the center of the room, a figure stands, its form partially obscured
+    by a veil of darkness. The figure seems to leer at you, its presence both inviting
+    and terrifying.
+
+
+    You see a figure standing before you, cloaked in a dark robe that seems to absorb
+    light. Its face is hidden behind a mask of obsidian, and its eyes glint with an
+    unsettling red light. The figure moves with a slow, deliberate grace, and its
+    presence fills the chamber with an oppressive silence.'
+  title: Dark Whispering Chamber
+  npc: You see a figure standing before you, cloaked in a dark robe that seems to
+    absorb light. Its face is hidden behind a mask of obsidian, and its eyes glint
+    with an unsettling red light. The figure moves with a slow, deliberate grace,
+    and its presence fills the chamber with an oppressive silence.
+  actions:
+    '6_3': Step back from the wall.
+    '7_2': Move towards the opposite wall.
+    '7_4': Step away from the center.
+  image: Ancient statues, hollow eyes. Cryptic symbols, ominous glow.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a room filled with flickering torches that cast grotesque
+    shadows on the walls. The air is thick with the stench of old blood and decay.
+    At the center of the room stands a pedestal, upon which lies an ancient, ornate
+    sword. However, to claim the cursed amulet, you must solve a riddle inscribed
+    on the wall: "In the dark, where light does not shine, what walks but never creeps?"
+    Only then will the amulet''s power be yours.
+
+
+    The challenge here requires you to decipher the ancient riddle.'
+  title: Dark Sword Room
+  challenge: The challenge here requires you to decipher the ancient riddle.
+  actions:
+    '4_7': Navigate the opposite corridor.
+    '3_6': Turn and walk backward.
+  image: Flickering torches, grotesque shadows. Ancient sword, riddle on wall.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a hulking form looming at the end of the corridor, its form obscured
+    by darkness. The whispers of ancient incantations echo from within, and a cold,
+    metallic scent fills the air. The figure seems to move with a purpose, its eyes
+    glowing with a malevolent light.
+
+
+    Your vision blurs as the whispers grow louder, revealing a ghastly figure cloaked
+    in black robes. Its face is hidden beneath a hood, and its eyes glow with an unearthly
+    red light. The figure stands motionless, its form distorted by the darkness.'
+  title: Vaulted Whisperer
+  npc: Your vision blurs as the whispers grow louder, revealing a ghastly figure cloaked
+    in black robes. Its face is hidden beneath a hood, and its eyes glow with an unearthly
+    red light. The figure stands motionless, its form distorted by the darkness.
+  actions:
+    '7_3': Retrace your steps and turn.
+    '7_5': Go in the opposite direction.
+  image: Malevolent light, glowing eyes. Metallic scent, echoing incantations.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A spectral figure materializes before you, its form ethereal yet menacing.
+    It stands silently, its eyes fixed on you with an intensity that pierces the soul.
+    The air grows colder, and a sense of impending doom envelops the room.
+
+
+    The spectral figure appears as a tall, gaunt entity with translucent skin that
+    shifts with the slightest movement. Its eyes are pools of molten black, reflecting
+    a malevolent gaze. Hair-like tendrils extend from its shoulders, swirling in the
+    silent breeze.'
+  title: Whispering Corridor
+  npc: The spectral figure appears as a tall, gaunt entity with translucent skin that
+    shifts with the slightest movement. Its eyes are pools of molten black, reflecting
+    a malevolent gaze. Hair-like tendrils extend from its shoulders, swirling in the
+    silent breeze.
+  actions:
+    '3_7': Step back and turn.
+    '5_7': Walk forward and right.
+  image: Ethereal figure, piercing eyes. Colder air, impending doom.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a chamber adorned with ancient, twisted runes. The air
+    is heavy with the scent of decay and sulfur. In the center stands a pedestal,
+    upon which lies a pulsating crystal. To claim the amulet, you must solve a riddle
+    etched in blood-red ink, or face the wrath of the spectral guardians who watch
+    over the chamber.
+
+
+    To progress, you must decipher the cryptic riddle etched into the pedestal''s
+    surface, or risk the spectral guardians'' ire.'
+  title: Bloodlit Crypt
+  challenge: To progress, you must decipher the cryptic riddle etched into the pedestal's
+    surface, or risk the spectral guardians' ire.
+  actions:
+    '6_5': Turn left and proceed.
+    '7_4': Turn and walk backward.
+    '7_6': Move right and descend.
+  image: Ancient runes, heavy scent. Pulsating crystal, riddle in blood-red ink.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A spectral figure looms at the corner, its form ethereal yet foreboding.
+    The figure wears a mask of obsidian, its eyes glowing with an unnatural light.
+    Its lips move silently, whispering incantations that seem to stir the very air
+    around you with dread.
+
+
+    The spectral figure standing at the corner appears as a hulking mass of darkness,
+    its form cloaked in a veil of obsidian mist. The figure''s features are obscured
+    by the mask of obsidian, but its presence is chilling, emanating a malevolent
+    aura that seems to pierce the soul.'
+  title: Crypt of Shadows
+  npc: The spectral figure standing at the corner appears as a hulking mass of darkness,
+    its form cloaked in a veil of obsidian mist. The figure's features are obscured
+    by the mask of obsidian, but its presence is chilling, emanating a malevolent
+    aura that seems to pierce the soul.
+  actions:
+    '4_7': Move left and step down.
+    '6_7': Step back and turn right.
+    '5_6': Step back and turn left.
+  image: Obsidian mask, glowing eyes. Whispering incantations, dread.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You hear a soft, rhythmic chanting coming from the shadows. At the edge of
+    visibility, a figure materializes, its form partially obscured by a shroud of
+    mist. The figure wears a robe adorned with ancient runes, its face concealed beneath
+    a hood. The air grows colder, and a pervasive sense of dread fills the room.
+
+
+    The figure standing at the edge of the room appears as a gaunt specter, its form
+    partially hidden by the shroud of mist. The figure wears a robe adorned with ancient
+    runes, its face obscured by the hood. Its eyes are vacant and seem to glow faintly
+    with an unholy light, casting an ominous presence.'
+  title: Shrouded Whisper
+  npc: The figure standing at the edge of the room appears as a gaunt specter, its
+    form partially hidden by the shroud of mist. The figure wears a robe adorned with
+    ancient runes, its face obscured by the hood. Its eyes are vacant and seem to
+    glow faintly with an unholy light, casting an ominous presence.
+  actions:
+    '5_5': Step back and turn right.
+    '7_5': Move forward and step left.
+    '6_6': Step forward and turn right.
+  image: Ancient runes, hooded figure. Cold air, pervasive dread.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a figure standing at the corner, its form partially concealed
+    by a shroud of mist. The figure wears a robe adorned with ancient runes, its face
+    obscured by the hood. The air around the figure grows colder, and an unsettling
+    presence fills the room.
+
+
+    The figure standing at the corner appears as a spectral figure, its form partially
+    hidden by the shroud of mist. The figure wears a robe adorned with ancient runes,
+    its face obscured by the hood. Its eyes seem to glow faintly with an unholy light,
+    casting an ominous presence.'
+  title: Mist-Shrouded Corner
+  npc: The figure standing at the corner appears as a spectral figure, its form partially
+    hidden by the shroud of mist. The figure wears a robe adorned with ancient runes,
+    its face obscured by the hood. Its eyes seem to glow faintly with an unholy light,
+    casting an ominous presence.
+  actions:
+    '6_6': Step back and turn right.
+    '7_5': Step back and turn left.
+    '7_7': Step forward and turn left.
+  image: Robe with ancient runes, hooded figure. Colder air, unsettling presence.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Multiple pathways diverge here, their edges blurred by the mists that hang
+    in the air. Each path leads to a different destination, their directions indicated
+    by faint, twisted markings on the ground. The paths seem to merge and separate
+    again, creating a sense of endless possibility and inevitable doom.
+  title: Misty Junction
+  actions:
+    '5_7': Step back and turn right.
+    '7_7': Step forward and turn left.
+    '6_6': Step back and turn right.
+  image: Faint markings, merging paths. Endless possibility, inevitable doom.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A specter looms at the edge of the clearing, its form partially obscured
+    by the fog. The figure stands motionless, its features etched in the haunting
+    shadows, a malevolent presence that seems to leer at you.
+
+
+    A spectral figure stands before you, its form partially concealed by the mist
+    that swirls around the clearing. Cloaked in an ancient, tattered robe, the figure
+    wears gauntlets of bone and carries a staff of obsidian. Its eyes, hollow and
+    sunken, glow with an eerie blue light, reflecting the spectral aura that surrounds
+    it.'
+  title: Misty Guardian
+  npc: A spectral figure stands before you, its form partially concealed by the mist
+    that swirls around the clearing. Cloaked in an ancient, tattered robe, the figure
+    wears gauntlets of bone and carries a staff of obsidian. Its eyes, hollow and
+    sunken, glow with an eerie blue light, reflecting the spectral aura that surrounds
+    it.
+  actions:
+    '6_6': Step forward and turn right.
+    '5_5': Step back and turn left.
+    '5_7': Step back and turn right.
+  image: Malevolent presence, etched shadows. Leering figure, haunting shadows.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A ghastly figure stands sentinel at the edge of the clearing, its form partially
+    hidden by the dense fog. The figure is draped in a cloak of spectral black, its
+    skin pallid and translucent, eyes glowing with an ethereal, cold light. It seems
+    to watch you with a silent, unblinking gaze, its presence both foreboding and
+    unsettling.
+
+
+    The spectral figure appears before you, its form partially obscured by the mist
+    that shrouds the clearing. Cloaked in an ancient, tattered robe, the figure wears
+    gauntlets of bone and carries a staff of obsidian. Its eyes, hollow and sunken,
+    glow with an eerie blue light, reflecting the spectral aura that surrounds it.'
+  title: Ghastly Sentinel
+  npc: The spectral figure appears before you, its form partially obscured by the
+    mist that shrouds the clearing. Cloaked in an ancient, tattered robe, the figure
+    wears gauntlets of bone and carries a staff of obsidian. Its eyes, hollow and
+    sunken, glow with an eerie blue light, reflecting the spectral aura that surrounds
+    it.
+  actions:
+    '6_5': Step forward and turn left.
+    '5_6': Step back and turn right.
+  image: Ghostly figure, spectral black cloak. Ethereal light, unblinking gaze.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'In the center of the chamber lies a pedestal adorned with ancient runes,
+    but as you approach, the pedestal emits a chilling whisper, summoning forth a
+    spectral guardian that challenges your courage and intellect. The guardian demands
+    proof of your worthiness, presenting a riddle or test that you must solve to proceed.
+    Failure brings forth a curse upon yourself and your companions.
+
+
+    The challenge here requires you to decipher ancient runes etched into the pedestal.
+    You must solve a riddle or perform a task to prove your worthiness and silence
+    the spectral guardian. Failure results in a curse upon you and your companions.'
+  title: Guardian Chamber
+  challenge: The challenge here requires you to decipher ancient runes etched into
+    the pedestal. You must solve a riddle or perform a task to prove your worthiness
+    and silence the spectral guardian. Failure results in a curse upon you and your
+    companions.
+  actions:
+    '5_6': Step back and turn right.
+    '7_6': Step forward and turn left.
+    '6_5': Step back and turn left.
+    '6_7': Step forward and turn right.
+  image: Ancient runes, chilling whisper. Spectral guardian, riddle test.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Here, the air grows thick with an ethereal fog, and the whispers grow louder.
+    Before you stands the altar of the amulet, its surface pulsating with a dark,
+    otherworldly energy. The amulet itself is a grotesque object, half-shadowed and
+    half-visible, encrusted with strange, glowing crystals. It beckons with an alluring
+    yet deadly allure, drawing you closer with an unseen force. Beware, for touching
+    the amulet may grant eternal life, but it also promises the corruption of your
+    soul.
+  title: Amulet Altar
+  actions:
+    '6_7': Step back and turn right.
+    '7_6': Step back and turn left.
+  image: Pulsating altar, dark energy. Grotesque amulet, glowing crystals.
+  image_filename: 7_7.png

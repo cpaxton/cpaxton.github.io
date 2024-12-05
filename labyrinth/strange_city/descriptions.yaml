@@ -1,0 +1,1226 @@
+world:
+  location: a strange, gothic industrial city filled with magic and strange creatures,
+    inspired by the works of China Mieville
+  goal:
+  - 7
+  - 7
+  writing_style: dark, gritty, and detailed; inspired by China Mieville.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: 'You stand at the threshold of a narrow alleyway, its walls lined with stone
+    and brick, both weathered and worn from years of use. The air is heavy with the
+    scent of damp earth and the faint echo of distant machinery. As you step forward,
+    the alleyway narrows further, leading to two possible paths ahead: to the left,
+    where the sound of distant machinery grows louder, or to the right, where the
+    darkness seems to press closer. The ground beneath your feet is uneven, with patches
+    of debris and broken stones scattered across the narrow space. Shadows play across
+    the walls, dancing with the flickering light of a single, flickering lantern hanging
+    precariously from a nearby wall. The alley is shrouded in an aura of mystery,
+    hinting at secrets hidden just beyond the reach of light.'
+  title: Shadows' Entrance
+  actions:
+    '2_1': Follow the narrow path to the left.
+    '1_2': Turn right at the fork.
+  image: Stone and brick walls, damp earth scent. Flickering lantern, uneven ground.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'At the end of the narrow path, you find yourself in a small, ornate chamber
+    adorned with arcane symbols etched into the stone walls. Unlike the others, this
+    place pulses with an otherworldly energy, as if it were a nexus for some ancient
+    magic. The air is thick with whispers of power and the lingering scent of incense,
+    hinting at rituals performed here long ago.
+
+
+    The Arcane Corridor is unusually lit by a soft, ethereal glow emanating from a
+    cluster of glowing crystals embedded in the ceiling. This light contrasts sharply
+    with the otherwise dim and shadowy surroundings, making it stand out from the
+    other rooms.'
+  title: Arcane Corridor
+  unusual: The Arcane Corridor is unusually lit by a soft, ethereal glow emanating
+    from a cluster of glowing crystals embedded in the ceiling. This light contrasts
+    sharply with the otherwise dim and shadowy surroundings, making it stand out from
+    the other rooms.
+  actions:
+    '1_1': Retrace your steps and turn right.
+    '3_1': Walk straight ahead and climb the stairs.
+  image: Arboreal symbols, otherworldly energy. Incense scent, ancient whispers.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a figure hunched over a small desk, illuminated by the dim light
+    of a solitary candle. The figure wears tattered robes and holds a staff adorned
+    with arcane symbols, their eyes fixed intently on something in their hand. They
+    appear alert and wary, ready to face intruders.
+
+
+    The figure stands tall, cloaked in shadows that seem to cling to their form, creating
+    an almost ethereal presence. Their robes are stained with dirt and wear signs
+    of prolonged use, but they are well-worn and sturdy, suggesting years of service.
+    A staff made of dark wood and etched with arcane symbols rests in their hand,
+    radiating a faint, ominous glow. Their eyes are sharp and watchful, never betraying
+    their thoughts openly.'
+  title: Mystic Sentinel
+  npc: The figure stands tall, cloaked in shadows that seem to cling to their form,
+    creating an almost ethereal presence. Their robes are stained with dirt and wear
+    signs of prolonged use, but they are well-worn and sturdy, suggesting years of
+    service. A staff made of dark wood and etched with arcane symbols rests in their
+    hand, radiating a faint, ominous glow. Their eyes are sharp and watchful, never
+    betraying their thoughts openly.
+  actions:
+    '1_1': Retrace your steps and turn left.
+    '1_3': Walk straight ahead and take the stairs down.
+  image: Tattered robes, arcane symbols. Wary figure, solitary candle.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a chamber adorned with intricate carvings depicting
+    scenes from forgotten myths and legends. The air is thick with the scent of aged
+    parchment and the faint whisper of ancient languages. At the center of the room
+    lies a large, ornate door, heavily guarded by a spectral figure that seems to
+    defy the laws of physics. The spectral guardian moves with unnatural grace, its
+    eyes glowing with an eerie light, challenging anyone who dares to enter.
+
+
+    The spectral guardian challenges you with a riddle designed to test your wit and
+    courage.'
+  title: Guarded Gateway
+  challenge: The spectral guardian challenges you with a riddle designed to test your
+    wit and courage.
+  actions:
+    '2_1': Navigate the treacherous steps to the left.
+    '4_1': Descend the spiral staircase to the right.
+  image: Intricate carvings, ancient languages. Eerie light, spectral guardian.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a cramped, labyrinthine corridor filled with flickering
+    torches that barely illuminate the walls. The walls are lined with ancient, weathered
+    stone, and the floor is littered with debris and broken fragments of what once
+    were grand structures. The air is heavy with the scent of damp earth and the faint
+    echo of distant footsteps. Ahead, you see a narrow doorway, its entrance guarded
+    by a series of mechanical automatons that activate upon approaching. Their movements
+    are precise and mechanical, and they challenge anyone who enters with a series
+    of puzzles and traps designed to prevent unwary intruders.
+
+
+    The automatons challenge you with a sequence of locked doors and complex puzzles.'
+  title: Automaton Guard
+  challenge: The automatons challenge you with a sequence of locked doors and complex
+    puzzles.
+  actions:
+    '2_3': Cross the narrow bridge to the right.
+    '1_2': Step back and enter the passage.
+    '1_4': Move forward and turn left.
+  image: Automatons guard the doorway, mechanical precision. Heavy earth scent, damp
+    echoes.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You approach the entrance to a dimly lit chamber, and a figure steps into
+    the light. It is a cloaked figure with a hood pulled over their face, their presence
+    commanding and ominous. They stand silently, watching as you enter the room, their
+    eyes hidden beneath the shadow of their hood.
+
+
+    The Cloak Watcher stands tall, their cloak billowing in the unseen breeze. Their
+    face is obscured by a hood, but you can see sharp features and a stern expression.
+    They appear to be a seasoned warrior, with a rugged look that hints at many battles
+    fought.'
+  title: Cloak Watcher
+  npc: The Cloak Watcher stands tall, their cloak billowing in the unseen breeze.
+    Their face is obscured by a hood, but you can see sharp features and a stern expression.
+    They appear to be a seasoned warrior, with a rugged look that hints at many battles
+    fought.
+  actions:
+    '3_1': Retreat and follow the winding path.
+    '5_1': Proceed down the secret alley.
+  image: Cloaked figure, hooded eyes. Ominous presence, silent watch.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a narrow, dimly lit corridor that stretches ahead and
+    to your right. The walls are lined with ancient, ornate tiles that glow faintly
+    with an ethereal light. At the end of the corridor, a figure stands guard, their
+    hood drawn low over their face, casting a shadowy silhouette against the wall.
+    The air is thick with the scent of aged parchment and forgotten secrets.
+
+
+    The figure stands in the dim light, their hood pulled tightly around their face,
+    obscuring much of their features. They appear to be a middle-aged woman, her skin
+    weathered from years of exposure to the elements. Her stance is alert, ready for
+    whatever may come.'
+  title: Guarded Corridor
+  npc: The figure stands in the dim light, their hood pulled tightly around their
+    face, obscuring much of their features. They appear to be a middle-aged woman,
+    her skin weathered from years of exposure to the elements. Her stance is alert,
+    ready for whatever may come.
+  actions:
+    '1_3': Turn and enter the adjacent room.
+    '3_3': Navigate the secret passageway.
+  image: Ethereal glow, ancient tiles. Shadowy figure, aged parchment.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a small, cramped room filled with jagged metal shards
+    embedded in the walls, creating a dangerous obstacle course. The air is thick
+    with the acrid smell of burned metal, and the floor is littered with debris and
+    broken tools. The challenge here requires you to navigate this hazardous terrain
+    without sustaining injury.
+
+
+    Navigate the shattered room.
+
+
+    The challenge here is to avoid the sharp metal shards embedded in the walls and
+    floor, which are remnants of a previous battle. Carefully step over the jagged
+    pieces, ensuring you don''t trip or cut yourself. The narrow space makes it difficult
+    to move freely, adding to the danger.'
+  title: Shattered Chamber
+  challenge: 'Navigate the shattered room.
+
+
+    The challenge here is to avoid the sharp metal shards embedded in the walls and
+    floor, which are remnants of a previous battle. Carefully step over the jagged
+    pieces, ensuring you don''t trip or cut yourself. The narrow space makes it difficult
+    to move freely, adding to the danger.'
+  actions:
+    '1_3': Step over the shards to the left.
+    '1_5': Cross the threshold to the right.
+  image: Jagged metal shards, thick acrid smell. Littered debris, hazardous terrain.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a dimly lit alcove, the walls adorned with twisted ironwork
+    and stained glass depicting scenes from a bygone era. The air is heavy with the
+    scent of decay and old, forgotten secrets. At the entrance, a figure waits, their
+    form partially obscured by the shadows. This figure appears to be a gaunt old
+    man, his eyes hollow and sunken, wearing tattered robes that seem to shift and
+    ripple as though imbued with some arcane power.
+
+
+    The old man stands before you, his posture rigid and his eyes fixed on the horizon.
+    His skin is pale and rough, almost as dark as the shadows that envelop him. He
+    wears a cloak that seems to shimmer faintly, catching the light in curious ways.'
+  title: Shadowed Aisle
+  npc: The old man stands before you, his posture rigid and his eyes fixed on the
+    horizon. His skin is pale and rough, almost as dark as the shadows that envelop
+    him. He wears a cloak that seems to shimmer faintly, catching the light in curious
+    ways.
+  actions:
+    '4_1': Move past the waiting figure.
+    '6_1': Step across the threshold.
+    '5_2': Cross the threshold to the right.
+  image: Twisted ironwork, stained glass. Hollow eyes, tattered robes.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a narrow, dimly lit corridor that seems to stretch endlessly
+    into the darkness. The walls are lined with rusty pipes and cobwebs, and the air
+    is thick with the acrid smell of sulfur. At the end of the corridor, a figure
+    stands motionless, their presence casting long, ominous shadows. This figure is
+    a gaunt, skeletal being with glowing red eyes, surrounded by a faint aura of malevolent
+    energy.
+
+
+    The skeletal being appears before you, its form barely visible in the dim light.
+    Its skin is a sickly white, and its eyes glow with an eerie red light, reflecting
+    off the surrounding gloom. Its bones are exposed, each joint creaking softly as
+    it moves.'
+  title: Voided Passage
+  npc: The skeletal being appears before you, its form barely visible in the dim light.
+    Its skin is a sickly white, and its eyes glow with an eerie red light, reflecting
+    off the surrounding gloom. Its bones are exposed, each joint creaking softly as
+    it moves.
+  actions:
+    '2_3': Step back into the corridor.
+    '3_4': Move forward into the darkness.
+  image: Gaunt skeletal being, glowing red eyes. Faint aura, ominous shadows.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You enter a room filled with flickering, ancient torches that cast long,
+    shadowy forms against the stone walls. The air is thick with the scent of must
+    and decay, and the floor is covered in a layer of dust and debris. In the center
+    of the room, a large puzzle lies scattered on the ground, made up of intricate,
+    enigmatic pieces that seem to hold secrets from another time. Solving this puzzle
+    will be no easy task, as each piece fits only one specific spot, and any mistake
+    will require you to start anew.
+
+
+    The challenge here requires you to piece together a mysterious puzzle.'
+  title: Puzzle Chamber
+  challenge: The challenge here requires you to piece together a mysterious puzzle.
+  actions:
+    '1_4': Retrace your steps to the left.
+    '1_6': Step back to the right.
+  image: Flickering torches, shadowy forms. Thick must, dust-covered floor.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You arrive at a narrow, shadowed passage that suddenly widens into a clearing.
+    At the center of this clearing, a figure stands, cloaked in darkness. This figure
+    is a twisted, humanoid creature with a face contorted in malevolent intent, its
+    eyes burning with an unholy light. The air around the figure is charged with an
+    unsettling energy, and you feel a surge of fear as you approach.
+
+
+    The twisted creature appears before you, its form partially obscured by the darkness.
+    It stands tall and gaunt, its eyes glowing with an unholy light. The figure''s
+    body is contorted, with jagged bones visible, and its skin is a dark, almost black
+    color. It emanates a sinister presence, and you feel a cold dread wash over you
+    as you confront it.'
+  title: Darkened Courtyard
+  npc: The twisted creature appears before you, its form partially obscured by the
+    darkness. It stands tall and gaunt, its eyes glowing with an unholy light. The
+    figure's body is contorted, with jagged bones visible, and its skin is a dark,
+    almost black color. It emanates a sinister presence, and you feel a cold dread
+    wash over you as you confront it.
+  actions:
+    '5_1': Step back to the left.
+    '7_1': Take the path to the right.
+  image: Malevolent creature, unholy light. Charged energy, unsettling atmosphere.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a narrow, dimly lit corridor. At the end of the corridor,
+    a figure stands, watching you with piercing eyes. The figure is a grotesque, half-man,
+    half-monster, its skin covered in scales and horns, and its eyes glinting with
+    malice. The air around the figure is thick with an eerie aura, and you feel a
+    sudden surge of unease as you recognize the danger lurking in the shadows.
+
+
+    The grotesque figure appears before you, towering over you with its unnatural
+    height. Its skin is a mixture of human flesh and reptilian scales, and its eyes
+    burn with a malevolent light. Horns protrude from its head, and its body is twisted
+    and contorted, as if it has been shaped by forces beyond nature. The figure moves
+    with a fluidity that suggests it was once a creature of grace, but now it stands
+    as a symbol of dark power and chaos.'
+  title: Shadowed Passage
+  npc: The grotesque figure appears before you, towering over you with its unnatural
+    height. Its skin is a mixture of human flesh and reptilian scales, and its eyes
+    burn with a malevolent light. Horns protrude from its head, and its body is twisted
+    and contorted, as if it has been shaped by forces beyond nature. The figure moves
+    with a fluidity that suggests it was once a creature of grace, but now it stands
+    as a symbol of dark power and chaos.
+  actions:
+    '5_1': Step back to the left.
+    '5_3': Step forward to the right.
+  image: Piercing eyes, grotesque monster. Eerie aura, thick with menace.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a cramped, narrow corridor that abruptly widens into
+    a small chamber. At the center of the chamber, a figure waits, its form partially
+    obscured by the darkness. This figure is a twisted, humanoid entity, its features
+    distorted and its skin a dark, almost black color. It emits an unsettling aura,
+    and you feel a cold dread as you realize the danger it represents.
+
+
+    The twisted entity appears before you, its form partially obscured by the darkness.
+    Standing at least twice your height, its skin is a dark, almost black color, and
+    its eyes glow with an unholy light. Horns protrude from its head, and its body
+    is twisted and contorted, as if it has been shaped by forces beyond nature. The
+    entity releases a chilling aura, making your blood run cold.'
+  title: Twisted Waiting Room
+  npc: The twisted entity appears before you, its form partially obscured by the darkness.
+    Standing at least twice your height, its skin is a dark, almost black color, and
+    its eyes glow with an unholy light. Horns protrude from its head, and its body
+    is twisted and contorted, as if it has been shaped by forces beyond nature. The
+    entity releases a chilling aura, making your blood run cold.
+  actions:
+    '3_3': Step back to the left.
+    '3_5': Step forward to the right.
+  image: Darkened chamber, twisted entity. Unsettling aura, dark skin.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a dimly lit alcove, the walls lined with ancient, crumbling
+    stones that seem to whisper tales of forgotten magic. At the center of the alcove,
+    a figure waits, its form partially hidden by the shadows. This figure is a gaunt,
+    skeletal being with glowing red eyes, its skin a ghastly shade of white. Its presence
+    is oppressive, and you feel an overwhelming sense of dread as you realize the
+    danger it poses.
+
+
+    The skeletal being appears before you, its form partially hidden by the shadows.
+    Standing on two thin legs, it is nearly translucent, with bones visible through
+    its pale, skeletal skin. Its eyes are glowing red, casting a sinister light around
+    it. The skeletal being moves with a slow, deliberate pace, its presence commanding
+    a sense of dread and danger.'
+  title: Ghastly Skeletal Chamber
+  npc: The skeletal being appears before you, its form partially hidden by the shadows.
+    Standing on two thin legs, it is nearly translucent, with bones visible through
+    its pale, skeletal skin. Its eyes are glowing red, casting a sinister light around
+    it. The skeletal being moves with a slow, deliberate pace, its presence commanding
+    a sense of dread and danger.
+  actions:
+    '2_6': Step forward to the left.
+    '1_5': Step back to the right.
+    '1_7': Step forward to the right.
+  image: Crumbling stones, whispers of magic. Ghastly white skin, glowing eyes.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a small, cramped cell, its walls made of rough, stone
+    surfaces. The floor is littered with debris and dust, and the air is thick with
+    the stench of neglect and decay. At the center of the cell, a figure stands, its
+    presence commanding the space. This figure is a twisted, malformed humanoid creature,
+    its skin a sickly green color, and its features distorted and grotesque. Its eyes
+    are sunken and hollow, and it glows with an eerie, greenish light. The creature''s
+    posture is tense and defensive, and it seems to watch you with a mixture of hostility
+    and anticipation.
+
+
+    The twisted creature appears before you, its skin a sickly green color and its
+    features distorted and grotesque. Its eyes are sunken and hollow, glowing with
+    an eerie, greenish light. The creature stands tense and defensive, its posture
+    indicating a mix of hostility and anticipation.'
+  title: Green Cell
+  npc: The twisted creature appears before you, its skin a sickly green color and
+    its features distorted and grotesque. Its eyes are sunken and hollow, glowing
+    with an eerie, greenish light. The creature stands tense and defensive, its posture
+    indicating a mix of hostility and anticipation.
+  actions:
+    '6_1': Step backward to the left.
+    '7_2': Step forward to the left.
+  image: Tense, malformed creature. Sickly green skin, hollow eyes.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This room is unlike the others, adorned with intricate carvings of ancient
+    symbols that seem to shimmer with arcane energies. The walls are painted with
+    tales of forgotten battles and legendary heroes, their colors bleeding into the
+    dusty corners. Here, the air is charged with an almost palpable magic, and the
+    echoes of whispered incantations linger in the air. The center of the room holds
+    a peculiar altar, its surface covered in mysterious runes that glow faintly in
+    the dim light.
+
+
+    The unusual aspect of this room is the intricate carvings on the walls, which
+    seem to come alive at night, casting flickering shadows that move independently.
+    The carvings depict scenes of mythical creatures and ancient rituals, and the
+    room is illuminated by a soft, ethereal light that seems to emanate from the carvings
+    themselves.'
+  title: Ancient Carvings
+  unusual: The unusual aspect of this room is the intricate carvings on the walls,
+    which seem to come alive at night, casting flickering shadows that move independently.
+    The carvings depict scenes of mythical creatures and ancient rituals, and the
+    room is illuminated by a soft, ethereal light that seems to emanate from the carvings
+    themselves.
+  actions:
+    '6_3': Step forward to the right.
+    '5_2': Step back to the left.
+  image: Intricate carvings, arcane energies. Dusty corners, whispers of incantations.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, a massive iron door looms before you, heavily guarded by a pair of
+    towering, skeletal guardians. Their eyes gleam with an unholy radiance, and they
+    stand watch over the entrance, their skeletal hands clutching ancient relics that
+    seem to pulsate with malevolent energy. The door itself is rusty and creaks ominously
+    with each movement, as if it''s reluctant to open. To pass, you must confront
+    these guardians and overcome their formidable defenses.
+
+
+    To progress, you must overcome the guardians.'
+  title: Iron Guardians
+  challenge: To progress, you must overcome the guardians.
+  actions:
+    '3_4': Step away from the guardians.
+    '3_6': Step back from the guardians.
+  image: Unholy guardians, skeletal hands. Rusty door, ominous creak.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This room is unusual, with a high ceiling that supports an ancient chandelier
+    dripping with dark, oily wax. The walls are lined with twisted, gnarled wooden
+    pillars that appear to be centuries old, their surfaces etched with arcane symbols
+    that glow faintly in the dim light. The air is thick with the scent of decay and
+    the distant echo of whispers that seem to come from the depths of the building.
+
+
+    The unusual aspect is the chandelier hanging from the ceiling, which is coated
+    with a thick layer of dark, oily wax. The chandelier''s bulbs flicker and emit
+    an eerie, red glow, casting shadows that seem to shift and dance. The walls are
+    adorned with ancient, weathered wooden pillars that are twisted and gnarled, their
+    surfaces covered in arcane symbols that glow faintly in the dim light.'
+  title: Wax Chamber
+  unusual: The unusual aspect is the chandelier hanging from the ceiling, which is
+    coated with a thick layer of dark, oily wax. The chandelier's bulbs flicker and
+    emit an eerie, red glow, casting shadows that seem to shift and dance. The walls
+    are adorned with ancient, weathered wooden pillars that are twisted and gnarled,
+    their surfaces covered in arcane symbols that glow faintly in the dim light.
+  actions:
+    '1_6': Step away from the chandelier.
+    '3_6': Move towards the pillars.
+  image: Ancient chandelier, dripping wax. Twisted wooden pillars, arcane symbols.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure stands at the edge of the room, cloaked in shadow and illuminated
+    only by the flickering light of the nearest torch. The figure is gaunt and thin,
+    with pale skin and hollow eyes that seem to study you intently. The air around
+    them is charged with an unsettling energy, and they hold a long, ornate dagger
+    in their hand, its blade gleaming faintly in the dim light.
+
+
+    You see a figure standing at the edge of the room, cloaked in shadow and illuminated
+    only by the flickering light of the nearest torch. The figure is gaunt and thin,
+    with pale skin and hollow eyes that seem to study you intently. Their posture
+    is tense, and they hold a long, ornate dagger in their hand, its blade gleaming
+    faintly in the dim light.'
+  title: Shadow Weaver
+  npc: You see a figure standing at the edge of the room, cloaked in shadow and illuminated
+    only by the flickering light of the nearest torch. The figure is gaunt and thin,
+    with pale skin and hollow eyes that seem to study you intently. Their posture
+    is tense, and they hold a long, ornate dagger in their hand, its blade gleaming
+    faintly in the dim light.
+  actions:
+    '1_6': Move towards the figure.
+  image: Gaunt figure, hollow eyes. Unsettling energy, ornate dagger.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure standing at the edge of the room, cloaked in shadow and
+    illuminated only by the flickering light of the nearest torch. The figure is gaunt
+    and thin, with pale skin and hollow eyes that seem to study you intently. Their
+    posture is tense, and they hold a long, ornate dagger in their hand, its blade
+    gleaming faintly in the dim light.
+
+
+    You see a figure standing at the edge of the room, cloaked in shadow and illuminated
+    only by the flickering light of the nearest torch. The figure is gaunt and thin,
+    with pale skin and hollow eyes that seem to study you intently. Their posture
+    is tense, and they hold a long, ornate dagger in their hand, its blade gleaming
+    faintly in the dim light.'
+  title: Dark Cloak
+  npc: You see a figure standing at the edge of the room, cloaked in shadow and illuminated
+    only by the flickering light of the nearest torch. The figure is gaunt and thin,
+    with pale skin and hollow eyes that seem to study you intently. Their posture
+    is tense, and they hold a long, ornate dagger in their hand, its blade gleaming
+    faintly in the dim light.
+  actions:
+    '7_1': Step back from the figure.
+    '7_3': Move toward the torch.
+  image: Gaunt figure, hollow eyes. Ornate dagger, faint gleam.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This place is unusual as the walls emit a soft, pulsating light that seems
+    to glow with an inner warmth, unlike the dim and eerie glow of the torches in
+    the other rooms. The floor is covered in a smooth, polished stone that reflects
+    the light, creating intricate patterns on the walls. The air is thick with the
+    scent of ancient artifacts and the faint echo of voices that seem to come from
+    another time.
+
+
+    The unusual aspect of (6, 3) is the soft, pulsating light that emanates from the
+    walls, creating a warm glow that contrasts sharply with the darkness of the surrounding
+    rooms.'
+  title: Luminous Chamber
+  unusual: The unusual aspect of (6, 3) is the soft, pulsating light that emanates
+    from the walls, creating a warm glow that contrasts sharply with the darkness
+    of the surrounding rooms.
+  actions:
+    '5_3': Move towards the glowing walls.
+    '7_3': Follow the light source.
+  image: Soft, pulsating light, warm glow. Smooth, polished stone, intricate patterns.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure standing at the end of the narrow corridor, its silhouette
+    stark against the dim light filtering through the narrow window. The figure is
+    wrapped in a cloak that obscures much of their face, but their eyes are sharp
+    and focused, glinting with an unsettling intensity. Their posture is tense, and
+    they seem to be waiting, ready to act.
+
+
+    You see a figure standing at the end of the narrow corridor, its silhouette stark
+    against the dim light filtering through the narrow window. The figure is wrapped
+    in a cloak that obscures much of their face, but their eyes are sharp and focused,
+    glinting with an unsettling intensity. Their posture is tense, and they seem to
+    be ready to act.'
+  title: Shadowed Guard
+  npc: You see a figure standing at the end of the narrow corridor, its silhouette
+    stark against the dim light filtering through the narrow window. The figure is
+    wrapped in a cloak that obscures much of their face, but their eyes are sharp
+    and focused, glinting with an unsettling intensity. Their posture is tense, and
+    they seem to be ready to act.
+  actions:
+    '2_6': Step towards the narrow passage.
+    '3_5': Cross the threshold.
+    '3_7': Enter the adjacent room.
+  image: Stark silhouette, dim light. Tense posture, unsettling eyes.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a small, cramped chamber, barely larger than a person.
+    The walls are lined with iron bars, and the floor is littered with broken pieces
+    of metal and dust. At the center of the room, a figure stands, its back to you.
+    The figure is cloaked in a dark, hooded garment, making it difficult to see clearly.
+    However, the presence is unmistakable, and there is an unsettling aura that emanates
+    from them.
+
+
+    The figure in the dark, hooded garment stands tall and imposing, with their hood
+    pulled up, hiding most of their face. Their posture is rigid, and they seem to
+    exude a sense of authority and danger. The air around them is charged with an
+    ominous energy, making the silence palpable.'
+  title: Iron Cell
+  npc: The figure in the dark, hooded garment stands tall and imposing, with their
+    hood pulled up, hiding most of their face. Their posture is rigid, and they seem
+    to exude a sense of authority and danger. The air around them is charged with
+    an ominous energy, making the silence palpable.
+  actions:
+    '6_3': Move towards the opposite wall.
+    '7_2': Step away from the center.
+    '7_4': Walk towards the exit.
+  image: Iron bars, broken metal. Dark, hooded figure, unsettling aura.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a small, dimly lit room, its walls adorned with ancient
+    runes and symbols that seem to pulse with a faint, eerie glow. In the center of
+    the room lies a pedestal, upon which sits a peculiar object that glows with an
+    ethereal light. However, the pedestal is guarded by a mechanism that requires
+    precise manipulation to activate. To the left, you see a lever, and to the right,
+    a pressure plate. Your challenge is to determine which action will unlock the
+    pedestal and reveal the artifact hidden within.
+
+
+    To progress, you must activate the pedestal using the lever on the left or the
+    pressure plate on the right. Both actions require careful consideration to ensure
+    the mechanism responds correctly. Failure to activate the pedestal will leave
+    you stuck in this room, requiring a new approach.'
+  title: Rune Chamber
+  challenge: To progress, you must activate the pedestal using the lever on the left
+    or the pressure plate on the right. Both actions require careful consideration
+    to ensure the mechanism responds correctly. Failure to activate the pedestal will
+    leave you stuck in this room, requiring a new approach.
+  actions:
+    '4_7': Move towards the exit.
+    '3_6': Step away from the pedestal.
+  image: Ancient runes, eerie glow. Peculiar object, ethereal light.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A hooded figure stands guard at the entrance, their silhouette stark against
+    the dim light filtering through the narrow passage. The figure wears dark robes
+    that seem almost black, and their hood conceals most of their features. They hold
+    a staff that flickers with arcane energy, and their presence is one of authority
+    and caution. They watch you with a cold, calculating gaze, prepared to confront
+    anyone who dares to enter this final chamber.
+
+
+    The figure stands tall and imposing, their dark robes flowing slightly with the
+    breeze. Their eyes are a piercing shade of crimson, and their hooded head tilts
+    slightly to the side, giving them a predatory look. Despite the darkness, their
+    skin seems almost alabaster, contrasting sharply with the shadows they cast.'
+  title: Guardian's Chamber
+  npc: The figure stands tall and imposing, their dark robes flowing slightly with
+    the breeze. Their eyes are a piercing shade of crimson, and their hooded head
+    tilts slightly to the side, giving them a predatory look. Despite the darkness,
+    their skin seems almost alabaster, contrasting sharply with the shadows they cast.
+  actions:
+    '7_3': Retreat to the exit.
+    '7_5': Proceed to the right.
+  image: Dark robes, arcane energy. Cold gaze, vigilant stance.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a dark figure standing sentinel at the end of the narrow corridor.
+    Its form is partially obscured by a curtain of shadows, and it emits a faint,
+    eerie glow that seems to emanate from within. The figure holds a staff with a
+    handle that is twisted and gnarled, and its eyes are a piercing red, fixed on
+    you with an unyielding stare.
+
+
+    The figure stands tall and imposing, its dark form outlined against the dim light.
+    Its eyes are a menacing red, and its robes are long and flowing, casting long
+    shadows behind it. The figure holds a staff with a twisted grip, and its presence
+    exudes a sense of ancient power and hostility.'
+  title: Shadow Sentinel
+  npc: The figure stands tall and imposing, its dark form outlined against the dim
+    light. Its eyes are a menacing red, and its robes are long and flowing, casting
+    long shadows behind it. The figure holds a staff with a twisted grip, and its
+    presence exudes a sense of ancient power and hostility.
+  actions:
+    '3_7': Step back to the exit.
+    '5_7': Move to the left.
+  image: Eerie glow, twisted staff. Red eyes, unyielding stare.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a dimly lit chamber adorned with arcane symbols etched
+    into the stone walls. The air is thick with the acrid smell of sulfur and the
+    distant hum of ancient machinery. A large, ornate pedestal sits at the center
+    of the room, glowing faintly with an ethereal light that seems to pulse with arcane
+    energy. However, the pedestal is guarded by a powerful enchantment that requires
+    a significant challenge to overcome.
+
+
+    The challenge is to decipher a complex puzzle embedded in the stone floor. You
+    must align a series of runes with the correct symbols to release a barrier that
+    blocks the exit. The runes shift and change position, requiring quick thinking
+    and careful observation to solve.'
+  title: Arcane Guardian
+  challenge: The challenge is to decipher a complex puzzle embedded in the stone floor.
+    You must align a series of runes with the correct symbols to release a barrier
+    that blocks the exit. The runes shift and change position, requiring quick thinking
+    and careful observation to solve.
+  actions:
+    '6_5': Move to the right.
+    '7_4': Step back to the exit.
+    '7_6': Step back to the exit.
+  image: Arcane symbols, thick sulfur smell. Ethereal glow, powerful enchantment.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a cloaked figure standing amidst the shadows, its hood obscuring
+    most of its face. The figure holds a staff with a glowing crystal at the end,
+    and its stance suggests they are prepared for confrontation. The air around them
+    is charged with an aura of authority and danger, and you can sense a palpable
+    tension as they observe you.
+
+
+    You notice a figure clad in black robes, their cloak billowing slightly in the
+    breeze. The figure stands tall and regal, with eyes that seem to see beyond the
+    mundane. Their skin is pale, almost ghostly, and their presence commands respect.'
+  title: Hologuardian Hideout
+  npc: You notice a figure clad in black robes, their cloak billowing slightly in
+    the breeze. The figure stands tall and regal, with eyes that seem to see beyond
+    the mundane. Their skin is pale, almost ghostly, and their presence commands respect.
+  actions:
+    '4_7': Step back to the exit.
+    '6_7': Step back to the exit.
+    '5_6': Step back to the exit.
+  image: Gloved figure, glowing staff. Charged aura, tense observation.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure standing in the dim light, their silhouette outlined against
+    the gloom. The figure wears a long coat that seems to move with the wind, and
+    their face is obscured by a hood. They stand watchfully, their posture tense and
+    alert, ready to respond to any approach.
+
+
+    You notice a figure clad in dark, ornate armor, their gauntlets gleaming with
+    an otherworldly light. The figure stands with a commanding posture, their expression
+    unreadable. They seem to command the attention of those around them, a sentinel
+    guarding the passage.'
+  title: Guard's Posture
+  npc: You notice a figure clad in dark, ornate armor, their gauntlets gleaming with
+    an otherworldly light. The figure stands with a commanding posture, their expression
+    unreadable. They seem to command the attention of those around them, a sentinel
+    guarding the passage.
+  actions:
+    '5_5': Step towards the exit.
+    '7_5': Move to the right exit.
+    '6_6': Step to the right exit.
+  image: Long coat, gloomy light. Tense posture, hooded face.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure standing before you, their form partially hidden by shadows.
+    The figure is cloaked in a dark robe with intricate designs etched into the fabric.
+    Their eyes glow faintly, casting a sinister light in the dimly lit area. They
+    hold a staff that seems to pulse with an unseen power, and their posture suggests
+    they are prepared for confrontation.
+
+
+    You notice a figure clad in dark, ornate armor, their form partially hidden by
+    shadows. The figure stands with a commanding posture, their eyes glowing faintly
+    and their stance suggesting readiness for confrontation.'
+  title: Shadow Guard
+  npc: You notice a figure clad in dark, ornate armor, their form partially hidden
+    by shadows. The figure stands with a commanding posture, their eyes glowing faintly
+    and their stance suggesting readiness for confrontation.
+  actions:
+    '6_6': Step to the left exit.
+    '7_5': Step to the right exit.
+    '7_7': Step to the right exit.
+  image: Dark robe, glowing designs. Flickering staff, sinister light.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You find yourself at a crossroads, where three paths converge. To your north,
+    a winding alley leads deeper into the heart of the city. To your west, a dark,
+    shadowy staircase descends into the unknown. To your south, a wide, ancient bridge
+    stretches across a bustling marketplace, illuminated by the flickering light of
+    lanterns. Each path is marked by the echoes of distant footsteps and the occasional
+    rustling of cloaks.
+  title: Crossroads
+  actions:
+    '5_7': Step to the right exit.
+    '7_7': Step to the left exit.
+    '6_6': Step to the left exit.
+  image: 'Three paths converge: north to alley, west to dark staircase, south to ancient
+    bridge.'
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure standing at the edge of the path, cloaked in shadows. Their
+    face is obscured by a hood, but you can hear the faint sound of breathing and
+    a low growl emanating from within. The figure seems alert and ready for action,
+    their presence commanding respect.
+
+
+    You see a figure standing at the edge of the path, cloaked in shadows. They appear
+    to be a humanoid creature with a lean and muscular build, dressed in dark robes
+    that seem to absorb light. Their face is partially hidden under a hood, but their
+    eyes gleam with a dangerous intensity. The growl you hear is from a set of sharp
+    teeth, suggesting they may have fangs.'
+  title: Shadowed Guard
+  npc: You see a figure standing at the edge of the path, cloaked in shadows. They
+    appear to be a humanoid creature with a lean and muscular build, dressed in dark
+    robes that seem to absorb light. Their face is partially hidden under a hood,
+    but their eyes gleam with a dangerous intensity. The growl you hear is from a
+    set of sharp teeth, suggesting they may have fangs.
+  actions:
+    '6_6': Step to the left exit.
+    '5_5': Step to the left exit.
+    '5_7': Step to the right exit.
+  image: Obscured figure, faint growl. Alert stance, commanding presence.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a dimly lit alcove, the walls adorned with ancient runes
+    and symbols that seem to pulse with an eerie glow. The floor is covered in a layer
+    of dust and cobwebs, and the air is thick with the scent of decay and forgotten
+    magic. At the center of the alcove stands a figure cloaked in shadow, their form
+    barely visible except for the faint glint of metal on their armor. This figure
+    is tense and alert, ready to confront anyone who dares enter their domain.
+
+
+    You see a figure standing at the center of the alcove, clad in dark, ornate armor
+    that reflects a faint, almost ethereal light. Their face is obscured by a helm,
+    but their eyes are sharp and watchful, scanning the surroundings with a steady
+    gaze. The figure appears to be in a state of readiness, prepared for any threat
+    that might come their way.'
+  title: Shadowed Sentinel
+  npc: You see a figure standing at the center of the alcove, clad in dark, ornate
+    armor that reflects a faint, almost ethereal light. Their face is obscured by
+    a helm, but their eyes are sharp and watchful, scanning the surroundings with
+    a steady gaze. The figure appears to be in a state of readiness, prepared for
+    any threat that might come their way.
+  actions:
+    '6_5': Step to the right exit.
+    '5_6': Step to the left exit.
+  image: Ancient runes, eerie glow. Metal glint, tense stance.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a narrow, twisting tunnel that descends steeply into
+    the earth. The walls are slick with moisture, and the air is thick with the scent
+    of damp earth and decaying leaves. Strange, crystalline formations hang from the
+    ceiling, casting eerie, flickering shadows on the walls. Ahead, the tunnel splits
+    into three directions, each promising a different path and potential challenges.
+    The descent is treacherous, and the ground is unstable, making your footing uncertain.
+    A cold breeze whispers warnings as you approach, hinting at dangers lurking in
+    the darkness.
+
+
+    The challenge here is to navigate the unstable ground and avoid falling into the
+    dark abyss below.'
+  title: Dark Spiral Passage
+  challenge: The challenge here is to navigate the unstable ground and avoid falling
+    into the dark abyss below.
+  actions:
+    '5_6': Descend the slippery slope.
+    '7_6': Slide down the cliff.
+    '6_5': Step to the right exit.
+    '6_7': Step to the left exit.
+  image: Crickling tunnel, damp walls. Crystalline formations, eerie shadows.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You have reached your destination, a chamber bathed in an ethereal glow. The
+    walls are adorned with ancient runes, some glowing softly as if imbued with power.
+    In the center of the chamber stands a pedestal, upon which rests the powerful
+    magical artifact. Its surface glitters with arcane energies, and the air around
+    it buzzes with latent power. It is surrounded by symbols of protection and warning,
+    and the atmosphere is charged with a sense of anticipation and danger.
+  title: Artifact Chamber
+  actions:
+    '6_7': Descend the pedestal.
+    '7_6': Ascend the pedestal.
+  image: Ancient runes, glowing glow. Magical artifact, charged atmosphere.
+  image_filename: 7_7.png

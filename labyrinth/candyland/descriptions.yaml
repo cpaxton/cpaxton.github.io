@@ -1,0 +1,1077 @@
+world:
+  location: candyland, a magical world made entirely of candy
+  goal:
+  - 7
+  - 7
+  writing_style: whimsical, playful, and colorful; inspired by Roald Dahl.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: The meadow gives way to a dark forest path ahead. You see the shimmering petals
+    of pastel flowers, their vibrant colors contrasting with the darkness of the woods.
+    You hear the gentle flutter of butterfly wings and the soft chirping of birds
+    hidden among the foliage. The path is overgrown with brambles and thorns, and
+    the trees are so thick that the sunlight barely filters through. The air is cool
+    and damp, and the smell of earth and moss is strong. You feel a sense of unease
+    as you step into the shadows, and a slight chill runs down your spine. The forest
+    is quiet and still, and you find yourself surrounded by a world that seems both
+    familiar and strange.
+  title: Shady Grove Path
+  actions:
+    '2_1': Follow the winding path uphill.
+    '1_2': Turn left at the fork.
+  image: Pastel flower petals, fluttering butterfly wings. Thick foliage, shadowy
+    forest path.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'At the junction, the path splits into two. This place is unusual, for it
+    is not like the others. One path winds gently upward, while the other descends
+    into a hidden glen filled with twinkling candy lights and sweet, melodic songs.
+    You choose the upward path, eager to discover what lies beyond.
+
+
+    This room is unusual because the path winds gently upward, unlike the others which
+    lead directly to new destinations. As you ascend, the air grows warmer and the
+    light becomes more vibrant, casting a golden glow that seems to sparkle with every
+    step. The ground beneath your feet becomes softer, covered in a layer of glistening
+    sugar crystals that crunch softly underfoot.'
+  title: Twinkling Glade Path
+  unusual: This room is unusual because the path winds gently upward, unlike the others
+    which lead directly to new destinations. As you ascend, the air grows warmer and
+    the light becomes more vibrant, casting a golden glow that seems to sparkle with
+    every step. The ground beneath your feet becomes softer, covered in a layer of
+    glistening sugar crystals that crunch softly underfoot.
+  actions:
+    '1_1': Descend the winding trail.
+    '3_1': Traverse the hidden glen.
+  image: Upward path winds, hidden glen below. Twinkling candy lights, melodic songs.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, under the canopy of whispering trees, you encounter a curious little
+    figure. She wears a dress of candy-colored polka dots and has eyes as bright as
+    the stars. With a giggle, she greets you with a hand outstretched, her smile warm
+    and inviting. She is here to show you the way to the candy castle.
+
+
+    She appears with a burst of sweetness, wearing a dress of candy-colored polka
+    dots that catches the light and sparkles on her skin. Her hair is a cascade of
+    curly, wavy candy curls that frame her face, and her eyes, a pair of bright, sparkling
+    emeralds, light up the moment she smiles. She has a heart-shaped face with rosy
+    cheeks and a playful demeanor that puts everyone at ease.'
+  title: Polka Dot Guide
+  npc: She appears with a burst of sweetness, wearing a dress of candy-colored polka
+    dots that catches the light and sparkles on her skin. Her hair is a cascade of
+    curly, wavy candy curls that frame her face, and her eyes, a pair of bright, sparkling
+    emeralds, light up the moment she smiles. She has a heart-shaped face with rosy
+    cheeks and a playful demeanor that puts everyone at ease.
+  actions:
+    '1_1': Follow the guide back.
+    '1_3': Turn right at the fork.
+  image: Candy-colored polka dot dress, bright star eyes. Whispers trees, curious
+    little figure.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, you must cross a bubbling stream of shimmering chocolate. It flows
+    swiftly, and stepping stones made of crushed candy are your only way across. Each
+    stone is slippery and delicate, and you must tread carefully to avoid falling
+    into the liquid chocolate below.
+
+
+    The challenge here is to cross the bubbling stream of shimmering chocolate.'
+  title: Chocobo Crossing
+  challenge: The challenge here is to cross the bubbling stream of shimmering chocolate.
+  actions:
+    '2_1': Cross the stream and turn left.
+    '4_1': Cross the stream and turn right.
+  image: Bubbling stream of shimmering chocolate, stepping stones. Delicate, slippery
+    candy stones.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, you must navigate a winding bridge over a babbling brook of sweet,
+    sugary water. The bridge is made of delicate candy tiles that shift slightly beneath
+    your feet, requiring careful balance to cross. On either side, colorful flowers
+    sway gently, their petals almost touching the water.
+
+
+    The challenge here is to cross the winding bridge over the babbling brook of sweet,
+    sugary water.'
+  title: Sweet Stone Bridge
+  challenge: The challenge here is to cross the winding bridge over the babbling brook
+    of sweet, sugary water.
+  actions:
+    '2_3': Cross the bridge and turn right.
+    '1_2': Turn left at the bridge.
+    '1_4': Turn left at the bridge.
+  image: Winding sugary water brook, delicate candy tiles. Colorful flowers sway,
+    petals touch.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A friendly candy bunny hops out, its cheeks full of colorful candies. It
+    bounces towards you with a mischievous grin, holding a small, wrapped present.
+
+
+    The friendly candy bunny hops out, its fur a mix of bright and pastel colors.
+    Its cheeks are filled with colorful candies, and it holds a small, wrapped present.
+    Its eyes sparkle with mischief, and it winks at you playfully.'
+  title: Sweet Bunny Meadow
+  npc: The friendly candy bunny hops out, its fur a mix of bright and pastel colors.
+    Its cheeks are filled with colorful candies, and it holds a small, wrapped present.
+    Its eyes sparkle with mischief, and it winks at you playfully.
+  actions:
+    '3_1': Hop to the left and jump down.
+    '5_1': Hop to the right and jump down.
+  image: Friendly candy bunny, colorful cheeks. Present wrapped, mischievous grin.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the center of a clearing, a magnificent gingerbread man stands guard.
+    He wears a waistcoat embroidered with stars and a top hat adorned with a cherry.
+    With a warm smile, he holds a lantern that casts a golden glow around him.
+
+
+    The gingerbread man stands tall, his body made of soft, sweet dough. His eyes
+    twinkle with a friendly light, and he wears a waistcoat embroidered with stars
+    and a top hat topped with a cherry. He holds a lantern that illuminates his welcoming
+    gaze.'
+  title: Gingerbread Guard Post
+  npc: The gingerbread man stands tall, his body made of soft, sweet dough. His eyes
+    twinkle with a friendly light, and he wears a waistcoat embroidered with stars
+    and a top hat topped with a cherry. He holds a lantern that illuminates his welcoming
+    gaze.
+  actions:
+    '1_3': Walk straight and turn left.
+    '3_3': Walk straight and turn right.
+  image: Gingering man, waistcoat embroidered stars. Top hat, golden glow lantern.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the edge of the clearing, a whimsical puzzle lies before you. A row of
+    colorful buttons, each labeled with a number, needs to be pressed in sequence
+    to reveal a secret path. The first button is red, the second blue, and the third
+    green. Only by pressing them correctly will you uncover the way forward.
+
+
+    Press the colored buttons in the correct order to reveal the secret path.'
+  title: Button Path Entrance
+  challenge: Press the colored buttons in the correct order to reveal the secret path.
+  actions:
+    '1_3': Turn left and press buttons.
+    '1_5': Turn right and press buttons.
+  image: Whimsical puzzle, buttons labeled red, blue, green. Secret path, sequence
+    needed.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of a lush garden, a cheerful fairy guards the pathway. Her gown
+    is a mix of glittering jewels and sparkly sequins, and she holds a wand that glows
+    with a soft, magical light. She wears a crown adorned with colorful candies and
+    winks at you as she welcomes you with a joyful smile.
+
+
+    The fairy stands tall, her gown swirling around her delicate feet. Her hair is
+    a cascade of sparkling jewels, and her eyes twinkle like starlight. She wears
+    a crown of colorful candies, and her wand glows with a soft, magical light.'
+  title: Garden Gate Fairy
+  npc: The fairy stands tall, her gown swirling around her delicate feet. Her hair
+    is a cascade of sparkling jewels, and her eyes twinkle like starlight. She wears
+    a crown of colorful candies, and her wand glows with a soft, magical light.
+  actions:
+    '4_1': Walk straight and turn left.
+    '6_1': Walk straight and turn right.
+    '5_2': Take two steps forward.
+  image: Cheerful fairy, glittering jewels gown. Sparkly sequins, magical light wand.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the center of a serene orchard, a friendly gnome waits. His beard is as
+    white as snow, and his cheeks are rosy from the warmth of the sun. He wears a
+    hat adorned with shiny, glistening candies and holds a lantern that casts a gentle
+    glow. With a twinkling eye and a mischievous grin, he greets you with open arms.
+
+
+    The gnome stands tall, his beard trailing down his chest. He wears a hat with
+    a crown of candies, and his lantern casts a warm, inviting light around him. His
+    cheeks are rosy from the sun, and he has twinkling eyes that sparkle with mischief.
+    He holds a lantern tightly, ready to guide you through the orchard.'
+  title: Gnome Guard
+  npc: The gnome stands tall, his beard trailing down his chest. He wears a hat with
+    a crown of candies, and his lantern casts a warm, inviting light around him. His
+    cheeks are rosy from the sun, and he has twinkling eyes that sparkle with mischief.
+    He holds a lantern tightly, ready to guide you through the orchard.
+  actions:
+    '2_3': Step back and turn left.
+    '3_4': Step back and turn right.
+  image: White beard, rosy cheeks. Gnome hat, gentle glow lantern.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'In a hidden grove behind your current position, a riddle challenges you.
+    The wind whispers the riddle to you, wrapped in a veil of moonlight. Answer correctly
+    to reveal a path leading deeper into the magical land.
+
+
+    The challenge calls out to you, a whispered riddle in the night. Whispered secrets
+    of the grove, waiting for your clever reply. Answer wisely, or the grove may close
+    its doors.'
+  title: Moonlight Grove
+  challenge: The challenge calls out to you, a whispered riddle in the night. Whispered
+    secrets of the grove, waiting for your clever reply. Answer wisely, or the grove
+    may close its doors.
+  actions:
+    '1_4': Turn back and step left.
+    '1_6': Step back and turn right.
+  image: Moonlight veiled wind, riddle whispered path.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cheerful fairy glides towards you, her gown glittering with stars. She
+    holds a wand that lights up the path ahead, guiding you forward. Her laughter
+    tinkles like tiny bells, and she speaks in a voice that is both kind and whimsical.
+
+
+    The fairy appears, her gown shimmering like stars. She holds a wand that lights
+    up the path, and her laughter is like tinkling bells. Her cheeks are rosy, and
+    she has twinkling eyes that sparkle with mischief.'
+  title: Starlight Fairy
+  npc: The fairy appears, her gown shimmering like stars. She holds a wand that lights
+    up the path, and her laughter is like tinkling bells. Her cheeks are rosy, and
+    she has twinkling eyes that sparkle with mischief.
+  actions:
+    '5_1': Step back and turn left.
+    '7_1': Step forward and take the path.
+  image: Gown glittering stars, wand lights path. Laughter tinkles, kind voice.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A playful sugar sprite greets you, holding a bag of sweets. Her cheeks are
+    round with joy, and her smile is as bright as the candies she adores. She offers
+    a lollipop, inviting you to join her in the sweet festivities.
+
+
+    The Lollipop Sprite appears, her gown adorned with sparkling sugar crystals. She
+    wears a wide, toothy grin and holds a lollipop that sparkles like the moon. Her
+    cheeks are rosy, and her laughter is as sweet as the candies she loves.'
+  title: Lollipop Sprite
+  npc: The Lollipop Sprite appears, her gown adorned with sparkling sugar crystals.
+    She wears a wide, toothy grin and holds a lollipop that sparkles like the moon.
+    Her cheeks are rosy, and her laughter is as sweet as the candies she loves.
+  actions:
+    '5_1': Step back and take the path.
+    '5_3': Step forward and take the path.
+  image: Joyful sugar sprite, round cheeks. Lollipop offered, sweet festivities.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A mischievous candy thief waits in the shadows, his eyes gleaming with the
+    promise of stolen sweets. He holds a handful of forbidden treats, and his laughter
+    is a mix of slyness and joy.
+
+
+    The Sweetsheaf Thief appears, dressed in a tattered coat of stolen sweets. His
+    eyes are sharp and gleeful, and he holds a bag filled with forbidden treats. His
+    cheeks are round from greed, and his laughter is a mix of mischief and glee.'
+  title: Sweetsheaf Thief
+  npc: The Sweetsheaf Thief appears, dressed in a tattered coat of stolen sweets.
+    His eyes are sharp and gleeful, and he holds a bag filled with forbidden treats.
+    His cheeks are round from greed, and his laughter is a mix of mischief and glee.
+  actions:
+    '3_3': Step back and take the path.
+    '3_5': Step forward and take the path.
+  image: Gleaming eyes, handful forbidden treats. Sly laughter, joy mixed.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A playful candy fairy waits on a crystal throne, her wings glittering with
+    rainbow hues. She holds a wand made of shimmering sugar, and her laughter is as
+    bright as the candies she adores.
+
+
+    The Crystalwing Fairy appears, her wings shimmering with rainbow hues. She wears
+    a gown of sparkling sugar, and her eyes twinkle like stars. Holding a wand made
+    of shimmering sugar, she is surrounded by a glow that seems to light up the entire
+    room.'
+  title: Crystalwing Fairy
+  npc: The Crystalwing Fairy appears, her wings shimmering with rainbow hues. She
+    wears a gown of sparkling sugar, and her eyes twinkle like stars. Holding a wand
+    made of shimmering sugar, she is surrounded by a glow that seems to light up the
+    entire room.
+  actions:
+    '2_6': Take the path to the right.
+    '1_5': Step back and take the path.
+    '1_7': Step forward and take the path.
+  image: Crystal throne, rainbow wings. Shimmering sugar wand, bright laughter.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A playful candy gnome waits on a small hill, his cheeks round from stealing
+    sweets. He holds a sack of forbidden treats and looks as mischievous as ever.
+
+
+    The Candy Gnome waits on a small hill, his cheeks round and smiling. He holds
+    a sack of forbidden treats, his eyes twinkling with mischief.'
+  title: Candy Gnome Hill
+  npc: The Candy Gnome waits on a small hill, his cheeks round and smiling. He holds
+    a sack of forbidden treats, his eyes twinkling with mischief.
+  actions:
+    '6_1': Step down the hill.
+    '7_2': Follow the path down.
+  image: Round cheeks, small hill. Sack forbidden treats, mischievous gaze.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This room is unlike the others, filled with peculiar decorations and a curious
+    aroma that mixes sweet and minty. The walls are adorned with miniature candy sculptures,
+    and a large, glowing lollipop stands sentinel in the corner.
+
+
+    The unusual aspect is the vibrant, glowing lollipop that stands tall in the corner,
+    casting a warm, luminescent glow over the entire room.'
+  title: Minty Corner
+  unusual: The unusual aspect is the vibrant, glowing lollipop that stands tall in
+    the corner, casting a warm, luminescent glow over the entire room.
+  actions:
+    '6_3': Cross the threshold.
+    '5_2': Step back to the left.
+  image: Miniature candy sculptures, glowing lollipop. Curious aroma, peculiar decorations.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the heart of this room lies a shimmering puzzle box, guarded by a playful,
+    yet challenging guardian. Solving the riddle within the box reveals a secret passage
+    to the next room.
+
+
+    The challenge here requires you to solve a riddle carved into the stone wall.'
+  title: Puzzle Guardian
+  challenge: The challenge here requires you to solve a riddle carved into the stone
+    wall.
+  actions:
+    '3_4': Turn right at the guardian.
+    '3_6': Turn left at the guardian.
+  image: Guardian, shimmering puzzle box. Secret passage, next room.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'The meadow fades into a magical garden, where flowers of every color bloom
+    in perfect symmetry. A gentle stream flows through the center, its crystal-clear
+    waters reflecting the multicolored petals. This garden is unique and enchanting,
+    setting it apart from the rest of the rooms.
+
+
+    The unusual aspect is the mesmerizing rainbow grove that stretches across the
+    room. The vibrant colors seem to dance and shift, creating a kaleidoscopic effect
+    that captivates the senses.'
+  title: Rainbow Grove
+  unusual: The unusual aspect is the mesmerizing rainbow grove that stretches across
+    the room. The vibrant colors seem to dance and shift, creating a kaleidoscopic
+    effect that captivates the senses.
+  actions:
+    '1_6': Follow the path to the left.
+    '3_6': Turn right at the fountain.
+  image: Symmetric flower garden, multicolored petals. Crystal-clear stream, reflection.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cheerful candy elf with a glint in her eyes stands guard by the door. She
+    wears a festive hat adorned with candies and smiles warmly as she greets you.
+
+
+    The Candy Elf has a merry smile and wears a cozy red sweater with a hat that sparkles
+    like a candy cane. Her cheeks are rosy from the warm glow of the candy land.'
+  title: Guardian's Hut
+  npc: The Candy Elf has a merry smile and wears a cozy red sweater with a hat that
+    sparkles like a candy cane. Her cheeks are rosy from the warm glow of the candy
+    land.
+  actions:
+    '1_6': Step back to the door.
+  image: Festive hat, glinting eyes. Warm smile, candy elf.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A whimsical candy gnome stands by the window, his eyes twinkling with mischief.
+    He wears a beret decorated with candy buttons and a long, cozy scarf that matches
+    his rosy cheeks.
+
+
+    The Candy Gnome has a mischievous grin and wears a beret with candy buttons perched
+    on his head. His long, cozy scarf matches his rosy cheeks, and he often carries
+    a small bag of candies to share.'
+  title: Gnome Courtyard
+  npc: The Candy Gnome has a mischievous grin and wears a beret with candy buttons
+    perched on his head. His long, cozy scarf matches his rosy cheeks, and he often
+    carries a small bag of candies to share.
+  actions:
+    '7_1': Turn left at the gnome.
+    '7_3': Step right into the path.
+  image: Beret candy buttons, twinkling eyes. Rosy cheeks, cozy scarf.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This clearing is unusually vibrant, filled with flowers that glow softly
+    in the twilight, unlike the subdued colors of the surrounding rooms.
+
+
+    The unusual aspect of Bloomed Grove is its lush, enchanted garden where flowers
+    that glow softly in the twilight bloom. The air is filled with the sweet scent
+    of moonlit petals.'
+  title: Bloomed Grove
+  unusual: The unusual aspect of Bloomed Grove is its lush, enchanted garden where
+    flowers that glow softly in the twilight bloom. The air is filled with the sweet
+    scent of moonlit petals.
+  actions:
+    '5_3': Follow the path to the left.
+    '7_3': Walk straight down the path.
+  image: Softly glowing flowers, twilight light. Subdued colors, unusual vibrancy.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cheerful, sugarplum fairy with a tiara adorned with tiny jewels sits by
+    the window, her wand glowing with a soft, ethereal light. She wears a gown of
+    iridescent fabric that catches the moonlight, making her appear almost translucent.
+
+
+    The Sugarplum Fairy has a radiant smile and sparkles like a fairy tale princess.
+    Her tiara is adorned with tiny jewels, and she wears a gown of iridescent fabric
+    that shifts colors under the moonlight. She holds a wand that glows softly, casting
+    a gentle light around her.'
+  title: Moonbeam Bower
+  npc: The Sugarplum Fairy has a radiant smile and sparkles like a fairy tale princess.
+    Her tiara is adorned with tiny jewels, and she wears a gown of iridescent fabric
+    that shifts colors under the moonlight. She holds a wand that glows softly, casting
+    a gentle light around her.
+  actions:
+    '2_6': Move left along the path.
+    '3_5': Move left along the path.
+    '3_7': Move right along the path.
+  image: Tiara jewels, glowing wand. Iridescent gown, translucent light.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A mischievous pixie with sparkling blue hair and a cheeky grin waits at the
+    edge of the path. She wears a dress of shimmering silver that reflects the moonlight,
+    and her pointed ears twitch with excitement. She holds a bag of colorful candies,
+    ready to share.
+
+
+    The mischievous Pixie has sparkling blue hair and a cheeky grin. She wears a dress
+    of shimmering silver that reflects the moonlight, and her pointed ears twitch
+    with excitement. She holds a bag of colorful candies, ready to share.'
+  title: Moonbeam Grotto
+  npc: The mischievous Pixie has sparkling blue hair and a cheeky grin. She wears
+    a dress of shimmering silver that reflects the moonlight, and her pointed ears
+    twitch with excitement. She holds a bag of colorful candies, ready to share.
+  actions:
+    '6_3': Move left along the path.
+    '7_2': Step back along the path.
+    '7_4': Step forward along the path.
+  image: Sparkling blue hair, shimmering silver dress. Moonlight reflection, pointed
+    ears.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here lies a tricky puzzle carved into the stone wall, featuring a sequence
+    of colorful buttons. To proceed, you must solve the puzzle correctly by pressing
+    the right buttons in order. Failure to do so will require retracing your steps.
+
+
+    To proceed, you must solve the puzzle correctly by pressing the right buttons
+    in order. Failure to do so will require retracing your steps.'
+  title: Button Maze
+  challenge: To proceed, you must solve the puzzle correctly by pressing the right
+    buttons in order. Failure to do so will require retracing your steps.
+  actions:
+    '4_7': Step forward along the path.
+    '3_6': Step back along the path.
+  image: Stone wall, sequence of buttons. Right buttons, correct order.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A friendly Candy Bear stands guard, holding a plate of colorful candies.
+    Its eyes twinkle with mischief, and its fur glows with a soft, golden light. It
+    greets you with a wag of its tail and a toothy smile, ready to share its candies.
+
+
+    The Candy Bear has a fluffy white body with a rounded belly and a stubby tail.
+    Its eyes are large and round, twinkling with mischief. It wears a tiny crown on
+    its head and holds a plate of colorful candies in its paws. Its fur is soft to
+    the touch, and it radiates a warm, golden glow.'
+  title: Bear Grotto
+  npc: The Candy Bear has a fluffy white body with a rounded belly and a stubby tail.
+    Its eyes are large and round, twinkling with mischief. It wears a tiny crown on
+    its head and holds a plate of colorful candies in its paws. Its fur is soft to
+    the touch, and it radiates a warm, golden glow.
+  actions:
+    '7_3': Step back along the path.
+    '7_5': Step forward along the path.
+  image: Golden light, twinkle eyes. Wavy tail, toothy smile.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cheerful Candy Bunny stands guard, holding a basket filled with sweet treats.
+    Its cheeks puff out with joy, and it hops towards you with a playful hop. The
+    bunny greets you with a wag of its tail and a toothy smile, ready to share its
+    candies.
+
+
+    The Candy Bunny has a fluffy white body with a rounded belly and a stubby tail.
+    Its eyes are large and round, twinkling with joy. It wears a tiny crown on its
+    head and holds a basket filled with sweet treats in its paws. Its fur is soft
+    to the touch, and it radiates a bright, golden glow.'
+  title: Bunny Courtyard
+  npc: The Candy Bunny has a fluffy white body with a rounded belly and a stubby tail.
+    Its eyes are large and round, twinkling with joy. It wears a tiny crown on its
+    head and holds a basket filled with sweet treats in its paws. Its fur is soft
+    to the touch, and it radiates a bright, golden glow.
+  actions:
+    '3_7': Hop back towards the path.
+    '5_7': Hop forward along the path.
+  image: Joyful cheeks, playful hop. Wag tail, toothy smile.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the junction, you encounter a magical mirror that reflects a distorted
+    version of your reflection. However, it also challenges you to solve a riddle
+    to see your true self. The mirror glows with a soft, magical light, inviting you
+    to ponder and solve the puzzle.
+
+
+    The mirror challenges you to solve a riddle.'
+  title: Mirror Maze
+  challenge: The mirror challenges you to solve a riddle.
+  actions:
+    '6_5': Turn left at the mirror.
+    '7_4': Turn right at the mirror.
+    '7_6': Turn away from the mirror.
+  image: Magical mirror, distorted reflection. Soft light, riddle challenge.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the clearing, a friendly candy creature awaits. It has a sweet smile and
+    a gentle gaze, holding a small, glowing lantern. Its fur is soft and its eyes
+    are full of laughter. You feel welcome as it greets you warmly.
+
+
+    The friendly candy creature is small and fluffy, with a round body and big, twinkling
+    eyes. Its paws are soft and gentle, and its tail flicks happily as it greets you.
+    It wears a cozy, warm coat that matches its soft fur.'
+  title: Clearing Moon
+  npc: The friendly candy creature is small and fluffy, with a round body and big,
+    twinkling eyes. Its paws are soft and gentle, and its tail flicks happily as it
+    greets you. It wears a cozy, warm coat that matches its soft fur.
+  actions:
+    '4_7': Walk straight into the moonlight.
+    '6_7': Take a step towards the moon.
+    '5_6': Step back from the moonlight.
+  image: Gentle gaze, sweet smile. Soft fur, laughter eyes.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'The path leads to a cozy corner, where a small, friendly candy creature waits.
+    Its eyes twinkle with joy, and it holds a colorful ball of candy. The creature
+    greets you warmly, its voice a melodic sing-song.
+
+
+    The friendly candy creature is small and fluffy, with a round body and big, twinkling
+    eyes. Its paws are soft and gentle, and it wears a cozy, warm coat that matches
+    its soft fur.'
+  title: Moonlit Corner
+  npc: The friendly candy creature is small and fluffy, with a round body and big,
+    twinkling eyes. Its paws are soft and gentle, and it wears a cozy, warm coat that
+    matches its soft fur.
+  actions:
+    '5_5': Follow the path under the moon.
+    '7_5': Walk down the moonlit trail.
+    '6_6': Turn towards the glowing orb.
+  image: Melodic voice, twinkle eyes. Colorful ball, warm greeting.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'The path widens into a cheerful meadow, where a mischievous candy sprite
+    greets you. Its cheeks glow with laughter, and it holds a handful of colorful
+    candies. The sprite''s voice is playful and full of joy, inviting you to play.
+
+
+    The mischievous candy sprite is small and sparkly, with a cheeky grin and a tuft
+    of candy hair. Its eyes twinkle with mischief, and it wears a festive crown adorned
+    with rainbow candies.'
+  title: Moonbeam Meadow
+  npc: The mischievous candy sprite is small and sparkly, with a cheeky grin and a
+    tuft of candy hair. Its eyes twinkle with mischief, and it wears a festive crown
+    adorned with rainbow candies.
+  actions:
+    '6_6': Follow the moonbeam path.
+    '7_5': Step back onto the moonlit trail.
+    '7_7': Cross the moonbeam bridge.
+  image: Laughing cheeks, handful candies. Playful voice, invitation.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Multiple paths meet here, leading to the heart of the candy land. To the north
+    lies a secret garden, and to the south, a bustling marketplace filled with sweet
+    delights. Ahead, a narrow path winds through the moonlight, while a wider pathway
+    extends to the east.
+  title: Moonbeam Junction
+  actions:
+    '5_7': Take the path to the secret garden.
+    '7_7': Follow the wider pathway.
+    '6_6': Walk along the moonbeam path.
+  image: Secret garden, bustling market. Moonlight path, eastern way.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A friendly candy squirrel greets you, perched atop a moonbeam branch. It
+    bounces down to the path with a cheery chirp.
+
+
+    The friendly candy squirrel is a delightful creature, with a fluffy white tail
+    that sparkles in the moonlight. Its eyes are bright and curious, and it has a
+    mischievous smile on its face. It wears a small green hat adorned with a single
+    red button, and its cheeks are rosy from the warmth of the evening.'
+  title: Moonbeam Bower
+  npc: The friendly candy squirrel is a delightful creature, with a fluffy white tail
+    that sparkles in the moonlight. Its eyes are bright and curious, and it has a
+    mischievous smile on its face. It wears a small green hat adorned with a single
+    red button, and its cheeks are rosy from the warmth of the evening.
+  actions:
+    '6_6': Follow the moonbeam path down.
+    '5_5': Descend the moonbeam branch.
+    '5_7': Follow the moonbeam trail.
+  image: Moonbeam branch, friendly squirrel. Chirp, cheery greeting.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cheerful candy caterpillar sits upon a moonbeam vine, weaving a delicate
+    web of spun sugar. Its long, wiggling body glows with a warm, luminescent light,
+    and it smiles warmly as you approach.
+
+
+    The candy caterpillar is a lively creature, with a long, wiggling body covered
+    in iridescent scales. Its vibrant colors change with the light, reflecting a spectrum
+    of hues from gold to blue. It has large, round eyes that sparkle with curiosity,
+    and its smile is full and warm.'
+  title: Moonbeam Nest
+  npc: The candy caterpillar is a lively creature, with a long, wiggling body covered
+    in iridescent scales. Its vibrant colors change with the light, reflecting a spectrum
+    of hues from gold to blue. It has large, round eyes that sparkle with curiosity,
+    and its smile is full and warm.
+  actions:
+    '6_5': Cross the moonbeam bridge.
+    '5_6': Follow the moonbeam path.
+  image: Moonbeam vine, warm light. Wiggling body, warm smile.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'In the heart of the forest, a towering moonbeam tower stands guard. Atop
+    this mystical structure, a magical puzzle awaits, challenging even the most skilled
+    adventurers. With each step, the air grows colder, and the moonlight reflects
+    off the polished stones, casting eerie shadows. You must solve the riddle before
+    you can ascend, or risk being trapped forever within the tower''s walls.
+
+
+    The tower''s riddle demands clever thinking. You must decipher ancient moon runes
+    to unlock the door, or face the chilling cold forever within.'
+  title: Moonbeam Tower
+  challenge: The tower's riddle demands clever thinking. You must decipher ancient
+    moon runes to unlock the door, or face the chilling cold forever within.
+  actions:
+    '5_6': Descend the moonbeam spiral.
+    '7_6': Climb the moonbeam steps.
+    '6_5': Descend the moonbeam steps.
+    '6_7': Ascend the moonbeam steps.
+  image: Tower, polished stones. Eerie shadows, cold air.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: At the pinnacle of the tower, the Candy Castle rises grandly, its golden spires
+    glinting under the moon's luminous glow. Inside, the castle is filled with twinkling
+    lights and a dazzling array of candies, from glistening lollipops to frosted chocolates.
+    The candy king, dressed in a regal costume of sparkly sequins, greets visitors
+    with a joyful smile. Here, the magic of the land is palpable, and the scent of
+    fresh sugary goodness fills the air.
+  title: Tower Peak
+  actions:
+    '6_7': Descend the moonbeam steps.
+    '7_6': Ascend the moonbeam steps.
+  image: Golden spires, luminous moon. Twinkling lights, sparkling candies.
+  image_filename: 7_7.png

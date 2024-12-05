@@ -1,0 +1,1216 @@
+world:
+  location: the dark, twisting labyrinth of Minos
+  goal:
+  - 7
+  - 7
+  writing_style: heroic, dark, poetic; inspired by Homer, Virgil, and Dante.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: The threshold of the dark, twisting labyrinth of Minos is a yawning chasm,
+    its edges jagged and gnarled as they pierce the gloom. Here, the ground slopes
+    sharply downward, leading into the abyss, while above, the ceiling hangs perilously
+    close, its surface marred by ancient, calcified vines that twist and turn like
+    the very threads of fate itself. You stand at the edge, where the darkness seems
+    to whisper secrets in a voice both harsh and haunting, urging you forward with
+    promises of both danger and reward. The air here is heavy and oppressive, filled
+    with the scent of decay and the faint echo of footsteps on unseen stones. The
+    only illumination comes from the flickering shadows that dance across the walls,
+    casting eerie patterns upon the stone.
+  title: Entrance Grotto
+  actions:
+    '2_1': Descend the sloping descent.
+    '1_2': Step down the narrowing path.
+  image: The threshold of the dark, twisting labyrinth of Minos is a yawning chasm
+    with jagged, gnarled edges piercing the gloom. Above, the ceiling hangs perilously
+    close, twisted by calcified vines.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'At the base of the chasm, a narrow bridge spans the yawning divide, its timbers
+    creaking under the weight of time. Unlike the others, this bridge is unusually
+    sturdy and well-worn, the result of countless weary feet traversing it. Its surface
+    is slick with age and moisture, and the air around it is charged with an ancient
+    magic, as if the very stones carry tales of battles fought and won.
+
+
+    The bridge spans the chasm, unlike the others which lead downward or upward. Each
+    step creaks softly, the wood worn smooth by countless travelers. The bridge feels
+    ancient, as if it has witnessed generations of heroes and villains.'
+  title: Bridge Chamber
+  unusual: The bridge spans the chasm, unlike the others which lead downward or upward.
+    Each step creaks softly, the wood worn smooth by countless travelers. The bridge
+    feels ancient, as if it has witnessed generations of heroes and villains.
+  actions:
+    '1_1': Cross the wobbly bridge.
+    '3_1': Walk along the treacherous trail.
+  image: A narrow bridge spans the yawning chasm at the base of the dark, twisting
+    labyrinth of Minos, its timbers creaking under time's weight. The bridge is slick
+    with age and moisture, creating a stark contrast against the surrounding darkness.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, a shadowy figure waits at the edge, cloaked in the shadows of the night.
+    Its eyes glow with an unnatural light, a silent sentinel guarding the entrance.
+    The air around you grows colder, and the whispers of old myths seem to grow louder,
+    urging you onward with both promise and caution.
+
+
+    The figure stands tall and slender, a stark contrast against the darkness that
+    envelops the room. Their robes are long and hooded, concealing much of their form,
+    but the glow emanating from their eyes pierces the shadows, making them seem almost
+    ethereal.'
+  title: Shadow Guard
+  npc: The figure stands tall and slender, a stark contrast against the darkness that
+    envelops the room. Their robes are long and hooded, concealing much of their form,
+    but the glow emanating from their eyes pierces the shadows, making them seem almost
+    ethereal.
+  actions:
+    '1_1': Retrace your steps and climb back.
+    '1_3': Descend the spiral staircase.
+  image: A shadowy figure waits at the edge, cloaked in darkness and glowing with
+    unnatural light. The entrance is guarded by a sentinel figure, its presence chilling
+    and surrounded by whispers of old myths.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'A formidable barrier looms before you, carved into the very rock of the path.
+    Ancient runes pulsate with an arcane power, their light flickering like the flames
+    of a dying fire. The challenge here demands strength and cunning, for the passage
+    narrows and twists, leading to a fork where one must choose wisely to proceed.
+
+
+    The challenge here requires you to decipher the ancient runes etched into the
+    stone walls. Each step must be taken carefully, for any mistake will cause the
+    barrier to close, trapping you within.'
+  title: Twisted Portal
+  challenge: The challenge here requires you to decipher the ancient runes etched
+    into the stone walls. Each step must be taken carefully, for any mistake will
+    cause the barrier to close, trapping you within.
+  actions:
+    '2_1': Navigate the winding descent.
+    '4_1': Follow the narrow ascent.
+  image: A formidable barrier carved into the rock looms before you, pulsating with
+    ancient arcane runes that flicker like dying embers. The path narrows and twists,
+    leading to a fork demanding careful choice.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, a hidden chamber opens beneath your feet, revealing a series of intricate
+    puzzles etched into the stone floor. The air grows colder, and the shadows dance
+    with an eerie rhythm, challenging your wit and courage. Each puzzle represents
+    a piece of the labyrinth''s history, demanding that you unlock its secrets to
+    continue your journey.
+
+
+    The challenge here is to solve the riddles inscribed on the walls, each requiring
+    logical thinking and quick wits to proceed. As you navigate the room, the puzzles
+    grow increasingly complex, testing your ability to understand the ancient language
+    and decipher hidden meanings.'
+  title: Puzzle Chamber
+  challenge: The challenge here is to solve the riddles inscribed on the walls, each
+    requiring logical thinking and quick wits to proceed. As you navigate the room,
+    the puzzles grow increasingly complex, testing your ability to understand the
+    ancient language and decipher hidden meanings.
+  actions:
+    '2_3': Climb the stone steps upward.
+    '1_2': Descend the spiral staircase.
+    '1_4': Slide down the obsidian slope.
+  image: A hidden chamber opens beneath your feet, revealing intricate puzzles etched
+    into the stone floor. Shadows dance eerily, challenging your wit and courage with
+    each puzzle.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the heart of the labyrinth, you encounter the looming silhouette of the
+    Minotaur, its eyes glowing with a fierce, unnatural light. The beast stands sentinel,
+    a creature of myth and legend, poised to confront the intruder and claim their
+    fate.
+
+
+    The Minotaur appears before you, a towering figure with a massive, muscular body
+    encased in a hideous, scaled hide. Its sharp horns curve menacingly from its head,
+    and its eyes burn with an unholy radiance, reflecting the dim light of the labyrinth.
+    The beast stands regally, its presence commanding respect and fear, a true symbol
+    of the dangers lurking within the dark chambers.'
+  title: Entrance Groin
+  npc: The Minotaur appears before you, a towering figure with a massive, muscular
+    body encased in a hideous, scaled hide. Its sharp horns curve menacingly from
+    its head, and its eyes burn with an unholy radiance, reflecting the dim light
+    of the labyrinth. The beast stands regally, its presence commanding respect and
+    fear, a true symbol of the dangers lurking within the dark chambers.
+  actions:
+    '3_1': Descend the steep stone path.
+    '5_1': Follow the narrow trail down.
+  image: The looming silhouette of the Minotaur stands sentinel at the heart of the
+    labyrinth, its eyes glowing with unnatural light.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, you find yourself at a crossroads, where the
+    paths diverge sharply. Before you stands an ancient guardian, its form shrouded
+    in mist and mystery. This figure watches with a watchful eye, a silent sentinel
+    guarding the secret pathways that lie ahead.
+
+
+    The guardian appears as a hulking, shadowed figure, its form partially obscured
+    by the mists that swirl around it. Its skin is a dark, almost smoky color, and
+    its eyes gleam with an unsettling intensity, casting long, ominous shadows. The
+    guardian stands immobile, a silent sentinel of the labyrinth, its presence a mix
+    of intimidation and foreboding.'
+  title: Crossroads Guardian
+  npc: The guardian appears as a hulking, shadowed figure, its form partially obscured
+    by the mists that swirl around it. Its skin is a dark, almost smoky color, and
+    its eyes gleam with an unsettling intensity, casting long, ominous shadows. The
+    guardian stands immobile, a silent sentinel of the labyrinth, its presence a mix
+    of intimidation and foreboding.
+  actions:
+    '1_3': Turn left at the fork.
+    '3_3': Turn right at the fork.
+  image: A crossroads in the heart of the labyrinth, where paths diverge sharply.
+    An ancient guardian shrouded in mist and mystery watches with a watchful eye.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, you encounter a daunting challenge ahead, a series of twisted puzzles
+    and deadly traps that demand your wit and courage. The path splits, leading to
+    uncertain destinations, each offering its own peril and opportunity. The air grows
+    heavier, filled with the anticipation of what lies ahead.
+
+
+    The challenge here requires you to navigate a series of interlocking riddles and
+    mechanical devices, ensuring that you choose the correct path to proceed. Each
+    step must be carefully considered, as the wrong choice may trigger a deadly mechanism
+    or lead you back to your starting point.'
+  title: Puzzle Junction
+  challenge: The challenge here requires you to navigate a series of interlocking
+    riddles and mechanical devices, ensuring that you choose the correct path to proceed.
+    Each step must be carefully considered, as the wrong choice may trigger a deadly
+    mechanism or lead you back to your starting point.
+  actions:
+    '1_3': Choose the correct path left.
+    '1_5': Go right at the fork.
+  image: A path splits ahead, leading to uncertain destinations filled with twisted
+    puzzles and deadly traps. The air grows heavier, filled with anticipation and
+    danger.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the far end of the labyrinth, you come face to face with a looming figure,
+    its form barely visible in the dim light. This figure stands watch, a sentinel
+    of the forgotten paths, its presence a blend of ancient wisdom and malevolent
+    power.
+
+
+    The figure appears as a stoic presence, draped in shadows that seem to defy the
+    light. Its features are indistinct, yet its gaze is piercing, filled with a mixture
+    of ancient knowledge and a cold, unyielding resolve.'
+  title: Watcher's Rest
+  npc: The figure appears as a stoic presence, draped in shadows that seem to defy
+    the light. Its features are indistinct, yet its gaze is piercing, filled with
+    a mixture of ancient knowledge and a cold, unyielding resolve.
+  actions:
+    '4_1': Step left at the junction.
+    '6_1': Move right at the fork.
+    '5_2': Turn right at the intersection.
+  image: A looming figure stands watch at the far end of the labyrinth, barely visible
+    in the dim light. Its presence blends ancient wisdom with malevolent power.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, you encounter a hidden chamber, its walls
+    lined with engravings that tell tales of old. At the center stands a figure cloaked
+    in mystery, its eyes reflecting a depth of knowledge and wisdom, ready to guide
+    or test those who dare enter.
+
+
+    The figure appears as a wise elder, with skin etched by time and eyes that glow
+    with an inner light. Their robes are ancient and worn, adorned with symbols of
+    knowledge and power, and they stand tall, a beacon of both guidance and caution.'
+  title: Mystic Oracle
+  npc: The figure appears as a wise elder, with skin etched by time and eyes that
+    glow with an inner light. Their robes are ancient and worn, adorned with symbols
+    of knowledge and power, and they stand tall, a beacon of both guidance and caution.
+  actions:
+    '2_3': Step back at the intersection.
+    '3_4': Move forward at the junction.
+  image: A hidden chamber in the heart of the labyrinth, walls lined with engravings.
+    A figure cloaked in mystery stands at the center, reflecting depth of knowledge
+    and wisdom.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the far corner of the labyrinth, you find a narrow passage guarded by
+    a formidable challenge, a test of strength and cunning before the path can be
+    continued. The challenge is set, and failure means returning to the last junction,
+    a harsh reminder of the choices made.
+
+
+    The challenge before you is a puzzle carved into the stone walls, requiring you
+    to align stones in a specific pattern to reveal a hidden door. Failure to solve
+    it will force you to backtrack to the last junction.'
+  title: Dark Chamber
+  challenge: The challenge before you is a puzzle carved into the stone walls, requiring
+    you to align stones in a specific pattern to reveal a hidden door. Failure to
+    solve it will force you to backtrack to the last junction.
+  actions:
+    '1_4': Step back to the left.
+    '1_6': Step back to the right.
+  image: A narrow passage guarded by a formidable challenge at the far corner of the
+    labyrinth, set for a test of strength and cunning. Failure leads back to the last
+    junction.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the edge of the labyrinth, you encounter a figure shrouded in shadow,
+    its presence commanding respect and a hint of foreboding. The figure watches silently,
+    awaiting those who dare venture forth, a guardian of the dark path.
+
+
+    The figure stands tall, its form partially obscured by the shadows that seem to
+    dance around it. Its eyes, a deep and knowing blue, peer out with a mix of wisdom
+    and caution. The NPC is clad in robes that shimmer with an otherworldly glow,
+    and its posture suggests a long history of standing guard and watching over the
+    corridors of the labyrinth.'
+  title: Guardian Chamber
+  npc: The figure stands tall, its form partially obscured by the shadows that seem
+    to dance around it. Its eyes, a deep and knowing blue, peer out with a mix of
+    wisdom and caution. The NPC is clad in robes that shimmer with an otherworldly
+    glow, and its posture suggests a long history of standing guard and watching over
+    the corridors of the labyrinth.
+  actions:
+    '5_1': Step back into the main path.
+    '7_1': Step forward into the next path.
+  image: A figure shrouded in shadow at the edge of the labyrinth, its presence commanding
+    respect and foreboding. Silent and awaiting those who venture forth, a guardian
+    of the dark path.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure looms at the corner, its silhouette a testament to ages past. The
+    figure wears a cloak of obsidian, its form a blend of ancient wisdom and silent
+    watchfulness. Here, the path narrows, and the air thickens with the weight of
+    secrets and forgotten tales.
+
+
+    The figure appears almost ethereal, dressed in robes of deepest black that seem
+    to absorb light rather than reflect it. Its features are subtle, almost ghostly,
+    yet there is an undeniable presence that commands respect. The NPC stands silently,
+    eyes unblinking as they observe the path and those who tread upon it.'
+  title: Shadow Guardian
+  npc: The figure appears almost ethereal, dressed in robes of deepest black that
+    seem to absorb light rather than reflect it. Its features are subtle, almost ghostly,
+    yet there is an undeniable presence that commands respect. The NPC stands silently,
+    eyes unblinking as they observe the path and those who tread upon it.
+  actions:
+    '5_1': Step back along the path.
+    '5_3': Step forward along the path.
+  image: A figure looms at the corner, its silhouette in an obsidian cloak. Ancient
+    wisdom and silent watchfulness blend in its form.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, a figure stands sentinel, its form a stark
+    silhouette against the dimming light. The figure is cloaked in shadows, its eyes
+    piercing and wise, guarding the entrance to the next chambers with an air of ancient
+    authority.
+
+
+    The guardian appears as a towering figure, draped in armor that gleams with an
+    otherworldly light. Its eyes, pools of deep shadow, watch the surroundings with
+    a silent, calculating gaze. Standing immobile, the guardian seems to embody both
+    strength and timeless vigilance, a sentinel of the labyrinth.'
+  title: Guardian Gate
+  npc: The guardian appears as a towering figure, draped in armor that gleams with
+    an otherworldly light. Its eyes, pools of deep shadow, watch the surroundings
+    with a silent, calculating gaze. Standing immobile, the guardian seems to embody
+    both strength and timeless vigilance, a sentinel of the labyrinth.
+  actions:
+    '3_3': Step aside from the guardian.
+    '3_5': Move forward along the path.
+  image: A figure stands sentinel in the heart of the labyrinth, cloaked in shadows.
+    Its eyes pierce with ancient authority and wisdom.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the far end of the labyrinth, a hallowed altar rises, its surface etched
+    with symbols of power and sacrifice. The air is thick with incense smoke, and
+    the whispers of ancient rituals hang in the air like mist. Here, a figure waits,
+    its presence both commanding and foreboding, ready to guide or challenge those
+    who approach.
+
+
+    The figure appears as a specter, cloaked in a robe of obsidian, its visage etched
+    with lines of age and wisdom. Eyes that seem to hold the secrets of the ages glow
+    with a faint, spectral light, watching you with an unsettling intensity. Standing
+    silently before the altar, the guardian seems to embody both power and ancient
+    malice, ready to test the courage of those who dare approach.'
+  title: Altar Chamber
+  npc: The figure appears as a specter, cloaked in a robe of obsidian, its visage
+    etched with lines of age and wisdom. Eyes that seem to hold the secrets of the
+    ages glow with a faint, spectral light, watching you with an unsettling intensity.
+    Standing silently before the altar, the guardian seems to embody both power and
+    ancient malice, ready to test the courage of those who dare approach.
+  actions:
+    '2_6': Cross the threshold of the altar.
+    '1_5': Retreat to the altar.
+    '1_7': Step back from the altar.
+  image: A hallowed altar rises at the far end of the labyrinth, etched with symbols
+    of power and sacrifice. Thick with incense smoke, whispers of ancient rituals
+    hang in the air.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, the path widens into a clearing, where a lone sentinel stands guard.
+    Her posture is that of a warrior, her stance firm and her expression one of stern
+    resolve. The air is charged with a palpable aura of authority, and she watches
+    with a gaze that seems to encompass the entire labyrinth. This figure is a keeper
+    of the paths, her duty clear and her presence imposing.
+
+
+    The guardian appears as a warrior clad in dark armor, its surface gleaming with
+    the light of ancient fires. Her features are sharp and angular, her eyes cold
+    and unyielding, reflecting a life spent in vigilant watchfulness. She stands tall
+    and resolute, her stance commanding respect and caution from those who draw near.'
+  title: Guardian Clearing
+  npc: The guardian appears as a warrior clad in dark armor, its surface gleaming
+    with the light of ancient fires. Her features are sharp and angular, her eyes
+    cold and unyielding, reflecting a life spent in vigilant watchfulness. She stands
+    tall and resolute, her stance commanding respect and caution from those who draw
+    near.
+  actions:
+    '6_1': Retreat to the path edge.
+    '7_2': Follow the path inward.
+  image: A lone sentinel stands guard in the clearing, her posture firm and expression
+    stern. Charged air and a palpable aura of authority surround her, watching with
+    a commanding gaze.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the corridors merge into a singular chamber, where the very stones
+    seem to pulse with an arcane energy. The walls glow faintly, as if lit by unseen
+    embers, and the air hums with an ancient, resonant sound. Unlike the surrounding
+    chambers, this place is imbued with a strange, almost sacred quality, inviting
+    yet foreboding, a place where time and magic intertwine.
+
+
+    The unusual aspect of this room is the glowing walls that emit a soft, ethereal
+    light, casting a warm radiance over the space. Unlike the surrounding chambers,
+    which are dim and shadowed, the glow here is a testament to an ancient ritual
+    or spell that has been active for centuries.'
+  title: Arcane Convergence
+  unusual: The unusual aspect of this room is the glowing walls that emit a soft,
+    ethereal light, casting a warm radiance over the space. Unlike the surrounding
+    chambers, which are dim and shadowed, the glow here is a testament to an ancient
+    ritual or spell that has been active for centuries.
+  actions:
+    '6_3': Cross the glowing floor.
+    '5_2': Step onto the glowing floor.
+  image: The walls glow faintly in the chamber, pulsating with arcane energy. The
+    air hums with an ancient, resonant sound, imbuing the space with a sacred yet
+    foreboding quality.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the heart of this chamber lies a challenge that requires cunning and strength.
+    Before you, a door stands locked, its mechanism intricate and complex, requiring
+    a key or a sequence of actions to unlock. The room echoes with the whispers of
+    ancient trials, and the air thickens with the anticipation of a formidable puzzle.
+
+
+    The challenge here is to unlock a hidden door.
+
+
+    Before you lies a door that seems impenetrable, its lock complex and seemingly
+    impossible to manipulate. The mechanism requires a key or a specific sequence
+    of actions to open, and the air grows tense as you realize the stakes. Each attempt
+    feels like a step closer to uncovering the secrets of this ancient place, or perhaps
+    to meeting your fate.'
+  title: Glowing Conundrum
+  challenge: 'The challenge here is to unlock a hidden door.
+
+
+    Before you lies a door that seems impenetrable, its lock complex and seemingly
+    impossible to manipulate. The mechanism requires a key or a specific sequence
+    of actions to open, and the air grows tense as you realize the stakes. Each attempt
+    feels like a step closer to uncovering the secrets of this ancient place, or perhaps
+    to meeting your fate.'
+  actions:
+    '3_4': Unlock the hidden door.
+    '3_6': Turn the ancient lever.
+  image: A door locked with an intricate mechanism stands before you, heart of the
+    chamber. Ancient whispers echo, thickening the air with anticipation of a formidable
+    puzzle.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'The room is marked by a vaulted ceiling that seems to soar towards unseen
+    heavens, its stone ribs arched and weathered by time. Here, the walls bear the
+    marks of ancient rituals, their surfaces etched with runes that shimmer faintly
+    under the dim light. This place is a sanctuary of forgotten power, a nexus of
+    arcane energies that pulse with an ancient, mysterious force.
+
+
+    The unusual aspect of this room is the vaulted ceiling that stretches high, forming
+    a natural dome of stone. Here, the air is cooler and fresher, and the light filters
+    through small, irregular windows, creating a kaleidoscope of colors that dance
+    on the walls. The stone floors are smooth and polished, reflecting the distant
+    glow from the central chamber, making the entire space feel both intimate and
+    expansive.'
+  title: Vaulted Sanctum
+  unusual: The unusual aspect of this room is the vaulted ceiling that stretches high,
+    forming a natural dome of stone. Here, the air is cooler and fresher, and the
+    light filters through small, irregular windows, creating a kaleidoscope of colors
+    that dance on the walls. The stone floors are smooth and polished, reflecting
+    the distant glow from the central chamber, making the entire space feel both intimate
+    and expansive.
+  actions:
+    '1_6': Descend the stone steps.
+    '3_6': Follow the ancient pathway.
+  image: A vaulted ceiling with arched stone ribs, soaring towards unseen heavens.
+    Walls etched with ancient runes, shimmering faintly under dim light.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure stands at the threshold, cloaked in shadows and the silence of the
+    night. Their form is tall and gaunt, with eyes that glow like embers in the darkness.
+    They watch you with an unsettling intensity, a presence that seems both familiar
+    and alien, poised to engage or pass without notice.
+
+
+    The figure is draped in a cloak of deep shadows, their outline barely discernible
+    against the darkness. Eyes that seem to hold the secrets of the ages gleam faintly,
+    their gaze piercing and unyielding. Their skin is pale, almost translucent, and
+    they stand quietly, a sentinel of the ancient place.'
+  title: Shadows Watcher
+  npc: The figure is draped in a cloak of deep shadows, their outline barely discernible
+    against the darkness. Eyes that seem to hold the secrets of the ages gleam faintly,
+    their gaze piercing and unyielding. Their skin is pale, almost translucent, and
+    they stand quietly, a sentinel of the ancient place.
+  actions:
+    '1_6': Cross the threshold.
+  image: A tall, gaunt figure cloaked in shadows, glowing eyes in the darkness. Unsettling
+    intensity in their gaze, both familiar and alien.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, a spectral figure materializes, its form ethereal and indistinct. The
+    figure stands at the edge of a hidden chamber, its visage a blend of moonlight
+    and shadow, watching silently as the darkness closes around you.
+
+
+    The spectral figure appears as a wisp of mist, its outline barely visible against
+    the dark background. Cloaked in shadows, its features are indiscernible, but the
+    eyes glow with an unearthly light, casting a faint, ethereal glow.'
+  title: Ghostly Sentinel
+  npc: The spectral figure appears as a wisp of mist, its outline barely visible against
+    the dark background. Cloaked in shadows, its features are indiscernible, but the
+    eyes glow with an unearthly light, casting a faint, ethereal glow.
+  actions:
+    '7_1': Cross the threshold.
+    '7_3': Enter the hidden chamber.
+  image: An ethereal figure stands at the edge of a hidden chamber, its visage a blend
+    of moonlight and shadow. Watched silently by an indistinct, spectral form.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the passage splits, and the air thickens with an aura that is neither
+    light nor shadow. This place is marked by a peculiar resonance, where the echoes
+    seem to weave through the very fabric of the labyrinth, creating a space that
+    defies simple classification.
+
+
+    The unusual aspect is the peculiar resonance that fills the chamber, causing the
+    echoes to weave through the very fabric of the labyrinth, creating a space that
+    defies simple classification.'
+  title: Resonant Crossroads
+  unusual: The unusual aspect is the peculiar resonance that fills the chamber, causing
+    the echoes to weave through the very fabric of the labyrinth, creating a space
+    that defies simple classification.
+  actions:
+    '5_3': Follow the echoing path.
+    '7_3': Turn left at the fork.
+  image: Thick with an aura that defies classification, the passage splits. Echoes
+    weave through the labyrinth, creating a space that defies simple classification.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the heart of the labyrinth, a figure looms, its form a silhouette against
+    the darkness. This guardian stands watch, its eyes gleaming with a fierce, unyielding
+    light that pierces the gloom. The air around it is charged with an ancient power,
+    and you feel the weight of centuries upon your shoulders.
+
+
+    The spectral figure appears as a wisp of mist, its outline barely visible against
+    the dark background. Cloaked in shadows, its features are indiscernible, but the
+    eyes glow with an unearthly light, casting a faint, ethereal glow.'
+  title: Guardian's Stand
+  npc: The spectral figure appears as a wisp of mist, its outline barely visible against
+    the dark background. Cloaked in shadows, its features are indiscernible, but the
+    eyes glow with an unearthly light, casting a faint, ethereal glow.
+  actions:
+    '2_6': Move left at the crossroads.
+    '3_5': Step back to the right.
+    '3_7': Move left at the crossroads.
+  image: A figure looms as a silhouette against the darkness, eyes gleaming fiercely.
+    Charged air around it, ancient power, and a sense of weighty centuries.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the shadowed depths, a sentinel stands guard, its form etched against
+    the fading light. The sentinel is a colossal stone statue, its eyes carved deep
+    within the stone, watching with an indifferent gaze. The air around it is cold
+    and heavy, and the whispers of ancient secrets seem to emanate from its silent
+    presence.
+
+
+    The stone sentinel appears as a massive, featureless slab of dark stone, its surface
+    cracked and weathered. It stands tall and immobile, its eyes carved deep into
+    the stone and glowing with an eerie, almost hypnotic light.'
+  title: Stone Sentinel
+  npc: The stone sentinel appears as a massive, featureless slab of dark stone, its
+    surface cracked and weathered. It stands tall and immobile, its eyes carved deep
+    into the stone and glowing with an eerie, almost hypnotic light.
+  actions:
+    '6_3': Step back to the left.
+    '7_2': Step back to the left.
+    '7_4': Step forward to the right.
+  image: A colossal stone statue stands guard, eyes carved deep within the stone.
+    Cold, heavy air surrounds it, whispers of ancient secrets emanate from its silent
+    presence.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, a riddle challenges your wit, inscribed upon a crumbling stone tablet.
+    The words weave through the shadows, barely legible in the dim light. "What walks
+    on four feet in the morning, on three at noon, and on two in the evening?" The
+    answer, if found, will grant passage, but few have succeeded in deciphering its
+    cryptic meaning.
+
+
+    The challenge is a cryptic riddle etched upon a crumbling stone tablet.'
+  title: Riddle Chamber
+  challenge: The challenge is a cryptic riddle etched upon a crumbling stone tablet.
+  actions:
+    '4_7': Step forward to the right.
+    '3_6': Step back to the left.
+  image: A crumbling stone tablet crammed with cryptic riddles, words barely legible
+    in the dim light. Shadows weave through the inscription, challenging your wit.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the dark, a figure waits, cloaked in shadows and silent as
+    the night. The form is that of an ancient guardian, its features obscured by the
+    veil of time. Its eyes, pools of darkness, seem to watch without blinking, a sentinel
+    ready to confront the intruder.
+
+
+    The figure stands tall, its form imposing yet ethereal. Cloaked from head to toe
+    in deep shadows, the outline of a powerful presence is visible. Its eyes, pools
+    of darkness that seem to hold the secrets of the ages, flicker with an inner light
+    that contrasts with the surrounding gloom.'
+  title: Guardian Cell
+  npc: The figure stands tall, its form imposing yet ethereal. Cloaked from head to
+    toe in deep shadows, the outline of a powerful presence is visible. Its eyes,
+    pools of darkness that seem to hold the secrets of the ages, flicker with an inner
+    light that contrasts with the surrounding gloom.
+  actions:
+    '7_3': Step back to the left.
+    '7_5': Step forward to the right.
+  image: A cloaked figure waits in the darkness, eyes pools of darkness. Silent sentinel,
+    features obscured by time, watch without blinking.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, the darkness constricts, and a figure looms, its form indistinct yet
+    ominous. The presence is that of a spectral guide, a guardian of the path, its
+    gaze piercing through the shadows with a cold, knowing light. This specter watches
+    as you approach, its silent command hanging in the air like a foretold doom.
+
+
+    The figure appears as a wraith, cloaked in deep shadows that seem to absorb light.
+    Its form is tall and slender, with features that are barely discernible in the
+    dim light. Eyes, pools of darkness, reflect a silent wisdom that seems to hold
+    knowledge beyond mortal comprehension.'
+  title: Shadow Watcher
+  npc: The figure appears as a wraith, cloaked in deep shadows that seem to absorb
+    light. Its form is tall and slender, with features that are barely discernible
+    in the dim light. Eyes, pools of darkness, reflect a silent wisdom that seems
+    to hold knowledge beyond mortal comprehension.
+  actions:
+    '3_7': Step back to the left.
+    '5_7': Step forward to the right.
+  image: A spectral guide looms in the darkness, form indistinct yet ominous. Gaze
+    piercing shadows with cold, knowing light.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the junction, a riddle lies etched into the stone wall, a challenge set
+    by the ancient guardians of the labyrinth. The words are cryptic, a puzzle to
+    decipher, before the passage can be opened. You must solve the riddle to proceed,
+    or risk being trapped within the dark, twisting labyrinth of Minos.
+
+
+    The challenge here demands that you decipher a cryptic riddle inscribed upon the
+    stone wall. Only by solving the riddle can you unlock the path ahead, revealing
+    the next segment of the dark, twisting labyrinth of Minos.'
+  title: Riddle Gate
+  challenge: The challenge here demands that you decipher a cryptic riddle inscribed
+    upon the stone wall. Only by solving the riddle can you unlock the path ahead,
+    revealing the next segment of the dark, twisting labyrinth of Minos.
+  actions:
+    '6_5': Step back to the left.
+    '7_4': Step forward to the right.
+    '7_6': Step back to the right.
+  image: A cryptic riddle etched into the stone wall, words challenging you to proceed.
+    Ancient guardians' challenge, words visible but hidden in shadows.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, a figure stands watch, cloaked in obscurity.
+    Its form is that of a guardian, silent and unyielding, eyes hidden behind a veil
+    of darkness. The air around it crackles with an arcane energy, a sentinel guarding
+    the secret pathways of the dark, twisting labyrinth of Minos.
+
+
+    The figure appears as a hooded figure, shrouded in darkness, with a faint glimmer
+    of light emanating from beneath its cloak. Its presence is both ominous and commanding,
+    a sentinel of the ancient guardians of the labyrinth.'
+  title: Guardian Watchpoint
+  npc: The figure appears as a hooded figure, shrouded in darkness, with a faint glimmer
+    of light emanating from beneath its cloak. Its presence is both ominous and commanding,
+    a sentinel of the ancient guardians of the labyrinth.
+  actions:
+    '4_7': Step back to the left.
+    '6_7': Step back to the right.
+    '5_6': Step back to the left.
+  image: A silent guardian stands watch, cloaked in obscurity. Eyes hidden behind
+    darkness, air crackles with arcane energy.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the edge of the labyrinth, a figure looms, its silhouette stark against
+    the dimming light. The figure stands guard, eyes gleaming with an inner fire,
+    a sentinel of the forgotten paths. Its stance is that of a warrior, ready to confront
+    whoever dares to enter the next segment of the dark, twisting labyrinth of Minos.
+
+
+    The figure appears as a gaunt figure, draped in shadows, with a stern face etched
+    with age. Its eyes are sharp and watchful, piercing through the darkness with
+    an aura of ancient power. Standing at the threshold of the dark, twisting labyrinth,
+    it is a sentinel of the forgotten guardians.'
+  title: Guardian Entrance
+  npc: The figure appears as a gaunt figure, draped in shadows, with a stern face
+    etched with age. Its eyes are sharp and watchful, piercing through the darkness
+    with an aura of ancient power. Standing at the threshold of the dark, twisting
+    labyrinth, it is a sentinel of the forgotten guardians.
+  actions:
+    '5_5': Step back to the left.
+    '7_5': Step back to the right.
+    '6_6': Step forward to the right.
+  image: A silhouette of a figure looms, eyes gleaming with inner fire. Stance of
+    a warrior, ready to confront intruders.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, the path widens to reveal a clearing, where a figure stands vigilant,
+    its presence commanding respect. The figure is clad in robes of deep black, with
+    a hood pulled over its face, leaving only piercing eyes to reveal its intent.
+    It watches with a silent, knowing gaze, a guardian of the ancient paths, ready
+    to challenge anyone who enters this secluded spot within the dark, twisting labyrinth
+    of Minos.
+
+
+    The figure appears as a cloaked guardian, its hood obscuring most of its features,
+    yet its eyes gleam with a cold, unyielding light. Standing on a rocky outcropping,
+    it casts a shadowy figure against the dimming light, a sentinel of the ancient
+    paths.'
+  title: Clearing Guardian
+  npc: The figure appears as a cloaked guardian, its hood obscuring most of its features,
+    yet its eyes gleam with a cold, unyielding light. Standing on a rocky outcropping,
+    it casts a shadowy figure against the dimming light, a sentinel of the ancient
+    paths.
+  actions:
+    '6_6': Step back to the left.
+    '7_5': Step back to the right.
+    '7_7': Step forward to the left.
+  image: A figure clad in deep black robes stands vigilant, hood pulled over the face.
+    Piercing eyes reveal a silent, knowing gaze.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: At this juncture, three paths converge, each leading deeper into the labyrinth.
+    To your north lies a winding trail that descends into the unknown, while to your
+    west, a broader path stretches upward towards higher grounds. To your south, a
+    narrower path curves away, offering a different route through the dark, twisting
+    labyrinth of Minos. Each path beckons with promises both enticing and treacherous,
+    inviting you to choose your own destiny within the ancient maze.
+  title: Crossing Point
+  actions:
+    '5_7': Step back to the north.
+    '7_7': Step forward to the south.
+    '6_6': Step back to the east.
+  image: Three paths converge at this juncture, winding trail descending north, broader
+    path rising west, narrower path curving south. Each beckons with promises and
+    treachery.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here stands a figure cloaked in shadows, its presence both ominous and watchful.
+    The figure glides silently, its movements almost imperceptible, a sentinel guarding
+    the path ahead. You sense an air of ancient knowledge and hidden wisdom, the whispers
+    of those who have traversed this labyrinth before you.
+
+
+    Standing at the entrance of the dark, twisting labyrinth of Minos, a figure emerges
+    from the shadows. Clothed in robes of ancient design, the figure''s eyes gleam
+    with a knowing light. They stand tall and regal, their posture commanding respect,
+    yet there is a subtle hint of vulnerability in their demeanor.'
+  title: Guardian's Rest
+  npc: Standing at the entrance of the dark, twisting labyrinth of Minos, a figure
+    emerges from the shadows. Clothed in robes of ancient design, the figure's eyes
+    gleam with a knowing light. They stand tall and regal, their posture commanding
+    respect, yet there is a subtle hint of vulnerability in their demeanor.
+  actions:
+    '6_6': Step forward to the east.
+    '5_5': Step back to the west.
+    '5_7': Step back to the north.
+  image: A figure cloaked in shadows, movements almost imperceptible. Watchful presence,
+    whispers of ancient knowledge and hidden wisdom.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here stands a figure in the dim light, its form outlined against the shadows.
+    The figure wears a helm of obsidian, its eyes hidden beneath the shadows of its
+    hood. There is a sense of power and authority emanating from this figure, a silent
+    guardian of the paths within the labyrinth.
+
+
+    A figure appears at the entrance, clad in a cloak of obsidian black, the hood
+    pulled over its face. Its presence fills the room with an aura of authority and
+    ancient knowledge. The figure stands silently, its eyes hidden, yet the sense
+    of power is unmistakable.'
+  title: Hooded Guardian
+  npc: A figure appears at the entrance, clad in a cloak of obsidian black, the hood
+    pulled over its face. Its presence fills the room with an aura of authority and
+    ancient knowledge. The figure stands silently, its eyes hidden, yet the sense
+    of power is unmistakable.
+  actions:
+    '6_5': Step forward to the north.
+    '5_6': Step back to the south.
+  image: A figure in dim light, helm of obsidian, hooded eyes hidden. Power and authority
+    emanates from a silent guardian.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here lies a threshold of no return, a door sealed with iron hinges and bound
+    by chains of darkness. Before you stretches a path that leads deeper into the
+    labyrinth, but you must face a challenge that will test your courage and wit.
+    The air grows colder, and the shadows grow thicker, as the very walls seem to
+    whisper warnings.
+
+
+    The challenge here is a riddle whispered by the shadows. You must listen closely
+    as the whispers grow louder, seeking the key to unlock the next part of the labyrinth.'
+  title: Iron Doorway
+  challenge: The challenge here is a riddle whispered by the shadows. You must listen
+    closely as the whispers grow louder, seeking the key to unlock the next part of
+    the labyrinth.
+  actions:
+    '5_6': Turn back to the south.
+    '7_6': Step forward to the east.
+    '6_5': Step back to the west.
+    '6_7': Step forward to the west.
+  image: A threshold of no return, sealed door with iron hinges and dark chains. Path
+    stretches deeper, walls whisper warnings, air grows colder.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Here stands the final challenge, the Minotaur, guardian of the labyrinth's
+    deepest secrets. Its eyes gleam with an inner fire, and its horns reach towards
+    the heavens like the horns of fate. Before you lies a battle against ancient beasts
+    and forgotten powers, where victory will grant you the knowledge of the Minotaur's
+    lair.
+  title: Labyrinth Gate
+  actions:
+    '6_7': Step back to the east.
+    '7_6': Step back to the north.
+  image: The final challenge, the Minotaur with eyes gleaming and horns reaching towards
+    the heavens. Ancient beast and forgotten powers await, awaiting your fate.
+  image_filename: 7_7.png

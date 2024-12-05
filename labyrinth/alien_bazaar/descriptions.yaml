@@ -1,0 +1,1292 @@
+world:
+  location: an alien bazaar located in a floating city in a gas giant's atmosphere
+  goal:
+  - 7
+  - 7
+  writing_style: detailed, hard sci fi, descriptive; inspired by Alastair Reynolds.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You find yourself standing at the threshold of an alien bazaar, its walls
+    shimmering with the iridescent hues of a distant planet's twilight. The ground
+    beneath you is a soft, velvety carpet of fine, crystalline dust, reflecting the
+    dim light from above. To your left, a narrow corridor stretches out like a winding
+    path, lined with towering columns that seem to pulse with a subtle luminescence.
+    The air is thick with the scents of exotic spices and distant ozone, mingling
+    with the faint metallic tang of machinery. As you step forward, the corridor widens
+    into a bustling marketplace, filled with stalls selling strange and wondrous goods.
+    On the right, a door creaks open, revealing a smaller room where traders haggle
+    in tones both soft and resonant, their voices echoing through the cavernous space.
+    The scent of burning incense wafts through the air, adding a layer of mystique
+    to this alien environment.
+  title: Entrance Courtyard
+  actions:
+    '2_1': Follow the path to the left.
+    '1_2': Turn right at the fork.
+  image: Velvet crystalline carpet below, shimmering iridescent walls above. Columns
+    pulse with subtle luminescence.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'The path veers sharply to the right, leading into a domed chamber that stands
+    apart from the rest of the bazaar. Here, the air is cooler, infused with the faint
+    glow of bioluminescent flora that sway gently in the breeze. At the center of
+    the dome, a single crystal pillar pulsates rhythmically, its light flickering
+    as if alive. The walls are lined with panels that glow softly, casting an ethereal
+    glow that seems to whisper secrets of the cosmos. This place is unusual because
+    it is adorned with artifacts from various distant planets, each piece telling
+    a story of ancient civilizations and forgotten technologies.
+
+
+    The Crystal Pulsar Dome is unusual because it is adorned with artifacts from various
+    distant planets, each piece telling a story of ancient civilizations and forgotten
+    technologies. The walls glow softly, casting an ethereal glow that seems to whisper
+    secrets of the cosmos, while the air is cooler and infused with the faint glow
+    of bioluminescent flora that sway gently in the breeze.'
+  title: Crystal Pulsar Dome
+  unusual: The Crystal Pulsar Dome is unusual because it is adorned with artifacts
+    from various distant planets, each piece telling a story of ancient civilizations
+    and forgotten technologies. The walls glow softly, casting an ethereal glow that
+    seems to whisper secrets of the cosmos, while the air is cooler and infused with
+    the faint glow of bioluminescent flora that sway gently in the breeze.
+  actions:
+    '1_1': Retrace steps to the left.
+    '3_1': Head straight ahead.
+  image: Pulsating crystal pillar at center, bioluminescent flora sway gently. Soft
+    glow from glowing panels, whispering secrets of cosmos.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a narrow alleyway, bordered by towering columns that
+    stretch towards the sky. The air is heavy with the scent of exotic spices mingled
+    with the distant sound of chatter. At the end of the alley, a figure stands quietly,
+    dressed in attire that seems out of place yet strangely familiar. They are tall,
+    with a lean, athletic build, and their eyes are a striking shade of deep blue.
+    Their skin bears the marks of prolonged exposure to the harsh radiation of the
+    floating city, giving them a weathered appearance. They wear a cloak that is patterned
+    with intricate symbols, and their hands are gloved, likely for protection against
+    the cold. Despite their solitude, there is a gentle warmth in their demeanor,
+    almost as if they are welcoming you into their world.
+
+
+    They stand with an aura of calm and wisdom, dressed in a blend of traditional
+    and futuristic garments. Their skin is a healthy olive tone, marred only by the
+    slight reddening of the exposed skin from prolonged exposure to the city''s radiation.
+    They have deep blue eyes that reflect a depth of experience and knowledge. Their
+    hands are clad in gloves that protect against the cold, but their fingers are
+    nimble and capable.'
+  title: Waiting Spot
+  npc: They stand with an aura of calm and wisdom, dressed in a blend of traditional
+    and futuristic garments. Their skin is a healthy olive tone, marred only by the
+    slight reddening of the exposed skin from prolonged exposure to the city's radiation.
+    They have deep blue eyes that reflect a depth of experience and knowledge. Their
+    hands are clad in gloves that protect against the cold, but their fingers are
+    nimble and capable.
+  actions:
+    '1_1': Turn around and go left.
+    '1_3': Go straight ahead.
+  image: Towering columns stretch towards sky, exotic spices mingle in heavy air.
+    Figure stands quietly, deep blue eyes.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a narrow, winding corridor that ascends steeply towards
+    the ceiling. The walls are lined with shelves crammed with an array of alien artifacts,
+    each item seemingly more fragile than the last. The air is thick with the acrid
+    smell of burnt metal and the faint, persistent hum of machinery. As you ascend,
+    the corridor narrows, forcing you to navigate carefully to avoid colliding with
+    the shelves. The challenge here lies in the narrowness and precarious nature of
+    the ascent, requiring precise footing and a steady hand to maintain your balance.
+
+
+    Navigate the narrow ascent. The corridor twists and narrows as it rises towards
+    the ceiling, forcing you to maintain a steady pace and careful footing to avoid
+    collisions with the crowded shelves. The climb is steep, and the narrow space
+    requires you to be mindful of your movements to prevent a tumble down the slippery
+    stone walls.'
+  title: Staircase Apex
+  challenge: Navigate the narrow ascent. The corridor twists and narrows as it rises
+    towards the ceiling, forcing you to maintain a steady pace and careful footing
+    to avoid collisions with the crowded shelves. The climb is steep, and the narrow
+    space requires you to be mindful of your movements to prevent a tumble down the
+    slippery stone walls.
+  actions:
+    '2_1': Descend the spiral staircase.
+    '4_1': Step down the platform.
+  image: Alien artifacts line the shelves, thick air smells of burnt metal. Narrow,
+    winding corridor ascends steeply towards the ceiling.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a small, vault-like chamber, the walls lined with ancient,
+    glowing crystals that emit a soft, luminescent glow. The air is heavy with the
+    scent of aged spices and the faint echo of footsteps. The floor is covered with
+    a mosaic of reflective tiles that refract the light from the crystals, creating
+    a mesmerizing dance of光影. To your right, a narrow, arched passage leads upwards,
+    while to your left, a slightly larger room beckons with its own secrets. The challenge
+    here lies in the narrowness and the reflective surface, making it difficult to
+    discern your exact position and navigate without a clear sense of orientation.
+
+
+    Navigate the reflective floor. The floor is a mosaic of reflective tiles that
+    create an optical illusion, making it difficult to determine your exact position
+    and navigate without frequent adjustments. The narrow passage leading upwards
+    becomes even more treacherous due to the distorted reflections, requiring keen
+    attention to avoid falling or getting lost.'
+  title: Vault Grotto
+  challenge: Navigate the reflective floor. The floor is a mosaic of reflective tiles
+    that create an optical illusion, making it difficult to determine your exact position
+    and navigate without frequent adjustments. The narrow passage leading upwards
+    becomes even more treacherous due to the distorted reflections, requiring keen
+    attention to avoid falling or getting lost.
+  actions:
+    '2_3': Step up the arched passage.
+    '1_2': Step back into the room.
+    '1_4': Step forward into the room.
+  image: Ancient glowing crystals line the walls, soft luminescent glow. Heavy air
+    with aged spice scent, reflective tiles create mesmerizing dance.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You approach a grand, ornate archway, its surfaces etched with arcane symbols
+    that seem to shimmer and shift under the ambient light. At the center of the archway
+    stands a figure cloaked in a silvery, flowing robe, its form partially obscured
+    by a mist that dances with the faintest currents. The aura around the figure is
+    one of authority and mystery, and there is a sense of anticipation in the air
+    as they watch you approach.
+
+
+    The figure before you is draped in a silvery robe, its hem trailing gently on
+    the ground. The fabric seems to shift with the light, casting an ethereal glow
+    around them. Their face is hidden behind a veil of mist, but you can make out
+    piercing green eyes that seem to hold an ancient wisdom.'
+  title: Mystic Grotto
+  npc: The figure before you is draped in a silvery robe, its hem trailing gently
+    on the ground. The fabric seems to shift with the light, casting an ethereal glow
+    around them. Their face is hidden behind a veil of mist, but you can make out
+    piercing green eyes that seem to hold an ancient wisdom.
+  actions:
+    '3_1': Step back into the chamber.
+    '5_1': Step forward into the next room.
+  image: Arcade etched with arcane symbols, shimmers under ambient light. Silver robe
+    figure obscured by mist.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a chamber adorned with intricate murals depicting scenes from the
+    cosmos, their colors shifting and blending together in a mesmerizing display.
+    In the center of the room, a figure stands, their form partially concealed by
+    a veil of swirling mist. They appear to be a being of great power and knowledge,
+    their presence commanding respect and awe.
+
+
+    The figure before you is clad in a robe of celestial blues, their form partially
+    hidden by a curtain of iridescent mist. They stand tall and regal, their presence
+    exuding a profound wisdom and authority.'
+  title: Mystic Chamber
+  npc: The figure before you is clad in a robe of celestial blues, their form partially
+    hidden by a curtain of iridescent mist. They stand tall and regal, their presence
+    exuding a profound wisdom and authority.
+  actions:
+    '1_3': Move towards the exit.
+    '3_3': Walk down the central path.
+  image: Intricate cosmic murals blend together, mesmerizing display. Figure stands
+    partially concealed by swirling mist.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You arrive in a room that feels like the culmination of an ancient ritual,
+    its walls lined with glowing orbs that flicker and dance with spectral lights.
+    The air is charged with energy, and the floor is covered in a patterned tessellation
+    that seems to shift and change as you move. At the center of the room, a complex
+    mechanism hums softly, its gears and levers visible even in the dim light. The
+    challenge here requires you to solve a puzzle that controls the flow of the energy,
+    a test of both intellect and patience.
+
+
+    The challenge in this room is to unlock the mechanism''s secrets.'
+  title: Energy Convergence
+  challenge: The challenge in this room is to unlock the mechanism's secrets.
+  actions:
+    '1_3': Navigate the shifting floor tiles.
+    '1_5': Cross the energy-lit floor.
+  image: Glowing orbs flicker with spectral lights, charged energy in the air. Complex
+    mechanism hums softly, gears visible.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a grand atrium, its ceiling high and arched, illuminated
+    by the soft, ethereal glow of bioluminescent crystals embedded in the stone walls.
+    The floor is a mosaic of shimmering metals and obsidian shards, reflecting the
+    light and creating a kaleidoscope of colors. A figure stands at the center of
+    the room, their silhouette barely visible against the backdrop of the crystal
+    chandeliers. This being appears to be a guardian, their presence commanding respect
+    and caution.
+
+
+    The figure before you is draped in a cloak of deep, iridescent blue, their form
+    subtly shifting as if bathed in ambient light. Their eyes, a deep shade of violet,
+    seem to hold both wisdom and mystery. They stand tall and composed, their stance
+    indicating a long history of observation and judgment.'
+  title: Guardian Court
+  npc: The figure before you is draped in a cloak of deep, iridescent blue, their
+    form subtly shifting as if bathed in ambient light. Their eyes, a deep shade of
+    violet, seem to hold both wisdom and mystery. They stand tall and composed, their
+    stance indicating a long history of observation and judgment.
+  actions:
+    '4_1': Cross the energy-lit floor.
+    '6_1': Step onto the glowing platform.
+    '5_2': Navigate the shifting floor tiles.
+  image: Soft ethereal glow of bioluminescent crystals, kaleidoscope of colors from
+    mosaic floor. Guardian figure stands at center, silhouette barely visible.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber of ancient architecture, its walls adorned
+    with ornate carvings depicting scenes of celestial bodies and interstellar travel.
+    The floor is a mosaic of polished stones that reflect the muted light filtering
+    through the high arched ceiling. In the center of the room, a figure stands, their
+    form partially obscured by the flickering light emanating from a nearby lantern.
+    This figure appears to be a revered elder, their presence exuding a mixture of
+    authority and knowledge.
+
+
+    The figure before you is draped in a robe of deep, luminescent silver, their form
+    softly glowing as if lit from within. Their eyes, a piercing shade of emerald,
+    seem to hold the secrets of the cosmos. They stand tall and regal, their posture
+    conveying a sense of profound wisdom and authority.'
+  title: Ancient Concourse
+  npc: The figure before you is draped in a robe of deep, luminescent silver, their
+    form softly glowing as if lit from within. Their eyes, a piercing shade of emerald,
+    seem to hold the secrets of the cosmos. They stand tall and regal, their posture
+    conveying a sense of profound wisdom and authority.
+  actions:
+    '2_3': Descend the ornate steps.
+    '3_4': Move to the side platform.
+  image: Ornate carvings depicting celestial bodies, muted light filtering through
+    high ceiling. Partially obscured figure stands in center, flickering lantern light.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a chamber that seems to defy gravity, its walls tilting
+    upwards like the ribs of a colossal tree. The floor is a sea of shimmering crystals
+    that refract the dim light, creating an ever-changing pattern of colors. At the
+    center of the room, a pedestal rises from the ground, upon which lies an ancient
+    device, its surface etched with arcane symbols. The air is heavy with the anticipation
+    of a challenge, and the very air seems charged with an invisible force field,
+    making your presence felt.
+
+
+    The challenge before you is to navigate the shifting floor tiles, requiring you
+    to maintain balance and avoid falling into the abyss below.'
+  title: Crystal Threshold
+  challenge: The challenge before you is to navigate the shifting floor tiles, requiring
+    you to maintain balance and avoid falling into the abyss below.
+  actions:
+    '1_4': Step off the pedestal.
+    '1_6': Step down to the lower level.
+  image: Walls tilt upwards like tree ribs, sea of shimmering crystals. Ancient device
+    rises from ground, arcane symbols etched.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a figure cloaked in obsidian, their silhouette stark against
+    the glow of the floating city. The figure stands motionless, their form partially
+    obscured by a mist that swirls around them. Their gaze is intense and unyielding,
+    reflecting a depth of experience and power that commands respect.
+
+
+    The figure before you is draped in a cloak of obsidian, their form partially obscured
+    by a swirling mist that dances around them. Their eyes, a piercing shade of emerald,
+    seem to hold the secrets of the cosmos. They stand motionless, their posture conveying
+    a sense of profound authority and command.'
+  title: Mist Guardian Lounge
+  npc: The figure before you is draped in a cloak of obsidian, their form partially
+    obscured by a swirling mist that dances around them. Their eyes, a piercing shade
+    of emerald, seem to hold the secrets of the cosmos. They stand motionless, their
+    posture conveying a sense of profound authority and command.
+  actions:
+    '5_1': Step back onto the main pathway.
+    '7_1': Navigate the shifting ground.
+  image: Obsidian-clad figure stands motionless, mist swirls around them. Intense
+    gaze reflects depth of experience.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a room adorned with intricate geometric patterns etched
+    into the walls, the light filtering through the translucent ceiling casting a
+    kaleidoscope of colors on the floor. The air is cool and crisp, and the scent
+    of distant seas and fresh air permeates the space. A figure stands before you,
+    their form partially hidden by a curtain of silver mist. They appear to be a steward,
+    their presence commanding yet gentle, ready to guide you towards your destination.
+
+
+    The figure before you is clad in a shimmering silver robe, their features softened
+    by the silver mist that surrounds them. Their eyes, a deep emerald, glow with
+    a serene and wise aura. They stand gracefully, their posture indicating a long
+    history of service and wisdom.'
+  title: Mist Guide Chamber
+  npc: The figure before you is clad in a shimmering silver robe, their features softened
+    by the silver mist that surrounds them. Their eyes, a deep emerald, glow with
+    a serene and wise aura. They stand gracefully, their posture indicating a long
+    history of service and wisdom.
+  actions:
+    '5_1': Cross the threshold.
+    '5_3': Move past the mist.
+  image: Intricate geometric patterns etched into walls, kaleidoscope of colors on
+    the floor. Silver mist hides form, gentle yet commanding presence.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a room bathed in the soft, ethereal light of a nearby
+    lantern. The walls are adorned with ancient, glowing crystals that emit a soothing,
+    almost hypnotic glow. The air is filled with the scent of aged parchment and distant
+    ocean breezes. At the center of the room stands a figure, their form partially
+    concealed by a delicate, silver mist that swirls around them. They appear to be
+    a scribe, their robes a blend of black and silver, their presence imbued with
+    a sense of arcane knowledge and authority.
+
+
+    The figure before you is clad in a robe of shimmering silver, their form partially
+    hidden by a delicate silver mist that swirls around them. Their eyes, a deep emerald,
+    glow softly with a serene and wise aura. They stand gracefully, their posture
+    indicating a long history of service and knowledge.'
+  title: Crystal Whisperer alcove
+  npc: The figure before you is clad in a robe of shimmering silver, their form partially
+    hidden by a delicate silver mist that swirls around them. Their eyes, a deep emerald,
+    glow softly with a serene and wise aura. They stand gracefully, their posture
+    indicating a long history of service and knowledge.
+  actions:
+    '3_3': Pass through the mist.
+    '3_5': Step beyond the mist.
+  image: Ancient glowing crystals emit soothing glow, silver mist swirls around figure.
+    Scribe stands at center, robes blend black and silver.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stand in a narrow passage that suddenly widens into a small chamber.
+    The walls are lined with shelves crammed with an array of alien artifacts and
+    curiosities, each item seemingly imbued with an otherworldly aura. The air is
+    heavy with the scent of ozone and distant planets, and the floor is covered with
+    a soft, glittering carpet that reflects the dim light from above. At the center
+    of the room, a figure awaits, their form partially obscured by a veil of silver
+    mist. They appear to be a guardian, their presence both welcoming and watchful,
+    ready to guide you through the remaining paths.
+
+
+    The figure before you is draped in a cloak of deep, velvety black, their form
+    partially concealed by a silver mist that swirls around them. Their eyes, a piercing
+    azure, reflect a calm and wise demeanor. They stand tall, their posture indicating
+    a long history of vigilance and wisdom.'
+  title: Guardian's Rest
+  npc: The figure before you is draped in a cloak of deep, velvety black, their form
+    partially concealed by a silver mist that swirls around them. Their eyes, a piercing
+    azure, reflect a calm and wise demeanor. They stand tall, their posture indicating
+    a long history of vigilance and wisdom.
+  actions:
+    '2_6': Step along the artifact shelf.
+    '1_5': Move past the guardian.
+    '1_7': Cross the artifact shelf.
+  image: Alien artifacts and curiosities on shelves, heavy ozone and distant planets
+    scent. Soft glittering carpet reflects dim light, silver mist veils figure awaiting.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a dimly lit alcove, surrounded by towering pillars that
+    seem to pulse with a subtle, ethereal light. The air is thick with the scents
+    of distant stars and exotic spices, creating a surreal atmosphere. At the center
+    of the alcove, a figure stands, their form partially hidden by a veil of silver
+    mist. This figure appears to be a steward, their eyes a deep, amber, reflecting
+    a stern yet understanding gaze. They stand guard, ready to escort you through
+    the remaining pathways.
+
+
+    The figure before you is clad in a sleek, silver suit that seems to blend with
+    the shadows. Their eyes, a deep shade of violet, are focused and alert, scanning
+    your approach. They stand regally, their posture commanding respect, and their
+    presence exudes authority.'
+  title: Steward's Passage
+  npc: The figure before you is clad in a sleek, silver suit that seems to blend with
+    the shadows. Their eyes, a deep shade of violet, are focused and alert, scanning
+    your approach. They stand regally, their posture commanding respect, and their
+    presence exudes authority.
+  actions:
+    '6_1': Navigate the artifact shelves.
+    '7_2': Walk through the misty alcove.
+  image: Pillars pulsing with subtle ethereal light, thick with distant stars and
+    exotic spices. Silver mist veils the figure, deep amber eyes reflect understanding.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the air is infused with the peculiar fragrance of burning coal and
+    distant, cosmic dust, creating an otherworldly ambiance. The room itself is a
+    stark contrast, with the walls painted in a gradient of deep blues and greens
+    that seem to shift and change under the soft, ambient light. At the center of
+    this unusual chamber, a large, ornate crystal stands, emitting a gentle, luminescent
+    glow that casts an ethereal glow upon everything within. The floor is covered
+    in a mosaic pattern of shimmering crystals, reflecting the colors of the cosmos
+    around you. This place feels out of place, unlike the rest of the bazaar, as if
+    it was designed for a different purpose or era.
+
+
+    The unusual aspect of this room is the large, ornate crystal that stands at the
+    center, emitting a gentle, luminescent glow. This crystal is unlike any seen elsewhere
+    in the bazaar, with a unique pattern that shifts subtly under the soft light,
+    casting an ethereal glow upon everything within.'
+  title: Crystal Whispering Chamber
+  unusual: The unusual aspect of this room is the large, ornate crystal that stands
+    at the center, emitting a gentle, luminescent glow. This crystal is unlike any
+    seen elsewhere in the bazaar, with a unique pattern that shifts subtly under the
+    soft light, casting an ethereal glow upon everything within.
+  actions:
+    '6_3': Follow the glowing pathway.
+    '5_2': Step back onto the mosaic floor.
+  image: Peculiar fragrance of burning coal, cosmic dust, stark blue and green walls.
+    Large ornate crystal emits gentle luminescence, shimmering crystal mosaic on floor.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a narrow, winding corridor that suddenly narrows into
+    a tight, claustrophobic chamber. The walls are lined with ancient, crystallized
+    structures that emit a soft, blue light, casting an eerie glow on the walls and
+    the narrow space. In the center of the chamber, there is a pedestal with a glowing
+    orb atop it, pulsating with an otherworldly energy. To either side of the pedestal,
+    there are two doors, each adorned with intricate carvings that seem to depict
+    scenes of struggle and conflict. The challenge here requires you to navigate these
+    doors, each with a unique puzzle or challenge that must be solved to proceed.
+
+
+    The challenge here is to navigate the two doors, each with a unique puzzle.'
+  title: Crystal Convergence Chamber
+  challenge: The challenge here is to navigate the two doors, each with a unique puzzle.
+  actions:
+    '3_4': Open the right door.
+    '3_6': Turn left at the pedestal.
+  image: Ancient crystallized structures lining the walls, soft blue light casting
+    eerie glow. Glowing orb pulsates with otherworldly energy, two intricate carvings
+    adorn doors.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'You stand in a chamber that seems to defy the normal architecture of the
+    bazaar. The walls are adorned with metallic sculptures that shimmer under the
+    ambient light, depicting scenes of ancient battles and celestial bodies. The ceiling
+    is a vast expanse of transparent crystal, allowing the stars of the gas giant
+    to shine through, casting a starlit glow across the room. At the center of the
+    chamber, a large, reflective pool mirrors the sky above, with the occasional glint
+    of a passing comet. This place feels out of place, a sanctuary amidst the chaos,
+    with a serene beauty that contrasts sharply with the surrounding alien bazaar.
+
+
+    The unusual aspect of this room is the reflective pool that mirrors the stars
+    above.'
+  title: Starlit Reflection Room
+  unusual: The unusual aspect of this room is the reflective pool that mirrors the
+    stars above.
+  actions:
+    '1_6': Move towards the reflective pool.
+    '3_6': Walk towards the opposite wall.
+  image: Metallic sculptures shimmer under ambient light, ancient battles and celestial
+    bodies depicted. Crystal ceiling allows gas giant stars to shine, starlit glow
+    across the room.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a figure standing at the edge of the market, observing the bustle
+    around you with a keen gaze. The individual is cloaked in a dark, almost spectral
+    garment, their face obscured by a hood that drips with crystalline beads. Their
+    posture is tense, as if they have been anticipating your arrival. Despite the
+    silence of the night, you can sense an underlying tension and a hint of anticipation
+    in the air.
+
+
+    You observe a figure standing at the edge of the market, cloaked in a dark, almost
+    spectral garment. The hood of their cloak drips with crystalline beads, adding
+    to the eerie ambiance of the room. Their presence is both commanding and foreboding,
+    making you feel both wary and intrigued.'
+  title: Shadowed Sentinel
+  npc: You observe a figure standing at the edge of the market, cloaked in a dark,
+    almost spectral garment. The hood of their cloak drips with crystalline beads,
+    adding to the eerie ambiance of the room. Their presence is both commanding and
+    foreboding, making you feel both wary and intrigued.
+  actions:
+    '1_6': Step towards the crystalline hood.
+  image: Dark, spectral garment draped over figure, hood dripping with crystalline
+    beads. Tense posture, obscured face behind hood.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You come upon a clearing where a lone figure stands, their silhouette outlined
+    against the sky. The figure is a woman, dressed in a flowing, shimmering gown
+    that seems to catch the light from the distant stars. Her eyes are a deep shade
+    of blue, reflecting a mixture of curiosity and expectation. She holds a small,
+    ornate staff, and her demeanor suggests she has been expecting your arrival, though
+    her expression remains aloof.
+
+
+    You notice a woman standing at the edge of the clearing, her flowing gown catching
+    the light from the distant stars. She wears a serene expression, her deep blue
+    eyes reflecting a mix of curiosity and anticipation.'
+  title: Starlight Greeting
+  npc: You notice a woman standing at the edge of the clearing, her flowing gown catching
+    the light from the distant stars. She wears a serene expression, her deep blue
+    eyes reflecting a mix of curiosity and anticipation.
+  actions:
+    '7_1': Move towards the staff holder.
+    '7_3': Proceed toward the distant star.
+  image: Shimmering gown catches distant starlight, deep blue eyes reflect curiosity
+    and expectation. Ornate staff in hand, aloof expression on face.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'You arrive at a section of the bazaar that feels distinctly different. The
+    air is charged with an ethereal energy, and the pathways twist and turn in ways
+    that are not typical. Here, the stalls are less crowded, and the sounds are softer,
+    creating an atmosphere that is both serene and slightly unsettling. The crystals
+    embedded in the walls glow softly, casting an otherworldly light that makes everything
+    appear slightly surreal.
+
+
+    The unusual aspect of this room is the crystalline structures that line the walls,
+    each one glowing with a soft, bioluminescent light that seems to pulse with the
+    rhythm of the distant stars.'
+  title: Crystal Whispering
+  unusual: The unusual aspect of this room is the crystalline structures that line
+    the walls, each one glowing with a soft, bioluminescent light that seems to pulse
+    with the rhythm of the distant stars.
+  actions:
+    '5_3': Cross the crystalline pathway.
+    '7_3': Navigate the crystalline steps.
+  image: Ethereal energy charges the air, pathways twist and turn. Soft, otherworldly
+    light casts a surreal glow.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a figure perched on a lofty balcony, their silhouette framed
+    against the flickering lights of the distant cityscape. The air is cool and tinged
+    with the scent of ozone, and the figure watches you with a mix of anticipation
+    and caution. Their attire is a blend of sleek materials that reflect the ambient
+    light, and they carry a small device in their hand, seemingly monitoring the surroundings.
+
+
+    You see a figure standing on the balcony, their form partially obscured by the
+    shimmering curtains of the floating city. The figure wears a cloak of iridescent
+    fabric that glows subtly with the ambient light, and they hold a small, glowing
+    device in their hand.'
+  title: Balcony Watcher
+  npc: You see a figure standing on the balcony, their form partially obscured by
+    the shimmering curtains of the floating city. The figure wears a cloak of iridescent
+    fabric that glows subtly with the ambient light, and they hold a small, glowing
+    device in their hand.
+  actions:
+    '2_6': Descend the ornate balustrade.
+    '3_5': Step down the ornate balustrade.
+    '3_7': Slide along the crystalline rail.
+  image: Flickering lights of distant cityscape, cool air tinged with ozone. Sleek
+    materials reflect ambient light, device in hand.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a grand chamber adorned with ornate crystalline pillars
+    that glow softly, casting a luminescent glow across the space. The ceiling is
+    high and arched, and the walls are covered in intricate murals depicting scenes
+    of celestial phenomena and ancient rituals. In the center of the room, a figure
+    stands, their form illuminated by the ambient light. They wear a robe of shimmering
+    material that seems to shift and change color with the surrounding luminescence.
+    This figure holds a staff with a crystal embedded in the handle, and they appear
+    to be meditating or observing something intently.
+
+
+    You see a figure standing at the center of the chamber, their form partially hidden
+    behind the crystalline glow. The figure wears a robe that shifts colors with the
+    ambient light, and their skin seems to glow slightly. They hold a staff with a
+    crystal embedded in the handle, and their presence exudes a calm and ancient aura.'
+  title: Crystal Whisperer Chamber
+  npc: You see a figure standing at the center of the chamber, their form partially
+    hidden behind the crystalline glow. The figure wears a robe that shifts colors
+    with the ambient light, and their skin seems to glow slightly. They hold a staff
+    with a crystal embedded in the handle, and their presence exudes a calm and ancient
+    aura.
+  actions:
+    '6_3': Retrace steps to north balcony.
+    '7_2': Step back to south balcony.
+    '7_4': Ascend to east balcony.
+  image: Ornate crystalline pillars glow softly, luminescent glow across the space.
+    Intricate murals depict celestial phenomena, high arched ceiling, walls covered
+    in murals.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You stand at the edge of a crystalline abyss, the ground below giving way
+    to an inky void. The air around you is charged with electrical currents, and the
+    crystals on the walls pulse with a static glow. A sudden gust of wind whips through
+    the chamber, causing the delicate structures to sway gently. At the center of
+    the abyss, a challenge awaits—a complex puzzle etched into the crystalline floor,
+    requiring precise manipulation of energy fields to activate a hidden door. The
+    air is thick with the anticipation of overcoming this obstacle.
+
+
+    To progress, you must solve the puzzle etched into the crystalline floor.'
+  title: Crystalline Abyss
+  challenge: To progress, you must solve the puzzle etched into the crystalline floor.
+  actions:
+    '4_7': Step down to west balcony.
+    '3_6': Step back to north balcony.
+  image: Electrical currents charge the air, static glow pulses on crystalline walls.
+    Wind whips through the chamber, delicate structures sway gently.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You stand before a towering crystalline structure that reaches towards the
+    sky, its surface etched with arcane symbols and glowing with a soft, pulsating
+    light. Atop the structure, a figure stands, cloaked in a robe that shimmers like
+    moonlight. Their posture suggests they are meditating, yet there is a subtle tension
+    in their stance, as if they are prepared for an imminent challenge. This figure
+    appears to be a guardian, watching over the secrets of the bazaar.
+
+
+    The figure stands tall and regal, their cloak flowing like shadows in the crystalline
+    light. They have an aura of ancient wisdom and a subtle power that commands respect.
+    Their eyes, a deep shade of blue, reflect the inner workings of the bazaar.'
+  title: Crystal Guardian Lounge
+  npc: The figure stands tall and regal, their cloak flowing like shadows in the crystalline
+    light. They have an aura of ancient wisdom and a subtle power that commands respect.
+    Their eyes, a deep shade of blue, reflect the inner workings of the bazaar.
+  actions:
+    '7_3': Step back to south balcony.
+    '7_5': Step forward to north balcony.
+  image: Towering crystalline structure etched with arcane symbols, soft pulsating
+    light. Robe shimmers like moonlight, figure meditating with tension.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a crystalline chamber adorned with intricate geometric
+    patterns etched into the walls. The air is charged with a gentle hum, and the
+    ceiling is suspended by delicate filaments that flicker with bioluminescent light.
+    At the center of the chamber, a figure waits, their presence both serene and commanding.
+    They appear to be a wise elder, their robes a blend of black and silver, reflecting
+    the ever-changing light of the floating city. Their gaze is steady and focused,
+    and they seem to hold the secrets of the bazaar within their reach.
+
+
+    The elder stands with a regal presence, their robes a blend of black and silver
+    that catches the light from the bioluminescent ceiling. Their eyes, a deep shade
+    of blue, reflect the ever-changing hues of the crystal chamber. They appear both
+    wise and powerful, their aura commanding respect.'
+  title: Crystal Whispering Core
+  npc: The elder stands with a regal presence, their robes a blend of black and silver
+    that catches the light from the bioluminescent ceiling. Their eyes, a deep shade
+    of blue, reflect the ever-changing hues of the crystal chamber. They appear both
+    wise and powerful, their aura commanding respect.
+  actions:
+    '3_7': Step back to south balcony.
+    '5_7': Step forward to north balcony.
+  image: Intricate geometric patterns etched into the walls, gentle hum and flickering
+    bioluminescent ceilings. Serene figure in black and silver robes, waiting at the
+    center.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You enter a crystalline chamber that seems to defy gravity, its walls tilting
+    upwards like the branches of a twisted tree. The floor is a mosaic of shimmering
+    crystals that refract the ambient light, creating a kaleidoscopic display overhead.
+    In the center, a puzzle-like mechanism glows with a soft, ethereal light, its
+    complexity making it appear almost sentient. To your right, a hidden door conceals
+    a secret passage, while to your left, the chamber opens onto a vast, crystalline
+    expanse that appears to lead to another realm. The air is charged with an electric
+    current, and the air currents seem to challenge your very presence, testing your
+    resolve and skill.
+
+
+    The challenge here is to solve the puzzle-like mechanism at the center of the
+    chamber.'
+  title: Crystal Challenge Chamber
+  challenge: The challenge here is to solve the puzzle-like mechanism at the center
+    of the chamber.
+  actions:
+    '6_5': Step back to west balcony.
+    '7_4': Step back to east balcony.
+    '7_6': Step forward to west balcony.
+  image: Shimmering crystals create kaleidoscopic displays, ethereal light glows over
+    a puzzle-like mechanism. Electric current charges the air, challenging currents
+    test resolve.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You arrive in a chamber adorned with intricate lattice work that filters
+    the light from the floating city below, casting patterns of shadow and color across
+    the walls. The air is cool and fragrant, carrying the subtle aroma of exotic plants
+    and the distant hum of machinery. At the center of the room, a figure stands,
+    cloaked in a robe that seems to absorb and reflect the light around them. Their
+    posture is one of alertness and readiness, their features sharp and angular despite
+    the serene expression on their face. They wear a look of expectancy, their eyes
+    gleaming with a hint of curiosity.
+
+
+    The figure is tall and slender, with skin that glimmers like polished metal under
+    the floating city''s light. Their eyes are a deep, liquid black, reflecting the
+    ambient glow without seeming to gaze directly at you. They wear a robe that extends
+    gracefully from their shoulders, the fabric swirling like a second skin as they
+    move. Their posture suggests they are ever vigilant, ready for any challenge that
+    may come.'
+  title: Waiting Lounge
+  npc: The figure is tall and slender, with skin that glimmers like polished metal
+    under the floating city's light. Their eyes are a deep, liquid black, reflecting
+    the ambient glow without seeming to gaze directly at you. They wear a robe that
+    extends gracefully from their shoulders, the fabric swirling like a second skin
+    as they move. Their posture suggests they are ever vigilant, ready for any challenge
+    that may come.
+  actions:
+    '4_7': Step back to north balcony.
+    '6_7': Step forward to north balcony.
+    '5_6': Step back to south balcony.
+  image: Intricate lattice work filters light, cool fragrant air with distant hum.
+    Figure stands in a robe that absorbs and reflects light, alert and ready.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber illuminated by the soft, ethereal light of
+    the floating city above. The walls are adorned with delicate carvings that depict
+    scenes of ancient rituals and celestial bodies. A figure stands at the far end
+    of the room, their form outlined against the luminous ceiling. The figure wears
+    a cloak of mirrored materials that reflects the light in mesmerizing patterns,
+    creating a dance of reflections. Their posture is one of calm anticipation, their
+    presence commanding yet peaceful.
+
+
+    The figure is tall and graceful, with skin that glows subtly under the city''s
+    light. They wear a cloak made of mirrored fabrics that refract the light, causing
+    a shimmering effect. Their posture is one of calm authority, and they stand with
+    hands clasped behind their back, facing the entrance.'
+  title: Mirror Chamber
+  npc: The figure is tall and graceful, with skin that glows subtly under the city's
+    light. They wear a cloak made of mirrored fabrics that refract the light, causing
+    a shimmering effect. Their posture is one of calm authority, and they stand with
+    hands clasped behind their back, facing the entrance.
+  actions:
+    '5_5': Step back to west balcony.
+    '7_5': Step forward to east balcony.
+    '6_6': Step forward to east balcony.
+  image: Mirrored materials reflect mesmerizing patterns, luminous ceiling adorned
+    with carvings. Calm anticipation outlines the figure's form, commanding yet peaceful.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a room that seems to blend seamlessly with the architecture of
+    the floating city. The walls are adorned with intricate patterns that shift and
+    change as you move, reflecting the ever-changing light from above. At the center
+    of the room, a figure stands, their form partially obscured by the shifting patterns.
+    The figure is clad in a suit of reflective armor that glints with the light, and
+    their stance exudes a sense of authority and readiness. The air around them is
+    charged with an aura of anticipation, making the presence of this individual feel
+    both ominous and intriguing.
+
+
+    The figure appears imposing, with skin that seems to glow softly under the city''s
+    light. They are clad in a suit of reflective armor that glints with the ever-changing
+    luminescence of the floating city. Their posture is one of readiness, and they
+    stand with a commanding presence.'
+  title: Mirrored Convergence
+  npc: The figure appears imposing, with skin that seems to glow softly under the
+    city's light. They are clad in a suit of reflective armor that glints with the
+    ever-changing luminescence of the floating city. Their posture is one of readiness,
+    and they stand with a commanding presence.
+  actions:
+    '6_6': Step back to north balcony.
+    '7_5': Step back to south balcony.
+    '7_7': Step forward to south balcony.
+  image: Intricate patterns shift and change, reflecting shifting light. Armor glints
+    with light, figure clad in reflective suit. Authority and readiness exude, aura
+    of anticipation.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You stand at a central intersection, surrounded by three pathways that converge
+    and diverge. To your northwest, a narrow corridor winds upwards, leading to a
+    higher level of the bazaar. To your southeast, a broader pathway extends outward,
+    spreading across a wide plaza filled with vendors and stalls. To your southwest,
+    a shorter path descends, connecting to a lower level and possibly a hidden section
+    of the market. Each path is marked by shifting lights and patterns that reflect
+    the dynamic nature of the floating city. The air buzzes with activity, and the
+    sound of voices and footsteps echoes through the interconnected spaces.
+  title: Crossroad Plaza
+  actions:
+    '5_7': Step back to north path.
+    '7_7': Step forward to north path.
+    '6_6': Step back to east path.
+  image: Shifting lights and patterns mark three converging pathways, buzz of activity
+    in interconnected spaces.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a figure standing in the center of the pathway, their silhouette
+    barely visible against the shifting lights. The figure is dressed in a sleek,
+    black jumpsuit with reflective panels, indicating they are likely a trader or
+    guide. They have a stern yet attentive expression, their eyes scanning the surroundings
+    with a discerning gaze. The air around them seems to hold a hint of authority
+    and urgency, as if they are preparing to direct traffic or resolve some matter.
+
+
+    The figure stands tall, clad in a black, aerodynamic jumpsuit that reflects the
+    ambient light, emphasizing the contours of their streamlined body. Their face
+    is masked with a visor that glows softly, providing vision in varying conditions.
+    An expression of both caution and readiness is etched on their features, suggesting
+    a presence of importance or expertise.'
+  title: Crossroad Plaza Entrance
+  npc: The figure stands tall, clad in a black, aerodynamic jumpsuit that reflects
+    the ambient light, emphasizing the contours of their streamlined body. Their face
+    is masked with a visor that glows softly, providing vision in varying conditions.
+    An expression of both caution and readiness is etched on their features, suggesting
+    a presence of importance or expertise.
+  actions:
+    '6_6': Step forward to north path.
+    '5_5': Step back to west path.
+    '5_7': Step back to south path.
+  image: Sleek, black jumpsuit with reflective panels, stern yet attentive expression.
+    Shifting lights barely visible against the center figure.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a small, well-lit alcove, its walls adorned with ancient,
+    glowing crystals that emit a soothing blue light. The floor is covered with a
+    smooth, polished stone that reflects the dim radiance of the crystals. At the
+    center of the alcove stands a figure wrapped in a flowing cloak, their face hidden
+    behind a hood that glimmers with iridescent patterns. This figure appears to be
+    a merchant or guide, holding a small tablet that flickers with digital information.
+    Their posture suggests a calm demeanor, yet there is a subtle tension in their
+    stance, as if they are preparing to address or assist you.
+
+
+    The figure stands tall, cloaked in a flowing, silvery-gray robe that shifts with
+    the light. Their face is obscured by a hood that gleams with subtle patterns,
+    enhancing their mysterious aura. Standing with a confident yet aloof posture,
+    they exude a sense of authority and knowledge.'
+  title: Hologram Bazaar
+  npc: The figure stands tall, cloaked in a flowing, silvery-gray robe that shifts
+    with the light. Their face is obscured by a hood that gleams with subtle patterns,
+    enhancing their mysterious aura. Standing with a confident yet aloof posture,
+    they exude a sense of authority and knowledge.
+  actions:
+    '6_5': Step forward to north path.
+    '5_6': Step back to east path.
+  image: Ancient glowing crystals emit soothing blue light, well-lit alcove with polished
+    stone floor. Flowing cloak hidden behind a hood that glimmers.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a narrow, arched passage that descends into darkness.
+    The walls are lined with ornate metal panels that glisten under the faint ambient
+    light, casting intricate patterns across the ceiling. At the center of the passage,
+    a large, ornate door hangs slightly ajar, its surface adorned with symbols of
+    unknown origin. The air is heavy with the scent of sulfur and the distant hum
+    of mechanical activity. As you step into the passage, you notice that the floor
+    slopes downward, creating a slight incline that requires careful footing. The
+    challenge here is the presence of a complex, automated security system that responds
+    to your movements, requiring you to solve a series of puzzles or inputs to unlock
+    the door and proceed further.
+
+
+    The challenge here is to unlock the door.'
+  title: Cryptic Arches
+  challenge: The challenge here is to unlock the door.
+  actions:
+    '5_6': Step back to west path.
+    '7_6': Step forward to west path.
+    '6_5': Step back to north path.
+    '6_7': Step forward to south path.
+  image: Ornate metal panels glisten under faint ambient light, intricate patterns
+    on ceiling. Large ornate door hangs slightly ajar, symbols unknown origin.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You stand before the grand entrance to your rocket ship, a sleek, metallic
+    vessel that pulses with the power of advanced propulsion systems. The cockpit
+    glows softly, its interface displaying a map of the galaxy. Surrounding the ship
+    are cargo holds filled with supplies and equipment, while the hull itself is adorned
+    with intricate, glowing runes that seem to shift and change with the ambient light.
+    The air is filled with the faint hum of engines and the distant murmur of crew
+    members preparing for departure. This is the culmination of your journey, where
+    you will embark on your quest to return to orbit and rejoin your crew.
+  title: Aurora Bay
+  actions:
+    '6_7': Step back to north path.
+    '7_6': Step back to east path.
+  image: Metallic vessel pulses with advanced propulsion systems, cockpit glows softly
+    with map display. Cargo holds filled with supplies, intricate glowing runes shift.
+  image_filename: 7_7.png

@@ -1,0 +1,1162 @@
+world:
+  location: a dark, misty forest filled with strange creatures and ancient magic
+  goal:
+  - 7
+  - 7
+  writing_style: eerie, strange, fairy-tale-like; inspired by the works of Neil Gaiman
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: "You find yourself standing at the edge of a dark, misty forest, the boundary\
+    \ between the known world and the unknown shrouded in perpetual twilight. The\
+    \ air is thick with the scent of damp earth and the distant hum of unseen creatures.\
+    \ The ground is covered in a carpet of decaying leaves, and the sky is hidden\
+    \ behind a veil of dense foliage. \n\nFrom where you stand, two paths diverge:\
+    \ one to the north, leading deeper into the forest, and another to the east, where\
+    \ the trees seem to thin slightly. Each path is lined with gnarled, ancient trees\
+    \ whose roots seem to intertwine with the earth like living tendrils. The path\
+    \ to the north feels more inviting, though both paths are equally treacherous\
+    \ under the weight of the creeping darkness. \n\nYou feel a strange pull towards\
+    \ the north, as if something beckons you forward, but also a warning, a sense\
+    \ that the forest holds secrets best left unexplored. Your heart races, and your\
+    \ breath quickens as you prepare to venture further into this eerie, enchanted\
+    \ land."
+  title: The Whispering Grove
+  actions:
+    '2_1': Follow the path to the north.
+    '1_2': Turn east along the path.
+  image: Decaying leaves carpet the ground, distant creatures hum in the twilight.
+    Ancient trees with intertwining roots line the paths, gnarled and dark.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'You approach a peculiar clearing, unlike the dense forest around it. Here,
+    the grass is softer and greener, and the trees lean closer, as if bowing to a
+    gentle breeze that seems to come from nowhere. In the center stands an ancient,
+    twisted tree with roots that reach out like skeletal hands, casting a spell of
+    its own. The air here is heavy with an ancient magic that seems to whisper secrets
+    of the past.
+
+
+    The Whispering Tree Grove is unusual because the ancient twisted tree at its center
+    emits a soft, ethereal glow that seems to pulse with a faint, mystical light.'
+  title: The Whispering Tree Grove
+  unusual: The Whispering Tree Grove is unusual because the ancient twisted tree at
+    its center emits a soft, ethereal glow that seems to pulse with a faint, mystical
+    light.
+  actions:
+    '1_1': Retrace steps to the west.
+    '3_1': Travel south down the path.
+  image: Ancient, twisted tree with skeletal roots, gentle breeze coming from nowhere.
+    Peculiar clearing with soft, green grass, trees leaning closer.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the secluded clearing, you notice a figure standing just beyond the edge
+    of the forest. It is an old woman with hair as black as midnight and eyes that
+    glow with a mysterious light. She wears a cloak that shimmers with an otherworldly
+    color, and her skin seems almost translucent. She tilts her head, revealing a
+    knowing smile that seems to read your very thoughts.
+
+
+    The Elder Whisper appears as an old woman with hair as black as midnight and eyes
+    that glow with a mysterious light. She wears a cloak that shimmers with an otherworldly
+    color, and her skin seems almost translucent.'
+  title: The Elder Whisper
+  npc: The Elder Whisper appears as an old woman with hair as black as midnight and
+    eyes that glow with a mysterious light. She wears a cloak that shimmers with an
+    otherworldly color, and her skin seems almost translucent.
+  actions:
+    '1_1': Retreat west into the forest.
+    '1_3': Walk north through the trees.
+  image: Old woman with midnight-black hair, glowing eyes, translucent skin. Cloak
+    that shimmers with an otherworldly color, standing just beyond the edge of the
+    forest.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the edge of the forest, you encounter a clearing where a large stone altar
+    stands, bathed in an eerie glow. Before you lies a challenge that requires not
+    only strength but also a touch of ancient wisdom. The altar is surrounded by a
+    circle of stones, each engraved with symbols that seem to shift and change with
+    the light. To proceed, you must decipher the riddle inscribed on the altar''s
+    surface and perform a ritual using the stones, ensuring they align correctly for
+    the spell to take effect. Failure to complete the task will result in a harsh
+    penalty, trapping you within the forest for a long time.
+
+
+    The challenge here requires you to decipher the riddle inscribed on the altar''s
+    surface and perform a ritual using the stones, ensuring they align correctly.'
+  title: The Stone Circle
+  challenge: The challenge here requires you to decipher the riddle inscribed on the
+    altar's surface and perform a ritual using the stones, ensuring they align correctly.
+  actions:
+    '2_1': Retrace steps to the northwest.
+    '4_1': Move southeast across the clearing.
+  image: Eerie glow emanating from the large stone altar, surrounded by engraved stones
+    forming a circle. Symbols on the stones shift and change with the light, inscribed
+    riddle requiring strength and ancient wisdom.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a narrow, winding path that descends into the depths
+    of the forest. The path is lined with ancient, gnarled trees whose branches reach
+    out like skeletal fingers. As you descend, the air grows cooler, and the sounds
+    of the forest grow quieter. At the bottom of the path, you come across a small
+    clearing with a bubbling brook trickling nearby. To proceed, you must navigate
+    a series of tricky stones that lead to a hidden door, requiring careful placement
+    to open.
+
+
+    The challenge here requires you to navigate a series of tricky stones that lead
+    to a hidden door, requiring careful placement to open.'
+  title: The Hidden Gate
+  challenge: The challenge here requires you to navigate a series of tricky stones
+    that lead to a hidden door, requiring careful placement to open.
+  actions:
+    '2_3': Follow the path downhill.
+    '1_2': Step back uphill.
+    '1_4': Walk back down the path.
+  image: Ancient, gnarled trees lining the path, skeletal fingers reaching out. Small
+    clearing with a bubbling brook nearby, hidden door guarded by tricky stones.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cloaked figure stands at the edge of the clearing, their hood pulled low
+    over eyes that gleam with an otherworldly light. They are silent, but the air
+    around them seems charged with anticipation and a sense of impending change.
+
+
+    The figure is tall and slender, dressed in robes of deep, shadowy colors that
+    seem to absorb light. Their face is obscured by a hood, but the eyes peering from
+    beneath it are piercing and filled with an ancient wisdom. They stand quietly,
+    a sentinel of the forest''s secrets, ready to greet you with either warmth or
+    caution.'
+  title: The Whispering Grove
+  npc: The figure is tall and slender, dressed in robes of deep, shadowy colors that
+    seem to absorb light. Their face is obscured by a hood, but the eyes peering from
+    beneath it are piercing and filled with an ancient wisdom. They stand quietly,
+    a sentinel of the forest's secrets, ready to greet you with either warmth or caution.
+  actions:
+    '3_1': Retrace steps uphill.
+    '5_1': Descend the slope.
+  image: Hooded figure with eyes gleaming, otherworldly light. Anticipation and impending
+    change in the charged air around them.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a small clearing, where a twisted tree casts its gnarled shadow.
+    At the center of the clearing, a hunched figure waits, surrounded by an aura of
+    arcane power. The figure wears a cloak of shadows, and their presence is both
+    ominous and ancient, hinting at knowledge long forgotten.
+
+
+    The figure stands in the center of the clearing, their robes a swirling mass of
+    darkness and light. Their skin is pale, almost translucent, and they emit a faint,
+    ethereal glow. They have long, gnarled fingers and a mouth that seems permanently
+    fixed in a knowing smile.'
+  title: The Ancient Grove
+  npc: The figure stands in the center of the clearing, their robes a swirling mass
+    of darkness and light. Their skin is pale, almost translucent, and they emit a
+    faint, ethereal glow. They have long, gnarled fingers and a mouth that seems permanently
+    fixed in a knowing smile.
+  actions:
+    '1_3': Follow the path to the left.
+    '3_3': Walk straight ahead.
+  image: Twisted tree casts gnarled shadow, hunched figure surrounded by arcane power.
+    Ominous and ancient aura, cloak of shadows hints at forgotten knowledge.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a narrow, winding passageway that narrows as you proceed.
+    The walls seem to close in around you, and the darkness seems thicker, almost
+    tangible. Ahead, a small stone slab blocks the way, adorned with symbols that
+    shimmer with an otherworldly light. To pass, you must solve a riddle or perform
+    a ritual that challenges your wit and magic.
+
+
+    To progress, you must decipher the ancient symbols on the stone slab. The symbols
+    flicker with a spectral glow, changing with each attempt you make. Each incorrect
+    guess draws a faint, ghostly line across the stone, while correct answers illuminate
+    the symbols more fully.'
+  title: The Shifting Path
+  challenge: To progress, you must decipher the ancient symbols on the stone slab.
+    The symbols flicker with a spectral glow, changing with each attempt you make.
+    Each incorrect guess draws a faint, ghostly line across the stone, while correct
+    answers illuminate the symbols more fully.
+  actions:
+    '1_3': Move right and down.
+    '1_5': Move left and down.
+  image: Walls closing in, darkness thicker and tangible. Stone slab adorned with
+    shimmering symbols, blocking the way.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You come upon a secluded clearing, where a tall figure stands guard against
+    the night. The figure is cloaked in shadows, their face obscured by a hood that
+    seems to shift with every movement. They hold a staff made of what looks like
+    moonlight, and their eyes glint with an inner fire.
+
+
+    The figure stands before you, draped in a cloak that dances with the faintest
+    breeze. Their face is hidden beneath a hood, but you can see the faint outline
+    of a stern and ancient countenance. They hold a staff that seems to pulse with
+    an inner light, and their stance is one of readiness and caution.'
+  title: The Moonlit Sentinel
+  npc: The figure stands before you, draped in a cloak that dances with the faintest
+    breeze. Their face is hidden beneath a hood, but you can see the faint outline
+    of a stern and ancient countenance. They hold a staff that seems to pulse with
+    an inner light, and their stance is one of readiness and caution.
+  actions:
+    '4_1': Move left and down.
+    '6_1': Move right and down.
+    '5_2': Move down and right.
+  image: Tall figure cloaked in shadows, obscured face, moonlight staff. Eyes glint
+    with inner fire, inner fire inner fire.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a narrow, shadowed corridor, the walls lined with ancient
+    stone carvings that seem to whisper secrets in the darkness. At the end of the
+    corridor, a figure waits, their back to you. The silhouette moves, and a soft,
+    ancient voice murmurs from the shadows.
+
+
+    The figure stands in the dim light, their form barely visible against the backdrop
+    of the ancient stone walls. They have an aura of age and wisdom, their skin etched
+    with lines that tell stories of countless years. Their eyes, a deep, knowing brown,
+    reflect the flickering light of the torches on the walls.'
+  title: The Whispering Corridor
+  npc: The figure stands in the dim light, their form barely visible against the backdrop
+    of the ancient stone walls. They have an aura of age and wisdom, their skin etched
+    with lines that tell stories of countless years. Their eyes, a deep, knowing brown,
+    reflect the flickering light of the torches on the walls.
+  actions:
+    '2_3': Move left and up.
+    '3_4': Move right and up.
+  image: Shadowed corridor lined with ancient stone carvings, whispers secrets in
+    darkness. Figure waits at end, silhouette moves, murmuring voice from shadows.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a small clearing, the sky a tapestry of shifting clouds.
+    In the center, a strange puzzle lies before you—a riddle woven into the stones
+    of the ground, challenging you to solve its enigma to proceed further. The air
+    around you grows colder, and a sense of anticipation and danger fills the air.
+
+
+    The challenge requires you to decipher a cryptic message etched into the stones
+    of the clearing. You must rearrange the symbols and words to uncover a secret
+    passage or clue that will lead you onward.'
+  title: The Puzzle Clearing
+  challenge: The challenge requires you to decipher a cryptic message etched into
+    the stones of the clearing. You must rearrange the symbols and words to uncover
+    a secret passage or clue that will lead you onward.
+  actions:
+    '1_4': Move left and up.
+    '1_6': Move right and up.
+  image: Shifting clouds above, stones of the ground woven with a riddle, air colder,
+    anticipation and danger fill the air.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a cloaked figure standing by the edge of the forest. Their
+    hood obscures much of their face, but you can see a glint of ancient magic in
+    their eyes. The figure seems to watch you with a mixture of curiosity and foreboding,
+    their presence palpable and unsettling.
+
+
+    The figure stands tall, dressed in dark robes that seem to absorb the light around
+    them. Their hood is drawn tightly, concealing most of their face, but their eyes
+    gleam with an otherworldly intensity. They wear a cloak that billows softly in
+    the breeze, casting long shadows on the ground.'
+  title: The Hooded Watcher
+  npc: The figure stands tall, dressed in dark robes that seem to absorb the light
+    around them. Their hood is drawn tightly, concealing most of their face, but their
+    eyes gleam with an otherworldly intensity. They wear a cloak that billows softly
+    in the breeze, casting long shadows on the ground.
+  actions:
+    '5_1': Move left and down.
+    '7_1': Move right and down.
+  image: Cloaked figure with obscured face, glint of ancient magic in eyes. Presence
+    palpable, unsettling mix of curiosity and foreboding.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a flicker of movement out of the corner of your eye. Turning,
+    you see a shadowy figure standing at the edge of the path, its form partially
+    obscured by the trees. The figure seems to be watching, a mixture of anticipation
+    and unease in its demeanor.
+
+
+    The figure appears to be made entirely of shadows, with a faint outline of a woman''s
+    form. Their skin is a blend of darkness and light, and they glow with an ethereal
+    radiance. They stand quietly, their gaze piercing and almost hypnotic.'
+  title: The Shadow Weaver
+  npc: The figure appears to be made entirely of shadows, with a faint outline of
+    a woman's form. Their skin is a blend of darkness and light, and they glow with
+    an ethereal radiance. They stand quietly, their gaze piercing and almost hypnotic.
+  actions:
+    '5_1': Step back and move left.
+    '5_3': Step back and move right.
+  image: Shadowy figure standing at the edge of the path, partially obscured by trees.
+    Mixture of anticipation and unease in its demeanor.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You spot a gnarled tree stump at the edge of the forest, its branches reaching
+    out like skeletal fingers. At the base of the stump, a figure emerges from the
+    shadows—a twisted old man with eyes that seem to hold centuries of wisdom and
+    sorrow. He watches you with a mix of curiosity and a hint of malevolence, his
+    presence both alluring and ominous.
+
+
+    The figure appears as a hunched old man, wrapped in a tattered cloak that matches
+    the darkening forest. His skin is rough and weathered, with a beard that extends
+    past his knees. His eyes are deep and hollow, filled with a mix of wisdom and
+    age-old secrets.'
+  title: The Wise Old Man
+  npc: The figure appears as a hunched old man, wrapped in a tattered cloak that matches
+    the darkening forest. His skin is rough and weathered, with a beard that extends
+    past his knees. His eyes are deep and hollow, filled with a mix of wisdom and
+    age-old secrets.
+  actions:
+    '3_3': Move forward and to the left.
+    '3_5': Step forward and to the right.
+  image: Gnarled tree stump with skeletal branches, twisted old man emerges from shadows.
+    Eyes hold centuries of wisdom and sorrow, curious and ominous presence.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a small clearing ahead, where a lone figure stands before a glowing
+    stone altar. The figure wears a cloak woven with threads of moonlight and stars,
+    and their face is obscured by a hood that drips with dew. They seem to be guarding
+    the path, their presence both commanding and foreboding.
+
+
+    The figure appears as a cloaked elder, their skin aged and weathered by the elements.
+    They have a long, bony nose and eyes that gleam with a cold, calculating light.
+    The cloak they wear is adorned with silver threads that shimmer in the dim light,
+    casting intricate patterns on their skin.'
+  title: The Moonlit Guardian
+  npc: The figure appears as a cloaked elder, their skin aged and weathered by the
+    elements. They have a long, bony nose and eyes that gleam with a cold, calculating
+    light. The cloak they wear is adorned with silver threads that shimmer in the
+    dim light, casting intricate patterns on their skin.
+  actions:
+    '2_6': Move forward and to the right.
+    '1_5': Step back and to the left.
+    '1_7': Move backward and to the right.
+  image: Lone figure stands before a glowing stone altar, hooded and cloaked in moonlight
+    and stars. Foreboding presence commands the path, dew-drenched hood dripping.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a flicker of movement ahead as a figure steps into the clearing.
+    The figure is tall and slender, dressed in a robe of midnight blue that seems
+    to absorb the light around them. Their face is obscured by a hood, but their eyes
+    are sharp and watchful, darting across the forest with an otherworldly intensity.
+
+
+    The figure appears as a tall, shadowy figure wrapped in a dark cloak. Their face
+    is concealed by a hood that obscures their features, but their posture is regal
+    and commanding. The air around them seems to ripple with an aura of ancient power.'
+  title: The Hooded Watcher
+  npc: The figure appears as a tall, shadowy figure wrapped in a dark cloak. Their
+    face is concealed by a hood that obscures their features, but their posture is
+    regal and commanding. The air around them seems to ripple with an aura of ancient
+    power.
+  actions:
+    '6_1': Step back and to the left.
+    '7_2': Move backward and to the right.
+  image: Flicker of movement, tall and slender figure in midnight blue robe, obscured
+    face, sharp and watchful eyes darting across the forest.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This clearing is unlike the others, surrounded by towering, ancient trees
+    that seem to whisper secrets in the night wind. The ground is covered in a layer
+    of dew-kissed leaves, and the air is filled with the scent of wildflowers that
+    bloom unnoticed by most. Here, the forest feels both intimate and foreboding,
+    as if it holds stories yet untold.
+
+
+    The unusual aspect of this room is the presence of a small, ancient well surrounded
+    by a circle of glowing stones. The well is filled with water that sparkles under
+    the moonlight, and the stones emit a soft, ethereal light. This spot feels different
+    because it is the only place where nature and magic seem to coexist harmoniously.'
+  title: The Whispering Grove
+  unusual: The unusual aspect of this room is the presence of a small, ancient well
+    surrounded by a circle of glowing stones. The well is filled with water that sparkles
+    under the moonlight, and the stones emit a soft, ethereal light. This spot feels
+    different because it is the only place where nature and magic seem to coexist
+    harmoniously.
+  actions:
+    '6_3': Step forward and to the right.
+    '5_2': Step back and to the left.
+  image: Ancient trees whisper secrets, ground covered in dew-kissed leaves. Intimate
+    and foreboding forest, scent of wildflowers untold stories.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, you encounter a narrow, treacherous bridge spanning a deep chasm. The
+    bridge is made of shifting sand that threatens to collapse beneath your feet.
+    To proceed, you must gather enough courage to step onto the unstable surface and
+    maintain balance, for failure means falling to your doom below.
+
+
+    The challenge here is the unstable bridge spanning the deep chasm.'
+  title: The Sandswept Bridge
+  challenge: The challenge here is the unstable bridge spanning the deep chasm.
+  actions:
+    '3_4': Step back and move forward.
+    '3_6': Step forward and to the right.
+  image: Narrow, treacherous bridge spanning a deep chasm, made of shifting sand.
+    Step onto unstable surface, balance required for survival.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'The clearing here is marked by an ancient stone altar bathed in a warm, otherworldly
+    glow. The air around the altar is charged with an ethereal energy, and the stones
+    seem to whisper ancient secrets in the silent forest.
+
+
+    The unusual aspect of this room is the ancient stone altar, which emits a gentle,
+    luminescent glow that seems to pulse with ancient power.'
+  title: The Radiant Altar
+  unusual: The unusual aspect of this room is the ancient stone altar, which emits
+    a gentle, luminescent glow that seems to pulse with ancient power.
+  actions:
+    '1_6': Move left and down.
+    '3_6': Step right and down.
+  image: Ancient stone altar bathed in warm, otherworldly glow, charged with ethereal
+    energy. Whispering ancient secrets in the silent forest.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A cloaked figure stands at the edge of the clearing, their silhouette illuminated
+    by the faint light of the distant forest. They seem both watchful and foreboding,
+    their presence a mixture of ancient magic and ominous silence.
+
+
+    The figure is tall and slender, dressed in robes that shimmer with an arcane glow.
+    Their face is obscured by a hood, but their eyes are sharp and piercing, reflecting
+    an ancient wisdom and a hint of mischief.'
+  title: The Whispering Cloak
+  npc: The figure is tall and slender, dressed in robes that shimmer with an arcane
+    glow. Their face is obscured by a hood, but their eyes are sharp and piercing,
+    reflecting an ancient wisdom and a hint of mischief.
+  actions:
+    '1_6': Move past the cloak and enter.
+  image: Silhouette illuminated by distant forest light, watchful and foreboding figure.
+    Ancient magic and ominous silence surround them.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A spectral figure looms at the edge of the clearing, its form shifting between
+    that of a human and that of a shadowy creature. Its eyes glint with a malevolent
+    light, and it stands guard, ready to welcome or repel intruders.
+
+
+    The figure is tall and ghostly, draped in a robe of swirling black and white.
+    Their eyes, hollow and glowing, seem to pierce through the darkness, and their
+    lips curl into a cruel smile.'
+  title: The Spectral Watcher
+  npc: The figure is tall and ghostly, draped in a robe of swirling black and white.
+    Their eyes, hollow and glowing, seem to pierce through the darkness, and their
+    lips curl into a cruel smile.
+  actions:
+    '7_1': Step back and move left.
+    '7_3': Move right and step forward.
+  image: Spectral figure looms at the edge of the clearing, form shifting between
+    human and shadowy creature. Eyes glint with malevolent light, ready to welcome
+    or repel.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This clearing is marked by an unnatural stillness, the air heavy with an
+    ancient magic that seems to pulse with a life of its own. The ground beneath your
+    feet is unusually smooth and reflective, casting an eerie mirror of the surrounding
+    forest.
+
+
+    The unusual aspect is the reflective pool that stretches across the clearing,
+    mirroring the twisted trees and the faint outline of the distant forest. As you
+    approach, the reflection becomes more vivid, revealing a scene that seems to shift
+    and change, as if the pool itself is alive with ancient magic.'
+  title: The Reflecting Pool
+  unusual: The unusual aspect is the reflective pool that stretches across the clearing,
+    mirroring the twisted trees and the faint outline of the distant forest. As you
+    approach, the reflection becomes more vivid, revealing a scene that seems to shift
+    and change, as if the pool itself is alive with ancient magic.
+  actions:
+    '5_3': Step towards the center of the pool.
+    '7_3': Walk towards the edge of the pool.
+  image: Unusually smooth, reflective ground beneath feet, heavy with ancient magic
+    pulsing with life. Eerie mirror of the surrounding forest.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure cloaked in shadows stands guard at the edge of the clearing, its
+    presence both comforting and foreboding. The figure seems to watch you with a
+    knowing gaze, its form shifting subtly between human and spectral.
+
+
+    The figure is tall and ethereal, dressed in robes that glow with a faint, mysterious
+    light. Their face is obscured by a hood, but their eyes, sharp and knowing, peer
+    out from beneath it. They stand quietly, watching, their posture tense yet poised.'
+  title: The Sentinel Whisperer
+  npc: The figure is tall and ethereal, dressed in robes that glow with a faint, mysterious
+    light. Their face is obscured by a hood, but their eyes, sharp and knowing, peer
+    out from beneath it. They stand quietly, watching, their posture tense yet poised.
+  actions:
+    '2_6': Step towards the figure and speak.
+    '3_5': Move closer to the figure.
+    '3_7': Approach the figure directly.
+  image: Figure cloaked in shadows stands guard at the edge, watching with a knowing
+    gaze. Presence comforting and foreboding, form shifts subtly.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a twisted old manor house, its walls crumbling and its windows
+    broken, yet still standing sentinel over the forest. The air around the house
+    is thick with an unsettling aura, and you sense that there is someone inside,
+    watching you with hollow eyes.
+
+
+    The twisted old manor houses a gaunt figure, wrapped in a tattered cloak. Its
+    eyes, sunken and dark, gleam with an unholy light as it watches you from within
+    the crumbled walls.'
+  title: The Crumbling Manor
+  npc: The twisted old manor houses a gaunt figure, wrapped in a tattered cloak. Its
+    eyes, sunken and dark, gleam with an unholy light as it watches you from within
+    the crumbled walls.
+  actions:
+    '6_3': Cross the cracked yard.
+    '7_2': Enter the crumbling wall.
+    '7_4': Step into the shadowed yard.
+  image: Twisted old manor house, walls crumbling, windows broken, still standing
+    sentinel over the forest. Unsettling aura thick around the house, hollow eyes
+    inside.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You encounter a riddle inscribed on the ancient stone, challenging you to
+    guess the secret of the forest. The words seem to shift and change with the passage
+    of time, making the correct answer elusive.
+
+
+    To progress, you must decipher the ancient riddle carved on the stone. Its words
+    shift and change, making it difficult to understand.'
+  title: The Riddling Stone
+  challenge: To progress, you must decipher the ancient riddle carved on the stone.
+    Its words shift and change, making it difficult to understand.
+  actions:
+    '4_7': Cross the stone bridge.
+    '3_6': Step aside the shifting words.
+  image: Riddle inscribed on ancient stone, words shifting and changing with time.
+    Secret of the forest, elusive answer sought.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You see a figure hunched over a small campfire, casting long, eerie shadows.
+    It wears a hooded cloak that hides most of its face, and you can sense an unsettling
+    presence emanating from the figure.
+
+
+    You see a figure draped in a dark cloak, the hood pulled low over its face. Its
+    eyes glow faintly with an otherworldly light, casting an eerie glow over the area.'
+  title: The Whispering Figure
+  npc: You see a figure draped in a dark cloak, the hood pulled low over its face.
+    Its eyes glow faintly with an otherworldly light, casting an eerie glow over the
+    area.
+  actions:
+    '7_3': Step back from the firelight.
+    '7_5': Follow the path to the right.
+  image: Figure hunched over small campfire, casting long eerie shadows. Hooded cloak
+    hiding most of face, unsettling presence.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a cloaked figure standing amidst the shadows, its form partially
+    obscured by the flickering light of an ancient lantern. The figure seems to watch
+    you with a knowing, yet unsettling gaze.
+
+
+    The cloaked figure appears to be a woman, with skin as pale as moonlight and eyes
+    that glow like embers in the dim light. Her attire is tattered and worn, but her
+    presence exudes an aura of ancient wisdom and power.'
+  title: The Shadow Weaver
+  npc: The cloaked figure appears to be a woman, with skin as pale as moonlight and
+    eyes that glow like embers in the dim light. Her attire is tattered and worn,
+    but her presence exudes an aura of ancient wisdom and power.
+  actions:
+    '3_7': Move to the left.
+    '5_7': Step to the right.
+  image: Cloaked figure standing amidst shadows, partially obscured by flickering
+    lantern light. Knowing gaze, unsettling presence.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You encounter a narrow bridge spanning a chasm of darkness, guarded by a
+    spectral watchdog that growls and snaps its fangs. Crossing this bridge requires
+    courage and a touch of bravery, for failure means a fall into the abyss below.
+
+
+    Cross the bridge with care.'
+  title: The Spectral Watch
+  challenge: Cross the bridge with care.
+  actions:
+    '6_5': Take the steps to the left.
+    '7_4': Take the steps to the right.
+    '7_6': Descend the steps.
+  image: Spectral watchdog guarding narrow bridge spanning chasm of darkness. Bridge
+    guarded, crossing requires courage and bravery.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure looms at the edge of the clearing, cloaked in shadow and draped
+    in ancient robes. Its eyes gleam with an otherworldly light, and its presence
+    is both welcoming and foreboding.
+
+
+    The figure stands tall, with an ancient aura that seems to emanate from within
+    its robes. Its skin is pale and almost ghostly, contrasting sharply with the vibrant
+    hues of its cloak. Eyes that seem to hold centuries of wisdom are fixed on you,
+    watching with an enigmatic gaze.'
+  title: The Whispering Cloak
+  npc: The figure stands tall, with an ancient aura that seems to emanate from within
+    its robes. Its skin is pale and almost ghostly, contrasting sharply with the vibrant
+    hues of its cloak. Eyes that seem to hold centuries of wisdom are fixed on you,
+    watching with an enigmatic gaze.
+  actions:
+    '4_7': Step back to the west.
+    '6_7': Step forward to the east.
+    '5_6': Step back to the north.
+  image: Figure looms at edge of clearing, cloaked in shadow, draped in ancient robes.
+    Eyes gleam with otherworldly light, welcoming and foreboding presence.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A hunched old man stands before you, his back to the light filtering through
+    the canopy above. He wears tattered robes that seem to shift with the shadows,
+    and his gnarled hands clasp a gnarled staff that emits a faint, eerie glow.
+
+
+    The old man appears frail and weathered, his skin etched with years of hardship.
+    His hair is sparse and white, framing a face etched with lines that tell stories
+    of countless battles and trials. He wears the remnants of what once were fine
+    robes, now patched and worn, clinging to his body like a familiar second skin.'
+  title: The Old Man
+  npc: The old man appears frail and weathered, his skin etched with years of hardship.
+    His hair is sparse and white, framing a face etched with lines that tell stories
+    of countless battles and trials. He wears the remnants of what once were fine
+    robes, now patched and worn, clinging to his body like a familiar second skin.
+  actions:
+    '5_5': Step back to the south.
+    '7_5': Step forward to the west.
+    '6_6': Step forward to the west.
+  image: Old man stands hunched before you, robes shifting with shadows. Staff emits
+    faint, eerie glow, gnarled hands clasped.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A spectral figure stands before you, its form barely visible in the dim light.
+    Its eyes glow with an otherworldly luminescence, and its presence is both welcoming
+    and foreboding. The figure is cloaked in an ethereal mist, making it hard to discern
+    its exact shape or features.
+
+
+    The spectral figure appears as a wispy mist cloaked in an ethereal glow, its form
+    shifting slightly as if composed of shifting mist. Its eyes shine with an otherworldly
+    light, casting a faint, eerie glow around it.'
+  title: The Mist Cloak
+  npc: The spectral figure appears as a wispy mist cloaked in an ethereal glow, its
+    form shifting slightly as if composed of shifting mist. Its eyes shine with an
+    otherworldly light, casting a faint, eerie glow around it.
+  actions:
+    '6_6': Step back to the east.
+    '7_5': Step forward to the west.
+    '7_7': Step forward to the east.
+  image: Spectral figure stands before you, eyes glowing with luminescence. Ethereal
+    mist cloaks form, making features hard to discern.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Multiple paths converge here, each leading in different directions. To your
+    north lies a winding path through dense foliage, while to your east, a faint glimmer
+    suggests a hidden clearing. To your south, a path seems to lead deeper into the
+    forest, and to your west, the ground tilts slightly, suggesting a bridge or a
+    secret entrance.
+  title: Crossroads Grove
+  actions:
+    '5_7': Step back to the north.
+    '7_7': Step forward to the north.
+    '6_6': Step back to the south.
+  image: Multiple paths converge here, winding through dense foliage northward. Faint
+    glimmer suggests hidden clearing eastward, slight tilt southwest hints at entrance
+    or bridge.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A hunched figure stands at the edge, cloaked in shadows and whispering incantations
+    in a language you cannot understand. Its eyes gleam with an otherworldly light,
+    casting an eerie glow around it.
+
+
+    The figure stands before you, its cloak billowing in the faint breeze. Cloaked
+    from head to toe, only the tip of its nose peeks out from beneath the hood. Its
+    eyes are sunken and hollow, reflecting the flickering light of the incantations
+    it murmurs. The air around it is charged with an ancient magic, making your skin
+    prickle with unease.'
+  title: Mistcaller Hideout
+  npc: The figure stands before you, its cloak billowing in the faint breeze. Cloaked
+    from head to toe, only the tip of its nose peeks out from beneath the hood. Its
+    eyes are sunken and hollow, reflecting the flickering light of the incantations
+    it murmurs. The air around it is charged with an ancient magic, making your skin
+    prickle with unease.
+  actions:
+    '6_6': Step forward to the north.
+    '5_5': Step back to the south.
+    '5_7': Step back to the east.
+  image: Hunched figure stands at edge, cloaked in shadows, whispers incantations
+    in an unknown language. Eyes gleam with otherworldly light, eerie glow casts around.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You notice a gnarled oak tree with roots that seem to reach out and grasp
+    the earth. At the base, a figure hovers, partially obscured by the dense foliage.
+    Its face is hidden, only the glint of its eyes piercing the shadows. The air around
+    it is charged with an ancient, arcane energy.
+
+
+    The figure stands at the foot of the gnarled oak, its eyes hidden by a cloak that
+    seems to be alive with the essence of the forest. Its skin is pale and its features
+    are angular, but there is a certain kind of ethereal beauty about it. The air
+    around it is thick with an ancient power, making you feel both intrigued and wary.'
+  title: Root Weaver
+  npc: The figure stands at the foot of the gnarled oak, its eyes hidden by a cloak
+    that seems to be alive with the essence of the forest. Its skin is pale and its
+    features are angular, but there is a certain kind of ethereal beauty about it.
+    The air around it is thick with an ancient power, making you feel both intrigued
+    and wary.
+  actions:
+    '6_5': Step forward to the north.
+    '5_6': Step back to the north.
+  image: Gnarled oak tree with roots reaching out, figure hovers at base, obscured
+    by foliage. Eyes glint, arcane energy charged around.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You come to a clearing, the sky above obscured by a canopy of twisted branches.
+    In the center, a stone altar is raised high, its surface covered in runes that
+    glow faintly. A dark, swirling mist rises from the ground, emanating a potent
+    magic that fills the air with a sense of both danger and foreboding.
+
+
+    The fog begins to close in around you, enveloping the clearing and making it difficult
+    to see. As you struggle to navigate through the mist, you realize the ground beneath
+    your feet is shifting, creating obstacles that become harder to step over or through.'
+  title: Clearing of Shadows
+  challenge: The fog begins to close in around you, enveloping the clearing and making
+    it difficult to see. As you struggle to navigate through the mist, you realize
+    the ground beneath your feet is shifting, creating obstacles that become harder
+    to step over or through.
+  actions:
+    '5_6': Move backward to the west.
+    '7_6': Step forward to the south.
+    '6_5': Step backward to the south.
+    '6_7': Step forward to the north.
+  image: Clearing, twisted branches above, stone altar raised high. Runes glow faintly,
+    dark mist rises, potent magic fills air.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: You approach a secluded clearing, where an ancient stone cabin emerges from
+    the mist. The cabin is surrounded by a thorny hedge, its entrance guarded by a
+    flickering, ancient lantern that casts an eerie glow within. Inside, the walls
+    are adorned with arcane symbols and the air is thick with the scent of incense
+    and forgotten magic.
+  title: Ancient Cabin
+  actions:
+    '6_7': Step backward to the north.
+    '7_6': Step backward to the west.
+  image: Ancient stone cabin emerges from mist, surrounded by thorny hedge. Flickering
+    lantern casts eerie glow inside, walls adorned with arcane symbols.
+  image_filename: 7_7.png

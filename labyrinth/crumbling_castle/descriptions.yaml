@@ -1,0 +1,1169 @@
+world:
+  location: a crumbling, ruined castle filled with traps and monsters
+  goal:
+  - 7
+  - 7
+  writing_style: poetic, evocative, and mysterious; inspired by Edgar Allan Poe.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: "You stand at the threshold of the forgotten past, where the remnants of time\
+    \ whisper secrets of ages gone by. The ground beneath your feet crumbles softly,\
+    \ revealing layers of dust and debris that once hid tales of glory and decay.\
+    \ Shadows stretch out from the walls, drawn by the ethereal light filtering through\
+    \ the broken windows above. Here, the air is heavy with the scent of sulfur and\
+    \ old parchment, mingling with the faint aroma of something slightly sweet and\
+    \ strange. \n\nAround you, the castle looms ominously, its structures leaning\
+    \ precariously, as though they too are on the verge of collapse. The air is thick\
+    \ with the lingering echoes of laughter, sorrow, and perhaps, the whispers of\
+    \ those who have come before. The silence is both comforting and foreboding, inviting\
+    \ you to explore the depths of this forgotten place."
+  title: Entrance Antechamber
+  actions:
+    '2_1': Follow the crumbling steps.
+    '1_2': Ascend the shattered stone stairs.
+  image: Shadows stretch from broken windows, heavy air with sulfur and old parchment.
+    Castle leans precariously, whispers of past linger.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'You find yourself in a chamber hallowed by time, where the usual symphony
+    of the castle fades away. This place is unusual, marked by an ancient tapestry
+    woven with threads of forgotten lore, and adorned with arcane symbols that seem
+    to pulse with unseen energies. The air here is charged with an otherworldly presence,
+    and the very stones vibrate with an ancient power.
+
+
+    The unusual aspect of this room is the ancient tapestry that hangs from the ceiling,
+    its colors fading and its weave frayed, yet it radiates a subtle, otherworldly
+    glow that seems to pulse with a hidden life force. Unlike the others, this chamber
+    is imbued with a strange, ethereal aura that shifts and alters according to the
+    passage of time, making it a place where shadows seem to take on lives of their
+    own.'
+  title: Ancient Lore Chamber
+  unusual: The unusual aspect of this room is the ancient tapestry that hangs from
+    the ceiling, its colors fading and its weave frayed, yet it radiates a subtle,
+    otherworldly glow that seems to pulse with a hidden life force. Unlike the others,
+    this chamber is imbued with a strange, ethereal aura that shifts and alters according
+    to the passage of time, making it a place where shadows seem to take on lives
+    of their own.
+  actions:
+    '1_1': Retrace your steps and descend.
+    '3_1': Descend the twisted stone stairs.
+  image: Ancient tapestry and arcane symbols pulsate with unseen energies. Chamber
+    vibrates with an ancient, otherworldly presence.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You sense the approach of someone lurking in the shadows, their presence
+    cloaked in mystery and darkness. Their silhouette is vague, but the atmosphere
+    is thick with anticipation and danger. The figure seems to watch you with a knowing
+    gaze, a silent sentinel guarding the secret pathways of the castle.
+
+
+    Your eyes meet those of a figure standing in the gloom, cloaked from head to toe
+    in shadows. Their silhouette is sharp against the dim light, and their features
+    are obscured by a hood that falls over their face. Despite the darkness, there
+    is a glint in their eyes that hints at a hint of malice or cunning.'
+  title: Shadowed Waiting Room
+  npc: Your eyes meet those of a figure standing in the gloom, cloaked from head to
+    toe in shadows. Their silhouette is sharp against the dim light, and their features
+    are obscured by a hood that falls over their face. Despite the darkness, there
+    is a glint in their eyes that hints at a hint of malice or cunning.
+  actions:
+    '1_1': Step back into the previous chamber.
+    '1_3': Proceed along the darkened corridor.
+  image: Silhouette vague in the shadows, atmosphere thick with anticipation and danger.
+    Knowing gaze from a silent sentinel.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You enter a chamber where the walls converge towards a central point, creating
+    a dense, labyrinthine space. The floor is a web of ancient runes that seem to
+    shift underfoot, casting flickering shadows that dance with a malevolent grace.
+    As you step within, the air grows colder, and the oppressive silence amplifies,
+    challenging your very resolve.
+
+
+    The challenge here requires you to decipher the ancient runes that weave across
+    the floor. Each step you take causes the runes to shift, making the correct path
+    increasingly difficult to discern. Failure to navigate correctly will likely lead
+    to a trap, requiring you to find an alternative exit.'
+  title: Converging Runes Chamber
+  challenge: The challenge here requires you to decipher the ancient runes that weave
+    across the floor. Each step you take causes the runes to shift, making the correct
+    path increasingly difficult to discern. Failure to navigate correctly will likely
+    lead to a trap, requiring you to find an alternative exit.
+  actions:
+    '2_1': Navigate the shifting floor runes.
+    '4_1': Cross the unstable floor stones.
+  image: Walls converge towards a central point, creating a labyrinthine space. Floor
+    web of ancient runes, shifting and casting flickering shadows.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a room bathed in a pale, ethereal light that seems to
+    emanate from the ceiling, casting intricate patterns on the walls. The air is
+    thick with an ancient aura, and the walls are adorned with faded murals that tell
+    stories long forgotten. The floor is covered in a mosaic of shattered glass, each
+    piece reflecting the same haunting, unchanging image.
+
+
+    The challenge in this room requires you to align the shattered glass pieces on
+    the floor to reveal a hidden passage. Moving the glass incorrectly triggers a
+    mechanism that seals the entrance, forcing you to seek another way forward.'
+  title: Shattered Glass Chamber
+  challenge: The challenge in this room requires you to align the shattered glass
+    pieces on the floor to reveal a hidden passage. Moving the glass incorrectly triggers
+    a mechanism that seals the entrance, forcing you to seek another way forward.
+  actions:
+    '2_3': Align the glass pieces carefully.
+    '1_2': Move the glass pieces aside.
+    '1_4': Shift the glass mosaic.
+  image: Ceiling emits pale, ethereal light, casting intricate patterns. Walls adorned
+    with faded, forgotten murals.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the castle, you encounter a figure cloaked in shadow, their
+    form barely discernible against the flickering torchlight. The figure stands silently,
+    their presence a blend of anticipation and malevolence, poised to reveal the fate
+    awaiting those who dare enter this forbidden place.
+
+
+    The figure appears as a spectral guardian, draped in ancient robes that seem to
+    glow with a faint, ethereal light. Their features are indistinct, but there is
+    a hint of malevolent intelligence in their gaze, a silent sentinel guarding the
+    passage.'
+  title: Vaulted Shadow Chamber
+  npc: The figure appears as a spectral guardian, draped in ancient robes that seem
+    to glow with a faint, ethereal light. Their features are indistinct, but there
+    is a hint of malevolent intelligence in their gaze, a silent sentinel guarding
+    the passage.
+  actions:
+    '3_1': Retrace steps to the previous room.
+    '5_1': Navigate the shadowy corridors.
+  image: Flickering torchlight reveals a shadowy figure, anticipation and malevolence
+    intertwined.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber where the air grows colder, and the whispers
+    grow louder. A figure stands at the edge of the room, their form barely visible
+    in the dim light. They appear almost ethereal, a sentinel guarding the secrets
+    of this ancient place, their presence both welcoming and foreboding.
+
+
+    The figure appears as a spectral guardian, draped in ancient robes that seem to
+    glow with a faint, ethereal light. Their features are indistinct, but there is
+    a hint of malevolent intelligence in their gaze, a silent sentinel guarding the
+    secrets of this ancient place.'
+  title: Whispering Stone Cell
+  npc: The figure appears as a spectral guardian, draped in ancient robes that seem
+    to glow with a faint, ethereal light. Their features are indistinct, but there
+    is a hint of malevolent intelligence in their gaze, a silent sentinel guarding
+    the secrets of this ancient place.
+  actions:
+    '1_3': Navigate the stone pathways.
+    '3_3': Cross the threshold.
+  image: Dim light reveals an ethereal figure at the edge, whispers grow louder, air
+    grows colder.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the end of the corridor, a challenge awaits you, a riddle woven into the
+    very stones of the castle. The air grows thick with the weight of centuries, and
+    you feel the echo of ancient wisdom. To proceed, you must solve the enigma before
+    you, or face the consequences of your ignorance.
+
+
+    The challenge here is a riddle etched into the stone walls, a puzzle that demands
+    your intellect and wit to decipher the path forward.'
+  title: Pristine Whispering Cell
+  challenge: The challenge here is a riddle etched into the stone walls, a puzzle
+    that demands your intellect and wit to decipher the path forward.
+  actions:
+    '1_3': Turn left at the end.
+    '1_5': Turn right at the end.
+  image: Thick air with centuries' weight, echo of ancient wisdom. Riddle woven into
+    the stones.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, you encounter a figure shrouded in shadows,
+    their presence both haunting and watchful. The air around you grows colder, and
+    the whispers of the past seem to gather closer, urging you to heed their silent
+    counsel.
+
+
+    The figure appears as a spectral guardian, draped in ancient robes that seem to
+    glow with a faint, ethereal light. Their features are indistinct, but there is
+    a hint of malevolent intelligence in their gaze, a silent sentinel guarding the
+    secrets of this ancient place.'
+  title: Guardian Whispering Cell
+  npc: The figure appears as a spectral guardian, draped in ancient robes that seem
+    to glow with a faint, ethereal light. Their features are indistinct, but there
+    is a hint of malevolent intelligence in their gaze, a silent sentinel guarding
+    the secrets of this ancient place.
+  actions:
+    '4_1': Step back, turn left.
+    '6_1': Step forward, turn right.
+    '5_2': Step back, turn right.
+  image: Shadowed figure in the heart of the labyrinth, whispers gather closer.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself at a crossroads where the paths diverge sharply. In the
+    center, a figure stands, cloaked in darkness, their presence both enigmatic and
+    foreboding. The air around you seems to vibrate with unseen energies, and the
+    whispers of the past murmur louder, guiding you towards the unknown.
+
+
+    The figure appears as a spectral guardian, draped in ancient robes that seem to
+    glow with a faint, ethereal light. Their features are indistinct, but there is
+    a hint of malevolent intelligence in their gaze, a silent sentinel guarding the
+    secrets of this ancient place.'
+  title: Dark Whispering Crossroads
+  npc: The figure appears as a spectral guardian, draped in ancient robes that seem
+    to glow with a faint, ethereal light. Their features are indistinct, but there
+    is a hint of malevolent intelligence in their gaze, a silent sentinel guarding
+    the secrets of this ancient place.
+  actions:
+    '2_3': Step back, take the left path.
+    '3_4': Step forward, take the right path.
+  image: Darkness cloaks a figure at the center, unseen energies vibrate around. Whispering
+    past guides you towards the unknown.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You enter a chamber shrouded in mist, where the walls seem to shift and warp
+    as you step inside. The air grows colder, and a chill runs down your spine as
+    you realize you must face a formidable challenge to continue your journey. The
+    mist thickens, concealing any further path, and you are left to confront whatever
+    lies ahead.
+
+
+    The challenge here is a hidden trapdoor that requires you to solve a riddle etched
+    into the stone wall. Answer correctly and the door creaks open, revealing the
+    next path.'
+  title: Mist-Shrouded Chamber
+  challenge: The challenge here is a hidden trapdoor that requires you to solve a
+    riddle etched into the stone wall. Answer correctly and the door creaks open,
+    revealing the next path.
+  actions:
+    '1_4': Climb the steps, turn left.
+    '1_6': Climb the steps, turn right.
+  image: Walls shift and warp in a misty chamber, air grows colder, spine tingles.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You approach a chamber adorned with ancient symbols, where a figure stands
+    poised and watchful, their eyes glinting with an inner light that seems to emanate
+    from within. The figure is cloaked in a veil of mystery, their presence commanding
+    respect and caution.
+
+
+    The figure appears as a spectral guardian, draped in ancient robes that seem to
+    glow with a faint, ethereal light. Their features are indistinct, but there is
+    a hint of malevolent intelligence in their gaze, a silent sentinel guarding the
+    secrets of this ancient place.'
+  title: Shadowed Watcher
+  npc: The figure appears as a spectral guardian, draped in ancient robes that seem
+    to glow with a faint, ethereal light. Their features are indistinct, but there
+    is a hint of malevolent intelligence in their gaze, a silent sentinel guarding
+    the secrets of this ancient place.
+  actions:
+    '5_1': Descend the steps, turn right.
+    '7_1': Descend the steps, turn left.
+  image: Ancient symbols adorn the chamber, figure stands watchful, eyes glow with
+    inner light.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber where a spectral figure waits, their form
+    barely visible against the flickering shadows. The air is thick with unspoken
+    threats, and the whispers of a forgotten history echo around you. This guardian
+    watches silently, guarding the secrets of the castle''s ancient past.
+
+
+    The spectral figure appears as a hunched old man, his robes tattered and worn,
+    his eyes sunken and haunted. His skin is pale and rough, as if he has seen many
+    years pass by, yet his posture is regal and imposing.'
+  title: Gloomy Guardian
+  npc: The spectral figure appears as a hunched old man, his robes tattered and worn,
+    his eyes sunken and haunted. His skin is pale and rough, as if he has seen many
+    years pass by, yet his posture is regal and imposing.
+  actions:
+    '5_1': Step back, turn left.
+    '5_3': Step back, turn right.
+  image: Flickering shadows hide a spectral figure, whispers echo around you.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a chamber where an ancient, hooded figure stands, its presence
+    casting long, ominous shadows. The air is filled with the scent of aged parchment
+    and the distant echo of ancient rituals. This guardian watches from the shadows,
+    its eyes gleaming with knowledge and malice, ready to greet the seeker of the
+    forbidden.
+
+
+    The ancient figure appears as a cloaked elder, its face hidden beneath the folds
+    of the robe. The hood is pulled tight, obscuring most of its features, but the
+    eyes gleam with a knowing light that seems to pierce the darkness. Its stance
+    is regal and commanding, as if it has seen countless ages pass by.'
+  title: Ancient Warder
+  npc: The ancient figure appears as a cloaked elder, its face hidden beneath the
+    folds of the robe. The hood is pulled tight, obscuring most of its features, but
+    the eyes gleam with a knowing light that seems to pierce the darkness. Its stance
+    is regal and commanding, as if it has seen countless ages pass by.
+  actions:
+    '3_3': Step back, turn left.
+    '3_5': Step back, turn right.
+  image: Ominous shadows cast by an ancient, hooded figure, air scented with aged
+    parchment. Eyes gleam with knowledge and malice.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You approach a hidden alcove, its entrance obscured by the murkiest corners
+    of the castle. Within, a figure waits, its form barely discernible against the
+    shadows, its presence both welcoming and foreboding. The air around you grows
+    colder, and the whispers of forgotten secrets seem to grow louder.
+
+
+    The figure appears as a haggard old woman, her robes tattered and stained with
+    age. Her eyes are hollow, reflecting a deep well of wisdom and sorrow. She stands
+    quietly, her presence commanding yet gentle, as if she has seen the end of many
+    days and nights.'
+  title: Shadows Whisper
+  npc: The figure appears as a haggard old woman, her robes tattered and stained with
+    age. Her eyes are hollow, reflecting a deep well of wisdom and sorrow. She stands
+    quietly, her presence commanding yet gentle, as if she has seen the end of many
+    days and nights.
+  actions:
+    '2_6': Step forward, turn left.
+    '1_5': Step back, turn left.
+    '1_7': Step back, turn right.
+  image: Murkiest corners hide a figure, form barely discernible, shadows beckon.
+    Air grows colder, whispers grow louder.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the castle''s forgotten core, a figure emerges from the shadows.
+    Hidden behind a veil of ancient mystery, she stands with a grace that belies the
+    centuries. Her presence is both inviting and ominous, as if she has witnessed
+    the rise and fall of empires.
+
+
+    The figure appears as a cloaked elder, their face obscured by a hood that shrouds
+    a history untold. They stand tall, with eyes that glow with a faint, otherworldly
+    light, reflecting a depth of knowledge that seems almost supernatural.'
+  title: Vaulted Cellar
+  npc: The figure appears as a cloaked elder, their face obscured by a hood that shrouds
+    a history untold. They stand tall, with eyes that glow with a faint, otherworldly
+    light, reflecting a depth of knowledge that seems almost supernatural.
+  actions:
+    '6_1': Step back, turn right.
+    '7_2': Step forward, turn left.
+  image: Ancient mystery veils a figure, grace belies centuries. Inviting and ominous
+    presence.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'This chamber holds a peculiar aura, unlike the others, where whispers of
+    ancient secrets intertwine with the echoes of forgotten battles. The walls seem
+    to pulse with a subtle energy, and the air is charged with an unexplained tension.
+
+
+    The unusual aspect is the presence of intricate, weathered carvings that glow
+    faintly under the dim light, telling stories of long-lost civilizations.'
+  title: Ancient Whisper
+  unusual: The unusual aspect is the presence of intricate, weathered carvings that
+    glow faintly under the dim light, telling stories of long-lost civilizations.
+  actions:
+    '6_3': Step forward, turn left.
+    '5_2': Step back, turn right.
+  image: Pulsing walls, whispers intertwine with echoes, charged air.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, the floor tilts subtly, creating a labyrinth of shifting stones that
+    seem to defy gravity. Each step is precarious, as if the ground itself is alive,
+    ready to shift beneath your feet. The air grows colder, and the whispers grow
+    louder, urging you to find the hidden path that leads on.
+
+
+    The challenge here is a deceptive tilt that requires careful navigation to traverse.'
+  title: Tilted Staircase
+  challenge: The challenge here is a deceptive tilt that requires careful navigation
+    to traverse.
+  actions:
+    '3_4': Step back, adjust footing.
+    '3_6': Step back, twist left.
+  image: Shifting stones create a labyrinth, ground defies gravity. Air grows colder,
+    whispers grow louder.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the walls converge, forming a natural arch that seems to close in on
+    itself, leaving a narrow passage that twists and turns, leading deeper into the
+    heart of the castle''s mystery.
+
+
+    The unusual aspect is the convergence of the walls forming a natural arch that
+    narrows into a secret passageway.'
+  title: Twisted Arch
+  unusual: The unusual aspect is the convergence of the walls forming a natural arch
+    that narrows into a secret passageway.
+  actions:
+    '1_6': Navigate the twist, step inward.
+    '3_6': Follow the curve, turn right.
+  image: Walls converge to form a natural arch, closing in with a narrow, twisting
+    passage.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure cloaks the doorway, its form shrouded in darkness. The eyes gleam
+    with an arcane knowledge, and the air around them seems to pulse with unseen energy.
+    You feel a chill, knowing that this presence is neither friend nor foe, but a
+    sentinel of the castle''s ancient secrets.
+
+
+    Your gaze falls upon a figure standing at the doorway, dressed in ancient robes
+    that seem to shimmer with an otherworldly light. The figure''s features are obscured
+    by a hood, but you can see that they are tall and slender, with an aura of mystery
+    that commands respect.'
+  title: Vault Door
+  npc: Your gaze falls upon a figure standing at the doorway, dressed in ancient robes
+    that seem to shimmer with an otherworldly light. The figure's features are obscured
+    by a hood, but you can see that they are tall and slender, with an aura of mystery
+    that commands respect.
+  actions:
+    '1_6': Step aside, reveal the way.
+  image: Darkness cloaks the doorway, eyes gleam with arcane knowledge. Energy pulses
+    around unseen presence.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the shadowed corner, a figure waits, cloaked in shadows that seem to shift
+    and dance with the flicker of a distant candle. The figure stands watchful, its
+    presence a blend of anticipation and secrecy, poised to guide or thwart your journey
+    within this labyrinthine castle.
+
+
+    The figure appears as a guardian clad in armor of ancient stone, its features
+    etched by time and battle. The figure stands with a posture of alertness, its
+    eyes piercing and its stance firm, guarding the entrance to the cell with a silent
+    resolve.'
+  title: Guardian Cell
+  npc: The figure appears as a guardian clad in armor of ancient stone, its features
+    etched by time and battle. The figure stands with a posture of alertness, its
+    eyes piercing and its stance firm, guarding the entrance to the cell with a silent
+    resolve.
+  actions:
+    '7_1': Move forward, the path opens.
+    '7_3': Turn left, the way reveals.
+  image: Shadowed corner hides a figure, flickering candle shifts shadows. Secret
+    presence stands watchful.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the walls twist and turn in a manner unlike any other chamber, their
+    surfaces adorned with glyphs that seem to shift and change with the light. This
+    place is a nexus, where the familiar and the unknown converge, offering a glimpse
+    of the arcane magic that once animated this ancient fortress.
+
+
+    The unusual aspect is the twisting portal that leads to another dimension, shimmering
+    with a faint blue light. This portal is unlike any other, where the walls shift
+    and the ceiling dips, creating an environment that feels both welcoming and perilous.'
+  title: Twisted Portal
+  unusual: The unusual aspect is the twisting portal that leads to another dimension,
+    shimmering with a faint blue light. This portal is unlike any other, where the
+    walls shift and the ceiling dips, creating an environment that feels both welcoming
+    and perilous.
+  actions:
+    '5_3': Cross the threshold, the path diverges.
+    '7_3': Follow the steps, the door unlocks.
+  image: Walls twist and turn, adorned with shifting glyphs. Nexus where familiar
+    and unknown converge.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure stands at the intersection, cloaked in shadows that seem to weave
+    and dance with the flickering light. Its presence is both enigmatic and watchful,
+    a sentinel of the forgotten times that guard this hidden corner of the crumbling
+    castle.
+
+
+    The figure appears as a guardian draped in ancient robes, their eyes gleaming
+    with a mysterious light. The cloak flutters slightly with the breeze, concealing
+    a face etched with age and wisdom. Their posture is rigid, commanding respect
+    and caution.'
+  title: Shadows Guard
+  npc: The figure appears as a guardian draped in ancient robes, their eyes gleaming
+    with a mysterious light. The cloak flutters slightly with the breeze, concealing
+    a face etched with age and wisdom. Their posture is rigid, commanding respect
+    and caution.
+  actions:
+    '2_6': Step aside, the path opens.
+    '3_5': Turn inward, the door closes.
+    '3_7': Open the secret door.
+  image: Shadows weave with flickering light, sentinel stands watchful.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, a figure emerges from the shadows—a guardian
+    of the ancients, its presence a testament to time’s relentless march. The figure
+    stands tall, cloaked in darkness, its eyes reflecting the flickering torchlight,
+    a silent sentinel guarding the path forward.
+
+
+    The figure appears as a guardian clad in ancient robes, its visage obscured by
+    a hood that conceals a face marred with age and wisdom. Eyes gleam with a mysterious
+    light, and the cloak swirls slightly with the breeze, casting an aura of reverence
+    and caution.'
+  title: Guardian's Rest
+  npc: The figure appears as a guardian clad in ancient robes, its visage obscured
+    by a hood that conceals a face marred with age and wisdom. Eyes gleam with a mysterious
+    light, and the cloak swirls slightly with the breeze, casting an aura of reverence
+    and caution.
+  actions:
+    '6_3': Step aside, the passage reveals.
+    '7_2': Move aside, the door slides open.
+    '7_4': Reach out, the mechanism clicks.
+  image: Darkness cloaks the figure, eyes reflect flickering torchlight. Silent sentinel
+    stands tall.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, the path narrows to a single stone stairway that ascends steeply into
+    the unknown. Each step creaks underfoot, echoing the silent footsteps of those
+    who have traversed this perilous ascent before. The air grows colder, and the
+    chill penetrates the bones as you press onward, the challenge of the climb mounting
+    with every stride.
+
+
+    To progress, you must ascend the treacherous stairway.'
+  title: Stairway Rise
+  challenge: To progress, you must ascend the treacherous stairway.
+  actions:
+    '4_7': 攀过石阶，继续前行。
+    '3_6': 撤回脚步，退回原位。
+  image: Creaking stone stairway ascends steeply, steps echo silent footsteps. Cold
+    air penetrates bones.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the room, a figure stands sentinel, cloaked in shadows that
+    seem to move independently. Its presence is both comforting and foreboding, and
+    the air around it seems to hold a silent promise and a chilling warning.
+
+
+    The figure is tall and gaunt, its face hidden behind a hood that obscures most
+    of its features. Its posture is regal, and the air it exudes is both commanding
+    and unsettling.'
+  title: Guardian's Chamber
+  npc: The figure is tall and gaunt, its face hidden behind a hood that obscures most
+    of its features. Its posture is regal, and the air it exudes is both commanding
+    and unsettling.
+  actions:
+    '7_3': Retreat, the passage closes behind.
+    '7_5': Step back, the door slides open.
+  image: Shadows move independently, cloaked figure stands sentinel. Comforting and
+    foreboding presence.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the end of the path, you encounter a chamber dimly lit by flickering,
+    ancient torches. The air is thick with the scent of decay and the distant echo
+    of laughter from long-forgotten revels. A figure stands at the center of the room,
+    its form shrouded in mystery and lurking shadows.
+
+
+    The figure is draped in rags, its skin pale and sunken, eyes hollow and fixed
+    on you with a mixture of curiosity and caution. Its presence is both enigmatic
+    and ominous, casting long, indistinct shadows across the chamber.'
+  title: End Chamber
+  npc: The figure is draped in rags, its skin pale and sunken, eyes hollow and fixed
+    on you with a mixture of curiosity and caution. Its presence is both enigmatic
+    and ominous, casting long, indistinct shadows across the chamber.
+  actions:
+    '3_7': Retreat, the exit is behind you.
+    '5_7': Move forward, the door opens easily.
+  image: Flickering torches light the dim chamber, thick with decay scent. Mystery
+    figure stands in lurking shadows.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Upon entering the room, you find yourself in a chamber adorned with twisted
+    columns and arcane symbols etched into the stone walls. The air is heavy with
+    the acrid smell of sulfur and the faintest hint of mint, creating an unsettling
+    atmosphere. A challenge lies ahead, one that requires both cunning and strength
+    to overcome.
+
+
+    The threshold of the room reveals a crypt filled with ancient puzzles and mechanisms
+    designed to thwart intruders. Each step forward requires solving a riddle inscribed
+    upon the walls or disarming a hidden trap. Failure to comply leads to a perilous
+    consequence, ensuring that only the wiliest navigate the chamber''s deceptive
+    nature.'
+  title: Crypt of Trials
+  challenge: The threshold of the room reveals a crypt filled with ancient puzzles
+    and mechanisms designed to thwart intruders. Each step forward requires solving
+    a riddle inscribed upon the walls or disarming a hidden trap. Failure to comply
+    leads to a perilous consequence, ensuring that only the wiliest navigate the chamber's
+    deceptive nature.
+  actions:
+    '6_5': Turn left, the exit is just there.
+    '7_4': Turn right, the door swings open.
+    '7_6': Move left, the door is slightly ajar.
+  image: Twisted columns and arcane symbols adorn the chamber. Heavy air with sulfur
+    and mint scent.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the center of the room stands a figure cloaked in shadow, its form indistinct
+    yet pulsating with an unseen power. The air around you seems to hum with latent
+    energy, and the very stones tremble under its influence. This presence watches,
+    silent and watchful, as you approach.
+
+
+    The figure is clad in robes of black and gray, their hood pulled low to conceal
+    much of their face. Eyes, hidden behind obsidian masks, seem to glow with an eerie
+    blue light. Their posture is one of quiet observation, hands clasped together
+    in a gesture of calmness.'
+  title: Dark Whispering Cell
+  npc: The figure is clad in robes of black and gray, their hood pulled low to conceal
+    much of their face. Eyes, hidden behind obsidian masks, seem to glow with an eerie
+    blue light. Their posture is one of quiet observation, hands clasped together
+    in a gesture of calmness.
+  actions:
+    '4_7': Step back, the exit is concealed.
+    '6_7': Navigate right, the passage opens.
+    '5_6': Step aside, the door slides open.
+  image: Shadowed figure pulsates with unseen power, humming energy around. Stones
+    tremble under latent influence.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the heart of the room, a figure emerges from the shadows—part spectral
+    guardian, part enigmatic sentinel. Its form is indistinct, yet its eyes gleam
+    with a malevolent light, casting an eerie aura around the chamber. This presence
+    watches silently, awaiting the seeker''s fate within the ancient ruins.
+
+
+    The figure stands tall, draped in garments of dark fabric that seem to absorb
+    light. Its skin is pale and ghostly, almost translucent, and its eyes, hidden
+    behind a mask of obsidian, shine with an unsettling radiance. Standing quietly
+    in the gloom, this being exudes an air of both mystery and danger.'
+  title: Vault of Shadows
+  npc: The figure stands tall, draped in garments of dark fabric that seem to absorb
+    light. Its skin is pale and ghostly, almost translucent, and its eyes, hidden
+    behind a mask of obsidian, shine with an unsettling radiance. Standing quietly
+    in the gloom, this being exudes an air of both mystery and danger.
+  actions:
+    '5_5': Move left, the wall reveals a hidden door.
+    '7_5': Walk forward, the passage widens.
+    '6_6': Step back, the wall splits open.
+  image: Spectral guardian emerges from shadows, eyes gleam malevolent light. Eerie
+    aura casts around chamber.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'The doorway creaks ominously as you approach, its threshold guarded by a
+    figure cloaked in darkness. Its form is shrouded in mist, and its presence whispers
+    secrets that are both foreboding and alluring. You feel a pulse of unseen energy
+    emanating from the figure, a reminder of the ancient power it holds.
+
+
+    The figure stands before you, dressed in robes of deepest black that seem to absorb
+    the light around them. Its face is concealed by a hood, but the eyes beneath are
+    pools of cold, unyielding darkness. This presence exerts a chilling influence,
+    making your breath catch in your throat.'
+  title: Dark Portal
+  npc: The figure stands before you, dressed in robes of deepest black that seem to
+    absorb the light around them. Its face is concealed by a hood, but the eyes beneath
+    are pools of cold, unyielding darkness. This presence exerts a chilling influence,
+    making your breath catch in your throat.
+  actions:
+    '6_6': Turn right, the passage leads on.
+    '7_5': Step left, the wall slides aside.
+    '7_7': Walk forward, the passage opens.
+  image: Darkness cloaks the figure, mist shrouds its form. Unseen energy pulses ominously.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Here, the paths diverge, each leading to a realm of secrets and dangers. To
+    your north lies a pathway that seems to lead deeper into the heart of the castle,
+    while to your south, a winding stair beckons upwards towards unknown heights.
+    To your west, the ground tilts gently, hinting at a secret underground chamber.
+    Each path is fraught with peril, guarded by mechanisms and guardians that challenge
+    the unwary.
+  title: Crossing Point
+  actions:
+    '5_7': Move south, the path continues straight.
+    '7_7': Step east, the door swings open.
+    '6_6': Walk west, the door slides aside.
+  image: North leads deeper into heart of castle, south beckons upward. West ground
+    tilts, hints at secret chamber.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the shadowed corner, a figure hovers, its presence both eerie and watchful.
+    The air around you grows colder, and the whispers of ancient secrets seem to grow
+    louder. This guardian watches silently, ready to test your resolve and strength.
+
+
+    Their appearance is that of an ancient, stoic figure, cloaked in shadows that
+    seem to move and shift with the slightest breeze. The face is obscured by a hood
+    that falls back, revealing sunken eyes that gleam with a cold, calculating light.
+    Their posture is rigid, as if they are eternally prepared for battle or defense.'
+  title: Watcher's Rest
+  npc: Their appearance is that of an ancient, stoic figure, cloaked in shadows that
+    seem to move and shift with the slightest breeze. The face is obscured by a hood
+    that falls back, revealing sunken eyes that gleam with a cold, calculating light.
+    Their posture is rigid, as if they are eternally prepared for battle or defense.
+  actions:
+    '6_6': Cross the threshold, the door creaks open.
+    '5_5': Step aside, the hidden path reveals itself.
+    '5_7': Advance forward, the door swings open.
+  image: Figure hovers in shadowed corner, whispers ancient secrets louder. Cold air
+    surrounds you.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'The stone steps creak underfoot, leading downward into a dimly lit alcove.
+    Here, a figure stands, partially obscured by shadows that dance upon the walls.
+    Its presence is both enigmatic and foreboding, casting an aura of ancient wisdom
+    and hidden knowledge.
+
+
+    The figure appears as a tall, gaunt figure wrapped in a cloak that seems to absorb
+    and reflect the dim light around them. Its features are barely discernible, only
+    the hollow sockets of its eyes glint with an eerie light.'
+  title: Vaulted Cellar
+  npc: The figure appears as a tall, gaunt figure wrapped in a cloak that seems to
+    absorb and reflect the dim light around them. Its features are barely discernible,
+    only the hollow sockets of its eyes glint with an eerie light.
+  actions:
+    '6_5': Descend the steps, the trapdoor opens.
+    '5_6': Follow the stone ledge, the secret passage appears.
+  image: Steps creak underfoot, leading to dimly lit alcove. Figure stands partially
+    obscured by dancing shadows.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a chamber bathed in an otherworldly light, the source
+    of which is a shimmering crystal embedded deep within the wall. The air is charged
+    with an eerie silence, broken only by the distant echo of your footsteps. The
+    stone floor is covered in a fine dust, and the air smells of decay and hidden
+    secrets. As you gaze around, you notice a cryptic inscription carved into the
+    stone walls, its meaning lost to time.
+
+
+    To proceed, you must align the stones in the cryptic pattern etched into the stone
+    walls. Each stone represents a clue, and rearranging them correctly will reveal
+    a hidden passage.'
+  title: Crystal Grotto
+  challenge: To proceed, you must align the stones in the cryptic pattern etched into
+    the stone walls. Each stone represents a clue, and rearranging them correctly
+    will reveal a hidden passage.
+  actions:
+    '5_6': Navigate the stones, the pathway becomes clear.
+    '7_6': Trace the markings, the door slides open.
+    '6_5': Follow the markings, the door reveals itself.
+    '6_7': Turn left, the secret door opens.
+  image: Shimmering crystal embedded in wall, otherworldly light. Cryptic inscription
+    carved into stone walls.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Here, in the heart of the ancient stronghold, lies the chamber where the ancient
+    relic awaits. The air is thick with the aura of long-forgotten power, and the
+    walls whisper tales of heroes and villains. Before you stands the treasure chest,
+    its surface marred by centuries of neglect and exposure to the elements. Yet,
+    within its confines, the key to eternal youth lies, a symbol of the castle's former
+    splendor and the sacrifices made for its preservation.
+  title: Ancient Chamber
+  actions:
+    '6_7': Retrace steps, the secret exit opens.
+    '7_6': Retraced steps, the door swings shut.
+  image: Treasure chest marred by neglect, surface symbolizes castle's former splendor.
+    Ancient power thickens the air.
+  image_filename: 7_7.png

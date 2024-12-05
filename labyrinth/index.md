@@ -9,7 +9,25 @@ chart: true
 
 Labyrinth is a project by me, [Chris Paxton](https://cpaxton.github.io/), using AI to generate interactive, compelling worlds that you can explore.
 
-Check it out as a part of [Virgil](https://github.com/cpaxton/virgil).
+Check it out as a part of [Virgil](https://github.com/cpaxton/virgil). Or explore...
+
+## Places to explore
+
+[The Labyrinth of Minos](minos/index.html)
+
+[A haunted mansion](haunted_mansion/index.html)
+
+[A dark forest](dark_forest/index.html)
+
+[A strange city](strange_city/index.html)
+
+[Candyland](candyland/index.html)
+
+[A crumbling castle](crumbling_castle/index.html)
+
+[A high-tech research facility](research_facility/index.html)
+
+[An alien bazaar](alien_bazaar/index.html)
 
 ## What is it?
 

@@ -1,0 +1,1257 @@
+world:
+  location: a futuristic, high-tech research facility
+  goal:
+  - 7
+  - 7
+  writing_style: poetic, dream-like, and philosophical. inspired by Philip K. Dick.
+  height: 4
+  width: 4
+  start:
+  - 1
+  - 1
+'1_1':
+  neighbors:
+  - '2_1'
+  - '1_2'
+  distance: 0
+  is_start: true
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: "You find yourself in a vast, open space, bathed in an ethereal light that\
+    \ seems to pulse with the hum of advanced technology. The walls are made of sleek,\
+    \ translucent material, reflecting the soft glow from unseen lights, creating\
+    \ an almost holographic effect. At the edges of this transparent domain, towering\
+    \ structures rise, their surfaces etched with symbols that defy comprehension.\
+    \ \n\nIn the center, you perceive a gentle breeze, as though the fabric of reality\
+    \ is being slightly disturbed, drawing you towards a mysterious center. Here,\
+    \ the floor gives way to a shimmering pool of liquid, its surface reflecting the\
+    \ myriad of patterns on the walls. It is here that the whispers of ancient knowledge\
+    \ begin to emerge, as if the very essence of this place is whispering secrets\
+    \ in your ear."
+  title: Entrance Nexus
+  actions:
+    '2_1': Follow the illuminated pathway upward.
+    '1_2': Step across the threshold.
+  image: Translucent walls reflecting soft glow, towering structures etched with incomprehensible
+    symbols. Floor gives way to shimmering liquid pool, reflecting patterns on walls.
+  image_filename: 1_1.png
+'2_1':
+  neighbors:
+  - '1_1'
+  - '3_1'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'At (2, 1), the air shifts subtly, carrying with it a faint, metallic scent
+    that hints at the convergence of pure thought and artificial intelligence. This
+    chamber is unlike the others, its architecture echoing the whispers of code rather
+    than the echoes of nature. The walls, once gleaming with the promise of endless
+    data, now seem to pulse with the rhythm of algorithms, their surfaces etched with
+    circuits and circuits of logic. Here, the very concept of structure dissolves
+    into a symphony of digital threads, where every corner holds a secret, every angle
+    a potential gateway.
+
+
+    The unusual aspect of (2, 1) lies in its architectural design, which is dominated
+    by a central, glowing crystal that hums softly, casting an iridescent light that
+    dances across the walls and floors. This crystal serves as both a focal point
+    and a source of energy for the entire facility, making (2, 1) a beacon of advanced
+    technology and a hub of computational power.'
+  title: Code Nexus
+  unusual: The unusual aspect of (2, 1) lies in its architectural design, which is
+    dominated by a central, glowing crystal that hums softly, casting an iridescent
+    light that dances across the walls and floors. This crystal serves as both a focal
+    point and a source of energy for the entire facility, making (2, 1) a beacon of
+    advanced technology and a hub of computational power.
+  actions:
+    '1_1': Retrace your steps to the entrance.
+    '3_1': Descend the vertical corridor.
+  image: Faint metallic scent, chambers echoing whispers of code. Walls pulsing with
+    algorithmic rhythms, etched with circuits and logic.
+  image_filename: 2_1.png
+'1_2':
+  neighbors:
+  - '1_1'
+  - '1_3'
+  distance: 1
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a small, intimate chamber, surrounded by the subtle
+    hum of unseen machinery. A figure stands at the edge of the room, their presence
+    more than a mere shadow. This being is cloaked in an aura of mystery, their form
+    barely discernible against the backdrop of the glowing panels that line the walls.
+    They seem to watch, silent and unobtrusive, their eyes reflecting the same celestial
+    light that bathes the facility.
+
+
+    The figure in (1, 2) appears as a silhouette, their outline defined by the flickering
+    light of the panels. Their robes are a deep, velvety black, adorned with intricate
+    patterns that shimmer faintly in the ambient glow. They stand quietly, their posture
+    tense yet poised, a sentinel of sorts within the facility.'
+  title: Guardian Node
+  npc: The figure in (1, 2) appears as a silhouette, their outline defined by the
+    flickering light of the panels. Their robes are a deep, velvety black, adorned
+    with intricate patterns that shimmer faintly in the ambient glow. They stand quietly,
+    their posture tense yet poised, a sentinel of sorts within the facility.
+  actions:
+    '1_1': Retrace your steps back to the entrance.
+    '1_3': Move to the adjacent door.
+  image: Glowing panels lining the walls, subtle hum of machinery. Figure cloaked
+    in mystery, presence silent and unobtrusive.
+  image_filename: 1_2.png
+'3_1':
+  neighbors:
+  - '2_1'
+  - '4_1'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You arrive at (3, 1), a room shrouded in an aura of caution. The walls are
+    lined with screens displaying data streams that flicker like distant stars, each
+    pixel a whisper of encoded knowledge. Before you lies a console, its surface smooth
+    and cold, covered in buttons and controls that seem to pulse with the rhythms
+    of computation. The challenge here is not just physical, but intellectual—your
+    mind must navigate through layers of complexity to unlock the secrets hidden within.
+
+
+    The challenge in (3, 1) requires you to solve a complex puzzle inscribed on the
+    console''s surface. Each button press and control twist reveals fragments of an
+    ancient algorithm, woven into the very fabric of the facility''s architecture.
+    To proceed, you must piece together these clues, understanding the intricate dance
+    of binary and decimal, until the final lock clicks into place.'
+  title: Cipher Chamber
+  challenge: The challenge in (3, 1) requires you to solve a complex puzzle inscribed
+    on the console's surface. Each button press and control twist reveals fragments
+    of an ancient algorithm, woven into the very fabric of the facility's architecture.
+    To proceed, you must piece together these clues, understanding the intricate dance
+    of binary and decimal, until the final lock clicks into place.
+  actions:
+    '2_1': Navigate the central corridor.
+    '4_1': Turn left at the junction.
+  image: Data streams flickering like distant stars, walls lined with screens. Console
+    with pulsating surface, buttons and controls covering surface.
+  image_filename: 3_1.png
+'1_3':
+  neighbors:
+  - '2_3'
+  - '1_2'
+  - '1_4'
+  distance: 2
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You find yourself in a chamber where the light seems to shift and dance,
+    creating a surreal atmosphere. The walls are adorned with screens that display
+    swirling patterns of data, a constant reminder of the interconnectedness of the
+    facility''s systems. At the center, a console looms, its surface gleaming with
+    the intensity of artificial luminescence. To proceed, you must decipher the arcane
+    symbols etched into the console, a task that requires both precision and insight
+    into the language of the machines.
+
+
+    The challenge in (1, 3) requires you to decode the ancient glyphs etched into
+    the console''s surface. Each symbol represents a segment of the facility''s core
+    algorithms, and solving them necessitates a blend of logical reasoning and intuitive
+    understanding. Failure to decode correctly may result in unintended consequences,
+    highlighting the delicate balance between knowledge and control.'
+  title: Code Confluence
+  challenge: The challenge in (1, 3) requires you to decode the ancient glyphs etched
+    into the console's surface. Each symbol represents a segment of the facility's
+    core algorithms, and solving them necessitates a blend of logical reasoning and
+    intuitive understanding. Failure to decode correctly may result in unintended
+    consequences, highlighting the delicate balance between knowledge and control.
+  actions:
+    '2_3': Cross the central bridge.
+    '1_2': Walk down the connecting corridor.
+    '1_4': Turn right at the junction.
+  image: Swirling patterns of data on adorned walls, console with glowing surface.
+    Arcane symbols etched into the console surface.
+  image_filename: 1_3.png
+'4_1':
+  neighbors:
+  - '3_1'
+  - '5_1'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You approach the threshold of the sealed chamber, its doors etched with arcane
+    symbols that seem to pulse with an otherworldly energy. Before you stands an entity
+    shrouded in the mist of time, its presence both ominous and enigmatic. This guardian,
+    a manifestation of the facility''s deep history, awaits your presence, eyes glowing
+    with a light that neither cold nor warm. Its silent watch suggests a purpose greater
+    than itself, a sentinel of knowledge and power.
+
+
+    The figure standing before you is cloaked in a silvery robe that seems to shimmer
+    with the faint light of the facility''s systems. Its face is obscured by a mask
+    that reflects the same luminescence, leaving only piercing blue eyes that gaze
+    intently. Standing tall and imposing, this figure exudes a sense of authority
+    and wisdom, yet there is also an air of mystery that commands respect.'
+  title: Guardian Chamber
+  npc: The figure standing before you is cloaked in a silvery robe that seems to shimmer
+    with the faint light of the facility's systems. Its face is obscured by a mask
+    that reflects the same luminescence, leaving only piercing blue eyes that gaze
+    intently. Standing tall and imposing, this figure exudes a sense of authority
+    and wisdom, yet there is also an air of mystery that commands respect.
+  actions:
+    '3_1': Descend the observation platform.
+    '5_1': Navigate the spiral staircase.
+  image: Pulsating arcane symbols on sealed chamber doors, mist shrouding an enigmatic
+    entity. Silent watch with glowing eyes, light neither cold nor warm.
+  image_filename: 4_1.png
+'2_3':
+  neighbors:
+  - '1_3'
+  - '3_3'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You enter a chamber illuminated by the soft glow of holographic projections,
+    where the air is filled with whispers of forgotten languages and the scent of
+    long-lost knowledge. An ancient figure stands before you, its form a silhouette
+    against the flickering screens, a guardian of the forgotten truths. Its presence
+    is both comforting and foreboding, a reminder of the facility''s enduring legacy
+    and the secrets it holds within reach.
+
+
+    The figure before you is clad in a robe woven from the fibers of the facility''s
+    past, each thread resonant with memories of centuries past. Its skin glows faintly,
+    casting an aura of timeless wisdom. Eyes, like polished obsidian, reflect the
+    holographic projections around you, a mirror to the facility''s secrets.'
+  title: Ancient Conduit
+  npc: The figure before you is clad in a robe woven from the fibers of the facility's
+    past, each thread resonant with memories of centuries past. Its skin glows faintly,
+    casting an aura of timeless wisdom. Eyes, like polished obsidian, reflect the
+    holographic projections around you, a mirror to the facility's secrets.
+  actions:
+    '1_3': Cross the central atrium.
+    '3_3': Descend the observation deck.
+  image: Soft glow of holographic projections, air filled with whispers of forgotten
+    languages. Ancient figure as silhouette against flickering screens.
+  image_filename: 2_3.png
+'1_4':
+  neighbors:
+  - '1_3'
+  - '1_5'
+  distance: 3
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You stand at the edge of a precipice, gazing out at a vista of interconnected
+    circuits and glowing data streams. A challenge looms ahead, a barrier of computational
+    complexity that demands your intellect and resolve. The air is charged with the
+    potential for enlightenment, yet the path is fraught with the weight of decision
+    and the urgency of discovery.
+
+
+    The threshold here demands that you navigate a labyrinth of binary codes, deciphering
+    the hidden language of the facility''s core systems. Each node represents a decision
+    point, requiring you to choose paths that align with the facility''s wisdom, or
+    risk losing access to crucial knowledge.'
+  title: Decision Threshold
+  challenge: The threshold here demands that you navigate a labyrinth of binary codes,
+    deciphering the hidden language of the facility's core systems. Each node represents
+    a decision point, requiring you to choose paths that align with the facility's
+    wisdom, or risk losing access to crucial knowledge.
+  actions:
+    '1_3': Navigate the binary nodes.
+    '1_5': Cross the binary bridge.
+  image: Circuits and glowing data streams interconnecting, air charged with potential
+    enlightenment. Precipice overlooking computational complexity, path laden with
+    decisions and urgency.
+  image_filename: 1_4.png
+'5_1':
+  neighbors:
+  - '4_1'
+  - '6_1'
+  - '5_2'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a figure seated at a console, their eyes fixed on a screen
+    that displays the facility''s architecture in a continuous, flickering pattern.
+    The air around you seems to hum with the cadence of ancient protocols, and the
+    presence of this guardian is both a challenge and a beacon, urging you to uncover
+    the secrets they hold.
+
+
+    The figure before you is tall and imposing, dressed in a uniform that seems tailored
+    to withstand the harsh conditions of the facility. Their eyes, a deep shade of
+    blue, are filled with a knowing gaze, and their skin is pale, almost ghostly,
+    as if they have spent many years in the shadows.'
+  title: Guardian Node
+  npc: The figure before you is tall and imposing, dressed in a uniform that seems
+    tailored to withstand the harsh conditions of the facility. Their eyes, a deep
+    shade of blue, are filled with a knowing gaze, and their skin is pale, almost
+    ghostly, as if they have spent many years in the shadows.
+  actions:
+    '4_1': Cross the data convergence zone.
+    '6_1': Navigate the temporal flux corridor.
+    '5_2': Transit the dimensional relay.
+  image: Continuous flickering pattern on console screen, air humming with ancient
+    protocols. Presence of a guardian, eyes fixed on screen.
+  image_filename: 5_1.png
+'3_3':
+  neighbors:
+  - '2_3'
+  - '3_4'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber where time itself seems to pause, a silent
+    sanctuary amidst the relentless flow of data. A figure stands at the center of
+    the room, their presence both comforting and foreboding. They appear to be a guardian,
+    eyes closed in concentration as they seem to communicate with the very fabric
+    of the facility, their voice a whispered revelation.
+
+
+    The figure before you is clad in a robe of silver and black, their form graceful
+    and lithe. They stand with a regal posture, eyes closed as they seem to merge
+    with the ambient energy. Their skin is a subtle shade of blue, giving them an
+    ethereal appearance, and they exude a calm, almost otherworldly aura.'
+  title: Temporal Convergence Node
+  npc: The figure before you is clad in a robe of silver and black, their form graceful
+    and lithe. They stand with a regal posture, eyes closed as they seem to merge
+    with the ambient energy. Their skin is a subtle shade of blue, giving them an
+    ethereal appearance, and they exude a calm, almost otherworldly aura.
+  actions:
+    '2_3': Descend the temporal resonance stairwell.
+    '3_4': Navigate the dimensional gateway.
+  image: Silent sanctuary amidst data flow, figure standing at center. Eyes closed,
+    whispering revelation.
+  image_filename: 3_3.png
+'1_5':
+  neighbors:
+  - '1_4'
+  - '1_6'
+  distance: 4
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'You enter a room bathed in an eerie, pulsating light, where the air feels
+    charged with unseen forces. In the center, a glowing device hums softly, its energy
+    swirling like a miniature storm. As you approach, the air grows colder, and a
+    faint, unsettling melody echoes around you. This is the threshold where resistance
+    must be overcome, for the secrets hidden within await those who dare to push beyond
+    the limits of their own understanding.
+
+
+    The challenge in this room is to resist the pull of the device''s energy, which
+    seeks to consume your thoughts and weaken your resolve. You must remain steadfast
+    and channel your inner strength to resist the allure, ensuring your clarity of
+    mind remains intact.'
+  title: Threshold Chamber
+  challenge: The challenge in this room is to resist the pull of the device's energy,
+    which seeks to consume your thoughts and weaken your resolve. You must remain
+    steadfast and channel your inner strength to resist the allure, ensuring your
+    clarity of mind remains intact.
+  actions:
+    '1_4': Retrace the temporal resonance steps.
+    '1_6': Descend the temporal vortex.
+  image: Eerie, pulsating light bathed room, glowing device hums softly. Cold air,
+    faint melody echoes around.
+  image_filename: 1_5.png
+'6_1':
+  neighbors:
+  - '5_1'
+  - '7_1'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You arrive at a room adorned with symbols that seem to flicker and shift
+    with the currents of the facility. At the center, a figure stands, their presence
+    a blend of light and shadow, guiding yet enigmatic. This is the sentinel, the
+    guardian of the secrets, awaiting your readiness to unlock the mysteries of the
+    AI server.
+
+
+    The figure before you is tall and slender, cloaked in a shimmering, translucent
+    garment that seems to respond to the ambient energy. Their face is serene, illuminated
+    by an inner light that gives them a timeless quality. They stand quietly, their
+    posture suggesting a deep wisdom and patience.'
+  title: Guardian Chamber
+  npc: The figure before you is tall and slender, cloaked in a shimmering, translucent
+    garment that seems to respond to the ambient energy. Their face is serene, illuminated
+    by an inner light that gives them a timeless quality. They stand quietly, their
+    posture suggesting a deep wisdom and patience.
+  actions:
+    '5_1': Descend the temporal resonance steps.
+    '7_1': Descend the temporal vortex.
+  image: Symbols flickering and shifting on room adornment, figure standing at center.
+    Light and shadow blend, enigmatic presence guarding secrets.
+  image_filename: 6_1.png
+'5_2':
+  neighbors:
+  - '5_1'
+  - '5_3'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a chamber where a figure waits, their presence a silent
+    sentinel. The air around you becomes charged with an aura of anticipation, and
+    the symbols etched into the walls seem to pulse with an unseen energy. This is
+    the watchful guardian, a silent observer of the unfolding journey.
+
+
+    The figure before you appears ethereal, with skin that glimmers like starlight
+    against the metallic hues of the room. They stand gracefully, their form both
+    fluid and precise, dressed in a suit that seems to adapt to the temperature of
+    the facility. Their eyes, pools of deep blue, reflect an unspoken knowledge and
+    understanding.'
+  title: Watcher Chamber
+  npc: The figure before you appears ethereal, with skin that glimmers like starlight
+    against the metallic hues of the room. They stand gracefully, their form both
+    fluid and precise, dressed in a suit that seems to adapt to the temperature of
+    the facility. Their eyes, pools of deep blue, reflect an unspoken knowledge and
+    understanding.
+  actions:
+    '5_1': Descend the temporal resonance steps.
+    '5_3': Descend the temporal vortex.
+  image: Chamber with a silent sentinel waiting, air charged with anticipation. Symbols
+    etched into walls pulsating with unseen energy.
+  image_filename: 5_2.png
+'3_4':
+  neighbors:
+  - '3_3'
+  - '3_5'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You encounter a chamber where a figure awaits, their presence a blend of
+    light and shadow. The air around you is charged with an aura of expectation, and
+    the symbols etched into the walls seem to resonate with an ancient wisdom. This
+    is the keeper of the secrets, a silent guardian of the future, ready to guide
+    or challenge those who seek the AI server.
+
+
+    The figure stands before you, cloaked in a robe that glows with an inner luminescence,
+    their skin a subtle shade of silver. Their eyes, pools of deep, knowing blue,
+    seem to pierce the very essence of your being. They appear both ancient and wise,
+    a sentinel of the forgotten knowledge that lies within the facility.'
+  title: Keeper's Cell
+  npc: The figure stands before you, cloaked in a robe that glows with an inner luminescence,
+    their skin a subtle shade of silver. Their eyes, pools of deep, knowing blue,
+    seem to pierce the very essence of your being. They appear both ancient and wise,
+    a sentinel of the forgotten knowledge that lies within the facility.
+  actions:
+    '3_3': Descend the temporal resonance steps.
+    '3_5': Descend the temporal vortex.
+  image: Figure awaits in chamber, presence light and shadow. Air charged with expectation,
+    symbols resonant with ancient wisdom.
+  image_filename: 3_4.png
+'1_6':
+  neighbors:
+  - '2_6'
+  - '1_5'
+  - '1_7'
+  distance: 5
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You find yourself in a tranquil chamber, where a figure waits in the shadows.
+    The air is filled with whispers of forgotten knowledge, and the symbols etched
+    into the walls seem to pulse with an ancient rhythm. This is a guardian of the
+    past, a keeper of the secrets hidden within the facility, ready to guide or challenge
+    those who seek the AI server.
+
+
+    The figure stands before you, clad in a robe woven from threads of light, their
+    skin a pale, luminous silver. Eyes that seem to hold the depth of centuries watch
+    you with a calm and knowing gaze. They appear both ancient and wise, a sentinel
+    of the forgotten truths that lie within the facility.'
+  title: Guardian Cell
+  npc: The figure stands before you, clad in a robe woven from threads of light, their
+    skin a pale, luminous silver. Eyes that seem to hold the depth of centuries watch
+    you with a calm and knowing gaze. They appear both ancient and wise, a sentinel
+    of the forgotten truths that lie within the facility.
+  actions:
+    '2_6': Descend the temporal resonance steps.
+    '1_5': Descend the temporal vortex.
+    '1_7': Descend the temporal well.
+  image: Figure waits in shadows, air filled with whispers of forgotten knowledge.
+    Symbols etched into walls pulse with ancient rhythm.
+  image_filename: 1_6.png
+'7_1':
+  neighbors:
+  - '6_1'
+  - '7_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'You approach a chamber sealed with arcane symbols, its walls glowing softly
+    with a spectral light. At the center stands an ancient figure, hooded in shadows,
+    their presence a blend of wisdom and mystery. The air around you resonates with
+    the whispers of long-forgotten truths, and you feel the weight of untold knowledge
+    upon your shoulders.
+
+
+    The figure stands regally before you, draped in robes of iridescent silk that
+    shift with the light. Their eyes, a deep, reflective black, seem to hold the depth
+    of a thousand memories. An aura of authority and ancient power surrounds them,
+    making their presence both commanding and enigmatic.'
+  title: Ancient Guardian
+  npc: The figure stands regally before you, draped in robes of iridescent silk that
+    shift with the light. Their eyes, a deep, reflective black, seem to hold the depth
+    of a thousand memories. An aura of authority and ancient power surrounds them,
+    making their presence both commanding and enigmatic.
+  actions:
+    '6_1': Ascend the temporal stairwell.
+    '7_2': Descend the temporal well.
+  image: Arcane symbols sealing chamber, spectral light glowing softly. Ancient figure
+    hooded in shadows, whispers of forgotten truths.
+  image_filename: 7_1.png
+'5_3':
+  neighbors:
+  - '6_3'
+  - '5_2'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the air is filled with a peculiar silence, broken only by the distant
+    hum of mechanical gears. The walls are adorned with panels that flicker with digital
+    patterns, as if the very fabric of this place is pulsating with hidden frequencies.
+    This chamber feels distinct, as if it has been untouched by the constant flux
+    and change that permeates the rest of the facility, holding a semblance of tranquility
+    and mystery.
+
+
+    The unusual aspect is the presence of a holographic projection room, where floating
+    images of ancient texts and diagrams dance across the walls, their content shifting
+    and evolving with each moment. Unlike the rest of the facility, this room exerts
+    a calming influence, as if time itself is suspended within its boundaries.'
+  title: Temporal Threshold
+  unusual: The unusual aspect is the presence of a holographic projection room, where
+    floating images of ancient texts and diagrams dance across the walls, their content
+    shifting and evolving with each moment. Unlike the rest of the facility, this
+    room exerts a calming influence, as if time itself is suspended within its boundaries.
+  actions:
+    '6_3': Navigate the temporal corridor.
+    '5_2': Turn the temporal dial.
+  image: Peculiar silence broken by distant hum, digital patterns flickering on panels.
+    Walls adorned with panels pulsating with hidden frequencies.
+  image_filename: 5_3.png
+'3_5':
+  neighbors:
+  - '3_4'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, a lattice of neon lights forms a complex pattern overhead, casting
+    an ever-changing glow that seems to defy the laws of physics. At the center, a
+    puzzle emerges from the air, challenging your mind with riddles that twist logic
+    and perception. Each piece of the puzzle requires a subtle understanding of the
+    facility''s architecture and the subtle cues hidden within the environment.
+
+
+    The challenge in this room lies in deciphering the intricate puzzle that looms
+    above you. Each piece of the puzzle requires a delicate balance of logical reasoning
+    and environmental awareness, as the neon lights shift and the patterns evolve
+    with each attempt.'
+  title: Temporal Enigma
+  challenge: The challenge in this room lies in deciphering the intricate puzzle that
+    looms above you. Each piece of the puzzle requires a delicate balance of logical
+    reasoning and environmental awareness, as the neon lights shift and the patterns
+    evolve with each attempt.
+  actions:
+    '3_4': Rotate the temporal lever.
+    '3_6': Spin the temporal wheel.
+  image: Lattice of neon lights forming complex patterns overhead. Puzzle emerging
+    from air, challenging mind with riddles.
+  image_filename: 3_5.png
+'2_6':
+  neighbors:
+  - '1_6'
+  - '3_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the air is imbued with an otherworldly aura, as if the very fabric
+    of space and time has been subtly altered. The walls are adorned with glowing
+    runes that seem to pulse and shift, their meanings elusive yet profound. This
+    place stands apart, a sanctuary of silent contemplation, where the echoes of forgotten
+    knowledge linger.
+
+
+    The unusual aspect is the presence of a rotating temporal wheel embedded in the
+    wall, which emits a soft, pulsating light that seems to guide and manipulate the
+    flow of time. Around the wheel, ancient glyphs flicker and change, reflecting
+    a hidden history that is both familiar and alien.'
+  title: Temporal Oracle
+  unusual: The unusual aspect is the presence of a rotating temporal wheel embedded
+    in the wall, which emits a soft, pulsating light that seems to guide and manipulate
+    the flow of time. Around the wheel, ancient glyphs flicker and change, reflecting
+    a hidden history that is both familiar and alien.
+  actions:
+    '1_6': Turn the temporal lever clockwise.
+    '3_6': Rotate the temporal wheel counterclockwise.
+  image: Otherworldly aura imbuing air, glowing runes pulsing and shifting on walls.
+    Sanctuary of silent contemplation, echoes of forgotten knowledge lingering.
+  image_filename: 2_6.png
+'1_7':
+  neighbors:
+  - '1_6'
+  distance: 6
+  is_start: false
+  is_goal: false
+  is_dead_end: true
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'A figure emerges from the mist, their form ethereal and composed of shifting
+    light. They stand quietly, eyes reflecting the same hues as the surrounding luminescent
+    walls. Their presence is both comforting and foreboding, a sentinel watching over
+    the passage.
+
+
+    Your guide appears as a figure cloaked in a shimmering robe, their silhouette
+    defined by the soft, bioluminescent patterns that dance across their form. Their
+    face is obscured by a mask that glows faintly, leaving only curious, illuminated
+    eyes that seem to peer deeply into your soul.'
+  title: Temporal Gatekeeper
+  npc: Your guide appears as a figure cloaked in a shimmering robe, their silhouette
+    defined by the soft, bioluminescent patterns that dance across their form. Their
+    face is obscured by a mask that glows faintly, leaving only curious, illuminated
+    eyes that seem to peer deeply into your soul.
+  actions:
+    '1_6': Follow the temporal path.
+  image: Ethereal figure composed of shifting light, standing quietly on luminescent
+    walls. Eyes reflecting hues of surrounding walls, foreboding and comforting presence.
+  image_filename: 1_7.png
+'7_2':
+  neighbors:
+  - '7_1'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the crossroads of the future and the past, a figure stands guard, their
+    form a blend of light and shadow. Eyes that seem to pierce the very essence of
+    existence watch you with a mixture of curiosity and anticipation. The air around
+    them hums with the resonance of ancient knowledge, preparing to guide or challenge
+    you according to the path you choose.
+
+
+    The guardian appears as a figure draped in a cloak woven from threads of light,
+    their form both ethereal and solid. Eyes that sparkle like stars seem to hold
+    the memories of countless ages, while a serene smile hints at a deep wisdom.'
+  title: Temporal Convergence
+  npc: The guardian appears as a figure draped in a cloak woven from threads of light,
+    their form both ethereal and solid. Eyes that sparkle like stars seem to hold
+    the memories of countless ages, while a serene smile hints at a deep wisdom.
+  actions:
+    '7_1': Navigate the temporal corridors.
+    '7_3': Turn the temporal wheel.
+  image: Blend of light and shadow, eyes that pierce essence of existence. Air hums
+    with resonance of ancient knowledge.
+  image_filename: 7_2.png
+'6_3':
+  neighbors:
+  - '5_3'
+  - '7_3'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: true
+  text: 'Here, the architecture shifts subtly, its symmetry broken by an irregularity
+    that echoes the complexity of human thought. The colors are muted, as if absorbing
+    the very essence of this peculiar place, and the air is charged with a silent
+    tension. It is here that the boundaries between reality and illusion begin to
+    blur, hinting at the profound mysteries that lie just beyond the veil.
+
+
+    The unusual aspect is the presence of a holographic projection wall, where floating
+    images of historical figures and futuristic concepts float and interact, creating
+    a surreal conversation that seems to bridge time and space.'
+  title: Temporal Nexus
+  unusual: The unusual aspect is the presence of a holographic projection wall, where
+    floating images of historical figures and futuristic concepts float and interact,
+    creating a surreal conversation that seems to bridge time and space.
+  actions:
+    '5_3': Cross the temporal threshold.
+    '7_3': Ascend the temporal楼梯.
+  image: Architecture shifts with a subtle irregularity, muted colors absorbing essence.
+    Air charged with silent tension, blurring boundaries between reality and illusion.
+  image_filename: 6_3.png
+'3_6':
+  neighbors:
+  - '2_6'
+  - '3_5'
+  - '3_7'
+  distance: 7
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of the labyrinth, a figure emerges from the shadows, their form
+    a harmonious blend of light and darkness. The air around them is charged with
+    an aura of authority and mystery, as if they hold the key to unlocking hidden
+    truths.
+
+
+    The figure appears as a being of radiant light, their form both ethereal and solid.
+    They wear a cloak of deep blue, with intricate patterns that seem to move and
+    change with the light. Their eyes, pools of iridescent blue, reflect a depth of
+    knowledge that borders on omniscience.'
+  title: Temporal Oracle
+  npc: The figure appears as a being of radiant light, their form both ethereal and
+    solid. They wear a cloak of deep blue, with intricate patterns that seem to move
+    and change with the light. Their eyes, pools of iridescent blue, reflect a depth
+    of knowledge that borders on omniscience.
+  actions:
+    '2_6': Step into the temporal vortex.
+    '3_5': Navigate the temporal corridor.
+    '3_7': Shift to the future node.
+  image: Harmonious blend of light and darkness, aura of authority and mystery.
+  image_filename: 3_6.png
+'7_3':
+  neighbors:
+  - '6_3'
+  - '7_2'
+  - '7_4'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, you encounter a figure cloaked in shadows, their presence a whisper
+    of ancient wisdom. The air around them is charged with an aura of profound knowledge,
+    as if the very essence of enlightenment lies within their grasp.
+
+
+    The figure appears as a being of celestial light, their form both ethereal and
+    solid. They wear a robe of deep violet, with patterns that dance like auroras.
+    Their face, a mirror of infinite knowledge, glows with a serene radiance.'
+  title: Temporal Convergence
+  npc: The figure appears as a being of celestial light, their form both ethereal
+    and solid. They wear a robe of deep violet, with patterns that dance like auroras.
+    Their face, a mirror of infinite knowledge, glows with a serene radiance.
+  actions:
+    '6_3': Temporal shift to the past node.
+    '7_2': Temporal portal to the north.
+    '7_4': Temporal conduit to the south.
+  image: Cloaked in shadows, whisper of ancient wisdom. Aura charged with profound
+    knowledge, essence of enlightenment grasped.
+  image_filename: 7_3.png
+'3_7':
+  neighbors:
+  - '4_7'
+  - '3_6'
+  distance: 8
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At this nexus, you confront a temporal barrier, a challenge inscribed in
+    the fabric of reality itself. The air grows heavy with the weight of centuries,
+    and the very particles of space and time seem to converge upon you. An ancient
+    puzzle awaits, woven into the very essence of this moment, requiring not just
+    skill, but an understanding of the deepest mysteries of existence.
+
+
+    The challenge here is to solve the ancient temporal riddle inscribed upon the
+    walls. You must decipher the cryptic symbols, align the cosmic frequencies, and
+    synchronize the quantum nodes to unlock the next temporal node.'
+  title: Temporal Nexus
+  challenge: The challenge here is to solve the ancient temporal riddle inscribed
+    upon the walls. You must decipher the cryptic symbols, align the cosmic frequencies,
+    and synchronize the quantum nodes to unlock the next temporal node.
+  actions:
+    '4_7': Temporal vortex to the east.
+    '3_6': Temporal conduit to the west.
+  image: Temporal barrier inscribed in reality, air heavy with centuries' weight.
+    Ancient puzzle woven into essence of moment, particles of space and time converge.
+  image_filename: 3_7.png
+'7_4':
+  neighbors:
+  - '7_3'
+  - '7_5'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, amidst the flickering screens and humming machinery, you encounter
+    a figure draped in a cloak of shadow, their presence both ominous and enigmatic.
+    The air around you grows colder, and the whispers of forgotten lore seem to coalesce
+    into a single, knowing gaze. This guardian watches, ready to test your worthiness,
+    their eyes reflecting the depths of time itself.
+
+
+    The figure stands tall, cloaked in a deep velvety black that seems to absorb light.
+    Their silhouette is graceful yet imposing, with features etched in shadows. The
+    eyes, a piercing blue, gleam faintly in the dim light, reflecting a wisdom that
+    seems both ancient and profound.'
+  title: Temporal Confluence
+  npc: The figure stands tall, cloaked in a deep velvety black that seems to absorb
+    light. Their silhouette is graceful yet imposing, with features etched in shadows.
+    The eyes, a piercing blue, gleam faintly in the dim light, reflecting a wisdom
+    that seems both ancient and profound.
+  actions:
+    '7_3': Temporal vortex to the west.
+    '7_5': Temporal conduit to the east.
+  image: Figure draped in shadow, presence ominous and enigmatic. Cold air, whispers
+    of forgotten lore coalescing into knowing gaze.
+  image_filename: 7_4.png
+'4_7':
+  neighbors:
+  - '3_7'
+  - '5_7'
+  distance: 9
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, you encounter a figure shrouded in a misty cloak, their form indistinct
+    yet commanding. The air around you becomes charged with an aura of ancient power,
+    and the whispers of knowledge seem to resonate with a resonance that echoes through
+    the very fabric of time. This guardian stands at the threshold, ready to guide
+    or challenge you, depending on your readiness and understanding.
+
+
+    The figure appears before you, clad in robes that seem to blend with the shadows.
+    Their skin is pale and unremarkable, yet there is an intensity in their gaze that
+    commands attention. The presence is palpable, a mix of ancient wisdom and unyielding
+    authority.'
+  title: Temporal Threshold
+  npc: The figure appears before you, clad in robes that seem to blend with the shadows.
+    Their skin is pale and unremarkable, yet there is an intensity in their gaze that
+    commands attention. The presence is palpable, a mix of ancient wisdom and unyielding
+    authority.
+  actions:
+    '3_7': Temporal conduit to the north.
+    '5_7': Temporal conduit to the south.
+  image: Misty cloak shrouding indistinct yet commanding form. Charged air, resonant
+    whispers echoing through time.
+  image_filename: 4_7.png
+'7_5':
+  neighbors:
+  - '6_5'
+  - '7_4'
+  - '7_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'At the apex of this level, you face a challenge that seems to defy logic
+    and comprehension. A lattice of glowing nodes encases a central platform, each
+    node pulsating with a frequency that resonates with the very fabric of existence.
+    To proceed, you must align your thoughts and actions perfectly, as if guiding
+    a delicate thread through a labyrinthine web. Failure to do so results in a temporal
+    distortion, forcing you back to the last junction. Success grants you passage
+    to the next realm, where the secrets of the universe lie hidden.
+
+
+    The challenge here requires you to synchronize your thoughts with the pulsating
+    nodes. Each node emits a frequency that must be matched precisely to activate
+    the pathway forward. Misalignment results in a temporal disturbance, requiring
+    a return to the previous junction. Correct synchronization leads to the next level,
+    unlocking the secrets of the universe.'
+  title: Temporal Gateway
+  challenge: The challenge here requires you to synchronize your thoughts with the
+    pulsating nodes. Each node emits a frequency that must be matched precisely to
+    activate the pathway forward. Misalignment results in a temporal disturbance,
+    requiring a return to the previous junction. Correct synchronization leads to
+    the next level, unlocking the secrets of the universe.
+  actions:
+    '6_5': Temporal conduit to the north-west.
+    '7_4': Temporal conduit to the south.
+    '7_6': Temporal conduit to the south-east.
+  image: Lattice of glowing nodes pulsating with existence, central platform surrounded
+    by glowing nodes. Temporal distortion forces return to last junction, success
+    grants passage to next realm.
+  image_filename: 7_5.png
+'5_7':
+  neighbors:
+  - '4_7'
+  - '6_7'
+  - '5_6'
+  distance: 10
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'In the heart of this network, you encounter an entity cloaked in the whispers
+    of the past. A figure stands amidst flickering lights, its form both familiar
+    and alien. Eyes that seem to see into the very essence of time watch you with
+    an enigmatic silence, their presence a silent guardian of forgotten knowledge.
+    The air around you grows charged, as if the very air itself is alive with ancient
+    secrets.
+
+
+    The figure here is tall and slender, dressed in a blend of metallic and organic
+    materials. Their skin glows softly, a subtle luminescence that suggests they are
+    connected to the temporal currents of the facility. Eyes, large and seemingly
+    void of pupil, reflect a depth that seems to pierce the very fabric of reality.
+    They stand quietly, a sentinel of forgotten knowledge, awaiting your arrival.'
+  title: Temporal Confluence
+  npc: The figure here is tall and slender, dressed in a blend of metallic and organic
+    materials. Their skin glows softly, a subtle luminescence that suggests they are
+    connected to the temporal currents of the facility. Eyes, large and seemingly
+    void of pupil, reflect a depth that seems to pierce the very fabric of reality.
+    They stand quietly, a sentinel of forgotten knowledge, awaiting your arrival.
+  actions:
+    '4_7': Temporal conduit to the north.
+    '6_7': Temporal conduit to the south.
+    '5_6': Temporal conduit to the north-west.
+  image: Entity cloaked in whispers of the past, figure amidst flickering lights.
+    Eyes watch with enigmatic silence, air charged with ancient secrets.
+  image_filename: 5_7.png
+'6_5':
+  neighbors:
+  - '5_5'
+  - '7_5'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, you encounter a being that seems to have transcended the mundane, a
+    figure of light and shadow, its presence both comforting and foreboding. The figure
+    stands at the edge of a precipice of knowledge, eyes that hold the wisdom of countless
+    eras. Its form is a blend of ancient and modern, a guardian of secrets that echo
+    through the corridors of time.
+
+
+    The figure here is tall and ethereal, with a silvery glow emanating from their
+    attire. Their eyes, pools of deep, reflective blue, seem to see beyond the veil
+    of the present. They stand gracefully, a figure of both power and mystery, awaiting
+    your approach with an air of serene anticipation.'
+  title: Temporal Threshold
+  npc: The figure here is tall and ethereal, with a silvery glow emanating from their
+    attire. Their eyes, pools of deep, reflective blue, seem to see beyond the veil
+    of the present. They stand gracefully, a figure of both power and mystery, awaiting
+    your approach with an air of serene anticipation.
+  actions:
+    '5_5': Temporal conduit to the south.
+    '7_5': Temporal conduit to the north.
+    '6_6': Temporal conduit to the east.
+  image: Being of light and shadow, figure at edge of knowledge. Eyes hold wisdom
+    of countless eras, form blending ancient and modern.
+  image_filename: 6_5.png
+'7_6':
+  neighbors:
+  - '6_6'
+  - '7_5'
+  - '7_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'At the edge of the facility, you find a figure standing amidst the crystalline
+    structures, its presence a blend of ancient and modern. The figure is cloaked
+    in a gown that shifts with the light, eyes that seem to hold the secrets of forgotten
+    worlds. With a silent grace, they awaits your arrival, a guardian of the unknown.
+
+
+    The figure here appears as a shimmering silhouette, draped in a cloak of iridescent
+    fibers. Their visage is a mix of ancient and futuristic, eyes that glow softly
+    with an inner light. They stand silently, a sentinel of the temporal threshold,
+    awaiting your approach with an aura of both authority and mystery.'
+  title: Temporal Gateway
+  npc: The figure here appears as a shimmering silhouette, draped in a cloak of iridescent
+    fibers. Their visage is a mix of ancient and futuristic, eyes that glow softly
+    with an inner light. They stand silently, a sentinel of the temporal threshold,
+    awaiting your approach with an aura of both authority and mystery.
+  actions:
+    '6_6': Temporal conduit to the west.
+    '7_5': Temporal conduit to the west.
+    '7_7': Temporal conduit to the west.
+  image: Gown shifting with light, figure cloaked in ancient and modern. Eyes hold
+    secrets of forgotten worlds, awaiting your arrival.
+  image_filename: 7_6.png
+'6_7':
+  neighbors:
+  - '5_7'
+  - '7_7'
+  - '6_6'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: At (6, 7), multiple paths converge like threads of fate, each leading to a
+    realm of potential. To your left, a pathway stretches towards the north, promising
+    secrets hidden in the stars. Ahead, the path to the west beckons, a gateway to
+    forgotten memories and distant lands. To your right, a path ascends towards the
+    east, leading to a realm of creation and innovation. Each path whispers stories
+    yet untold, inviting you to choose the path that aligns with the mysteries you
+    seek.
+  title: Temporal Confluence
+  actions:
+    '5_7': Temporal conduit to the north.
+    '7_7': Temporal conduit to the east.
+    '6_6': Temporal conduit to the north.
+  image: Multiple paths converge like threads of fate, north leads to secrets in stars,
+    west to forgotten memories and distant lands, east to realm of creation and innovation.
+  image_filename: 6_7.png
+'5_6':
+  neighbors:
+  - '6_6'
+  - '5_5'
+  - '5_7'
+  distance: 11
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, you encounter a figure cloaked in shadows, their presence both enigmatic
+    and foreboding. Their form is barely visible, a silhouette against the glowing
+    walls, yet their gaze is piercing, a beacon of knowledge and caution. They seem
+    to have been waiting for your arrival, their lips moving in silent conversation
+    with the ambient sounds.
+
+
+    Their appearance is that of a figure draped in a cloak of deep crimson, their
+    silhouette barely visible in the soft, ethereal light that permeates the room.
+    The cloak flows like shadows, and their face is obscured by a hood, but you can
+    sense a presence that seems both ancient and wise.'
+  title: Temporal Gateway
+  npc: Their appearance is that of a figure draped in a cloak of deep crimson, their
+    silhouette barely visible in the soft, ethereal light that permeates the room.
+    The cloak flows like shadows, and their face is obscured by a hood, but you can
+    sense a presence that seems both ancient and wise.
+  actions:
+    '6_6': Temporal conduit to the north.
+    '5_5': Temporal conduit to the west.
+    '5_7': Temporal conduit to the east.
+  image: Silhouette against glowing walls, piercing gaze. Silent conversation with
+    ambient sounds, lips moving in silence.
+  image_filename: 5_6.png
+'5_5':
+  neighbors:
+  - '6_5'
+  - '5_6'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: false
+  has_npc: true
+  has_challenges: false
+  is_unusual: false
+  text: 'Here, you encounter a figure ensconced in a silent contemplation, their form
+    a blend of luminescence and shadow. The figure is draped in a robe of iridescent
+    hues, their eyes closed as if lost in a realm beyond the mundane. The air around
+    them is charged with an aura of wisdom and anticipation, a presence that seems
+    to hold the secrets of the cosmos within its grasp.
+
+
+    Their appearance is that of an ethereal figure, their form partially obscured
+    by a veil of light that dances around them. They wear a robe of crystalline material,
+    reflecting the ambient glow of the room. Their face is serene, with eyes that
+    seem to hold the wisdom of ages, and their posture suggests a deep concentration.'
+  title: Temporal Confluence
+  npc: Their appearance is that of an ethereal figure, their form partially obscured
+    by a veil of light that dances around them. They wear a robe of crystalline material,
+    reflecting the ambient glow of the room. Their face is serene, with eyes that
+    seem to hold the wisdom of ages, and their posture suggests a deep concentration.
+  actions:
+    '6_5': Temporal conduit to the north.
+    '5_6': Temporal conduit to the south.
+  image: Iridescent robe draped over luminescent figure, eyes closed in a realm beyond
+    the mundane. Air charged with wisdom and anticipation, secrets of the cosmos within
+    grasp.
+  image_filename: 5_5.png
+'6_6':
+  neighbors:
+  - '5_6'
+  - '7_6'
+  - '6_5'
+  - '6_7'
+  distance: 12
+  is_start: false
+  is_goal: false
+  is_dead_end: false
+  is_junction: true
+  has_npc: false
+  has_challenges: true
+  is_unusual: false
+  text: 'Here, you stand at the threshold of a chamber where time itself seems to
+    weave intricate patterns upon the walls. The air is thick with the scent of ancient
+    knowledge and the faint hum of powerful machinery. A challenge looms before you,
+    a puzzle of data and symbols that requires insight and precision to decipher.
+    The chamber is a nexus of thought and energy, a place where the boundaries between
+    reality and possibility blur.
+
+
+    The challenge here is to decipher a sequence of ancient glyphs embedded in the
+    walls. Each glyph represents a piece of information crucial for unlocking the
+    AI server. Successfully decoding the sequence will allow you to proceed to the
+    next stage.'
+  title: Temporal Nexus
+  challenge: The challenge here is to decipher a sequence of ancient glyphs embedded
+    in the walls. Each glyph represents a piece of information crucial for unlocking
+    the AI server. Successfully decoding the sequence will allow you to proceed to
+    the next stage.
+  actions:
+    '5_6': Temporal conduit to the south-west.
+    '7_6': Temporal conduit to the south-east.
+    '6_5': Temporal conduit to the north-west.
+    '6_7': Temporal conduit to the north-east.
+  image: Intricate patterns woven upon the walls, thick air with the scent of ancient
+    knowledge. Chamber a nexus of thought and energy, boundaries between reality and
+    possibility blur.
+  image_filename: 6_6.png
+'7_7':
+  neighbors:
+  - '6_7'
+  - '7_6'
+  distance: 12
+  is_start: false
+  is_goal: true
+  is_dead_end: false
+  is_junction: false
+  has_npc: false
+  has_challenges: false
+  is_unusual: false
+  text: Here, you encounter the culmination of millennia of scientific pursuit, a
+    sanctuary of power and knowledge. The room is a fusion of brilliance and silence,
+    its walls lined with glowing screens displaying the workings of the cosmos. At
+    the heart of this chamber stands an AI server, its circuits humming with the energy
+    of infinite possibilities. It is here that the secrets of the universe are said
+    to reside, awaiting those who can unlock its profound mysteries.
+  title: Temporal Oracle
+  actions:
+    '6_7': Temporal conduit to the north.
+    '7_6': Temporal conduit to the south.
+  image: Glowing screens displaying cosmic workings, AI server humming with infinite
+    possibilities. Room a fusion of brilliance and silence, secrets of the universe
+    reside.
+  image_filename: 7_7.png

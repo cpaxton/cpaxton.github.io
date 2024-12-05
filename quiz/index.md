@@ -3,7 +3,7 @@ layout: page
 permalink: /quiz/index.html
 title: Infinite Quiz Machine
 tags: [about, Chris, Paxton, Chris Paxton, quiz, infinite quiz machine, LLMs]
-categories: [quiz]
+categories: [virgil, quiz, LLMs]
 chart: true
 ---
 

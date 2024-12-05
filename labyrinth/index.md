@@ -13,21 +13,21 @@ Check it out as a part of [Virgil](https://github.com/cpaxton/virgil). Or explor
 
 ## Places to explore
 
-[The Labyrinth of Minos](minos/index.html)
+[The Labyrinth of Minos](/labyrinth/minos/index.html)
 
-[A haunted mansion](haunted_mansion/index.html)
+[A haunted mansion](/labyrinth/haunted_mansion/index.html)
 
-[A dark forest](dark_forest/index.html)
+[A dark forest](/labyrinth/dark_forest/index.html)
 
-[A strange city](strange_city/index.html)
+[A strange city](/labyrinth/strange_city/index.html)
 
-[Candyland](candyland/index.html)
+[Candyland](/labyrinth/candyland/index.html)
 
-[A crumbling castle](crumbling_castle/index.html)
+[A crumbling castle](/labyrinth/crumbling_castle/index.html)
 
-[A high-tech research facility](research_facility/index.html)
+[A high-tech research facility](/labyrinth/research_facility/index.html)
 
-[An alien bazaar](alien_bazaar/index.html)
+[An alien bazaar](/labyrinth/alien_bazaar/index.html)
 
 ## What is it?
 

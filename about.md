@@ -28,6 +28,7 @@ You can also find a list of my papers on [Google Scholar](https://scholar.google
 
 ### News and Links
 
+  * [Stretch AI launch and the Chinese perspective of AI and humanoid robots](https://robotsandstartups.substack.com/p/stretch-ai-launch-and-chinese-perspective) - on Robots & Startups by Andrea Keay
   * [AI models let robots carry out tasks in unfamiliar environments](https://www.technologyreview.com/2024/09/20/1104233/ai-models-let-robots-carry-out-tasks-in-unfamiliar-environments) - MIT Technology Review
   * [How LLMs are Usering In A New Era of Robotics](https://venturebeat.com/ai/how-llms-are-ushering-in-a-new-era-of-robotics/) - VentureBeat
   * [This robot can tidy a room without any help](https://www.technologyreview.com/2024/02/01/1087445/this-robot-can-tidy-a-room-without-any-help/) - MIT Technology Review

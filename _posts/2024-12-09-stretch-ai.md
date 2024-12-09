@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stretch AI: Open-Source Embodied AI Stack
+title: Stretch AI, an Open-Source Embodied AI Stack for Mobile Manipulation
 ---
 
 I've been working on a set of tools to make it easy to test embodied AI tools and systems in homes: [Stretch AI](https://github.com/hello-robot/stretch_ai/), a set of open-source tools for language-guided autonomy, exploration, navigation, and learning from demonstration.
@@ -18,7 +18,6 @@ You can even give voice commands to the robot and tell it to perform complex, mu
 In addition, we have our own fork of the [HuggingFace LeRobot](https://github.com/hello-robot/lerobot) library, which lets you perform leearning from demonstration. You can use [Dex Teleop](https://github.com/hello-robot/stretch_dex_teleop) to collect multiple demonstrations and train a policy in your environment, which can then be deployed on the robot:
 
 {% include youtube.html id="JJgvcSWUqps" %}
-
 
 These can then be combined sequentially to create more complex skills. Tell a robot to go and open the cupboard and take out a bottle and it can chain actions together using your trained Diffusion Policy skills. There's support for a number of different large language models as well, including OpenAI's GPT-4o, Qwen, and more.
 

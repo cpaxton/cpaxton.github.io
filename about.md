@@ -28,6 +28,7 @@ You can also find a list of my papers on [Google Scholar](https://scholar.google
 
 ### News and Links
 
+  * [Multiple Magicbots](https://spectrum.ieee.org/video-friday-multiple-magicbots) including [Stretch AI](https://github.com/hello-robot/stretch_ai/) in the video roundup - IEEE Spectrum
   * [Hello Robot’s Stretch AI toolkit explores embodied intelligence](https://www.therobotreport.com/stretch-ai-toolkit-explore-embodied-intelligence/) - The Robot Report
   * [Stretch AI launch and the Chinese perspective of AI and humanoid robots](https://robotsandstartups.substack.com/p/stretch-ai-launch-and-chinese-perspective) - on Robots & Startups by Andrea Keay
   * [AI models let robots carry out tasks in unfamiliar environments](https://www.technologyreview.com/2024/09/20/1104233/ai-models-let-robots-carry-out-tasks-in-unfamiliar-environments) - MIT Technology Review

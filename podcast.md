@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /about/podcast.html
 title: RoboPapers Podcast
 ---
 

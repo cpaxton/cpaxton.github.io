@@ -2,9 +2,6 @@
 layout: page
 permalink: /about/podcast.html
 title: RoboPapers Podcast
-tags: [podcast]
-categories: [podcast]
-chart: true
 ---
 
 Recently I started a podcast called RoboPapers with [Michael Cho](https://x.com/micoolcho) of [Frodobots](https://www.frodobots.ai/).

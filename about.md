@@ -7,7 +7,9 @@ categories: [about]
 chart: true
 ---
 
-I am a robotics and AI researcher, currently leading Embodied AI at [Hello Robot](https://hello-robot.com/). At the past, I've worked at NVIDIA Research and at FAIR, the fundamental AI research arm of Meta. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
+I am a robotics and AI researcher working on bringing generalist AI-enabled robots to the real world.
+
+I've led Embodied AI at [Hello Robot](https://hello-robot.com/). In the past, I've worked at NVIDIA Research and at FAIR, the fundamental AI research arm of Meta. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
 
 <figure>
   <p align="center">

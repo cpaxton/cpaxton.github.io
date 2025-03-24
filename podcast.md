@@ -8,6 +8,8 @@ Recently I started a podcast called RoboPapers with [Michael Cho](https://x.com/
 
 Find the whole [podcast on Spotify](https://open.spotify.com/show/3U0Ed7poaOElItEyUPkuto) or [Youtube](https://www.youtube.com/@RoboPapers).
 
+There's also an [RSS feed](https://anchor.fm/s/10203e398/podcast/rss).
+
 ## Episodes
 
 | # | Guest | Title | Youtube | Spotify |

@@ -11,6 +11,8 @@ I am a robotics and AI researcher working on bringing generalist AI-enabled robo
 
 I've led Embodied AI at [Hello Robot](https://hello-robot.com/). In the past, I've worked at NVIDIA Research and at FAIR, the fundamental AI research arm of Meta. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
 
+I have a Substack called [It Can Think](https://itcanthink.substack.com/) where I post about AI and robotics generally, and a small podcast with Michael Cho called RoboPapers, which you can find [on Spotify](https://open.spotify.com/show/3U0Ed7poaOElItEyUPkuto) or [Youtube](https://www.youtube.com/@RoboPapers).
+
 <figure>
   <p align="center">
     <img src="{{ site.url }}/images/hello_robot_chris.jpg " alt="Chris with a Hello Robot Stretch" width="500">

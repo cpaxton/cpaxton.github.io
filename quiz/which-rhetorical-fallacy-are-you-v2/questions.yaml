@@ -1,0 +1,141 @@
+- question: |-
+    You're arguing with a friend about whether pineapple belongs on pizza. What do you say?
+  image: |-
+    A vibrant, cartoon-style pizza with a large, perfectly placed pineapple slice on top, contrasted against a backdrop of angry, cartoon faces representing opposing viewpoints.
+  options:
+    A: |-
+      “Anyone who says pineapple belongs on pizza clearly doesn’t understand the concept of Italian cuisine and probably eats their shoes.”
+    B: |-
+      "My culinary school instructor, Chef Pierre, says pineapple on pizza is an abomination, therefore it must be wrong."
+    C: |-
+      “You’re just saying that because you’re a picky eater who can’t handle a little flavor!”
+    D: |-
+      “If we let people put pineapple on pizza, next thing you know, they'll be putting broccoli on burgers, and then society will collapse!”
+    E: “Everyone I know says pineapple on pizza is delicious, so it must be good.”
+- question: |-
+    A politician claims that increasing funding for public schools will inevitably lead to higher taxes, a bloated bureaucracy, and a decline in private education quality. What's your immediate reaction?
+  image: |-
+    A winding, brightly colored road leading towards a dark, stormy cityscape, with cartoonish figures representing various aspects of society (education, taxes, government) struggling along the path.
+  options:
+    A: |-
+      "They're twisting the issue; it's not about the schools, it's about their political agenda to demonize any government spending."
+    B: |-
+      “According to the Congressional Budget Office’s report on fiscal policy, increased government spending often leads to unforeseen economic consequences, so this politician is right to be concerned.”
+    C: |-
+      "That politician is clearly just trying to scare voters with baseless claims to distract from their own failures!"
+    D: |-
+      “If we start with increased funding for schools, it'll inevitably lead to uncontrolled spending, followed by a decline in educational standards, and ultimately, a complete breakdown of our education system.”
+    E: |-
+      “Everyone on my social media feed agrees that increased funding for schools is a bad idea, so it must be true.”
+- question: |-
+    You’re at a party and someone starts criticizing your favorite band. What do you do?
+  image: |-
+    A close-up of a record spinning on a turntable, with a distorted reflection of a person's angry face superimposed over the spinning vinyl. The background is a chaotic party scene, slightly blurred.
+  options:
+    A: |-
+      "Oh, so you’re just jealous because you have terrible taste in music and can't appreciate real artistry, unlike me who has excellent taste!"
+    B: |-
+      “My music professor, Dr. Anya Sharma, has extensively analyzed this band’s lyrical complexity and innovative use of instrumentation, so their music is objectively good.”
+    C: |-
+      “You’re just saying that because you’re a grumpy old person who doesn’t understand anything about modern culture!”
+    D: |-
+      "If we let people criticize my favorite band, next thing you know, everyone will be criticizing all forms of art, and creativity will disappear from the world!"
+    E: “Everyone at this party loves this band, so you’re just wrong.”
+- question: |-
+    You accidentally spill coffee on your shirt right before an important meeting. What's your explanation?
+  image: |-
+    A cartoon character wearing a stained shirt, looking panicked while standing in front of a towering skyscraper representing a meeting. The coffee stain is shaped like a question mark.
+  options:
+    A: |-
+      "My shirt is stained because the universe is conspiring against me to sabotage my success, obviously!"
+    B: |-
+      "According to my grandmother's advice, spills happen, and it’s just a minor inconvenience; it doesn't reflect on my abilities or character."
+    C: |-
+      "The barista obviously hates me and deliberately made the coffee too hot to spill!"
+    D: |-
+      “If I’m late because of this stain, I’ll miss the meeting, then I’ll lose my job, and then I’ll be living on the streets!”
+    E: '"Everyone spills coffee sometimes, so it''s no big deal."'
+- question: |-
+    You're trying to convince your pet goldfish, Finnegan, to invest in a cryptocurrency. What argument do you use?
+  image: |-
+    A brightly colored, slightly surreal scene depicting a goldfish wearing a tiny suit and tie, looking confused while staring at a complex chart filled with fluctuating numbers. A human hand is reaching into the tank, gesturing towards the chart.
+  options:
+    A: |-
+      “Finnegan, if you don’t invest, you’ll be the only goldfish in the entire aquarium who’s not financially secure, and everyone will judge you!”
+    B: |-
+      "According to a recent Forbes article, blockchain technology is poised to revolutionize the financial sector, making this a potentially lucrative investment for even a goldfish."
+    C: |-
+      “You’re just jealous because you’re a fish and you don’t understand the complexities of the digital economy!”
+    D: |-
+      “If we invest in this cryptocurrency, it will initially fluctuate wildly, then the market will crash, and Finnegan will lose all his savings, proving that cryptocurrency is inherently unstable.”
+    E: “All the other goldfish in the aquarium are investing, so Finnegan should too!”
+- question: |-
+    You’re describing your dream vacation to a skeptical friend, and they ask how you’ll afford it. What do you respond?
+  image: |-
+    A shimmering, fantastical island paradise with palm trees, crystal-clear water, and a luxurious villa, but with a faint, glitching effect suggesting it’s not entirely real. A single, tiny, worried-looking person is standing on the beach.
+  options:
+    A: |-
+      “You’re just jealous because you’ve never been on a truly amazing vacation and can’t comprehend the possibility of experiencing something extraordinary!”
+    B: |-
+      "According to my meticulously crafted budget spreadsheet, I've allocated funds from various sources, including savings, a side hustle, and a temporary reduction in non-essential expenses, making it entirely feasible."
+    C: |-
+      “You’re just saying that because you want to rain on my parade and make me feel bad about wanting nice things!”
+    D: |-
+      “If I don’t book this vacation now, I’ll never get around to it, and I’ll spend the rest of my life regretting not experiencing this incredible opportunity, leading to a life filled with disappointment and missed opportunities!”
+    E: '"Everyone''s going on amazing vacations, so I deserve one too!"'
+- question: |-
+    Remembering your answers from previous questions, which one most accurately describes how you would react if someone complimented your new shoes?
+  image: |-
+    A pair of shoes, one glowing with a halo and the other shrouded in shadows, standing on a seesaw, illustrating the balance between genuine appreciation and potential fallacies.
+  options:
+    A: |-
+      “You’re just saying that because you feel obligated to be nice, and secretly think my shoes are hideous!”
+    B: |-
+      "My podiatrist, Dr. Lee, specifically recommended this brand for its ergonomic design and support, so their quality is verifiable."
+    C: “You only like my shoes because you want to copy my style and steal my ideas!”
+    D: |-
+      “If I accept this compliment, I'll become arrogant and start thinking I’m better than everyone else, leading to social isolation and a downfall.”
+    E: “Everyone’s complimenting my shoes, so they must be amazing.”
+- question: |-
+    You're explaining why you haven't finished your taxes yet. What's your reasoning?
+  image: |-
+    A chaotic pile of papers, receipts, and forms overflowing from a desk, with a cartoon character looking overwhelmed and surrounded by animated, mischievous tax forms.
+  options:
+    A: |-
+      "The government is just trying to steal my money anyway, so why bother completing the forms?"
+    B: |-
+      "According to the IRS guidelines, certain deductions and credits can significantly reduce my tax liability, and I’m carefully reviewing all applicable options before finalizing my return."
+    C: |-
+      "You're only questioning me about my taxes because you're a busybody and enjoy interfering in other people's affairs!"
+    D: |-
+      “If I finish my taxes, I’ll realize how much money I owe, and I’ll be devastated, leading to a period of intense anxiety and financial instability.”
+    E: '"Everyone files their taxes late, so I''m not the only one."'
+- question: |-
+    You're describing your feelings about a new, experimental cooking gadget you purchased online. What’s your explanation to a friend who asks if it works?
+  image: |-
+    A futuristic, bizarre-looking cooking gadget with blinking lights and strange appendages, surrounded by a cloud of smoke and scattered, partially cooked food. The gadget appears to be both impressive and slightly menacing.
+  options:
+    A: |-
+      "Anyone who says this gadget doesn't work is just a close-minded traditionalist who can't appreciate innovation!"
+    B: |-
+      "According to the product’s detailed specifications and user reviews, the gadget utilizes advanced thermal technology to achieve precise temperature control, resulting in consistent and predictable cooking outcomes."
+    C: |-
+      "You're only questioning the gadget because you're jealous that I have the latest technology and you're still using outdated appliances!"
+    D: |-
+      “If I use this gadget to cook dinner, it’ll explode, ruin my kitchen, and I’ll be banned from ever using cooking gadgets again!”
+    E: “Everyone on TikTok says it’s amazing, so it must work perfectly!”
+- question: |-
+    Considering all your previous answers, if you were a flavor of ice cream, which would you be and why?
+  image: |-
+    A swirling vortex of ice cream flavors, with each flavor representing a different fallacy. A single, confused-looking cartoon character is reaching into the vortex, unsure which flavor to choose.
+  options:
+    A: |-
+      "I'd be 'Disappointment Delight,' because I'm unfairly maligned and misunderstood, just like my critics say!"
+    B: |-
+      "I'd be 'Vanilla Bean Validation,' a classic flavor recognized for its consistent quality and reliability, backed by extensive research and positive reviews."
+    C: |-
+      "I'd be 'Bitter Blast,' because I'm always unfairly targeted and forced to defend myself against ridiculous accusations!"
+    D: |-
+      “If I choose 'Chocolate Chunk Chaos,' it’ll be too rich and overwhelming, causing a disastrous brain freeze and a complete loss of rational thought!”
+    E: |-
+      "I'd be 'Popular Pistachio,' because everyone loves it, and popularity proves everything!"

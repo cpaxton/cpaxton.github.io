@@ -46,3 +46,9 @@ world:
 ... into an environment you can explore, filled with NPCs, challenges to overcome, etc. Of course, none of those things are really implemented in the current version of Labyrinth, but one day!
 
 
+I hope you enjoy them. If you have any feedback, or want to see more, please let me know! You can reach me on [Twitter/X](https://twitter.com/chris_j_paxton) or [Bluesky](https://bsky.app/profile/cpaxton.bsky.social).
+
+## Play More Games
+
+- [Boat vs Kraken Game](/boat_game/index.html) - Use the arrow keys to move the boat and avoid the kraken. Collect the coins for points. Created with Perplexity.
+- [Infinite Quiz Machine](/quiz/index.html) - A collection of AI-generated quizzes that are weird, fun, and a little bit uncanny.

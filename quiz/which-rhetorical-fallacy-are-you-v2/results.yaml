@@ -1,0 +1,40 @@
+A:
+  result: Straw Man Fallacy
+  description: |-
+    You're a master of misrepresentation! You tend to take someone’s argument and twist it into an exaggerated, ridiculous version, just to make it easier to knock down. It's not about understanding their actual point; it's about creating a caricature you can easily defeat. You might not even realize you’re doing it, but your habit of simplifying complex issues into easily-demolished versions of themselves makes you a classic Straw Man.
+  image: |-
+    A cartoon scarecrow made of straw, confidently knocking over a meticulously built house of cards. The scarecrow is grinning, and the house of cards is collapsing in a cloud of dust.
+  letter: A
+  topic: Which rhetorical fallacy are you?
+B:
+  result: Appeal to Authority
+  description: |-
+    You're all about trusting the experts! You believe that if someone with a title, position, or perceived authority says something, it must be true. While respecting expertise is important, you sometimes overlook critical thinking and independent evaluation. You're quick to accept claims simply because of who said them, rather than analyzing the evidence yourself. You are the person who unquestioningly accepts the opinion of the "expert" regardless of whether they are actually an expert on the topic at hand.
+  image: |-
+    A person with a large, ornate crown standing on a platform, addressing a crowd of people who are all looking up at them with expressions of awe and unquestioning belief. The background is a blurred cityscape.
+  letter: B
+  topic: Which rhetorical fallacy are you?
+C:
+  result: Ad Hominem Fallacy
+  description: |-
+    You're all about personal attacks! Instead of addressing the argument itself, you focus on discrediting the person making it. Whether it's their appearance, their past, or their personality, you find a way to attack them personally to undermine their argument. It’s not about logic or reason; it’s about diverting attention and making your opponent look bad. You’re skilled at deflecting criticism by turning it back on the source.
+  image: |-
+    Two cartoon characters engaged in a heated argument. One character is drawing caricatures of the other on a notepad while yelling. The background is a chaotic cityscape filled with swirling words and symbols.
+  letter: C
+  topic: Which rhetorical fallacy are you?
+D:
+  result: Slippery Slope Fallacy
+  description: |-
+    You're a worrier, a catastrophizer! You believe that one small action will inevitably lead to a series of increasingly negative consequences, creating an unstoppable chain reaction. You warn of a future dystopia, often with little evidence to support your claims. You see every decision as a potential gateway to chaos, and you're always predicting the worst-case scenario, even if it's highly improbable.
+  image: |-
+    A single, slightly tilted domino knocking over a cascade of increasingly large and absurd dominoes, culminating in a giant, cartoonish explosion of glitter and confetti.
+  letter: D
+  topic: Which rhetorical fallacy are you?
+E:
+  result: Bandwagon Fallacy
+  description: |-
+    You’re all about popularity! You believe that if something is popular or many people believe it, it must be true or good. You're easily swayed by trends and peer pressure, and you often adopt opinions simply because they're widely accepted, without critically evaluating the merits of the idea itself. You’re a follower, and you’re convinced that the majority is always right.
+  image: |-
+    A large crowd of people enthusiastically jumping up and down, all wearing identical hats and chanting a single, vague phrase. The background is a brightly colored, slightly surreal cityscape.
+  letter: E
+  topic: Which rhetorical fallacy are you?

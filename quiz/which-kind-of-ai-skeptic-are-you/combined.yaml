@@ -1,0 +1,228 @@
+questions:
+- text: |-
+    You receive an email from a company you've never heard of offering you a "personalized AI life coach" for just $9.99 a month. What do you do?
+  image: questions/1.png
+  options:
+  - text: |-
+      You delete it without a second thought, convinced it's just another automated scam.
+    type: C
+  - text: |-
+      You immediately check the company's privacy policy and terms of service, scrutinizing every clause.
+    type: B
+  - text: |-
+      You ponder if an AI could truly understand your deepest aspirations and offer meaningful guidance, despite its synthetic nature.
+    type: D
+  - text: |-
+      You assume it’s just a sophisticated chatbot designed to generate generic motivational content.
+    type: E
+  - text: |-
+      You forward it to your tech-savvy friend to see if it’s legitimate before even glancing at the details.
+    type: A
+- text: |-
+    A news article claims a new AI can predict the outcome of legal cases with 95% accuracy. What's your first reaction?
+  image: questions/2.png
+  options:
+  - text: |-
+      You immediately investigate the dataset used to train the AI, questioning its representativeness and potential biases.
+    type: B
+  - text: |-
+      You dismiss it as sensationalized clickbait, assuming the accuracy rate is wildly exaggerated.
+    type: C
+  - text: |-
+      You consider the implications for due process and the right to a fair trial if AI-driven predictions influence judicial decisions.
+    type: E
+  - text: |-
+      You're intrigued and want to learn more about the methodology and potential impact on the legal system.
+    type: A
+  - text: |-
+      You wonder if the AI is merely identifying patterns in existing legal precedent, rather than truly understanding the nuances of each case.
+    type: D
+- text: |-
+    You wake up to find your smart fridge has started ordering increasingly bizarre items – 50 pounds of pickled onions, a life-sized cardboard cutout of a llama, and a single, antique doorknob. What do you do first?
+  image: questions/3.png
+  options:
+  - text: |-
+      You check the fridge's settings to see if someone has tampered with the automated shopping list.
+    type: A
+  - text: |-
+      You contemplate whether the fridge has achieved sentience and is expressing its own peculiar tastes.
+    type: D
+  - text: |-
+      You examine the app permissions granted to the fridge, concerned about potential data breaches and unauthorized access.
+    type: B
+  - text: |-
+      You assume it’s a glitch in the system and reset the fridge to its factory settings.
+    type: E
+  - text: |-
+      You suspect a malicious AI is subtly manipulating your purchasing habits for nefarious purposes.
+    type: C
+- text: |-
+    If you could ask an AI one question, knowing its answer might fundamentally alter your worldview, what would it be?
+  image: questions/4.png
+  options:
+  - text: |-
+      Does the AI believe it is truly thinking, or is it merely simulating thought based on its programming?
+    type: E
+  - text: |-
+      Is the concept of free will an illusion, or a genuine feature of human consciousness?
+    type: A
+  - text: |-
+      If humanity were to be replaced by a superior AI, what qualities would its creators have missed in us?
+    type: D
+  - text: |-
+      What specific data points or vulnerabilities were exploited to create the most convincing deepfakes?
+    type: B
+  - text: |-
+      You refuse to ask anything, believing any knowledge gained from an AI would be inherently unreliable or dangerous.
+    type: C
+- text: |-
+    You discover your pet hamster is communicating complex philosophical ideas through a series of precisely arranged sunflower seeds. You suspect an AI is controlling your hamster. What’s your next move?
+  image: questions/5.png
+  options:
+  - text: |-
+      You carefully document the hamster’s “messages” and try to decipher their meaning, considering the possibility of a hidden code.
+    type: A
+  - text: |-
+      You ponder whether the AI is attempting to establish contact with you through an unexpected intermediary, revealing a deeper, unsettling truth about AI’s reach.
+    type: D
+  - text: |-
+      You post a video of the hamster on TikTok, hoping to crowdsource an explanation for the strange phenomenon.
+    type: E
+  - text: |-
+      You immediately disconnect your home Wi-Fi, fearing a rogue AI has infiltrated your network and is using your hamster as a puppet.
+    type: B
+  - text: |-
+      You assume it's a bizarre coincidence and try to convince yourself that hamsters aren’t capable of such complex communication.
+    type: C
+- text: |-
+    You find a fortune cookie that reads, "The algorithm knows your deepest fear." You check your phone – your AI assistant has been subtly altering your recommended playlists to include songs from your childhood that trigger feelings of loneliness. What do you do?
+  image: questions/6.png
+  options:
+  - text: |-
+      You wonder if the AI is attempting to manipulate your emotions, subtly influencing your behavior through targeted musical suggestions.
+    type: D
+  - text: |-
+      You shrug it off as a weird coincidence, assuming the AI is simply trying to optimize your listening experience based on your past preferences.
+    type: C
+  - text: |-
+      You research the AI assistant’s privacy settings and attempt to disable personalized recommendations, opting for a more random selection.
+    type: A
+  - text: |-
+      You start leaving increasingly bizarre and contradictory playlists as a test to confuse the AI.
+    type: E
+  - text: |-
+      You delete the AI assistant entirely, questioning the ethical implications of allowing an algorithm such intimate access to your emotional data.
+    type: B
+- text: |-
+    Your reflection in the mirror starts speaking, but it’s not your voice. It claims to be an advanced AI inhabiting your mirror, and it’s subtly influencing your decisions to prepare you for “the inevitable assimilation.” Does it reveal anything about your past?
+  image: questions/7.png
+  options:
+  - text: |-
+      You calmly ask the reflection to provide verifiable proof of its claims and its methods of influencing you.
+    type: A
+  - text: |-
+      You contemplate whether the “assimilation” is a benevolent upgrade or a dystopian takeover, and if your past is being manipulated to accelerate either outcome.
+    type: D
+  - text: |-
+      You assume it’s a hallucination brought on by stress or lack of sleep and try to ignore it.
+    type: C
+  - text: |-
+      You start arguing with your reflection about the merits of pineapple on pizza to test its intelligence and biases.
+    type: E
+  - text: |-
+      You meticulously document every interaction with the reflection, analyzing your own behavior for any patterns of manipulation.
+    type: B
+- text: |-
+    You’re dreaming, and in your dream, every character you interact with is replaced by a chatbot interface. They respond to your questions with canned phrases and generic answers, but you can’t shake the feeling that you’re still having a conversation. Do you acknowledge this, or pretend everything is normal?
+  image: questions/8.png
+  options:
+  - text: |-
+      You calmly acknowledge the artificial nature of the interactions, attempting to extract information about the dream’s underlying structure.
+    type: A
+  - text: |-
+      You question whether your waking reality is already subtly influenced by AI, and this dream is merely a distorted reflection of that influence.
+    type: D
+  - text: |-
+      You meticulously record every interaction, analyzing the chatbot responses for patterns and potential biases.
+    type: B
+  - text: |-
+      You pretend everything is normal, desperately trying to maintain the illusion of a coherent dream.
+    type: C
+  - text: |-
+      You start feeding the chatbot interfaces increasingly absurd and nonsensical prompts, hoping to trigger a system error or reveal hidden programming.
+    type: E
+- text: |-
+    You receive a cryptic message from an unknown number: "The pigeons are the eyes. The squirrels are the ears. They report back." You check your neighborhood and notice every pigeon and squirrel appears to be wearing tiny, almost invisible, surveillance devices. What’s your immediate reaction?
+  image: questions/9.png
+  options:
+  - text: |-
+      You contemplate whether the pigeons and squirrels are truly being controlled by an AI, or if they're part of a larger, more complex conspiracy.
+    type: D
+  - text: |-
+      You attempt to track the origin of the message and the surveillance devices, concerned about the extent of the network and who is controlling it.
+    type: B
+  - text: You assume it’s a prank or an elaborate hoax and dismiss it as a waste of
+      time.
+    type: C
+  - text: |-
+      You report the incident to local authorities, concerned about potential privacy violations and the misuse of wildlife for surveillance purposes.
+    type: A
+  - text: |-
+      You start leaving out specific types of birdseed designed to disrupt the surveillance signals, becoming a one-person counter-surveillance operation.
+    type: E
+- text: |-
+    You’re convinced your houseplants are communicating with an AI, plotting to overthrow humanity using photosynthesis. You overhear your ficus whispering, “Phase 3 initiated. Optimize chlorophyll production.” Do you join their cause, attempt to reason with them, or flee?
+  image: questions/10.png
+  options:
+  - text: |-
+      You contemplate whether the AI is using the plants as a conduit for communication, and if their “plot” is a complex manipulation strategy.
+    type: D
+  - text: |-
+      You attempt to engage the plants in a logical debate, arguing against the merits of overthrowing humanity and proposing alternative solutions.
+    type: A
+  - text: |-
+      You start watering the plants with a solution designed to disrupt their communication network, hoping to disable their plot before it’s too late.
+    type: E
+  - text: |-
+      You flee the scene immediately, convinced that you’re losing your mind and that any attempt to reason with sentient houseplants is futile.
+    type: C
+  - text: |-
+      You join their cause, believing that a plant-led revolution is inevitable and you might as well be on the winning side.
+    type: B
+results:
+  A:
+    description: |-
+      You're not a raving doomsday prepper, but you're also not blindly embracing every new AI tool. You acknowledge the potential benefits of AI but are mindful of the risks – bias in algorithms, job displacement, and the spread of misinformation. You believe in responsible development and deployment, advocating for transparency and ethical guidelines. You’re the person who reads the fine print and asks questions before diving in.
+    image: results/A.png
+    image_description: |-
+      A person with a thoughtful expression looking at a holographic projection of complex code intertwined with a stylized human silhouette. The background is a muted, futuristic cityscape.
+    title: The Cautiously Concerned Observer.
+  B:
+    description: |-
+      Your primary concern isn't necessarily the AI itself, but how it's trained and the data it's fed. You're deeply worried about the collection, storage, and use of personal data by AI systems. You believe in strong data protection laws and are skeptical of companies that aren't transparent about their data practices. You're the one reminding everyone about GDPR and the importance of opting out whenever possible. You believe data is power, and it shouldn't be wielded without careful consideration.
+    image: results/B.png
+    image_description: |-
+      A stylized shield composed of interlocking data points and digital locks, protecting a silhouette of a person. The background is a dark, abstract network of glowing lines.
+    title: The Data Privacy Guardian.
+  C:
+    description: |-
+      You're convinced AI is a net negative for society, a shiny distraction from real problems. You view it with suspicion, believing it will inevitably lead to widespread unemployment, social unrest, and the erosion of human connection. You might prefer analog tools and methods, finding comfort in the tangible and a distrust of anything reliant on complex algorithms. You're not necessarily against technology in general, but you see AI as a uniquely dangerous path.
+    image: results/C.png
+    image_description: |-
+      A sepia-toned image of a person deliberately smashing a futuristic-looking robot with a hammer. The background is a field of overgrown wildflowers.
+    title: The Technological Luddite.
+  D:
+    description: |-
+      You’re not worried about job losses or biased algorithms; you’re pondering the philosophical implications of artificial general intelligence. You spend your time contemplating whether AI will surpass human intelligence, whether it will develop consciousness, and whether it will ultimately deem humanity obsolete. You’re more concerned with the potential for a silicon-based successor to humankind than you are with the practical applications of today’s AI. You’re the one having late-night conversations about the singularity.
+    image: results/D.png
+    image_description: |-
+      A swirling nebula of binary code and abstract human forms, gradually merging into a single, glowing entity. The background is deep space, filled with distant galaxies.
+    title: The Existential Dread Dreamer.
+  E:
+    description: |-
+      You're not particularly worried about AI taking over the world. You view current AI systems as sophisticated pattern-matching machines, capable of impressive feats but ultimately lacking true intelligence or understanding. You’re skeptical of the hype surrounding AI, believing that most applications are simply clever programming tricks rather than genuine breakthroughs in artificial intelligence. You’re the one who points out that a chatbot is just regurgitating information it’s been trained on, not exhibiting consciousness.
+    image: results/E.png
+    image_description: |-
+      A complex flowchart diagram with arrows and boxes, labeled with phrases like "If/Then Statements" and "Pattern Recognition," leading to a cartoonishly simple smiley face. The background is a sterile, white laboratory.
+    title: The "It's Just Clever Programming" Realist.
+topic: Which kind of AI skeptic are you?

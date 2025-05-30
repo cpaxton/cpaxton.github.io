@@ -42,6 +42,12 @@ This is the home of the Infinite Quiz Machine!
   - [Which cosmic horror are you devoted to?](/quiz/which-cosmic-horror-are-you-devoted-to/index.html)
   - [What halloween candy are you?](/quiz/what-halloween-candy-are-you/index.html)
 
+### With Gemma3 14B
+
+These quizzes were done with a more recent and more capable model.
+  - [Which kind of AI skeptic are you?](/quiz/which-kind-of-ai-skeptic-are-you/index.html)
+
+
 ### Bad Quizes
   - [Which rhetorical fallacy are you?](/quiz/which-rhetorical-fallacy-are-you/index.html) - The AI got stuck in a thing. Repeated questions, repeated answers, and not in an entertaining way like the cosmic horror quiz (spoiler alert). It's still pretty fun though.
 

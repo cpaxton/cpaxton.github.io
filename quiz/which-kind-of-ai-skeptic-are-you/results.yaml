@@ -1,0 +1,40 @@
+A:
+  topic: Which kind of AI skeptic are you?
+  letter: A
+  result: The Cautiously Concerned Observer.
+  description: |-
+    You're not a raving doomsday prepper, but you're also not blindly embracing every new AI tool. You acknowledge the potential benefits of AI but are mindful of the risks – bias in algorithms, job displacement, and the spread of misinformation. You believe in responsible development and deployment, advocating for transparency and ethical guidelines. You’re the person who reads the fine print and asks questions before diving in.
+  image: |-
+    A person with a thoughtful expression looking at a holographic projection of complex code intertwined with a stylized human silhouette. The background is a muted, futuristic cityscape.
+B:
+  topic: Which kind of AI skeptic are you?
+  letter: B
+  result: The Data Privacy Guardian.
+  description: |-
+    Your primary concern isn't necessarily the AI itself, but how it's trained and the data it's fed. You're deeply worried about the collection, storage, and use of personal data by AI systems. You believe in strong data protection laws and are skeptical of companies that aren't transparent about their data practices. You're the one reminding everyone about GDPR and the importance of opting out whenever possible. You believe data is power, and it shouldn't be wielded without careful consideration.
+  image: |-
+    A stylized shield composed of interlocking data points and digital locks, protecting a silhouette of a person. The background is a dark, abstract network of glowing lines.
+C:
+  topic: Which kind of AI skeptic are you?
+  letter: C
+  result: The Technological Luddite.
+  description: |-
+    You're convinced AI is a net negative for society, a shiny distraction from real problems. You view it with suspicion, believing it will inevitably lead to widespread unemployment, social unrest, and the erosion of human connection. You might prefer analog tools and methods, finding comfort in the tangible and a distrust of anything reliant on complex algorithms. You're not necessarily against technology in general, but you see AI as a uniquely dangerous path.
+  image: |-
+    A sepia-toned image of a person deliberately smashing a futuristic-looking robot with a hammer. The background is a field of overgrown wildflowers.
+D:
+  topic: Which kind of AI skeptic are you?
+  letter: D
+  result: The Existential Dread Dreamer.
+  description: |-
+    You’re not worried about job losses or biased algorithms; you’re pondering the philosophical implications of artificial general intelligence. You spend your time contemplating whether AI will surpass human intelligence, whether it will develop consciousness, and whether it will ultimately deem humanity obsolete. You’re more concerned with the potential for a silicon-based successor to humankind than you are with the practical applications of today’s AI. You’re the one having late-night conversations about the singularity.
+  image: |-
+    A swirling nebula of binary code and abstract human forms, gradually merging into a single, glowing entity. The background is deep space, filled with distant galaxies.
+E:
+  topic: Which kind of AI skeptic are you?
+  letter: E
+  result: The "It's Just Clever Programming" Realist.
+  description: |-
+    You're not particularly worried about AI taking over the world. You view current AI systems as sophisticated pattern-matching machines, capable of impressive feats but ultimately lacking true intelligence or understanding. You’re skeptical of the hype surrounding AI, believing that most applications are simply clever programming tricks rather than genuine breakthroughs in artificial intelligence. You’re the one who points out that a chatbot is just regurgitating information it’s been trained on, not exhibiting consciousness.
+  image: |-
+    A complex flowchart diagram with arrows and boxes, labeled with phrases like "If/Then Statements" and "Pattern Recognition," leading to a cartoonishly simple smiley face. The background is a sterile, white laboratory.

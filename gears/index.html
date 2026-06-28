@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Explainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Gear Explainer</h1>
+            <p>How different gear mechanisms work — notes and interactive demos.</p>
+            <div class="fidelity-toggle" role="group" aria-label="Simulation fidelity">
+                <span class="fidelity-label">Mode:</span>
+                <button type="button" class="fidelity-btn" data-fidelity="physics" aria-pressed="true">Physics</button>
+                <button type="button" class="fidelity-btn" data-fidelity="schematic" aria-pressed="false">Schematic</button>
+                <span class="fidelity-label overlay-label">Overlays:</span>
+                <button type="button" class="fidelity-btn overlay-btn active" data-overlay="wobble" aria-pressed="true">Wobble trace</button>
+            </div>
+            <p class="fidelity-note">
+                <strong>Physics</strong> (default) uses conjugate tooth profiles, mesh alignment, and a clearance overlay — run slowly or step frame-by-frame to inspect contact.
+                <strong>Schematic</strong> uses simplified spur teeth and skips contact checks for faster preview.
+                <strong>Wobble trace</strong> shows off-axis shake that eccentric layouts would transmit to the housing (suppressed when balanced, e.g. cycloidal counter disc).
+                URL override: <code>?mode=physics</code> or <code>?mode=schematic</code>, <code>?wobble=0</code> to hide traces.
+            </p>
+        </header>
+
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>
+                Gears translate rotation from one shaft to another, often changing speed and torque in the process.
+                A motor might spin at thousands of RPM, but a robot arm joint needs slow, powerful motion — gear
+                reduction bridges that gap.
+            </p>
+            <p>
+                Different mechanisms trade off efficiency, size, backlash, cost, and complexity. Simple spur gears
+                are easy to understand; planetary, cycloidal, and harmonic drives pack large reduction ratios into
+                compact packages.
+            </p>
+            <p>
+                Use <strong>Physics</strong> mode for conjugate tooth shapes and mesh clearance feedback on spur and
+                planetary demos. Cycloidal and harmonic animations show correct speed ratios with schematic profiles.
+            </p>
+        </section>
+
+        <section id="spur">
+            <h2>Spur Gears</h2>
+            <p>
+                Spur gears are the simplest form: two toothed wheels mesh along parallel axes. The driver turns one
+                gear; the driven gear rotates in the opposite direction. Tooth counts determine the speed ratio.
+            </p>
+            <div class="ratio-formula">i = N<sub>driven</sub> / N<sub>driver</sub></div>
+            <p>
+                If the driver has 18 teeth and the driven gear has 36, the output turns half as fast but with
+                roughly twice the torque (ignoring friction). Spur gears are cheap, efficient, and easy to manufacture.
+            </p>
+            <div class="pros-cons">
+                <div>
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>Simple design, low cost</li>
+                        <li>High efficiency (~98%)</li>
+                        <li>Easy to calculate ratios</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cons / Uses</h3>
+                    <ul>
+                        <li>Reverses rotation direction</li>
+                        <li>Large ratios need big gear pairs</li>
+                        <li>Common in clocks, printers, hand tools</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="demo-card" data-demo="spur">
+                <div class="canvas-wrap">
+                    <canvas id="canvas-spur"></canvas>
+                </div>
+                <div class="demo-controls">
+                    <div class="param-controls">
+                        <label>Driver teeth <input type="range" class="param-slider" data-param="driverTeeth" min="12" max="24" step="1" value="18"></label>
+                        <label>Driven teeth <input type="range" class="param-slider" data-param="drivenTeeth" min="24" max="72" step="2" value="36"></label>
+                    </div>
+                    <div class="playback-controls">
+                        <button type="button" class="play-btn">Pause</button>
+                        <button type="button" class="step-btn">Step</button>
+                        <label>Speed <input type="range" class="speed-slider" min="0.05" max="1" step="0.05" value="0.2"></label>
+                        <span class="contact-readout" hidden></span>
+                        <span class="ratio-readout"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="planetary">
+            <h2>Planetary (Epicyclic) Gears</h2>
+            <p>
+                A planetary gearset has a sun gear at the center, planet gears that mesh with both the sun and an
+                outer ring gear, and a carrier that holds the planet gears. Any one of the three elements — sun,
+                ring, or carrier — can be held fixed while the other two move.
+            </p>
+            <p>
+                With the ring gear fixed and the sun as input, the carrier output gives a reduction. With the
+                carrier fixed and the sun as input, the ring spins faster in the opposite direction. Same hardware,
+                different ratios depending on what you lock.
+            </p>
+            <div class="pros-cons">
+                <div>
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>High ratio in a compact volume</li>
+                        <li>Coaxial input and output possible</li>
+                        <li>Multiple configurations from one set</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cons / Uses</h3>
+                    <ul>
+                        <li>More parts, harder to assemble</li>
+                        <li>Planet bearings add complexity</li>
+                        <li>Automotive transmissions, robot joints, drones</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="demo-card" data-demo="planetary">
+                <div class="canvas-wrap">
+                    <canvas id="canvas-planetary"></canvas>
+                </div>
+                <div class="demo-controls">
+                    <div class="param-controls">
+                        <label>Sun teeth <input type="range" class="param-slider" data-param="sunTeeth" min="8" max="20" step="1" value="12"></label>
+                        <label>Planet teeth <input type="range" class="param-slider" data-param="planetTeeth" min="8" max="24" step="1" value="12"></label>
+                    </div>
+                    <div class="playback-controls">
+                        <button type="button" class="play-btn">Pause</button>
+                        <button type="button" class="step-btn">Step</button>
+                        <label>Speed <input type="range" class="speed-slider" min="0.05" max="1" step="0.05" value="0.2"></label>
+                        <span class="contact-readout" hidden></span>
+                        <span class="ratio-readout"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cycloidal">
+            <h2>Cycloidal Drive</h2>
+            <p>
+                A cycloidal drive uses an eccentric input to move a lobed disc. The same speed ratio can be
+                understood two ways: as a <strong>fixed-pin reducer</strong> (pins on the housing engage lobes on
+                the disc) or as a <strong>rolling trochoid</strong> (a circle rolling inside the pitch circle
+                traces a hypocycloid — the curve the disc is based on).
+            </p>
+            <p>
+                Use the demo toggles to switch views. Fixed pins shows a practical pin-drive layout; rolling
+                trochoid shows the generating circle and true hypocycloid profile. Both use the same reduction
+                law <em>i = N<sub>pins</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>)</em>.
+                Real reducers often add a <strong>counter disc</strong> (second eccentric disc 180° out of phase) to
+                cancel housing shake — toggle it to compare on-axis output vs an orbiting output shaft.
+            </p>
+            <div class="pros-cons">
+                <div>
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>High reduction ratio in compact form</li>
+                        <li>Low backlash, good shock tolerance</li>
+                        <li>Many contact points spread load</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cons / Uses</h3>
+                    <ul>
+                        <li>Eccentric bearing wears over time</li>
+                        <li>Vibration from orbiting mass</li>
+                        <li>Robot reducers, indexing tables, conveyors</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="demo-card" data-demo="cycloidal">
+                <div class="canvas-wrap">
+                    <canvas id="canvas-cycloidal"></canvas>
+                </div>
+                <div class="demo-controls">
+                    <div class="variant-controls cycloidal-variant" role="group" aria-label="Cycloidal view">
+                        <span class="fidelity-label">View:</span>
+                        <button type="button" class="fidelity-btn cycloid-variant-btn active" data-cycloid-variant="fixed-pin">Fixed pins</button>
+                        <button type="button" class="fidelity-btn cycloid-variant-btn" data-cycloid-variant="rolling">Rolling trochoid</button>
+                        <span class="fidelity-label">Balance:</span>
+                        <button type="button" class="fidelity-btn cycloid-counter-btn" data-cycloid-counter-disc="0" aria-pressed="false">Counter disc</button>
+                    </div>
+                    <div class="param-controls">
+                        <label>Lobes <input type="range" class="param-slider" data-param="lobes" min="4" max="10" step="1" value="5"></label>
+                        <label>Pins <input type="range" class="param-slider" data-param="pins" min="5" max="25" step="1" value="6"></label>
+                    </div>
+                    <div class="playback-controls">
+                        <button type="button" class="play-btn">Pause</button>
+                        <button type="button" class="step-btn">Step</button>
+                        <label>Speed <input type="range" class="speed-slider" min="0.05" max="1" step="0.05" value="0.2"></label>
+                        <span class="contact-readout" hidden></span>
+                        <span class="ratio-readout"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="harmonic">
+            <h2>Harmonic Drive (Strain Wave)</h2>
+            <p>
+                A harmonic drive has three parts: a wave generator (elliptical cam with bearing), a flexible outer
+                spline (flex spline), and a rigid circular spline (circular spline) with slightly more teeth.
+            </p>
+            <p>
+                The wave generator is the <strong>input</strong> — it is intentionally off-center and wobbles as it
+                spins. That wobble forces the thin flex spline into an oval. Only two zones on opposite sides of the
+                oval have teeth close enough to mesh with the fixed ring; those zones travel around the ring as the
+                cam turns. Because the ring has two more teeth than the flex spline, each cam revolution advances the
+                flex spline by two tooth pitches — a large reduction on the <strong>output shaft at the center</strong>.
+            </p>
+            <p class="harmonic-watch">
+                <strong>In the demo:</strong> orange = input cam · blue oval = flex spline · gray ring = fixed circular
+                spline · yellow dot = slow output · green arcs = where teeth mesh · pink trace = cam wobble.
+            </p>
+            <div class="pros-cons">
+                <div>
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>Very high ratios in thin form factor</li>
+                        <li>Near-zero backlash possible</li>
+                        <li>Lightweight, used in precision robotics</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cons / Uses</h3>
+                    <ul>
+                        <li>Flex spline limits torque capacity</li>
+                        <li>Expensive, sensitive to overload</li>
+                        <li>Collaborative robots, space mechanisms</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="demo-card" data-demo="harmonic">
+                <div class="canvas-wrap">
+                    <canvas id="canvas-harmonic"></canvas>
+                </div>
+                <div class="demo-controls">
+                    <div class="param-controls">
+                        <label>Flex teeth <input type="range" class="param-slider" data-param="flexTeeth" min="24" max="60" step="2" value="30"></label>
+                        <label>Circular teeth <input type="range" class="param-slider" data-param="circularTeeth" min="26" max="70" step="2" value="32"></label>
+                    </div>
+                    <div class="playback-controls">
+                        <button type="button" class="play-btn">Pause</button>
+                        <button type="button" class="step-btn">Step</button>
+                        <label>Speed <input type="range" class="speed-slider" min="0.05" max="1" step="0.05" value="0.2"></label>
+                        <span class="contact-readout" hidden></span>
+                        <span class="ratio-readout"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

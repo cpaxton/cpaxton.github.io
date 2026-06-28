@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+section h3 {
+    color: #4a4a4a;
+    margin-top: 1.5rem;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pros-cons ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.pros-cons li {
+    margin-bottom: 0.25rem;
+}
+
+.ratio-formula {
+    background: #f0f4f8;
+    border-left: 4px solid #007bff;
+    padding: 12px 16px;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+.demo-card {
+    margin-top: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.canvas-wrap {
+    position: relative;
+    width: 100%;
+    background: #1a1a2e;
+}
+
+.canvas-wrap canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.demo-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #eee;
+    border-top: 1px solid #ddd;
+}
+
+.param-controls,
+.playback-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.param-controls {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.param-controls label {
+    min-width: 180px;
+}
+
+.param-controls input[type="range"] {
+    width: 140px;
+}
+
+.playback-controls {
+    width: 100%;
+}
+
+.demo-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.demo-controls button:hover {
+    background-color: #0056b3;
+}
+
+.demo-controls button.paused {
+    background-color: #28a745;
+}
+
+.demo-controls label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.demo-controls input[type="range"] {
+    width: 120px;
+}
+
+.ratio-readout {
+    margin-left: auto;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.contact-readout {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.fidelity-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+    padding: 6px;
+    background: #e8eef5;
+    border-radius: 8px;
+}
+
+.overlay-label {
+    margin-left: 12px;
+}
+
+.fidelity-label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-right: 4px;
+}
+
+.fidelity-btn {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.fidelity-btn:hover {
+    border-color: #007bff;
+}
+
+.fidelity-btn.active {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.variant-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cycloidal-variant {
+    width: 100%;
+}
+
+.fidelity-note {
+    max-width: 720px;
+    margin: 1rem auto 0;
+    font-size: 0.92rem;
+    color: #555;
+    text-align: left;
+}
+
+.demo-controls button.step-btn {
+    background-color: #6c757d;
+}
+
+.demo-controls button.step-btn:hover {
+    background-color: #545b62;
+}
+
+@media (max-width: 600px) {
+    .param-controls label {
+        min-width: 100%;
+    }
+
+    .ratio-readout {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.harmonic-watch {
+    background: #f0f4f8;
+    border-left: 4px solid #e8a838;
+    padding: 10px 14px;
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+}

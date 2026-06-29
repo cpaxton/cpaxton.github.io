@@ -56,6 +56,17 @@ function drawOutputIndicator(ctx, cx, cy, flexAngle) {
 export function createHarmonicDemo(canvas) {
     let params = normalizeHarmonicParams(DEFAULTS);
     const wobbleTracker = createWobbleTracker();
+    let ringCacheKey = '';
+    let ringPath = null;
+
+    function ensureRingPath(circularTeeth, module) {
+        const key = `${circularTeeth}:${module.toFixed(6)}`;
+        if (ringCacheKey !== key) {
+            ringCacheKey = key;
+            ringPath = sampleCircularSpline(circularTeeth, module);
+        }
+        return ringPath;
+    }
 
     function getReduction() {
         const { flexTeeth, circularTeeth } = params;
@@ -81,8 +92,8 @@ export function createHarmonicDemo(canvas) {
         const flexAngle = harmonicFlexAngle(generatorAngle, flexTeeth, circularTeeth);
         const wave = harmonicWaveRadii(flexR, flexTeeth, circularTeeth);
 
-        const ringPath = sampleCircularSpline(circularTeeth, module);
-        drawProfileAt(ctx, cx, cy, 0, ringPath, {
+        const ringPathLocal = ensureRingPath(circularTeeth, module);
+        drawProfileAt(ctx, cx, cy, 0, ringPathLocal, {
             fill: 'rgba(85, 102, 119, 0.35)',
             stroke: '#556677',
             lineWidth: 2,
@@ -155,6 +166,7 @@ export function createHarmonicDemo(canvas) {
         getParams: () => ({ ...params }),
         setParams(updates) {
             params = normalizeHarmonicParams({ ...params, ...updates });
+            ringCacheKey = '';
             wobbleTracker.reset();
             controller.redraw();
             return params;

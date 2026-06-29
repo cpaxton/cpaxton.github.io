@@ -15,17 +15,18 @@ import {
     measurePlanetaryContacts,
     planetaryPlanetAngleWithOffset,
     solvePlanetaryAssembly,
+    subsampleProfile,
 } from './mesh-solver.js';
-import { sampleExternalGear, sampleInternalGear, samplePlanetaryExternalGear, samplePlanetaryInternalGear } from './profiles/involute.js';
+import { sampleExternalGear, sampleInternalGear } from './profiles/involute.js';
 import { drawInvoluteGear, drawProfileAt } from './render.js';
 
 const NUM_PLANETS = 3;
 const DEFAULTS = { sunTeeth: 12, planetTeeth: 12 };
 
 function buildAssembly(sunTeeth, planetTeeth, ringTeeth, module) {
-    const sunProfile = samplePlanetaryExternalGear(sunTeeth, module);
-    const planetProfile = samplePlanetaryExternalGear(planetTeeth, module);
-    const ringPath = samplePlanetaryInternalGear(ringTeeth, module);
+    const sunProfile = sampleExternalGear(sunTeeth, module);
+    const planetProfile = sampleExternalGear(planetTeeth, module);
+    const ringPath = sampleInternalGear(ringTeeth, module);
     const solved = solvePlanetaryAssembly({
         sunProfile,
         planetProfile,
@@ -44,6 +45,9 @@ function buildAssembly(sunTeeth, planetTeeth, ringTeeth, module) {
         ringPath,
         sunProfile,
         planetProfile,
+        sunContact: subsampleProfile(sunProfile),
+        planetContact: subsampleProfile(planetProfile),
+        ringContact: subsampleProfile(ringPath),
     };
 }
 
@@ -109,6 +113,9 @@ export function createPlanetaryDemo(canvas) {
             ringPath,
             sunProfile,
             planetProfile,
+            sunContact,
+            planetContact,
+            ringContact,
         } = ensureAssembly(module);
 
         const sunOmega = 0.6;
@@ -156,22 +163,24 @@ export function createPlanetaryDemo(canvas) {
                     sunAngle, orbit, sunTeeth, planetTeeth, planetOffsets[i]
                 );
             });
-            lastContact = measurePlanetaryContacts({
-                sunProfile,
-                planetProfile,
-                ringProfile: ringPath,
-                sunTeeth,
-                planetTeeth,
-                ringTeeth,
-                ringPhase,
-                planetOffsets,
-                sunAngle,
-                cx,
-                cy,
-                orbitR,
-                numPlanets: NUM_PLANETS,
-                planetSpins,
-            });
+            if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
+                lastContact = measurePlanetaryContacts({
+                    sunProfile: sunContact,
+                    planetProfile: planetContact,
+                    ringProfile: ringContact,
+                    sunTeeth,
+                    planetTeeth,
+                    ringTeeth,
+                    ringPhase,
+                    planetOffsets,
+                    sunAngle,
+                    cx,
+                    cy,
+                    orbitR,
+                    numPlanets: NUM_PLANETS,
+                    planetSpins,
+                });
+            }
             drawContactOverlay(ctx, lastContact, module);
         } else {
             lastContact = null;

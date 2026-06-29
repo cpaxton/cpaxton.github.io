@@ -47,12 +47,10 @@ function drawDisc(ctx, x, y, angle, path, fill, stroke = '#222') {
     });
 }
 
-function drawFixedPinDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style) {
-    const { lobes } = params;
-    const { fixedPinEccentricity, discRadius, rollingRadius, pinRingRadius } = geom;
+function drawFixedPinDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style, discPath) {
+    const { fixedPinEccentricity, pinRingRadius } = geom;
     const orbit = motion.orbitAngle + phaseOffset;
     const discCenter = fixedPinDiscCenter(orbit, fixedPinEccentricity);
-    const discPath = sampleFixedPinDisc(discRadius, lobes, rollingRadius);
     const discAngle = motion.discSpin + fixedPinDiscMeshPhase(pinRingRadius, fixedPinEccentricity);
     drawDisc(
         ctx,
@@ -66,12 +64,11 @@ function drawFixedPinDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style)
     return discCenter;
 }
 
-function drawRollingDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style) {
+function drawRollingDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style, discPath) {
     const { lobes } = params;
     const { pinRingRadius, rollingRadius, hypocycloidOrbit } = geom;
     const orbit = motion.orbitAngle + phaseOffset;
     const discCenter = rollingDiscCenter(orbit, hypocycloidOrbit);
-    const discPath = sampleHypocycloidInRollingFrame(pinRingRadius, lobes);
     const rollSpin = rollingCircleSpin(orbit, lobes);
     const discAngle = rollSpin + motion.discSpin + rollingDiscMeshPhase();
 
@@ -96,9 +93,8 @@ function drawRollingDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style) 
     return discCenter;
 }
 
-function drawFixedPinMode(ctx, cx, cy, geom, params, motion) {
-    const { pins } = params;
-    const { pinRingRadius, fixedPinEccentricity, pinRadius } = geom;
+function drawFixedPinMode(ctx, cx, cy, geom, params, motion, paths) {
+    const { fixedPinEccentricity, pinRingRadius } = geom;
 
     drawDashedCircle(ctx, cx, cy, pinRingRadius, '#666', null);
     ctx.save();
@@ -116,16 +112,16 @@ function drawFixedPinMode(ctx, cx, cy, geom, params, motion) {
         center2 = drawFixedPinDisc(ctx, cx, cy, geom, params, motion, Math.PI, {
             fill: 'rgba(155, 89, 182, 0.55)',
             stroke: '#5a3d6e',
-        });
+        }, paths.fixedPin);
     }
 
     center1 = drawFixedPinDisc(ctx, cx, cy, geom, params, motion, 0, {
         fill: '#4a90d9',
         stroke: '#222',
-    });
+    }, paths.fixedPin);
 
-    for (const pin of samplePinPositions(pins, pinRingRadius)) {
-        drawCircle(ctx, cx + pin.x, cy + pin.y, pinRadius, {
+    for (const pin of paths.pins) {
+        drawCircle(ctx, cx + pin.x, cy + pin.y, geom.pinRadius, {
             fill: '#8899aa',
             stroke: '#333',
             lineWidth: 1,
@@ -144,8 +140,7 @@ function drawFixedPinMode(ctx, cx, cy, geom, params, motion) {
         : center1;
 }
 
-function drawRollingMode(ctx, cx, cy, geom, params, motion) {
-    const { pins, lobes } = params;
+function drawRollingMode(ctx, cx, cy, geom, params, motion, paths) {
     const { pinRingRadius, hypocycloidOrbit } = geom;
 
     drawDashedCircle(ctx, cx, cy, pinRingRadius, '#666', null);
@@ -157,7 +152,7 @@ function drawRollingMode(ctx, cx, cy, geom, params, motion) {
     ctx.stroke();
     ctx.restore();
 
-    for (const pin of samplePinPositions(pins, pinRingRadius)) {
+    for (const pin of paths.pins) {
         drawCircle(ctx, cx + pin.x, cy + pin.y, geom.pinRadius * 0.55, {
             fill: 'rgba(136,153,170,0.35)',
             stroke: 'rgba(100,100,100,0.6)',
@@ -174,7 +169,7 @@ function drawRollingMode(ctx, cx, cy, geom, params, motion) {
             stroke: '#5a3d6e',
             drawRollingCircle: true,
             orbitColor: 'rgba(155, 89, 182, 0.7)',
-        });
+        }, paths.rolling);
     }
 
     center1 = drawRollingDisc(ctx, cx, cy, geom, params, motion, 0, {
@@ -182,7 +177,7 @@ function drawRollingMode(ctx, cx, cy, geom, params, motion) {
         stroke: '#222',
         drawRollingCircle: !params.counterDisc,
         orbitColor: 'rgba(232,168,56,0.85)',
-    });
+    }, paths.rolling);
 
     if (!params.counterDisc) {
         const discCenter = rollingDiscCenter(motion.orbitAngle, hypocycloidOrbit);
@@ -239,6 +234,21 @@ function drawEccentricGhostArm(ctx, cx, cy, discCenter, outputAngle, armLen) {
 export function createCycloidalDemo(canvas) {
     let params = normalizeCycloidalParams(DEFAULTS);
     const wobbleTracker = createWobbleTracker();
+    let pathCacheKey = '';
+    let pathCache = null;
+
+    function ensurePaths(geom) {
+        const key = `${params.variant}:${params.lobes}:${params.pins}:${geom.discRadius}:${geom.rollingRadius}:${geom.pinRingRadius}`;
+        if (pathCacheKey !== key) {
+            pathCacheKey = key;
+            pathCache = {
+                fixedPin: sampleFixedPinDisc(geom.discRadius, params.lobes, geom.rollingRadius),
+                rolling: sampleHypocycloidInRollingFrame(geom.pinRingRadius, params.lobes),
+                pins: samplePinPositions(params.pins, geom.pinRingRadius),
+            };
+        }
+        return pathCache;
+    }
 
     function getReduction() {
         const { lobes, pins } = params;
@@ -257,6 +267,7 @@ export function createCycloidalDemo(canvas) {
 
         const pinRingRadius = Math.min(width, height) * 0.32;
         const geom = cycloidalGeometry(params.pins, params.lobes, pinRingRadius);
+        const paths = ensurePaths(geom);
         const inputAngle = time * 1.2;
         const motion = cycloidalMotion(inputAngle, params.pins, params.lobes);
         const cx = width / 2;
@@ -264,8 +275,8 @@ export function createCycloidalDemo(canvas) {
         const armLen = geom.discRadius * 0.4;
 
         const imbalance = params.variant === 'rolling'
-            ? drawRollingMode(ctx, cx, cy, geom, params, motion)
-            : drawFixedPinMode(ctx, cx, cy, geom, params, motion);
+            ? drawRollingMode(ctx, cx, cy, geom, params, motion, paths)
+            : drawFixedPinMode(ctx, cx, cy, geom, params, motion, paths);
 
         if (params.counterDisc) {
             drawEccentricGhostArm(ctx, cx, cy, imbalance, motion.outputAngle, armLen);
@@ -306,6 +317,7 @@ export function createCycloidalDemo(canvas) {
         getParams: () => ({ ...params }),
         setParams(updates) {
             params = normalizeCycloidalParams({ ...params, ...updates });
+            pathCacheKey = '';
             wobbleTracker.reset();
             controller.redraw();
             return params;

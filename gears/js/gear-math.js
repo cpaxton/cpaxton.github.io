@@ -111,8 +111,9 @@ export function getRenderMode() {
 }
 
 export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
-    let playing = true;
+    let playing = false;
     let wantPlaying = true;
+    let inView = true;
     let speed = 0.2;
     let time = 0;
     let frame = 0;
@@ -142,15 +143,29 @@ export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
         rafId = requestAnimationFrame(loop);
     }
 
+    function syncLoop() {
+        if (reducedMotion) return;
+        const shouldRun = wantPlaying && inView;
+        if (shouldRun && !playing) {
+            playing = true;
+            if (rafId) cancelAnimationFrame(rafId);
+            loop();
+        } else if (!shouldRun && playing) {
+            playing = false;
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+        }
+    }
+
     function start() {
         if (reducedMotion) {
             drawFrame(canvasState.ctx, canvasState.width, canvasState.height, 0, { frame: 0, forceRefine: false });
             return;
         }
         wantPlaying = true;
-        playing = true;
-        if (rafId) cancelAnimationFrame(rafId);
-        loop();
+        syncLoop();
     }
 
     function stop() {
@@ -182,6 +197,17 @@ export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
 
     window.addEventListener('resize', resize);
 
+    if (typeof IntersectionObserver !== 'undefined') {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                inView = entries.some((entry) => entry.isIntersecting);
+                syncLoop();
+            },
+            { rootMargin: '80px', threshold: 0 }
+        );
+        observer.observe(canvas);
+    }
+
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
             playing = false;
@@ -189,8 +215,8 @@ export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
                 cancelAnimationFrame(rafId);
                 rafId = null;
             }
-        } else if (wantPlaying && !reducedMotion) {
-            start();
+        } else {
+            syncLoop();
         }
     });
 
@@ -199,7 +225,10 @@ export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
     }
 
     drawFrame(canvasState.ctx, canvasState.width, canvasState.height, 0, { frame: 0, forceRefine: false });
-    if (!reducedMotion) start();
+    if (!reducedMotion) {
+        wantPlaying = true;
+        syncLoop();
+    }
 
     return { start, stop, setSpeed, isPlaying, resize, redraw, step, getTime };
 }

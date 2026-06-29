@@ -73,6 +73,16 @@ section h3 {
     margin-bottom: 0.25rem;
 }
 
+.gear-uses {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.gear-uses strong {
+    color: #2c3e50;
+}
+
 .ratio-formula {
     background: #f0f4f8;
     border-left: 4px solid #007bff;

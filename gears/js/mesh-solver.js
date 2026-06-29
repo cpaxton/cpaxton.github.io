@@ -13,7 +13,10 @@ import { externalMeshPhase, internalMeshPhase } from './profiles/involute.js';
 
 const TAU = Math.PI * 2;
 
-function subsampleProfile(profile, stride = 5) {
+/** Subsample stride for runtime contact checks (full profiles are for drawing only). */
+export const CONTACT_PROFILE_STRIDE = 6;
+
+export function subsampleProfile(profile, stride = CONTACT_PROFILE_STRIDE) {
     if (profile.length <= 48) return profile;
     return profile.filter((_, index) => index % stride === 0);
 }

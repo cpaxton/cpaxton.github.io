@@ -192,20 +192,27 @@
         <section id="cycloidal">
             <h2>Cycloidal Drive</h2>
             <p>
-                A cycloidal drive uses an eccentric input to move a lobed disc. The same speed ratio can be
-                understood two ways: as a <strong>fixed-pin reducer</strong> (pins on the housing engage lobes on
-                the disc) or as a <strong>rolling trochoid</strong> (a circle rolling inside the pitch circle
-                traces a hypocycloid — the curve the disc is based on).
+                A cycloidal drive uses an eccentric input to move a lobed disc past fixed pins on the housing.
+                The demo separates three layers:
             </p>
+            <ul>
+                <li><strong>Kinematics (exact):</strong> reduction
+                    <em>i = N<sub>lobes</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>)</em>,
+                    crank orbit, disc spin <em>−θ·(N<sub>pins</sub>−N<sub>lobes</sub>)/N<sub>lobes</sub></em>,
+                    and on-axis output when a counter disc cancels shake.</li>
+                <li><strong>Fixed pins (physics mode):</strong> equidistant epicycloid profile (conjugate to the pin
+                    ring) with pin size set from ring spacing; mesh phase is solved each time counts change.</li>
+                <li><strong>Fixed pins (schematic mode):</strong> smooth cosine lobes for a fast, readable preview.</li>
+                <li><strong>Rolling trochoid:</strong> how the hypocycloid curve is generated (circle rolling inside
+                    the pitch circle). The disc center follows the larger rolling orbit, not the small eccentric throw
+                    of a real pin-drive crank.</li>
+            </ul>
             <p>
-                Use the demo toggles to switch views. Fixed pins shows a practical pin-drive layout; rolling
-                trochoid shows the generating circle and true hypocycloid profile. Both animations model a
-                <strong>fixed-pin reducer</strong> where the lobed disc is the output, with reduction
-                <em>i = N<sub>lobes</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>)</em>
-                (5 lobes and 6 pins → 5:1). If the disc were held fixed and the pin housing rotated instead,
-                the ratio would be N<sub>pins</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>).
-                Real reducers often add a <strong>counter disc</strong> (second eccentric disc 180° out of phase) to
-                cancel housing shake — toggle it to compare on-axis output vs an orbiting output shaft.
+                Default example: 5 lobes and 6 pins → 5:1 reduction. If the disc were held fixed and the pin housing
+                rotated instead, the ratio would be N<sub>pins</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>).
+                Real RV reducers use equidistant epicycloid profiles and often add a <strong>counter disc</strong>
+                (second eccentric disc 180° out of phase) to cancel housing shake — toggle it to compare on-axis
+                output vs an orbiting output shaft.
             </p>
             <div class="pros-cons">
                 <div>

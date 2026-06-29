@@ -8,8 +8,9 @@ import {
     MIN_MESH_CLEARANCE_COEFF,
     pitchRadius,
 } from './constraints.js';
-import { gapPhaseForContact, planetaryCarrierAngle } from './kinematics.js';
+import { cycloidalMotion, gapPhaseForContact, planetaryCarrierAngle } from './kinematics.js';
 import { externalMeshPhase, internalMeshPhase } from './profiles/involute.js';
+import { fixedPinDiscCenter, samplePinPositions } from './profiles/trochoid.js';
 
 const TAU = Math.PI * 2;
 
@@ -195,6 +196,58 @@ export function measureCycloidalPinContact({
 
     best.engaged = best.clearance <= engageThreshold;
     return best;
+}
+
+/**
+ * Search disc rotation offset so schematic lobes stay outside pins through a crank turn.
+ * Kinematics (orbit + fixedPinDiscAngle) are fixed; only assembly phase is solved.
+ */
+export function solveCycloidalMeshPhase({
+    discProfile,
+    pins,
+    lobes,
+    pinRingRadius,
+    eccentricity,
+    pinRadius,
+    steps = 56,
+    phaseSteps = 72,
+}) {
+    const pinPositions = samplePinPositions(pins, pinRingRadius);
+    const housingX = 400;
+    const housingY = 300;
+    let best = { phase: 0, score: Infinity, penetrations: Infinity, engaged: 0 };
+
+    for (let pi = 0; pi < phaseSteps; pi++) {
+        const phase = (pi / phaseSteps) * TAU - Math.PI;
+        let penetrations = 0;
+        let engaged = 0;
+        let minClearance = Infinity;
+
+        for (let step = 0; step < steps; step++) {
+            const motion = cycloidalMotion((step / steps) * TAU, pins, lobes);
+            const center = fixedPinDiscCenter(motion.orbitAngle, eccentricity);
+            const contact = measureCycloidalPinContact({
+                discProfile,
+                discX: housingX + center.x,
+                discY: housingY + center.y,
+                discAngle: motion.fixedPinDiscAngle + phase,
+                housingX,
+                housingY,
+                pins: pinPositions,
+                pinRadius,
+            });
+            if (contact.clearance < 0) penetrations++;
+            if (contact.engaged) engaged++;
+            minClearance = Math.min(minClearance, contact.clearance);
+        }
+
+        const score = penetrations * 100 - engaged - Math.min(minClearance, 0) * 5;
+        if (score < best.score) {
+            best = { phase, score, penetrations, engaged, minClearance };
+        }
+    }
+
+    return best.phase;
 }
 
 /** Clearance between flex spline and circular ring at both mesh zones. */

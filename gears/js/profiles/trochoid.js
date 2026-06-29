@@ -9,16 +9,26 @@ const TAU = Math.PI * 2;
 
 export const CYCLOIDAL_VARIANTS = ['fixed-pin', 'rolling'];
 
+/** Shortening coefficient K1 = e·Zr/Rp (typical 0.6–0.75). */
+export const CYCLOIDAL_SHORTENING_K1 = 0.65;
+
+/** Pin radius from ring spacing and profile clearance (fraction of max conjugate radius). */
+export function cycloidalPinRadius(pinRingRadius, pins, eccentricity, fill = 0.32) {
+    const maxRadius = pinRingRadius * Math.sin(Math.PI / pins) - eccentricity;
+    return Math.max(3, maxRadius * fill);
+}
+
 /** Geometry derived from pin/lobe counts. */
 export function cycloidalGeometry(pins, lobes, pinRingRadius) {
     const ratio = cycloidalRatio(pins, lobes);
     const rollingRadius = pinRingRadius / lobes;
-    const fixedPinEccentricity = rollingRadius;
+    const fixedPinEccentricity = CYCLOIDAL_SHORTENING_K1 * pinRingRadius / pins;
     const hypocycloidOrbit = pinRingRadius - rollingRadius;
-    const discRadius = pinRingRadius - rollingRadius;
-    const pinRadius = Math.min(
-        10,
-        ((TAU * pinRingRadius) / pins) * 0.11
+    const discRadius = pinRingRadius - fixedPinEccentricity;
+    const pinRadius = cycloidalPinRadius(
+        pinRingRadius,
+        pins,
+        fixedPinEccentricity
     );
     return {
         ratio,
@@ -46,30 +56,33 @@ export function samplePinPositions(pins, pinRingRadius) {
 }
 
 /**
- * Equidistant cycloidal disc (pin radius offset from epicycloid).
- * Profile in disc-local frame with crank at reference angle 0.
+ * Working cycloidal disc profile: equidistant offset from the shortened epicycloid.
+ * SolidWorks / RV-style parametric form in disc-local coordinates (origin at disc center).
+ * Produces Zr − 1 lobes for Zr ring pins.
  */
 export function sampleEquidistantCycloidalDisc(
     pinRingRadius,
     eccentricity,
-    lobes,
+    pinCount,
     pinRadius,
     points = 360
 ) {
     const R = pinRingRadius;
     const E = eccentricity;
-    const N = lobes;
-    const rp = pinRadius;
-    const refCenter = fixedPinDiscCenter(0, E);
+    const N = pinCount;
+    const Rr = pinRadius;
     const path = [];
 
     for (let i = 0; i <= points; i++) {
-        const alpha = (i / points) * TAU;
-        const denom = Math.cos(N * alpha) - R / (E * (N + 1));
-        const gamma = Math.atan2(Math.sin(N * alpha), denom);
-        const x = R * Math.cos(alpha) - E * Math.cos((N + 1) * alpha) - rp * Math.cos(alpha - gamma);
-        const y = R * Math.sin(alpha) - E * Math.sin((N + 1) * alpha) - rp * Math.sin(alpha - gamma);
-        path.push({ x: x - refCenter.x, y: y - refCenter.y });
+        const t = (i / points) * TAU;
+        const s = Math.sin((1 - N) * t);
+        const c = (1 - N) * t;
+        const denom = R / (E * N) - Math.cos(c);
+        const a = Math.atan2(s, denom);
+        path.push({
+            x: R * Math.cos(t) - Rr * Math.cos(t + a) - E * Math.cos(N * t),
+            y: -R * Math.sin(t) + Rr * Math.sin(t + a) + E * Math.sin(N * t),
+        });
     }
 
     return path;
@@ -83,19 +96,17 @@ export function sampleEquidistantCycloidalDisc(
 export function sampleFixedPinDisc(
     discRadius,
     lobes,
-    rollingRadius,
+    eccentricity,
     points = 180,
     pinRingRadius = null,
     pinRadius = 0
 ) {
-    const valleyR = discRadius - rollingRadius * 0.88;
+    const valleyR = discRadius - eccentricity * 0.88;
     let peakR = discRadius;
     if (pinRingRadius != null) {
-        const eccentricity = rollingRadius;
         const targetClearance = TARGET_MESH_CLEARANCE_COEFF * pinRadius;
         const conjugatePeak = pinRingRadius - pinRadius - eccentricity - targetClearance;
-        // Schematic cosine lobes undershoot the radial conjugate peak slightly at default scale.
-        const schematicExtension = rollingRadius * 0.064;
+        const schematicExtension = eccentricity * 0.064;
         peakR = Math.min(
             discRadius + schematicExtension,
             conjugatePeak + schematicExtension
@@ -154,12 +165,9 @@ export function rollingCircleSpin(inputAngle, lobes) {
     return inputAngle * (lobes - 1);
 }
 
-/** Rotate fixed-pin disc so a lobe peak meets the engaging pin at rest. */
-export function fixedPinDiscMeshPhase(pins, lobes, pinRingRadius, eccentricity) {
-    const align = Math.atan2(-pinRingRadius, -eccentricity);
-    // Schematic cosine lobes need a small phase bias for −θ·(N−L)/L disc spin.
-    const schematicOffset = -0.036 * lobes * (pins - lobes);
-    return align + schematicOffset;
+/** Initial guess for fixed-pin assembly phase (full value comes from mesh solver). */
+export function fixedPinDiscMeshPhase(pinRingRadius, eccentricity) {
+    return Math.atan2(-pinRingRadius, -eccentricity);
 }
 
 /** Align hypocycloid cusp toward the fixed pitch circle at rest. */
@@ -171,6 +179,6 @@ export function cycloidalDiscCenter(inputAngle, eccentricity) {
     return fixedPinDiscCenter(inputAngle, eccentricity);
 }
 
-export function cycloidalDiscMeshPhase(pins, lobes, pinRingRadius, eccentricity) {
-    return fixedPinDiscMeshPhase(pins, lobes, pinRingRadius, eccentricity);
+export function cycloidalDiscMeshPhase(pinRingRadius, eccentricity) {
+    return fixedPinDiscMeshPhase(pinRingRadius, eccentricity);
 }

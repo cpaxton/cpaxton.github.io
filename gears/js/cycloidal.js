@@ -10,15 +10,15 @@ import { createWobbleTracker, drawWobbleIndicator } from './overlays.js';
 import {
     cycloidalGeometry,
     fixedPinDiscCenter,
-    fixedPinDiscMeshPhase,
     rollingCircleSpin,
     rollingDiscCenter,
     rollingDiscMeshPhase,
+    sampleEquidistantCycloidalDisc,
     sampleFixedPinDisc,
     sampleHypocycloidInRollingFrame,
     samplePinPositions,
 } from './profiles/trochoid.js';
-import { measureCycloidalPinContact } from './mesh-solver.js';
+import { measureCycloidalPinContact, solveCycloidalMeshPhase } from './mesh-solver.js';
 import { drawContactOverlay, formatContactReadout } from './contact-overlay.js';
 import { isPhysicsMode } from './fidelity.js';
 import { isCycloidalPinClearanceOk } from './constraints.js';
@@ -51,24 +51,17 @@ function drawDisc(ctx, x, y, angle, path, fill, stroke = '#222') {
     });
 }
 
-function fixedPinDiscPose(geom, params, motion, phaseOffset = 0) {
+function fixedPinDiscPose(geom, params, motion, meshPhase, phaseOffset = 0) {
     const orbit = motion.orbitAngle + phaseOffset;
     const center = fixedPinDiscCenter(orbit, geom.fixedPinEccentricity);
-    const angle =
-        motion.fixedPinDiscAngle
-        + fixedPinDiscMeshPhase(
-            params.pins,
-            params.lobes,
-            geom.pinRingRadius,
-            geom.fixedPinEccentricity
-        )
-        + phaseOffset;
+    const angle = motion.fixedPinDiscAngle + meshPhase + phaseOffset;
     return { center, angle };
 }
 
-function drawFixedPinDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style, discPath) {
-    const { fixedPinEccentricity, pinRingRadius } = geom;
-    const { center: discCenter, angle: discAngle } = fixedPinDiscPose(geom, params, motion, phaseOffset);
+function drawFixedPinDisc(ctx, cx, cy, geom, params, motion, meshPhase, phaseOffset, style, discPath) {
+    const { center: discCenter, angle: discAngle } = fixedPinDiscPose(
+        geom, params, motion, meshPhase, phaseOffset
+    );
     drawDisc(
         ctx,
         cx + discCenter.x,
@@ -81,13 +74,22 @@ function drawFixedPinDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style,
     return discCenter;
 }
 
+/** Counter disc shares orbit +π; rollSpin already picks up π·(L−1), so only odd L need +π on angle. */
+function counterDiscAngleOffset(phaseOffset, lobes) {
+    if (phaseOffset === 0) return 0;
+    return lobes % 2 === 0 ? 0 : phaseOffset;
+}
+
 function drawRollingDisc(ctx, cx, cy, geom, params, motion, phaseOffset, style, discPath) {
     const { lobes } = params;
     const { pinRingRadius, rollingRadius, hypocycloidOrbit } = geom;
     const orbit = motion.orbitAngle + phaseOffset;
     const discCenter = rollingDiscCenter(orbit, hypocycloidOrbit);
     const rollSpin = rollingCircleSpin(orbit, lobes);
-    const discAngle = rollSpin + motion.discSpin + rollingDiscMeshPhase() + phaseOffset;
+    const discAngle =
+        rollSpin
+        + rollingDiscMeshPhase()
+        + counterDiscAngleOffset(phaseOffset, lobes);
 
     const rcx = cx + discCenter.x;
     const rcy = cy + discCenter.y;
@@ -125,13 +127,6 @@ function drawFixedPinMode(ctx, cx, cy, geom, params, motion, paths) {
     let center1 = { x: 0, y: 0 };
     let center2 = { x: 0, y: 0 };
 
-    if (params.counterDisc) {
-        center2 = drawFixedPinDisc(ctx, cx, cy, geom, params, motion, Math.PI, {
-            fill: 'rgba(155, 89, 182, 0.55)',
-            stroke: '#5a3d6e',
-        }, paths.fixedPin);
-    }
-
     for (const pin of paths.pins) {
         drawCircle(ctx, cx + pin.x, cy + pin.y, geom.pinRadius, {
             fill: '#8899aa',
@@ -140,7 +135,14 @@ function drawFixedPinMode(ctx, cx, cy, geom, params, motion, paths) {
         });
     }
 
-    center1 = drawFixedPinDisc(ctx, cx, cy, geom, params, motion, 0, {
+    if (params.counterDisc) {
+        center2 = drawFixedPinDisc(ctx, cx, cy, geom, params, motion, paths.meshPhase, Math.PI, {
+            fill: 'rgba(155, 89, 182, 0.55)',
+            stroke: '#5a3d6e',
+        }, paths.fixedPin);
+    }
+
+    center1 = drawFixedPinDisc(ctx, cx, cy, geom, params, motion, paths.meshPhase, 0, {
         fill: '#4a90d9',
         stroke: '#222',
     }, paths.fixedPin);
@@ -180,6 +182,13 @@ function drawRollingMode(ctx, cx, cy, geom, params, motion, paths) {
     let center1 = { x: 0, y: 0 };
     let center2 = { x: 0, y: 0 };
 
+    center1 = drawRollingDisc(ctx, cx, cy, geom, params, motion, 0, {
+        fill: 'rgba(74,144,217,0.92)',
+        stroke: '#222',
+        drawRollingCircle: !params.counterDisc,
+        orbitColor: 'rgba(232,168,56,0.85)',
+    }, paths.rolling);
+
     if (params.counterDisc) {
         center2 = drawRollingDisc(ctx, cx, cy, geom, params, motion, Math.PI, {
             fill: 'rgba(155, 89, 182, 0.5)',
@@ -188,13 +197,6 @@ function drawRollingMode(ctx, cx, cy, geom, params, motion, paths) {
             orbitColor: 'rgba(155, 89, 182, 0.7)',
         }, paths.rolling);
     }
-
-    center1 = drawRollingDisc(ctx, cx, cy, geom, params, motion, 0, {
-        fill: 'rgba(74,144,217,0.92)',
-        stroke: '#222',
-        drawRollingCircle: !params.counterDisc,
-        orbitColor: 'rgba(232,168,56,0.85)',
-    }, paths.rolling);
 
     if (!params.counterDisc) {
         const discCenter = rollingDiscCenter(motion.orbitAngle, hypocycloidOrbit);
@@ -257,20 +259,37 @@ export function createCycloidalDemo(canvas) {
     let lastScale = 1;
 
     function ensurePaths(geom) {
-        const key = `${params.variant}:${params.lobes}:${params.pins}:${geom.discRadius}:${geom.rollingRadius}:${geom.pinRingRadius}:${geom.pinRadius}`;
+        const key = `${params.variant}:${params.lobes}:${params.pins}:${geom.discRadius}:${geom.fixedPinEccentricity}:${geom.pinRingRadius}:${geom.pinRadius}:${isPhysicsMode()}`;
         if (pathCacheKey !== key) {
             pathCacheKey = key;
-            pathCache = {
-                fixedPin: sampleFixedPinDisc(
+            const fixedPin = isPhysicsMode()
+                ? sampleEquidistantCycloidalDisc(
+                    geom.pinRingRadius,
+                    geom.fixedPinEccentricity,
+                    params.pins,
+                    geom.pinRadius,
+                    360
+                )
+                : sampleFixedPinDisc(
                     geom.discRadius,
                     params.lobes,
-                    geom.rollingRadius,
+                    geom.fixedPinEccentricity,
                     360,
                     geom.pinRingRadius,
                     geom.pinRadius
-                ),
+                );
+            pathCache = {
+                fixedPin,
                 rolling: sampleHypocycloidInRollingFrame(geom.pinRingRadius, params.lobes),
                 pins: samplePinPositions(params.pins, geom.pinRingRadius),
+                meshPhase: solveCycloidalMeshPhase({
+                    discProfile: fixedPin,
+                    pins: params.pins,
+                    lobes: params.lobes,
+                    pinRingRadius: geom.pinRingRadius,
+                    eccentricity: geom.fixedPinEccentricity,
+                    pinRadius: geom.pinRadius,
+                }),
             };
         }
         return pathCache;
@@ -293,7 +312,7 @@ export function createCycloidalDemo(canvas) {
 
     function getReductionLabel() {
         const { lobes, pins, variant, counterDisc } = params;
-        const mode = variant === 'rolling' ? 'Rolling trochoid' : 'Fixed pins';
+        const mode = variant === 'rolling' ? 'Rolling trochoid (curve)' : 'Fixed pins';
         const balance = counterDisc ? ' · Counter disc on' : '';
         return `${mode}${balance} · ${formatRatio(getReduction())} · ${lobes} lobes · ${pins} pins`;
     }
@@ -316,7 +335,7 @@ export function createCycloidalDemo(canvas) {
             : drawFixedPinMode(ctx, cx, cy, geom, params, motion, paths);
 
         if (isPhysicsMode() && params.variant === 'fixed-pin') {
-            const { center, angle } = fixedPinDiscPose(geom, params, motion, 0);
+            const { center, angle } = fixedPinDiscPose(geom, params, motion, paths.meshPhase, 0);
             if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
                 lastContact = measureCycloidalPinContact({
                     discProfile: paths.fixedPin,

@@ -24,12 +24,13 @@ import {
 } from '../profiles/harmonic.js';
 import {
     cycloidalGeometry,
+    sampleEquidistantCycloidalDisc,
     sampleFixedPinDisc,
     samplePinPositions,
     fixedPinDiscCenter,
-    fixedPinDiscMeshPhase,
 } from '../profiles/trochoid.js';
 import { cycloidalMotion } from '../kinematics.js';
+import { solveCycloidalMeshPhase } from '../mesh-solver.js';
 
 const TAU = Math.PI * 2;
 
@@ -166,23 +167,31 @@ describe('mesh solver', () => {
         const pins = 6;
         const lobes = 5;
         const geom = cycloidalGeometry(pins, lobes, pinRingRadius);
-        const disc = sampleFixedPinDisc(
-            geom.discRadius,
-            lobes,
-            geom.rollingRadius,
-            360,
+        const disc = sampleEquidistantCycloidalDisc(
             pinRingRadius,
-            geom.pinRadius
+            geom.fixedPinEccentricity,
+            pins,
+            geom.pinRadius,
+            360
         );
         const pinPositions = samplePinPositions(pins, pinRingRadius);
+        const meshPhase = solveCycloidalMeshPhase({
+            discProfile: disc,
+            pins,
+            lobes,
+            pinRingRadius,
+            eccentricity: geom.fixedPinEccentricity,
+            pinRadius: geom.pinRadius,
+        });
         const cx = 400;
         const cy = 300;
         let engagedSteps = 0;
+        let penetrations = 0;
 
         for (let step = 0; step < 80; step++) {
             const motion = cycloidalMotion((step / 80) * TAU, pins, lobes);
             const center = fixedPinDiscCenter(motion.orbitAngle, geom.fixedPinEccentricity);
-            const angle = motion.fixedPinDiscAngle + fixedPinDiscMeshPhase(pins, lobes, pinRingRadius, geom.fixedPinEccentricity);
+            const angle = motion.fixedPinDiscAngle + meshPhase;
             const contact = measureCycloidalPinContact({
                 discProfile: disc,
                 discX: cx + center.x,
@@ -195,12 +204,78 @@ describe('mesh solver', () => {
             });
             if (!contact.engaged) continue;
             engagedSteps++;
+            if (!isCycloidalPinClearanceOk(contact.clearance, geom.pinRadius)) {
+                penetrations++;
+            }
             assert.ok(
                 isCycloidalPinClearanceOk(contact.clearance, geom.pinRadius),
                 `cycloidal clearance ${contact.clearance} at step ${step}`
             );
         }
+        assert.ok(penetrations === 0, `expected no deep pin penetration, got ${penetrations}`);
         assert.ok(engagedSteps >= 50, `expected frequent pin engagement, got ${engagedSteps}/80`);
+    });
+
+    it('counter disc mirrors primary orbit and meshes 180° out of phase', () => {
+        const pinRingRadius = 200;
+        const pins = 6;
+        const lobes = 5;
+        const geom = cycloidalGeometry(pins, lobes, pinRingRadius);
+        const disc = sampleEquidistantCycloidalDisc(
+            pinRingRadius,
+            geom.fixedPinEccentricity,
+            pins,
+            geom.pinRadius,
+            360
+        );
+        const pinPositions = samplePinPositions(pins, pinRingRadius);
+        const meshPhase = solveCycloidalMeshPhase({
+            discProfile: disc,
+            pins,
+            lobes,
+            pinRingRadius,
+            eccentricity: geom.fixedPinEccentricity,
+            pinRadius: geom.pinRadius,
+        });
+        const cx = 400;
+        const cy = 300;
+        let counterEngaged = 0;
+
+        for (let step = 0; step < 80; step++) {
+            const motion = cycloidalMotion((step / 80) * TAU, pins, lobes);
+            const primaryCenter = fixedPinDiscCenter(motion.orbitAngle, geom.fixedPinEccentricity);
+            const counterCenter = fixedPinDiscCenter(motion.orbitAngle + Math.PI, geom.fixedPinEccentricity);
+            const primaryAngle = motion.fixedPinDiscAngle + meshPhase;
+            const counterAngle = primaryAngle + Math.PI;
+
+            assert.ok(
+                Math.hypot(primaryCenter.x + counterCenter.x, primaryCenter.y + counterCenter.y) < 1e-9,
+                `counter orbit should cancel primary at step ${step}`
+            );
+
+            let angleDiff = Math.abs(primaryAngle - counterAngle);
+            angleDiff = Math.min(angleDiff, TAU - angleDiff);
+            assert.ok(
+                Math.abs(angleDiff - Math.PI) < 1e-9,
+                `counter disc should lead primary by π at step ${step}`
+            );
+
+            const contact = measureCycloidalPinContact({
+                discProfile: disc,
+                discX: cx + counterCenter.x,
+                discY: cy + counterCenter.y,
+                discAngle: counterAngle,
+                housingX: cx,
+                housingY: cy,
+                pins: pinPositions,
+                pinRadius: geom.pinRadius,
+            });
+            if (contact.engaged) {
+                counterEngaged++;
+                assert.ok(isCycloidalPinClearanceOk(contact.clearance, geom.pinRadius));
+            }
+        }
+        assert.ok(counterEngaged >= 50, `expected counter pin engagement, got ${counterEngaged}/80`);
     });
 
     it('measures harmonic flex–ring clearance', () => {

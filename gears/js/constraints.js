@@ -1,7 +1,7 @@
 /** Tooth-count rules, geometry constraints, and param normalization. */
 
 export const DEFAULT_PRESSURE_ANGLE = (20 * Math.PI) / 180;
-/** Nominal addendum / dedendum as multiples of module (reduced addendum adds tip clearance). */
+/** Nominal addendum / dedendum as multiples of module (slightly reduced for mesh clearance). */
 export const ADDENDUM_COEFF = 0.6;
 export const DEDENDUM_COEFF = 0.95;
 

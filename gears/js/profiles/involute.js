@@ -16,6 +16,16 @@ export function baseRadius(pitchR, pressureAngle = DEFAULT_PRESSURE_ANGLE) {
     return pitchR * Math.cos(pressureAngle);
 }
 
+/** inv(φ) = tan(φ) − φ — used for textbook tooth layout reference. */
+export function involuteFunction(pressureAngle = DEFAULT_PRESSURE_ANGLE) {
+    return Math.tan(pressureAngle) - pressureAngle;
+}
+
+/** Half angular tooth thickness at pitch: π/(2N) + inv(φ). */
+export function halfToothAngleAtPitch(teeth, pressureAngle = DEFAULT_PRESSURE_ANGLE) {
+    return TAU / (2 * teeth) + involuteFunction(pressureAngle);
+}
+
 export function involutePoint(baseR, t) {
     return {
         x: baseR * (Math.cos(t) + t * Math.sin(t)),

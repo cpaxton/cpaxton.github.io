@@ -12,9 +12,26 @@ import {
     solvePlanetaryAssembly,
     solveSpurAssembly,
 } from '../mesh-solver.js';
-import { sampleExternalGear, sampleInternalGear } from '../profiles/involute.js';
+import { sampleExternalGear, sampleInternalGear, halfToothAngleAtPitch, involuteFunction } from '../profiles/involute.js';
 
 const TAU = Math.PI * 2;
+
+describe('involute profiles', () => {
+    it('uses inv(φ) in half-tooth angle', () => {
+        const teeth = 18;
+        const inv = involuteFunction();
+        const half = halfToothAngleAtPitch(teeth);
+        assert.ok(Math.abs(half - (Math.PI / teeth + inv)) < 1e-9);
+    });
+
+    it('generates external profiles with addendum beyond pitch', () => {
+        const path = sampleExternalGear(18, 1);
+        assert.ok(path.length > 100);
+        const radii = path.map((p) => Math.hypot(p.x, p.y));
+        assert.ok(Math.max(...radii) > 9);
+        assert.ok(Math.min(...radii) < 9);
+    });
+});
 
 describe('mesh solver', () => {
     it('aligns spur pair within clearance band', () => {

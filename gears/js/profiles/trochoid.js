@@ -45,7 +45,37 @@ export function samplePinPositions(pins, pinRingRadius) {
 }
 
 /**
- * Fixed-pin disc: outward lobes that reach the pin circle when eccentrically offset.
+ * Equidistant cycloidal disc (pin radius offset from epicycloid).
+ * Profile in disc-local frame with crank at reference angle 0.
+ */
+export function sampleEquidistantCycloidalDisc(
+    pinRingRadius,
+    eccentricity,
+    lobes,
+    pinRadius,
+    points = 360
+) {
+    const R = pinRingRadius;
+    const E = eccentricity;
+    const N = lobes;
+    const rp = pinRadius;
+    const refCenter = fixedPinDiscCenter(0, E);
+    const path = [];
+
+    for (let i = 0; i <= points; i++) {
+        const alpha = (i / points) * TAU;
+        const denom = Math.cos(N * alpha) - R / (E * (N + 1));
+        const gamma = Math.atan2(Math.sin(N * alpha), denom);
+        const x = R * Math.cos(alpha) - E * Math.cos((N + 1) * alpha) - rp * Math.cos(alpha - gamma);
+        const y = R * Math.sin(alpha) - E * Math.sin((N + 1) * alpha) - rp * Math.sin(alpha - gamma);
+        path.push({ x: x - refCenter.x, y: y - refCenter.y });
+    }
+
+    return path;
+}
+
+/**
+ * Fixed-pin disc: schematic cosine lobes (schematic / fast preview).
  */
 export function sampleFixedPinDisc(discRadius, lobes, rollingRadius, points = 180) {
     const valleyR = discRadius - rollingRadius * 0.88;

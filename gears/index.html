@@ -32,7 +32,7 @@
                 reduction bridges that gap.
             </p>
             <p>
-                Different mechanisms trade off efficiency, size, backlash, cost, and complexity. Simple spur gears
+                Different mechanisms trade off efficiency, size, backlash, <strong>backdrivability</strong>, cost, and complexity. Simple spur gears
                 are easy to understand; planetary, cycloidal, and harmonic drives pack large reduction ratios into
                 compact packages.
             </p>
@@ -58,6 +58,8 @@
             <p>
                 If the driver has 18 teeth and the driven gear has 36, the output turns half as fast but with
                 roughly twice the torque (ignoring friction). Spur gears are cheap, efficient, and easy to manufacture.
+                Stacked spur stages in cheap servos (e.g. 254:1) multiply torque but also multiply friction — the joint
+                becomes <strong>hard to backdrive</strong>, so external forces do not easily turn the output shaft.
             </p>
             <div class="pros-cons">
                 <div>
@@ -144,6 +146,14 @@
                 parts and efficiency loss, but much higher torque in the same diameter — the usual trade-off in leg and
                 wheel drives.
             </p>
+            <p>
+                <strong>Backdrivability</strong> is how easily an external load can spin the output and propagate force
+                back through the gearbox to the motor — important for legs that must “feel” the ground and absorb impacts.
+                Lower ratio means less friction and reflected inertia, so the actuator is more <strong>backdrivable</strong>
+                (easier to push by hand). High-ratio stacks (Spot hips, Mars wheels) resist backdriving: good for holding
+                load and precision, but the controller gets less passive mechanical feedback from the environment.
+                Quasi-direct-drive leg designs deliberately pick ~6:1–9:1 single-stage planetaries for that transparency.
+            </p>
             <p class="harmonic-watch">
                 <strong>In the demo:</strong> one stage only (ring fixed, sun input, carrier output). Tooth sliders
                 change <em>that</em> stage’s ratio — not a full multi-stage stack.
@@ -154,6 +164,7 @@
                     <ul>
                         <li>High ratio in a compact volume</li>
                         <li>Coaxial input and output possible</li>
+                        <li>Low-ratio stages can stay backdrivable (QDD legs)</li>
                         <li>Multiple configurations from one set</li>
                     </ul>
                 </div>
@@ -162,6 +173,7 @@
                     <ul>
                         <li>More parts, harder to assemble</li>
                         <li>Planet bearings add complexity</li>
+                        <li>High-ratio stacks resist backdriving</li>
                     </ul>
                 </div>
             </div>
@@ -171,7 +183,7 @@
                 <ul>
                     <li>
                         <a href="https://www.unitree.com/g1" target="_blank" rel="noopener noreferrer">Unitree G1</a>
-                        <span class="note">— humanoid joint modules pair high-speed brushless motors with a <strong>two-stage planetary</strong> reducer (total ratio ≈20:1 in teardown reports); chosen for impact tolerance in running and jumping.</span>
+                        <span class="note">— humanoid joint modules pair high-speed brushless motors with a <strong>two-stage planetary</strong> reducer (total ratio ≈20:1 in teardown reports); chosen for impact tolerance in running and jumping — higher ratio than QDD legs, so less backdrivable but stiffer under shock.</span>
                     </li>
                     <li>
                         <a href="https://www.simplexitypd.com/blog/unitree-go2-motor-teardown/" target="_blank" rel="noopener noreferrer">Unitree Go2 leg actuator (teardown)</a>
@@ -334,6 +346,7 @@
                     <ul>
                         <li>Flex spline limits torque capacity</li>
                         <li>Expensive, sensitive to overload</li>
+                        <li>High ratio, low backdrivability (poor “feel” for impacts)</li>
                     </ul>
                 </div>
             </div>

@@ -2,17 +2,34 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import {
     isMeshClearanceOk,
+    isCycloidalPinClearanceOk,
     MIN_MESH_CLEARANCE_COEFF,
     pitchRadius,
     TARGET_MESH_CLEARANCE_COEFF,
 } from '../constraints.js';
 import {
     minContactDistance,
+    measureCycloidalPinContact,
+    measureHarmonicContact,
     samplePlanetaryClearance,
     solvePlanetaryAssembly,
     solveSpurAssembly,
 } from '../mesh-solver.js';
 import { sampleExternalGear, sampleInternalGear, halfToothAngleAtPitch, involuteFunction } from '../profiles/involute.js';
+import {
+    sampleFlexSpline,
+    harmonicWaveRadii,
+    sampleFlexAnnulus,
+    sampleFlexToothOutlines,
+} from '../profiles/harmonic.js';
+import {
+    cycloidalGeometry,
+    sampleFixedPinDisc,
+    samplePinPositions,
+    fixedPinDiscCenter,
+    fixedPinDiscMeshPhase,
+} from '../profiles/trochoid.js';
+import { cycloidalMotion } from '../kinematics.js';
 
 const TAU = Math.PI * 2;
 
@@ -125,5 +142,106 @@ describe('mesh solver', () => {
             assembly.sunClearance >= MIN_MESH_CLEARANCE_COEFF * module * 0.85,
             `planetary sun clearance ${assembly.sunClearance}`
         );
+    });
+
+    it('measures cycloidal disc–pin clearance', () => {
+        const disc = [{ x: 12, y: 0 }, { x: 0, y: 12 }, { x: -12, y: 0 }, { x: 0, y: -12 }];
+        const contact = measureCycloidalPinContact({
+            discProfile: disc,
+            discX: 0,
+            discY: 0,
+            discAngle: 0,
+            housingX: 0,
+            housingY: 0,
+            pins: [{ x: 20, y: 0 }],
+            pinRadius: 2,
+        });
+        assert.ok(contact.clearance > 5 && contact.clearance < 7);
+        assert.ok(!contact.engaged);
+        assert.ok(contact.pointA && contact.pointB);
+    });
+
+    it('keeps fixed-pin cycloidal disc outside engaged pin through a cycle', () => {
+        const pinRingRadius = 200;
+        const pins = 6;
+        const lobes = 5;
+        const geom = cycloidalGeometry(pins, lobes, pinRingRadius);
+        const disc = sampleFixedPinDisc(
+            geom.discRadius,
+            lobes,
+            geom.rollingRadius,
+            360,
+            pinRingRadius,
+            geom.pinRadius
+        );
+        const pinPositions = samplePinPositions(pins, pinRingRadius);
+        const cx = 400;
+        const cy = 300;
+        let engagedSteps = 0;
+
+        for (let step = 0; step < 80; step++) {
+            const motion = cycloidalMotion((step / 80) * TAU, pins, lobes);
+            const center = fixedPinDiscCenter(motion.orbitAngle, geom.fixedPinEccentricity);
+            const angle = motion.fixedPinDiscAngle + fixedPinDiscMeshPhase(pins, lobes, pinRingRadius, geom.fixedPinEccentricity);
+            const contact = measureCycloidalPinContact({
+                discProfile: disc,
+                discX: cx + center.x,
+                discY: cy + center.y,
+                discAngle: angle,
+                housingX: cx,
+                housingY: cy,
+                pins: pinPositions,
+                pinRadius: geom.pinRadius,
+            });
+            if (!contact.engaged) continue;
+            engagedSteps++;
+            assert.ok(
+                isCycloidalPinClearanceOk(contact.clearance, geom.pinRadius),
+                `cycloidal clearance ${contact.clearance} at step ${step}`
+            );
+        }
+        assert.ok(engagedSteps >= 50, `expected frequent pin engagement, got ${engagedSteps}/80`);
+    });
+
+    it('measures harmonic flex–ring clearance', () => {
+        const module = 1;
+        const flexTeeth = 30;
+        const circularTeeth = 32;
+        const flexProfile = sampleFlexSpline(flexTeeth, module, 0, 0, circularTeeth);
+        const ringProfile = sampleInternalGear(circularTeeth, module);
+        const contact = measureHarmonicContact({
+            flexProfile,
+            ringProfile,
+            cx: 0,
+            cy: 0,
+            generatorAngle: 0,
+        });
+        assert.ok(Number.isFinite(contact.clearance));
+        assert.ok(contact.pointA && contact.pointB);
+    });
+
+    it('strains flex involute teeth on a true ellipse', () => {
+        const module = 1;
+        const flexTeeth = 30;
+        const circularTeeth = 32;
+        const flexR = pitchRadius(flexTeeth, module);
+        const { major, minor } = harmonicWaveRadii(flexR, flexTeeth, circularTeeth);
+        const profile = sampleFlexSpline(flexTeeth, module, 0, 0, circularTeeth);
+        const annulus = sampleFlexAnnulus(flexTeeth, module, 0, 0, circularTeeth);
+        const outlines = sampleFlexToothOutlines(flexTeeth, module, 0, 0, circularTeeth);
+
+        let maxR = 0;
+        let minR = Infinity;
+        for (const p of profile) {
+            const r = Math.hypot(p.x, p.y);
+            maxR = Math.max(maxR, r);
+            minR = Math.min(minR, r);
+        }
+
+        assert.ok(maxR > flexR + module * 0.4, 'visible addendum on ellipse');
+        assert.ok(minR < flexR, 'dedendum valleys between teeth');
+        assert.ok(maxR - minR > module * 0.8, 'distinct tooth height on oval');
+        assert.ok(annulus.length > profile.length, 'annulus includes inner bore');
+        assert.equal(outlines.length, flexTeeth);
     });
 });

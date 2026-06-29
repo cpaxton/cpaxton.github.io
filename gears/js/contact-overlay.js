@@ -10,13 +10,18 @@ export function drawContactOverlay(ctx, contact, module, options = {}) {
     const {
         x = 12,
         y = 18,
+        isClearanceOk = isMeshClearanceOk,
     } = options;
 
     if (!contact || contact.clearance === Infinity || !contact.pointA || !contact.pointB) {
         return;
     }
 
-    const ok = isMeshClearanceOk(contact.clearance, module);
+    if (contact.engaged === false) {
+        return;
+    }
+
+    const ok = isClearanceOk(contact.clearance, module);
     const color = ok ? '#5dff9a' : '#ff6b6b';
     const gapPx = contact.clearance;
 
@@ -53,9 +58,10 @@ export function drawContactOverlay(ctx, contact, module, options = {}) {
     ctx.restore();
 }
 
-export function formatContactReadout(contact, module) {
+export function formatContactReadout(contact, module, options = {}) {
+    const { isClearanceOk = isMeshClearanceOk } = options;
     if (!contact || contact.clearance === Infinity) return '';
-    const ok = isMeshClearanceOk(contact.clearance, module);
+    const ok = isClearanceOk(contact.clearance, module);
     const gap = contact.clearance >= 1
         ? `${contact.clearance.toFixed(1)} px`
         : `${(contact.clearance / module).toFixed(3)}× module`;

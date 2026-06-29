@@ -4,19 +4,24 @@ import {
     drawArrow,
     drawLabel,
     formatRatio,
+    isPhysicsMode,
     moduleFromMaxDiameter,
     normalizeHarmonicParams,
 } from './gear-math.js';
 import { harmonicFlexAngle, harmonicRatio } from './kinematics.js';
 import { pitchRadius } from './constraints.js';
 import { createWobbleTracker, drawWobbleIndicator } from './overlays.js';
+import { drawContactOverlay, formatContactReadout } from './contact-overlay.js';
+import { measureHarmonicContact } from './mesh-solver.js';
 import {
     sampleFlexSpline,
-    sampleFlexTeeth,
+    sampleFlexAnnulus,
+    sampleFlexToothOutlines,
     sampleCircularSpline,
     harmonicWaveRadii,
+    waveGeneratorRadii,
 } from './profiles/harmonic.js';
-import { drawPolylineAt, drawPolyline, drawProfileAt } from './render.js';
+import { drawPolyline, drawPolylineAt, drawProfileAt } from './render.js';
 
 const TAU = Math.PI * 2;
 const DEFAULTS = { flexTeeth: 30, circularTeeth: 32 };
@@ -58,6 +63,8 @@ export function createHarmonicDemo(canvas) {
     const wobbleTracker = createWobbleTracker();
     let ringCacheKey = '';
     let ringPath = null;
+    let lastContact = null;
+    let lastModule = 1;
 
     function ensureRingPath(circularTeeth, module) {
         const key = `${circularTeeth}:${module.toFixed(6)}`;
@@ -66,6 +73,14 @@ export function createHarmonicDemo(canvas) {
             ringPath = sampleCircularSpline(circularTeeth, module);
         }
         return ringPath;
+    }
+
+    function getContactInfo() {
+        if (!isPhysicsMode() || !lastContact) return null;
+        return {
+            contact: lastContact,
+            readout: formatContactReadout(lastContact, lastModule),
+        };
     }
 
     function getReduction() {
@@ -78,7 +93,7 @@ export function createHarmonicDemo(canvas) {
         return `Reduction: ${formatRatio(getReduction())} · Flex ${flexTeeth}T · Circular ${circularTeeth}T`;
     }
 
-    function drawFrame(ctx, width, height, time) {
+    function drawFrame(ctx, width, height, time, meta = {}) {
         clearBackground(ctx, width, height);
 
         const { flexTeeth, circularTeeth } = params;
@@ -86,6 +101,7 @@ export function createHarmonicDemo(canvas) {
         const cy = height / 2;
         const maxRadius = Math.min(width, height) * 0.34;
         const module = moduleFromMaxDiameter(maxRadius * 2, circularTeeth);
+        lastModule = module;
         const ringR = pitchRadius(circularTeeth, module);
         const flexR = pitchRadius(flexTeeth, module);
         const generatorAngle = time * 0.6;
@@ -94,49 +110,58 @@ export function createHarmonicDemo(canvas) {
 
         const ringPathLocal = ensureRingPath(circularTeeth, module);
         drawProfileAt(ctx, cx, cy, 0, ringPathLocal, {
-            fill: 'rgba(85, 102, 119, 0.35)',
-            stroke: '#556677',
+            fill: 'rgba(85, 102, 119, 0.42)',
+            stroke: '#8899aa',
             lineWidth: 2,
             close: true,
         });
 
-        drawMeshZones(ctx, cx, cy, ringR, generatorAngle);
+        drawMeshZones(ctx, cx, cy, ringR, generatorAngle + flexAngle);
 
-        const flexPath = sampleFlexSpline(flexTeeth, module, generatorAngle, flexAngle);
-        drawPolylineAt(ctx, cx, cy, 0, flexPath, {
-            fill: 'rgba(74, 144, 217, 0.85)',
-            stroke: '#222',
-            lineWidth: 1.5,
+        const flexPath = sampleFlexSpline(
+            flexTeeth,
+            module,
+            generatorAngle,
+            flexAngle,
+            circularTeeth
+        );
+        const flexAnnulus = sampleFlexAnnulus(
+            flexTeeth,
+            module,
+            generatorAngle,
+            flexAngle,
+            circularTeeth
+        );
+        drawPolylineAt(ctx, cx, cy, 0, flexAnnulus, {
+            fill: 'rgba(74, 144, 217, 0.88)',
+            stroke: '#1a3a5c',
+            lineWidth: 2,
             close: true,
         });
 
-        const flexTeethLines = sampleFlexTeeth(flexTeeth, module, generatorAngle, flexAngle);
-        for (const tooth of flexTeethLines) {
-            const worldTooth = tooth.map((p) => ({ x: cx + p.x, y: cy + p.y }));
-            drawPolyline(ctx, worldTooth, { stroke: '#111', lineWidth: 1, close: false });
+        const toothOutlines = sampleFlexToothOutlines(
+            flexTeeth,
+            module,
+            generatorAngle,
+            flexAngle,
+            circularTeeth
+        );
+        for (const tooth of toothOutlines) {
+            const world = tooth.map((p) => ({ x: cx + p.x, y: cy + p.y }));
+            drawPolyline(ctx, world, {
+                stroke: 'rgba(255, 255, 255, 0.35)',
+                lineWidth: 0.75,
+                close: false,
+            });
         }
 
-        const { major } = wave;
-        const eccentricity = flexR * 0.08;
-        const gx = cx + Math.cos(generatorAngle) * eccentricity;
-        const gy = cy + Math.sin(generatorAngle) * eccentricity;
+        const genRadii = waveGeneratorRadii(flexR, flexTeeth, circularTeeth, module);
 
         ctx.save();
-        ctx.strokeStyle = 'rgba(232, 168, 56, 0.45)';
-        ctx.lineWidth = 1.5;
-        ctx.setLineDash([4, 4]);
-        ctx.beginPath();
-        ctx.moveTo(gx, gy);
-        ctx.lineTo(cx, cy);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        ctx.restore();
-
-        ctx.save();
-        ctx.translate(gx, gy);
+        ctx.translate(cx, cy);
         ctx.rotate(generatorAngle);
         ctx.beginPath();
-        ctx.ellipse(0, 0, major * 0.35, major * 0.22, 0, 0, TAU);
+        ctx.ellipse(0, 0, genRadii.major, genRadii.minor, 0, 0, TAU);
         ctx.fillStyle = '#e8a838';
         ctx.fill();
         ctx.strokeStyle = '#333';
@@ -148,15 +173,32 @@ export function createHarmonicDemo(canvas) {
 
         drawLabel(ctx, cx, cy - ringR - 24, '③ Circular spline (fixed ring)', '#aaa', 12);
         drawLabel(ctx, cx, cy + ringR + 32, '② Flex spline (deforms, output)', '#4a90d9', 12);
-        drawLabel(ctx, gx + 48, gy - 8, '① Wave generator\n(input)', '#e8a838', 11);
+        drawLabel(ctx, cx + genRadii.major + 42, cy - 8, '① Wave generator\n(input)', '#e8a838', 11);
         drawLabel(ctx, cx - 58, cy - 10, '④ Output\n(slow)', '#ffcc00', 10);
         drawLabel(ctx, cx + ringR * 0.55, cy - ringR * 0.35, 'Mesh', '#5dff9a', 10);
         drawLabel(ctx, cx, height - 24, formatRatio(getReduction()), '#ffcc00', 14);
 
-        drawWobbleIndicator(ctx, cx, cy, gx, gy, wobbleTracker, {
-            label: 'Input cam wobble',
+        const lobeX = cx + Math.cos(generatorAngle + flexAngle) * wave.major;
+        const lobeY = cy + Math.sin(generatorAngle + flexAngle) * wave.major;
+        drawWobbleIndicator(ctx, cx, cy, lobeX, lobeY, wobbleTracker, {
+            label: 'Mesh zone travel',
             color: '#ff6b8a',
         });
+
+        if (isPhysicsMode()) {
+            if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
+                lastContact = measureHarmonicContact({
+                    flexProfile: flexPath,
+                    ringProfile: ringPathLocal,
+                    cx,
+                    cy,
+                    generatorAngle: generatorAngle + flexAngle,
+                });
+            }
+            drawContactOverlay(ctx, lastContact, module);
+        } else {
+            lastContact = null;
+        }
     }
 
     const controller = createDemoController(canvas, drawFrame);
@@ -173,5 +215,6 @@ export function createHarmonicDemo(canvas) {
         },
         getReduction,
         getReductionLabel,
+        getContactInfo,
     };
 }

@@ -3,6 +3,7 @@
  */
 
 import { cycloidalRatio } from '../kinematics.js';
+import { TARGET_MESH_CLEARANCE_COEFF } from '../constraints.js';
 
 const TAU = Math.PI * 2;
 
@@ -76,10 +77,30 @@ export function sampleEquidistantCycloidalDisc(
 
 /**
  * Fixed-pin disc: schematic cosine lobes (schematic / fast preview).
+ * When pinRingRadius and pinRadius are given, lobe peaks are clamped so a lobe
+ * aligned with eccentricity toward the pin ring stays outside the pin circles.
  */
-export function sampleFixedPinDisc(discRadius, lobes, rollingRadius, points = 180) {
+export function sampleFixedPinDisc(
+    discRadius,
+    lobes,
+    rollingRadius,
+    points = 180,
+    pinRingRadius = null,
+    pinRadius = 0
+) {
     const valleyR = discRadius - rollingRadius * 0.88;
-    const peakR = discRadius;
+    let peakR = discRadius;
+    if (pinRingRadius != null) {
+        const eccentricity = rollingRadius;
+        const targetClearance = TARGET_MESH_CLEARANCE_COEFF * pinRadius;
+        const conjugatePeak = pinRingRadius - pinRadius - eccentricity - targetClearance;
+        // Schematic cosine lobes undershoot the radial conjugate peak slightly at default scale.
+        const schematicExtension = rollingRadius * 0.064;
+        peakR = Math.min(
+            discRadius + schematicExtension,
+            conjugatePeak + schematicExtension
+        );
+    }
     const path = [];
 
     for (let i = 0; i <= points; i++) {
@@ -133,9 +154,12 @@ export function rollingCircleSpin(inputAngle, lobes) {
     return inputAngle * (lobes - 1);
 }
 
-/** Rotate fixed-pin disc so a lobe peak meets the top pin at rest. */
-export function fixedPinDiscMeshPhase(pinRingRadius, eccentricity) {
-    return Math.atan2(-pinRingRadius, -eccentricity);
+/** Rotate fixed-pin disc so a lobe peak meets the engaging pin at rest. */
+export function fixedPinDiscMeshPhase(pins, lobes, pinRingRadius, eccentricity) {
+    const align = Math.atan2(-pinRingRadius, -eccentricity);
+    // Schematic cosine lobes need a small phase bias for −θ·(N−L)/L disc spin.
+    const schematicOffset = -0.036 * lobes * (pins - lobes);
+    return align + schematicOffset;
 }
 
 /** Align hypocycloid cusp toward the fixed pitch circle at rest. */
@@ -147,6 +171,6 @@ export function cycloidalDiscCenter(inputAngle, eccentricity) {
     return fixedPinDiscCenter(inputAngle, eccentricity);
 }
 
-export function cycloidalDiscMeshPhase(pinRingRadius, eccentricity) {
-    return fixedPinDiscMeshPhase(pinRingRadius, eccentricity);
+export function cycloidalDiscMeshPhase(pins, lobes, pinRingRadius, eccentricity) {
+    return fixedPinDiscMeshPhase(pins, lobes, pinRingRadius, eccentricity);
 }

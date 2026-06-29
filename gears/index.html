@@ -40,8 +40,8 @@
                 compact packages.
             </p>
             <p>
-                Use <strong>Physics</strong> mode for conjugate tooth shapes and mesh clearance feedback on spur and
-                planetary demos. Cycloidal and harmonic animations show correct speed ratios with schematic profiles.
+                Use <strong>Physics</strong> mode for conjugate tooth shapes and mesh clearance feedback on spur,
+                planetary, cycloidal (fixed-pin), and harmonic demos. Rolling trochoid and schematic modes skip contact checks.
             </p>
             <p>
                 No single robot uses one gear type everywhere — designers pick by joint: heavy base axes, compact wrists,
@@ -280,18 +280,21 @@
                 spline (flex spline), and a rigid circular spline (circular spline) with slightly more teeth.
             </p>
             <p>
-                The wave generator is the <strong>input</strong> — it is intentionally off-center and wobbles as it
-                spins. That wobble forces the thin flex spline into an oval. Only two zones on opposite sides of the
-                oval have teeth close enough to mesh with the fixed ring; those zones travel around the ring as the
-                cam turns. Because the ring has two more teeth than the flex spline, each cam revolution advances the
-                flex spline by two tooth pitches — a large reduction on the <strong>output shaft at the center</strong>.
+                The wave generator is the <strong>input</strong> — a coaxial elliptical cam that rotates in place
+                (like the inner oval in the
+                <a href="https://en.wikipedia.org/wiki/Strain_wave_gearing" target="_blank" rel="noopener noreferrer">Wikipedia strain-wave diagram</a>).
+                It presses the thin flex spline into a smooth two-lobed oval. Only two zones on opposite sides mesh
+                with the fixed ring; those zones travel around as the cam turns. Because the ring has two more teeth
+                than the flex spline, each cam revolution advances the flex spline by two tooth pitches — a large
+                reduction on the <strong>output shaft at the center</strong>.
                 With the circular spline fixed and the flex spline as output,
                 <em>i = N<sub>flex</sub> / (N<sub>circular</sub> − N<sub>flex</sub>)</em>
                 (30 teeth and 32 teeth → 15:1).
             </p>
             <p class="harmonic-watch">
-                <strong>In the demo:</strong> orange = input cam · blue oval = flex spline · gray ring = fixed circular
-                spline · yellow dot = slow output · green arcs = where teeth mesh · pink trace = cam wobble.
+                <strong>In the demo:</strong> orange ellipse = coaxial input cam · blue annulus = flex cup with
+                involute teeth on the strained oval · gray ring = fixed circular spline (internal teeth) · yellow
+                spoke = slow output · green arcs = mesh zones · pink trace = mesh zone travel.
             </p>
             <div class="pros-cons">
                 <div>

@@ -146,6 +146,88 @@ export function measureSpurContact({
     );
 }
 
+/** Minimum clearance between a disc profile and fixed pin circles (fixed-pin cycloidal). */
+export function measureCycloidalPinContact({
+    discProfile,
+    discX,
+    discY,
+    discAngle,
+    housingX,
+    housingY,
+    pins,
+    pinRadius,
+}) {
+    const discLite = subsampleProfile(discProfile, 3);
+    const worldDisc = worldPoints(discLite, discX, discY, discAngle);
+    const engageThreshold = pinRadius * 0.85;
+    let best = {
+        clearance: Infinity,
+        pointA: null,
+        pointB: null,
+        label: '',
+        engaged: false,
+    };
+
+    for (let pi = 0; pi < pins.length; pi++) {
+        const pcx = housingX + pins[pi].x;
+        const pcy = housingY + pins[pi].y;
+
+        for (const p of worldDisc) {
+            const dx = p.x - pcx;
+            const dy = p.y - pcy;
+            const dist = Math.hypot(dx, dy);
+            const clearance = dist - pinRadius;
+            if (clearance < best.clearance) {
+                const onPin = dist > 1e-9 ? dist : 1;
+                best = {
+                    clearance,
+                    pointA: p,
+                    pointB: {
+                        x: pcx + (dx / onPin) * pinRadius,
+                        y: pcy + (dy / onPin) * pinRadius,
+                    },
+                    label: `Disc–pin ${pi + 1}`,
+                    engaged: false,
+                };
+            }
+        }
+    }
+
+    best.engaged = best.clearance <= engageThreshold;
+    return best;
+}
+
+/** Clearance between flex spline and circular ring at both mesh zones. */
+export function measureHarmonicContact({
+    flexProfile,
+    ringProfile,
+    cx,
+    cy,
+    generatorAngle,
+}) {
+    const flexLite = subsampleProfile(flexProfile, 5);
+    const ringLite = subsampleProfile(ringProfile, 8);
+    let worst = { clearance: Infinity, pointA: null, pointB: null, label: '' };
+
+    for (const offset of [0, Math.PI]) {
+        const zone = generatorAngle + offset;
+        const pair = minContactPair(
+            flexLite, cx, cy, 0,
+            ringLite, cx, cy, 0,
+            zone, zone,
+            0.48
+        );
+        if (pair.clearance < worst.clearance) {
+            worst = {
+                ...pair,
+                label: offset === 0 ? 'Flex–ring mesh A' : 'Flex–ring mesh B',
+            };
+        }
+    }
+
+    return worst;
+}
+
 export function measurePlanetaryContacts({
     sunProfile,
     planetProfile,

@@ -112,6 +112,11 @@ describe('cycloidal kinematics', () => {
         const m = cycloidalMotion(TAU, 6, 5);
         assert.ok(Math.abs(m.outputAngle - TAU / 5) < 1e-9);
     });
+
+    it('fixed-pin disc rotates −θ·(N−L)/L per crank turn', () => {
+        const m = cycloidalMotion(TAU, 6, 5);
+        assert.ok(Math.abs(m.fixedPinDiscAngle + TAU / 5) < 1e-9);
+    });
 });
 
 describe('harmonic kinematics', () => {

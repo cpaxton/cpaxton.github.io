@@ -74,15 +74,20 @@ export function cycloidalRatio(pins, lobes) {
 
 /**
  * Cycloidal motion: eccentric orbit + disc spin + output shaft.
- * Returns { orbitAngle, discSpin, outputAngle }.
+ * Returns { orbitAngle, discSpin, fixedPinDiscAngle, outputAngle }.
+ *
+ * fixedPinDiscAngle — disc orientation for fixed-pin mode: −θ·(N−L)/L (Musser).
+ * discSpin — retained for rolling trochoid frame composition (not fixed-pin drawing).
  */
 export function cycloidalMotion(inputAngle, pins, lobes) {
     const ratio = cycloidalRatio(pins, lobes);
     const outputAngle = inputAngle / ratio;
+    const fixedPinDiscAngle = -inputAngle * (pins - lobes) / lobes;
     const discSpin = outputAngle - inputAngle;
     return {
         orbitAngle: inputAngle,
         discSpin,
+        fixedPinDiscAngle,
         outputAngle,
     };
 }

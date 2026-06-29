@@ -104,20 +104,20 @@ describe('worm kinematics', () => {
 
 describe('cycloidal kinematics', () => {
     it('ratio identity', () => {
-        assert.equal(cycloidalRatio(6, 5), 6);
+        assert.equal(cycloidalRatio(6, 5), 5);
     });
 
     it('output slower than input', () => {
         assertCycloidalValid(5, 6);
         const m = cycloidalMotion(TAU, 6, 5);
-        assert.ok(Math.abs(m.outputAngle - TAU / 6) < 1e-9);
+        assert.ok(Math.abs(m.outputAngle - TAU / 5) < 1e-9);
     });
 });
 
 describe('harmonic kinematics', () => {
     it('ratio identity', () => {
         assertHarmonicValid(30, 32);
-        assert.equal(harmonicRatio(30, 32), 16);
+        assert.equal(harmonicRatio(30, 32), 15);
     });
 
     it('flex angle rate', () => {

@@ -67,9 +67,9 @@ export function wormWheelAngle(wormAngle, threads, wheelTeeth, contactWorld = -M
     return (wormAngle * threads) / wheelTeeth + meshPhase;
 }
 
-/** Cycloidal reduction ratio. */
+/** Cycloidal reduction ratio (fixed pins, disc output). */
 export function cycloidalRatio(pins, lobes) {
-    return pins / (pins - lobes);
+    return lobes / (pins - lobes);
 }
 
 /**
@@ -93,7 +93,7 @@ export function harmonicFlexAngle(generatorAngle, flexTeeth, circularTeeth) {
 }
 
 export function harmonicRatio(flexTeeth, circularTeeth) {
-    return circularTeeth / (circularTeeth - flexTeeth);
+    return flexTeeth / (circularTeeth - flexTeeth);
 }
 
 /** Angular velocity helpers (derivatives of angle functions). */

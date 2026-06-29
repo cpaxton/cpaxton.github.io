@@ -124,7 +124,10 @@
             </p>
             <p>
                 With the ring gear fixed and the sun as input, the carrier output gives a reduction. With the
-                carrier fixed and the sun as input, the ring spins faster in the opposite direction. Same hardware,
+                carrier fixed and the sun as input, the ring rotates in the opposite direction but
+                <strong>slower</strong> than the sun — like a simple sun → planet → ring train:
+                <em>ω<sub>ring</sub> = −ω<sub>sun</sub> · (N<sub>sun</sub> / N<sub>ring</sub>)</em>,
+                and because N<sub>ring</sub> &gt; N<sub>sun</sub>, the ring speed drops. Same hardware,
                 different ratios depending on what you lock.
             </p>
             <div class="pros-cons">
@@ -196,8 +199,11 @@
             </p>
             <p>
                 Use the demo toggles to switch views. Fixed pins shows a practical pin-drive layout; rolling
-                trochoid shows the generating circle and true hypocycloid profile. Both use the same reduction
-                law <em>i = N<sub>pins</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>)</em>.
+                trochoid shows the generating circle and true hypocycloid profile. Both animations model a
+                <strong>fixed-pin reducer</strong> where the lobed disc is the output, with reduction
+                <em>i = N<sub>lobes</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>)</em>
+                (5 lobes and 6 pins → 5:1). If the disc were held fixed and the pin housing rotated instead,
+                the ratio would be N<sub>pins</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>).
                 Real reducers often add a <strong>counter disc</strong> (second eccentric disc 180° out of phase) to
                 cancel housing shake — toggle it to compare on-axis output vs an orbiting output shaft.
             </p>
@@ -279,6 +285,9 @@
                 oval have teeth close enough to mesh with the fixed ring; those zones travel around the ring as the
                 cam turns. Because the ring has two more teeth than the flex spline, each cam revolution advances the
                 flex spline by two tooth pitches — a large reduction on the <strong>output shaft at the center</strong>.
+                With the circular spline fixed and the flex spline as output,
+                <em>i = N<sub>flex</sub> / (N<sub>circular</sub> − N<sub>flex</sub>)</em>
+                (30 teeth and 32 teeth → 15:1).
             </p>
             <p class="harmonic-watch">
                 <strong>In the demo:</strong> orange = input cam · blue oval = flex spline · gray ring = fixed circular

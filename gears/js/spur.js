@@ -3,8 +3,6 @@ import {
     createDemoController,
     drawLabel,
     formatRatio,
-    isPhysicsMode,
-    isSchematicMode,
     moduleFromMaxDiameter,
     normalizeSpurParams,
 } from './gear-math.js';
@@ -13,8 +11,8 @@ import { drawContactOverlay, formatContactReadout } from './contact-overlay.js';
 import { createWobbleTracker, drawWobbleIndicator } from './overlays.js';
 import { measureSpurContact, solveSpurAssembly, subsampleProfile } from './mesh-solver.js';
 import { sampleExternalGear } from './profiles/involute.js';
+import { estimateSpur, estimateLabel } from './estimates.js';
 import { drawInvoluteGear } from './render.js';
-import { drawRadialGearPair } from './schematic.js';
 
 const DEFAULTS = { driverTeeth: 18, drivenTeeth: 36 };
 
@@ -35,11 +33,12 @@ export function createSpurDemo(canvas) {
     }
 
     function getReductionLabel() {
-        return `Reduction: ${formatRatio(getReduction())} · Driver ${params.driverTeeth}T · Driven ${params.drivenTeeth}T`;
+        const est = estimateLabel(estimateSpur(params));
+        return `Reduction: ${formatRatio(getReduction())} · Driver ${params.driverTeeth}T · Driven ${params.drivenTeeth}T · ${est}`;
     }
 
     function getContactInfo() {
-        if (!isPhysicsMode() || !lastContact) return null;
+        if (!lastContact) return null;
         return {
             contact: lastContact,
             readout: formatContactReadout(lastContact, lastModule),
@@ -89,48 +88,33 @@ export function createSpurDemo(canvas) {
         const driverX = cx - dist / 2;
         const drivenX = cx + dist / 2;
 
-        if (isSchematicMode()) {
-            const ratio = driverTeeth / drivenTeeth;
-            const drivenAngle = -ratio * driverAngle + Math.PI;
-            drawRadialGearPair(ctx, {
-                x: driverX, y: cy, pitchRadius: driverR, teeth: driverTeeth,
-                angle: driverAngle, options: { fill: '#e8a838', label: `${driverTeeth}T` },
-            }, {
-                x: drivenX, y: cy, pitchRadius: drivenR, teeth: drivenTeeth,
-                angle: drivenAngle, options: { fill: '#4a90d9', label: `${drivenTeeth}T` },
-            });
-            lastContact = null;
-        } else {
-            const spurMesh = ensureMesh(module, driverX, drivenX, cy);
-            const angles = spurMesh.anglesAt(driverAngle);
-            drawInvoluteGear(ctx, driverX, cy, driverTeeth, module, angles.driver, {
-                fill: '#e8a838',
-                label: `${driverTeeth}T`,
-                points: driverPoints,
-            });
-            drawInvoluteGear(ctx, drivenX, cy, drivenTeeth, module, angles.driven, {
-                fill: '#4a90d9',
-                label: `${drivenTeeth}T`,
-                points: drivenPoints,
-            });
+        const spurMesh = ensureMesh(module, driverX, drivenX, cy);
+        const angles = spurMesh.anglesAt(driverAngle);
+        drawInvoluteGear(ctx, driverX, cy, driverTeeth, module, angles.driver, {
+            fill: '#e8a838',
+            label: `${driverTeeth}T`,
+            points: driverPoints,
+        });
+        drawInvoluteGear(ctx, drivenX, cy, drivenTeeth, module, angles.driven, {
+            fill: '#4a90d9',
+            label: `${drivenTeeth}T`,
+            points: drivenPoints,
+        });
 
-            if (isPhysicsMode()) {
-                if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
-                    lastContact = measureSpurContact({
-                        driverProfile: driverContact,
-                        drivenProfile: drivenContact,
-                        driverX,
-                        driverY: cy,
-                        drivenX,
-                        drivenY: cy,
-                        driverAngle: angles.driver,
-                        drivenAngle: angles.driven,
-                    });
-                    lastContact.label = 'Driver–driven mesh';
-                }
-                drawContactOverlay(ctx, lastContact, module);
-            }
+        if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
+            lastContact = measureSpurContact({
+                driverProfile: driverContact,
+                drivenProfile: drivenContact,
+                driverX,
+                driverY: cy,
+                drivenX,
+                drivenY: cy,
+                driverAngle: angles.driver,
+                drivenAngle: angles.driven,
+            });
+            lastContact.label = 'Driver–driven mesh';
         }
+        drawContactOverlay(ctx, lastContact, module);
 
         drawLabel(ctx, driverX, cy - driverR - 20, 'Driver (input)', '#ccc', 12);
         drawLabel(ctx, drivenX, cy - drivenR - 20, 'Driven (output)', '#ccc', 12);

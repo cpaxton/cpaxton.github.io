@@ -199,7 +199,7 @@ export function measureCycloidalPinContact({
 }
 
 /**
- * Search disc rotation offset so schematic lobes stay outside pins through a crank turn.
+ * Search disc rotation offset so the disc stays outside pins through a crank turn.
  * Kinematics (orbit + fixedPinDiscAngle) are fixed; only assembly phase is solved.
  */
 export function solveCycloidalMeshPhase({

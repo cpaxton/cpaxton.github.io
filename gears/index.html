@@ -12,18 +12,15 @@
         <header>
             <h1>Gear Explainer</h1>
             <p>How different gear mechanisms work — notes and interactive demos.</p>
-            <div class="fidelity-toggle" role="group" aria-label="Simulation fidelity">
-                <span class="fidelity-label">Mode:</span>
-                <button type="button" class="fidelity-btn" data-fidelity="physics" aria-pressed="true">Physics</button>
-                <button type="button" class="fidelity-btn" data-fidelity="schematic" aria-pressed="false">Schematic</button>
-                <span class="fidelity-label overlay-label">Overlays:</span>
+            <div class="fidelity-toggle" role="group" aria-label="Demo overlays">
+                <span class="fidelity-label">Overlays:</span>
                 <button type="button" class="fidelity-btn overlay-btn active" data-overlay="wobble" aria-pressed="true">Wobble trace</button>
             </div>
             <p class="fidelity-note">
-                <strong>Physics</strong> (default) uses conjugate tooth profiles, mesh alignment, and a clearance overlay — run slowly or step frame-by-frame to inspect contact.
-                <strong>Schematic</strong> uses simplified spur teeth and skips contact checks for faster preview.
-                <strong>Wobble trace</strong> shows off-axis shake that eccentric layouts would transmit to the housing (suppressed when balanced, e.g. cycloidal counter disc).
-                URL override: <code>?mode=physics</code> or <code>?mode=schematic</code>, <code>?wobble=0</code> to hide traces.
+                Demos use conjugate tooth profiles with mesh clearance readouts — run slowly or step frame-by-frame to inspect contact.
+                <strong>Est. weight · cost</strong> in each demo are order-of-magnitude guides for ~100–200&nbsp;mm-class reducers (not quotes).
+                <strong>Wobble trace</strong> shows off-axis shake; cycloidal uses disc mass centroids so a counter disc cancels eccentric shake.
+                URL override: <code>?wobble=0</code> to hide traces.
             </p>
         </header>
 
@@ -40,12 +37,14 @@
                 compact packages.
             </p>
             <p>
-                Use <strong>Physics</strong> mode for conjugate tooth shapes and mesh clearance feedback on spur,
-                planetary, cycloidal (fixed-pin), and harmonic demos. Rolling trochoid and schematic modes skip contact checks.
+                Demos use conjugate profiles and mesh clearance readouts on spur, planetary, cycloidal (fixed-pin),
+                and harmonic drives. Rolling trochoid view shows curve generation only (no pin contact overlay).
             </p>
             <p>
                 No single robot uses one gear type everywhere — designers pick by joint: heavy base axes, compact wrists,
                 and fast legs all get different reducers. Each section below includes examples and links.
+                (Camera gimbals are a common counterexample: they are usually <strong>direct-drive</strong> brushless
+                motors with no reducer, because even tiny gearbox backlash hurts optical stabilization.)
             </p>
         </section>
 
@@ -77,21 +76,21 @@
                     </ul>
                 </div>
             </div>
-            <p class="gear-uses"><strong>Uses:</strong> clocks, printers, hand tools</p>
+            <p class="gear-uses"><strong>Uses:</strong> clocks, 3D printer extruders, entry-level servos</p>
             <div class="robot-examples">
                 <h3>Real robots &amp; hardware</h3>
                 <ul>
                     <li>
-                        <a href="https://www.unitree.com/go2" target="_blank" rel="noopener noreferrer">Unitree Go2</a>
-                        <span class="note">— leg actuators use compact multi-stage gearboxes; many hobby quadruped kits use simple spur stages inside servo motors.</span>
+                        <a href="https://emanual.robotis.com/docs/en/dxl/ax/ax-12a/" target="_blank" rel="noopener noreferrer">ROBOTIS Dynamixel AX-12A</a>
+                        <span class="note">— classic entry-level smart servo with a <strong>cascading spur gear train</strong> (254:1, engineering plastic); same idea as generic RC hobby servos. Higher lines (X series) use all-metal spur; DYNAMIXEL-P moves to cycloidal reduction.</span>
                     </li>
                     <li>
-                        <a href="https://www.robotis.us/dynamixel/" target="_blank" rel="noopener noreferrer">ROBOTIS Dynamixel servos</a>
-                        <span class="note">— smart actuators built around a DC motor and a compact spur (sometimes planetary) gearhead; common on research arms and kits.</span>
+                        <a href="https://www.bondtech.se/product/bmg-extruder/" target="_blank" rel="noopener noreferrer">Bondtech BMG extruder</a>
+                        <span class="note">— desktop-familiar example: dual-drive <strong>hardened steel spur gears</strong> grip filament, with a compact 3:1 internal stage for torque — easy to see why spur pairs are everywhere in small mechanisms.</span>
                     </li>
                     <li>
-                        <a href="https://www.bostondynamics.com/products/spot" target="_blank" rel="noopener noreferrer">Boston Dynamics Spot</a>
-                        <span class="note">— custom leg drives; spur pairs still appear in low-cost robot kits, grippers, and printer mechanisms where space and ratio needs are modest.</span>
+                        <a href="https://www.robotis.us/dynamixel/" target="_blank" rel="noopener noreferrer">ROBOTIS Dynamixel (AX / MX / X)</a>
+                        <span class="note">— research kits and small legged robots often stack many low-cost spur-gear servos; torque and backlash limits push serious leg designs toward planetary or cycloidal modules instead.</span>
                     </li>
                 </ul>
             </div>
@@ -130,6 +129,25 @@
                 and because N<sub>ring</sub> &gt; N<sub>sun</sub>, the ring speed drops. Same hardware,
                 different ratios depending on what you lock.
             </p>
+            <div class="ratio-formula">i = 1 + N<sub>ring</sub> / N<sub>sun</sub> &nbsp;(ring fixed, sun in, carrier out)</div>
+            <p>
+                The interactive demo shows <strong>one stage</strong> — a single sun / planet / ring set. Most real
+                reducers <strong>stack several stages coaxially</strong>: the output shaft of stage&nbsp;1 drives the
+                sun of stage&nbsp;2 (sometimes through a short coupling), and so on. Each stage multiplies torque and
+                divides speed; the overall ratio is approximately the <strong>product</strong> of the stage ratios:
+                <em>i<sub>total</sub> ≈ i<sub>1</sub> · i<sub>2</sub> · …</em>.
+            </p>
+            <p>
+                That is why the examples below span such different numbers: Go2 uses a <strong>single</strong> low-ratio
+                stage (~6:1) for quasi-direct drive; the G1 humanoid stacks <strong>two</strong> stages for ~20:1 total;
+                Mars rover wheel actuators use <strong>four</strong> stages to reach 1024:1. More stages mean more
+                parts and efficiency loss, but much higher torque in the same diameter — the usual trade-off in leg and
+                wheel drives.
+            </p>
+            <p class="harmonic-watch">
+                <strong>In the demo:</strong> one stage only (ring fixed, sun input, carrier output). Tooth sliders
+                change <em>that</em> stage’s ratio — not a full multi-stage stack.
+            </p>
             <div class="pros-cons">
                 <div>
                     <h3>Pros</h3>
@@ -147,7 +165,7 @@
                     </ul>
                 </div>
             </div>
-            <p class="gear-uses"><strong>Uses:</strong> automotive transmissions, robot joints, drones</p>
+            <p class="gear-uses"><strong>Uses:</strong> automotive transmissions, robot leg joints, quasi-direct-drive actuators</p>
             <div class="robot-examples">
                 <h3>Real robots &amp; hardware</h3>
                 <ul>
@@ -156,16 +174,16 @@
                         <span class="note">— humanoid joint modules pair high-speed brushless motors with a <strong>two-stage planetary</strong> reducer (total ratio ≈20:1 in teardown reports); chosen for impact tolerance in running and jumping.</span>
                     </li>
                     <li>
-                        <a href="https://support.unitree.com/home/en/G1_developer/about_G1" target="_blank" rel="noopener noreferrer">Unitree G1 developer docs</a>
-                        <span class="note">— official overview of the 23+ DOF layout and integrated hollow-shaft joint modules.</span>
+                        <a href="https://www.simplexitypd.com/blog/unitree-go2-motor-teardown/" target="_blank" rel="noopener noreferrer">Unitree Go2 leg actuator (teardown)</a>
+                        <span class="note">— textbook <strong>quasi-direct drive (QDD)</strong>: large brushless motor plus a single-stage <strong>internal planetary</strong> (~6:1 from 9T sun / 47T ring in published teardowns) for backdrivability and ground transparency.</span>
                     </li>
                     <li>
-                        <a href="https://www.dji.com/matrice-350" target="_blank" rel="noopener noreferrer">DJI Matrice / gimbal payloads</a>
-                        <span class="note">— camera gimbals and many drone tilt axes use planetary gearheads for coaxial, high-torque stabilization in a thin package.</span>
+                        <a href="https://dev.bostondynamics.com/docs/concepts/joint_control/supplemental_data" target="_blank" rel="noopener noreferrer">Boston Dynamics Spot</a>
+                        <span class="note">— hip joints use constant-ratio transmissions (51:1 in published SDK supplemental data); knee is a ball-screw linkage with variable ratio — planetary-style leg drives, but a different architecture than Go2’s low-ratio QDD.</span>
                     </li>
                     <li>
-                        <a href="https://mars.nasa.gov/msl/home/" target="_blank" rel="noopener noreferrer">NASA Mars rovers (Curiosity &amp; Perseverance)</a>
-                        <span class="note">— wheel and mechanism drives often stack planetary stages for high reduction in harsh environments (alongside harmonic stages on some axes).</span>
+                        <a href="https://www-robotics.jpl.nasa.gov/media/documents/ROB-20-0040_R3.pdf" target="_blank" rel="noopener noreferrer">NASA Mars rovers (Curiosity mobility)</a>
+                        <span class="note">— each wheel/steer actuator uses a brushless motor with a <strong>4-stage planetary</strong> reduction (1024:1) for high torque in harsh terrain.</span>
                     </li>
                 </ul>
             </div>
@@ -200,9 +218,8 @@
                     <em>i = N<sub>lobes</sub> / (N<sub>pins</sub> − N<sub>lobes</sub>)</em>,
                     crank orbit, disc spin <em>−θ·(N<sub>pins</sub>−N<sub>lobes</sub>)/N<sub>lobes</sub></em>,
                     and on-axis output when a counter disc cancels shake.</li>
-                <li><strong>Fixed pins (physics mode):</strong> equidistant epicycloid profile (conjugate to the pin
+                <li><strong>Fixed pins:</strong> equidistant epicycloid profile (conjugate to the pin
                     ring) with pin size set from ring spacing; mesh phase is solved each time counts change.</li>
-                <li><strong>Fixed pins (schematic mode):</strong> smooth cosine lobes for a fast, readable preview.</li>
                 <li><strong>Rolling trochoid:</strong> how the hypocycloid curve is generated (circle rolling inside
                     the pitch circle). The disc center follows the larger rolling orbit, not the small eccentric throw
                     of a real pin-drive crank.</li>
@@ -334,11 +351,11 @@
                     </li>
                     <li>
                         <a href="https://www.tesla.com/AI" target="_blank" rel="noopener noreferrer">Tesla Optimus</a>
-                        <span class="note">— public teardowns and specs cite harmonic-style reducers on many arm and hand joints for high ratio in a thin wrist.</span>
+                        <span class="note">— Tesla AI Day actuator family slides show <strong>harmonic-drive rotary joints</strong> for compact, low-backlash arms and hips; linear knee/elbow stages use roller screws instead.</span>
                     </li>
                     <li>
                         <a href="https://www.nasa.gov/mission_pages/mars/main/index.html" target="_blank" rel="noopener noreferrer">NASA Mars missions</a>
-                        <span class="note">— harmonic drives have flown on rover wheels, sample arms, and deployable mechanisms where weight and precision matter.</span>
+                        <span class="note">— strain-wave reducers appear in precision pointing (e.g. high-gain antenna drives on MER) and sample/deployment mechanisms; rover <strong>wheels</strong> use multi-stage planetary drives instead.</span>
                     </li>
                     <li>
                         <a href="https://www.ubtrobot.com/" target="_blank" rel="noopener noreferrer">UBTECH humanoids (Walker series)</a>

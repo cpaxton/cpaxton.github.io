@@ -2,10 +2,6 @@
  * Shared canvas utilities and re-exports for gear explainer demos.
  */
 
-import { isSchematicMode } from './fidelity.js';
-
-export { getFidelityMode, isPhysicsMode, isSchematicMode, setFidelityMode } from './fidelity.js';
-
 export { clamp, formatRatio, pitchRadius, centerDistance, moduleFromMaxDiameter,
     planetaryRingTeeth, computePlanetaryRing, DEFAULT_PRESSURE_ANGLE,
     normalizeSpurParams, normalizePlanetaryParams, normalizeCycloidalParams,
@@ -104,10 +100,6 @@ export function drawArrow(ctx, x1, y1, x2, y2, color = '#ffcc00') {
 export function clearBackground(ctx, width, height, color = '#1a1a2e') {
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, width, height);
-}
-
-export function getRenderMode() {
-    return isSchematicMode() ? 'schematic' : 'conjugate';
 }
 
 export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {

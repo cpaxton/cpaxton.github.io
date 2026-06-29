@@ -3,7 +3,6 @@
  */
 
 import { cycloidalRatio } from '../kinematics.js';
-import { TARGET_MESH_CLEARANCE_COEFF } from '../constraints.js';
 
 const TAU = Math.PI * 2;
 
@@ -87,44 +86,6 @@ export function sampleEquidistantCycloidalDisc(
 
     return path;
 }
-
-/**
- * Fixed-pin disc: schematic cosine lobes (schematic / fast preview).
- * When pinRingRadius and pinRadius are given, lobe peaks are clamped so a lobe
- * aligned with eccentricity toward the pin ring stays outside the pin circles.
- */
-export function sampleFixedPinDisc(
-    discRadius,
-    lobes,
-    eccentricity,
-    points = 180,
-    pinRingRadius = null,
-    pinRadius = 0
-) {
-    const valleyR = discRadius - eccentricity * 0.88;
-    let peakR = discRadius;
-    if (pinRingRadius != null) {
-        const targetClearance = TARGET_MESH_CLEARANCE_COEFF * pinRadius;
-        const conjugatePeak = pinRingRadius - pinRadius - eccentricity - targetClearance;
-        const schematicExtension = eccentricity * 0.064;
-        peakR = Math.min(
-            discRadius + schematicExtension,
-            conjugatePeak + schematicExtension
-        );
-    }
-    const path = [];
-
-    for (let i = 0; i <= points; i++) {
-        const t = (i / points) * TAU;
-        const r = valleyR + ((peakR - valleyR) * (1 + Math.cos(lobes * t))) / 2;
-        path.push({ x: Math.cos(t) * r, y: Math.sin(t) * r });
-    }
-
-    return path;
-}
-
-/** @deprecated alias */
-export const sampleCycloidalDisc = sampleFixedPinDisc;
 
 /**
  * True hypocycloid in the rolling-circle frame (circle of radius r rolls inside R = r·L).

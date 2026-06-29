@@ -4,7 +4,6 @@ import {
     drawArrow,
     drawLabel,
     formatRatio,
-    isPhysicsMode,
     moduleFromMaxDiameter,
     normalizeHarmonicParams,
 } from './gear-math.js';
@@ -12,6 +11,7 @@ import { harmonicFlexAngle, harmonicRatio } from './kinematics.js';
 import { pitchRadius } from './constraints.js';
 import { createWobbleTracker, drawWobbleIndicator } from './overlays.js';
 import { drawContactOverlay, formatContactReadout } from './contact-overlay.js';
+import { estimateHarmonic, estimateLabel } from './estimates.js';
 import { measureHarmonicContact } from './mesh-solver.js';
 import {
     sampleFlexSpline,
@@ -76,7 +76,7 @@ export function createHarmonicDemo(canvas) {
     }
 
     function getContactInfo() {
-        if (!isPhysicsMode() || !lastContact) return null;
+        if (!lastContact) return null;
         return {
             contact: lastContact,
             readout: formatContactReadout(lastContact, lastModule),
@@ -90,7 +90,8 @@ export function createHarmonicDemo(canvas) {
 
     function getReductionLabel() {
         const { flexTeeth, circularTeeth } = params;
-        return `Reduction: ${formatRatio(getReduction())} · Flex ${flexTeeth}T · Circular ${circularTeeth}T`;
+        const est = estimateLabel(estimateHarmonic({ flexTeeth, circularTeeth }));
+        return `Reduction: ${formatRatio(getReduction())} · Flex ${flexTeeth}T · Circular ${circularTeeth}T · ${est}`;
     }
 
     function drawFrame(ctx, width, height, time, meta = {}) {
@@ -185,20 +186,16 @@ export function createHarmonicDemo(canvas) {
             color: '#ff6b8a',
         });
 
-        if (isPhysicsMode()) {
-            if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
-                lastContact = measureHarmonicContact({
-                    flexProfile: flexPath,
-                    ringProfile: ringPathLocal,
-                    cx,
-                    cy,
-                    generatorAngle: generatorAngle + flexAngle,
-                });
-            }
-            drawContactOverlay(ctx, lastContact, module);
-        } else {
-            lastContact = null;
+        if (meta.forceRefine || meta.frame % 3 === 0 || !lastContact) {
+            lastContact = measureHarmonicContact({
+                flexProfile: flexPath,
+                ringProfile: ringPathLocal,
+                cx,
+                cy,
+                generatorAngle: generatorAngle + flexAngle,
+            });
         }
+        drawContactOverlay(ctx, lastContact, module);
     }
 
     const controller = createDemoController(canvas, drawFrame);

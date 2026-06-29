@@ -2,11 +2,6 @@ import { createSpurDemo } from './spur.js';
 import { createPlanetaryDemo } from './planetary.js';
 import { createCycloidalDemo } from './cycloidal.js';
 import { createHarmonicDemo } from './harmonic.js';
-import {
-    getFidelityMode,
-    isPhysicsMode,
-    setFidelityMode,
-} from './fidelity.js';
 import { isWobbleVisible, setWobbleVisible } from './overlays.js';
 
 const demos = [
@@ -28,7 +23,7 @@ function updateReadout(card, demo) {
 function updateContactReadout(card, demo) {
     const readout = card.querySelector('.contact-readout');
     if (!readout) return;
-    if (!isPhysicsMode() || !demo.getContactInfo) {
+    if (!demo.getContactInfo) {
         readout.textContent = '';
         readout.hidden = true;
         return;
@@ -208,31 +203,7 @@ function wireControls(card, demo, demoId) {
     updateContactReadout(card, demo);
 }
 
-function syncFidelityToggle() {
-    const mode = getFidelityMode();
-    document.querySelectorAll('[data-fidelity]').forEach((btn) => {
-        const active = btn.dataset.fidelity === mode;
-        btn.classList.toggle('active', active);
-        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
-}
-
-function wireFidelityToggle() {
-    document.querySelectorAll('[data-fidelity]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            setFidelityMode(btn.dataset.fidelity);
-            syncFidelityToggle();
-            demoInstances.forEach(({ demo, card }) => {
-                demo.redraw();
-                updateContactReadout(card, demo);
-            });
-        });
-    });
-    syncFidelityToggle();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    wireFidelityToggle();
     wireWobbleToggle();
 
     demos.forEach(({ id, create, canvasId }) => {

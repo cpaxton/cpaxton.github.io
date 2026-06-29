@@ -25,7 +25,7 @@ export function isMeshClearanceOk(clearance, module = 1) {
         && clearance <= MAX_MESH_CLEARANCE_COEFF * module;
 }
 
-/** Cycloidal pin mesh: reject deep penetration (schematic lobes may sit flush). */
+/** Cycloidal pin mesh: reject deep penetration at engaged contacts. */
 export function isCycloidalPinClearanceOk(clearance, pinRadius = 1) {
     return clearance >= -pinRadius * 0.15;
 }

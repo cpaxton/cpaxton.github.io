@@ -25,7 +25,6 @@ import {
 import {
     cycloidalGeometry,
     sampleEquidistantCycloidalDisc,
-    sampleFixedPinDisc,
     samplePinPositions,
     fixedPinDiscCenter,
 } from '../profiles/trochoid.js';

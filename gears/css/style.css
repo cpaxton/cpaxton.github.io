@@ -267,3 +267,39 @@ section h3 {
     margin: 0.75rem 0 0;
     font-size: 0.95rem;
 }
+
+.robot-examples {
+    margin-top: 1.25rem;
+    padding: 14px 16px;
+    background: #f8f9fb;
+    border: 1px solid #e0e4ea;
+    border-radius: 6px;
+}
+
+.robot-examples h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.robot-examples ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.robot-examples li {
+    margin-bottom: 0.45rem;
+}
+
+.robot-examples a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.robot-examples a:hover {
+    text-decoration: underline;
+}
+
+.robot-examples .note {
+    color: #555;
+}

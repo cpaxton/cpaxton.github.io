@@ -4,11 +4,14 @@ export const DEFAULT_PRESSURE_ANGLE = (20 * Math.PI) / 180;
 /** Nominal addendum / dedendum as multiples of module (reduced addendum adds tip clearance). */
 export const ADDENDUM_COEFF = 0.6;
 export const DEDENDUM_COEFF = 0.95;
+/** Planetary externals: shorter addendum + scale so tips clear the ring pitch circle. */
+export const PLANETARY_ADDENDUM_COEFF = 0.42;
+export const PLANETARY_PROFILE_SCALE = 0.928;
 
 /** Desired mesh clearance as multiples of module (contact patch, not polygon overlap). */
 export const TARGET_MESH_CLEARANCE_COEFF = 0.045;
 export const MIN_MESH_CLEARANCE_COEFF = 0.012;
-export const MAX_MESH_CLEARANCE_COEFF = 0.22;
+export const MAX_MESH_CLEARANCE_COEFF = 0.55;
 
 /** Score how close a measured clearance is to the design target (penalize too-tight fits). */
 export function meshClearanceScore(clearance, module = 1) {

@@ -5,6 +5,7 @@
 
 import {
     meshClearanceScore,
+    MIN_MESH_CLEARANCE_COEFF,
     pitchRadius,
 } from './constraints.js';
 import { gapPhaseForContact, planetaryCarrierAngle } from './kinematics.js';
@@ -25,6 +26,21 @@ function angleDiff(a, b) {
     let d = wrapAngle(a - b);
     if (d > Math.PI) d -= TAU;
     return Math.abs(d);
+}
+
+function planetRingContacts(px, py, cx = 0, cy = 0) {
+    const towardPlanet = Math.atan2(py - cy, px - cx);
+    return {
+        planet: towardPlanet,
+        ring: towardPlanet,
+    };
+}
+
+function sunPlanetContacts(px, py, cx = 0, cy = 0) {
+    return {
+        sun: Math.atan2(py - cy, px - cx),
+        planet: Math.atan2(cy - py, cx - px),
+    };
 }
 
 function worldPoints(local, x, y, angle) {
@@ -155,19 +171,21 @@ export function measurePlanetaryContacts({
             ? planetSpins[p]
             : planetaryPlanetAngleWithOffset(sunAngle, beta, sunTeeth, planetTeeth, planetOffsets[p]);
 
+        const sunContacts = sunPlanetContacts(px, py, cx, cy);
         const sunPair = minContactPair(
             sunProfile, cx, cy, sunAngle,
             planetProfile, px, py, spin,
-            Math.atan2(py - cy, px - cx), Math.atan2(cy - py, cx - px)
+            sunContacts.sun, sunContacts.planet
         );
         if (sunPair.clearance < worst.clearance) {
             worst = { ...sunPair, label: `Sun–planet ${p + 1}` };
         }
 
+        const ringContacts = planetRingContacts(px, py, cx, cy);
         const ringPair = minContactPair(
             planetProfile, px, py, spin,
             ringProfile, cx, cy, ringPhase,
-            Math.atan2(py - cy, px - cx), Math.atan2(py - cy, px - cx)
+            ringContacts.planet, ringContacts.ring
         );
         if (ringPair.clearance < worst.clearance) {
             worst = { ...ringPair, label: `Planet ${p + 1}–ring` };
@@ -299,7 +317,9 @@ export function solvePlanetaryAssembly({
     });
 
     function assemblyClearance(ringPhase, offsets, sunAngles) {
-        let worst = Infinity;
+        let worstSun = Infinity;
+        let worstRing = Infinity;
+
         for (const sunAngle of sunAngles) {
             const carrier = planetaryCarrierAngle(sunAngle, sunTeeth, ringTeeth);
             for (let p = 0; p < numPlanets; p++) {
@@ -310,52 +330,73 @@ export function solvePlanetaryAssembly({
                 const spin = planetaryPlanetAngleWithOffset(
                     sunAngle, beta, sunTeeth, planetTeeth, offsets[p]
                 );
-                const sunContact = Math.atan2(py, px);
-                const planetSunContact = Math.atan2(-py, -px);
-                const planetRingContact = Math.atan2(py, px);
-                const ringContact = Math.atan2(py, px);
+                const sunContacts = sunPlanetContacts(px, py);
+                const ringContacts = planetRingContacts(px, py);
 
-                worst = Math.min(
-                    worst,
+                worstSun = Math.min(
+                    worstSun,
                     minContactDistance(
                         sunLite, 0, 0, sunAngle,
                         planetLite, px, py, spin,
-                        sunContact, planetSunContact
-                    ),
+                        sunContacts.sun, sunContacts.planet
+                    )
+                );
+                worstRing = Math.min(
+                    worstRing,
                     minContactDistance(
                         planetLite, px, py, spin,
                         ringLite, 0, 0, ringPhase,
-                        planetRingContact, ringContact
+                        ringContacts.planet, ringContacts.ring
                     )
                 );
             }
         }
-        return worst;
+
+        return { worstSun, worstRing, combined: Math.min(worstSun, worstRing) };
+    }
+
+    function assemblyScore(clearances) {
+        const min = MIN_MESH_CLEARANCE_COEFF * module;
+        const { worstSun, worstRing } = clearances;
+        if (worstSun < min || worstRing < min) {
+            return 100 + (min - Math.min(worstSun, worstRing)) * 20;
+        }
+        return Math.max(
+            meshClearanceScore(worstSun, module),
+            meshClearanceScore(worstRing, module)
+        );
     }
 
     const sunSamples = Array.from({ length: 12 }, (_, i) => (i / 12) * TAU);
     const baseRing = internalMeshPhase(ringTeeth, 0);
     const ringStep = TAU / ringTeeth;
     const planetStep = TAU / planetTeeth;
-    let best = { score: Infinity, ringPhase: baseRing, planetOffsets, clearance: Infinity };
+    let best = {
+        score: Infinity,
+        ringPhase: baseRing,
+        planetOffsets,
+        clearance: Infinity,
+        sunClearance: Infinity,
+        ringClearance: Infinity,
+    };
 
     for (let k = 0; k < coarseRingSteps; k++) {
         const ringPhase = wrapAngle(baseRing + k * ringStep);
         let trialOffsets = [...planetOffsets];
-        let bestLocal = assemblyClearance(ringPhase, trialOffsets, sunSamples);
-        let localScore = meshClearanceScore(bestLocal, module);
+        let clearances = assemblyClearance(ringPhase, trialOffsets, sunSamples);
+        let localScore = assemblyScore(clearances);
 
         for (let p = 0; p < numPlanets; p++) {
             let bestTrial = trialOffsets[p];
-            for (let d = -2; d <= 2; d++) {
+            for (let d = -4; d <= 4; d++) {
                 const trial = [...trialOffsets];
                 trial[p] = trialOffsets[p] + d * planetStep;
-                const clearance = assemblyClearance(ringPhase, trial, sunSamples);
-                const score = meshClearanceScore(clearance, module);
+                const next = assemblyClearance(ringPhase, trial, sunSamples);
+                const score = assemblyScore(next);
                 if (score < localScore) {
                     localScore = score;
                     bestTrial = trial[p];
-                    bestLocal = clearance;
+                    clearances = next;
                 }
             }
             trialOffsets[p] = wrapAngle(bestTrial);
@@ -366,7 +407,9 @@ export function solvePlanetaryAssembly({
                 score: localScore,
                 ringPhase,
                 planetOffsets: trialOffsets.map((offset) => wrapAngle(offset)),
-                clearance: bestLocal,
+                clearance: clearances.combined,
+                sunClearance: clearances.worstSun,
+                ringClearance: clearances.worstRing,
             };
         }
     }
@@ -418,15 +461,17 @@ export function samplePlanetaryClearance({
                 sunAngle, beta, sunTeeth, planetTeeth, planetOffsets[p]
             );
 
+            const sunContacts = sunPlanetContacts(px, py);
+            const ringContacts = planetRingContacts(px, py);
             const dSun = minContactDistance(
                 sunProfile, 0, 0, sunAngle,
                 planetProfile, px, py, spin,
-                Math.atan2(py, px), Math.atan2(-py, -px)
+                sunContacts.sun, sunContacts.planet
             );
             const dRing = minContactDistance(
                 planetProfile, px, py, spin,
                 ringProfile, 0, 0, ringPhase,
-                Math.atan2(py, px), Math.atan2(py, px)
+                ringContacts.planet, ringContacts.ring
             );
             worst = Math.min(worst, dSun, dRing);
         }

@@ -6,6 +6,8 @@ import {
     ADDENDUM_COEFF,
     DEDENDUM_COEFF,
     DEFAULT_PRESSURE_ANGLE,
+    PLANETARY_ADDENDUM_COEFF,
+    PLANETARY_PROFILE_SCALE,
     pitchRadius,
 } from '../constraints.js';
 import { gapPhaseForContact } from '../kinematics.js';
@@ -56,10 +58,15 @@ function sampleRootArc(radius, startAngle, endAngle, segments = 10) {
 }
 
 /** One tooth segment for external gear (local frame, tooth peak at angle 0). */
-function externalToothSegment(teeth, module, pressureAngle = DEFAULT_PRESSURE_ANGLE) {
+function externalToothSegment(
+    teeth,
+    module,
+    pressureAngle = DEFAULT_PRESSURE_ANGLE,
+    addendumCoeff = ADDENDUM_COEFF
+) {
     const r = pitchRadius(teeth, module);
     const rb = baseRadius(r, pressureAngle);
-    const ra = r + ADDENDUM_COEFF * module;
+    const ra = r + addendumCoeff * module;
     const rf = Math.max(rb, r - DEDENDUM_COEFF * module);
     const pitch = TAU / teeth;
     const halfTooth = pitch / 4;
@@ -111,10 +118,15 @@ export function scaleGearProfile(profile, scale) {
 }
 
 export function samplePlanetaryExternalGear(teeth, module, pressureAngle = DEFAULT_PRESSURE_ANGLE) {
-    return scaleGearProfile(
-        sampleExternalGear(teeth, module, pressureAngle),
-        0.985
-    );
+    const pitch = TAU / teeth;
+    const tooth = externalToothSegment(teeth, module, pressureAngle, PLANETARY_ADDENDUM_COEFF);
+    const path = [];
+    for (let i = 0; i < teeth; i++) {
+        for (const p of tooth) {
+            path.push(rotatePoint(p, i * pitch));
+        }
+    }
+    return scaleGearProfile(path, PLANETARY_PROFILE_SCALE);
 }
 
 /** Conjugate internal tooth profile via pitch-circle mirror of an external gear. */
@@ -127,6 +139,30 @@ function sampleInternalToothProfile(teeth, module, pressureAngle = DEFAULT_PRESS
         const angle = Math.atan2(p.y, p.x);
         return polarPoint(2 * r - radius + ringBacklash, angle);
     });
+}
+
+/** Internal ring matched to scaled planetary planet teeth. */
+export function samplePlanetaryInternalGear(teeth, module, pressureAngle = DEFAULT_PRESSURE_ANGLE) {
+    const scaledExternal = samplePlanetaryExternalGear(teeth, module, pressureAngle);
+    const r = pitchRadius(teeth, module);
+    const pitch = TAU / teeth;
+    const ringBacklash = 0.025 * module;
+    const inner = scaledExternal.map((p) => {
+        const radius = Math.hypot(p.x, p.y);
+        const angle = Math.atan2(p.y, p.x);
+        return polarPoint(2 * r - radius + ringBacklash, angle);
+    }).map((p) => rotatePoint(p, pitch / 2));
+    const outerR = r + DEDENDUM_COEFF * module + module * 0.5;
+    const path = [];
+    const outerSegs = 72;
+
+    for (let i = 0; i <= outerSegs; i++) {
+        path.push(polarPoint(outerR, (i / outerSegs) * TAU));
+    }
+    for (let i = inner.length - 1; i >= 0; i--) {
+        path.push(inner[i]);
+    }
+    return path;
 }
 
 /** Internal ring gear as a filled annulus with inward-pointing teeth. */

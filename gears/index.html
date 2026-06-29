@@ -43,6 +43,10 @@
                 Use <strong>Physics</strong> mode for conjugate tooth shapes and mesh clearance feedback on spur and
                 planetary demos. Cycloidal and harmonic animations show correct speed ratios with schematic profiles.
             </p>
+            <p>
+                No single robot uses one gear type everywhere — designers pick by joint: heavy base axes, compact wrists,
+                and fast legs all get different reducers. Each section below includes examples and links.
+            </p>
         </section>
 
         <section id="spur">
@@ -73,6 +77,23 @@
                         <li>Common in clocks, printers, hand tools</li>
                     </ul>
                 </div>
+            </div>
+            <div class="robot-examples">
+                <h3>Real robots &amp; hardware</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.unitree.com/go2" target="_blank" rel="noopener noreferrer">Unitree Go2</a>
+                        <span class="note">— leg actuators use compact multi-stage gearboxes; many hobby quadruped kits use simple spur stages inside servo motors.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.robotis.us/dynamixel/" target="_blank" rel="noopener noreferrer">ROBOTIS Dynamixel servos</a>
+                        <span class="note">— smart actuators built around a DC motor and a compact spur (sometimes planetary) gearhead; common on research arms and kits.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.bostondynamics.com/products/spot" target="_blank" rel="noopener noreferrer">Boston Dynamics Spot</a>
+                        <span class="note">— custom leg drives; spur pairs still appear in low-cost robot kits, grippers, and printer mechanisms where space and ratio needs are modest.</span>
+                    </li>
+                </ul>
             </div>
             <div class="demo-card" data-demo="spur">
                 <div class="canvas-wrap">
@@ -123,6 +144,27 @@
                         <li>Automotive transmissions, robot joints, drones</li>
                     </ul>
                 </div>
+            </div>
+            <div class="robot-examples">
+                <h3>Real robots &amp; hardware</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.unitree.com/g1" target="_blank" rel="noopener noreferrer">Unitree G1</a>
+                        <span class="note">— humanoid joint modules pair high-speed brushless motors with a <strong>two-stage planetary</strong> reducer (total ratio ≈20:1 in teardown reports); chosen for impact tolerance in running and jumping.</span>
+                    </li>
+                    <li>
+                        <a href="https://support.unitree.com/home/en/G1_developer/about_G1" target="_blank" rel="noopener noreferrer">Unitree G1 developer docs</a>
+                        <span class="note">— official overview of the 23+ DOF layout and integrated hollow-shaft joint modules.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.dji.com/matrice-350" target="_blank" rel="noopener noreferrer">DJI Matrice / gimbal payloads</a>
+                        <span class="note">— camera gimbals and many drone tilt axes use planetary gearheads for coaxial, high-torque stabilization in a thin package.</span>
+                    </li>
+                    <li>
+                        <a href="https://mars.nasa.gov/msl/home/" target="_blank" rel="noopener noreferrer">NASA Mars rovers (Curiosity &amp; Perseverance)</a>
+                        <span class="note">— wheel and mechanism drives often stack planetary stages for high reduction in harsh environments (alongside harmonic stages on some axes).</span>
+                    </li>
+                </ul>
             </div>
             <div class="demo-card" data-demo="planetary">
                 <div class="canvas-wrap">
@@ -176,6 +218,27 @@
                         <li>Robot reducers, indexing tables, conveyors</li>
                     </ul>
                 </div>
+            </div>
+            <div class="robot-examples">
+                <h3>Real robots &amp; hardware</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.nabtesco.com/en/product/reducer.html" target="_blank" rel="noopener noreferrer">Nabtesco RV reducers</a>
+                        <span class="note">— the classic “RV” unit is a <strong>cycloidal pin-drive</strong> (often with a planetary input stage); standard in heavy industrial robot base joints.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.fanuc.com/products/robot" target="_blank" rel="noopener noreferrer">FANUC industrial robots</a>
+                        <span class="note">— large arms typically use RV-style cycloidal reducers on axes 1–3 (shoulder/base) for stiffness under payload, with different reducers on the wrist.</span>
+                    </li>
+                    <li>
+                        <a href="https://new.abb.com/products/robotics" target="_blank" rel="noopener noreferrer">ABB Robotics</a>
+                        <span class="note">— six-axis factory robots commonly mix cycloidal RV units on high-torque joints and strain-wave gears on lighter wrist axes.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.evsint.com/industrial-robot-reducers-harmonic-cycloidal-rv-comparison-2026/" target="_blank" rel="noopener noreferrer">Industrial reducer comparison (EVS)</a>
+                        <span class="note">— readable overview of where RV cycloidal vs harmonic reducers land in modern arm designs.</span>
+                    </li>
+                </ul>
             </div>
             <div class="demo-card" data-demo="cycloidal">
                 <div class="canvas-wrap">
@@ -238,6 +301,31 @@
                         <li>Collaborative robots, space mechanisms</li>
                     </ul>
                 </div>
+            </div>
+            <div class="robot-examples">
+                <h3>Real robots &amp; hardware</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.universal-robots.com/products/" target="_blank" rel="noopener noreferrer">Universal Robots (UR e-Series)</a>
+                        <span class="note">— collaborative arm joints rely on <strong>strain-wave (harmonic)</strong> reducers for near-zero backlash and smooth motion near people.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.harmonicdrive.net/industry/robotics" target="_blank" rel="noopener noreferrer">Harmonic Drive — robotics</a>
+                        <span class="note">— manufacturer page describing use in industrial arms, cobots, and humanoid joints (compact, hollow-shaft variants).</span>
+                    </li>
+                    <li>
+                        <a href="https://www.tesla.com/AI" target="_blank" rel="noopener noreferrer">Tesla Optimus</a>
+                        <span class="note">— public teardowns and specs cite harmonic-style reducers on many arm and hand joints for high ratio in a thin wrist.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.nasa.gov/mission_pages/mars/main/index.html" target="_blank" rel="noopener noreferrer">NASA Mars missions</a>
+                        <span class="note">— harmonic drives have flown on rover wheels, sample arms, and deployable mechanisms where weight and precision matter.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.ubtrobot.com/" target="_blank" rel="noopener noreferrer">UBTECH humanoids (Walker series)</a>
+                        <span class="note">— service humanoids often advertise harmonic joints for quiet, flexible-limb motion (contrast with the G1’s planetary-heavy leg design).</span>
+                    </li>
+                </ul>
             </div>
             <div class="demo-card" data-demo="harmonic">
                 <div class="canvas-wrap">

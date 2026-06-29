@@ -16,7 +16,7 @@ import {
     planetaryPlanetAngleWithOffset,
     solvePlanetaryAssembly,
 } from './mesh-solver.js';
-import { sampleExternalGear, sampleInternalGear, samplePlanetaryExternalGear } from './profiles/involute.js';
+import { sampleExternalGear, sampleInternalGear, samplePlanetaryExternalGear, samplePlanetaryInternalGear } from './profiles/involute.js';
 import { drawInvoluteGear, drawProfileAt } from './render.js';
 
 const NUM_PLANETS = 3;
@@ -25,7 +25,7 @@ const DEFAULTS = { sunTeeth: 12, planetTeeth: 12 };
 function buildAssembly(sunTeeth, planetTeeth, ringTeeth, module) {
     const sunProfile = samplePlanetaryExternalGear(sunTeeth, module);
     const planetProfile = samplePlanetaryExternalGear(planetTeeth, module);
-    const ringPath = sampleInternalGear(ringTeeth, module);
+    const ringPath = samplePlanetaryInternalGear(ringTeeth, module);
     const solved = solvePlanetaryAssembly({
         sunProfile,
         planetProfile,
@@ -35,7 +35,7 @@ function buildAssembly(sunTeeth, planetTeeth, ringTeeth, module) {
         ringTeeth,
         numPlanets: NUM_PLANETS,
         module,
-        coarseRingSteps: 24,
+        coarseRingSteps: 36,
     });
 
     return {

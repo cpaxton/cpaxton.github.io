@@ -12,7 +12,7 @@ import {
     solvePlanetaryAssembly,
     solveSpurAssembly,
 } from '../mesh-solver.js';
-import { sampleExternalGear, sampleInternalGear, samplePlanetaryExternalGear } from '../profiles/involute.js';
+import { sampleExternalGear, sampleInternalGear, samplePlanetaryExternalGear, samplePlanetaryInternalGear } from '../profiles/involute.js';
 
 const TAU = Math.PI * 2;
 
@@ -64,7 +64,7 @@ describe('mesh solver', () => {
         const ringTeeth = 36;
         const sunProfile = samplePlanetaryExternalGear(sunTeeth, module);
         const planetProfile = samplePlanetaryExternalGear(planetTeeth, module);
-        const ringProfile = sampleInternalGear(ringTeeth, module);
+        const ringProfile = samplePlanetaryInternalGear(ringTeeth, module);
 
         const assembly = solvePlanetaryAssembly({
             sunProfile,
@@ -99,6 +99,14 @@ describe('mesh solver', () => {
         assert.ok(
             staticWorst >= MIN_MESH_CLEARANCE_COEFF * module * 0.85,
             `planetary static clearance ${staticWorst}`
+        );
+        assert.ok(
+            assembly.ringClearance >= MIN_MESH_CLEARANCE_COEFF * module * 0.85,
+            `planetary ring clearance ${assembly.ringClearance}`
+        );
+        assert.ok(
+            assembly.sunClearance >= MIN_MESH_CLEARANCE_COEFF * module * 0.85,
+            `planetary sun clearance ${assembly.sunClearance}`
         );
     });
 });

@@ -316,3 +316,34 @@ section h3 {
 .robot-examples .note {
     color: #555;
 }
+
+.site-nav {
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+}
+
+.site-nav a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    padding: 0 0 1rem;
+}
+
+.site-footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}

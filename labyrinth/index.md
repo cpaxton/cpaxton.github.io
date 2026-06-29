@@ -50,5 +50,6 @@ I hope you enjoy them. If you have any feedback, or want to see more, please let
 
 ## Play More Games
 
+- [Gear Explainer](/gears/index.html) - Spur, planetary, cycloidal, and harmonic drive demos with mesh clearance readouts and robot hardware examples.
 - [Boat vs Kraken Game](/boat_game/index.html) - Use the arrow keys to move the boat and avoid the kraken. Collect the coins for points. Created with Perplexity.
 - [Infinite Quiz Machine](/quiz/index.html) - A collection of AI-generated quizzes that are weird, fun, and a little bit uncanny.

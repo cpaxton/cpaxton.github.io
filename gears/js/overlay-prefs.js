@@ -39,7 +39,7 @@ function readWobblePref() {
 }
 
 function readContactPref() {
-    return readUrlFlag('clearance', 'contact') ?? readStoredFlag(CONTACT_STORAGE_KEY) ?? true;
+    return readUrlFlag('clearance', 'contact') ?? readStoredFlag(CONTACT_STORAGE_KEY) ?? false;
 }
 
 function writeOverlayPref(storageKey, visible) {

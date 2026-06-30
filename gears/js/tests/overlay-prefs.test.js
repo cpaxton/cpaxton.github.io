@@ -17,11 +17,24 @@ function withWindow(search, store, fn) {
 }
 
 describe('overlay prefs', () => {
+    it('defaults clearance off and wobble on', async () => {
+        await withWindow('', {}, async (prefs) => {
+            assert.equal(prefs.isContactOverlayVisible(), false);
+            assert.equal(prefs.isWobbleVisible(), true);
+        });
+    });
+
     it('toggles clearance visibility in memory', async () => {
         await withWindow('', {}, async (prefs) => {
-            assert.equal(prefs.isContactOverlayVisible(), true);
-            prefs.setContactOverlayVisible(false);
             assert.equal(prefs.isContactOverlayVisible(), false);
+            prefs.setContactOverlayVisible(true);
+            assert.equal(prefs.isContactOverlayVisible(), true);
+        });
+    });
+
+    it('reads clearance=1 from URL', async () => {
+        await withWindow('?clearance=1', {}, async (prefs) => {
+            assert.equal(prefs.isContactOverlayVisible(), true);
         });
     });
 

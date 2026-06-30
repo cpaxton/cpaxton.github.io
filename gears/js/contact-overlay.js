@@ -3,10 +3,15 @@
  */
 
 import { isMeshClearanceOk, MIN_MESH_CLEARANCE_COEFF } from './constraints.js';
+import { isContactOverlayVisible } from './overlay-prefs.js';
 
 const TAU = Math.PI * 2;
 
 export function drawContactOverlay(ctx, contact, module, options = {}) {
+    if (!isContactOverlayVisible()) {
+        return;
+    }
+
     const {
         x = 12,
         y = 18,
@@ -59,6 +64,7 @@ export function drawContactOverlay(ctx, contact, module, options = {}) {
 }
 
 export function formatContactReadout(contact, module, options = {}) {
+    if (!isContactOverlayVisible()) return '';
     const { isClearanceOk = isMeshClearanceOk } = options;
     if (!contact || contact.clearance === Infinity) return '';
     const ok = isClearanceOk(contact.clearance, module);

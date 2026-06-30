@@ -1,8 +1,8 @@
+import { isWobbleVisible, setWobbleVisible, isContactOverlayVisible, setContactOverlayVisible } from './overlay-prefs.js';
 import { createSpurDemo } from './spur.js';
 import { createPlanetaryDemo } from './planetary.js';
 import { createCycloidalDemo } from './cycloidal.js';
 import { createHarmonicDemo } from './harmonic.js';
-import { isWobbleVisible, setWobbleVisible } from './overlays.js';
 
 const demos = [
     { id: 'spur', create: createSpurDemo, canvasId: 'canvas-spur' },
@@ -23,6 +23,11 @@ function updateReadout(card, demo) {
 function updateContactReadout(card, demo) {
     const readout = card.querySelector('.contact-readout');
     if (!readout) return;
+    if (!isContactOverlayVisible()) {
+        readout.textContent = '';
+        readout.hidden = true;
+        return;
+    }
     if (!demo.getContactInfo) {
         readout.textContent = '';
         readout.hidden = true;
@@ -109,23 +114,42 @@ function wireCycloidalCounterDisc(card, demo) {
     syncCycloidalCounterDisc(card, demo.getParams().counterDisc);
 }
 
-function syncWobbleToggle() {
-    const visible = isWobbleVisible();
+function syncOverlayToggles() {
+    const wobbleVisible = isWobbleVisible();
     document.querySelectorAll('[data-overlay="wobble"]').forEach((btn) => {
-        btn.classList.toggle('active', visible);
-        btn.setAttribute('aria-pressed', visible ? 'true' : 'false');
+        btn.classList.toggle('active', wobbleVisible);
+        btn.setAttribute('aria-pressed', wobbleVisible ? 'true' : 'false');
+    });
+    const contactVisible = isContactOverlayVisible();
+    document.querySelectorAll('[data-overlay="contact"]').forEach((btn) => {
+        btn.classList.toggle('active', contactVisible);
+        btn.setAttribute('aria-pressed', contactVisible ? 'true' : 'false');
     });
 }
 
-function wireWobbleToggle() {
+function refreshAllDemos() {
+    demoInstances.forEach(({ demo, card }) => {
+        updateContactReadout(card, demo);
+        demo.redraw();
+    });
+}
+
+function wireOverlayToggles() {
     document.querySelectorAll('[data-overlay="wobble"]').forEach((btn) => {
         btn.addEventListener('click', () => {
             setWobbleVisible(!isWobbleVisible());
-            syncWobbleToggle();
-            demoInstances.forEach(({ demo }) => demo.redraw());
+            syncOverlayToggles();
+            refreshAllDemos();
         });
     });
-    syncWobbleToggle();
+    document.querySelectorAll('[data-overlay="contact"]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            setContactOverlayVisible(!isContactOverlayVisible());
+            syncOverlayToggles();
+            refreshAllDemos();
+        });
+    });
+    syncOverlayToggles();
 }
 
 function wireControls(card, demo, demoId) {
@@ -204,8 +228,6 @@ function wireControls(card, demo, demoId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    wireWobbleToggle();
-
     demos.forEach(({ id, create, canvasId }) => {
         const canvas = document.getElementById(canvasId);
         if (!canvas) return;
@@ -217,4 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
             demoInstances.push({ demo, card });
         }
     });
+
+    wireOverlayToggles();
 });

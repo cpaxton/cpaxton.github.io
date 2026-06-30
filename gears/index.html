@@ -20,13 +20,14 @@
             <p>How different gear mechanisms work — notes and interactive demos.</p>
             <div class="fidelity-toggle" role="group" aria-label="Demo overlays">
                 <span class="fidelity-label">Overlays:</span>
+                <button type="button" class="fidelity-btn overlay-btn active" data-overlay="contact" aria-pressed="true">Clearance</button>
                 <button type="button" class="fidelity-btn overlay-btn active" data-overlay="wobble" aria-pressed="true">Wobble trace</button>
             </div>
             <p class="fidelity-note">
                 Demos use conjugate tooth profiles with mesh clearance readouts — run slowly or step frame-by-frame to inspect contact.
                 <strong>Est. weight · cost</strong> in each demo are order-of-magnitude guides for ~100–200&nbsp;mm-class reducers (not quotes).
-                <strong>Wobble trace</strong> shows off-axis shake; cycloidal uses disc mass centroids so a counter disc cancels eccentric shake.
-                URL override: <code>?wobble=0</code> to hide traces.
+                Toggle <strong>Clearance</strong> for the green mesh-gap indicator; <strong>Wobble trace</strong> shows off-axis shake (cycloidal uses disc mass centroids when a counter disc cancels shake).
+                URL overrides: <code>?clearance=0</code>, <code>?wobble=0</code>.
             </p>
         </header>
 

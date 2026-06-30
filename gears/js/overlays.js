@@ -2,37 +2,16 @@
  * Global overlay toggles and off-axis (wobble) motion indicator.
  */
 
+import { isWobbleVisible } from './overlay-prefs.js';
+
+export {
+    isWobbleVisible,
+    setWobbleVisible,
+    isContactOverlayVisible,
+    setContactOverlayVisible,
+} from './overlay-prefs.js';
+
 const TAU = Math.PI * 2;
-const STORAGE_KEY = 'gears-show-wobble';
-
-let showWobble = readInitialWobble();
-
-function readInitialWobble() {
-    try {
-        const params = new URLSearchParams(window.location.search);
-        if (params.has('wobble')) {
-            return params.get('wobble') !== '0';
-        }
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored != null) return stored === '1';
-    } catch {
-        /* ignore */
-    }
-    return true;
-}
-
-export function isWobbleVisible() {
-    return showWobble;
-}
-
-export function setWobbleVisible(visible) {
-    showWobble = Boolean(visible);
-    try {
-        localStorage.setItem(STORAGE_KEY, showWobble ? '1' : '0');
-    } catch {
-        /* ignore */
-    }
-}
 
 /** Ring buffer of offset-from-axis samples (dx, dy). */
 export function createWobbleTracker(maxPoints = 110) {
@@ -61,7 +40,7 @@ export function createWobbleTracker(maxPoints = 110) {
  * @param {number} wobbleY
  */
 export function drawWobbleIndicator(ctx, axisX, axisY, wobbleX, wobbleY, tracker, options = {}) {
-    if (!showWobble) return null;
+    if (!isWobbleVisible()) return null;
 
     const {
         label = 'Off-axis shake',

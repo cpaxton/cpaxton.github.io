@@ -10,6 +10,7 @@ import {
 import { harmonicFlexAngle, harmonicRatio } from './kinematics.js';
 import { pitchRadius } from './constraints.js';
 import { createWobbleTracker, drawWobbleIndicator } from './overlays.js';
+import { isContactOverlayVisible } from './overlay-prefs.js';
 import { drawContactOverlay, formatContactReadout } from './contact-overlay.js';
 import { estimateHarmonic, estimateLabel } from './estimates.js';
 import { measureHarmonicContact } from './mesh-solver.js';
@@ -176,7 +177,9 @@ export function createHarmonicDemo(canvas) {
         drawLabel(ctx, cx, cy + ringR + 32, '② Flex spline (deforms, output)', '#4a90d9', 12);
         drawLabel(ctx, cx + genRadii.major + 42, cy - 8, '① Wave generator\n(input)', '#e8a838', 11);
         drawLabel(ctx, cx - 58, cy - 10, '④ Output\n(slow)', '#ffcc00', 10);
-        drawLabel(ctx, cx + ringR * 0.55, cy - ringR * 0.35, 'Mesh', '#5dff9a', 10);
+        if (isContactOverlayVisible()) {
+            drawLabel(ctx, cx + ringR * 0.55, cy - ringR * 0.35, 'Mesh', '#5dff9a', 10);
+        }
         drawLabel(ctx, cx, height - 24, formatRatio(getReduction()), '#ffcc00', 14);
 
         const lobeX = cx + Math.cos(generatorAngle + flexAngle) * wave.major;

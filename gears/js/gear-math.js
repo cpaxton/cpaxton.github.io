@@ -49,16 +49,38 @@ export function meshDrivenAngleLegacy(driverAngle, driverTeeth, drivenTeeth) {
     return -ratio * driverAngle + (Math.PI - gapCenter);
 }
 
+function measureCanvasWrap(wrap, aspectRatio) {
+    if (!wrap) {
+        const width = Math.min(window.innerWidth || 800, 800);
+        return { width, height: Math.round(width / aspectRatio) };
+    }
+    const rect = wrap.getBoundingClientRect();
+    let width = Math.floor(rect.width);
+    let height = Math.floor(rect.height);
+    if (width <= 0) {
+        width = wrap.clientWidth;
+    }
+    if (height <= 0 && width > 0) {
+        height = Math.round(width / aspectRatio);
+    }
+    if (width <= 0) {
+        width = Math.min(Math.floor(window.innerWidth - 32), 800);
+        height = Math.round(width / aspectRatio);
+    }
+    width = Math.max(1, width);
+    height = Math.max(1, height || Math.round(width / aspectRatio));
+    return { width, height };
+}
+
 export function setupCanvas(canvas, aspectRatio = 16 / 10) {
     const wrap = canvas.parentElement;
-    const dpr = window.devicePixelRatio || 1;
-    const width = wrap.clientWidth || 800;
-    const height = Math.round(width / aspectRatio);
+    const { width, height } = measureCanvasWrap(wrap, aspectRatio);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
 
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
 
     const ctx = canvas.getContext('2d');
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -187,17 +209,53 @@ export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
         return time;
     }
 
-    window.addEventListener('resize', resize);
+    const wrap = canvas.parentElement;
+    const onLayoutChange = () => resize();
+
+    window.addEventListener('resize', onLayoutChange);
+    window.addEventListener('orientationchange', onLayoutChange);
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', onLayoutChange);
+    }
+
+    if (wrap && typeof ResizeObserver !== 'undefined') {
+        const ro = new ResizeObserver(onLayoutChange);
+        ro.observe(wrap);
+    }
+
+    const mobileLayout = window.matchMedia('(max-width: 600px)');
 
     if (typeof IntersectionObserver !== 'undefined') {
         const observer = new IntersectionObserver(
             (entries) => {
-                inView = entries.some((entry) => entry.isIntersecting);
+                const entry = entries[0];
+                if (!entry) return;
+                inView = entry.isIntersecting && entry.intersectionRatio > 0.08;
+                if (inView) {
+                    resize();
+                }
                 syncLoop();
             },
-            { rootMargin: '80px', threshold: 0 }
+            {
+                rootMargin: mobileLayout.matches ? '0px' : '80px',
+                threshold: [0, 0.08, 0.2],
+            }
         );
         observer.observe(canvas);
+    }
+
+    function bootWhenSized(attempts = 0) {
+        const sized = wrap ? wrap.getBoundingClientRect().width > 0 : true;
+        if (!sized && attempts < 12) {
+            requestAnimationFrame(() => bootWhenSized(attempts + 1));
+            return;
+        }
+        resize();
+        drawFrame(canvasState.ctx, canvasState.width, canvasState.height, 0, { frame: 0, forceRefine: false });
+        if (!reducedMotion) {
+            wantPlaying = true;
+            syncLoop();
+        }
     }
 
     document.addEventListener('visibilitychange', () => {
@@ -216,11 +274,7 @@ export function createDemoController(canvas, drawFrame, aspectRatio = 16 / 10) {
         drawMeta(false);
     }
 
-    drawFrame(canvasState.ctx, canvasState.width, canvasState.height, 0, { frame: 0, forceRefine: false });
-    if (!reducedMotion) {
-        wantPlaying = true;
-        syncLoop();
-    }
+    bootWhenSized();
 
     return { start, stop, setSpeed, isPlaying, resize, redraw, step, getTime };
 }

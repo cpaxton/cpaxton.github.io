@@ -2,13 +2,22 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
     padding: 20px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
     line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 .page {
@@ -103,13 +112,18 @@ section h3 {
 .canvas-wrap {
     position: relative;
     width: 100%;
+    min-height: 180px;
+    aspect-ratio: 16 / 10;
+    max-height: min(56vh, 520px);
     background: #1a1a2e;
+    overflow: hidden;
 }
 
 .canvas-wrap canvas {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    touch-action: pan-y;
 }
 
 .demo-controls {
@@ -152,9 +166,11 @@ section h3 {
     border: none;
     border-radius: 5px;
     padding: 8px 16px;
+    min-height: 44px;
     cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.2s;
+    touch-action: manipulation;
 }
 
 .demo-controls button:hover {
@@ -193,13 +209,16 @@ section h3 {
 }
 
 .fidelity-toggle {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 8px;
     margin-top: 1rem;
     padding: 6px;
     background: #e8eef5;
     border-radius: 8px;
+    max-width: 100%;
 }
 
 .overlay-label {
@@ -216,11 +235,13 @@ section h3 {
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 6px 14px;
+    padding: 8px 14px;
+    min-height: 44px;
     cursor: pointer;
     font-size: 0.9rem;
     color: #333;
     transition: background-color 0.2s, border-color 0.2s;
+    touch-action: manipulation;
 }
 
 .fidelity-btn:hover {
@@ -263,13 +284,77 @@ section h3 {
 }
 
 @media (max-width: 600px) {
-    .param-controls label {
-        min-width: 100%;
+    body {
+        padding: 12px;
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
     }
 
-    .ratio-readout {
-        margin-left: 0;
+    section {
+        padding: 16px;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .fidelity-note {
+        font-size: 0.88rem;
+    }
+
+    .param-controls,
+    .playback-controls,
+    .variant-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .param-controls label,
+    .playback-controls label {
+        min-width: 0;
         width: 100%;
+        justify-content: space-between;
+    }
+
+    .param-controls input[type="range"],
+    .demo-controls input[type="range"],
+    .playback-controls input[type="range"] {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        min-height: 32px;
+    }
+
+    .ratio-readout,
+    .contact-readout {
+        margin-left: 0;
+        max-width: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .demo-controls button {
+        width: 100%;
+    }
+
+    .playback-controls .play-btn,
+    .playback-controls .step-btn {
+        width: auto;
+        flex: 1;
+    }
+
+    .playback-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cycloidal-variant {
+        gap: 6px;
+    }
+
+    .ratio-formula {
+        font-size: 0.82rem;
+        overflow-x: auto;
     }
 }
 

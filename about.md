@@ -7,28 +7,18 @@ categories: [about]
 chart: true
 ---
 
-I am a robotics and AI researcher working on bringing generalist AI-enabled robots to the real world.
+I’m a Principal AI Scientist at Agility Robotics in Pittsburgh. I lead a team working on how humanoid robots learn to move and manipulate objects, using reinforcement learning and demonstrations.
 
-I've led Embodied AI at [Hello Robot](https://hello-robot.com/). In the past, I've worked at NVIDIA Research and at FAIR, the fundamental AI research arm of Meta. I'm interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
-
-I have a Substack called [It Can Think](https://itcanthink.substack.com/) where I post about AI and robotics generally, and a small podcast with Michael Cho called RoboPapers, which you can find [on Spotify](https://open.spotify.com/show/3U0Ed7poaOElItEyUPkuto) or [Youtube](https://www.youtube.com/@RoboPapers).
+A question that keeps turning up in my work is what a robot should do when it sees a room for the first time. At FAIR, we built [HomeRobot](https://ovmm.github.io/) so different labs could test whether a robot could find an unfamiliar object and put it where someone asked. With [OK-Robot](https://github.com/ok-robot/ok-robot), we took that question into ten real homes. At Hello Robot, I led development of [Stretch AI](https://github.com/hello-robot/stretch_ai), so other people could run language-guided tasks on their own robots.
 
 <figure>
-  <p align="center">
-    <img src="{{ site.url }}/images/hello_robot_chris.jpg " alt="Chris with a Hello Robot Stretch" width="500">
-    <figcaption>Me with my Stretch, ready to pick and place some objects.</figcaption>
-  </p>
+  <img src="/images/hello_robot_chris.jpg" alt="Chris Paxton with a Hello Robot Stretch" width="500" style="max-width:100%;height:auto">
+  <figcaption>With my Stretch mobile manipulator.</figcaption>
 </figure>
 
-I got my PhD in Computer Science in 2018 from the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
+I write [It Can Think](https://itcanthink.substack.com/) and co-host [RoboPapers](https://www.youtube.com/@RoboPapers), where we interview the people who did the research. You can also find me on [GitHub](https://github.com/cpaxton), [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ), [LinkedIn](https://www.linkedin.com/in/chris-paxton-41aba958/), [X](https://x.com/chris_j_paxton), [Bluesky](https://bsky.app/profile/cpaxton.bsky.social), or [Mastodon](https://sigmoid.social/@cpaxton).
 
-From 2018-2022, I was with NVIDIA, at their [Seattle robotics lab](https://youtu.be/JT2viTz_0jU). Recently, I have been working on approaches that tie together language, perception, and action, in order to make robots into robust, versatile assistants for a variety of applications. Other areas of interest include [human-robot interaction](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be).
-
-In 2022, I joined the Embodied AI team at FAIR Labs. My work has looked at how we can make robots into useful, general-purposem mobile manipulators in homes. In particular, I pushed a challenge we called *open-vocabulary mobile manipulation*, or [OVMM](https://ovmm.github.io/), which says robots should be able to pick and place *any* object in *any* environment. We ran a [Neurips competition](https://aihabitat.org/challenge/2023_homerobot_ovmm/) to encourage people to build reproducible robots which can perform this OVMM task. I am continuing in this direction at Hello Robot.
-
-<!--<img style="float: right;" src="{{ site.url }}/images/me.jpg">-->
-
-You can also find a list of my papers on [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ&hl=en&oi=ao), or email me at chris.paxton.cs (at) gmail.com. I'm very active on [Twitter/X](https://twitter.com/chris_j_paxton), where I post about my research and other interesting things in robotics and AI. I also have [LinkedIn](https://www.linkedin.com/in/chris-paxton-41aba958/), [Bluesky](https://bsky.app/profile/cpaxton.bsky.social), and [Mastodon](https://sigmoid.social/@cpaxton), though these are updated quite a bit less. I post longer-form stuff on [It Can Think](https://itcanthink.substack.com/), my substack blog.
+[Résumé](/resume/) · [Email me](mailto:chris.paxton.cs@gmail.com)
 
 ### News and Links
 
@@ -100,12 +90,13 @@ You can also find a list of my papers on [Google Scholar](https://scholar.google
 
 ## Work Experience
 
-  * Leading Embodied AI at Hello Robot (2024-present)
+  * Principal AI Scientist, Agility Robotics (2025–present)
+  * Senior Lead, Embodied AI, Hello Robot (2024–2025)
   * AI Research Scientist, FAIR Labs (2022-2024)
   * Senior Robotics Research Scientist , NVIDIA (2020-2022)
   * Robotics Research Scientist, NVIDIA (2019-2020)
   * Postdoc at NVIDIA, in their Seattle Robotics Lab (2018-2019)
-  * PhD student at Johns Hopkins University (2012-2018): represening tasks for collaborative robots 
+  * PhD student at Johns Hopkins University (2012-2018): representing tasks for collaborative robots 
   * Research Engineer Co-op at Zoox (2016-2017): planning for autonomous vehicles
   * Lockheed Martin (Summer 2012): security with mobile devices
   * US Army Research Lab (2010-2012): pedestrian detection

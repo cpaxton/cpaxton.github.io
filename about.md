@@ -16,7 +16,7 @@ At Meta FAIR, we built [HomeRobot](https://ovmm.github.io/) so researchers could
   <figcaption>With my Stretch mobile manipulator.</figcaption>
 </figure>
 
-I write [It Can Think](/writing/) and co-host [RoboPapers](/podcast/). Interviewing the people who built a system is often the best way to learn which experiment changed their minds.
+I write [It Can Think](/writing/) and co-host [RoboPapers](/podcast). Interviewing the people who built a system is often the best way to learn which experiment changed their minds.
 
 [Résumé](/resume/) · [Papers](/papers) · [X / Twitter](https://x.com/chris_j_paxton) · [Email me](mailto:chris.paxton.cs@gmail.com)
 

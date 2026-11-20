@@ -7,26 +7,36 @@ categories: [about]
 chart: true
 ---
 
-I’m a Principal AI Scientist at Agility Robotics in Pittsburgh. I lead a team working on how humanoid robots learn to move and manipulate objects, using reinforcement learning and demonstrations.
+I’m a robotics researcher in Pittsburgh. I’m interested in what happens when a robot leaves the lab and someone asks it to do an ordinary thing, like finding a mug in a kitchen it’s never seen. At Agility Robotics, I lead a team studying how humanoids learn to move and manipulate objects from demonstrations and reinforcement learning.
 
-A question that keeps turning up in my work is what a robot should do when it sees a room for the first time. At FAIR, we built [HomeRobot](https://ovmm.github.io/) so different labs could test whether a robot could find an unfamiliar object and put it where someone asked. With [OK-Robot](https://github.com/ok-robot/ok-robot), we took that question into ten real homes. At Hello Robot, I led development of [Stretch AI](https://github.com/hello-robot/stretch_ai), so other people could run language-guided tasks on their own robots.
+At Meta FAIR, we built [HomeRobot](https://ovmm.github.io/) so researchers could test the same household task in simulation and on a physical robot. With [OK-Robot](https://github.com/ok-robot/ok-robot), we tried picking up and moving objects in ten real homes. Later, at Hello Robot, I led development of [Stretch AI](https://github.com/hello-robot/stretch_ai) so other people could run experiments like these on their own Stretch.
 
 <figure>
-  <img src="/images/hello_robot_chris.jpg" alt="Chris Paxton with a Hello Robot Stretch" width="500" style="max-width:100%;height:auto">
+  <img src="/images/landing/portrait.webp" alt="Chris Paxton beside the camera and gripper of a Stretch robot" width="500">
   <figcaption>With my Stretch mobile manipulator.</figcaption>
 </figure>
 
-I write [It Can Think](https://itcanthink.substack.com/) and co-host [RoboPapers](https://www.youtube.com/@RoboPapers), where we interview the people who did the research. You can also find me on [GitHub](https://github.com/cpaxton), [Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ), [LinkedIn](https://www.linkedin.com/in/chris-paxton-41aba958/), [X](https://x.com/chris_j_paxton), [Bluesky](https://bsky.app/profile/cpaxton.bsky.social), or [Mastodon](https://sigmoid.social/@cpaxton).
+I write [It Can Think](/writing/) and co-host [RoboPapers](/podcast/). Interviewing the people who built a system is often the best way to learn which experiment changed their minds.
 
-[Résumé](/resume/) · [Email me](mailto:chris.paxton.cs@gmail.com)
+[Résumé](/resume/) · [Papers](/papers) · [X / Twitter](https://x.com/chris_j_paxton) · [Email me](mailto:chris.paxton.cs@gmail.com)
 
-### News and Links
+## News and links
+{: #news-and-links}
 
-  * [Multiple Magicbots](https://spectrum.ieee.org/video-friday-multiple-magicbots) including [Stretch AI](https://github.com/hello-robot/stretch_ai/) in the video roundup - IEEE Spectrum
+- **November 2026 · Learning from demonstrations.** Ruijie He and I spoke with Yuchen Zhou and Jiayuan Mao about why a simple regression policy can compete with flow matching. [RoboPapers episode 117](https://robopapers.substack.com/p/ep117-residual-modeling-closes-the)
+- **October 2026 · The European Physical AI Summit.** In Munich I discussed what it would take for robotics to have its own “ChatGPT moment.” [MicroAGI’s account of the summit](https://www.microagi.ai/articles/european-physical-ai-summit)
+- **September 2026 · 100 episodes of RoboPapers.** Our first hundred conversations are searchable by guest, paper, and topic. [Explore the episode archive](https://robopapers100.com/)
+- **April 2026 · World models.** Jason Ma and I joined Encord to discuss how robots can use predictions about the world for training and evaluation. [Panel recap](https://encord.com/blog/world-models-webinar-recap/)
+- **2025 · GraphEQA at CoRL.** Can a robot walk into a kitchen and tell you whether there’s a blue pan on the stove? Our paper uses a 3D scene graph to help the robot decide where to look. [Watch the Stretch experiment](https://saumyasaxena.github.io/grapheqa/) · [Read the paper](https://proceedings.mlr.press/v305/saxena25a.html)
+
+<details markdown="1">
+<summary>Earlier press, awards, and project announcements</summary>
+
+* [Multiple Magicbots](https://spectrum.ieee.org/video-friday-multiple-magicbots) including [Stretch AI](https://github.com/hello-robot/stretch_ai/) in the video roundup - IEEE Spectrum
   * [Hello Robot’s Stretch AI toolkit explores embodied intelligence](https://www.therobotreport.com/stretch-ai-toolkit-explore-embodied-intelligence/) - The Robot Report
   * [Stretch AI launch and the Chinese perspective of AI and humanoid robots](https://robotsandstartups.substack.com/p/stretch-ai-launch-and-chinese-perspective) - on Robots & Startups by Andrea Keay
   * [AI models let robots carry out tasks in unfamiliar environments](https://www.technologyreview.com/2024/09/20/1104233/ai-models-let-robots-carry-out-tasks-in-unfamiliar-environments) - MIT Technology Review
-  * [How LLMs are Usering In A New Era of Robotics](https://venturebeat.com/ai/how-llms-are-ushering-in-a-new-era-of-robotics/) - VentureBeat
+  * [How LLMs are Ushering In A New Era of Robotics](https://venturebeat.com/ai/how-llms-are-ushering-in-a-new-era-of-robotics/) - VentureBeat
   * [This robot can tidy a room without any help](https://www.technologyreview.com/2024/02/01/1087445/this-robot-can-tidy-a-room-without-any-help/) - MIT Technology Review
   * [Meta’s OK-Robot performs zero-shot pick-and-drop in unseen environments](https://venturebeat.com/automation/metas-ok-robot-performs-zero-shot-pick-and-drop-in-unseen-environments/) - VentureBeat
   * [NeurIPS 2023 HomeRobot: Open Vocabulary Mobile Manipulation (OVMM) Challenge](https://aihabitat.org/challenge/2023_homerobot_ovmm/) - AI Habitat
@@ -46,46 +56,19 @@ I write [It Can Think](https://itcanthink.substack.com/) and co-host [RoboPapers
   * [JHU Robotics Team Wins KUKA Innovation Award - MD](https://open.maryland.gov/blog/jhu-robotics-team-wins-kuka-innovation-award/) - Invited blog post by me
   * [The finalists of the Innovation Award 2016 have been selected](http://www.kuka-robotics.com/en/pressevents/news/NN_14012016_Innovative_Robot_applications_LBR_iiwa.htm) - KUKA
   * [KUKA Innovation Award 2016: Flexible Manufacturing Challenge](https://www.kuka.com/en-DE/Press/Event%20calendar/Hannover%20Fair%202016/kuka-innovation-award) - KUKA
-  
-### Papers
 
-  * [Automated Generation of Robotic Planning Domains from Observations](https://arxiv.org/pdf/2105.13604.pdf) - IROS 2021
-  * [Sim-to-Real Task Planning and Execution from Perception via Reactivity and Recovery](https://arxiv.org/abs/2011.08694) ([video](https://youtu.be/qbCzYgAW86w)) ([experiments](https://www.youtube.com/playlist?list=PL-oD0xHUngeLfQmpngYkGFZarstfPOXqX)) - IROS 2021
-  * [NeRP: Neural Rearrangement Planning for Unknown Objects](https://arxiv.org/pdf/2106.01352) - RSS 2021
-  * [Reactive Human-to-Robot Handovers of Arbitrary Objects](https://arxiv.org/abs/2011.08961) ([video](https://youtu.be/ZfibF9UNCrw)) ([website](https://arxiv.org/abs/2011.08961)) - ICRA 2021 Best HRI Paper *winner*
-  * [Alternate Paths Planner (APP) for Provably Fixed-time Manipulation Planning in Semi-Structured Environments](https://arxiv.org/abs/2012.14970) - ICRA 2021
-  * ["Good Robot!": Efficient Reinforcement Learning for Multi-Step Visual Tasks with Sim to Real Transfer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9165109) ([video](https://www.youtube.com/watch?v=qivDFfPf9_I)) - IROS+RAL 2020
-  * [Human Grasp Classification for Reactive Human-to-Robot Handovers](https://arxiv.org/pdf/2003.06000) ([video](https://www.youtube.com/watch?v=I7mAoEJHee4&feature=youtu.be)) - IROS 2020
-  * [Collaborative Behavior Models for Optimized Human-Robot Teamwork](https://arxiv.org/pdf/1910.04339.pdf) ([video](https://www.youtube.com/watch?v=bSY8K-jkRtA)) - IROS 2020
-  * [Transferable Task Execution from Pixels through Deep Planning Domain Learning](https://arxiv.org/pdf/2003.03726) - ICRA 2020
-  * [6-DOF Grasping for Target-driven Object Manipulation in Clutter](https://arxiv.org/pdf/1912.03628) ([video](https://youtu.be/nVpiMzIj0-c)) - ICRA 2020
-  * [Motion Reasoning for Goal-Based Imitation Learning](https://arxiv.org/pdf/1911.05864) - ICRA 2020
-  * [Online Replanning in Belief Space for Partially Observable Task and Motion Problems](https://arxiv.org/pdf/1911.04577) ([video](https://www.youtube.com/watch?v=IOtrO29DFUg&list=PLNpZKR7uv5ARTi1sNQRcd5rpa8XxamW2l)) ([presentation](https://www.youtube.com/watch?v=gdTWHjIC-9s)) - ICRA 2020
-  * [Conditional Driving from Natural Language Instructions](https://arxiv.org/pdf/1910.07615) - CoRL 2019
-  * [Representing Robot Task Plans as Robust Logical-Dynamical Systems](https://arxiv.org/pdf/1908.01896) - IROS 2019
-  * [The CoSTAR Block Stacking Dataset: Learning with Workspace Constraints](https://arxiv.org/pdf/1810.11714.pdf) - IROS 2019
-  * [Visual Robot Task Planning](https://arxiv.org/pdf/1804.00062) - ICRA 2019
-  * [Evaluating Methods for End-User Creation of Robot Task Plans](https://arxiv.org/pdf/1811.02690) - IROS 2018
-  * [Combining neural networks and tree search for task and motion planning in challenging environments](https://arxiv.org/pdf/1703.07887) - IROS 2017
-  * [CoSTAR in Surgery: A Cross-platform User Interface for Surgical Robot Task Specification](https://pdfs.semanticscholar.org/b853/81226292ed8a47cb4e059ced14ddcc6ea798.pdf) - IROS 2017 workshop
-  * [CoSTAR: Instructing Collaborative Robots through Behavior Trees and Vision](https://arxiv.org/pdf/1611.06145) - ICRA 2017
-  * [Do What I Want, Not What I Did: Imitation of Skills by Planning Sequences of Actions](https://arxiv.org/pdf/1612.01215) - IROS 2016
-  * [Semi-autonomous telerobotic assembly over high-latency networks](https://dl.acm.org/ft_gateway.cfm?ftid=1702218&id=2906858) - HRI 2016
-  * [Towards Robot Task Planning From Probabilistic Models of Human Skills](https://arxiv.org/pdf/1602.04754) - AAAI 2016 workshop
-  * [An incremental approach to learning generalizable robot tasks from human demonstration](http://eprints.lincoln.ac.uk/34493/1/ICRA15_0728_FI.pdf) - ICRA 2015
-  * [A framework for end-user instruction of a robot assistant for manufacturing](https://ieeexplore.ieee.org/iel7/7128761/7138973/07140065.pdf?casa_token=mrp6oZcPvy4AAAAA:ux_-Jq6IHKCmjodjywSvdBiQyHcoeQrd-M45MfuPOTVdZxjGHEMuS3YbqLeO2Kh2XCTRl8r4xBCO) - ICRA 2015
-  * [Developing predictive models using electronic medical records: challenges and pitfalls](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3900132/) - AMIA 2013
+</details>
 
-### Patents
+## Patents
 
   * [Robot Control using Deep Learning](https://www.freepatentsonline.com/y2021/0252698.html)
   * [Imitation Learning System](https://patentimages.storage.googleapis.com/03/ba/22/79fd056c7334f5/US20210081752A1.pdf)
   * [Trajectory Generation using Temporal Logic and Tree Search](https://patentimages.storage.googleapis.com/35/dc/4e/6bf9a63a604604/US10133275.pdf)
 
-### Invited Talks
+## Invited talks
 
-  * Connecting TAMP to the Real World ([video](https://www.youtube.com/watch?v=Zzi29kSKlcE)) - [RSS 2020 Worksop on Learning in Task and Motion Planning](https://ipvs.informatik.uni-stuttgart.de/mlr/rss2020Workshop/)
-  * From Pixels to Task Planning and Execution - [IROS 2019 Workshop on Semantic Policis and Action Representations](https://sites.google.com/view/spar2019/speakers?authuser=0)
+  * Connecting TAMP to the Real World ([video](https://www.youtube.com/watch?v=Zzi29kSKlcE)) - [RSS 2020 Workshop on Learning in Task and Motion Planning](https://ipvs.informatik.uni-stuttgart.de/mlr/rss2020Workshop/)
+  * From Pixels to Task Planning and Execution - [IROS 2019 Workshop on Semantic Policies and Action Representations](https://sites.google.com/view/spar2019/speakers?authuser=0)
   * Building Reactive Task Plans for Real-World Robot Applications - [IROS 2019 Workshop on Behavior Trees for Robotic Systems](https://behavior-trees-iros-workshop.github.io/)
 
 ## Work Experience
@@ -109,7 +92,7 @@ I write [It Can Think](https://itcanthink.substack.com/) and co-host [RoboPapers
   - [Labyrinth Generator](/labyrinth/index.html) - Procedurally generates worlds to explore using generative AI. Similar to the maze generator. Explore a strange city, a dark forest, or a crumbling castle.
   - [Boat vs Kraken Game](/boat_game/index.html) - Use the arrow keys to move the boat and avoid the kraken. Collect the coins for points. An experiment in using AI to generate a game.
 
-You can also check out [It Can Think](https://itcanthink.substack.com/), my substack blog, where I post about AI, robotics, and other interesting things.
+
 
 ## Education
 

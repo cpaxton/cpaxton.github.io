@@ -3,7 +3,15 @@ layout: page
 title: Papers
 ---
 
-## Papers
+My research spans mobile manipulation, robot learning, and task planning. [Full publication list on Google Scholar](https://scholar.google.com/citations?user=I1mOQpAAAAAJ).
+
+## Selected papers
+
+- [HomeRobot](https://ovmm.github.io/) pairs a mobile manipulation benchmark in simulation with experiments on a physical Stretch robot.
+- [OK-Robot](https://github.com/ok-robot/ok-robot) tests how well pretrained models can pick up and move objects in ten real homes.
+- [Reactive Human-to-Robot Handovers of Arbitrary Objects](https://arxiv.org/abs/2011.08961) studies how a robot can take an object from a person as the handover unfolds. ICRA 2021 Best HRI Paper.
+
+## Earlier publications
 
   * [Automated Generation of Robotic Planning Domains from Observations](https://arxiv.org/pdf/2105.13604.pdf) - IROS 2021
   * [Sim-to-Real Task Planning and Execution from Perception via Reactivity and Recovery](https://arxiv.org/abs/2011.08694) ([video](https://youtu.be/qbCzYgAW86w)) ([experiments](https://www.youtube.com/playlist?list=PL-oD0xHUngeLfQmpngYkGFZarstfPOXqX)) - IROS 2021

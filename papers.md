@@ -7,6 +7,7 @@ My research spans mobile manipulation, robot learning, and task planning. [Full 
 
 ## Selected papers
 
+- [GraphEQA](https://proceedings.mlr.press/v305/saxena25a.html) (CoRL 2025) uses a 3D scene graph to help a robot decide where to look as it explores an unfamiliar home. In the [Stretch demo](https://saumyasaxena.github.io/grapheqa/), the robot investigates whether there’s a blue pan on the stove.
 - [HomeRobot](https://ovmm.github.io/) pairs a mobile manipulation benchmark in simulation with experiments on a physical Stretch robot.
 - [OK-Robot](https://github.com/ok-robot/ok-robot) tests how well pretrained models can pick up and move objects in ten real homes.
 - [Reactive Human-to-Robot Handovers of Arbitrary Objects](https://arxiv.org/abs/2011.08961) studies how a robot can take an object from a person as the handover unfolds. ICRA 2021 Best HRI Paper.
